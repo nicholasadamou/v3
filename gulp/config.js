@@ -32,7 +32,7 @@ module.exports = function() {
         // Source code dir
         src: 'src/',
         // dist dir is where the compiled code will be outputted.
-        dist: 'public/',
+        dist: './',
         // Where the images are inside the src folder.
         // They will be copied to the same dir on the dist folder.
         images: 'assets/images',
