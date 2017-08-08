@@ -1,0 +1,208 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+@font-face
+{
+    font-family: 'Inconsolata';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Inconsolata'), url(https://fonts.gstatic.com/s/inconsolata/v12/BjAYBlHtW3CJxDcjzrnZCLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+
+@font-face
+{
+    font-family: 'Inconsolata';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url(https://fonts.gstatic.com/s/inconsolata/v12/AIed271kqQlcIRSOnQH0yRbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+}
+
+/* line 15, src/sass/partials/_base.scss */
+*,
+*::before,
+*::after
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* line 24, src/sass/partials/_base.scss */
+*::-moz-selection
+{
+    color: white; 
+    background: #547900;
+}
+*::selection
+{
+    color: white; 
+    background: #547900;
+}
+
+/* line 29, src/sass/partials/_base.scss */
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* line 34, src/sass/partials/_base.scss */
+body
+{
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.6em; 
+
+    color: #333;
+    background: #fff;
+}
+
+/* line 1, src/sass/partials/_layout.scss */
+.index,
+body
+{
+    min-height: 100%;
+}
+
+/* line 6, src/sass/partials/_layout.scss */
+.index
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display:         flex;
+    -webkit-box-align: center;
+       -moz-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+       -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+}
+
+@media screen and (max-width: 600px)
+{
+    /* line 12, src/sass/partials/_layout.scss */
+    #container
+    {
+        font-size: 16px;
+
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 567px)
+{
+    /* line 12, src/sass/partials/_layout.scss */
+    #container
+    {
+        font-size: 14px;
+    }
+}
+
+/* line 1, src/sass/partials/_modules.scss */
+.tag
+{
+    font-size: 14px;
+    line-height: 3.2em; 
+
+    position: relative;
+
+    display: inline;
+
+    margin-left: -1px;
+    padding: 3px 6px;
+
+    text-align: left;
+
+    color: white;
+    border-radius: 3px;
+    background: #547900;
+}
+
+/* line 14, src/sass/partials/_modules.scss */
+#header
+{
+    text-transform: lowercase;
+}
+/* line 16, src/sass/partials/_modules.scss */
+#header .header__logo
+{
+    position: relative;
+
+    width: 100px;
+    height: 100px;
+    margin: 10px 15px 10px 0;
+
+    background: url('../../assets/images/logo.png');
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: contain;
+}
+@media screen and (max-width: 600px)
+{
+    /* line 16, src/sass/partials/_modules.scss */
+    #header .header__logo
+    {
+        width: 90px;
+        height: 90px; 
+        margin: 5px 0;
+    }
+}
+/* line 31, src/sass/partials/_modules.scss */
+#header #header__name
+{
+    font-size: 24px;
+
+    margin: -1px 0 1px 0;
+
+    text-indent: -1px;
+
+    color: #547900;
+}
+@media screen and (max-width: 600px)
+{
+    /* line 31, src/sass/partials/_modules.scss */
+    #header #header__name
+    {
+        font-size: 20px;
+    }
+}
+/* line 40, src/sass/partials/_modules.scss */
+#header .title
+{
+    color: #547900;
+}
+
+/* line 45, src/sass/partials/_modules.scss */
+.link
+{
+    text-decoration: none;
+
+    color: #547900;
+}
+/* line 48, src/sass/partials/_modules.scss */
+.link:hover
+{
+    font-weight: 700;
+
+    color: white;
+    background: #547900;
+}
+
+/* line 55, src/sass/partials/_modules.scss */
+
+/* line 61, src/sass/partials/_modules.scss */
+
+/* line 67, src/sass/partials/_modules.scss */
+/* line 69, src/sass/partials/_modules.scss */
+/* line 73, src/sass/partials/_modules.scss */

@@ -1,0 +1,41 @@
+extends ../../layouts/_section.pug
+
+block mixins
+    mixin tag(name, attr, val)
+            if attr && val
+                span.tag &lt;#{name} #{attr}=&quot;#{val}&quot;&gt;
+            else
+                span.tag &lt;#{name}&gt;
+
+    mixin name(first, last) 
+        h1#header__name {#{first.toLowerCase()}\ #{last.toLowerCase()}}
+
+    mixin hd-itm(faClassName, id, title)
+        p
+            i(class=faClassName style="color: #333;").fa
+            | 
+            span.title #{id} 
+            | (#{title})
+
+block content
+    header#header
+        +tag("Developer")
+        .header__logo
+        +name("nicholas", "adamou")
+        +hd-itm("fa-id-badge", "4d4m0u", "moniker")
+        +hd-itm("fa-location-arrow", "127.0.0.1", "loc")
+        p
+            i.fa.fa-key
+            | 
+            a(href="https://keybase.io/nicholasadamou/pgp_keys.asc?fingerprint=f5b902fe7c7b1f6725fbf1a6de6ae7cb86b905b0").link DE6A E7CB 86B9 05B0
+            |  (pgb-key)
+        p 
+            | 
+            i(style="color: #333;").fa.fa-graduation-cap
+            |  student by day. | 
+            i(style="color: #333;").fa.fa-bolt
+            |  developer by night.
+        p(style="font-style: italic") 
+            i.fa.fa-quote-left
+            |  "Good code is its own best documentation."
+        +tag("/Developer")

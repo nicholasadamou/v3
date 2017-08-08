@@ -1,0 +1,27 @@
+extends ../../layouts/_section.pug
+
+block mixins
+    mixin tag(name, attr, val)
+        if attr && val
+            span.tag &lt;#{name} #{attr}=&quot;#{val}&quot;&gt;
+        else
+            span.tag &lt;#{name}&gt;
+
+    mixin open-source(title, desc, link, faClassName)
+        li
+            i(class=faClassName).fa
+            | 
+            a(href=link).link #{title.toLowerCase()}
+            | 
+            span (#{desc.toLowerCase()})
+
+block content
+    section#projects
+        +tag("open-source", "class", "stared")
+        ol.list
+            +open-source("macos", "opinionated mac configs.", "https://github.com/NicholasAdamou/macos", "fa-terminal")
+            +open-source("starter-kit", "A Gulp.js based workflow.", "https://github.com/NicholasAdamou/Starter-Kit", "fa-file-code-o")
+            +open-source("confy", "bootstrap your mac laptop for dev.", "https://github.com/NicholasAdamou/Confy", "fa-wrench")
+            +open-source("dotfiles", "a set of vim, zsh, etc. configs.", "https://github.com/NicholasAdamou/dotfiles", "fa-keyboard-o")
+        +tag("/open-source")
+        a(href="https://github.com/NicholasAdamou?tab=repositories" style="margin-left: 10px; text-transform: lowercase; text-decoration: none;").tag View More

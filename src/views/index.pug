@@ -1,0 +1,17 @@
+extends ./layouts/_index.pug
+
+block variables
+	- var title = "{Nicholas\\ Adamou}"
+	- var description = "The official website of Nicholas Adamou"
+	- var author = "Nicholas Adamou"
+	- var tags = "developer, nicholas-adamou, sass, jade, gulp, scss, full-stack-developer, maker, designer"
+	- var pageName = "index"
+	- var trackingCode = "UA-102001064-1"
+
+block content
+	#container
+		include includes/sections/_header.pug
+		include includes/sections/_system.pug
+		include includes/sections/_downloadables.pug	
+		include includes/sections/_projects.pug
+		include includes/sections/_links.pug

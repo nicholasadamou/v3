@@ -1,0 +1,29 @@
+extends ../../layouts/_section.pug
+
+block mixins
+    mixin tag(name, attr, val)
+        if attr && val
+            span.tag &lt;#{name} #{attr}=&quot;#{val}&quot;&gt;
+        else
+            span.tag &lt;#{name}&gt;
+
+    mixin soical-media-link(title, desc, link, faClassName)
+        li
+            i(class=faClassName).fa
+            | 
+            a(href=link).link #{title.toLowerCase()}
+            | 
+            span (#{desc.toLowerCase()})
+
+block content
+    section#links
+        +tag("links", "class", "social-media")
+        ol.list
+            +soical-media-link("Codepen", "nicholasadamou", "https://codepen.io/nicholasadamou", "fa-codepen")
+            +soical-media-link("GitHub", "nicholasadamou", "https://github.com/nicholasadamou", "fa-github")
+            +soical-media-link("Keybase", "nicholasadamou", "https://keybase.io/nicholasadamou", "fa-key")
+            +soical-media-link("Twitter", "@nicholasadamou", "https://twitter.com/nicholasadamou", "fa-twitter")
+            +soical-media-link("LinkedIn", "nicholasadamou", "https://www.linkedin.com/in/nicholas-adamou-929a3b126?trk=hp-identity-name", "fa-linkedin")
+            +soical-media-link("Donate", "$nicholasadamou", "https://cash.me/$NicholasAdamou", "fa-dollar")
+            +soical-media-link("Email", "nicholasadamouemail@gmail.com", "mailto:nicholasadamouemail@gmail.com", "fa-envelope-open-o")
+        +tag("/links")

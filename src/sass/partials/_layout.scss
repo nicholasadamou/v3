@@ -1,0 +1,20 @@
+.index,
+body {
+    min-height: 100%;
+}
+
+.index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container {
+    @include until($mobile) {
+        font-size: 16px;
+        padding: 5px;
+    }
+    @include until($mini) {
+        font-size: 14px;
+    }
+}
