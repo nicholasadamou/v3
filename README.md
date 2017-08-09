@@ -56,7 +56,7 @@ vagrant up
 vagrant ssh
 cd /var/www
 gem install travis
-yarn install
+yarn install && bower install
 gulp help
 ```
 
