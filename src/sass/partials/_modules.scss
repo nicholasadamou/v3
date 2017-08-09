@@ -55,6 +55,10 @@
 .list {
     list-style-position: inside;
     list-style-type: decimal-leading-zero;
+
+    @media (max-width: 640px) {
+        list-style-type: none;
+    }
 }
 
 #projects-wrapper {
