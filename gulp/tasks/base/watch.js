@@ -14,6 +14,8 @@ gulp.task('watch', ['browserSync'], function() {
     gulp.watch(path.to.js.in, ['js', browserSync.reload]);
     // Watch for new images and copy
     gulp.watch(path.to.images.in, ['images']);
+    // Watch for new images and copy
+    gulp.watch(path.to.docs.in, ['docs']);
     // Watch for new vendors and copy
     gulp.watch(path.to.vendors.in, ['vendors']);
 });
