@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/nicholasadamou
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nicholasadamou.github.io
+  * I am nicholasadamou (https://keybase.io/nicholasadamou) on keybase.
+  * I have a public key with fingerprint F5B9 02FE 7C7B 1F67 25FB  F1A6 DE6A E7CB 86B9 05B0
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101e01aea22c8d2daecb3622be764d9d4df0e83d86510f00fc40e0ecd1fcbbfc3fe0a",
+      "fingerprint": "f5b902fe7c7b1f6725fbf1a6de6ae7cb86b905b0",
+      "host": "keybase.io",
+      "key_id": "de6ae7cb86b905b0",
+      "kid": "0101e01aea22c8d2daecb3622be764d9d4df0e83d86510f00fc40e0ecd1fcbbfc3fe0a",
+      "uid": "452c7b0e3bac4a664ca54b88b4ce6219",
+      "username": "nicholasadamou"
+    },
+    "merkle_root": {
+      "ctime": 1502363875,
+      "hash_meta": "a247bd9f3a5a1b29b7bc19b619007fbcb15f4f96e4f4d4fbf8255744317889f0",
+      "seqno": 1317426
+    },
+    "revoke": {
+      "sig_ids": [
+        "da364a59cfe61c28ffa6d2ee12b77b1d6dde74c2eecec0fecbdcd376d3fc765a0f"
+      ]
+    },
+    "service": {
+      "hostname": "nicholasadamou.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1502363897,
+  "expire_in": 157680000,
+  "prev": "aff69ca884d4f1e734a291766e49009a8ddcaa5a84581f33d13b3d78d757c050",
+  "seqno": 54,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.73
+Comment: https://keybase.io/crypto
+
+yMK6AnicrZNraBxVFMd301g1GIgfhIqPkJGGQkO5d+a+ZhVNEbSBqEWq1SZxe5+z
+Q7I725nZTWvYtiI0WoJvEnxAbRGt0EqpEQVF0/j4osWuGgsVbVAksQQtSLCKoHei
+gkg/Ol8uc+7/nPO/v3PvB+2rcm35zlPjx1Zf81N//uPZR2q5+yd6fx1zRKR2OYUx
+Z1ivLHpE6SQtDofKKTgAAqgB5Jq7rmTKVVxL4RHXFZoSpHyFlAGaeYoRDIEBwEgE
+NNBSQSOFMNIzGnCnxzFhJdBxNQ4rqS1rsPCBazSVVEBDqIuNMJATpQm3QcGI3ccC
+2MRSlGQZ1pzgid4QRjZmf4or9i6i/59911bKIexap0B7gkvECUGSYyQYE0hq4kI/
+EyY6rvCytupKKEvRCE+44uWo5jR6nLKOh0d0MY6iNEMs0zATQgxcj3iMYntMnpSK
+ZZ1ym89dRIXyjccxh8L1BRUS+oJAHwBqhBQQG2R8opFBCllyzMWYIuRByphvMgqJ
+3lGJbAcbQi6xDmJdj4Z11jwJAwsvcQoDjuIeQRz70mgCpcuMsSNwtYauoHYwiiil
+KZI2IrUExiJUUnmUKM9ISjAHxhlqZM3ieihXimfTuiiFDUGYlmrir/lV4yiNZDRi
+VaU0rSaFjFG6q5qljWpR/LtgUYQVZe+NzajrOAmjij2RVf4Hn097HL2zGsa6GGYK
+TAkD9sv66HrG0xjiS85YRgtq6iHu+pASC9AS9TlTSnLLmiHMoPE8BT3hKcoUxVQC
+/C+eGFmfPLA1LcUKT2uxdhqzM4OtuXxbbvUlLdmDyrVd3vHPM1u7cOkfD/QNuTft
+YXez5w4MvA4Wpx4NNl/xhNjR/+Sr8y8+La5rTgf5PX37H5xcOHGu+4elgzf23tBs
+zOvy2vzc9JY1g+fW++2zv9/xwvlDRwZAYbF52bVjdbzv7Vdm5C+3keXng+WZH3c2
+v33qzvcnTr/UcXTzu8cWJh+aOL50ZuvcR+iL8Vs27T7Rbu7jnx4e0jezvS3dS9jf
+2PneFE6ufuvW+NCVy53Ta7au2zTfevZg37p3Djx77+jk+uWT95wJ/POd3UGj666u
+n0/Lw1u+/G38u2D7Z6v2fy+/2fhy977HPjkes1NO22utg593fH3Bf3P3473bWj78
+aursG0evOnlhrqt5/TOTD+/tv310kWz/E/N4kJY=
+=UZrG
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nicholasadamou
+
+==================================================================
