@@ -1,6 +1,6 @@
 public
 node_modules
 package-lock.json
-.yarn.lock
+yarn.lock
 .vagrant
 .DS_Store
