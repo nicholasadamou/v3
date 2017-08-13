@@ -30,8 +30,8 @@ module.exports = {
         	out: dest + config.docs
         },
        	vendors: {
-       		in: src + config.vendors,
-       		out: dest + config.vendors
+       		sass: src + config.vendors + '/**/*.min.css',
+   			js: src + config.vendors + '/**/*.min.js'
        	},
 		favicons: {
 			in: src + config.favicons + '/**/*.*',
