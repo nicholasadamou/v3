@@ -17,7 +17,7 @@ block mixins
             span.title #{id} 
             | (#{title})
 
-    mixin asset(title, desc, link, faClassName)
+    mixin link(title, desc, link, faClassName)
         div
             i(class=faClassName).fa
             | 
@@ -28,17 +28,17 @@ block mixins
 
 block content
     header#header
-        +tag("Developer")
+        +tag("Developer", "id", "about-me")
         .header__logo
         +name("nicholas", "adamou")
         +hd-itm("fa-id-badge", "4d4m0u", "moniker")
-        +asset("CS Intern", "@ Granet & Associates", "http://www.granet.net/", "fa-building")
         +hd-itm("fa-location-arrow", "127.0.0.1", "loc")
         p
             i.fa.fa-key
             | 
             a(href="https://keybase.io/nicholasadamou/pgp_keys.asc?fingerprint=4e8e5009ec1173d2383b7e0c2760cbcc542f5b54").link 2760 CBCC 542F 5B54
             |  (pgb-key)
+        +link("Computer Science Intern", "@ Granet & Associates", "http://www.granet.net/", "fa-building")
         p 
             | 
             i(style="color: #333;").fa.fa-graduation-cap
@@ -48,5 +48,5 @@ block content
         p(style="font-style: italic") 
             i.fa.fa-quote-left
             |  "Good code is its own best documentation."
-        +asset("résumé", "Nicholas Adamou's Résumé", docs + "nicholas-adamou-resume.pdf", "fa-file-text-o")
+        +link("résumé", "Nicholas Adamou's Résumé", docs + "nicholas-adamou-resume.pdf", "fa-file-text-o")
         +tag("/Developer")
