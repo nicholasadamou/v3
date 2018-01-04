@@ -1,0 +1,32 @@
+extends ../../layouts/_section.pug
+
+block mixins
+    mixin tag(name, attr, val, color)
+        if attr && val
+            span.tag &lt;#{name} #{attr}=&quot;
+                |
+                i(style="font-size: 12px", class=val).fa
+                |&quot;&gt;
+        else
+            span.tag &lt;#{name}&gt;
+
+    mixin pen(title, desc, link, faClassName)
+        li
+            i(class=faClassName).fa
+            | 
+            a(href=link).link #{title.toLowerCase()}
+            | 
+            span (#{desc.toLowerCase()})
+
+block content
+    section#projects
+        +tag("code-pens", "class", "fa-heart")
+        ol.list
+            +pen("flexbox-navigation", "flexbox navigation", "https://codepen.io/NicholasAdamou/pen/pwddGp", "fa-bars")
+            +pen("parallax-star-background", "css3 moving box-shadows", "https://codepen.io/NicholasAdamou/pen/YQREam", "fa-star")
+            +pen("clockface", "typography-based clock made using js", "https://codepen.io/NicholasAdamou/pen/ZOjjVm", "fa-clock-o")
+            +pen("devster", "a developer portfolio template", "https://codepen.io/NicholasAdamou/pen/kXQVNz", "fa-code")
+            +pen("chrome-new-tab", "js-based unsplash new-tab page", "https://codepen.io/NicholasAdamou/pen/rLkOYp", "fa-chrome")
+            +pen("magickey", "material-design js-based keycode grabber", "https://codepen.io/NicholasAdamou/pen/pbYavw", "fa-key")
+        +tag("/code-pens")
+        a(href="https://codepen.io/NicholasAdamou" style="margin-left: 10px; text-transform: lowercase; text-decoration: none;").tag View More

@@ -17,6 +17,15 @@ block mixins
             span.title #{id} 
             | (#{title})
 
+    mixin asset(title, desc, link, faClassName)
+        div
+            i(class=faClassName).fa
+            | 
+            a(href=link).link #{title.toLowerCase()}
+            | 
+            span (#{desc.toLowerCase()})
+
+
 block content
     header#header
         +tag("Developer")
@@ -38,4 +47,5 @@ block content
         p(style="font-style: italic") 
             i.fa.fa-quote-left
             |  "Good code is its own best documentation."
+        +asset("résumé", "Nicholas Adamou's Résumé", docs + "nicholas-adamou-resume.pdf", "fa-file-text-o")
         +tag("/Developer")

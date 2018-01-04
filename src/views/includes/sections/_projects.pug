@@ -1,9 +1,12 @@
 extends ../../layouts/_section.pug
 
 block mixins
-    mixin tag(name, attr, val)
+    mixin tag(name, attr, val, color)
         if attr && val
-            span.tag &lt;#{name} #{attr}=&quot;#{val}&quot;&gt;
+            span.tag &lt;#{name} #{attr}=&quot;
+                |
+                i(style="font-size: 12px", class=val).fa
+                |&quot;&gt;
         else
             span.tag &lt;#{name}&gt;
 
@@ -17,7 +20,7 @@ block mixins
 
 block content
     section#projects
-        +tag("open-source", "class", "stared")
+        +tag("open-source", "class", "fa-star")
         ol.list
             +open-source("macos", "opinionated mac configs.", "https://github.com/NicholasAdamou/macos", "fa-terminal")
             +open-source("starter-kit", "A Gulp.js based workflow.", "https://github.com/NicholasAdamou/Starter-Kit", "fa-file-code-o")
