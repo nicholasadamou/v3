@@ -1,0 +1,22 @@
+extends ../../layouts/_section.pug
+
+block mixins
+    mixin tag(name, attr, val)
+        if attr && val
+            span.tag &lt;#{name} #{attr}=&quot;#{val}&quot;&gt;
+        else
+            span.tag &lt;#{name}&gt;
+
+    mixin pdf(title, link)
+        li
+            i.fa.fa-file-pdf-o
+            | 
+            a(href=docs + link + ".pdf").link #{title.toLowerCase()}
+
+block content
+     section#publications
+        +tag("publications", "class", "pdf")
+        ol.list
+            +pdf("analysis-of-hartwicks-network-security", "an-in-depth-analysis-of-hartwicks-network-security")
+            +pdf("online-courseware-analysis", "online-courseware-analysis")
+        +tag("/publications")
