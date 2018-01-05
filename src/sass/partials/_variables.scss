@@ -5,8 +5,7 @@ $b-color: #fff; //-body background
 //- Nav
 $n-color: lighten($b-color, 1%); //- background color
 //- Typography
-$font-family-primary: 'Inconsolata',
-monospace;
+$font-family-primary: 'Inconsolata', monospace;
 $h-color: darken(#d6ff79, 50%); //- header text color
 $c-color: #333; //- general text color
 $loc-color: $h-color; //- location color
