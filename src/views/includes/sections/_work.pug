@@ -1,12 +1,6 @@
 extends ../../layouts/_section.pug
 
 block mixins
-    mixin tag(name, attr, val)
-        if attr && val
-            span.tag &lt;#{name} #{attr}=&quot;#{val}&quot;&gt;
-        else
-            span.tag &lt;#{name}&gt;
-
     mixin website(title, desc, link, faClassName)
         li
             i(class=faClassName).fa
@@ -16,10 +10,10 @@ block mixins
             span (#{desc.toLowerCase()})
 
 block content
-    section#websites
-        +tag("websites", "class", "client-websites")
+    section#work
+        +tag("work", "id", "client-websites")
         ol.list
             +website("Advanced-Electrical-Services", "electricalian", "http://advancedelectricalservicesinc.com", "fa-bolt")
             +website("Cut-Paste-Copy", "graphic design agency", "https://cutpastecopy.github.io/", "fa-paint-brush")
             +website("BPhong-Music", "19 yr old rapper", "https://bphong.github.io/", "fa-music")
-        +tag("/websites")
+        +tag("/work")

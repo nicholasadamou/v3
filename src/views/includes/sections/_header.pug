@@ -1,44 +1,37 @@
 extends ../../layouts/_section.pug
 
 block mixins
-    mixin tag(name, attr, val)
-            if attr && val
-                span.tag &lt;#{name} #{attr}=&quot;#{val}&quot;&gt;
-            else
-                span.tag &lt;#{name}&gt;
-
-    mixin name(first, last) 
-        h1#header__name {#{first.toLowerCase()}\ #{last.toLowerCase()}}
+    mixin job(faClassName, title, link, loc)
+        div
+            i(class=faClassName).fa
+            | 
+            span(style="font-style: italic") #{title.toLowerCase()}
+            | 
+            span @ 
+                |
+                a(href=link).link #{loc.toLowerCase()}
 
     mixin hd-itm(faClassName, id, title)
         p
             i(class=faClassName style="color: #333;").fa
             | 
-            span.title #{id} 
+            span #{id} 
             | (#{title})
-
-    mixin link(title, desc, link, faClassName)
-        div
-            i(class=faClassName).fa
-            | 
-            a(href=link).link #{title.toLowerCase()}
-            | 
-            span (#{desc.toLowerCase()})
-
 
 block content
     header#header
         +tag("Developer", "id", "about-me")
         .header__logo
-        +name("nicholas", "adamou")
+        h1#header__name {nicholas\ adamou}
         +hd-itm("fa-id-badge", "4d4m0u", "moniker")
-        +hd-itm("fa-location-arrow", "127.0.0.1", "loc")
+        +hd-itm("fa-compass", "127.0.0.1", "loc")
         p
             i.fa.fa-key
             | 
             a(href="https://keybase.io/nicholasadamou/pgp_keys.asc?fingerprint=4e8e5009ec1173d2383b7e0c2760cbcc542f5b54").link 2760 CBCC 542F 5B54
             |  (pgb-key)
-        +link("Computer Science Intern", "@ Granet & Associates", "http://www.granet.net/", "fa-building")
+        +job("fa-graduation-cap", "computer science major", "http://hartwick.edu", "hartwick college")
+        +job("fa-building", "computer science intern", "http://www.granet.net/", "granet & associates")
         p 
             | 
             i(style="color: #333;").fa.fa-graduation-cap

@@ -1,12 +1,6 @@
 extends ../../layouts/_section.pug
 
 block mixins
-    mixin tag(name, attr, val)
-        if attr && val
-            span.tag &lt;#{name} #{attr}=&quot;#{val}&quot;&gt;
-        else
-            span.tag &lt;#{name}&gt;
-
     mixin soical-media-link(title, desc, link, faClassName)
         li
             i(class=faClassName).fa
@@ -17,7 +11,7 @@ block mixins
 
 block content
     section#links
-        +tag("links", "class", "social-media")
+        +tag("links", "id", "social-media, contact")
         ol.list
             +soical-media-link("Codepen", "nicholasadamou", "https://codepen.io/nicholasadamou", "fa-codepen")
             +soical-media-link("GitHub", "nicholasadamou", "https://github.com/nicholasadamou", "fa-github")
