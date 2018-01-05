@@ -1,7 +1,7 @@
 extends ../../layouts/_section.pug
 
 block mixins
-    mixin open-source(title, desc, link, faClassName)
+    mixin repo(title, desc, link, faClassName)
         li
             i(class=faClassName).fa
             | 
@@ -10,12 +10,12 @@ block mixins
             span (#{desc.toLowerCase()})
 
 block content
-    section#projects
+    section#github
         +tag("github", "id", "started, repositories")
         ol.list
-            +open-source("macos", "opinionated mac configs.", "https://github.com/NicholasAdamou/macos", "fa-terminal")
-            +open-source("starter-kit", "A Gulp.js based workflow.", "https://github.com/NicholasAdamou/Starter-Kit", "fa-file-code-o")
-            +open-source("confy", "bootstrap your mac laptop for dev.", "https://github.com/NicholasAdamou/Confy", "fa-wrench")
-            +open-source("dotfiles", "vim, tmux, fish, bash configurations", "https://github.com/NicholasAdamou/dotfiles", "fa-keyboard-o")
+            +repo("macos", "opinionated mac configs.", "https://github.com/NicholasAdamou/macos", "fa-terminal")
+            +repo("starter-kit", "A Gulp.js based workflow.", "https://github.com/NicholasAdamou/Starter-Kit", "fa-file-code-o")
+            +repo("confy", "bootstrap your mac laptop for dev.", "https://github.com/NicholasAdamou/Confy", "fa-wrench")
+            +repo("dotfiles", "vim, tmux, fish, bash configurations", "https://github.com/NicholasAdamou/dotfiles", "fa-keyboard-o")
         +tag("/github")
         a(href="https://github.com/NicholasAdamou?tab=repositories" style="margin-left: 10px; text-transform: lowercase; text-decoration: none;").tag View More
