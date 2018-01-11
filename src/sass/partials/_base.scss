@@ -26,6 +26,23 @@
   color: $selection-color;
 }
 
+::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: $h-color;
+}
+
+
 * {
   margin: 0;
   padding: 0;
