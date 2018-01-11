@@ -28,13 +28,13 @@
 
 ::-webkit-scrollbar-track
 {
-	background-color: #F5F5F5;
+	background-color: $scrollbar-color;
 }
 
 ::-webkit-scrollbar
 {
 	width: 10px;
-	background-color: #F5F5F5;
+	background-color: $scrollbar-color;
 }
 
 ::-webkit-scrollbar-thumb
