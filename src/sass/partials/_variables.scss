@@ -1,12 +1,12 @@
 //- Logo
 $logo: "../../assets/images/logo.png";
 //- body
-$b-color: #fff; //-body background
+$b-color: white; //-body background
 //-scrollbar
-$scrollbar-color: #F5F5F5;
+$scrollbar-color: #F3F3F3;
 //- Typography
 $font-family-primary: 'Inconsolata', monospace;
-$h-color: darken(#d6ff79, 50%); //- header text color
+$h-color: #547900; //- header text color
 $c-color: #333; //- general text color
 $loc-color: $h-color; //- location color
 $highlight: $h-color; //- selection background color
@@ -16,6 +16,6 @@ $link-hover-bg-color: $h-color; //-  a tag bg hover color
 $link-hover-color: white; //- a:hover tag text color
 $link-visited-color: #b5b5b5; //- a:visited tag text/bg color
 $link-inverted-color: #eaeaea; //-a:visited:hover text color
-$tag-color: white; //tag text color
+$tag-color: black; //tag text color
 //- Miscellaneous
-$b-tag: $h-color; //- tag background color
+$b-tag: $scrollbar-color; //- tag background color
