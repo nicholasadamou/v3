@@ -3,7 +3,7 @@ extends ../../layouts/_section.pug
 block mixins
     mixin repo(title, desc, link, faClassName)
         li
-            i(class=faClassName).fa
+            i(class=faClassName)
             | 
             a(href=link).link #{title.toLowerCase()}
             | 
@@ -13,9 +13,9 @@ block content
     section#github
         +tag("github", "id", "stared, repositories")
         ol.list
-            +repo("macos", "opinionated mac configs.", "https://github.com/NicholasAdamou/macos", "fa-terminal")
-            +repo("starter-kit", "A Gulp.js based workflow.", "https://github.com/NicholasAdamou/Starter-Kit", "fa-file-code-o")
-            +repo("confy", "bootstrap your mac laptop for dev.", "https://github.com/NicholasAdamou/Confy", "fa-wrench")
-            +repo("dotfiles", "vim, tmux, fish, bash configurations", "https://github.com/NicholasAdamou/dotfiles", "fa-keyboard-o")
+            +repo("macos", "opinionated mac configs.", "https://github.com/NicholasAdamou/macos", "fas fa-terminal")
+            +repo("starter-kit", "A Gulp.js based workflow.", "https://github.com/NicholasAdamou/Starter-Kit", "fas fa-file-code")
+            +repo("confy", "bootstrap your mac laptop for dev.", "https://github.com/NicholasAdamou/Confy", "fas fa-wrench")
+            +repo("dotfiles", "vim, tmux, fish, bash configurations", "https://github.com/NicholasAdamou/dotfiles", "fas fa-keyboard")
         +tag("/github")
         a(href="https://github.com/NicholasAdamou?tab=repositories" style="margin-left: 10px; text-transform: lowercase; text-decoration: none;").tag View More

@@ -3,7 +3,7 @@ extends ../../layouts/_section.pug
 block mixins
     mixin job(faClassName, title, link, loc)
         div
-            i(class=faClassName).fa
+            i(class=faClassName)
             | 
             span(style="font-style: italic") #{title.toLowerCase()}
             | 
@@ -13,7 +13,7 @@ block mixins
 
     mixin hd-itm(faClassName, id, title)
         p
-            i(class=faClassName style="color: #333;").fa
+            i(class=faClassName style="color: #333;")
             | 
             span #{id} 
             | (#{title})
@@ -23,16 +23,16 @@ block content
         +tag("Developer")
         .header__logo
         h1#header__name nicholas adamou
-        +hd-itm("fa-compass", "172.26.65.33:3000", "loc")
+        +hd-itm("fas fa-compass", "172.26.65.33:3000", "loc")
         p
-            i.fa.fa-key
+            i.fas.fa-key
             | 
             a(href="https://keybase.io/nicholasadamou/pgp_keys.asc?fingerprint=4e8e5009ec1173d2383b7e0c2760cbcc542f5b54").link 2760 CBCC 542F 5B54
             |  (pgb-key)
-        +job("fa-graduation-cap", "computer science major", "http://hartwick.edu", "hartwick college")
-        +job("fa-building", "computer science intern", "http://www.granet.net/", "granet & associates")
+        +job("fas fa-graduation-cap", "computer science major", "http://hartwick.edu", "hartwick college")
+        +job("fas fa-building", "computer science intern", "http://www.granet.net/", "granet & associates")
         p(style="font-style: italic") 
-            i.fa.fa-quote-left
+            i.fas.fa-quote-left
             |  "Good code is its own best documentation."
-        +link("résumé", "Nicholas Adamou's Résumé", docs + "nicholas-adamou-resume.pdf", "fa-file-text-o")
+        +link("résumé", "Nicholas Adamou's Résumé", docs + "nicholas-adamou-resume.pdf", "fas fa-file-word")
         +tag("/Developer")

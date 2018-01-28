@@ -3,7 +3,7 @@ extends ../../layouts/_section.pug
 block mixins
     mixin website(title, desc, link, faClassName)
         li
-            i(class=faClassName).fa
+            i(class=faClassName)
             | 
             a(href=link).link #{title.toLowerCase()}
             | 
@@ -13,7 +13,8 @@ block content
     section#work
         +tag("work", "id", "client-websites")
         ol.list
-            +website("Advanced-Electrical-Services", "electricalian", "http://advancedelectricalservicesinc.com", "fa-bolt")
-            +website("Cut-Paste-Copy", "graphic design agency", "https://cutpastecopy.github.io/", "fa-paint-brush")
-            +website("BPhong-Music", "vietnamese-american rapper", "https://bphong.github.io/", "fa-music")
+            +website("Advanced-Electrical-Services", "electricalian", "http://advancedelectricalservicesinc.com", "fas fa-bolt")
+            +website("Mack-Media-Group", "internship project", "https://github.com/nicholasadamou/Mack-Media-Group-Internship-Project", "fas fa-wrench")
+            +website("Cut-Paste-Copy", "graphic design agency", "https://cutpastecopy.github.io/", "fas fa-paint-brush")
+            +website("BPhong-Music", "vietnamese-american rapper", "https://bphong.github.io/", "fas fa-music")
         +tag("/work")
