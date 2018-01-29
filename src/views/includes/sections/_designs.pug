@@ -1,0 +1,19 @@
+extends ../../layouts/_section.pug
+
+block mixins
+    mixin project(title, desc, link, faClassName)
+        li
+            i(class=faClassName)
+            | 
+            a(href=designs + link).link #{title.toLowerCase()}
+            | 
+            span (#{desc.toLowerCase()})
+
+block content
+    section#designs
+        +tag("designs", "id", "graphics")
+        ol.list
+            +project("Art-Festival", "flyer", "art-festival-flyer.pdf", "fas fa-paint-brush")
+            +project("Good-Times", "album artwork", "good-times-album-artwork.pdf", "fas fa-music")
+            +project("Animal-Welfare-Society", "poster", "animal-welfare-society-poster.pdf", "fas fa-paw")
+        +tag("/designs")
