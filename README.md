@@ -1,10 +1,11 @@
 # Nicholas Adamou's Personal Website
 
 ![Project Preview](https://cloud.githubusercontent.com/assets/7629661/9838465/89626e74-5a5e-11e5-9b7d-e0ce76856732.gif)
-![Alt text](http://www.kolszewski.com/images/vendors_v2.png)
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 [![Say Thanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/NicholasAdamou)
+
+[About](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#about) / [Technologies](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#technologies) / [Requirements](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#requirements) / [Install](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#install) / [Set Up/Workflow](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#set-upworkflow) / [How to Use](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#how-to-use) / [Structure](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#structure) / [Configuration](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#configuration) / [Inspiration](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#inspiration) / [License](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#license)
 
 ## About
 Nicholas Adamou's website is built on his Gulp.JS [Starter-Kit](https://github.com/NicholasAdamou/Starter-Kit) which is a simple, responsive boilerplate to kickstart any responsive project.
@@ -135,3 +136,11 @@ This project has some nice configuration options to meet all you needs. To confi
 ## Inspiration
 
 - [**carloscuesta/starterkit**](https://github.com/carloscuesta/starterkit) - A Front End development Gulp.js based workflow. 🚀
+
+## License
+
+© 2018 Nicholas Adamou.
+
+It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
+
+[LICENSE]: LICENSE
