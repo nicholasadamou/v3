@@ -11,19 +11,16 @@ block mixins
                 |
                 a(href=link).link #{loc.toLowerCase()}
 
-    mixin hd-itm(faClassName, id, title)
-        p
-            i(class=faClassName style="color: #333;")
-            | 
-            span #{id} 
-            | (#{title})
-
 block content
     header#header
         +tag("Developer")
         .header__logo
         h1#header__name nicholas adamou
-        +hd-itm("fas fa-compass", "172.26.65.33:3000", "loc")
+        p
+            i(style="color: #333;").fas.fa-compass
+            | 
+            span 172.26.65.33:3000
+            |  (loc)
         p
             i.fas.fa-key
             | 
