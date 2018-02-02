@@ -1,8 +1,9 @@
-mixin bottom_text(desc, color)
+mixin bottom_text(desc, color, link)
     .hero-foot
             .container.has-text-centered
                 p(style="color: " + color + ";") #{desc}
-                i(style="color: " + color + ";").fas.fa-angle-double-down.animated.infinite.flash
+                a(href=link)
+                    i(style="color: " + color + ";").fas.fa-angle-double-down.animated.infinite.flash
 mixin repo(name)
     div(data-github="nicholasadamou/" + name data-width="400" data-height="150" data-theme="default").github-card
 
