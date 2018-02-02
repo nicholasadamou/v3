@@ -4,13 +4,13 @@ module.exports = function() {
         /**
          * This is the environment in which you are working on
          * Options are:
-         * - development 
+         * - development
          * - production
          * - empty string
          * For the development build, the output will be verbose.
          * For the production build, the output will be compress and minified
          * If it is set to an empty string the environment will be extract from
-         * the NODE_ENV environment var.
+         * the NODE_ENV  environment var.
          */
         environment: 'production',
         FTP: {
@@ -22,7 +22,7 @@ module.exports = function() {
         },
         SURGE: {
             project: require('path').dirname(__dirname) + '/public/', // Path to your static build directory
-            domain: 'nicholasadamou.surge.sh' // Your domain or Surge subdomain
+            domain: 'YOURDOMAIN.surge.sh' // Your domain or Surge subdomain
         },
         GHPAGES: {
             username: 'USERNAME',
@@ -36,14 +36,13 @@ module.exports = function() {
         // Source code dir
         src: 'src/',
         // dist dir is where the compiled code will be outputted.
-        dist: './',
+        dist: 'public/',
+        docs: 'assets/docs',
         // Where the images are inside the src folder.
         // They will be copied to the same dir on the dist folder.
         images: 'assets/images',
         // Favicons
         favicons: 'assets/images/favicons',
-        //Documents
-        docs: 'assets/docs',
         /**
          * Views directory. This is the dir where all the Pug files should live
          * Important: only *.pug files will be compiled in this exact dir and not any sub dir.
@@ -76,8 +75,8 @@ module.exports = function() {
             precision: 3,
         },
         js: {
-            dir: 'js',
-            name: 'index.js'
+            dir: 'js/',
+            name: 'app.js'
         },
         /**
          * This is the relative to build dir for vendors assets like jQuery. Vendors are

@@ -1,0 +1,14 @@
+.technologies_wrapper {
+    ul {
+        list-style-type: none;
+        
+        li {
+            display: inline;
+
+            margin-right: 10px;
+
+            font-size: 32px;
+            color: $black;
+        }
+    }
+}

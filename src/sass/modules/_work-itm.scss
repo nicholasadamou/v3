@@ -1,0 +1,37 @@
+.work-itm {
+    .work_wrapper {
+        display: grid; 
+        grid-template-rows: 1fr;
+        grid-template-areas: ".aa.";
+        grid-gap: 10px;
+        justify-items: center;
+        align-items: center;
+
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+
+        @include until($mobile) {
+            display: block;
+
+            position: relative;
+            top: 0;
+            transform: translate(0, 0);
+        }
+
+        .desc_wrapper {
+            display: grid;
+            grid-gap: 12px;
+
+            @include until($mobile) {
+                text-align: left;
+
+                margin-top: 25px;
+            }
+
+            .title {
+                font-size: 28px;
+            }
+        }
+    }
+}

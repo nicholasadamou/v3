@@ -1,0 +1,47 @@
+.banner_wrapper {
+    position: relative;
+    
+    display: flex;
+    align-items: start;
+    
+    margin: 70px 0 50px 0;
+
+    @include until($mobile) {
+        width: 100%;
+    }
+
+    .svg-inline--fa {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        opacity: 0.2;
+        z-index: 0;
+
+        font-size: 150px;
+        color: $white;
+    }
+
+    .text_wrapper {
+        display: grid;
+        grid-gap: 5px;
+
+        z-index: 1;
+
+        text-align: center;
+        margin: 0 auto;
+
+        .title {
+            font-size: $header-size;
+        }
+
+        .subtitle {
+            font-size: $copy-size;
+        }
+
+        .link {
+            color: $black;
+        }
+    }
+}

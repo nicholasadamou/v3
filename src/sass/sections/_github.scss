@@ -1,0 +1,17 @@
+#github {
+    position: relative;
+    
+    background: $white;
+
+    .text_wrapper > .title, .subtitle, .svg-inline--fa {
+        color: $black;
+    }
+
+    .link {
+        color: $red;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}

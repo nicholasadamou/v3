@@ -1,0 +1,126 @@
+@font-face {
+	font-family: 'Roboto Slab';
+	font-style: normal;
+	font-weight: 100;
+	src: local('Roboto Slab Thin'), local('RobotoSlab-Thin'), url(https://fonts.gstatic.com/s/robotoslab/v7/MEz38VLIFL-t46JUtkIEgNFPPhm6yPYYGACxOp9LMJ4.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+	font-family: 'Roboto Slab';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(https://fonts.gstatic.com/s/robotoslab/v7/dazS1PrQQuCxC3iOAJFEJUo2lTMeWA_kmIyWrkNCwPc.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+	font-family: 'Roboto Slab';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v7/y7lebkjgREBJK96VQi37Zo4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+@font-face {
+	font-family: 'Shadows Into Light';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(https://fonts.gstatic.com/s/shadowsintolight/v7/clhLqOv7MXn459PTh0gXYFK2TSYBz0eNcHnp4YqE4Ts.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+*::selection {
+	background: $highlight;
+	color: $selection;
+}
+
+::-webkit-scrollbar-track
+{
+	background-color: $scrollbar;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: $scrollbar;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: $scrollbar-bg;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $primary;
+	color: $copy;
+	background: $body;
+	line-height: 1.6em;
+}
+
+hr {
+	margin: 0;
+}
+
+.title {
+	font-family: $primary;
+}
+
+.subtitle,.link, p {
+	font-family: $secondary;
+	font-weight: 400;
+}
+
+.link {
+	text-decoration: underline;
+	color: $red;
+
+	&:hover {
+		color: inherit;
+	}
+}
+
+.title, .subtitle {
+	color: $white;
+	margin: 0 !important;
+}
+
+img:not([src]) {
+	visibility: hidden;
+}
+
+iframe {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 30px;
+
+	box-shadow: 0px 0px 5px 0px rgba($white, 0.75);
+
+	@include until($mobile) {
+		width: 100%;
+	}
+}
+
+.cp_embed_wrapper {
+	width: 80%;
+	margin: 0 auto;
+
+	@include until($mobile) {
+		width: 100%;
+	}
+}

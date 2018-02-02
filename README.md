@@ -1,15 +1,15 @@
-# Nicholas Adamou's Personal Website
+# Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/Starter-Kit.svg?branch=master)](https://travis-ci.org/nicholasadamou/Starter-Kit)
 
 ![Project Preview](https://cloud.githubusercontent.com/assets/7629661/9838465/89626e74-5a5e-11e5-9b7d-e0ce76856732.gif)
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 [![Say Thanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/NicholasAdamou)
 
-[About](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#about) / [Technologies](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#technologies) / [Requirements](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#requirements) / [Install](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#install) / [Set Up/Workflow](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#set-upworkflow) / [How to Use](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#how-to-use) / [Structure](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#structure) / [Configuration](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#configuration) / [Inspiration](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#inspiration) / [License](https://github.com/nicholasadamou/nicholasadamou.github.io/blob/master/README.md#license)
+[About](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#about) / [Technologies](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#technologies) / [Requirements](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#requirements) / [Install](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#install) / [Set Up/Workflow](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#set-upworkflow) / [How to Use](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#how-to-use) / [Structure](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#structure) / [Configuration](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#configuration) / [Inspiration](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#inspiration) / [License](https://github.com/nicholasadamou/Starter-Kit/blob/master/README.md#license)
 
 ## About
-Nicholas Adamou's website is built on his Gulp.JS [Starter-Kit](https://github.com/NicholasAdamou/Starter-Kit) which is a simple, responsive boilerplate to kickstart any responsive project.
-It is also built on [Scotch\box](https://github.com/scotch-io/scotch-box), to provide a simplistic start to any web development project. This kit is built to be used in conjunction with [Gulp](http://gulpjs.com/) and [Vagrant](https://www.vagrantup.com/) to automate different tasks as a web developer.
+Starter Kit is a simple, responsive boilerplate to kickstart any responsive project.
+It is built on [Scotch\box](https://github.com/scotch-io/scotch-box), to provide a simplistic start to any web development project. This kit is built to be used in conjunction with [Gulp](http://gulpjs.com/) and [Vagrant](https://www.vagrantup.com/) to automate different tasks as a web developer.
 
 ## Technologies
 
@@ -39,6 +39,8 @@ It is also built on [Scotch\box](https://github.com/scotch-io/scotch-box), to pr
 npm install -g gulp yarn bower
 ```
 
+Using [Chocolatey](https://chocolatey.org/) to install Virtualbox and Vagrant:
+
 ```powershell
 cinst -y virtualbox virtualbox.extensionpack vagrant
 ```
@@ -59,7 +61,6 @@ gem install travis
 yarn install && bower install
 gulp help
 ```
-
 After the processes finish, you can now proceed into the `How to Use` section to understand each option the kit presents to you.
 
 ## How to use
@@ -105,9 +106,9 @@ The project has a very simple and flexible structure. If the default place for a
 │   ├───index.html -> Compiled Pug files
 │   ├───vendors -> Project dependencies
 ├───src -> All of the un-compiled files will be placed here (Development)
-│   ├───assets -> Assets for the project
-│   │   ├───images -> Images
-│   │   └───js ->  Uncompiled Javascript directory
+│   ├───assets/ -> Assets for the project
+│   │   ├───images/ -> Images
+│   │   └───js/ ->  Uncompiled Javascript directory
 │   ├───vendors/ -> Third-party plugins used in the project
 │   │   ├───sass/ -> SASS-specific plugins
 │   │   ├───js/ -> Javascript-specific plugins

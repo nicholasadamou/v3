@@ -1,0 +1,21 @@
+#internships {
+    position: relative;
+    
+    background: $white;
+
+    .svg-inline--fa {
+        color: $black;
+    }
+
+    .title, .subtitle {
+        color: $black;
+    }
+
+    .link {
+        color: $light-green;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}

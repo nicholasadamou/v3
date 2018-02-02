@@ -1,9 +1,15 @@
 language: node_js
 node_js:
-  - '0.10'
+  - 'lts/*'
+
 before script:
-  - npm install -g gulp yarn bower
+  - npm install -g yarn bower gulp
 after script:
   - yarn install && bower install
 after success:
   - gulp build
+  
+notifications:
+  email:
+    on_failure: always
+    on_success: never

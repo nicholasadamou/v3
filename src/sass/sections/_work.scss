@@ -1,0 +1,43 @@
+.aes {
+    background: $blue;
+
+    .technologies_wrapper > ul > li {
+        color: $white;
+    }
+}
+
+.cpc {
+    background: $white;
+
+    .desc_wrapper {
+        color: $black;
+
+        .title, p {
+            color: $black;
+        }
+
+        hr {
+            background: $black;
+        }
+    }
+}
+
+.bphong {
+    background: $black;
+
+    .desc_wrapper {
+        color: $white;
+
+        .title, p {
+            color: $white;
+        }
+
+        hr {
+            background: $white;
+        }
+
+        .technologies_wrapper > ul > li {
+            color: $white;
+        }
+    }
+}

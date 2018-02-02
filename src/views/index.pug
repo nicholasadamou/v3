@@ -1,5 +1,7 @@
-extends ./layouts/_index.pug
+extends ./layouts/_layout.pug
 
+block mixins
+	
 block variables
 	- var title = "Nicholas Adamou"
 	- var description = "Nicholas Adamou is a front-end developer. He's a 🎨 designer, 🔨 developer, and ❤️ open source contributor. 👍"
@@ -9,12 +11,11 @@ block variables
 	- var trackingCode = "UA-102001064-1"	
 
 block content
-	#container
-		include includes/sections/_header.pug
-		include includes/sections/_github.pug
-		include includes/sections/_codepens.pug
-		include includes/sections/_internships.pug
-		include includes/sections/_work.pug
-		include includes/sections/_designs.pug
-		include includes/sections/_publications.pug
-		include includes/sections/_links.pug
+	include includes/modules/social.pug
+	include includes/sections/header.pug
+	include includes/sections/aboutme.pug
+	include includes/sections/work.pug
+	include includes/sections/github.pug
+	include includes/sections/codepen.pug
+	include includes/sections/internships.pug
+	include includes/sections/contact.pug

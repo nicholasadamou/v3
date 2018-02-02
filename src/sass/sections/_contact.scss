@@ -1,0 +1,121 @@
+#contact {
+    position: relative;
+
+    background: $light-blue;
+
+    .text_wrapper {
+        display: grid;
+        grid-gap: 10px;
+
+        .title {
+            font-size: 48px;
+        }
+
+        .link {
+            color: $black;
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+        form {
+            position: relative;
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 20px;
+
+            @include until($mobile) {
+                width: 100%;
+            }
+
+            .button, .field-label, .input, .textarea {
+                font-family: $secondary;
+                color: $white;
+            }
+
+            .field-label {
+                font-weight: 300;
+                margin: 0;
+                margin-right: 10px;
+
+                flex-grow: 0;
+
+                @include until($mobile) {
+                    margin-right: 0;
+                    text-align: left;
+                }
+            }
+
+            .control {
+                width: 100%;
+
+                @include until($mobile) {
+                    margin-top: 10px;
+                }
+            }
+
+            .input, .textarea {
+                background: transparent;
+                border: 5px solid $white;
+                border-radius: 0;
+
+                transition: all 150ms ease-in-out;
+
+                &::-webkit-input-placeholder {
+                    color: $white;
+                }
+
+                &:-moz-placeholder {
+                    color: $white;
+                }
+
+                &::-moz-placeholder {
+                    color: $white;
+                }
+
+                &:-ms-input-placeholder {
+                    color: $white;
+                }
+
+                &:focus {
+                    border-color: $black;
+                }
+            }
+
+            .field.is-grouped {
+                justify-content: flex-end;
+
+                @include until($mobile) {
+                    justify-content: center;
+                    margin-bottom: 0;
+                }
+
+                .control {
+                    text-align: right;
+
+                    @include until($mobile) {
+                        width: 100%;
+                    }
+                }
+
+                .button {
+                    background: $red;
+                    border-radius: 0;
+                    width: 200px;
+                    padding: 0;
+
+                    &:hover {
+                        border: 5px solid $red;
+                        background: transparent;
+                    }
+
+                    @include until($mobile) {
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

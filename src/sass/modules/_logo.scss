@@ -1,0 +1,14 @@
+#logo {
+    position: relative;
+    margin: 10px 15px 10px 0px;
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include until($mobile) {
+        margin: 0 10%;
+        width: 70px;
+        height: 70px;
+    }
+}

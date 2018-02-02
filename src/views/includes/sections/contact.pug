@@ -1,0 +1,32 @@
+section#contact.hero.is-fullheight.is-widescreen
+    .hero-body
+        .container.has-text-centered
+            .text_wrapper
+                .title Contact Nicholas
+                .subtitle [Alternatively, you can 
+                    a(href="mailto:nicholasadamouemail@gmail.com").link email me
+                    | ]
+                form(action="https://formspree.io/nicholasadamouemail@gmail.com" method="POST")   
+                    .field.is-horizontal
+                        label(for="name").field-label Name
+                        .control
+                            input(type="text" name="name" placeholder="Your name").input
+                    .field.is-horizontal
+                        label(for="email").field-label Email
+                        .control
+                            input(type="email" name="email" placeholder="Your email").input
+                    .field.is-horizontal
+                        label(for="message").field-label Message
+                        .control
+                            textarea(type="text" name="message" placeholder="Your message").textarea
+                    .field.is-grouped
+                        .control
+                            button(type="submit").button.is-link Submit
+                    input(type="hidden" name="_next" value="form_success.html") 
+                    input(type="hidden" name="_subject" value="User submitted email")
+                    input(type="text" name="_gotcha" style="display:none")
+    .hero-foot
+        .container.has-text-centered
+                p(style="color: white;") Thanks for stopping by! 👋
+        
+    

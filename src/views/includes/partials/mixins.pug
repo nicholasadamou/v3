@@ -1,0 +1,17 @@
+mixin bottom_text(desc, color)
+    .hero-foot
+            .container.has-text-centered
+                p(style="color: " + color + ";") #{desc}
+                i(style="color: " + color + ";").fas.fa-angle-double-down.animated.infinite.flash
+mixin repo(name)
+    div(data-github="nicholasadamou/" + name data-width="400" data-height="150" data-theme="default").github-card
+
+mixin codepen(title, dataSlug)
+        p.codepen(data-height="500" data-theme-id="32420" data-slug-hash=dataSlug data-default-tab="result" data-user="NicholasAdamou" data-embed-version="2" data-pen-title=title)
+            | See the Pen 
+            a(href="https://codepen.io/NicholasAdamou/pen/" + dataSlug + "/") #{title}
+            |  by Nicholas Adamou (
+            a(href="https://codepen.io/NicholasAdamou") @NicholasAdamou
+            | ) on 
+            a(href="https://codepen.io") CodePen
+            | .

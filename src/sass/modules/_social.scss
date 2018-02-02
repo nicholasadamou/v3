@@ -1,0 +1,42 @@
+#social_wrapper {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+
+    text-align: center;
+
+    z-index: 1;
+
+    background: $white;
+    box-shadow: 0px 0px 5px 0px rgba($black, 0.75);
+    padding: 10px;
+
+    @include until($mobile) {
+        display: none;
+    }
+
+    ul {
+            list-style-type: none;
+        a {
+            text-decoration: none;
+
+            li {
+                display: block;
+                margin-bottom: 10px;
+
+                font-size: 18px;
+                color: $black;
+
+                transition: all 250ms ease-in-out;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:hover {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+}

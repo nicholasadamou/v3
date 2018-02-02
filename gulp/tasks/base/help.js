@@ -23,7 +23,7 @@ gulp.task('help', function() {
     console.log('    watch: Watch for any changes');
     console.log('    start: Compile and watch for changes (for dev.)');
     console.log('    pagespeed: Run Google PageSpeed Insights');  
-    console.log('    help: Print this message');
+    console.log('    help: Print a list of available Gulp tasks');
     console.log('    browserSync: Start the browserSync server');
     console.log('');
 });

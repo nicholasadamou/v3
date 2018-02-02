@@ -1,9 +1,0 @@
-$mobile: 601px;
-$mini: 568px;
-$iphone-5: 325px;
-
-@mixin until($device) {
-	@media screen and (max-width: $device - 1px) {
-		@content;
-	}
-}

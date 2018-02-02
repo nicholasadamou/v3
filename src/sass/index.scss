@@ -1,8 +1,23 @@
-@import 'bourbon';
+@import 'base/vendors';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/base';
+@import 'base/layout';
 
-@import 'partials/variables';
-@import 'partials/mixins';
+@import 'modules/logo';
+@import 'modules/avatar';
+@import 'modules/nav';
+@import 'modules/social';
+@import 'modules/hero-foot';
+@import 'modules/work-itm';
+@import 'modules/technologies';
+@import 'modules/banner';
+@import 'modules/internship-itm';
 
-@import 'partials/base';
-@import 'partials/layout';
-@import 'partials/modules';
+@import 'sections/header';
+@import 'sections/aboutme';
+@import 'sections/work';
+@import 'sections/github';
+@import 'sections/codepen';
+@import 'sections/internships';
+@import 'sections/contact';

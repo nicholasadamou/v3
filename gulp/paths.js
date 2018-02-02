@@ -18,15 +18,15 @@ module.exports = {
 			out: dest + config.css
 		},
 		js: {
-			in: src + config.js + '/**/*.js',
-			out: dest + 'assets/' + config.js
+			in: src + config.js.dir + "*.js",
+			out: dest + 'assets/' + config.js.dir
 		},
 		images: {
 			in: src + config.images + '/**/*.*',
 			out: dest + config.images
-        },
-        docs : {
-        	in: src + config.docs + '/**/*.*',
+		},
+		docs : {
+        	in: src + config.docs + '/*.pdf',
         	out: dest + config.docs
         },
        	vendors: {
@@ -34,7 +34,7 @@ module.exports = {
    			js: src + config.vendors + '/**/*.min.js'
        	},
 		favicons: {
-			in: src + config.favicons + '/**/*.*',
+			in: src + config.favicons + '/*.*',
 			out: dest + config.favicons
 		}
 	}

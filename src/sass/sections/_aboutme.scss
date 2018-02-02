@@ -1,0 +1,28 @@
+#aboutme {
+    background: $navy;
+
+    .container {
+        max-width: 600px;
+        
+        .about_wrapper {
+            display: grid;
+            grid-gap: 15px;
+
+            align-items: center;
+
+            .title {
+                text-decoration: underline;
+            }
+
+            .subtitle {
+                font-weight: 300;
+            }
+
+            .subtitle, .link {
+                @include until($mobile) {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+#header {
+    position: relative;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .hero-body .container {
+        flex-grow: 0;
+        max-width: auto;
+        width: 500px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include until($tablet) {
+            width: 320px;
+        }
+    }
+
+    .title, .subtitle {
+        background: $blue;
+        color: $white;
+    }
+
+    .title {
+        font-family: $primary;
+        font-size: 5rem;
+
+        @include until($tablet) {
+            font-size: 3rem;
+        }
+    }
+
+    .subtitle {
+        font-family: $secondary;
+        font-size: 1.5rem;
+
+        @include until($tablet) {
+            font-size: 1rem;
+        }
+    }
+}

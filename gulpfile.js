@@ -22,7 +22,7 @@
 
 // Include gulp plugins
 var gulp = require('gulp'),
-  	requireDir  = require('require-dir');
+    requireDir  = require('require-dir');
 
 var config = require('./gulp/config.js')();
 
@@ -30,6 +30,6 @@ requireDir('./gulp/tasks', { recurse: true });
 
 console.log(config.pkg.name + ' ' + config.pkg.version + ' ' + config.environment + ' build');
 
-gulp.task('build', ['pug', 'sass', 'images', 'docs']);
+gulp.task('build', ['js', 'pug', 'sass', 'images', 'docs']);
 gulp.task('start', ['build', 'watch']);
 gulp.task('default', ['help']);

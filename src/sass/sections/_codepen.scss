@@ -1,0 +1,13 @@
+#codepen {
+    position: relative;
+    
+    background: $black;
+
+    .link {
+        color: $red;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
