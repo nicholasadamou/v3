@@ -22,7 +22,11 @@
         margin-bottom: 3.5rem;
 
         @include until($tablet) {
-            font-size: 4.5rem;
+            font-size: 5rem;
+        }
+
+        @include until($mobile) {
+            font-size: 3.5rem;
         }
     }
 
