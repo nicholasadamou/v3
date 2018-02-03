@@ -11,6 +11,12 @@
         top: 50%;
         transform: translate(0, -50%);
 
+        img {
+            @include until($laptop) {
+                max-width: 70%;
+            }
+        }
+
         @include until($mobile) {
             display: block;
 

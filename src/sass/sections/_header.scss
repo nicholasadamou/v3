@@ -20,7 +20,7 @@
         font-size: 10rem;
 
         @include until($tablet) {
-            font-size: 8rem;
+            font-size: 7rem;
         }
 
         @include until($mobile) {
@@ -33,7 +33,7 @@
         font-size: 2rem;
 
         @include until($tablet) {
-            font-size: 2rem;
+            font-size: 1.8rem;
         }
 
         @include until($mobile) {
