@@ -1,9 +1,9 @@
 #github {
     position: relative;
     
-    background: $white;
+    background: $grey;
 
-    .text_wrapper > .title, .subtitle, .svg-inline--fa {
+    .text_wrapper > h1, .subtitle, .svg-inline--fa {
         color: $black;
     }
 

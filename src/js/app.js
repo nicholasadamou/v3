@@ -1,7 +1,6 @@
 $(function() {
-	smoothScroll();
-	nav();
-  window.setInterval(fix_nav_height, 1);
+  toggleNav();
+  smoothScroll();
   new LazyLoad({
     elements_selector: ".lazy"
   });
@@ -25,92 +24,34 @@ function smoothScroll() {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
         $('html, body').animate({
-          scrollTop: target.offset().top - $("#sticky").height()
+          scrollTop: target.offset().top
           }, 1000);
       }
 		}
 	});
 }
 
-function fix_nav_height() {
-    function elementOrParentIsFixed(element) {
-      var $element = $(element);
-      var $checkElements = $element.add($element.parents());
-      var isFixed = false;
-      $checkElements.each(function() {
-          if ($(this).css("position") === "fixed") {
-              isFixed = true;
-              return false;
-          }
-      });
-      return isFixed;
-    }
-    
-    var isFixed = elementOrParentIsFixed($("#sticky"));
-    if (isFixed) {
-      $("#nav").css({
-       "top":  $("#sticky").height()
-      });
-    } else {
-      $("#nav").css({
-       "top":  $("#sticky").height()
-      });
-    }
-  }
-
-function nav() {
+function toggleNav() {
   var $hamburger = $(".hamburger");
-  var $nav_link = $(".nav-link");
-
-  $hamburger.bind("click", function() {
+  var $link = $(".nav_link");
+  var $logo = $(".logo");
+  
+  $hamburger.bind('click', function() {
     $hamburger.toggleClass("is-active");
-    $("#nav").toggleClass("open");
-    $("#nav").toggleClass("animated");
-    $("#nav").toggleClass("fadeIn");
-    $("#sticky").toggleClass("background");
-    return false;
-  });
-
-  $nav_link.bind("click", function() {
-    $("#nav").removeClass("open");
-    $hamburger.removeClass("is-active");
-    $("#sticky").removeClass("background");
+    $('body').toggleClass('nav-open');
     this.blur();
     return false;
   });
 
-  $(".logo").bind("click", function() {
-    $("#nav").removeClass("open");
+  $link.bind("click", function() {
     $hamburger.removeClass("is-active");
-    $("#sticky").removeClass("background");
+    $('body').removeClass('nav-open');
     this.blur();
-    return false;
   });
 
-  var stickyTop = $("#sticky").offset().top;
-  $(window).scroll(function() {
-    var windowTop = $(window).scrollTop();
-
-    if (windowTop > stickyTop) {
-      $("#sticky").css({
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        "background-color": "white"
-      });
-      $(".nav-link").css({
-        color: "black"
-      });
-    } else {
-      $("#sticky").css({
-        position: "relative",
-        width: "100%",
-        "background-color": "transparent"
-      });
-      $(".nav-link").css({
-        color: "#212856"
-      });
-    }
+  $logo.bind("click", function() {
+    $hamburger.removeClass("is-active");
+    $('body').removeClass('nav-open');
+    this.blur();
   });
 }

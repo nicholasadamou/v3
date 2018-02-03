@@ -60,7 +60,6 @@
 	background-color: $scrollbar-bg;
 }
 
-
 * {
 	margin: 0;
 	padding: 0;
@@ -77,7 +76,7 @@ hr {
 	margin: 0;
 }
 
-.title {
+h1 {
 	font-family: $primary;
 }
 
@@ -95,9 +94,8 @@ hr {
 	}
 }
 
-.title, .subtitle {
+h1, .subtitle {
 	color: $white;
-	margin: 0 !important;
 }
 
 img:not([src]) {

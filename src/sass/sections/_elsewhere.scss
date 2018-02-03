@@ -1,0 +1,57 @@
+#elsewhere {
+    position: relative;
+
+    background: $white;
+
+    .hero-body .container {
+        flex-grow: 0;
+        max-width: auto;
+        width: 100%;
+
+        position: static;
+    }
+
+    .title {
+        color: $black;
+    }
+
+    .title {
+        font-family: $primary;
+        font-size: 8rem;
+
+        margin-bottom: 3.5rem;
+
+        @include until($tablet) {
+            font-size: 5rem;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+
+        a {
+            color: $black;
+
+            font-size: 3rem;
+
+            margin-right: 50px;
+    
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                color: $red;
+            }
+
+            @include until($mobile) {
+                font-size: 2rem;
+            }
+
+            li {
+                display: inline;
+            }
+        }
+        
+    }
+}

@@ -4,8 +4,9 @@
     display: flex;
     align-items: start;
     
-    margin: 70px 0 50px 0;
-
+    margin-top: 70px;
+    margin-bottom: 50px;
+    
     @include until($mobile) {
         width: 100%;
     }
@@ -32,8 +33,9 @@
         text-align: center;
         margin: 0 auto;
 
-        .title {
+        h1 {
             font-size: $header-size;
+            font-weight: 700;
         }
 
         .subtitle {

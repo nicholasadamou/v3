@@ -1,18 +1,10 @@
-.aes {
-    background: $blue;
-
-    .technologies_wrapper > ul > li {
-        color: $white;
-    }
-}
-
 .cpc {
     background: $white;
 
     .desc_wrapper {
         color: $black;
 
-        .title, p {
+        h1, p {
             color: $black;
         }
 
@@ -22,13 +14,21 @@
     }
 }
 
+.aes {
+    background: $blue;
+
+    .technologies_wrapper > ul > li {
+        color: $white;
+    }
+}
+
 .bphong {
     background: $black;
 
     .desc_wrapper {
         color: $white;
 
-        .title, p {
+        h1, p {
             color: $white;
         }
 

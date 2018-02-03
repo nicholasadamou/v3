@@ -3,12 +3,21 @@ mixin bottom_text(desc, color, link)
             .container.has-text-centered
                 p(style="color: " + color + ";") #{desc}
                 a(href=link)
-                    i(style="color: " + color + ";").fas.fa-angle-double-down.animated.infinite.flash
+                    i(style="color: " + color + ";").fas.fa-angle-double-down
+mixin banner(name, desc, linkName, faCategory, faClass, link)
+    .banner_wrapper
+        .text_wrapper
+            h1 #{name}
+            .subtitle [#{desc}  
+                a(href=link).link #{linkName}
+                |]
+        i(class=faCategory + " " + faClass)
+
 mixin repo(name)
     div(data-github="nicholasadamou/" + name data-width="400" data-height="150" data-theme="default").github-card
 
 mixin codepen(title, dataSlug)
-        p.codepen(data-height="500" data-theme-id="32420" data-slug-hash=dataSlug data-default-tab="result" data-user="NicholasAdamou" data-embed-version="2" data-pen-title=title)
+        p.codepen(data-height="500" data-theme-id="32420" data-slug-hash=dataSlug data-default-tab="css,result" data-user="NicholasAdamou" data-embed-version="2" data-pen-title=title)
             | See the Pen 
             a(href="https://codepen.io/NicholasAdamou/pen/" + dataSlug + "/") #{title}
             |  by Nicholas Adamou (

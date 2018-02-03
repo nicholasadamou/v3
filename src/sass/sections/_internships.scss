@@ -1,18 +1,18 @@
 #internships {
     position: relative;
     
-    background: $white;
+    background: $grey;
 
     .svg-inline--fa {
         color: $black;
     }
 
-    .title, .subtitle {
+    h1, .subtitle, p {
         color: $black;
     }
 
     .link {
-        color: $light-green;
+        color: $red;
 
         &:hover {
             color: $black;

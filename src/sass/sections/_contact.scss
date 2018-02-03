@@ -1,21 +1,28 @@
 #contact {
     position: relative;
 
-    background: $light-blue;
+    background: $grey;
 
     .text_wrapper {
         display: grid;
         grid-gap: 10px;
 
-        .title {
+        h1 {
             font-size: 48px;
+            font-weight: 700;
+            color: $black;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: $black;
         }
 
         .link {
             color: $black;
 
             &:hover {
-                color: $white;
+                color: $red;
             }
         }
 
@@ -31,11 +38,11 @@
 
             .button, .field-label, .input, .textarea {
                 font-family: $secondary;
-                color: $white;
+                color: $black;
             }
 
             .field-label {
-                font-weight: 300;
+                font-weight: 400;
                 margin: 0;
                 margin-right: 10px;
 
@@ -57,29 +64,29 @@
 
             .input, .textarea {
                 background: transparent;
-                border: 5px solid $white;
+                border: 5px solid $black;
                 border-radius: 0;
 
                 transition: all 150ms ease-in-out;
 
                 &::-webkit-input-placeholder {
-                    color: $white;
+                    color: $black;
                 }
 
                 &:-moz-placeholder {
-                    color: $white;
+                    color: $black;
                 }
 
                 &::-moz-placeholder {
-                    color: $white;
+                    color: $black;
                 }
 
                 &:-ms-input-placeholder {
-                    color: $white;
+                    color: $black;
                 }
 
                 &:focus {
-                    border-color: $black;
+                    border-color: $red;
                 }
             }
 
@@ -105,7 +112,10 @@
                     width: 200px;
                     padding: 0;
 
+                    color: $white;
+
                     &:hover {
+                        color: $black;
                         border: 5px solid $red;
                         background: transparent;
                     }

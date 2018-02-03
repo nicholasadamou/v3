@@ -1,7 +1,15 @@
 #codepen {
     position: relative;
     
-    background: $black;
+    background: $white;
+
+    .banner_wrapper > .text_wrapper > h1, .subtitle {
+        color: $black;
+    }
+
+    .banner_wrapper > .svg-inline--fa {
+        color: $black;
+    }
 
     .link {
         color: $red;

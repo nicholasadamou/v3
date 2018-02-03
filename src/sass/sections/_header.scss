@@ -1,44 +1,42 @@
 #header {
     position: relative;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: repeat;
 
     .hero-body .container {
         flex-grow: 0;
         max-width: auto;
-        width: 500px;
+        width: 100%;
 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        @include until($tablet) {
-            width: 320px;
-        }
+        position: static;
     }
 
     .title, .subtitle {
-        background: $blue;
-        color: $white;
+        color: $black;
     }
 
     .title {
         font-family: $primary;
-        font-size: 5rem;
+        font-size: 10rem;
 
         @include until($tablet) {
+            font-size: 8rem;
+        }
+
+        @include until($mobile) {
             font-size: 3rem;
         }
     }
 
     .subtitle {
         font-family: $secondary;
-        font-size: 1.5rem;
+        font-size: 2rem;
 
         @include until($tablet) {
+            font-size: 2rem;
+        }
+
+        @include until($mobile) {
             font-size: 1rem;
         }
     }

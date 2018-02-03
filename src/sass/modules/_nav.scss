@@ -1,96 +1,116 @@
-#sticky {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 10vh;
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    transition: background .5s ease-in-out;
-    z-index: 999;
+.content {
+	position: relative;
+	left: -20px;
 
-    #logo {
-      padding: 0;
-      margin: 0 12%;
-    }
+	z-index: 9999;
+	overflow-x: hidden;
 
-    #toggle {
-      display: none;
-      outline: none;
-    }
-
-    #nav {
-      list-style-type: none;
-      padding: 20px;
-
-        li {
-            display: inline;
-            padding: 10px;
-
-            a {
-                font-family: $secondary;
-                font-weight: 900;
-                color: $blue;
-                text-decoration: none;
-            }
-        }
-    }
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
-.open {
-  display: block !important;
+.nav-open {
+	left: 130px;
+	transition: left 0.3s ease-in-out;
 }
 
-.background {
-  background: $white !important;
+.nav-open .nav-container {
+	left: 0;
 }
 
-@media (max-width: 800px) {
-  #sticky {
-    padding: 0;
-  }
+.nav-open .toggle {
+	left: 155px;
+	transition: left 0.3s ease-in-out;
+}
 
-  #sticky #nav {
-    display: none;
-    position: absolute;
-    
-    margin: 0;
-    padding: 0;
-    
-    background-color: $white;
-    width: 100%;
-    text-align: center;
+.toggle {
+	display: none;
 
-    li {
-      display: block;
-      padding: 20px 0;
+	font-size: 32px;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 1;
 
-      a {
-        color: $blue !important;
-      }
+	padding: 5px;
 
-      &:hover {
-        background-color: $blue;
-        cursor: pointer;
+	text-decoration: none;
 
-        a {
-          color: $white !important;
+	opacity: 1 !important;
 
-          &:hover {
-            text-decoration: none;
-          }
-        }
-      }
-    }
-  }
+	@include until($tablet) {
+		display: block;
+		background: $white;
+	}
 
-  #sticky #toggle {
-    display: block;
-    margin: 0 5%;
-    padding: 0;
-    font-size: 24px;
-    color: $blue;
-    text-decoration: none;
-  }
+	.hamburger-box, .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+		width: 30px;
+	}
+
+	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+		background: black !important;
+	}
+}
+
+.nav-container {
+	background: white;
+  
+	position: fixed;
+	top: 0;
+	left: 0px;
+  
+	height: 100%;
+	width: 130px;
+	text-align: left;
+	z-index: 999;
+	transition: left 0.3s ease-in-out;
+
+	@include until($tablet) {
+		left: -175px;
+	}
+
+	a {
+		display: block;
+		padding-left: 20px;
+		text-decoration: none;
+
+		color: $black;
+		
+		&:hover {
+			color: $red;
+			text-decoration: underline;
+		}
+	}
+}
+
+.logo {
+	padding-left: 0 !important;
+}
+
+nav {
+	display: grid;
+	grid-gap: 20px;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+
+	text-align: left;
+	width: 100%;
+
+	font-family: $secondary;
+	font-weight: 400;
+}
+
+.email-link {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	
+	width: 100%;
+
+	padding: 0;
+
+	font-family: $secondary;
+	font-weight: 400;
 }
