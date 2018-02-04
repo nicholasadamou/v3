@@ -1,0 +1,5 @@
+.hero-body {
+    @include until($mobile) {
+        padding: 48px 20px;
+    }
+}
