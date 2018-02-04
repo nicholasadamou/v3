@@ -40,7 +40,7 @@
 
 	@include until($tablet) {
 		display: block;
-		background: $white;
+		//-background: $white;
 	}
 
 	.hamburger-box, .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
