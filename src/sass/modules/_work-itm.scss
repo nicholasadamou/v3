@@ -15,6 +15,10 @@
             @include until($laptop) {
                 max-width: 70%;
             }
+
+            @include until($tablet) {
+                max-width: 100%;
+            }
         }
 
         @include until($mobile) {
