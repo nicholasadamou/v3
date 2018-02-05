@@ -6,6 +6,18 @@ $(function() {
   });
 });
 
+$(window).scroll(function() {
+  var $toggle = $(".hamburger-inner");
+  var $bphong = $("#bphong");
+  var $aes = $("#aes");
+
+  if ($bphong.isInViewport() || $aes.isInViewport()) {
+    $toggle.addClass("background-invert");
+  } else {
+    $toggle.removeClass("background-invert");
+  }
+});
+
 // smoothScroll function is applied from the document ready function
 function smoothScroll() {
 	// Select all links with hashes
@@ -30,6 +42,16 @@ function smoothScroll() {
 		}
 	});
 }
+
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
 
 function toggleNav() {
   var $hamburger = $(".hamburger");

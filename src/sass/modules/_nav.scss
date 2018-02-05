@@ -40,7 +40,6 @@
 
 	@include until($tablet) {
 		display: block;
-		//-background: $white;
 	}
 
 	.hamburger-box, .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
@@ -50,6 +49,10 @@
 	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
 		background: black !important;
 	}
+}
+
+.background-invert {
+	background: white !important;
 }
 
 .nav-container {
