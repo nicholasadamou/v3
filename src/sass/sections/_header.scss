@@ -84,8 +84,9 @@ $shadows-large: multiple-box-shadow(100);
         font-family: $primary;
         font-size: 10rem;
 
+
         @include until($tablet) {
-            font-size: 7rem;
+            font-size: 6rem;
         }
 
         @include until($mobile) {
