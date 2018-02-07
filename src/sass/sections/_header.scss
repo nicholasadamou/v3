@@ -1,7 +1,72 @@
-#header {
-    position: relative;
+// n is number of stars required
+@function multiple-box-shadow($n) {
+    $value: "#{random(2000)}px #{random(2000)}px #fff";
+    @for $i from 2 through $n {
+      $value: "#{$value}, #{random(2000)}px #{random(2000)}px #fff";
+    }
+    @return unquote($value);
+}
+  
+$shadows-small: multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-large: multiple-box-shadow(100);
 
-    background-repeat: repeat;
+#header {
+    height: 100%;
+    position: relative;
+    background: radial-gradient(ellipse at bottom, $black 0%, $black 100%);
+    overflow: hidden;
+    
+    #stars1 {
+        @include size(1px);
+        background: transparent;
+        animation: fly 20s linear infinite;
+        box-shadow: $shadows-small;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+
+            @include size(1px);
+
+            background: transparent;
+        }
+    }
+
+    #stars2 {
+        @include size(2px);
+        background: transparent;
+        animation: fly 40s linear infinite;
+        box-shadow: $shadows-medium;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+
+            @include size(2px);
+
+            background: transparent;
+        }
+    }
+
+    #stars3 {
+        @include size(3px);
+        background: transparent;
+        animation: fly 80s linear infinite;
+        box-shadow: $shadows-large;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+
+            @include size(3px);
+
+            background: transparent;
+        }
+    }
 
     .hero-body .container {
         flex-grow: 0;
@@ -12,7 +77,7 @@
     }
 
     .title, .subtitle {
-        color: $black;
+        color: $white;
     }
 
     .title {
@@ -41,3 +106,13 @@
         }
     }
 }
+
+@keyframes fly {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-50vh);
+    }
+  }
+  

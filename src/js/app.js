@@ -1,21 +1,10 @@
 $(function() {
+  fix_nav_colors();
   toggleNav();
   smoothScroll();
   new LazyLoad({
     elements_selector: ".lazy"
   });
-});
-
-$(window).scroll(function() {
-  var $toggle = $(".hamburger-inner");
-  var $bphong = $("#bphong");
-  var $aes = $("#aes");
-
-  if ($bphong.isInViewport() || $aes.isInViewport()) {
-    $toggle.addClass("background-invert");
-  } else {
-    $toggle.removeClass("background-invert");
-  }
 });
 
 // smoothScroll function is applied from the document ready function
@@ -43,15 +32,24 @@ function smoothScroll() {
 	});
 }
 
-$.fn.isInViewport = function() {
-  var elementTop = $(this).offset().top;
-  var elementBottom = elementTop + $(this).outerHeight();
-
-  var viewportTop = $(window).scrollTop();
-  var viewportBottom = viewportTop + $(window).height();
-
-  return elementBottom > viewportTop && elementTop < viewportBottom;
-};
+function fix_nav_colors() {
+  if ($("#header").is(":in-viewport(50)")) {
+    $(".hamburger-inner").addClass("background-invert");
+  }
+  
+  $(window).scroll(function() {
+    var $toggle = $(".hamburger-inner");
+    var $header = $("#header");
+    var $bphong = $("#bphong");
+    var $aes = $("#aes");
+  
+    if ($header.is(":in-viewport(50)") || $aes.is(":in-viewport(50)") || $bphong.is(":in-viewport(50)")) {
+      $toggle.addClass("background-invert");
+    } else {
+      $toggle.removeClass("background-invert");
+    }
+  });
+}
 
 function toggleNav() {
   var $hamburger = $(".hamburger");
