@@ -33,17 +33,12 @@ function smoothScroll() {
 }
 
 function fix_nav_colors() {
-  if ($("#header").is(":in-viewport(50)")) {
-    $(".hamburger-inner").addClass("background-invert");
-  }
-  
   $(window).scroll(function() {
     var $toggle = $(".hamburger-inner");
-    var $header = $("#header");
     var $bphong = $("#bphong");
     var $aes = $("#aes");
   
-    if ($header.is(":in-viewport(50)") || $aes.is(":in-viewport(50)") || $bphong.is(":in-viewport(50)")) {
+    if ($aes.is(":in-viewport(50)") || $bphong.is(":in-viewport(50)")) {
       $toggle.addClass("background-invert");
     } else {
       $toggle.removeClass("background-invert");
