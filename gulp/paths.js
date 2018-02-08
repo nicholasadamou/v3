@@ -21,6 +21,10 @@ module.exports = {
 			in: src + config.js.dir + "*.js",
 			out: dest + 'assets/' + config.js.dir
 		},
+		json: {
+			in: src + 'assets/' + "*.json",
+			out: dest + 'assets/'
+		},
 		images: {
 			in: src + config.images + '/**/*.*',
 			out: dest + config.images

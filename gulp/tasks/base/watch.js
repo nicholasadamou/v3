@@ -12,6 +12,8 @@ gulp.task('watch', ['browserSync'], function() {
     gulp.watch(paths.to.sass.in, ['sass']);
     // Watch for javascript changes and compile
     gulp.watch(paths.to.js.in, ['js', browserSync.reload]);
+    // Watch for json changes and compile
+    gulp.watch(paths.to.json.in, ['json', browserSync.reload]);
     // Watch for new images and copy
     gulp.watch(paths.to.images.in, ['images', browserSync.reload]);
     // Watch for new vendors and copy

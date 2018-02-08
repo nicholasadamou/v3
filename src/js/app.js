@@ -1,10 +1,13 @@
 $(function() {
-  fix_nav_colors();
-  toggleNav();
-  smoothScroll();
-  new LazyLoad({
-    elements_selector: ".lazy"
+  particlesJS.load('particles-js', 'assets/particles.json', function() {
+    console.log('callback - particles.js config loaded');
   });
+
+  invert_hamburger_colors();
+  toggleNav();
+
+  smoothScroll();
+  new LazyLoad({ elements_selector: ".lazy" });
 });
 
 // smoothScroll function is applied from the document ready function
@@ -32,7 +35,7 @@ function smoothScroll() {
 	});
 }
 
-function fix_nav_colors() {
+function invert_hamburger_colors() {
   $(window).scroll(function() {
     var $toggle = $(".hamburger-inner");
     var $bphong = $("#bphong");

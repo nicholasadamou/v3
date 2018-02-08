@@ -14,9 +14,17 @@ $shadows-large: multiple-box-shadow(100);
 #header {
     height: 100%;
     position: relative;
-    background: radial-gradient(ellipse at bottom, $white 0%, $white 100%);
+    //-background: radial-gradient(ellipse at bottom, $white 0%, $white 100%);
+    background-color: $white;
     background-size: cover;
     overflow: hidden;
+
+    .particles-js-canvas-el {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+    }
     
     #stars1 {
         @include size(1px);
