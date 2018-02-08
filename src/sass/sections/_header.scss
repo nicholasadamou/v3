@@ -23,11 +23,11 @@ $shadows-large: multiple-box-shadow(100);
         top: 0;
         left: 0;
         height: 100vh;
+        z-index: -1;
     }
 
     .hero-body .container {
         flex-grow: 0;
-        max-width: auto;
         width: 100%;
 
         position: static;
