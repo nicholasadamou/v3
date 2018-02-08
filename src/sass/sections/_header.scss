@@ -14,7 +14,6 @@ $shadows-large: multiple-box-shadow(100);
 #header {
     height: 100%;
     position: relative;
-    //-background: radial-gradient(ellipse at bottom, $white 0%, $white 100%);
     background-color: $white;
     background-size: cover;
     overflow: hidden;
@@ -24,57 +23,6 @@ $shadows-large: multiple-box-shadow(100);
         top: 0;
         left: 0;
         height: 100vh;
-    }
-    
-    #stars1 {
-        @include size(1px);
-        background: transparent;
-        animation: fly 20s linear infinite;
-        box-shadow: $shadows-small;
-
-        &:after {
-            content: " ";
-            position: absolute;
-            top: 100%;
-
-            @include size(1px);
-
-            background: transparent;
-        }
-    }
-
-    #stars2 {
-        @include size(2px);
-        background: transparent;
-        animation: fly 40s linear infinite;
-        box-shadow: $shadows-medium;
-
-        &:after {
-            content: " ";
-            position: absolute;
-            top: 100%;
-
-            @include size(2px);
-
-            background: transparent;
-        }
-    }
-
-    #stars3 {
-        @include size(3px);
-        background: transparent;
-        animation: fly 80s linear infinite;
-        box-shadow: $shadows-large;
-
-        &:after {
-            content: " ";
-            position: absolute;
-            top: 100%;
-
-            @include size(3px);
-
-            background: transparent;
-        }
     }
 
     .hero-body .container {
