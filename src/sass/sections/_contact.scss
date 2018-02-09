@@ -32,7 +32,7 @@
             margin: 0 auto;
             margin-top: 20px;
 
-            @include until($mobile) {
+            @include until($tablet-small) {
                 width: 100%;
             }
 
