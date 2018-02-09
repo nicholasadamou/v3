@@ -57,7 +57,7 @@
             .control {
                 width: 100%;
 
-                @include until($mobile) {
+                @include until($tablet-small) {
                     margin-top: 10px;
                 }
             }
