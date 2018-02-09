@@ -39,7 +39,7 @@ $shadows-large: multiple-box-shadow(100);
 
     .title {
         font-family: $primary;
-        font-size: 10rem;
+        font-size: 7rem;
 
 
         @include until($tablet) {
@@ -53,11 +53,8 @@ $shadows-large: multiple-box-shadow(100);
 
     .subtitle {
         font-family: $secondary;
-        font-size: 2rem;
+        font-size: 1.5rem;
 
-        @include until($tablet) {
-            font-size: 1.8rem;
-        }
 
         @include until($mobile) {
             font-size: 1rem;
