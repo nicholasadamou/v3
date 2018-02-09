@@ -75,6 +75,16 @@ body {
 	color: $copy;
 	background: $body;
 	line-height: 1.6em;
+
+	@include until($tablet) {
+		position: absolute;
+		left: 130px;
+	}
+
+	@include until($mobile) {
+		position: static;
+		left: 0;
+	}
 }
 
 hr {
