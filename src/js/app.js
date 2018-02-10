@@ -46,49 +46,59 @@ function smoothScroll() {
 
 function invert_hamburger_colors() {
   $(window).scroll(function() {
-    var $toggle = $(".hamburger-inner");
-    var $work_itm = $(".work-itm");
-    var background = $work_itm.css("background-color");
+    function getHex(color) {
+      var parts = color.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+      
+      delete(parts[0]);
+      
+      for (var i = 1; i <= 3; ++i) {
+          parts[i] = parseInt(parts[i]).toString(16);
+          if (parts[i].length == 1) parts[i] = '0' + parts[i];
+      }
+    
+      color = '#' + parts.join('');
+    }
+    
+    var toggle = $(".hamburger-inner");
+    var aes = $(".advanced-electrical-services");
+    var bphong = $(".bphong");
 
-    alert(background);
-
-    if (background == "#212121" && $work_itm.is(":in-viewport(50)") || 
-        background == "#212856" && $work_itm.is(":in-viewport(50)")) {
-      $toggle.addClass("background-invert");
+    if (aes.is(":in-viewport(50)") || bphong.is(":in-viewport(50)")) {
+      toggle.addClass("background-invert");
     } else {
-      $toggle.removeClass("background-invert");
+      toggle.removeClass("background-invert");
     }
   });
 }
 
 function toggleNav() {
-  var $hamburger = $(".hamburger");
-  var $link = $(".nav_link");
-  var $logo = $(".logo");
-  var $body = $("body");
+  var hamburger = $(".hamburger");
+  var link = $(".nav_link");
+  var logo = $(".logo");
+  var body = $("body");
   
-  $hamburger.bind('click', function() {
-    $hamburger.toggleClass("is-active");
+  hamburger.bind('click', function() {
+    hamburger.toggleClass("is-active");
     $('body').toggleClass('nav-open');
     this.blur();
     return false;
   });
 
-  $link.bind("click", function() {
-    $hamburger.removeClass("is-active");
+  link.bind("click", function() {
+    hamburger.removeClass("is-active");
     $('body').removeClass('nav-open');
     this.blur();
   });
 
-  $logo.bind("click", function() {
-    $hamburger.removeClass("is-active");
+  logo.bind("click", function() {
+    hamburger.removeClass("is-active");
     $('body').removeClass('nav-open');
     this.blur();
   });
 
-  $body.bind("click", function() {
-    $body.removeClass("nav-open");
-    $hamburger.removeClass("is-active");
+  body.bind("click", function() {
+    body.removeClass("nav-open");
+    hamburger.removeClass("is-active");
     this.blur();
   });
 }
