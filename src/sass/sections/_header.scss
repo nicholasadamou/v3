@@ -48,7 +48,7 @@ $shadows-large: multiple-box-shadow(100);
             transform: translate(-50%, -58%);
             
             width: 100%;
-            font-size: 4rem !important;
+            font-size: 3.5rem !important;
         }
 
         @include until($ipad) {
@@ -84,7 +84,6 @@ $shadows-large: multiple-box-shadow(100);
 
         em {
             font-family: $primary;
-            //-text-decoration: underline;
         }
 
         strong {
@@ -94,7 +93,7 @@ $shadows-large: multiple-box-shadow(100);
 
 
         @include until($ipad-pro) {
-            font-size: 4rem;
+            font-size: 3.5rem;
         }
 
         @include until($ipad) {
