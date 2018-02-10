@@ -81,6 +81,7 @@ $shadows-large: multiple-box-shadow(100);
     .title {
         font-family: $secondary;
         margin-bottom: 0;
+        width: 100%;
 
         em {
             font-family: $primary;
