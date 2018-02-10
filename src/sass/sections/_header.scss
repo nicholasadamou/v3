@@ -33,30 +33,84 @@ $shadows-large: multiple-box-shadow(100);
         position: static;
     }
 
+    .typed {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+
+        overflow: hidden;
+        
+        z-index: 2;
+
+        @include until($ipad-pro) {
+            top: 58%;
+            transform: translate(-50%, -58%);
+            
+            width: 100%;
+            font-size: 4rem !important;
+        }
+
+        @include until($ipad) {
+            top: 58%;
+            transform: translate(-50%, -58%);
+            
+            width: 100%;
+            font-size: 4rem !important;
+        }
+
+        @include until($iphone-7) {
+            top: 55%;
+            transform: translate(-50%, -55%);
+
+            width: 100%;
+            font-size: 3rem !important;
+        }
+    }
+
+    .typed-cursor {
+        display: none;
+    }
+
     .title, .subtitle {
+        font-size: 4rem;
+        font-weight: 400;
         color: $black;
     }
 
     .title {
-        font-family: $primary;
-        font-size: 7rem;
+        font-family: $secondary;
+        margin-bottom: 0;
 
-
-        @include until($tablet) {
-            font-size: 6rem;
+        em {
+            font-family: $primary;
+            //-text-decoration: underline;
         }
 
-        @include until($mobile) {
+        strong {
+            font-weight: 700;
+            background: $highlight;
+        }
+
+
+        @include until($ipad-pro) {
+            font-size: 4rem;
+        }
+
+        @include until($ipad) {
             font-size: 3rem;
+        }
+
+        @include until($iphone-7) {
+            font-size: 1.6rem;
         }
     }
 
     .subtitle {
-        font-family: $secondary;
-        font-size: 1.5rem;
+        font-family: $primary;
+        font-style: italic;
 
-
-        @include until($mobile) {
+        @include until($iphone-7) {
             font-size: 1rem;
         }
     }
@@ -70,4 +124,3 @@ $shadows-large: multiple-box-shadow(100);
       transform: translateY(-50vh);
     }
   }
-  

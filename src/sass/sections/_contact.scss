@@ -32,7 +32,7 @@
             margin: 0 auto;
             margin-top: 20px;
 
-            @include until($tablet-small) {
+            @include until($iphone-7) {
                 width: 100%;
             }
 
@@ -48,7 +48,7 @@
 
                 flex-grow: 0;
 
-                @include until($mobile) {
+                @include until($iphone-7) {
                     margin-right: 0;
                     text-align: left;
                 }
@@ -57,7 +57,7 @@
             .control {
                 width: 100%;
 
-                @include until($tablet-small) {
+                @include until($iphone-7) {
                     margin-top: 10px;
                 }
             }
@@ -93,7 +93,7 @@
             .field.is-grouped {
                 justify-content: flex-end;
 
-                @include until($mobile) {
+                @include until($iphone-7) {
                     justify-content: center;
                     margin-bottom: 0;
                 }
@@ -101,7 +101,7 @@
                 .control {
                     text-align: right;
 
-                    @include until($mobile) {
+                    @include until($iphone-7) {
                         width: 100%;
                     }
                 }
@@ -120,7 +120,7 @@
                         background: transparent;
                     }
 
-                    @include until($mobile) {
+                    @include until($iphone-7) {
                         width: 100%;
                         margin-top: 10px;
                     }

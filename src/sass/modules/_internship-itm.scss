@@ -7,7 +7,7 @@
     margin: 0 auto;
     margin-bottom: 50px;
 
-    @include until($tablet-small) {
+    @include until($iphone-7) {
         width: 100%;
     }
 
@@ -17,7 +17,7 @@
     }
 
     p, .link {
-        @include until($mobile) {
+        @include until($iphone-7) {
             text-align: left;
         }
     }

@@ -21,11 +21,11 @@
 
         margin-bottom: 3.5rem;
 
-        @include until($tablet) {
+        @include until($ipad-pro) {
             font-size: 5rem;
         }
 
-        @include until($mobile) {
+        @include until($iphone-7) {
             font-size: 3.5rem;
         }
     }
@@ -48,7 +48,7 @@
                 color: $red;
             }
 
-            @include until($mobile) {
+            @include until($iphone-7) {
                 font-size: 2rem;
             }
 

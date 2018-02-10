@@ -38,7 +38,7 @@
 
 	opacity: 1 !important;
 
-	@include until($tablet) {
+	@include until($ipad-pro) {
 		display: block;
 	}
 
@@ -72,7 +72,7 @@
 	z-index: 999;
 	transition: left 0.3s ease-in-out;
 
-	@include until($mobile) {
+	@include until($ipad-pro) {
 		left: -175px;
 	}
 
@@ -107,7 +107,7 @@ nav {
 	font-family: $secondary;
 	font-weight: 400;
 
-	@include until($mobile) {
+	@include until($iphone-7) {
 		font-size: 14px;
 	}
 }
@@ -125,7 +125,7 @@ nav {
 	font-family: $secondary;
 	font-weight: 400;
 
-	@include until($mobile) {
+	@include until($iphone-7) {
 		font-size: 14px;
 	}
 }

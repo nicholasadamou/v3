@@ -8,6 +8,15 @@ $(function() {
 
   smoothScroll();
   new LazyLoad({ elements_selector: ".lazy" });
+
+  var typed = new Typed('.typed', {
+    strings: ["web applications.", "user interfaces.", "corporate websites."],
+    loop: true,
+    loopCount: Infinity,
+    typeSpeed: 80,
+    backDelay: 1000,
+    backSpeed: 100
+  });  
 });
 
 // smoothScroll function is applied from the document ready function

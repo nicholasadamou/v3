@@ -7,7 +7,7 @@
     margin-top: 70px;
     margin-bottom: 50px;
     
-    @include until($mobile) {
+    @include until($iphone-7) {
         width: 100%;
     }
 

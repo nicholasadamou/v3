@@ -1,10 +1,11 @@
 .hero-foot {
     margin-bottom: 10px;
 
-    p {
-        font-family: $secondary;
-        font-weight: 300;
+    .svg-inline--fa {
+        font-size: 3rem;
 
-        margin-bottom: 5px;
+        @include until($iphone-7) {
+            font-size: 2rem;
+        }
     }
 }

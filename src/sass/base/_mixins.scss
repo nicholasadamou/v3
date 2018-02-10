@@ -1,7 +1,7 @@
 $laptop: 1441px;
-$mobile: 430px;
-$tablet: 1025px;
-$tablet-small: 769px;
+$iphone-7: 430px;
+$ipad-pro: 1025px;
+$ipad: 769px;
 
 @mixin until($device) {
 	@media screen and (max-width: $device - 1px) {

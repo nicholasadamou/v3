@@ -1,9 +1,8 @@
-mixin bottom_text(desc, color, link)
+mixin bottom_text(color, link)
     .hero-foot
             .container.has-text-centered
-                p(style="color: " + color + ";") #{desc}
                 a(href=link)
-                    i(style="color: " + color + ";").fas.fa-angle-double-down
+                    i(style="color: " + color + ";").fas.fa-caret-down.animated.infinite.bounce
 mixin banner(name, desc, linkName, faCategory, faClass, link)
     .banner_wrapper
         .text_wrapper
