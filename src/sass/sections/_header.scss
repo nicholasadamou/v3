@@ -35,33 +35,43 @@ $shadows-large: multiple-box-shadow(100);
 
     .typed {
         position: absolute;
-        top: 60%;
+        top: 62%;
         left: 50%;
-        transform: translate(-50%, -60%);
+        transform: translate(-50%, -62%);
 
         overflow: hidden;
         
-        z-index: 2;
+        z-index: 3;
+
+        font-size: 5rem !important;
+
+        @include until($ipad-pro-landscape) {
+            top: 68%;
+            transform: translate(-50%, -68%);
+            
+            width: 100%;
+            font-size: 5rem !important;
+        }
 
         @include until($ipad-pro) {
-            top: 58%;
-            transform: translate(-50%, -58%);
+            top: 62%;
+            transform: translate(-50%, -62%);
             
             width: 100%;
             font-size: 3.5rem !important;
         }
 
         @include until($ipad) {
-            top: 58%;
-            transform: translate(-50%, -58%);
+            top: 60%;
+            transform: translate(-50%, -60%);
             
             width: 100%;
             font-size: 4rem !important;
         }
 
         @include until($iphone-7) {
-            top: 55%;
-            transform: translate(-50%, -55%);
+            top: 62%;
+            transform: translate(-50%, -62%);
 
             width: 100%;
             font-size: 3rem !important;
@@ -102,7 +112,7 @@ $shadows-large: multiple-box-shadow(100);
         }
 
         @include until($iphone-7) {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
         }
     }
 

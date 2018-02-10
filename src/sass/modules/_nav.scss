@@ -38,7 +38,7 @@
 
 	opacity: 1 !important;
 
-	@include until($ipad-pro) {
+	@include until($ipad-pro-landscape) {
 		display: block;
 	}
 
@@ -72,7 +72,7 @@
 	z-index: 999;
 	transition: left 0.3s ease-in-out;
 
-	@include until($ipad-pro) {
+	@include until($ipad-pro-landscape) {
 		left: -175px;
 	}
 

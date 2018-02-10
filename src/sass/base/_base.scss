@@ -114,7 +114,7 @@ iframe {
 
 	box-shadow: 0px 0px 5px 0px rgba($white, 0.75);
 
-	@include until($iphone-7) {
+	@include until($ipad-pro) {
 		width: 100%;
 	}
 }
@@ -123,7 +123,7 @@ iframe {
 	width: 80%;
 	margin: 0 auto;
 
-	@include until($iphone-7) {
+	@include until($ipad-pro) {
 		width: 100%;
 	}
 }

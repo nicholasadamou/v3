@@ -12,9 +12,11 @@ gulp.task('browserSync', function() {
     browserSync.init({
         server: {
             baseDir: paths.to.dist,
-            index: 'index.html'
+            index: 'index.html',
         },
         open: config.syncOptions.open,
-        notify: config.syncOptions.notify
+        notify: config.syncOptions.notify,
+        tunnel: true,
+        tunnel: "starterkit" 
     });
 });
