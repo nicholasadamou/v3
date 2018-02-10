@@ -1,43 +1,95 @@
-.cpc {
-    background: $white;
+#work {
+    ul {
+        margin-left: 130px;
 
-    .desc_wrapper {
-        color: $black;
-
-        h1, p {
-            color: $black;
+        @include until($ipad-pro-landscape) {
+            margin: 0;
         }
 
-        hr {
-            background: $black;
-        }
-    }
-}
+        li {
+            display: inline-block;
 
-.aes {
-    background: $blue;
+            position: relative;
+            overflow: hidden;
 
-    .technologies_wrapper > ul > li {
-        color: $white;
-    }
-}
+            width: 33.3%;
+            vertical-align: top;
+            zoom: 1;
 
-.bphong {
-    background: $black;
+            &:focus, &:hover {
+                h3 {
+                    transform: translateX(0) translateY(0) translateZ(0);
+                }
 
-    .desc_wrapper {
-        color: $white;
+                img {
+                    transform: translate(-50%, -50%) scale(0.8);
+                }
+            }
 
-        h1, p {
-            color: $white;
-        }
+            @include until($iphone-7) {
+                width: 100%;
 
-        hr {
-            background: $white;
-        }
+                &:focus, &:hover {
+                    h3 {
+                        transform: inherit;
+                    }
+    
+                    img {
+                        transform: inherit;
+                    }
+                }
+            }
 
-        .technologies_wrapper > ul > li {
-            color: $white;
+            a {
+                display: block;
+
+                @include aspect-ratio(16, 10);
+
+                position: relative;
+
+                min-height: 270px;
+
+                text-align: center;
+
+                transform: translateZ(0);
+
+                &:focus {
+                    outline: 2px dotted $black;
+                    outline-offset: -2px;
+                }
+
+                img {
+                    display: block;
+
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+
+                    transform: translate(-50%, -50%);
+                    
+                    max-width: 50%;
+
+                    transition: .5s transform;
+                }
+            }
+
+            h3 {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+
+                padding: 1em;
+
+                font-family: $secondary;
+                color: $white;
+                background: rgba($black, 0.75); 
+
+                line-height: 1.4;
+                
+                transform: translateY(100%) translateZ(0);
+                transition: .3s transform;
+            }
         }
     }
 }

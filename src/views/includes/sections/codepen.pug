@@ -1,3 +1,13 @@
+mixin codepen(title, dataSlug)
+    p.codepen(data-height="500" data-theme-id="32420" data-slug-hash=dataSlug data-default-tab="css,result" data-user="NicholasAdamou" data-embed-version="2" data-pen-title=title)
+        | See the Pen 
+        a(href="https://codepen.io/NicholasAdamou/pen/" + dataSlug + "/") #{title}
+        |  by Nicholas Adamou (
+        a(href="https://codepen.io/NicholasAdamou") @NicholasAdamou
+        | ) on 
+        a(href="https://codepen.io") CodePen
+        | .
+    
 section#codepen.hero.is-widescreen
     +banner("CodePen's", "More can be found on my", "CodePen", "fab", "fa-codepen", "https://codepen.io/NicholasAdamou/pens/public/")
     .hero-body

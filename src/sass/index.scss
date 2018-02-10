@@ -1,6 +1,6 @@
 @import 'base/vendors';
 @import 'base/variables';
-@import 'base/mixins';
+@import 'base/device';
 @import 'base/base';
 @import 'base/layout';
 
@@ -12,12 +12,14 @@
 @import 'modules/technologies';
 @import 'modules/banner';
 @import 'modules/internship-itm';
+@import 'modules/angled-edge';
+@import 'modules/aspect-ratio';
 
 @import 'sections/header';
 @import 'sections/aboutme';
 @import 'sections/work';
-@import 'sections/github';
 @import 'sections/codepen';
 @import 'sections/internships';
 @import 'sections/elsewhere';
 @import 'sections/contact';
+@import 'sections/form-success';

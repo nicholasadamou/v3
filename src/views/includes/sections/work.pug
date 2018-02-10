@@ -1,74 +1,19 @@
-section#work.cpc.work-itm.hero.is-fullheight.is-widescreen
-    .hero-body
-        .container
-            .work_wrapper
-                img(data-src="assets/images/logos/cpc_logo.png", alt="Cut Paste & Copy").lazy
-                div.desc_wrapper
-                    h1 Cut Paste & Copy
-                    hr
-                    p Cut, Paste & Copy is a student run graphic design business. They use several of the Adobe Creative Suite programs, such as, Photoshop, Illustrator, and inDesign. I worked closely with the agency to design an eye-catching website to attract more clients. 
-                    .technologies_wrapper
-                        ul
-                            li
-                                i.fab.fa-html5
-                            li
-                                i.fab.fa-css3-alt
-                            li
-                                i.fab.fa-js
-                            li
-                                i.fab.fa-sass
-                            li
-                                i.fab.fa-font-awesome
-                            li
-                                i.fab.fa-node
-                    a(href="http://cutpastecopy.github.io/").link Check it out →
+- var white = "#fafafa"
+- var black = "#212121"
+- var grey = "#F5F5F5"
+- var blue = "#212856"
 
-section#aes.aes.work-itm.hero.is-fullheight.is-widescreen
-    .hero-body
-        .container
-            .work_wrapper
-                img(data-src="assets/images/logos/aes_logo.png", alt="Advanced Electrical Services").lazy
-                .desc_wrapper
-                    h1 Advanced Electrical Services
-                    hr
-                    p I worked closely with Tom Fisher (President & CEO) to design an eye-catching website to attract more clients. Developed Advanced Electrical Services, Inc. website using HTML, CSS, and other web technologies.
-                    .technologies_wrapper
-                        ul
-                            li
-                                i.fab.fa-html5
-                            li
-                                i.fab.fa-css3-alt
-                            li
-                                i.fab.fa-js
-                            li
-                                i.fab.fa-sass
-                            li
-                                i.fab.fa-font-awesome
-                            li
-                                i.fab.fa-node
-                    a(href="http://advancedelectricalservicesinc.com/").link Check it out →
-    
-section#bphong.bphong.work-itm.hero.is-fullheight.is-widescreen
-    .hero-body
-        .container
-            .work_wrapper
-                img(data-src="assets/images/logos/bphong_logo.png", alt="B-Phong Music").lazy
-                .desc_wrapper
-                    h1 B-Phong Music
-                    hr
-                    p Bobby Phong is a vietnamese-american rapper, who resides in Milford, CT. I worked closely with Bobby to create and develop a website to showcase his many songs that he creates with his team.
-                    .technologies_wrapper
-                        ul
-                            li
-                                i.fab.fa-html5
-                            li
-                                i.fab.fa-css3-alt
-                            li
-                                i.fab.fa-js
-                            li
-                                i.fab.fa-sass
-                            li
-                                i.fab.fa-font-awesome
-                            li
-                                i.fab.fa-node                    
-                    a(href="http://bphong.github.io/").link Check it out →
+mixin work(link, image, alt, color, desc)
+    li(style="background-color: " + color + ";").work-itm
+        a(href=link)
+            img(data-src="assets/images/logos/" + image, alt=alt).lazy
+        h3 #{desc}
+
+section#work.hero.is-widescreen
+    ul
+        +work("http://cutpastecopy.github.io/", "cpc_logo.png", "cpc", `${white}`, "HTML5, CSS3, JavaScript, Responsive.")
+        +work("http://advancedelectricalservicesinc.com/", "aes_logo.png", "advanced electrical services", `${blue}`, "HTML5, CSS3, JavaScript, Responsive.")
+        +work("http://bphong.github.io/", "bphong_logo.png", "bphong", `${black}`, "HTML5, CSS3, JavaScript, Responsive.")
+        +work("https://github.com/nicholasadamou/Starter-Kit", "starter-kit.gif", "starter-kit", `${grey}`, "Responsive boilerplate to kickstart any responsive project.")
+        +work("https://github.com/nicholasadamou/dotfiles", "dotfiles.png", "dotfiles", `${white}`, "$HOME sweet ~/")
+        +work("https://github.com/nicholasadamou/Mack-Media-Group-Internship-Project", "mack-logo.png", "mack-media group", `${grey}`, "Mack Media Group ⚡ Internship Project.")

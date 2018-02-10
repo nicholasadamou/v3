@@ -47,10 +47,13 @@ function smoothScroll() {
 function invert_hamburger_colors() {
   $(window).scroll(function() {
     var $toggle = $(".hamburger-inner");
-    var $bphong = $("#bphong");
-    var $aes = $("#aes");
-  
-    if ($aes.is(":in-viewport(50)") || $bphong.is(":in-viewport(50)")) {
+    var $work_itm = $(".work-itm");
+    var background = $work_itm.css("background-color");
+
+    alert(background);
+
+    if (background == "#212121" && $work_itm.is(":in-viewport(50)") || 
+        background == "#212856" && $work_itm.is(":in-viewport(50)")) {
       $toggle.addClass("background-invert");
     } else {
       $toggle.removeClass("background-invert");

@@ -23,12 +23,12 @@ html(lang='en')
         meta(name="viewport" content="width=device-width")
 
         //- Auto-Refresh
-        meta(http-equiv="refresh" content="2; URL=/")
+        //-meta(http-equiv="refresh" content="2; URL=/")
 
         //[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]
 
         //- CSS
-        link(rel="stylesheet" href="assets/css/form-success.css")
+        link(rel="stylesheet" href="assets/css/index.css")
 
         //- Favicon
         link(rel='apple-touch-icon', sizes='57x57', href=favicons + 'apple-icon-57x57.png')
@@ -49,12 +49,12 @@ html(lang='en')
         meta(name='msapplication-TileImage', content=favicons + 'ms-icon-144x144.png')
         meta(name='theme-color', content='#ffffff')
     body.animated.fadeIn
-        section.hero.is-fullheight.is-widescreen
+        section#form-success.hero.is-fullheight.is-widescreen
             .hero-body
                 .container
-                    h1 Form Submitted successfully!
+                    h1.header Form Submitted successfully!
                         | 
                         i.far.fa-thumbs-up
-                    p Please wait while we return you to 
+                    p.desc Please wait while we return you to 
                         em nicholasadamou.github.io
         script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
