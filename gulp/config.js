@@ -29,7 +29,7 @@ module.exports = function() {
             repo: 'REPO'
         },
         // Google PageSpeed Insights URL Option
-        URL: 'example.com',
+        URL: 'https://nicholasadamou.github.io',
         pkg: require('../package.json'),
         // Root dir
         root: require('path').dirname(__dirname) + '/',
