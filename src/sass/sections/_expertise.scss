@@ -24,7 +24,6 @@
     }
 
     ul {
-        margin-left: 130px;
         margin-top: 50px;
 
         @include until($ipad-pro-landscape) {
