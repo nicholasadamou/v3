@@ -92,8 +92,8 @@ module.exports = function() {
             open: false,
             // Notify on all the browsers when the page updates.
             notify: true,
-            // Whether or not B.S. should use localtunnel
-            shouldTunnel: true
+            // The local-tunnel sub-domain (e.g. <example-name>.localtunnel.me)
+            tunnelName: "starterkit"
         }
     };
 
