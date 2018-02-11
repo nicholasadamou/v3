@@ -1,0 +1,74 @@
+#expertise {
+    background-color: $white;
+    color: $black;
+
+    h3 {
+        margin: 50px 0;
+
+        font-size: 3.2rem;
+        text-decoration: underline;
+    }
+
+    p {
+        margin-bottom: 50px;
+
+        font-size: 1.4rem;
+        line-height: 1.8;
+
+        em {
+            font-family: $primary;
+            font-size: 1.5rem;
+            text-decoration: underline;
+            background: $highlight;
+        }
+    }
+
+    ul {
+        margin-left: 130px;
+        margin-top: 50px;
+
+        @include until($ipad-pro-landscape) {
+            margin: 0;
+        }
+
+        li {
+            display: inline-block;
+
+            position: relative;
+            overflow: hidden;
+
+            width: 33.3%;
+            vertical-align: top;
+            zoom: 1;
+
+            text-align: center;
+            color: $black;
+
+            margin-bottom: 25px;
+
+            @include until($iphone-7) {
+                width: 100%;
+            }
+
+            .svg-inline--fa {
+                font-size: 5rem;
+            }
+
+            h4 { 
+                margin: 1.8rem 0;
+
+                font-family: $secondary;
+                font-size: 32px;
+            }
+
+            p {
+                margin: 0 auto;
+                width: 90%;
+
+                font-size: 1.2rem;
+                font-weight: 100;
+                color: $dark-grey;
+            }
+        }
+    }
+}

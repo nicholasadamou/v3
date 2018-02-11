@@ -10,12 +10,12 @@
 
             align-items: center;
             
-            h1, p {
+            h3, p {
                 color: $black;
             }
             
-            h1 {
-                font-size: 48px;
+            h3 {
+                font-size: 3.2rem;
                 text-decoration: underline;
 
                 margin: 10px 0;
@@ -30,9 +30,13 @@
                     text-align: left;
                 }
             }
+            
+            .link {
+                margin-bottom: 25px;
 
-            .link:hover {
-                color: $black;
+                &:hover {
+                    color: $black;
+                }
             }
         }
     }
