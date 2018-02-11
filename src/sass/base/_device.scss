@@ -1,11 +1,12 @@
-$laptop: 1441px;
+$laptop: 1440px;
 $iphone-7: 430px;
-$ipad-pro-landscape: 1367px;
-$ipad-pro: 1025px;
-$ipad: 769px;
+$ipad-pro-landscape: 1400px;
+$ipad-pro: 1024px;
+$ipad-landscape: 1024px;
+$ipad: 768px;
 
 @mixin until($device) {
-	@media screen and (max-width: $device - 1px) {
+	@media screen and (max-width: $device) {
 		@content;
 	}
 }

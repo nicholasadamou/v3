@@ -8,15 +8,6 @@ $(function() {
 
   smoothScroll();
   new LazyLoad({ elements_selector: ".lazy" });
-
-  var typed = new Typed('.typed', {
-    strings: ["web applications.", "user interfaces.", "corporate websites."],
-    loop: true,
-    loopCount: Infinity,
-    typeSpeed: 80,
-    backDelay: 1000,
-    backSpeed: 100
-  });  
 });
 
 // smoothScroll function is applied from the document ready function
@@ -45,30 +36,19 @@ function smoothScroll() {
 }
 
 function invert_hamburger_colors() {
-  $(window).scroll(function() {
-    function getHex(color) {
-      var parts = color.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-      
-      delete(parts[0]);
-      
-      for (var i = 1; i <= 3; ++i) {
-          parts[i] = parseInt(parts[i]).toString(16);
-          if (parts[i].length == 1) parts[i] = '0' + parts[i];
-      }
-    
-      color = '#' + parts.join('');
-    }
-    
-    var toggle = $(".hamburger-inner");
-    var aes = $(".advanced-electrical-services");
-    var bphong = $(".bphong");
+  if ($(window).width() <= 375) {
+    $(window).scroll(function() {
+      var toggle = $(".hamburger-inner");
+      var aes = $(".advanced-electrical-services");
+      var bphong = $(".bphong");
 
-    if (aes.is(":in-viewport(50)") || bphong.is(":in-viewport(50)")) {
-      toggle.addClass("background-invert");
-    } else {
-      toggle.removeClass("background-invert");
-    }
-  });
+      if (aes.is(":in-viewport(50)") || bphong.is(":in-viewport(50)")) {
+        toggle.addClass("background-invert");
+      } else {
+        toggle.removeClass("background-invert");
+      }
+    });
+  }
 }
 
 function toggleNav() {

@@ -1,22 +1,19 @@
-// n is number of stars required
-@function multiple-box-shadow($n) {
-    $value: "#{random(2000)}px #{random(2000)}px #212121";
-    @for $i from 2 through $n {
-      $value: "#{$value}, #{random(2000)}px #{random(2000)}px #212121";
-    }
-    @return unquote($value);
-}
-  
-$shadows-small: multiple-box-shadow(700);
-$shadows-medium: multiple-box-shadow(200);
-$shadows-large: multiple-box-shadow(100);
-
 #header {
-    height: 100%;
+    border: none;
+
     position: relative;
+
     background-color: $white;
     background-size: cover;
+
     overflow: hidden;
+
+    text-align: center;
+
+    @include until($iphone-7) {
+        text-align: left;
+        border: 10px solid $grey;
+    }
 
     .particles-js-canvas-el {
         position: absolute;
@@ -33,7 +30,7 @@ $shadows-large: multiple-box-shadow(100);
         position: static;
     }
 
-    .typed {
+    .subtitle {
         position: absolute;
         top: 62%;
         left: 50%;
@@ -43,43 +40,45 @@ $shadows-large: multiple-box-shadow(100);
         
         z-index: 3;
 
+        width: 100%;
+
+        font-family: $primary;
+        font-style: italic;
         font-size: 5rem !important;
 
         @include until($ipad-pro-landscape) {
-            top: 68%;
-            transform: translate(-50%, -68%);
-            
-            width: 100%;
+            top: 63%;
+            transform: translate(-50%, -63%);
+        
             font-size: 5rem !important;
         }
 
         @include until($ipad-pro) {
-            top: 62%;
-            transform: translate(-50%, -62%);
-            
-            width: 100%;
-            font-size: 3.5rem !important;
+            top: 59%;
+            transform: translate(-50%, -59%);
+        
+            font-size: 5rem !important;
         }
 
         @include until($ipad) {
-            top: 60%;
-            transform: translate(-50%, -60%);
-            
-            width: 100%;
             font-size: 4rem !important;
         }
 
-        @include until($iphone-7) {
-            top: 62%;
-            transform: translate(-50%, -62%);
-
-            width: 100%;
-            font-size: 3rem !important;
+        @media screen and (max-width: $ipad-landscape) and (max-height: 768px) {
+            top: 65%;
+            transform: translate(-50%, -65%);
         }
-    }
 
-    .typed-cursor {
-        display: none;
+        @include until($iphone-7) { 
+            position: static;
+            top: 0;
+            left: 0; 
+            transform: translate(0, 0);
+
+            margin: 0;
+
+            font-size: 3.5rem !important;
+        }
     }
 
     .title, .subtitle {
@@ -92,14 +91,9 @@ $shadows-large: multiple-box-shadow(100);
         font-family: $secondary;
         margin-bottom: 0;
         width: 100%;
-
-        em {
-            font-family: $primary;
-        }
-
+        
         strong {
             font-weight: 700;
-            background: $highlight;
         }
 
 
@@ -112,25 +106,7 @@ $shadows-large: multiple-box-shadow(100);
         }
 
         @include until($iphone-7) {
-            font-size: 1.5rem;
-        }
-    }
-
-    .subtitle {
-        font-family: $primary;
-        font-style: italic;
-
-        @include until($iphone-7) {
-            font-size: 1rem;
+            font-size: 3rem;
         }
     }
 }
-
-@keyframes fly {
-    from {
-      transform: translateY(0px);
-    }
-    to {
-      transform: translateY(-50vh);
-    }
-  }

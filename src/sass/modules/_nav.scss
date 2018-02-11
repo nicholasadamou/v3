@@ -24,12 +24,12 @@
 }
 
 .toggle {
-	display: none;
+	display: block;
 
 	font-size: 32px;
 	position: fixed;
 	top: 20px;
-	left: 20px;
+	left: 30px;
 	z-index: 999;
 
 	padding: 5px;
@@ -38,8 +38,9 @@
 
 	opacity: 1 !important;
 
-	@include until($ipad-pro-landscape) {
-		display: block;
+	@include until($iphone-7) {
+		top: 20px;
+		left: 20px;
 	}
 
 	.hamburger-box, .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
@@ -64,18 +65,14 @@
   
 	position: fixed;
 	top: 0;
-	left: 0px;
+	left: -130px;
   
 	height: 100%;
 	width: 130px;
 	text-align: left;
 	z-index: 999;
 	transition: left 0.3s ease-in-out;
-
-	@include until($ipad-pro-landscape) {
-		left: -175px;
-	}
-
+	
 	a {
 		display: block;
 		padding-left: 20px;

@@ -4,9 +4,6 @@
 
     h3 {
         margin: 50px 0;
-
-        font-size: 3.2rem;
-        text-decoration: underline;
     }
 
     p {
@@ -14,19 +11,17 @@
 
         font-size: 1.4rem;
         line-height: 1.8;
-
-        em {
-            font-family: $primary;
-            font-size: 1.5rem;
-            text-decoration: underline;
-            background: $highlight;
-        }
     }
 
     ul {
         margin-top: 50px;
 
-        @include until($ipad-pro-landscape) {
+        @include until(1367px) {
+            margin: 0;
+            margin-left: 25px;
+        }
+
+        @include until($ipad-pro) {
             margin: 0;
         }
 
@@ -51,6 +46,10 @@
 
             .svg-inline--fa {
                 font-size: 5rem;
+
+                @include until($ipad) {
+                    font-size: 4rem;
+                }
             }
 
             h4 { 
@@ -74,4 +73,4 @@
             }
         }
     }
-}
+} 

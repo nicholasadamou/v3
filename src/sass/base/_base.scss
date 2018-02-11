@@ -79,12 +79,33 @@ body {
 	line-height: 1.6em;
 }
 
+.border {
+	border: 30px solid $grey;
+
+	@include until($iphone-7) {
+		border: 10px solid $grey;
+	}
+}
+
 hr {
 	margin: 0;
 }
 
-h1 {
+h1,h3 {
 	font-family: $primary;
+}
+
+h3 {
+	font-size: 5rem;
+	font-weight: 700;
+
+	@include until($ipad) {
+		font-size: 4rem;
+	}
+
+	@include until($iphone-7) {
+		font-size: 3rem;
+	}
 }
 
 .subtitle,.link, p {
@@ -107,25 +128,4 @@ h1, .subtitle {
 
 img:not([src]) {
 	visibility: hidden;
-}
-
-iframe {
-	display: block;
-	margin: 0 auto;
-	margin-bottom: 30px;
-
-	box-shadow: 0px 0px 5px 0px rgba($white, 0.75);
-
-	@include until($ipad-pro) {
-		width: 100%;
-	}
-}
-
-.cp_embed_wrapper {
-	width: 80%;
-	margin: 0 auto;
-
-	@include until($ipad-pro) {
-		width: 100%;
-	}
 }

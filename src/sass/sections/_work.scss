@@ -1,11 +1,10 @@
+$border-size: 30px;
 #work {
+
+    border-top: $border-size solid $grey;
+    border-bottom: $border-size solid $grey;
+
     ul {
-        margin-left: 130px;
-
-        @include until($ipad-pro-landscape) {
-            margin: 0;
-        }
-
         li {
             display: inline-block;
 
@@ -17,7 +16,7 @@
             zoom: 1;
 
             &:focus, &:hover {
-                h3 {
+                h4 {
                     transform: translateX(0) translateY(0) translateZ(0);
                 }
 
@@ -30,7 +29,7 @@
                 width: 100%;
 
                 &:focus, &:hover {
-                    h3 {
+                    h4 {
                         transform: inherit;
                     }
     
@@ -73,7 +72,7 @@
                 }
             }
 
-            h3 {
+            h4 {
                 position: absolute;
                 left: 0;
                 right: 0;

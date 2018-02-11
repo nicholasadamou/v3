@@ -15,10 +15,7 @@
             }
             
             h3 {
-                font-size: 3.2rem;
-                text-decoration: underline;
-
-                margin: 10px 0;
+                margin: 25px 0;
             }
 
             p {
@@ -32,8 +29,6 @@
             }
             
             .link {
-                margin-bottom: 25px;
-
                 &:hover {
                     color: $black;
                 }

@@ -1,14 +1,14 @@
 #elsewhere {
     position: relative;
 
-    background: $white;
+    flex-direction: column;
 
-    .hero-body .container {
-        flex-grow: 0;
-        max-width: auto;
-        width: 100%;
+    padding: 3em;
 
-        position: static;
+    background: $grey;
+
+    .hero-body {
+        padding: 0;
     }
 
     .title {
@@ -16,46 +16,48 @@
     }
 
     .title {
-        font-family: $primary;
-        font-size: 8rem;
+        margin-bottom: 0;
 
-        margin-bottom: 3.5rem;
-
-        @include until($ipad-pro) {
-            font-size: 5rem;
-        }
-
-        @include until($iphone-7) {
-            font-size: 3.5rem;
-        }
+        font-family: $secondary;
+        font-size: 0.625em;
+        color: rgba(10, 10, 10, 0.29);
+        text-transform: uppercase;
     }
 
-    ul {
-        list-style-type: none;
+    .elsewhere-list {
+        align-items: center;
+        display: flex;
+        justify-content: center;
 
         a {
-            color: $black;
-
-            font-size: 3rem;
-
-            margin-right: 50px;
+            display: inline-block;
     
-            &:last-child {
-                margin-right: 0;
-            }
-
-            &:hover {
-                color: $red;
-            }
-
-            @include until($iphone-7) {
-                font-size: 2rem;
-            }
-
-            li {
-                display: inline;
+            margin: 2em;
+    
+            @include size(4rem);
+    
+            color: rgba($black, 0.75);
+    
+            transform-origin: center;
+            transition-duration: 200ms;
+            transition-property: opacity, transform;
+    
+            .svg-inline--fa {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto; 
+                height: auto;    
             }
         }
-        
+
+        .is-github:hover {
+            color: $github;
+            transform: scale(0.86);
+        }
+    
+        .is-twitter:hover {
+            color: $twitter;
+            transform: scale(0.86);
+        }
     }
 }

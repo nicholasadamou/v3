@@ -7,13 +7,13 @@ mixin work(link, image, alt, color, desc)
     li(style="background-color: " + color + ";" class=alt).work-itm
         a(href=link)
             img(data-src="assets/images/logos/" + image, alt=alt).lazy
-        h3 #{desc}
+        h4 #{desc}
 
 section#work.hero.is-widescreen
     ul
-        +work("http://cutpastecopy.github.io/", "cpc_logo.png", "cpc", `${grey}`, "A student run graphic design agancy based in New Milford, CT.")
-        +work("http://advancedelectricalservicesinc.com/", "aes_logo.png", "advanced-electrical-services", `${blue}`, "Your friendly, local electrican (⚡) expert.")
+        +work("http://cutpastecopy.github.io/", "cpc_logo.png", "cpc", `${white}`, "A student run graphic design agancy based in New Milford, CT.")
+        +work("http://advancedelectricalservicesinc.com/", "aes_logo.png", "advanced-electrical-services", `${blue}`, "Your friendly, local electrican expert.")
         +work("http://bphong.github.io/", "bphong_logo.png", "bphong", `${black}`, "A vietnamese-american rapper based in Milford, CT.")
-        +work("https://github.com/nicholasadamou/Starter-Kit", "starter-kit.gif", "starter-kit", `${grey}`, "Responsive boilerplate to kickstart any responsive project.")
+        +work("https://github.com/nicholasadamou/Starter-Kit", "starter-kit.gif", "starter-kit", `${white}`, "Responsive boilerplate to kickstart any responsive project.")
         +work("https://github.com/nicholasadamou/dotfiles", "dotfiles.png", "dotfiles", `${white}`, "$HOME sweet ~/")
-        +work("https://github.com/nicholasadamou/Mack-Media-Group-Internship-Project", "mack-logo.png", "mack-media-group", `${grey}`, "Mack Media Group ⚡ Internship Project.")
+        +work("https://github.com/nicholasadamou/Mack-Media-Group-Internship-Project", "mack-logo.png", "mack-media-group", `${white}`, "Mack Media Group ⚡ Internship Project.")
