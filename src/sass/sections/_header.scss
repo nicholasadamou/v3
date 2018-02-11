@@ -11,7 +11,6 @@
     text-align: center;
 
     @include until($iphone-7) {
-        text-align: left;
         border: 10px solid $grey;
     }
 
@@ -28,6 +27,10 @@
         width: 100%;
 
         position: static;
+
+        @include until($ipad-pro-landscape) {
+            text-align: left;
+        }
     }
 
     .subtitle {
@@ -47,29 +50,6 @@
         font-size: 5rem !important;
 
         @include until($ipad-pro-landscape) {
-            top: 70%;
-            transform: translate(-50%, -70%);
-        
-            font-size: 5rem !important;
-        }
-
-        @include until($ipad-pro) {
-            top: 59%;
-            transform: translate(-50%, -59%);
-        
-            font-size: 5rem !important;
-        }
-
-        @include until($ipad) {
-            font-size: 4rem !important;
-        }
-
-        @media screen and (max-width: $ipad-landscape) and (max-height: 768px) {
-            top: 65%;
-            transform: translate(-50%, -65%);
-        }
-
-        @include until($iphone-7) { 
             position: static;
             top: 0;
             left: 0; 
@@ -82,7 +62,7 @@
     }
 
     .title, .subtitle {
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 400;
         color: $black;
     }
@@ -94,15 +74,6 @@
         
         strong {
             font-weight: 700;
-        }
-
-
-        @include until($ipad-pro) {
-            font-size: 3.5rem;
-        }
-
-        @include until($ipad) {
-            font-size: 3rem;
         }
 
         @include until($iphone-7) {
