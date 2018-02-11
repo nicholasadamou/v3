@@ -47,8 +47,8 @@
         font-size: 5rem !important;
 
         @include until($ipad-pro-landscape) {
-            top: 65%;
-            transform: translate(-50%, -65%);
+            top: 70%;
+            transform: translate(-50%, -70%);
         
             font-size: 5rem !important;
         }
