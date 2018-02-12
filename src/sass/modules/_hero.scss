@@ -9,6 +9,10 @@
 	@include until($ipad-pro-landscape) {
 		width: 100%;
 	}
+
+	@include until($iphone-7) {
+		display: none;
+	}
 }
 
 #line {
