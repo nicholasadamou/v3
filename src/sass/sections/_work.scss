@@ -5,8 +5,6 @@ $border-size: 30px;
     border-bottom: $border-size solid $grey;
 
     ul {
-		font-size: 0px;
-
         li {
             display: inline-block;
 
@@ -52,7 +50,7 @@ $border-size: 30px;
 
                 text-align: center;
 
-                transform: translateZ(0);
+				transform: translateZ(0);
 
                 &:focus {
                     outline: 2px dotted $black;
@@ -70,7 +68,7 @@ $border-size: 30px;
 
                     max-width: 50%;
 
-                    transition: .5s transform;
+					transition: .5s transform;
                 }
             }
 

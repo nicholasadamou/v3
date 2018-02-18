@@ -26,7 +26,6 @@
 
     ul {
 		margin: 0 1.5rem;
-		font-size: 0px;
 
         @include until($iphone-7) {
             margin: 0;
@@ -37,7 +36,7 @@
 
             width: 50%;
 
-            @include until($ipad) {
+            @include until($iphone-7) {
                 width: 100%;
             }
 
