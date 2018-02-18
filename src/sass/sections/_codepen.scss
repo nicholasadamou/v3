@@ -1,8 +1,8 @@
 #codepen {
     position: relative;
-    
+
     margin-bottom: 3rem;
-    
+
     background: $white;
 
     color: $black;
@@ -25,7 +25,8 @@
     }
 
     ul {
-        margin: 0 1.5rem;
+		margin: 0 1.5rem;
+		font-size: 0px;
 
         @include until($iphone-7) {
             margin: 0;
@@ -33,13 +34,13 @@
 
         li {
             display: inline-block;
-    
+
             width: 50%;
-    
+
             @include until($ipad) {
                 width: 100%;
             }
-    
+
             .cp_embed_wrapper {
                 width: 100%;
 

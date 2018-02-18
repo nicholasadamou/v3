@@ -14,7 +14,8 @@
     }
 
     ul {
-        margin-top: 50px;
+		margin-top: 50px;
+		font-size: 0px;
 
         @include until(1367px) {
             margin: 0;
@@ -52,7 +53,7 @@
                 }
             }
 
-            h4 { 
+            h4 {
                 margin: 1.8rem 0;
 
                 font-family: $secondary;
@@ -73,4 +74,4 @@
             }
         }
     }
-} 
+}

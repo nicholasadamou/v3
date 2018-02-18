@@ -10,7 +10,7 @@ module.exports = function() {
          * For the development build, the output will be verbose.
          * For the production build, the output will be compress and minified
          * If it is set to an empty string the environment will be extract from
-         * the NODE_ENV  environment var.
+         * the NODE_ENV environment var.
          */
         environment: 'production',
         FTP: {
@@ -29,31 +29,37 @@ module.exports = function() {
             repo: 'REPO'
         },
         // Google PageSpeed Insights URL Option
-        URL: 'https://nicholasadamou.github.io',
+		URL: 'example.com',
+		// The `package.json` file
         pkg: require('../package.json'),
         // Root dir
         root: require('path').dirname(__dirname) + '/',
         // Source code dir
         src: 'src/',
         // dist dir is where the compiled code will be outputted.
-        dist: 'public/',
-        docs: 'assets/docs',
+		build: 'public/',
+		// Location of various assets (e.g. fonts, css, images, etc)
+		assets: 'assets/',
         // Where the images are inside the src folder.
         // They will be copied to the same dir on the dist folder.
         images: 'assets/images',
-        // Favicons
-        favicons: 'assets/images/favicons',
         /**
-         * Views directory. This is the dir where all the Pug files should live
+         * Pug directory. This is the dir where all the Pug files should live
          * Important: only *.pug files will be compiled in this exact dir and not any sub dir.
          * you could use a subdir to include partials and use the include command in Pug to included them.
          */
-        views: 'views/',
+        pug: {
+			dir: 'views',
+			name: 'index.pug'
+		},
         /**
          * As this is a sass-based project, this is the dir for the sass files. Every file
          * under this dir will be watched for changes, but only the index file will be compiled.
          */
-        sass: 'sass/index.scss',
+        sass: {
+			dir: 'sass',
+			name: 'index.scss'
+		},
          // Dir where the sass will be compiled to
         css: 'assets/css',
         // This are the options that will be passed to the sass compiler
@@ -75,8 +81,8 @@ module.exports = function() {
             precision: 3,
         },
         js: {
-            dir: 'js/',
-            name: 'app.js'
+            dir: 'js',
+            name: 'index.js'
         },
         /**
          * This is the relative to build dir for vendors assets like jQuery. Vendors are
@@ -91,9 +97,11 @@ module.exports = function() {
             // If this option is true, the project will be open in browser after compile.
             open: false,
             // Notify on all the browsers when the page updates.
-            notify: true,
+			notify: true,
+			// Whether or not the UI should be enabled
+			ui: false,
             // The local-tunnel sub-domain (e.g. <example>.localtunnel.me)
-            tunnelName: "starterkit"
+            tunnelName: 'starterkit'
         }
     };
 

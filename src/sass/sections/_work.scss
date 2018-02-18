@@ -5,6 +5,8 @@ $border-size: 30px;
     border-bottom: $border-size solid $grey;
 
     ul {
+		font-size: 0px;
+
         li {
             display: inline-block;
 
@@ -32,7 +34,7 @@ $border-size: 30px;
                     h4 {
                         transform: inherit;
                     }
-    
+
                     img {
                         transform: inherit;
                     }
@@ -65,7 +67,7 @@ $border-size: 30px;
                     left: 50%;
 
                     transform: translate(-50%, -50%);
-                    
+
                     max-width: 50%;
 
                     transition: .5s transform;
@@ -82,10 +84,10 @@ $border-size: 30px;
 
                 font-family: $secondary;
                 color: $white;
-                background: rgba($black, 0.75); 
+                background: rgba($black, 0.75);
 
                 line-height: 1.4;
-                
+
                 transform: translateY(100%) translateZ(0);
                 transition: .3s transform;
             }

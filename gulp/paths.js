@@ -3,43 +3,31 @@
 var config = require('./config.js')();
 
 var src = config.root + config.src;
-var dest = config.root + config.dist;
+var build = config.root + config.build;
 
 module.exports = {
 	to: {
 		src: src,
-        dist: dest,
-		pug: {
-			in: src +  config.views + '*.pug',
-			out: dest
+		build: build,
+		assets: {
+			in:  src + config.assets,
+			out:  build + config.assets
 		},
-		sass: {
-			in: src + config.sass,
-			out: dest + config.css
+		vendors: {
+			in: src + config.vendors,
+			out: build + config.assets + config.vendors
 		},
 		js: {
-			in: src + config.js.dir + "*.js",
-			out: dest + 'assets/' + config.js.dir
+			in:  src + config.js.dir,
+			out:  build + config.assets + config.js.dir
 		},
-		json: {
-			in: src + 'assets/' + "*.json",
-			out: dest + 'assets/'
+		sass: {
+			in:  src + config.sass.dir,
+			out: build + config.css
 		},
-		images: {
-			in: src + config.images + '/**/*.*',
-			out: dest + config.images
-		},
-		docs : {
-        	in: src + config.docs + '/*.pdf',
-        	out: dest + config.docs
-        },
-       	vendors: {
-       		sass: src + config.vendors + '/**/*.min.css',
-   			js: src + config.vendors + '/**/*.min.js'
-       	},
-		favicons: {
-			in: src + config.favicons + '/*.*',
-			out: dest + config.favicons
+		pug: {
+			in:  src + config.pug.dir,
+			out: build
 		}
 	}
 };

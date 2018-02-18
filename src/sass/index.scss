@@ -1,14 +1,32 @@
-@import 'base/vendors';
+//
+// Settings
+// --------------------------------------------------
+
+@import 'settings/vendors';
+@import 'settings/functions';
+@import 'settings/mixins';
+
+//
+// Base
+// --------------------------------------------------
+
 @import 'base/variables';
-@import 'base/device';
 @import 'base/base';
 @import 'base/layout';
+
+//
+// Modules
+// --------------------------------------------------
 
 @import 'modules/logo';
 @import 'modules/avatar';
 @import 'modules/nav';
 @import 'modules/aspect-ratio';
 @import 'modules/hero';
+
+//
+// Sections
+// --------------------------------------------------
 
 @import 'sections/header';
 @import 'sections/aboutme';

@@ -4,57 +4,58 @@
 - var tags = "developer, nicholas-adamou, sass, jade, gulp, scss, full-stack-developer, maker, designer"
 - var assets = 'assets/'
 - var css = assets + 'css/'
-- var js = assets + 'js/'
-- var docs = assets + 'docs/'
-- var images = assets + 'images/'
 - var favicons = images + 'favicons/'
 
 doctype html
 html(lang='en')
-    head
-        //- Basic Page Needs
-        title #{title}
-        meta(charset="utf-8")
-        meta(name="description" content=description)
-        meta(name="author" content=author)
-        meta(name="tags" content=tags)
+	head
+		//- Basic Page Needs
+		title #{title}
+		meta(charset="utf-8")
+		meta(name="description" content=description)
+		meta(name="author" content=author)
+		meta(name="tags" content=tags)
 
-        //- Mobile Specific Meta
-        meta(name="viewport" content="width=device-width")
+		//- Mobile Specific Meta
+		meta(name="viewport" content="width=device-width")
 
-        //- Auto-Refresh
-        meta(http-equiv="refresh" content="2; URL=/")
+		//- Auto-Refresh
+		meta(http-equiv="refresh" content="2; URL=/")
 
-        //[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]
+		//[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]
 
-        //- CSS
-        link(rel="stylesheet" href="assets/css/index.css")
+		//- CSS
+		case env
+			when "development"
+				link(href=css + "index.css", rel="stylesheet")
+			when "production"
+				link(href=css + "index.min.css", rel="stylesheet")
 
-        //- Favicon
-        link(rel='apple-touch-icon', sizes='57x57', href=favicons + 'apple-icon-57x57.png')
-        link(rel='apple-touch-icon', sizes='60x60', href=favicons + 'apple-icon-60x60.png')
-        link(rel='apple-touch-icon', sizes='72x72', href=favicons + 'apple-icon-72x72.png')
-        link(rel='apple-touch-icon', sizes='76x76', href=favicons + 'apple-icon-76x76.png')
-        link(rel='apple-touch-icon', sizes='114x114', href=favicons + 'apple-icon-114x114.png')
-        link(rel='apple-touch-icon', sizes='120x120', href=favicons + 'apple-icon-120x120.png')
-        link(rel='apple-touch-icon', sizes='144x144', href=favicons + 'apple-icon-144x144.png')
-        link(rel='apple-touch-icon', sizes='152x152', href=favicons + 'apple-icon-152x152.png')
-        link(rel='apple-touch-icon', sizes='180x180', href=favicons + 'apple-icon-180x180.png')
-        link(rel='icon', type='image/png', sizes='192x192', href=favicons + 'android-icon-192x192.png')
-        link(rel='icon', type='image/png', sizes='32x32', href=favicons + 'favicon-32x32.png')
-        link(rel='icon', type='image/png', sizes='96x96', href=favicons + 'favicon-96x96.png')
-        link(rel='icon', type='image/png', sizes='16x16', href=favicons + 'favicon-16x16.png')
-        link(rel='manifest', href=favicons + 'manifest.json')
-        meta(name='msapplication-TileColor', content='#ffffff')
-        meta(name='msapplication-TileImage', content=favicons + 'ms-icon-144x144.png')
-        meta(name='theme-color', content='#ffffff')
-    body.animated.fadeIn
-        section#form-success.hero.is-fullheight.is-widescreen
-            .hero-body
-                .container
-                    h1.header Form Submitted successfully!
-                        | 
-                        i.far.fa-thumbs-up
-                    p.desc Please wait while we return you to 
-                        em nicholasadamou.github.io
-        script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")
+		//- Favicon
+		link(rel='apple-touch-icon', sizes='57x57', href=favicons + 'apple-icon-57x57.png')
+		link(rel='apple-touch-icon', sizes='60x60', href=favicons + 'apple-icon-60x60.png')
+		link(rel='apple-touch-icon', sizes='72x72', href=favicons + 'apple-icon-72x72.png')
+		link(rel='apple-touch-icon', sizes='76x76', href=favicons + 'apple-icon-76x76.png')
+		link(rel='apple-touch-icon', sizes='114x114', href=favicons + 'apple-icon-114x114.png')
+		link(rel='apple-touch-icon', sizes='120x120', href=favicons + 'apple-icon-120x120.png')
+		link(rel='apple-touch-icon', sizes='144x144', href=favicons + 'apple-icon-144x144.png')
+		link(rel='apple-touch-icon', sizes='152x152', href=favicons + 'apple-icon-152x152.png')
+		link(rel='apple-touch-icon', sizes='180x180', href=favicons + 'apple-icon-180x180.png')
+		link(rel='icon', type='image/png', sizes='192x192', href=favicons + 'android-icon-192x192.png')
+		link(rel='icon', type='image/png', sizes='32x32', href=favicons + 'favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='96x96', href=favicons + 'favicon-96x96.png')
+		link(rel='icon', type='image/png', sizes='16x16', href=favicons + 'favicon-16x16.png')
+		link(rel='manifest', href=favicons + 'manifest.json')
+		meta(name='msapplication-TileColor', content='#ffffff')
+		meta(name='msapplication-TileImage', content=favicons + 'ms-icon-144x144.png')
+		meta(name='theme-color', content='#ffffff')
+	body.animated.fadeIn
+		section#form-success.hero.is-fullheight.is-widescreen
+			.hero-body
+				.container
+					h1.header Form Submitted successfully!
+						|
+						i.far.fa-thumbs-up
+					p.desc Please wait while we return you to
+						em nicholasadamou.com
+		script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")

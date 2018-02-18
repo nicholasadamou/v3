@@ -129,3 +129,11 @@ h1, .subtitle {
 img:not([src]) {
 	visibility: hidden;
 }
+
+ul {
+	font-size: 0px;
+
+	li {
+		font-size: 1rem;
+	}
+}

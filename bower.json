@@ -1,0 +1,12 @@
+{
+    "name": "starter-kit",
+    "dependencies": {
+		"bulma": "latest",
+		"animate-css": "latest",
+		"css-hamburgers": "latest",
+		"hover": "latest",
+		"isInViewport": "latest",
+		"vanilla-lazyload": "latest",
+		"jquery": "latest"
+    }
+}

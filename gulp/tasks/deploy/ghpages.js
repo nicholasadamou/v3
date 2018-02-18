@@ -14,10 +14,10 @@ gulp.task('ghpages', ['build'], function() {
     //   2. Encrypt and save that token into the `.travis.yml` file by running:
     //      `travis encrypt GITHUB_TOKEN="<your-oauth-token>" --add`
 
-    return gulp.src(paths.to.dist + '**/*')
+    return gulp.src(paths.to.build + '**/*')
         .pipe($.if('**/robots.txt', !argv.production ? $.replace('Disallow:', 'Disallow: /') : $.util.noop()))
         .pipe($.ghPages({
-            remoteUrl: 'https://' + process.env.GITHUB_TOKEN + 
+            remoteUrl: 'https://' + process.env.GITHUB_TOKEN +
                     '@github.com/' + config.GHPAGES.username + '/' + config.GHPAGES.repo + '.git',
                     branch: 'gh-pages'
         }));

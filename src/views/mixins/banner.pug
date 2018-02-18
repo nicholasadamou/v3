@@ -2,7 +2,7 @@ mixin banner(name, desc, linkName, faCategory, faClass, link)
     .banner_wrapper
         .text_wrapper
             h1 #{name}
-            .subtitle [#{desc}  
+            .subtitle [#{desc}
                 a(href=link).link #{linkName}
                 |]
         i(class=faCategory + " " + faClass)
