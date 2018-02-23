@@ -66,11 +66,13 @@
 	},
 	"dependencies": {
 		"animate.css": "latest",
+		"bower": "^1.8.2",
 		"bulma": "latest",
 		"hamburgers": "latest",
 		"hover": "latest",
 		"isinviewport": "latest",
 		"jquery": "latest",
+		"localtunnel": "^1.8.3",
 		"vanilla-lazyload": "latest"
 	}
 }
