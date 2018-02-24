@@ -5,21 +5,24 @@ $blue: #212856;
 $light-blue: #6DBCDB;
 $navy: #2c3e50;
 $red: #FC4349;
-$grey: #F5F5F5; //#F3F3F3;
+$grey: #F5F5F5;
 $light-grey: #ccc;
 $dark-grey: #93a4aa;
 $green: #10B500;
 $light-green: #00BF6C;
 $yellow: #FFF498;
+$dark-yellow: #FFD600;
 $github: #161514;
 $twitter: #55acee;
+$linkedin: #0077B5;
 //- body
 $body: $white; //-body background
 //-scrollbar
 $scrollbar: $white;
 $scrollbar-bg: $black;
 //- Typography
-$primary: 'Shadows Into Light';
+$systemFonts: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$primary: $systemFonts;
 $secondary: 'Roboto Slab';
 $highlight: $yellow;
 $selection: $black;

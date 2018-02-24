@@ -1,5 +1,6 @@
 extends ./extends/layout
-include ./mixins/banner
+include ./mixins/skills
+include ./mixins/git-repo
 
 block mixins
 
@@ -16,7 +17,9 @@ block content
 	.border
 		include ./includes/sections/aboutme
 		include ./includes/sections/expertise
-		include ./includes/sections/work
+		include ./includes/sections/skills
+		include ./includes/sections/clients
+		include ./includes/sections/github
 		include ./includes/sections/codepen
 		include ./includes/sections/elsewhere
 		include ./includes/sections/contact

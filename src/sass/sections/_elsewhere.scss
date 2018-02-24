@@ -3,8 +3,6 @@
 
     flex-direction: column;
 
-    padding: 3em;
-
     background: $grey;
 
     .hero-body {
@@ -34,13 +32,19 @@
     
             margin: 2em;
     
-            @include size(4rem);
+			@include size(4rem);
     
             color: rgba($black, 0.75);
     
             transform-origin: center;
             transition-duration: 200ms;
-            transition-property: opacity, transform;
+			transition-property: opacity, transform;
+			
+			@include until($iphone-7) {
+				@include size(3.5rem);
+
+				margin: 1.5em;
+			}
     
             .svg-inline--fa {
                 max-width: 100%;
@@ -57,6 +61,11 @@
     
         .is-twitter:hover {
             color: $twitter;
+            transform: scale(0.86);
+		}
+		
+		.is-linkedin:hover {
+            color: $linkedin;
             transform: scale(0.86);
         }
     }

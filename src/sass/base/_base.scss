@@ -22,14 +22,6 @@
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
 }
 
-@font-face {
-	font-family: 'Shadows Into Light';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Shadows Into Light'), local('ShadowsIntoLight'), url(https://fonts.gstatic.com/s/shadowsintolight/v7/clhLqOv7MXn459PTh0gXYFK2TSYBz0eNcHnp4YqE4Ts.woff2) format('woff2');
-	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
-}
-
 *,
 *::before,
 *::after {
@@ -96,7 +88,7 @@ h1,h3 {
 }
 
 h3 {
-	font-size: 5rem;
+	font-size: 2.5rem;
 	font-weight: 700;
 
 	@include until($ipad) {
@@ -110,7 +102,7 @@ h3 {
 
 .subtitle,.link, p {
 	font-family: $secondary;
-	font-weight: 400;
+	font-weight: 300;
 }
 
 .link {
@@ -124,10 +116,6 @@ h3 {
 
 h1, .subtitle {
 	color: $white;
-}
-
-img:not([src]) {
-	visibility: hidden;
 }
 
 ul {

@@ -12,12 +12,15 @@
     }
 
     h3 {
-        margin: 50px 0;
+        margin: 25px 0;
     }
 
     p {
-        font-size: 1.4rem;
-        line-height: 1.8;
+		margin-bottom: 50px;
+		
+		font-size: 1.25rem;
+		line-height: 1.8;
+		color: darken($light-grey, 15);
 
         @include until($iphone-7) {
             font-size: 1.1rem;

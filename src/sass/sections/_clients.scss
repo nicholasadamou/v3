@@ -1,0 +1,81 @@
+$border-size: 30px;
+
+#clients {
+	background: $white;
+
+	h3 {
+		margin: 25px 0;
+
+		line-height: 1;
+		color: $black;
+	}
+	
+	p {
+        margin-bottom: 50px;
+
+        font-size: 1.4rem;
+		line-height: 1.8;
+		color: darken($light-grey, 15);
+
+		@include until($iphone-7) {
+			margin-bottom: 25px;
+		}
+    }
+
+    ul {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		align-items: center; 
+		justify-content: center;
+
+        li {
+            display: inline-block;
+
+			width: 165px;
+
+			margin-right: 50px;
+
+			&:last-child {
+				margin: 0;
+			}
+
+			@include until($ipad-pro) {
+				width: 120px;
+			}
+
+			@include until($iphone-7) {
+				margin: 0;
+				margin-bottom: 25px;
+				width: 100%;
+			}
+
+			a {
+				text-decoration: none;
+
+				img {
+					max-width: 100%;
+
+					filter: grayscale(100%);
+
+					transform-origin: center;
+
+					transition: 200ms transform ease-in-out;
+	
+					&:hover {
+						filter: grayscale(50%);
+						transform: scale(1.1);
+					}
+
+					@include until($ipad-pro) {
+						filter: grayscale(50%);
+					}
+
+					@include until($iphone-7) {
+						max-width: 50%;
+					}
+				}
+			}
+		}
+    }
+}

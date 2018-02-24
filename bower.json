@@ -5,7 +5,6 @@
 		"animate-css": "latest",
 		"css-hamburgers": "latest",
 		"hover": "latest",
-		"isInViewport": "latest",
 		"vanilla-lazyload": "latest",
 		"jquery": "latest"
     }

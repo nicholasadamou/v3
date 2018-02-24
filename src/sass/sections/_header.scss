@@ -25,9 +25,7 @@
 	}
 
     @include until($iphone-7) {
-        min-height: 100vh;
-
-        border: 10px solid $grey;
+		min-height: auto;
     }
 
     .hero-body .container {
@@ -38,8 +36,46 @@
 
         z-index: 2;
 
-        text-align: left;
-    }
+		text-align: center;
+
+		margin-bottom: 4rem;
+	}
+	
+	.hero-body {
+		@include until($iphone-7) {
+			padding: 100px 0;
+		}
+	}
+
+	.title, .subtitle, .my-name {	
+        font-size: 3.5rem;
+		font-weight: 400;
+		line-height: 1.5;
+        color: $black;
+	}
+	
+	.title {
+        font-family: $secondary;
+        font-weight: 700;
+        margin-bottom: 0;
+        width: 100%;
+
+        @include until($iphone-7) {
+            font-size: 2.5rem;
+        }
+	}
+	
+	.my-name {
+		font-family: $secondary;
+		font-weight: 700;
+		font-size: 3.5rem; 
+		color: $red;
+
+		@include until($iphone-7) {
+			display: block;
+			font-size: 2.5rem;
+		}
+	}
 
     .subtitle {
         overflow: hidden;
@@ -49,36 +85,16 @@
         width: 100%;
 
         font-family: $primary;
-        font-style: italic;
-        font-size: 3.5rem !important;
+		font-weight: 300;
+		font-size: 2.5rem !important;
 
         @include until($ipad-pro-landscape) {
             margin: 0;
         }
 
         @include until($iphone-7) {
-            font-size: 3.5rem !important;
-        }
-    }
-
-    .title, .subtitle {
-        font-size: 3.5rem;
-        font-weight: 400;
-        color: $black;
-    }
-
-    .title {
-        font-family: $secondary;
-        font-weight: 300;
-        margin-bottom: 0;
-        width: 100%;
-        
-        strong {
-            font-weight: 700;
-        }
-
-        @include until($iphone-7) {
-            font-size: 3.5rem;
+			font-size: 2rem !important;
+			line-height: 1.5;
         }
     }
 }

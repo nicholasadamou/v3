@@ -23,6 +23,8 @@
 @import 'modules/nav';
 @import 'modules/aspect-ratio';
 @import 'modules/hero';
+@import 'modules/skills';
+@import 'modules/git-repo';
 
 //
 // Sections
@@ -30,8 +32,10 @@
 
 @import 'sections/header';
 @import 'sections/aboutme';
+@import 'sections/skills';
 @import 'sections/expertise';
-@import 'sections/work';
+@import 'sections/clients';
+@import 'sections/github';
 @import 'sections/codepen';
 @import 'sections/elsewhere';
 @import 'sections/contact';

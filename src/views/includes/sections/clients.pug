@@ -1,0 +1,22 @@
+- var white = "#fafafa"
+- var black = "black"
+- var grey = "#F5F5F5"
+- var blue = "#212856"
+
+mixin client(link, image)
+	li
+		a(href=link target="_blank")
+			img(data-src="assets/images/logos/" + image).lazy
+
+section#clients.hero.is-fullheight.is-widescreen
+	.hero-body
+		.container.has-text-centered
+			h3 Client Projects
+			p various 
+				i(style="color: #6DBCDB").fas.fa-building
+				|  -related projects.
+			ul
+				+client("https://github.com/cutpastecopy/cutpastecopy.github.io", "cpc_logo.png")
+				+client("https://github.com/nicholasadamou/Mack-Media-Group-Internship-Project", "mack-logo.png")
+				+client("https://drive.google.com/open?id=1lHJPm9usi_eKAbdDKu1BiQzliZu-nQm4", "granet_and_associates.png")
+				+client("http://advancedelectricalservicesinc.com/", "aes_logo.png")

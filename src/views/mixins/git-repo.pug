@@ -1,0 +1,12 @@
+mixin git-repo(link, title, desc)
+	article.repo-container
+		.repo
+			.repo-title
+				a(href=link target="_blank") 
+					h4 #{title}
+			.repo-stats
+				a(href=link target="_blank").starred
+					i.fas.fa-star
+				a(href=link target="_blank").forked
+					i.fas.fa-code-branch
+			.repo-desc #{desc}

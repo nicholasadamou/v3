@@ -1,12 +1,12 @@
 //=include components/smoothScroll.js
-//=include components/invertHamburgerColors.js
 //=include components/toggleNav.js
 //=include components/hero.js
+//=include components/skillBars.js
 
 $(function() {
-    hero();
+	hero();
+	animate_skill_bars();
 
-	invert_hamburger_colors();
 	toggleNav();
 
 	smoothScroll();
