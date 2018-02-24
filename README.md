@@ -3,6 +3,8 @@
 ![Project Preview](https://cloud.githubusercontent.com/assets/7629661/9838465/89626e74-5a5e-11e5-9b7d-e0ce76856732.gif)
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
+[![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/nicholasadamou.github.io.svg?style=flat-square)](https://david-dm.org/nicholasadamou/nicholasadamou.github.io#info=devDependencies)
+[![Digital Ocean](https://img.shields.io/badge/deployed-digitalocean-0080ff.svg?style=flat-square)](https://m.do.co/c/5347e65ea75c)
 [![Say Thanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/NicholasAdamou)
 
 [Nicholas Adamou's Starter Kit](http://github.com/nicholasadamou/Starter-Kit) is an opinionated build automation for front-end web development based on [Gulp](http://gulpjs.com/), [Node](https://nodejs.org/), [NPM](https://www.npmjs.com/), [Bower](http://bower.io/), [Babel](https://babeljs.io/), [SASS](http://sass-lang.com/), and [Pug](https://pugjs.org/).
