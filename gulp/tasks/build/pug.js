@@ -54,7 +54,7 @@ gulp.task('pug', function() {
 		// Show file-size before compression
 		.pipe($.size({ title: 'Pug Templates Before Compression' }))
 		// Optomize and minify
-		.pipe($.htmlmin({collapseWhitespace: true}))
+		.pipe($.htmlmin({ collapseWhitespace: true }))
 		// Show file-size after compression
 		.pipe($.size({ title: 'Pug Templates After Compression' }))
 		// Save minified file

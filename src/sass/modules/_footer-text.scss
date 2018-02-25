@@ -1,0 +1,33 @@
+.hero-foot {
+	.footer-text {
+		margin-bottom: 25px !important;
+
+		font-size: 1.1rem !important;
+		font-weight: 300;
+		color: $black !important;
+	}
+
+	.is-twitter {
+		color: $twitter;
+
+		&:hover {
+			color: $black;
+		}
+	}
+
+	.is-linkedin {
+		color: $linkedin;
+
+		&:hover {
+			color: $black;
+		}
+	}
+
+	.is-github {
+		color: $github;
+
+		&:hover {
+			color: $light-grey;
+		}
+	}
+}

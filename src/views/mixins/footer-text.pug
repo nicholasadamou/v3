@@ -1,0 +1,6 @@
+mixin footer-text(message, title, link, brandName)
+	.hero-foot
+		.container.has-text-centered
+			p.footer-text #{message} 
+				a(href=link target="_blank" class="is-" + brandName).link #{title}
+				|.

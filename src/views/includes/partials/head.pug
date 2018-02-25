@@ -29,10 +29,11 @@ meta(name="twitter:image" content=images + "nicholasadamou.png")
 
 //- CSS
 case env
-  when "development"
-    link(href=css + "index.css", rel="stylesheet")
-  when "production"
-    link(href=css + "index.min.css", rel="stylesheet")
+	when "development"
+		link(href=css + "index.css", rel="stylesheet")
+	when "production"
+		link(href=css + "index.min.css", rel="stylesheet")
+
 
 //- Favicon
 link(rel='apple-touch-icon', sizes='57x57', href=favicons + 'apple-icon-57x57.png')
