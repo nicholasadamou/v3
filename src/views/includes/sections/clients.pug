@@ -6,18 +6,17 @@
 mixin client(link, image)
 	li
 		a(href=link target="_blank")
-			img(data-src="assets/images/logos/" + image).lazy
+			img(data-src="assets/images/logos/" + image alt="client logo").lazy
 
 section#clients.hero.is-fullheight.is-widescreen
 	.hero-body
 		.container.has-text-centered
 			h3 Client Work
-			p various 
+			p various
 				i(style="color: #663300").fas.fa-briefcase
 				|  -related projects.
 			ul
 				+client("https://github.com/cutpastecopy/cutpastecopy.github.io", "cpc_logo.png")
 				+client("https://github.com/nicholasadamou/Mack-Media-Group-Internship-Project", "mack-logo.png")
-				+client("https://drive.google.com/open?id=1lHJPm9usi_eKAbdDKu1BiQzliZu-nQm4", "granet_and_associates.png")
-				+client("http://advancedelectricalservicesinc.com/", "aes_logo.png")
+				+client("https://github.com/nicholasadamou/Advanced-Electrical-Services", "aes_logo.png")
 	+footer-text("Read more about them on my", "LinkedIn", "https://www.linkedin.com/in/nicholas-adamou/", "linkedin")
