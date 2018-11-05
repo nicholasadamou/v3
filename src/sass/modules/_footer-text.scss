@@ -8,26 +8,26 @@
 	}
 
 	.is-twitter {
-		color: $twitter;
+		color: var(--color-twitter);
 
 		&:hover {
-			color: $black;
+			color: var(--color-black);
 		}
 	}
 
 	.is-linkedin {
-		color: $linkedin;
+		color: var(--color-linkedin);
 
 		&:hover {
-			color: $black;
+			color: var(--color-black);
 		}
 	}
 
 	.is-github {
-		color: $github;
+		color: var(--color-github);
 
 		&:hover {
-			color: $light-grey;
+			color: var(--color-light-grey);
 		}
 	}
 }

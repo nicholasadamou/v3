@@ -1,38 +1,40 @@
 #aboutme {
-    background: $grey;
+	background: var(--color-grey);
 
-    .container {
-        max-width: 600px;
-        
-        .about_wrapper {
-            display: grid;
-            grid-gap: 15px;
+	.container {
+		max-width: 600px;
 
-            align-items: center;
-            
-            h3, p {
-                color: $black;
-            }
-            
-            h3 {
+		.about_wrapper {
+			display: grid;
+			grid-gap: 15px;
+
+			align-items: center;
+
+			h3,
+			p {
+				color: var(--color-black);
+			}
+
+			h3 {
 				margin: 25px 0;
-            }
+			}
 
-            p {
-                font-weight: 300;
-            }
+			p {
+				font-weight: 300;
+			}
 
-            p, .link {
-                @include until($iphone-7) {
-                    text-align: left;
-                }
-            }
-            
-            .link {
-                &:hover {
-                    color: $black;
-                }
-            }
-        }
-    }
+			p,
+			.link {
+				@include until($iphone-7) {
+					text-align: left;
+				}
+			}
+
+			.link {
+				&:hover {
+					color: var(--color-black);
+				}
+			}
+		}
+	}
 }

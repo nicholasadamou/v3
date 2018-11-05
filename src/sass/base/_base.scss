@@ -32,24 +32,38 @@
 }
 
 *::selection {
-	background: $highlight;
-	color: $selection;
+	background: var(--color-highlight);
+	color: var(--color-selection);
 }
 
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
 	background-color: $scrollbar;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
 	width: 10px;
 	background-color: $scrollbar;
 }
 
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
 	background-color: $scrollbar-bg;
+}
+
+:root {
+	--color-copy: #{$copy};
+	--color-highlight: #{$highlight};
+	--color-selection: #{$selection};
+	--color-grey: #{$grey};
+	--color-light-grey: #{$light-grey};
+	--color-dark-grey: #{$dark-grey};
+	--color-dark-yellow: #{$dark-yellow};
+	--color-black: #{$black};
+	--color-white: #{$white};
+	--color-green: #{$green};
+	--color-red: #{$red};
+	--color-github: #{$github};
+	--color-twitter: #{$twitter};
+	--color-linkedin: #{$linkedin};
 }
 
 * {
@@ -64,7 +78,7 @@ html {
 
 body {
 	font-family: $primary;
-	color: $copy;
+	color: var(--color-copy);
 	text-size-adjust: 100%;
 
 	background: $body;
@@ -72,10 +86,10 @@ body {
 }
 
 .border {
-	border: 30px solid $grey;
+	border: 30px solid var(--color-grey);
 
 	@include until($iphone-7) {
-		border: 10px solid $grey;
+		border: 10px solid var(--color-grey);
 	}
 }
 
@@ -83,7 +97,8 @@ hr {
 	margin: 0;
 }
 
-h1,h3 {
+h1,
+h3 {
 	font-family: $primary;
 }
 
@@ -100,22 +115,25 @@ h3 {
 	}
 }
 
-.subtitle,.link, p {
+.subtitle,
+.link,
+p {
 	font-family: $secondary;
 	font-weight: 300;
 }
 
 .link {
 	text-decoration: underline;
-	color: $red;
+	color: var(--color-red);
 
 	&:hover {
 		color: inherit;
 	}
 }
 
-h1, .subtitle {
-	color: $white;
+h1,
+.subtitle {
+	color: var(--color-white);
 }
 
 ul {

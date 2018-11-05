@@ -1,139 +1,143 @@
 #contact {
-    position: relative;
+	position: relative;
 
-    background: $white;
+	background: var(--color-white);
 
-    .text_wrapper {
-        display: grid;
-        grid-gap: 10px;
+	.text_wrapper {
+		display: grid;
+		grid-gap: 10px;
 
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-			color: $black;
+		h1 {
+			font-size: 48px;
+			font-weight: 700;
+			color: var(--color-black);
 			line-height: 1;
-            margin-bottom: 10px;
-        }
+			margin-bottom: 10px;
+		}
 
-        .subtitle {
-            color: $black;
-        }
+		.subtitle {
+			color: var(--color-black);
+		}
 
-        .link {
-            color: $black;
+		.link {
+			color: var(--color-black);
 
-            &:hover {
-                color: $red;
-            }
-        }
+			&:hover {
+				color: var(--color-red);
+			}
+		}
 
-        form {
-            position: relative;
-            width: 50%;
-            margin: 0 auto;
-            margin-top: 20px;
+		form {
+			position: relative;
+			width: 50%;
+			margin: 0 auto;
+			margin-top: 20px;
 
-            @include until($ipad-pro) {
-                width: 100%;
-            }
+			@include until($ipad-pro) {
+				width: 100%;
+			}
 
-            .button, .field-label, .input, .textarea {
-                font-family: $secondary;
-                color: $black;
-            }
+			.button,
+			.field-label,
+			.input,
+			.textarea {
+				font-family: $secondary;
+				color: var(--color-black);
+			}
 
-            .field-label {
-                font-weight: 400;
-                margin: 0;
-                margin-right: 10px;
+			.field-label {
+				font-weight: 400;
+				margin: 0;
+				margin-right: 10px;
 
-                flex-grow: 0;
+				flex-grow: 0;
 
-                @include until($iphone-7) {
-                    margin-right: 0;
-                    text-align: left;
-                }
-            }
+				@include until($iphone-7) {
+					margin-right: 0;
+					text-align: left;
+				}
+			}
 
-            .control {
-                width: 100%;
+			.control {
+				width: 100%;
 
-                @include until($iphone-7) {
-                    margin-top: 10px;
-                }
-            }
+				@include until($iphone-7) {
+					margin-top: 10px;
+				}
+			}
 
-            .input, .textarea {
-                background: transparent;
-                border: 5px solid $black;
-                border-radius: 0;
+			.input,
+			.textarea {
+				background: transparent;
+				border: 5px solid var(--color-black);
+				border-radius: 0;
 
-                transition: all 150ms ease-in-out;
+				transition: all 150ms ease-in-out;
 
-                &::-webkit-input-placeholder {
-                    color: $black;
-                }
+				&::-webkit-input-placeholder {
+					color: var(--color-black);
+				}
 
-                &:-moz-placeholder {
-                    color: $black;
-                }
+				&:-moz-placeholder {
+					color: var(--color-black);
+				}
 
-                &::-moz-placeholder {
-                    color: $black;
-                }
+				&::-moz-placeholder {
+					color: var(--color-black);
+				}
 
-                &:-ms-input-placeholder {
-                    color: $black;
-                }
+				&:-ms-input-placeholder {
+					color: var(--color-black);
+				}
 
-                &:focus {
-                    border-color: $red;
-                }
-            }
+				&:focus {
+					border-color: var(--color-red);
+				}
+			}
 
-            .field.is-grouped {
-                justify-content: flex-end;
+			.field.is-grouped {
+				justify-content: flex-end;
 
-                @include until($iphone-7) {
-                    justify-content: center;
-                    margin-bottom: 0;
-                }
+				@include until($iphone-7) {
+					justify-content: center;
+					margin-bottom: 0;
+				}
 
-                .control {
-                    text-align: right;
+				.control {
+					text-align: right;
 
-                    @include until($iphone-7) {
-                        width: 100%;
-                    }
-                }
+					@include until($iphone-7) {
+						width: 100%;
+					}
+				}
 
-                .button {
-                    background: $red;
-                    border-radius: 0;
-                    width: 200px;
-                    padding: 0;
+				.button {
+					background: var(--color-red);
+					border-radius: 0;
+					width: 200px;
+					padding: 0;
 
-                    color: $white;
+					color: var(--color-white);
 
-                    &:hover {
-                        color: $black;
-                        border: 5px solid $red;
-                        background: transparent;
-                    }
+					&:hover {
+						color: var(--color-black);
+						border: 5px solid var(--color-red);
+						background: transparent;
+					}
 
-                    @include until($iphone-7) {
-                        width: 100%;
-                        margin-top: 10px;
-                    }
-                }
-            }
-        }
-    }
+					@include until($iphone-7) {
+						width: 100%;
+						margin-top: 10px;
+					}
+				}
+			}
+		}
+	}
 
-    .hero-foot {
-        p {
-            color: $black;
-            margin-bottom: 10px;
-        }
-    }
+	.hero-foot {
+		p {
+			color: var(--color-black);
+			margin-bottom: 10px;
+		}
+	}
 }

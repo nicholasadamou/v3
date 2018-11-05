@@ -8,6 +8,6 @@ $(function() {
 	toggleNav();
 
 	smoothScroll();
-	
+
 	new LazyLoad({ elements_selector: ".lazy" });
 });

@@ -1,0 +1,20 @@
+{
+	"name": "Nicholas Adamou - He is a 🔨 developer, and ❤️ open source contributor. 👍",
+	"short_name": "Nicholas Adamou",
+	"icons": [{
+			"src": "/assets/images/favicons/favicon-128.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "/assets/images/favicons/favicon-196x196.png",
+			"sizes": "196x196",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#FAFAFA",
+	"background_color": "#FAFAFA",
+	"start_url": "https://nicholasadamou.com",
+	"display": "standalone",
+	"orientation": "portrait"
+}

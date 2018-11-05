@@ -4,7 +4,7 @@
 	text-align: left;
 
 	.skill {
-		color: $black;
+		color: var(--color-black);
 
 		padding: 1em 0;
 
@@ -14,7 +14,8 @@
 			margin-bottom: 1em;
 		}
 
-		.progress-bar, .bar {
+		.progress-bar,
+		.bar {
 			height: 4px;
 			border-radius: 4px;
 		}
@@ -29,8 +30,8 @@
 			background-color: darken(#F1F6F8, 5);
 
 			.bar {
-				background-color: $red;
-				box-shadow: 0 0 10px $red;
+				background-color: var(--color-red);
+				box-shadow: 0 0 10px var(--color-red);
 			}
 		}
 	}

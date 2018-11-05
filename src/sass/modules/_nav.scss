@@ -43,45 +43,51 @@
 		left: 20px;
 	}
 
-	.hamburger-box, .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+	.hamburger-box,
+	.hamburger-inner,
+	.hamburger-inner:after,
+	.hamburger-inner:before {
 		width: 30px;
 	}
 
-	.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
-		background: $black;
+	.hamburger-inner,
+	.hamburger-inner:after,
+	.hamburger-inner:before {
+		background: var(--color-black);
 	}
 }
 
 .background-invert {
-	background: $white !important;
+	background: var(--color-white) !important;
 
-	&:after, &:before {
-		background: $white !important;
+	&:after,
+	&:before {
+		background: var(--color-white) !important;
 	}
 }
 
 .nav-container {
-	background: white;
-  
+	background: var(--color-white);
+
 	position: fixed;
 	top: 0;
 	left: -130px;
-  
+
 	height: 100%;
 	width: 130px;
 	text-align: left;
 	z-index: 999;
 	transition: left 0.3s ease-in-out;
-	
+
 	a {
 		display: block;
 		padding-left: 20px;
 		text-decoration: none;
 
-		color: $black;
-		
+		color: var(--color-black);
+
 		&:hover {
-			color: $red;
+			color: var(--color-red);
 			text-decoration: underline;
 		}
 	}
@@ -91,7 +97,7 @@
 	padding-left: 0 !important;
 }
 
-nav { 
+nav {
 	display: grid;
 	grid-gap: 20px;
 	position: absolute;
@@ -114,7 +120,7 @@ nav {
 	bottom: 10px;
 	left: 50%;
 	transform: translate(-50%, 0);
-	
+
 	width: 100%;
 
 	padding: 0;

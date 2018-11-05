@@ -1,5 +1,5 @@
 .hero-body {
-    @include until($iphone-7) {
-        padding: 48px 20px;
-    }
+	@include until($iphone-7) {
+		padding: 48px 20px;
+	}
 }

@@ -3,9 +3,9 @@
 	left: 50%;
 	bottom: 0;
 	transform: translate(-50%, 0);
-	
+
 	width: 50%;
-	
+
 	@include until($ipad-pro-landscape) {
 		width: 100%;
 	}
@@ -21,7 +21,7 @@
 	stroke-dasharray: 1000;
 	stroke-dashoffset: 1000;
 	fill: none;
-	stroke: $light-grey;
+	stroke: var(color--light-grey);
 	stroke-width: 4;
 	animation: draw 3s 2s forwards, fill 1s 2.5s forwards;
 	stroke-linecap: round;
@@ -29,12 +29,12 @@
 }
 
 .page .frame {
-	fill: $light-grey;
+	fill: var(--color-light-grey);
 	stroke: none;
 }
 
 .page .background {
-	fill: $white;
+	fill: var(--color-white);
 	stroke: none;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .page-form .outline-container {
-	fill: $light-grey;
+	fill: var(--color-light-grey);
 }
 
 .page-form .field-content {
@@ -75,7 +75,7 @@
 }
 
 .page-form .check-mark {
-	fill: $green;
+	fill: var(--color-green);
 	animation: none;
 }
 
@@ -109,7 +109,7 @@
 @keyframes fill {
 
 	100% {
-		fill: $light-grey;
+		fill: var(--color-light-grey);
 		stroke-width: 0;
 	}
 
@@ -118,7 +118,7 @@
 @keyframes fillTwo {
 
 	100% {
-		fill: $white;
+		fill: var(--color-white);
 		stroke-width: 0;
 	}
 
@@ -143,7 +143,7 @@
 @keyframes highlight {
 
 	50% {
-		fill: $green;
+		fill: var(--color-green);
 	}
 
 }
@@ -206,11 +206,13 @@
 		transform: translateX(0);
 	}
 
-	10%, 50% {
+	10%,
+	50% {
 		transform: translateX(-459px);
 	}
 
-	60%, 100% {
+	60%,
+	100% {
 		transform: translateX(0);
 	}
 
@@ -222,11 +224,13 @@
 		transform: translateX(459px);
 	}
 
-	10%, 50% {
+	10%,
+	50% {
 		transform: translateX(0);
 	}
 
-	60%, 100% {
+	60%,
+	100% {
 		transform: translateX(459px);
 	}
 

@@ -20,7 +20,7 @@ console.log(config.pkg.name + ' ' + config.pkg.version + ' ' + config.environmen
 /**
  * Default set of tasks.
  */
-gulp.task('assets', ['data', 'docs', 'fonts', 'images', 'media', 'misc']);
+gulp.task('assets', ['docs', 'images', 'misc']);
 gulp.task('build', ['clean', 'assets', 'vendors', 'js', 'sass', 'pug']);
 gulp.task('start', ['build', 'browsersync']);
 gulp.task('default', ['help']);

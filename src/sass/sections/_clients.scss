@@ -1,36 +1,36 @@
 $border-size: 30px;
 
 #clients {
-	background: $white;
+	background: var(--color-white);
 
 	h3 {
 		margin: 25px 0;
 
 		line-height: 1;
-		color: $black;
+		color: var(--color-black);
 	}
-	
-	p {
-        margin-bottom: 50px;
 
-        font-size: 1.4rem;
+	p {
+		margin-bottom: 50px;
+
+		font-size: 1.4rem;
 		line-height: 1.8;
 		color: darken($light-grey, 15);
 
 		@include until($iphone-7) {
 			margin-bottom: 25px;
 		}
-    }
+	}
 
-    ul {
+	ul {
 		display: flex;
 		flex-wrap: wrap;
 		align-content: center;
-		align-items: center; 
+		align-items: center;
 		justify-content: center;
 
-        li {
-            display: inline-block;
+		li {
+			display: inline-block;
 
 			width: 165px;
 
@@ -61,7 +61,7 @@ $border-size: 30px;
 					transform-origin: center;
 
 					transition: 200ms transform ease-in-out;
-	
+
 					&:hover {
 						filter: grayscale(50%);
 						transform: scale(1.1);
@@ -77,5 +77,5 @@ $border-size: 30px;
 				}
 			}
 		}
-    }
+	}
 }
