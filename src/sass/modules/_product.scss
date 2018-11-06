@@ -1,0 +1,140 @@
+.product {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex: 1 1 33%;
+
+	position: relative;
+
+	width: 33%;
+	max-width: 33%;
+
+	margin-top: 40px;
+	margin-bottom: 20px;
+
+	@include until($iphone-7) {
+		flex: 1 1 100%;
+
+		width: 100%;
+		max-width: 100%;
+	}
+
+	a {
+		display: block;
+
+		position: relative;
+
+		margin: 0 20px;
+
+		text-decoration: none;
+		color: black;
+
+		&:hover {
+			cursor: pointer;
+			animation: rainbow 1s linear infinite;
+		}
+	}
+
+	img {
+		width: 100%;
+		display: block;
+
+		image-rendering: optimizeSpeed;
+		/* Legal fallback */
+		image-rendering: -moz-crisp-edges;
+		/* Firefox        */
+		image-rendering: -o-crisp-edges;
+		/* Opera          */
+		image-rendering: -webkit-optimize-contrast;
+		/* Safari         */
+		image-rendering: optimize-contrast;
+		/* CSS3 Proposed  */
+		image-rendering: crisp-edges;
+		/* CSS4 Proposed  */
+		image-rendering: pixelated;
+		/* CSS4 Proposed  */
+		-ms-interpolation-mode: nearest-neighbor;
+		/* IE8+           */
+	}
+
+	.title {
+		position: absolute;
+		top: 0;
+		left: 60px;
+
+		padding: 0;
+		margin: 0;
+
+		color: var(--color-white);
+		line-height: 20px;
+		font-size: .7em;
+		text-transform: uppercase;
+	}
+}
+
+.browser {
+	position: relative;
+
+	width: 98%;
+	min-height: 50px;
+
+	border: 0px solid var(--color-black);
+	border-width: 20px 0 0 0;
+	border-radius: 3px 3px 6px 6px;
+	box-shadow: 1px 1px 20px -5px rgba($black, .5);
+
+	&::before,
+	&::after {
+		content: "";
+
+		position: absolute;
+		top: -15px;
+		left: 8px;
+
+		width: 9px;
+		height: 9px;
+
+		z-index: 10;
+
+		background: var(--color-red);
+		border-radius: 50%;
+	}
+
+	&::after {
+		left: 24px;
+
+		background: var(--color-green);
+	}
+
+	img {
+		border-radius: 0 0 6px 6px;
+	}
+}
+
+.mobile {
+	position: absolute;
+	right: 0;
+	top: 18px;
+
+	width: 32%;
+	min-height: 50px;
+
+	border-radius: 2px;
+	border: 2px solid var(--color-black);
+	border-width: 2px 2px 14px 2px;
+	box-shadow: 1px 1px 20px -5px rgba($black, .5);
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		bottom: -10px;
+		left: calc(50% - 3px);
+
+		width: 6px;
+		height: 6px;
+
+		background: var(--color-white);
+		border-radius: 50%;
+	}
+}

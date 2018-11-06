@@ -2,7 +2,7 @@
 
 # Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.github.io.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.github.io)
 
-Personal landing page, powered by [nicholasadamou/starter-kit](https://github.com/nicholasadmaou/starter-kit) ✨
+Personal landing page, powered by [nicholasadamou/starter-kit](https://github.com/nicholasadamou/starter-kit) ✨
 
 ![Project Preview](previews/preview.png)
 
@@ -32,7 +32,7 @@ optimize my landing page and host statically through Digital-Ocean.
 -   Start development server by running `gulp start`.
 -   Build and export using `gulp build` (creates `public` directory).
 
-⚠️ More information about how to use this project can be found 👉 [nicholasadamou/starter-kit](https://github.com/nicholasadmaou/starter-kit).
+⚠️ More information about how to use this project can be found 👉 [nicholasadamou/starter-kit](https://github.com/nicholasadamou/starter-kit).
 
 ## Inspiration
 

@@ -4,11 +4,10 @@
 /// @author Nicholas Adamou
 ////
 
-$laptop: 1440px;
 $iphone-7: 430px;
+$iphone-5: 320px;
 $ipad-pro-landscape: 1400px;
 $ipad-pro: 1024px;
-$ipad-landscape: 1024px;
 $ipad: 768px;
 
 @mixin until($device) {

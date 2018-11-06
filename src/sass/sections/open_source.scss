@@ -1,0 +1,17 @@
+#open-source {
+	.repositories {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		text-align: initial;
+
+		margin: 2.5rem 2rem;
+		margin-bottom: 2rem;
+
+		@include until($iphone-7) {
+			display: block;
+
+			margin: 0;
+		}
+	}
+}

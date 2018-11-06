@@ -1,0 +1,8 @@
+mixin product(title, link, desktop, mobile)
+	article.product
+		a(href=link target="_blank")
+			.browser
+				img(src=images + 'products/' + desktop).lazy
+			.mobile
+				img(src=images + 'products/' + mobile).lazy
+		h3.title #{title}

@@ -1,0 +1,73 @@
+h1,
+h2,
+h3 {
+	font-family: $primary;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+h2 {
+	font-size: 2.5rem;
+	font-weight: 700;
+
+	@include until($ipad) {
+		font-size: 4rem;
+	}
+
+	@include until($iphone-7) {
+		font-size: 2rem;
+	}
+}
+
+h3 {
+	font-size: 2rem;
+	font-weight: 700;
+
+	@include until($iphone-7) {
+		font-size: 1.5rem;
+	}
+}
+
+.title {
+	margin: 25px 0;
+
+	line-height: 1;
+}
+
+.subtitle {
+	margin-bottom: 50px;
+
+	color: darken($light-grey, 15);
+
+	@include until($iphone-7) {
+		font-size: 1.15rem;
+		margin-bottom: 25px !important;
+	}
+
+	@include until($iphone-5) {
+		font-size: 1rem;
+
+		padding: 0 10px;
+	}
+}
+
+p {
+	font-size: 1.2em;
+
+	color: var(--color-black);
+
+	@include until($iphone-7) {
+		font-size: 1rem;
+	}
+}
+
+.link {
+	text-decoration: underline;
+	color: var(--color-red);
+
+	&:hover {
+		color: inherit;
+	}
+}

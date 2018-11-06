@@ -1,0 +1,106 @@
+#about-me {
+	text-align: center;
+
+	padding-bottom: 40px;
+
+	@include until($iphone-7) {
+		width: 100%;
+	}
+
+	.title {
+		font-size: 3rem;
+
+		margin-top: 20px;
+
+		span {
+			color: var(--color-red);
+		}
+
+		@include until($iphone-7) {
+			font-size: 1.8rem;
+		}
+
+		@include until($iphone-5) {
+			font-size: 1.5rem;
+
+			margin-top: 40px;
+		}
+	}
+
+	p {
+		margin: 0 5rem;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin: 0;
+		}
+
+		@include until($ipad) {
+			margin: 0 2rem;
+			margin-bottom: 20px;
+		}
+
+		@include until($iphone-7) {
+			margin: 0 auto;
+			margin-bottom: 20px;
+
+			padding: 10px 25px;
+		}
+	}
+
+	.btn {
+		display: inline-block;
+
+		margin-right: 20px;
+
+		width: 200px;
+		height: 50px;
+
+		border: 2px solid;
+
+		line-height: 3;
+		text-decoration: none;
+
+		transition: all 150ms ease-in-out;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@include until($iphone-7) {
+			width: 90%;
+
+			margin: 10px auto;
+		}
+	}
+
+	#resume {
+		border-color: var(--color-red);
+		color: var(--color-red);
+
+		&:hover {
+			background-color: var(--color-red);
+			color: var(--color-white);
+		}
+	}
+
+	#twitter {
+		border-color: var(--color-twitter);
+		color: var(--color-twitter);
+
+		&:hover {
+			background-color: var(--color-twitter);
+			color: var(--color-white);
+		}
+	}
+
+	#linkedin {
+		border-color: var(--color-linkedin);
+		color: var(--color-linkedin);
+
+		&:hover {
+			background-color: var(--color-linkedin);
+			color: var(--color-white);
+		}
+	}
+}

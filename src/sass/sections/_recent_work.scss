@@ -1,0 +1,12 @@
+#recent-work {
+	margin-bottom: 50px;
+
+	.products {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		margin: 0 20px;
+	}
+}

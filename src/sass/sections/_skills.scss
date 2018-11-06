@@ -1,22 +1,15 @@
 #skills {
-	background: var(--color-grey);
+	ul {
+		margin-top: 50px;
 
-	color: var(--color-black);
+		padding: 0 1.5em;
 
-	h3 {
-		margin: 25px 0;
-		line-height: 1;
-	}
+		list-style-type: none;
 
-	.subtitle {
-		margin-bottom: 50px;
-
-		font-size: 1.25rem;
-		line-height: 1.8;
-		color: darken($light-grey, 15);
+		text-align: left;
 
 		@include until($iphone-7) {
-			margin-bottom: 25px;
+			margin-top: 0;
 		}
 	}
 }

@@ -6,19 +6,16 @@ block mixins
 - var js = assets + 'js/'
 - var vendors = assets + 'vendors/'
 - var docs = assets + 'docs/'
-- var data = assets + 'data/'
-- var media = assets + 'media/'
-- var fonts = assets + 'fonts/'
 - var images = assets + 'images/'
 - var favicons = images + 'favicons/'
 
 block variables
 
 doctype html
-html(lang="en")
+html(lang="en")#top
   head
     include ../includes/partials/head
-  body#top
+  body
     block content
     include ../includes/partials/scripts
 
