@@ -55,8 +55,6 @@
 	--color-selection: #{$selection};
 	--color-grey: #{$grey};
 	--color-light-grey: #{$light-grey};
-	--color-dark-grey: #{$dark-grey};
-	--color-dark-yellow: #{$dark-yellow};
 	--color-black: #{$black};
 	--color-white: #{$white};
 	--color-green: #{$green};
@@ -74,72 +72,15 @@
 html {
 	overflow: auto;
 	height: auto;
+
+	background: none;
 }
 
 body {
 	font-family: $primary;
 	color: var(--color-copy);
 	text-size-adjust: 100%;
-
-	background: $body;
 	line-height: 1.6em;
-}
 
-.border {
-	border: 30px solid var(--color-grey);
-
-	@include until($iphone-7) {
-		border: 10px solid var(--color-grey);
-	}
-}
-
-hr {
-	margin: 0;
-}
-
-h1,
-h3 {
-	font-family: $primary;
-}
-
-h3 {
-	font-size: 2.5rem;
-	font-weight: 700;
-
-	@include until($ipad) {
-		font-size: 4rem;
-	}
-
-	@include until($iphone-7) {
-		font-size: 3rem;
-	}
-}
-
-.subtitle,
-.link,
-p {
-	font-family: $secondary;
-	font-weight: 300;
-}
-
-.link {
-	text-decoration: underline;
-	color: var(--color-red);
-
-	&:hover {
-		color: inherit;
-	}
-}
-
-h1,
-.subtitle {
-	color: var(--color-white);
-}
-
-ul {
-	font-size: 0px;
-
-	li {
-		font-size: 1rem;
-	}
+	background: var(--color-white);
 }

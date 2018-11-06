@@ -1,0 +1,36 @@
+.skill {
+	color: var(--color-black);
+
+	padding: 1em 0;
+
+	&:first-child {
+		padding: 0;
+	}
+
+	&-title {
+		font-weight: 300;
+
+		margin-bottom: 1em;
+	}
+
+	.progress-bar,
+	.bar {
+		height: 4px;
+		border-radius: 4px;
+	}
+
+	.progress-bar {
+		position: relative;
+		top: 0;
+
+		width: 100%;
+		z-index: 10;
+
+		background-color: darken($light-grey, 5);
+
+		.bar {
+			background-color: var(--color-red);
+			box-shadow: 0 0 10px var(--color-red);
+		}
+	}
+}

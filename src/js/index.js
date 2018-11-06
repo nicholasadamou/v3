@@ -1,13 +1,13 @@
 //=include components/smoothScroll.js
 //=include components/toggleNav.js
-//=include components/hero.js
+//=include components/getStars.js
 
 $(function() {
-	hero();
-
 	toggleNav();
 
 	smoothScroll();
+
+	getStars();
 
 	new LazyLoad({ elements_selector: ".lazy" });
 });

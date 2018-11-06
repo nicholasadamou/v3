@@ -1,0 +1,11 @@
+mixin repo(link, emoji, title, desc)
+	article.repo
+		a(href=link)
+			.top
+				.left
+					span.emoji #{emoji}
+					span.repo-title #{title}
+				.right
+					span.stars ⭐️
+		.bottom
+			span.desc #{desc}

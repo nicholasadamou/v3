@@ -1,0 +1,44 @@
+.repo {
+	margin: 10px 20px;
+
+	@include until($iphone-7) {
+		width: 100%;
+		max-width: 100%;
+
+		margin: 20px 0;
+		padding: 0 20px;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+
+		&:hover {
+			cursor: pointer;
+			animation: rainbow 1s linear infinite;
+		}
+	}
+
+	.top {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		margin-bottom: 10px;
+
+		.repo-title,
+		.stars {
+			padding: 5px;
+
+			background: var(--color-grey);
+			border-radius: 5px;
+
+			color: var(--color-black);
+		}
+
+		.repo-title {
+			color: var(--color-red);
+			text-decoration: underline;
+		}
+	}
+}

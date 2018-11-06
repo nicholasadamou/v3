@@ -12,29 +12,36 @@
 
 @import 'base/variables';
 @import 'base/base';
-@import 'base/layout';
+@import 'base/typography';
+
+//
+// Layout
+// --------------------------------------------------
+
+@import 'layout/wrapper';
 
 //
 // Modules
 // --------------------------------------------------
 
+@import 'modules/rainbow';
 @import 'modules/logo';
 @import 'modules/avatar';
 @import 'modules/nav';
-@import 'modules/hero';
-@import 'modules/skills';
-@import 'modules/footer-text';
-@import 'modules/git-repo';
+@import 'modules/seperator';
+@import 'modules/skill';
+@import 'modules/product';
+@import 'modules/repo';
 
 //
 // Sections
 // --------------------------------------------------
 
-@import 'sections/header';
-@import 'sections/aboutme';
+@import 'sections/about_me';
+@import 'sections/my_expertise';
 @import 'sections/skills';
-@import 'sections/expertise';
-@import 'sections/clients';
-@import 'sections/github';
+@import 'sections/recent_work';
+@import 'sections/open_source';
 @import 'sections/contact';
 @import 'sections/form-success';
+@import 'sections/footer';

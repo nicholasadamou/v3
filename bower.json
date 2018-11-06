@@ -1,11 +1,10 @@
 {
-    "name": "starter-kit",
-    "dependencies": {
+	"name": "starter-kit",
+	"dependencies": {
 		"bulma": "latest",
 		"animate-css": "latest",
 		"css-hamburgers": "latest",
-		"hover": "latest",
 		"vanilla-lazyload": "latest",
 		"jquery": "latest"
-    }
+	}
 }
