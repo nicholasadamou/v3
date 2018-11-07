@@ -34,10 +34,6 @@ optimize my landing page and host statically through Digital-Ocean.
 
 ⚠️ More information about how to use this project can be found 👉 [nicholasadamou/starter-kit](https://github.com/nicholasadamou/starter-kit).
 
-## Inspiration
-
--   [**carloscuesta/starterkit**](https://github.com/carloscuesta/starterkit) - A Front End development Gulp.js based workflow. 🚀
-
 ## License
 
 © 2018 Nicholas Adamou.
