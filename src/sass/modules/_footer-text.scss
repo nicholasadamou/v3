@@ -1,0 +1,23 @@
+.footer-text {
+	margin-top: 2rem;
+
+	font-size: 1rem;
+
+	.link {
+		&.linkedin {
+			color: var(--color-linkedin);
+		}
+
+		&.github {
+			color: var(--color-github);
+		}
+
+		&.codepen {
+			color: var(--color-codepen);
+		}
+
+		&:hover {
+			color: darken($light-grey, 15);
+		}
+	}
+}

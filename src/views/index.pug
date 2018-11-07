@@ -4,6 +4,7 @@ block mixins
 	include ./mixins/skill
 	include ./mixins/product
 	include ./mixins/repo
+	include ./mixins/experiment
 
 block variables
 	- var title = "Nicholas Adamou - Full Stack Web Developer Portfolio"
@@ -25,6 +26,8 @@ block content
 		include ./includes/sections/recent_work
 		hr
 		include ./includes/sections/open_source
+		hr
+		include ./includes/sections/experiments
 		hr
 		include ./includes/sections/contact
 	include ./includes/sections/footer

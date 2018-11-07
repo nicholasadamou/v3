@@ -32,6 +32,8 @@
 @import 'modules/skill';
 @import 'modules/product';
 @import 'modules/repo';
+@import 'modules/experiment';
+@import 'modules/footer-text';
 
 //
 // Sections
@@ -42,6 +44,7 @@
 @import 'sections/skills';
 @import 'sections/recent_work';
 @import 'sections/open_source';
+@import 'sections/experiments';
 @import 'sections/contact';
 @import 'sections/form-success';
 @import 'sections/footer';
