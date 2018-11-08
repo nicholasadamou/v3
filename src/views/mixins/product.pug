@@ -1,6 +1,6 @@
 mixin product(title, link, desktop, mobile)
 	article.product
-		a(href=link target="_blank")
+		a(href=link target="_blank" aria-hidden="true")
 			.browser
 				img(src=images + 'products/' + desktop alt="web-browser").lazy
 			.mobile
