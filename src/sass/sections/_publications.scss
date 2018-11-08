@@ -1,0 +1,25 @@
+#publications {
+	width: 100%;
+
+	.publications {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+
+		margin: auto 5rem;
+
+		text-align: left;
+
+		overflow: hidden;
+
+		margin-bottom: 20px;
+
+		@include until($iphone-7) {
+			margin: auto 1rem;
+
+			margin-bottom: 20px;
+		}
+	}
+}

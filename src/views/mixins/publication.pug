@@ -1,0 +1,6 @@
+mixin publication(title, description, pdf)
+	.publication
+		.top
+			span.emoji ✏️
+			a(href=docs + pdf target="_blank").link #{title}
+		p.desc #{description}
