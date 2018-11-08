@@ -17,8 +17,8 @@
 		"install-dependencies": "yarn install && bower cache clean && bower install"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.1.2",
-		"@babel/preset-env": "^7.1.0",
+		"@babel/core": "^7.1.5",
+		"@babel/preset-env": "^7.1.5",
 		"argv": "^0.0.2",
 		"autoprefixer": "^9.3.1",
 		"babel-preset-latest": "^6.24.1",
@@ -31,7 +31,7 @@
 		"gulp-eslint": "^5.0.0",
 		"gulp-gh-pages": "^0.5.4",
 		"gulp-htmlmin": "^5.0.1",
-		"gulp-imagemin": "^4.1.0",
+		"gulp-imagemin": "^5.0.3",
 		"gulp-include": "^2.3.1",
 		"gulp-load-plugins": "^1.5.0",
 		"gulp-notify": "^3.2.0",
@@ -60,7 +60,7 @@
 		"rucksack-css": "^1.0.2",
 		"run-sequence": "^2.2.1",
 		"vinyl-ftp": "^0.6.0",
-		"yarn": "^1.12.1"
+		"yarn": "^1.12.3"
 	},
 	"dependencies": {
 		"animate.css": "latest",
