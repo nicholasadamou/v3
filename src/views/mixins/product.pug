@@ -2,7 +2,7 @@ mixin product(title, link, desktop, mobile)
 	article.product
 		a(href=link target="_blank")
 			.browser
-				img(src=images + 'products/' + desktop).lazy
+				img(src=images + 'products/' + desktop alt="web-browser").lazy
 			.mobile
-				img(src=images + 'products/' + mobile).lazy
+				img(src=images + 'products/' + mobile alt="mobile-device").lazy
 		h3.title #{title}

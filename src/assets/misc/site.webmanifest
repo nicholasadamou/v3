@@ -2,12 +2,12 @@
 	"name": "Nicholas Adamou - He is a 🔨 developer, and ❤️ open source contributor. 👍",
 	"short_name": "Nicholas Adamou",
 	"icons": [{
-			"src": "/assets/images/favicons/favicon-128.png",
+			"src": "/assets/images/favicons/favicon-128.jpg",
 			"sizes": "128x128",
 			"type": "image/png"
 		},
 		{
-			"src": "/assets/images/favicons/favicon-196x196.png",
+			"src": "/assets/images/favicons/favicon-196x196.jpg",
 			"sizes": "196x196",
 			"type": "image/png"
 		}
