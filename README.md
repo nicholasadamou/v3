@@ -4,7 +4,7 @@
 
 Personal landing page, powered by [nicholasadamou/starter-kit](https://github.com/nicholasadamou/starter-kit) ✨
 
-![Project Preview](previews/preview.jpg)
+![Project Preview](previews/preview.png)
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 [![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/nicholasadamou.github.io.svg?style=flat-square)](https://david-dm.org/nicholasadamou/nicholasadamou.github.io#info=devDependencies)
