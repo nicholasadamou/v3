@@ -1,7 +1,7 @@
 function toggleNav() {
 	var hamburger = $(".hamburger");
 	var link = $(".nav_link");
-	var logo = $(".logo");
+	var logo = $("#logo-link");
 	var body = $("body");
 
 	hamburger.bind("click", function() {
