@@ -1,13 +1,16 @@
-//=include components/smoothScroll.js
-//=include components/toggleNav.js
-//=include components/getStars.js
+/* eslint-disable no-new */
+/* eslint-disable no-undef */
 
-$(function() {
-	toggleNav();
+//= include components/smoothScroll.js
+//= include components/toggleNav.js
+//= include components/getStars.js
 
-	smoothScroll();
+$(() => {
+  toggleNav()
 
-	getStars();
+  smoothScroll()
 
-	new LazyLoad({ elements_selector: ".lazy" });
-});
+  getStars()
+
+  new LazyLoad({ elements_selector: '.lazy' })
+})

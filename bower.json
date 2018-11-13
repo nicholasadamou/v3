@@ -1,6 +1,7 @@
 {
 	"name": "starter-kit",
 	"dependencies": {
+		"babel-polyfill": "latest",
 		"bulma": "latest",
 		"animate-css": "latest",
 		"css-hamburgers": "latest",
