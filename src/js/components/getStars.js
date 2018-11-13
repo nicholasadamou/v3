@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+
 // eslint-disable-next-line no-unused-vars
 function getStars () {
   // Round the number like "3.5k" https://stackoverflow.com/a/9461657

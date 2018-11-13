@@ -14,7 +14,7 @@ module.exports = function () {
 		 * If it is set to an empty string the environment will be extract from
 		 * the NODE_ENV environment var.
 		 */
-    environment: 'development',
+    environment: 'production',
     FTP: {
       host: 'HOST',
       user: 'USER',
