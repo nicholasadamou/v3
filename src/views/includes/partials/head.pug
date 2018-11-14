@@ -27,14 +27,14 @@ meta(name="twitter:site" content="@nicholasadamou")
 meta(name="twitter:creator" content="@nicholasadamou")
 meta(name="twitter:title" content=title)
 meta(name="twitter:description" content=description)
-meta(name="twitter:image" content=images + "nicholasadamou.jpg")
+meta(name="twitter:image" content=images + "nicholasadamou.webp")
 
 //- CSS
 case env
 	when "development"
-		link(href=css + "index.css", rel="stylesheet")
+		link(href=css + "index.css", rel="stylesheet" inline)
 	when "production"
-		link(href=css + "index.min.css", rel="stylesheet")
+		link(href=css + "index.min.css", rel="stylesheet" inline)
 
 
 //- Favicon

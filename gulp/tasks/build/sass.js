@@ -10,7 +10,7 @@ const lost = require('lost')
 const paths = require('../../paths.js')
 const config = require('../../config.js')()
 
-gulp.task('sass', () => {
+gulp.task('sass', (done) => {
   const env = ((config.environment || process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production')
 
   const sass = {
@@ -84,4 +84,6 @@ gulp.task('sass', () => {
     // Save minified file
       .pipe(gulp.dest(`${paths.to.sass.out}`))
   }
+
+  done()
 })
