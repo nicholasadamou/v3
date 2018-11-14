@@ -12,7 +12,7 @@ gulp.task('help', (done) => {
   console.log('The commands for the task runner are the following.')
   console.log('------------------------------------------------------')
   console.log(`    clean:build: Removes all the compiled files in ${config.build}`)
-  console.log(`    clean:compiled-files: Removes all the compiled 'sass' & 'js' files in ${config.build}`)
+  console.log(`    clean:compiled-files: Removes all the compiled 'sass' & 'js' files in ${config.build}assets`)
   console.log('    ftp: Deploy to an FTP/SFTP server')
   console.log('    surge: Deploy to a Surge.sh domain')
   console.log('    ghpages: Deploy to Github-Pages')
