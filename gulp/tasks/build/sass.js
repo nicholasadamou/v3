@@ -13,7 +13,7 @@ const config = require('../../config.js')()
 gulp.task('sass', (done) => {
   const env = ((config.environment || process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production')
 
-  const sass = {
+  const options = {
     sourceComments: (config.sassOptions.sourceComments).trim().toLowerCase() ? !env : '',
     outputStyle: (config.sassOptions.outputStyle).trim().toLowerCase() ? !env : 'compressed',
     imagePath: config.sassOptions.imagePath,
@@ -33,15 +33,17 @@ gulp.task('sass', (done) => {
 
   console.log(`-> Compiling SASS for ${config.environment}`)
 
+  let sass = null
+
   if (env) {
     // Select files
-    gulp.src(`${paths.to.sass.in}/*.scss`)
+    sass = gulp.src(`${paths.to.sass.in}/*.scss`)
     // Prevent pipe breaking caused by errors from gulp plugins
       .pipe($.plumber())
     // Initialize sourcemaps
       .pipe($.sourcemaps.init())
     // Compile Sass
-      .pipe($.sass(sass).on('error', $.sass.logError))
+      .pipe($.sass(options).on('error', $.sass.logError))
     // Add vendor prefixes
       .pipe($.postcss(plugins))
     // Concatenate includes
@@ -57,11 +59,11 @@ gulp.task('sass', (done) => {
       .pipe(gulp.dest(`${paths.to.sass.out}`))
   } else {
     // Select files
-    gulp.src(`${paths.to.sass.in}/*.scss`)
+    sass = gulp.src(`${paths.to.sass.in}/*.scss`)
     // Prevent pipe breaking caused by errors from gulp plugins
       .pipe($.plumber())
     // Compile Sass
-      .pipe($.sass(sass).on('error', $.sass.logError))
+      .pipe($.sass(options).on('error', $.sass.logError))
     // Add vendor prefixes
       .pipe($.postcss(plugins))
     // Concatenate includes
@@ -85,5 +87,5 @@ gulp.task('sass', (done) => {
       .pipe(gulp.dest(`${paths.to.sass.out}`))
   }
 
-  done()
+  return sass
 })
