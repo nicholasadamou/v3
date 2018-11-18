@@ -12,5 +12,12 @@ $(() => {
 
   getStars()
 
-  new LazyLoad({ elements_selector: '.lazy' })
+  new LazyLoad({
+    elements_selector: '.lazy.has-webp',
+    to_webp: true
+  })
+
+  new LazyLoad({
+    elements_selector: '.lazy:not(.has-webp)'
+  })
 })

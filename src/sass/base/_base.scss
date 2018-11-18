@@ -52,6 +52,13 @@
 	background-color: $scrollbar-bg;
 }
 
+/* Fixes Firefox anomaly during image load */
+@-moz-document url-prefix() {
+	img:-moz-loading {
+		visibility: hidden;
+	}
+}
+
 :root {
 	--color-copy: #{$copy};
 	--color-highlight: #{$highlight};
