@@ -39,8 +39,6 @@ optimize my landing page and host it statically on a Digital-Ocean droplet.
 
 ## Partners
 
-This project is a proud partner of:
-
 <div align="center">
 
 ![BrowserStack](browserstack-logo.png)
