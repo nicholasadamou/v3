@@ -39,11 +39,7 @@ optimize my landing page and host it statically on a Digital-Ocean droplet.
 
 ## Partners
 
-<div align="center">
-
 ![BrowserStack](browserstack-logo.png)
-
-</div>
 
 [BrowserStack](https://www.browserstack.com/) is used as a cloud web and mobile testing platform that enables developers, like myself, to test their websites and mobile applications across on-demand browsers, operating systems and real mobile devices, without requiring users to install or maintain an internal lab of virtual machines, devices or emulators.
 
