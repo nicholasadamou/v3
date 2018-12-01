@@ -1,4 +1,4 @@
 mixin experiment(title, description, link)
 	.experiment
-		a(href=link target="_blank").link #{title}
+		a(href=link target="_blank" aria-hidden="true" rel="noopener").link #{title}
 		p #{description}

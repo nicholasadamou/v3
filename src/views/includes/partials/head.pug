@@ -29,6 +29,11 @@ meta(name="twitter:title" content=title)
 meta(name="twitter:description" content=description)
 meta(name="twitter:image" content=images + "nicholasadamou.webp")
 
+//- Fonts
+link(rel="preload" as="font" src=fonts + "Roboto-Slab/woff2/RobotoSlab-Thin.woff2", type="font/woff2" crossorigin)
+link(rel="preload" as="font" src=fonts + "Roboto-Slab/woff2/RobotoSlab-Light.woff2", type="font/woff2" crossorigin)
+link(rel="preload" as="font" src=fonts + "Roboto-Slab/woff2/RobotoSlab-Regular.woff2", type="font/woff2" crossorigin)
+
 //- CSS
 case env
 	when "development"
