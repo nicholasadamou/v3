@@ -16,6 +16,10 @@
 			color: var(--color-red);
 		}
 
+		@include until($ipad-pro) {
+			font-size: 2.3rem;
+		}
+
 		@include until($iphone-7) {
 			font-size: 1.8rem;
 		}
