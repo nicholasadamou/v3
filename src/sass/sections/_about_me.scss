@@ -46,7 +46,6 @@
 
 		@include until($iphone-7) {
 			margin: 0 auto;
-			margin-bottom: 20px;
 
 			padding: 10px 25px;
 		}
@@ -87,62 +86,87 @@
 					color: var(--color-cornell);
 				}
 			}
+
+			&.blackbird {
+				&:before {
+					background-color: var(--color-blackbird);
+				}
+
+				&:hover {
+					color: var(--color-blackbird);
+				}
+			}
+
+
+			&.mack-media-group {
+				&:before {
+					background-color: var(--color-mack-media-group);
+				}
+
+				&:hover {
+					color: var(--color-mack-media-group);
+				}
+			}
 		}
 	}
 
-	.btn {
-		display: inline-block;
+	.btn-wrapper {
+		margin-top: 1.3rem;
 
-		margin-right: 20px;
+		.btn {
+			display: inline-block;
 
-		width: 200px;
-		height: 50px;
+			margin-right: 20px;
 
-		border: 2px solid;
+			width: 200px;
+			height: 50px;
 
-		line-height: 3;
-		text-decoration: none;
+			border: 2px solid;
 
-		transition: all 150ms ease-in-out;
+			line-height: 3;
+			text-decoration: none;
 
-		&:last-child {
-			margin-right: 0;
+			transition: all 150ms ease-in-out;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			@include until($iphone-7) {
+				width: 90%;
+
+				margin: 10px auto;
+			}
 		}
 
-		@include until($iphone-7) {
-			width: 90%;
+		#resume {
+			border-color: var(--color-red);
+			color: var(--color-red);
 
-			margin: 10px auto;
+			&:hover {
+				background-color: var(--color-red);
+				color: var(--color-white);
+			}
 		}
-	}
 
-	#resume {
-		border-color: var(--color-red);
-		color: var(--color-red);
+		#twitter {
+			border-color: var(--color-twitter);
+			color: var(--color-twitter);
 
-		&:hover {
-			background-color: var(--color-red);
-			color: var(--color-white);
+			&:hover {
+				background-color: var(--color-twitter);
+				color: var(--color-white);
+			}
 		}
-	}
 
-	#twitter {
-		border-color: var(--color-twitter);
-		color: var(--color-twitter);
+		#linkedin {
+			border-color: var(--color-linkedin);
+			color: var(--color-linkedin);
 
-		&:hover {
-			background-color: var(--color-twitter);
-			color: var(--color-white);
-		}
-	}
-
-	#linkedin {
-		border-color: var(--color-linkedin);
-		color: var(--color-linkedin);
-
-		&:hover {
-			background-color: var(--color-linkedin);
-			color: var(--color-white);
+			&:hover {
+				background-color: var(--color-linkedin);
+				color: var(--color-white);
+			}
 		}
 	}
 }
