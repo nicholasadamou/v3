@@ -1,8 +1,11 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.1
-# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+version: v1.13.3
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:tunnel-agent:20170305':
     - psi > download > caw > tunnel-agent:
         patched: '2018-12-11T11:52:02.965Z'
+  SNYK-JS-AXIOS-174505:
+    - browser-sync > localtunnel > axios:
+        patched: '2019-05-05T22:09:02.290Z'
+ignore: {}
