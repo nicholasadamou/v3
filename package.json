@@ -19,7 +19,8 @@
     "clean": "sudo rm -rf node_modules/ bower_components/ yarn.lock package-lock.json",
     "snyk-protect": "snyk protect",
     "prepare": "yarn run snyk-protect; npm run snyk-protect",
-    "test": "snyk test"
+    "test": "snyk test",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -29,7 +30,7 @@
     "bower": "^1.8.2",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-node": "^9.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "gulp-babel": "^8.0.0",
@@ -91,7 +92,7 @@
     "psi": "^3.1.0",
     "require-dir": "^1.1.0",
     "rucksack-css": "^1.0.2",
-    "snyk": "^1.110.2",
+    "snyk": "^1.161.1",
     "vanilla-lazyload": "latest",
     "vinyl-buffer": "^1.0.1",
     "vinyl-ftp": "^0.6.0",
