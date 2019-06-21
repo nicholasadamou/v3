@@ -18,7 +18,7 @@
 		.input,
 		.textarea {
 			font-family: $secondary;
-			color: var(--color-black);
+			color: $black;
 		}
 
 		.field-label {
@@ -45,29 +45,29 @@
 		.input,
 		.textarea {
 			background: transparent;
-			border: 5px solid var(--color-black);
+			border: 5px solid $black;
 			border-radius: 0;
 
 			transition: all 150ms ease-in-out;
 
 			&::-webkit-input-placeholder {
-				color: var(--color-black);
+				color: $black;
 			}
 
 			&:-moz-placeholder {
-				color: var(--color-black);
+				color: $black;
 			}
 
 			&::-moz-placeholder {
-				color: var(--color-black);
+				color: $black;
 			}
 
 			&:-ms-input-placeholder {
-				color: var(--color-black);
+				color: $black;
 			}
 
 			&:focus {
-				border-color: var(--color-red);
+				border-color: $red;
 			}
 		}
 
@@ -88,16 +88,16 @@
 			}
 
 			.button {
-				background: var(--color-red);
+				background: $red;
 				border-radius: 0;
 				width: 200px;
 				padding: 0;
 
-				color: var(--color-white);
+				color: $white;
 
 				&:hover {
-					color: var(--color-black);
-					border: 5px solid var(--color-red);
+					color: $black;
+					border: 5px solid $red;
 					background: transparent;
 				}
 

@@ -1,5 +1,5 @@
 .skill {
-	color: var(--color-black);
+	color: $black;
 
 	padding: 1em 0;
 
@@ -29,8 +29,8 @@
 		background-color: darken($light-grey, 5);
 
 		.bar {
-			background-color: var(--color-red);
-			box-shadow: 0 0 10px var(--color-red);
+			background-color: $red;
+			box-shadow: 0 0 10px $red;
 		}
 	}
 }

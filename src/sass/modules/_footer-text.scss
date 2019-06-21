@@ -5,15 +5,15 @@
 
 	.link {
 		&.linkedin {
-			color: var(--color-linkedin);
+			color: $linkedin;
 		}
 
 		&.github {
-			color: var(--color-github);
+			color: $github;
 		}
 
 		&.codepen {
-			color: var(--color-codepen);
+			color: $codepen;
 		}
 
 		&:hover {

@@ -57,7 +57,7 @@ h3 {
 p {
 	font-size: $copy-size;
 
-	color: var(--color-black);
+	color: $black;
 
 	@include until($iphone-7) {
 		font-size: 1rem;
@@ -66,7 +66,7 @@ p {
 
 .link {
 	text-decoration: underline;
-	color: var(--color-red);
+	color: $red;
 
 	&:hover {
 		color: darken($light-grey, 15);

@@ -26,7 +26,7 @@
 
 			font-size: 1rem;
 			text-align: center;
-			color: var(--color-black);
+			color: $black;
 
 			margin-bottom: 25px;
 
@@ -54,11 +54,11 @@
 
 				font-size: 16px;
 				font-weight: 100;
-				color: var(--color-dark-grey);
+				color: $black;
 
 				@include until($ipad-pro-landscape) {
 					font-size: $copy-size;
-					color: var(--color-black);
+					color: $black;
 				}
 			}
 		}

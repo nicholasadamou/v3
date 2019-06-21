@@ -53,16 +53,16 @@
 	.hamburger-inner,
 	.hamburger-inner:after,
 	.hamburger-inner:before {
-		background: var(--color-black);
+		background: $black;
 	}
 }
 
 .background-invert {
-	background: var(--color-white) !important;
+	background: $white !important;
 
 	&:after,
 	&:before {
-		background: var(--color-white) !important;
+		background: $white !important;
 	}
 }
 
@@ -84,10 +84,10 @@
 		padding-left: 20px;
 		text-decoration: none;
 
-		color: var(--color-black);
+		color: $black;
 
 		&:hover {
-			color: var(--color-red);
+			color: $red;
 			text-decoration: underline;
 		}
 	}

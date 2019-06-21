@@ -13,7 +13,7 @@
 		margin-top: 20px;
 
 		span {
-			color: var(--color-red);
+			color: $red;
 		}
 
 		@include until($ipad-pro) {
@@ -57,7 +57,7 @@
 
 			text-decoration: none;
 
-			color: var(--color-black);
+			color: $black;
 
 			transition: color 200ms;
 
@@ -79,32 +79,32 @@
 
 			&.cornell {
 				&:before {
-					background-color: var(--color-cornell);
+					background-color: $cornell;
 				}
 
 				&:hover {
-					color: var(--color-cornell);
+					color: $cornell;
 				}
 			}
 
 			&.blackbird {
 				&:before {
-					background-color: var(--color-blackbird);
+					background-color: $blackbird;
 				}
 
 				&:hover {
-					color: var(--color-blackbird);
+					color: $blackbird;
 				}
 			}
 
 
 			&.mack-media-group {
 				&:before {
-					background-color: var(--color-mack-media-group);
+					background-color: $mack-media-group;
 				}
 
 				&:hover {
-					color: var(--color-mack-media-group);
+					color: $mack-media-group;
 				}
 			}
 		}
@@ -140,32 +140,32 @@
 		}
 
 		#resume {
-			border-color: var(--color-red);
-			color: var(--color-red);
+			border-color: $red;
+			color: $red;
 
 			&:hover {
-				background-color: var(--color-red);
-				color: var(--color-white);
+				background-color: $red;
+				color: $white;
 			}
 		}
 
 		#twitter {
-			border-color: var(--color-twitter);
-			color: var(--color-twitter);
+			border-color: $twitter;
+			color: $twitter;
 
 			&:hover {
-				background-color: var(--color-twitter);
-				color: var(--color-white);
+				background-color: $twitter;
+				color: $white;
 			}
 		}
 
 		#linkedin {
-			border-color: var(--color-linkedin);
-			color: var(--color-linkedin);
+			border-color: $linkedin;
+			color: $linkedin;
 
 			&:hover {
-				background-color: var(--color-linkedin);
-				color: var(--color-white);
+				background-color: $linkedin;
+				color: $white;
 			}
 		}
 	}

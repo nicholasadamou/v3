@@ -32,14 +32,14 @@
 		.stars {
 			padding: 5px;
 
-			background: var(--color-grey);
+			background: $grey;
 			border-radius: 5px;
 
-			color: var(--color-black);
+			color: $black;
 		}
 
 		.repo-title {
-			color: var(--color-red);
+			color: $red;
 			text-decoration: underline;
 		}
 	}

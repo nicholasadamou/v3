@@ -8,8 +8,8 @@
 }
 
 *::selection {
-	background: var(--color-highlight);
-	color: var(--color-selection);
+	background: $highlight;
+	color: $selection;
 }
 
 ::-webkit-scrollbar-track {
@@ -32,25 +32,6 @@
 	}
 }
 
-:root {
-	--color-copy: #{$copy};
-	--color-highlight: #{$highlight};
-	--color-selection: #{$selection};
-	--color-grey: #{$grey};
-	--color-light-grey: #{$light-grey};
-	--color-black: #{$black};
-	--color-white: #{$white};
-	--color-green: #{$green};
-	--color-red: #{$red};
-	--color-github: #{$github};
-	--color-codepen: #{$codepen};
-	--color-twitter: #{$twitter};
-	--color-linkedin: #{$linkedin};
-	--color-cornell: #{$cornell};
-	--color-blackbird: #{$blackbird};
-	--color-mack-media-group: #{$mack-media-group};
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -65,9 +46,9 @@ html {
 
 body {
 	font-family: $primary;
-	color: var(--color-copy);
+	color: $copy;
 	text-size-adjust: 100%;
 	line-height: 1.6em;
 
-	background: var(--color-white);
+	background: $white;
 }
