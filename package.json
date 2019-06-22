@@ -17,6 +17,7 @@
 		"install-dependencies": "npx yarn install && npx bower cache clean && npx bower install",
 		"update-dependencies": "npx yarn-check -u",
 		"clean": "sudo rm -rf node_modules/ bower_components/ yarn.lock package-lock.json",
+		"build": "npx gulp build",
 		"start": "npx gulp start",
 		"snyk-protect": "snyk protect",
 		"prepare": "npx yarn run snyk-protect",
