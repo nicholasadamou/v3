@@ -11,7 +11,7 @@ const config = require('./config.js')()
 
 // Fixes issue with loading tasks non-alphabetically.
 // see: https://github.com/gulpjs/undertaker-forward-reference
-gulp.registry(ForwardReference())
+gulp.registry(new ForwardReference())
 
 /**
  * Which task should be run?
