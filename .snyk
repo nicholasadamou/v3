@@ -540,3 +540,7 @@ ignore:
     - browser-sync > ua-parser-js:
         reason: None given
         expires: '2019-07-22T12:52:31.007Z'
+  SNYK-JS-LODASHMERGE-173732:
+    - psi > googleapis > google-auth-library > lodash.merge:
+        reason: None given
+        expires: '2019-07-22T12:57:07.745Z'
