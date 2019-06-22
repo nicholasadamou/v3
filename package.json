@@ -20,7 +20,7 @@
 		"build": "npx gulp build",
 		"start": "npx gulp start",
 		"snyk-protect": "snyk protect",
-		"prepare": "npx yarn run snyk-protect",
+		"prepare": "npm run snyk-protect",
 		"test": "snyk test",
 		"prepublish": "npm run snyk-protect"
 	},
