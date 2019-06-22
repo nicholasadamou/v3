@@ -1,15 +1,21 @@
-language: node_js
-node_js:
-  - 'lts/*'
+# For more information about the configurations used
+# in this file, please see the Travis CI documentation.
+#
+# https://docs.travis-ci.com
 
-before script:
-  - npm install -g yarn bower gulp
-after script:
-  - yarn install && bower install
-after success:
-  - gulp build
-  
+install:
+  - npx yarn install && npx yarn build
+
+language: generic
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+
 notifications:
   email:
     on_failure: always
     on_success: never
+
+sudo: required
