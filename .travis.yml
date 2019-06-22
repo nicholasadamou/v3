@@ -6,7 +6,9 @@
 install:
   - npx yarn install && npx yarn build
 
-language: generic
+language: node_js
+node_js:
+  - 'lts/*'
 
 matrix:
   include:
