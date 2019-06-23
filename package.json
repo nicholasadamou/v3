@@ -19,10 +19,10 @@
 		"clean": "sudo rm -rf node_modules/ bower_components/ yarn.lock package-lock.json",
 		"build": "npx gulp build",
 		"start": "npx gulp start",
-		"snyk-protect": "snyk protect",
-		"prepare": "npm run snyk-protect",
-		"test": "snyk test",
-		"prepublish": "npm run snyk-protect"
+		"snyk-protect": "npx snyk protect",
+		"prepare": "npx yarn run snyk-protect",
+		"test": "npx snyk test",
+		"prepublish": "npx yarn run snyk-protect"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.0.0",
