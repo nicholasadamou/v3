@@ -44,7 +44,7 @@ optimize my landing page and host it statically on a Digital-Ocean droplet.
 
 ## License
 
-© 2018 Nicholas Adamou.
+© 2019 Nicholas Adamou.
 
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 
