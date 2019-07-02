@@ -32,7 +32,7 @@ module.exports = function () {
     },
     GHPAGES: {
       username: 'nicholasadamou',
-      repo: 'https://github.com/nicholasadamou/nicholasadamou.github.io/'
+      repo: 'nicholasadamou.github.io'
     },
     // Google PageSpeed Insights URL Option
     URL: 'example.com',
