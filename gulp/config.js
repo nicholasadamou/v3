@@ -28,7 +28,7 @@ module.exports = function () {
     },
     SURGE: {
       project: `${require('path').dirname(__dirname)}/public/`, // Path to your static build directory
-      domain: 'nicholasadamou.surge.sh' // Your domain or Surge sub-domain
+      domain: 'nicholasadamou.com' // Your domain or Surge sub-domain
     },
     GHPAGES: {
       username: 'nicholasadamou',
