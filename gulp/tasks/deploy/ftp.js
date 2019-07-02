@@ -18,7 +18,7 @@ gulp.task('ftp', gulp.series('build', () => {
     secure: config.FTP.secure
   })
 
-  return gulp.src(`${paths.to.dist}**`, {
+  return gulp.src(`${paths.to.build}**`, {
     base: paths.to.build,
     buffer: false
   })
