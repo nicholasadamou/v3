@@ -28,11 +28,11 @@ module.exports = function () {
     },
     SURGE: {
       project: `${require('path').dirname(__dirname)}/public/`, // Path to your static build directory
-      domain: 'YOURDOMAIN.surge.sh' // Your domain or Surge sub-domain
+      domain: 'nicholasadamou.surge.sh' // Your domain or Surge sub-domain
     },
     GHPAGES: {
-      username: 'USERNAME',
-      repo: 'REPO'
+      username: 'nicholasadamou',
+      repo: 'https://github.com/nicholasadamou/nicholasadamou.github.io/'
     },
     // Google PageSpeed Insights URL Option
     URL: 'example.com',
