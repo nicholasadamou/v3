@@ -14,7 +14,8 @@ gulp.task('ftp', gulp.series('build', () => {
   const conn = ftp.create({
     host: config.FTP.host,
     user: config.FTP.user,
-    password: config.FTP.password
+    password: config.FTP.password,
+    secure: config.FTP.secure
   })
 
   return gulp.src(`${paths.to.dist}**`, {

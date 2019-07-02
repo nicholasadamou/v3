@@ -130,3 +130,6 @@ bower_components
 
 ### Vagrant ###
 .vagrant
+
+# Misc.
+.env

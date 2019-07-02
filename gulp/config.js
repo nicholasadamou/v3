@@ -1,5 +1,9 @@
 /* eslint-disable global-require */
 /* eslint-disable func-names */
+
+// Read in environmental variables
+require('dotenv').config()
+
 module.exports = function () {
   // Configuration Options
   const config = {
@@ -16,11 +20,11 @@ module.exports = function () {
  */
     environment: 'production',
     FTP: {
-      host: 'HOST',
-      user: 'USER',
-      password: 'PASSWORD',
+      host: process.env.HOST,
+      user: process.env.USER,
+      password: process.env.PASSWORD,
       secure: true, // Set 'true' for secured FTP connections
-      target: 'FTP-DIRECTORY'
+      target: process.env.DIRECTORY
     },
     SURGE: {
       project: `${require('path').dirname(__dirname)}/public/`, // Path to your static build directory
