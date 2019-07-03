@@ -8,6 +8,39 @@ patch:
   SNYK-JS-AXIOS-174505:
     - browser-sync > localtunnel > axios:
         patched: '2019-05-05T22:09:02.290Z'
+  SNYK-JS-LODASH-450202:
+    - snyk > inquirer > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - browser-sync > easy-extender > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - rucksack-css > postcss-reporter > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - psi > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - psi > googleapis > async > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - rucksack-css > laggard > postcss-reporter > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-03T22:06:54.346Z'
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-LODASHMERGE-173733:
