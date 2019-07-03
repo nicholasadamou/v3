@@ -26,7 +26,7 @@ console.log(`${config.pkg.name} ${config.pkg.version} ${config.environment} buil
 /**
  * Default set of tasks.
  */
-gulp.task('assets', gulp.series('data', 'docs', 'fonts', 'images', 'media', 'misc'))
+gulp.task('assets', gulp.series('data', 'fonts', 'images', 'media', 'misc'))
 
 if (config.environment === 'production') {
   // During 'production' we inline the CSS and JS,
