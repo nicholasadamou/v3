@@ -4,6 +4,7 @@
 - var tags = "developer, nicholas-adamou, sass, jade, gulp, scss, full-stack-developer, maker, designer"
 - var assets = 'assets/'
 - var css = assets + 'css/'
+- var images = assets + 'images/'
 - var favicons = images + 'favicons/'
 
 doctype html
@@ -31,7 +32,8 @@ html(lang='en')
 			when "development"
 				link(href=css + "index.css", rel="stylesheet")
 			when "production"
-				link(href=css + "index.min.css", rel="stylesheet")
+				link(href=css + "index.min.css", rel="stylesheet" inline)
+
 
 		//- Favicon
 		link(rel='apple-touch-icon-precomposed' sizes='57x57' href=favicons + 'apple-touch-icon-57x57.jpg')
