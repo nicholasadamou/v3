@@ -3,6 +3,12 @@
 
 	margin-bottom: 2rem;
 
+	width: 75%;
+
+	@include until($iphone-7) {
+		width: 100%;
+	}
+
 	form {
 		position: relative;
 		width: 100%;

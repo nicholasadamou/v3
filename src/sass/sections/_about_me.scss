@@ -1,16 +1,19 @@
 #about-me {
-	text-align: center;
+	text-align: left;
 
 	padding-bottom: 40px;
 
 	@include until($iphone-7) {
 		width: 100%;
+
+		text-align: center;
 	}
 
 	.title {
 		font-size: 2.5rem;
 
 		margin-top: 20px;
+		margin-left: 5rem;
 
 		span {
 			color: $red;
@@ -21,7 +24,13 @@
 		}
 
 		@include until($iphone-7) {
-			font-size: 1.8rem;
+			margin: 0;
+
+			padding-top: 20px;
+			padding-bottom: 10px;
+
+			font-size: 1.5rem;
+			text-align: center;
 		}
 
 		@include until($iphone-5) {
@@ -34,6 +43,9 @@
 	p {
 		margin: 0 5rem;
 		margin-bottom: 20px;
+		margin-left: 5rem;
+
+		text-align: left;
 
 		&:last-child {
 			margin: 0;
@@ -48,6 +60,8 @@
 			margin: 0 auto;
 
 			padding: 10px 25px;
+
+			text-align: center;
 		}
 
 		a {
@@ -107,11 +121,26 @@
 					color: $mack-media-group;
 				}
 			}
+
+			&.ibm {
+				&:before {
+					background-color: $ibm;
+				}
+
+				&:hover {
+					color: $ibm;
+				}
+			}
 		}
 	}
 
 	.btn-wrapper {
 		margin-top: 1.3rem;
+		margin-left: 5rem;
+
+		@include until($iphone-7) {
+			margin-left: 0;
+		}
 
 		.btn {
 			display: inline-block;
@@ -120,6 +149,8 @@
 
 			width: 200px;
 			height: 50px;
+
+			text-align: center;
 
 			border: 2px solid;
 
