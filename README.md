@@ -10,8 +10,6 @@ Personal landing page, powered by [nicholasadamou/starter-kit](https://github.co
 [![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/nicholasadamou.github.io.svg?style=flat-square)](https://david-dm.org/nicholasadamou/nicholasadamou.github.io#info=devDependencies)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/nicholasadamou.github.io)](https://dependabot.com)
 ![javascript style guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
-[![Digital Ocean](https://img.shields.io/badge/deployed-digitalocean-0080ff.svg?style=flat-square)](https://m.do.co/c/5347e65ea75c)
-[![Say Thanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/NicholasAdamou)
 
 </div>
 
