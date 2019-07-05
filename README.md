@@ -18,7 +18,7 @@ Personal landing page, powered by [nicholasadamou/starter-kit](https://github.co
 ## Description
 
 After many iterations and deployments throughout many providers, I decided to
-optimize my landing page and host it statically on a Digital-Ocean droplet.
+optimize my landing page and host it statically on [surge.sh](http://surge.sh).
 
 ## Development
 
