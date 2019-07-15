@@ -26,7 +26,7 @@
   },
   "git": { 
 	  "scripts": { 
-		  "pre-push": "surge --project ./public --domain nicholasadamou.com" 
+		  "pre-push": "gulp surge" 
 	  }
   },
   "devDependencies": {
