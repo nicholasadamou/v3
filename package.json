@@ -26,7 +26,7 @@
   },
   "git": { 
 	  "scripts": { 
-		  "pre-push": "gulp surge" 
+		  "pre-push": "npx gulp surge" 
 	  }
   },
   "devDependencies": {
