@@ -24,10 +24,10 @@
     "test": "npx snyk test",
     "prepublish": "npm run snyk-protect; npx yarn run snyk-protect"
   },
-  "git": { 
-	  "scripts": { 
-		  "pre-push": "npx gulp surge" 
-	  }
+  "git": {
+    "scripts": {
+      "pre-push": "npx gulp surge"
+    }
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -40,7 +40,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-	"git-scripts": "0.2.1",
+    "git-scripts": "0.2.1",
     "gulp-babel": "^8.0.0",
     "gulp-changed": "^4.0.0",
     "gulp-cssnano": "^2.1.2",
@@ -102,7 +102,7 @@
     "psi": "^3.1.0",
     "require-dir": "^1.1.0",
     "rucksack-css": "^1.0.2",
-    "snyk": "^1.189.0",
+    "snyk": "^1.231.0",
     "vanilla-lazyload": "latest",
     "vinyl-buffer": "^1.0.1",
     "vinyl-ftp": "^0.6.0",
