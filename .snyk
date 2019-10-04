@@ -11,12 +11,8 @@ patch:
   SNYK-JS-LODASH-450202:
     - snyk > inquirer > lodash:
         patched: '2019-07-03T22:06:54.346Z'
-      '@babel/generator > @babel/types > lodash':
-        patched: '2019-09-18T22:30:03.081Z'
     - snyk > lodash:
         patched: '2019-07-03T22:06:54.346Z'
-      '@babel/generator > lodash':
-        patched: '2019-09-18T22:30:03.081Z'
     - browser-sync > easy-extender > lodash:
         patched: '2019-07-03T22:06:54.346Z'
     - snyk > snyk-nuget-plugin > lodash:
@@ -45,6 +41,15 @@ patch:
         patched: '2019-07-03T22:06:54.346Z'
     - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
         patched: '2019-07-03T22:06:54.346Z'
+    - '@babel/generator > @babel/types > lodash':
+        patched: '2019-09-18T22:30:03.081Z'
+    - '@babel/generator > lodash':
+        patched: '2019-09-18T22:30:03.081Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T22:06:42.256Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T22:06:42.256Z'
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-LODASHMERGE-173733:
