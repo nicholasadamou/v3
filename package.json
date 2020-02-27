@@ -84,7 +84,7 @@
     "babel-polyfill": "^6.26.0",
     "browser-sync": "2.26.7",
     "browserify": "^16.2.3",
-    "bulma": "latest",
+    "bulma": "^0.8.0",
     "del": "^5.0.0",
     "dotenv": "^8.0.0",
     "gulp": "^4.0.0",
