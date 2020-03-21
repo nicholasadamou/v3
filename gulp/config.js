@@ -18,7 +18,7 @@ module.exports = function () {
  *    If it is set to an empty string the environment will be extract from
  *    the NODE_ENV environment var.
  */
-    environment: 'production',
+    environment: 'development',
     FTP: {
       host: process.env.HOST,
       user: process.env.USER,
@@ -107,7 +107,7 @@ module.exports = function () {
       // Whether or not the UI should be enabled
       ui: false,
       // The local-tunnel sub-domain (e.g. <example>.localtunnel.me)
-      tunnelName: 'starterkit'
+      // tunnelName: 'starterkit'
     }
   }
 
