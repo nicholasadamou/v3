@@ -1,8 +1,8 @@
 - var year = moment(Date.now()).year();
 
 footer
-	object(type="image/svg+xml" data=images + "logos/nicholasadamou_logo.svg").logo
-		logo
+	div(data-src=images + "logos/nicholasadamou_logo.png").logo.lazy
+		
 	.social
 		ul
 			a(href="https://codepen.io/NicholasAdamou" target="_blank" aria-hidden="true" rel="noopener")
