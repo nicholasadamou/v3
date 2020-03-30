@@ -1,0 +1,6 @@
+mixin news(title, description, link)
+	article
+		.top
+			span.emoji ️🗞️
+			a(href=link target="_blank" aria-hidden="true" rel="noopener").link #{title}
+		p.desc #{description}

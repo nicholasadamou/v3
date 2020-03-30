@@ -5,8 +5,7 @@
 
 		text-align: initial;
 
-		margin: 2.5rem 2rem;
-		margin-bottom: 2rem;
+		margin: 2.5rem 2rem 2rem;
 
 		@include until($iphone-7) {
 			display: block;

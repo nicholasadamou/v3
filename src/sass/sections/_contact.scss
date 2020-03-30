@@ -12,8 +12,7 @@
 	form {
 		position: relative;
 		width: 100%;
-		margin: 0 auto;
-		margin-top: 20px;
+		margin: 20px auto 0;
 
 		@include until($iphone-7) {
 			width: 90%;
@@ -29,8 +28,7 @@
 
 		.field-label {
 			font-weight: 400;
-			margin: 0;
-			margin-right: 10px;
+			margin: 0 10px 0 0;
 
 			flex-grow: 0;
 
