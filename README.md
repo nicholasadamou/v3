@@ -8,7 +8,7 @@ Personal landing page, powered by [nicholasadamou/starter-kit](https://github.co
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 [![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/nicholasadamou.github.io.svg?style=flat-square)](https://david-dm.org/nicholasadamou/nicholasadamou.github.io#info=devDependencies)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/nicholasadamou.github.io)](https://dependabot.com)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/nicholasadamou.com)](https://dependabot.com)
 ![javascript style guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 
 </div>
