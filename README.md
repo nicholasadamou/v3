@@ -27,7 +27,12 @@ optimize my landing page and host it statically on [surge.sh](http://surge.sh).
 
 ### Steps
 
-
+```bash
+git clone https://github.com/nicholasadamou/nicholasadamou.com
+cd nicholasadamou.com
+npx yarn install
+npx yarn start
+```
 
 ## Partners
 

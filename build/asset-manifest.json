@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4fe356e1.chunk.css",
+    "main.js": "/static/js/main.445bd7a1.chunk.js",
+    "main.js.map": "/static/js/main.445bd7a1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.63f04cc1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.63f04cc1.js.map",
+    "static/js/2.e227c891.chunk.js": "/static/js/2.e227c891.chunk.js",
+    "static/js/2.e227c891.chunk.js.map": "/static/js/2.e227c891.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.296b6a1226a4d3a9684685d89d34bacd.js": "/precache-manifest.296b6a1226a4d3a9684685d89d34bacd.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4fe356e1.chunk.css.map": "/static/css/main.4fe356e1.chunk.css.map",
+    "static/js/2.e227c891.chunk.js.LICENSE.txt": "/static/js/2.e227c891.chunk.js.LICENSE.txt",
+    "static/media/advanced-electrical-services_desktop.webp": "/static/media/advanced-electrical-services_desktop.b364aaff.webp",
+    "static/media/advanced-electrical-services_mobile.webp": "/static/media/advanced-electrical-services_mobile.ce3b6285.webp",
+    "static/media/avatar.webp": "/static/media/avatar.a2902e00.webp",
+    "static/media/cut-paste-copy_desktop.webp": "/static/media/cut-paste-copy_desktop.5699ff66.webp",
+    "static/media/cut-paste-copy_mobile.webp": "/static/media/cut-paste-copy_mobile.bc225d18.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63f04cc1.js",
+    "static/js/2.e227c891.chunk.js",
+    "static/css/main.4fe356e1.chunk.css",
+    "static/js/main.445bd7a1.chunk.js"
+  ]
+}
