@@ -1,6 +1,6 @@
 <div align="center">
 
-# Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.com.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.com)
+# Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou)
 
 Personal landing page, powered by [facebook/create-react-app](https://github.com/facebok/create-react-app) ✨
 
