@@ -1,0 +1,42 @@
+@import "src/sass/settings/mixins";
+
+article {
+  display: flex;
+  flex-direction: column;
+
+  width: 90%;
+  max-width: 100%;
+
+  margin: 10px auto;
+
+  overflow: hidden;
+
+  @include until($iphone-7) {
+	display: block;
+	flex: none;
+
+	width: 100%;
+	max-width: 100%;
+  }
+
+  .emoji {
+	margin-right: 5px;
+  }
+
+  .link {
+	font-size: 1rem;
+
+	&:hover {
+	  cursor: pointer;
+	  animation: rainbow 1s linear infinite;
+	}
+  }
+
+  p {
+	font-size: var(--copy-size);
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+  }
+}

@@ -1,7 +1,7 @@
 h1,
 h2,
 h3 {
-	font-family: $primary;
+	font-family: var(--primary);
 }
 
 h1 {
@@ -39,7 +39,7 @@ h3 {
 .subtitle {
 	margin-bottom: 50px;
 
-	color: darken($light-grey, 15);
+	color: darken(#ccc, 15);
 	line-height: 1.5;
 
 	@include until($iphone-7) {
@@ -55,9 +55,9 @@ h3 {
 }
 
 p {
-	font-size: $copy-size;
+	font-size: var(--copy-size);
 
-	color: $black;
+	color: var(--black);
 
 	@include until($iphone-7) {
 		font-size: 1rem;
@@ -66,9 +66,9 @@ p {
 
 .link {
 	text-decoration: underline;
-	color: $red;
+	color: var(--red);
 
 	&:hover {
-		color: darken($light-grey, 15);
+		color: darken(#ccc, 15);
 	}
 }

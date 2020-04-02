@@ -1,0 +1,16 @@
+@import "src/sass/settings/mixins";
+
+.experiments {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto 5rem;
+
+  text-align: left;
+
+  @include until($iphone-7) {
+	margin: auto 2rem;
+  }
+}

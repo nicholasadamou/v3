@@ -1,38 +1,29 @@
-//- Colors
-$white: #FAFAFA;
-$black: #212121;
-$red: #FC4349;
-$grey: #F5F5F5;
-$light-grey: #ccc;
-$green: #10B500;
-$yellow: #FFF498;
-$github: #161514;
-$codepen: #212121;
-$twitter: #55acee;
-$linkedin: #0077B5;
-$cornell: #583d78;
-$blackbird: #3c4156;
-$mack-media-group: #80bd01;
-$ibm: #5392ff;
-//- Scrollbar
-$scrollbar: $white;
-$scrollbar-bg: $black;
-//- Typography
-$systemFonts: Avenir,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-"Roboto",
-"Oxygen",
-"Ubuntu",
-"Cantarell",
-"Fira Sans",
-"Droid Sans",
-"Helvetica Neue",
-sans-serif;
-$primary: $systemFonts;
-$secondary: 'Roboto Slab';
-$highlight: $yellow;
-$selection: $black;
-$copy: $white;
-$copy-size: 1rem;
+:root {
+  //- Colors
+  --white: #FAFAFA;
+  --black: #212121;
+  --red: #FC4349;
+  --grey: #F5F5F5;
+  --light-grey: #ccc;
+  --green: #10B500;
+  --yellow: #FFF498;
+  --github: #161514;
+  --codepen: #212121;
+  --twitter: #55acee;
+  --linkedin: #0077B5;
+  --cornell: #583d78;
+  --blackbird: #3c4156;
+  --mack-media-group: #80bd01;
+  --ibm: #5392ff;
+  //- Scrollbar
+  --scrollbar: var(--white);
+  --scrollbar-bg: var(--black);
+  //- Typography
+  --systemFonts: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --primary: var(--systemFonts);
+  --secondary: 'Roboto Slab';
+  --highlight: var(--yellow);
+  --selection: var(--black);
+  --copy: var(--white);
+  --copy-size: 1rem;
+}

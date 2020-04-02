@@ -1,13 +1,13 @@
 <div align="center">
 
-# Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.github.io.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.github.io)
+# Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.com.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.com)
 
-Personal landing page, powered by [nicholasadamou/starter-kit](https://github.com/nicholasadamou/starter-kit) ✨
+Personal landing page, powered by [facebook/create-react-app](https://github.com/facebok/create-react-app) ✨
 
 ![Project Preview](previews/preview.png)
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
-[![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/nicholasadamou.github.io.svg?style=flat-square)](https://david-dm.org/nicholasadamou/nicholasadamou.github.io#info=devDependencies)
+[![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/nicholasadamou.com.svg?style=flat-square)](https://david-dm.org/nicholasadamou/nicholasadamou.com#info=devDependencies)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/nicholasadamou)](https://dependabot.com)
 ![javascript style guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 
@@ -27,12 +27,7 @@ optimize my landing page and host it statically on [surge.sh](http://surge.sh).
 
 ### Steps
 
--   Clone this repository.
--   Install dependencies using `yarn install-dependencies`.
--   Start development server by running `gulp start`.
--   Build and export using `gulp build` (creates `public` directory).
 
-⚠️ More information about how to use this project can be found 👉 [nicholasadamou/starter-kit](https://github.com/nicholasadamou/starter-kit).
 
 ## Partners
 
@@ -42,7 +37,7 @@ optimize my landing page and host it statically on [surge.sh](http://surge.sh).
 
 ## License
 
-© 2019 Nicholas Adamou.
+© 2020 Nicholas Adamou.
 
 It is free software, and may be redistributed under the terms specified in the [LICENSE] file.
 

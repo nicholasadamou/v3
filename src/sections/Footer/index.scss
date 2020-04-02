@@ -1,0 +1,55 @@
+@import "src/sass/settings/mixins";
+
+footer {
+  display: grid;
+  place-content: center;
+
+  margin: 5rem auto 5rem auto;
+
+  text-align: center;
+
+  .logo {
+	margin-bottom: 2rem;
+
+	cursor: inherit;
+
+	opacity: 0.25;
+  }
+
+  .social {
+	list-style-type: none;
+
+	margin-bottom: 1rem;
+
+	a {
+	  text-decoration: none;
+
+	  li {
+		display: inline-block;
+
+		margin: 0 10px;
+
+		font-size: 1.5rem;
+		color: var(--black);
+
+		&.twitter {
+		  color: var(--twitter);
+		}
+
+		&.linkedin {
+		  color: var(--linkedin);
+		}
+	  }
+	}
+  }
+
+  p {
+	margin-bottom: 0.5rem;
+
+	font-size: 0.9rem;
+
+	@include until($iphone-5) {
+	  font-size: 0.8rem;
+	}
+  }
+}

@@ -1,0 +1,16 @@
+@import "src/sass/settings/mixins";
+
+.repositories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  text-align: initial;
+
+  margin: 2rem 2rem 2rem;
+
+  @include until($iphone-7) {
+	display: block;
+
+	margin: 0;
+  }
+}

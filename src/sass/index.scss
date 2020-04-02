@@ -1,9 +1,3 @@
-//
-// Settings
-// --------------------------------------------------
-
-@import 'settings/vendors';
-@import 'settings/functions';
 @import 'settings/mixins';
 
 //
@@ -15,38 +9,8 @@
 @import 'base/typography';
 
 //
-// Layout
-// --------------------------------------------------
-
-@import 'layout/wrapper';
-
-//
 // Modules
 // --------------------------------------------------
 
-@import 'modules/rainbow';
-@import 'modules/logo';
-@import 'modules/avatar';
-@import 'modules/nav';
-@import 'modules/seperator';
-@import 'modules/skill';
-@import 'modules/product';
-@import 'modules/repo';
-@import 'modules/experiment';
-@import 'modules/footer-text';
-@import 'modules/publication';
-@import 'modules/article';
-
-//
-// Sections
-// --------------------------------------------------
-
-@import 'sections/about_me';
-@import 'sections/work';
-@import 'sections/open_source';
-@import 'sections/experiments';
-@import 'sections/contact';
-@import 'sections/form-success';
-@import 'sections/publications';
-@import 'sections/news';
-@import 'sections/footer';
+@import "modules/rainbow";
+@import "modules/seperator";
