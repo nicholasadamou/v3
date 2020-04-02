@@ -14,12 +14,12 @@
   },
   "license": "MIT",
   "scripts": {
-	"install-dependencies": "npx yarn install && npx bower cache clean && npx bower install",
-	"update-dependencies": "npx yarn-check -u",
-	"clean": "sudo rm -rf node_modules/ bower_components/ yarn.lock package-lock.json",
-	"build": "npx gulp build",
-	"start": "npx gulp start",
-	"test": "exit 0"
+    "install-dependencies": "npx yarn install && npx bower cache clean && npx bower install",
+    "update-dependencies": "npx yarn-check -u",
+    "clean": "sudo rm -rf node_modules/ bower_components/ yarn.lock package-lock.json",
+    "build": "npx gulp build",
+    "start": "npx gulp start",
+    "test": "exit 0"
   },
   "git": {
     "scripts": {
@@ -80,7 +80,7 @@
     "autoprefixer": "9.7.5",
     "babel-polyfill": "^6.26.0",
     "browser-sync": "2.26.7",
-    "browserify": "^16.2.3",
+    "browserify": "16.5.1",
     "bulma": "^0.8.0",
     "del": "^5.0.0",
     "dotenv": "^8.0.0",
