@@ -1,13 +1,13 @@
 @import "src/sass/settings/mixins";
 
-#publications {
+#papers {
   width: 100%;
 
   .subtitle {
 	margin-bottom: 16px;
   }
 
-  .publications {
+  .papers {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;

@@ -81,10 +81,10 @@ class Nav extends React.Component {
 							Experiments
 						</Link>
 						<Link
-							to="publications"
+							to="papers"
 							smooth={true}
 						>
-							Publications
+							Papers
 						</Link>
 						<Link
 							to="news"

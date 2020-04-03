@@ -9,7 +9,7 @@ const AboutMe = () => (
 		<Avatar />
 
 		<h1 className="title">
-			Hi, <span role="img" aria-label="wave">👋🏼</span>! I'm{' '}
+			Hi, <span id="wave-emoji" role="img" aria-label="wave">👋🏼</span>! I'm{' '}
 			<span>
 				Nicholas Adamou
 			</span>

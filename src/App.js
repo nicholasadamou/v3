@@ -9,7 +9,7 @@ import AboutMe from "./sections/AboutMe/AboutMe"
 import Work from "./sections/Work/Work"
 import OpenSource from "./sections/OpenSource/OpenSource"
 import Experiments from "./sections/Experiments/Experiments"
-import Publications from "./sections/Publications/Publications"
+import Papers from "./sections/Papers/Papers"
 import News from "./sections/News/News"
 import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
@@ -27,7 +27,7 @@ function App() {
 			<hr />
 			<Experiments />
 			<hr />
-			<Publications />
+			<Papers />
 			<hr />
 			<News />
 			<hr />

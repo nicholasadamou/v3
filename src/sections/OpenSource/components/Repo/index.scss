@@ -3,12 +3,18 @@
 .repo {
   margin: 10px 20px;
 
+  overflow: visible;
+
   @include until($iphone-7) {
 	width: 100%;
 	max-width: 100%;
 
 	margin: 20px 0;
 	padding: 0 20px;
+  }
+
+  .emoji {
+	margin-right: 0;
   }
 
   a {
@@ -24,14 +30,15 @@
   .top {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 
 	margin-bottom: 10px;
 
 	font-size: 1rem;
 
 	.repo-title,
-	.stars {
+	.stars, .forks {
+	  margin-left: 10px;
+
 	  padding: 5px;
 
 	  background: var(--grey);
@@ -43,6 +50,16 @@
 	.repo-title {
 	  color: var(--red);
 	  text-decoration: underline;
+
+	  transition: color 0.25ms ease-in-out;
+
+	  &:hover {
+		color: var(--light-grey);
+	  }
+	}
+
+	.stars {
+	  color: var(--star);
 	}
   }
 

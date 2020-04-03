@@ -1,6 +1,6 @@
 @import "src/sass/settings/mixins";
 
-.publication {
+.paper {
   display: flex;
   flex-direction: column;
 
@@ -25,11 +25,6 @@
 
   .link {
 	font-size: 1rem;
-
-	&:hover {
-	  cursor: pointer;
-	  animation: rainbow 1s linear infinite;
-	}
   }
 
   p {

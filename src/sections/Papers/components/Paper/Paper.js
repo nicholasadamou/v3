@@ -2,8 +2,8 @@ import React from "react";
 
 import './index.scss'
 
-const Publication = (title, desc, link) => (
-	<div className="publication">
+const Paper = (title, desc, link) => (
+	<div className="paper">
 		<div className="top">
 			<span
 				role="img"
@@ -28,4 +28,4 @@ const Publication = (title, desc, link) => (
 	</div>
 );
 
-export default Publication
+export default Paper

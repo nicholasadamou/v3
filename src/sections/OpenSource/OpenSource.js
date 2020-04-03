@@ -20,7 +20,10 @@ const OpenSource = () => (
 			>
 				avid open-sourcer
 			</a>
-			{' '}and I have{' '}
+			.{' '}
+		</p>
+		<p className="subtitle" style={{ marginTop: -18 }}>
+			I have{' '}
 			<a
 				href="https://github.com/nicholasadamou"
 				target="_blank"
@@ -36,29 +39,23 @@ const OpenSource = () => (
 		<div className="repositories">
 			{
 				Repo(
-				"set-me-up",
 				"https://github.com/nicholasadamou/set-me-up",
 				"🛠",
 				"hammer and wrench",
-				"set-me-up aims to simplify the dull setup and maintenance of Mac OS development environments."
 				)
 			}
 			{
 				Repo(
-				"set-me-up-blueprint",
 				"https://github.com/nicholasadamou/set-me-up-blueprint",
 				"🛠",
 				"hammer and wrench",
-				"A template to manage set-me-up setups."
 				)
 			}
 			{
 				Repo(
-					"utilities",
 					"https://github.com/nicholasadamou/utilities",
 					"🛠",
 					"hammer and wrench",
-					"Custom-made Bash functions & utilities used within set-me-up."
 				)
 			}
 		</div>
