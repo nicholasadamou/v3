@@ -37,27 +37,21 @@ const OpenSource = () => (
 		</p>
 
 		<div className="repositories">
-			{
-				Repo(
-				"https://github.com/nicholasadamou/set-me-up",
-				"🛠",
-				"hammer and wrench",
-				)
-			}
-			{
-				Repo(
-				"https://github.com/nicholasadamou/set-me-up-blueprint",
-				"🛠",
-				"hammer and wrench",
-				)
-			}
-			{
-				Repo(
-					"https://github.com/nicholasadamou/utilities",
-					"🛠",
-					"hammer and wrench",
-				)
-			}
+			<Repo
+				link="https://github.com/nicholasadamou/set-me-up"
+				emoji="🛠"
+				label="hammer and wrench"
+			/>
+			<Repo
+				link="https://github.com/nicholasadamou/set-me-up-blueprint"
+				emoji="🛠"
+				label="hammer and wrench"
+			/>
+			<Repo
+				link="https://github.com/nicholasadamou/utilities"
+				emoji="🛠"
+				label="hammer and wrench"
+			/>
 		</div>
 
 		{
