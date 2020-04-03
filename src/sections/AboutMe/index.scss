@@ -20,16 +20,6 @@
       color: var(--red);
     }
 
-    #wave-emoji {
-      display: inline-block;
-
-      animation-duration: 1.8s;
-      animation-iteration-count: infinite;
-      animation-name: wave;
-
-      transform-origin: 70% 70%;
-    }
-
     @include until($ipad-pro) {
       font-size: 2.3rem;
     }
