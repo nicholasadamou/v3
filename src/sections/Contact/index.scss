@@ -7,6 +7,11 @@
 
   width: 75%;
 
+  .title:nth-child(2) {
+	margin-top: -15px;
+	margin-bottom: 30px;
+  }
+
   @include until($iphone-7) {
 	width: 100%;
   }

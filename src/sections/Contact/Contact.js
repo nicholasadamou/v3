@@ -4,7 +4,8 @@ import './index.scss'
 
 const Contact = () => (
 	<section id="contact">
-		<h2 className="title">Want to say Hi <span role="img" aria-label="wave">👋🏼</span>? Drop me a line!</h2>
+		<h2 className="title">Want to say Hi <span role="img" aria-label="wave">👋🏼</span>?</h2>
+		<h2 className="title">Drop me a line!</h2>
 		<p className="subtitle">Contact me via{' '}
 			<a
 				href="mailto:nicholasadamouemail@gmail.com"
