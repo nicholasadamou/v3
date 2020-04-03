@@ -1,15 +1,16 @@
-name: Deploy Website
+name: My workflow
 
-on: [push]
+on: push
 
 jobs:
-  build:
+  my-job:
+    name: My job
     runs-on: ubuntu-latest
-    name: Deploying to surge
     steps:
-      - uses: actions/checkout@v1
-      - name: Install surge and fire deployment
-        uses: actions/setup-node@v1
+      - name: Deploy to foo-bar.surge.sh
+        uses: dswistowski/surge-sh-action@v1
         with:
-          node-version: 8
-      - run: npx surge build/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+          domain: 'nicholasadamou.com'
+          project: 'build/'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
