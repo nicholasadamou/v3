@@ -73,12 +73,12 @@ const Footer = () => (
 			</a>{' '}and{' '}
 			<a
 				className="link"
-				href="https://github.com/nicholasadamou/starter-kit"
+				href="https://github.com/facebook/create-react-app"
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
 			>
-				Starter-Kit
+				create-react-app
 			</a>
 			.
 		</p>
