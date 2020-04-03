@@ -40,7 +40,7 @@ const Repo = (title, link, emoji, label, desc) => {
 							{emoji}
 						</span>
 						<span className="repo-title">
-							{title}
+							{title.toLowerCase()}
 						</span>
 					</div>
 					<div className="right">

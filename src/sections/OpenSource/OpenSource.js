@@ -36,29 +36,29 @@ const OpenSource = () => (
 		<div className="repositories">
 			{
 				Repo(
-					"Starter-Kit",
-					"https://github.com/nicholasadamou/Starter-Kit",
-					"💻",
-					"laptop",
-					"A Front End development Gulp.js based workflow."
-				)
-			}
-			{
-				Repo(
-				"OnionPi",
-				"https://github.com/nicholasadamou/OnionPi",
-				"🍆",
-				"eggplant",
-				"Config:pures your Raspberry Pi as portable WiFi-WiFi Tor proxy."
-				)
-			}
-			{
-				Repo(
-				"AnyFi",
-				"https://github.com/nicholasadamou/AnyFi",
+				"set-me-up",
+				"https://github.com/nicholasadamou/set-me-up",
 				"🛠",
 				"hammer and wrench",
-				"Configure your Raspberry Pi as a wireless access point."
+				"set-me-up aims to simplify the dull setup and maintenance of Mac OS development environments."
+				)
+			}
+			{
+				Repo(
+				"set-me-up-blueprint",
+				"https://github.com/nicholasadamou/set-me-up-blueprint",
+				"🛠",
+				"hammer and wrench",
+				"A template to manage set-me-up setups."
+				)
+			}
+			{
+				Repo(
+					"utilities",
+					"https://github.com/nicholasadamou/utilities",
+					"🛠",
+					"hammer and wrench",
+					"Custom-made Bash functions & utilities used within set-me-up."
 				)
 			}
 		</div>
