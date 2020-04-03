@@ -19,6 +19,11 @@
     "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json",
     "deploy": "npx yarn build && npx surge build/ nicholasadamou.com"
   },
+  "git": {
+	"scripts": {
+	  "pre-push": "npx yarn deploy"
+	}
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -37,11 +42,13 @@
   "devDependencies": {
     "animate.css": "^3.7.2",
     "animate.css-react": "^1.0.0",
+    "git-scripts": "^0.4.3",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react-css-burger": "^0.2.0",
     "react-router-dom": "^5.1.2",
     "react-scroll": "^1.7.16",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1",
+    "surge": "^0.21.3"
   }
 }
