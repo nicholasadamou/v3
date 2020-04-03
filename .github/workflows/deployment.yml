@@ -17,13 +17,11 @@ jobs:
     steps:
       # Installs and configures Node.js, so that way we can execute surge.sh later
       - uses: actions/checkout@v2
-      - name: Use Node.js
+      - name: Use Node.js and Deploy to nicholasadamou.com
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-
       # Execute the steps required for deployment
-      - name: Deploy to nicholasadamou.com
       - run: npx yarn install
       - run: npx yarn build
       - run: npx surge --project build/ --domain nicholasadamou.com
