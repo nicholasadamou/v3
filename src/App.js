@@ -3,7 +3,7 @@ import React from 'react';
 import Provider from './context/Provider'
 
 import Nav from './components/Nav/Nav'
-import Container from "./components/Container/Container"
+import Wrapper from "./components/Wrapper/Wrapper"
 
 import AboutMe from "./sections/AboutMe/AboutMe"
 import Work from "./sections/Work/Work"
@@ -18,7 +18,7 @@ function App() {
   return (
 	  <Provider>
 	  	<Nav />
-		<Container>
+		<Wrapper>
 			<AboutMe />
 			<hr />
 			<Work />
@@ -32,7 +32,7 @@ function App() {
 			<News />
 			<hr />
 			<Contact />
-		</Container>
+		</Wrapper>
 	  	<Footer />
 	  </Provider>
   );

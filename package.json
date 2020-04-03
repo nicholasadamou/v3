@@ -42,6 +42,7 @@
   "devDependencies": {
     "animate.css": "^3.7.2",
     "animate.css-react": "^1.0.0",
+    "bulma": "^0.8.1",
     "git-scripts": "^0.4.3",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
