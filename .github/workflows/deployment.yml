@@ -1,16 +1,32 @@
 name: Deploy to Surge.sh
 
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
 on: push
+  branches: [ master ]
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # This workflow contains a single job called "deploy"
   deploy:
     name: Deploy
+    # The type of operating-system that the job will run on
     runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Deploy to nicholasadamou.com
-        uses: dswistowski/surge-sh-action@v1
+      # Installs and configures Node.js, so that way we
+      # can execute surge.sh later
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
         with:
-          domain: 'nicholasadamou.com'
-          project: 'build/'
-          login: ${{ secrets.SURGE_LOGIN }}
-          token: ${{ secrets.SURGE_TOKEN }}
+          node-version: '12.x'
+
+      # Execute the deployment script from package.json
+      - name: Deploy to nicholasadamou.com
+      - run: npx yarn install
+      - run: npx yarn build
+      - run: npx surge --project build/ --domain nicholasadamou.com
+        env:
+          CI: true
