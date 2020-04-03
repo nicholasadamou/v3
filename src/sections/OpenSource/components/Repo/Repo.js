@@ -55,32 +55,50 @@ const Repo = (link, emoji, label) => {
 					</a>
 				</div>
 				<div className="right">
-					<span
-						className="stars"
-						role="img"
-						aria-label="star"
+					<a
+						href={link}
+						target="_blank"
+						aria-hidden="true"
+						aria-label={`${name} github stars`}
+						title="star"
+						rel="noopener noreferrer"
 					>
-						<i className="fas fa-star"></i>
-						{
-							stargazers_count ?
-								` ${round(stargazers_count)}`
-								:
-								` 0`
-						}
-					</span>
-					<span
-						className="forks"
-						role="img"
-						aria-label="branch"
+						<span
+							className="stars"
+							role="img"
+							aria-label="star"
+						>
+							<i className="fas fa-star"></i>
+							{
+								stargazers_count ?
+									` ${round(stargazers_count)}`
+									:
+									` 0`
+							}
+						</span>
+					</a>
+					<a
+						href={`${link}/fork`}
+						target="_blank"
+						aria-hidden="true"
+						aria-label={`fork ${name} on github`}
+						title="fork"
+						rel="noopener noreferrer"
 					>
-						<i className="fas fa-code-branch"></i>
-						{
-							fork_count ?
-								` ${round(fork_count)}`
-								:
-								` 0`
-						}
-					</span>
+						<span
+							className="forks"
+							role="img"
+							aria-label="branch"
+						>
+							<i className="fas fa-code-branch"></i>
+							{
+								fork_count ?
+									` ${round(fork_count)}`
+									:
+									` 0`
+							}
+						</span>
+					</a>
 				</div>
 			</div>
 			<div className="bottom">

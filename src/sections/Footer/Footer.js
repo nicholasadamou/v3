@@ -16,6 +16,8 @@ const Footer = () => (
 					href="https://codepen.io/NicholasAdamou"
 					target="_blank"
 					aria-hidden="true"
+					aria-label="CodePen"
+					title="CodePen"
 					rel="noopener noreferrer"
 				>
 					<li>
@@ -26,6 +28,8 @@ const Footer = () => (
 					href="https://github.com/nicholasadamou"
 					target="_blank"
 					aria-hidden="true"
+					aria-label="GitHub"
+					title="GitHub"
 					rel="noopener noreferrer"
 				>
 					<li>
@@ -36,6 +40,8 @@ const Footer = () => (
 					href="https://linkedin.com/in/nicholas-adamou/"
 					target="_blank"
 					aria-hidden="true"
+					aria-label="LinkedIn"
+					title="LinkedIn"
 					rel="noopener noreferrer"
 				>
 					<li className="linkedin">
@@ -46,6 +52,8 @@ const Footer = () => (
 					href="https://twitter.com/NicholasAdamou"
 					target="_blank"
 					aria-hidden="true"
+					aria-label="Twitter"
+					title="Twitter"
 					rel="noopener noreferrer"
 				>
 					<li className="twitter">
@@ -69,14 +77,14 @@ const Footer = () => (
 				rel="noopener noreferrer"
 				className="link"
 			>
-				Bluma
+				Bulma
 			</a>{' '}and{' '}
 			<a
-				className="link"
 				href="https://github.com/facebook/create-react-app"
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
+				className="link"
 			>
 				create-react-app
 			</a>

@@ -32,12 +32,18 @@ footer {
 		font-size: 1.5rem;
 		color: var(--black);
 
+		transition: all 0.25s ease-in-out;
+
 		&.twitter {
 		  color: var(--twitter);
 		}
 
 		&.linkedin {
 		  color: var(--linkedin);
+		}
+
+		&:hover {
+		  transform: scale(1.2);
 		}
 	  }
 	}

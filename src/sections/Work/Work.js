@@ -11,7 +11,7 @@ import './index.scss'
 const Work = () => (
 	<section id="work">
 		<h2 className="title">Websites I've Made <span role="img" aria-label="candy">🍫</span></h2>
-		<p className="subtitle">A selection of work that was designed, programmed and delivered by me.</p>
+		<p className="subtitle">A selection of websites that was designed, programmed and delivered by me.</p>
 
 		<div className="products">
 			{
