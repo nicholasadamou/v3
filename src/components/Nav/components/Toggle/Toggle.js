@@ -15,7 +15,6 @@ const Toggle = (props) => {
 			<Animate
 				appear="slideInDown"
 				component="div"
-				id={"toggle"}
 				className={isNavigationOpened ? 'opened' : 'closed'}
 			>
 				<Burger
