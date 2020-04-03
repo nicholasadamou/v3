@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { isWebpSupported } from 'react-image-webp/dist/utils';
+
 import Product from './components/Product/Product'
 
 import FooterText from "../../components/FooterText/FooterText";
@@ -16,16 +18,32 @@ const Work = () => (
 				Product(
 					"Advanced Electrical Services",
 					"https://advanced-electrical-services.netlify.com/",
-					require("../../assets/images/products/advanced-electrical-services_desktop.webp"),
-					require("../../assets/images/products/advanced-electrical-services_mobile.webp")
+					isWebpSupported()
+					?
+						require("../../assets/images/products/advanced-electrical-services_desktop.webp")
+					:
+						require("../../assets/images/products/advanced-electrical-services_desktop.jpg"),
+					isWebpSupported()
+					?
+						require("../../assets/images/products/advanced-electrical-services_mobile.webp")
+					:
+						require("../../assets/images/products/advanced-electrical-services_mobile.jpg")
 				)
 			}
 			{
 				Product(
 					"Cut, Paste, & Copy",
 					"https://cut-paste-copy.github.io/",
-					require("../../assets/images/products/cut-paste-copy_desktop.webp"),
-					require("../../assets/images/products/cut-paste-copy_mobile.webp")
+					isWebpSupported()
+					?
+						require("../../assets/images/products/cut-paste-copy_desktop.webp")
+					:
+						require("../../assets/images/products/cut-paste-copy_desktop.jpg"),
+					isWebpSupported()
+					?
+						require("../../assets/images/products/cut-paste-copy_mobile.webp")
+					:
+						require("../../assets/images/products/cut-paste-copy_mobile.jpg")
 				)
 			}
 		</div>

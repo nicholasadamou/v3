@@ -17,12 +17,12 @@
     "eject": "react-scripts eject",
     "update-dependencies": "npx yarn-check -u",
     "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json",
-    "deploy": "npx yarn build && npx surge build/ nicholasadamou.com"
+    "deploy": "npx surge --project build/ --domain nicholasadamou.com"
   },
   "git": {
-	"scripts": {
-	  "pre-push": "npx yarn deploy"
-	}
+    "scripts": {
+      "pre-push": "npx yarn deploy"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -46,6 +46,7 @@
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react-css-burger": "^0.2.0",
+    "react-image-webp": "^0.7.0",
     "react-router-dom": "^5.1.2",
     "react-scroll": "^1.7.16",
     "styled-components": "^5.0.1",

@@ -23,7 +23,7 @@ jobs:
       # Execute the steps required for deployment
       - run: npx yarn install
       - run: npx yarn build
-      - run: npx surge --project build/ --domain nicholasadamou.com
+      - run: npx yarn deploy
         env:
           CI: true
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
