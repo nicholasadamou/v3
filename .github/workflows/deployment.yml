@@ -14,7 +14,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Installs and configures Node.js, so that way we can execute surge.sh later
+      # Installs and configures Node.js, so that way we can execute surge.sh for deployment
       - uses: actions/checkout@v2
       - name: Use Node.js and Deploy to nicholasadamou.com
         uses: actions/setup-node@v1
