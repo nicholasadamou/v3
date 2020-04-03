@@ -4,11 +4,11 @@ import './index.scss'
 
 import image from '../../assets/images/logos/nicholasadamou_logo.png'
 
-const Logo = (onClick) => (
+const Logo = (handleOnClick) => (
 	<div
 		className="logo"
 		style={{ backgroundImage: `url(${image})`}}
-		onClick={onClick && onClick}
+		onClick={() => handleOnClick()}
 	/>
 );
 

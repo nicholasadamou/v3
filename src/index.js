@@ -4,7 +4,7 @@ import App from './App';
 import './sass/index.scss'
 import * as serviceWorker from './serviceWorker';
 
-import BrowserRouter from 'react-router-dom/BrowserRouter'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
 	<BrowserRouter basename={process.env.PUBLIC_URL}>
