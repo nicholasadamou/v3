@@ -1,13 +1,13 @@
-name: My workflow
+name: Deploy to Surge.sh
 
 on: push
 
 jobs:
-  my-job:
-    name: My job
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to foo-bar.surge.sh
+      - name: Deploy to nicholasadamou.com
         uses: dswistowski/surge-sh-action@v1
         with:
           domain: 'nicholasadamou.com'
