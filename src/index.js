@@ -4,10 +4,12 @@ import App from './App';
 import './sass/index.scss'
 import * as serviceWorker from './serviceWorker';
 
+import BrowserRouter from 'react-router-dom/BrowserRouter'
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+	<BrowserRouter basename={process.env.PUBLIC_URL}>
+    	<App />
+	</BrowserRouter>,
   document.getElementById('root')
 );
 

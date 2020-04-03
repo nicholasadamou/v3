@@ -16,7 +16,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "update-dependencies": "npx yarn-check -u",
-    "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json"
+    "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json",
+    "deploy": "npx yarn build && npx surge public/ nicholasadamou.com"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,10 +37,10 @@
   "devDependencies": {
     "animate.css": "^3.7.2",
     "animate.css-react": "^1.0.0",
-    "bulma": "^0.8.1",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react-css-burger": "^0.2.0",
+    "react-router-dom": "^5.1.2",
     "react-scroll": "^1.7.16",
     "styled-components": "^5.0.1"
   }
