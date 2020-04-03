@@ -61,6 +61,10 @@ const AboutMe = () => (
 			</a> where I met and networked with many great and vastly talented engineers.
 		</p>
 
+		<p>
+			At all three of those companies, I leveraged cutting-edge JavaScript technologies such as React, React Native, Graph QL, Apollo, React Redux, Amazon AWS and more to construct applications driven to excel each company's bottom-line.
+		</p>
+
 		<div
 			className="btn-wrapper"
 		>
