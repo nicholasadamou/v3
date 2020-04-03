@@ -17,7 +17,7 @@
     "eject": "react-scripts eject",
     "update-dependencies": "npx yarn-check -u",
     "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json",
-    "deploy": "npx yarn build && npx surge public/ nicholasadamou.com"
+    "deploy": "npx yarn build && npx surge build/ nicholasadamou.com"
   },
   "eslintConfig": {
     "extends": "react-app"
