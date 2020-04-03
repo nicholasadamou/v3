@@ -54,8 +54,6 @@ class Repo extends React.Component {
 
 				this.setState({
 					repository
-				}, () => {
-					console.log(this.state.repository);
 				})
 			})
 	};
