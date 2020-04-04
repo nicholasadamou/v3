@@ -54,7 +54,7 @@ const Contact = () => (
 			</div>
 			<div className="field is-grouped">
 				<div className="control">
-					<button className="button is-link" type="submit">Submit</button>
+					<button className="button is-link" type="submit">Send Message</button>
 				</div>
 			</div>
 			<input type="hidden" name="_next" value="form-success.html"/>

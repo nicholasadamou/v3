@@ -23,6 +23,10 @@
 
 	@include until($iphone-7) {
 	  width: 90%;
+
+	  .field.is-horizontal {
+		text-align: left;
+	  }
 	}
 
 	.button,
