@@ -8,7 +8,10 @@ import FooterText from "../../components/FooterText/FooterText";
 
 const OpenSource = () => (
 	<section id="open-source">
-		<h2 className="title">Open Source</h2>
+		<h2 className="title">
+			Open Source{' '}
+			<i className="fab fa-git-alt"></i>
+		</h2>
 		<p className="subtitle">
 			I am an{' '}
 			<a

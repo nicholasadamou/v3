@@ -1,29 +1,40 @@
 @import "src/sass/settings/mixins";
 
 .experiment {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 33%;
+  margin: 10px 20px;
 
-  width: 33%;
-  max-width: 33%;
-
-  margin-bottom: 20px;
+  overflow: visible;
 
   @include until($iphone-7) {
-	display: block;
-	flex: none;
+	margin: 20px 0;
+
+	padding: 0 20px;
 
 	width: 100%;
 	max-width: 100%;
   }
 
-  .link {
-	font-size: 1rem;
+  .top {
+	margin-bottom: 10px;
 
-	&:hover {
-	  cursor: pointer;
-	  animation: rainbow 1s linear infinite;
+	.experiment-link {
+	  margin-left: 5px;
+
+	  padding: 5px;
+
+	  background: var(--grey);
+
+	  border-radius: 5px;
+
+	  font-size: 1rem;
+	  color: var(--red);
+	  text-decoration: underline;
+
+	  transition: color 0.25ms ease-in-out;
+
+	  &:hover {
+		color: var(--light-grey);
+	  }
 	}
   }
 

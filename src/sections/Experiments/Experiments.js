@@ -15,21 +15,27 @@ const Experiments = () => (
 				Experiment(
 					"Low Poly Earth",
 					"THREE.js implementation of the Earth using only polygons.",
-					"https://codepen.io/NicholasAdamou/pen/xQKxgN"
+					"https://codepen.io/NicholasAdamou/pen/xQKxgN",
+					"🌎",
+					"earth americas"
 				)
 			}
 			{
 				Experiment(
 					"Star Field",
 					"A multi-layered star-field constructed using ES6 JavaScript.",
-					"https://codepen.io/NicholasAdamou/pen/QZVddm"
+					"https://codepen.io/NicholasAdamou/pen/QZVddm",
+					"🌃",
+					"night with stars"
 				)
 			}
 			{
 				Experiment(
 					"Matrix",
 					"The matrix text effect implemented using ES6 JavaScript.",
-					"https://codepen.io/NicholasAdamou/pen/oaQMZV"
+					"https://codepen.io/NicholasAdamou/pen/oaQMZV",
+					"🖥️",
+					"desktop computer"
 				)
 			}
 		</div>
