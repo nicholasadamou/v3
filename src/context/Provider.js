@@ -2,12 +2,15 @@ import React, { Component } from 'react'
 
 import Context from './Context'
 
+import { isMobile } from "../utilities/utilities";
+
 class Provider extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
 			isNavigationOpened: false,
+			isMobile: isMobile.any(),
 		}
 	}
 

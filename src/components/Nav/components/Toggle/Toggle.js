@@ -21,7 +21,7 @@ const Toggle = (props) => {
 				onClick={props.handleClick}
 				active={isNavigationOpened}
 				color="black"
-				burger="collapse"
+				burger="boring"
 				scale={0.8}
 			/>
 		</Animate>

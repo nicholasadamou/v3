@@ -112,27 +112,30 @@
 .mobile {
   position: absolute;
   right: 0;
-  top: 18px;
+  top: 26px;
 
   width: 32%;
-  min-height: 50px;
 
+  min-height: 50px;
   border-radius: 2px;
+
   border: 2px solid var(--black);
-  border-width: 2px 2px 14px 2px;
-  box-shadow: 1px 1px 20px -5px rgba(var(--black), .5);
+  border-width: 5px 5px 5px 5px;
+
+  box-shadow: 1px 1px 20px -5px rgba(var(--black), 0.5);
 
   &::before {
 	content: "";
 
 	position: absolute;
-	bottom: -10px;
-	left: calc(50% - 3px);
+	bottom: 2px;
+	left: calc(50% - 16px);
 
-	width: 6px;
-	height: 6px;
+	width: 32px;
+	height: 2px;
 
-	background: var(--white);
-	border-radius: 50%;
+	background: var(--black);
+
+	border-radius: 5px;
   }
 }

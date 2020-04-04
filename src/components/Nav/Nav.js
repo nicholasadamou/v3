@@ -41,14 +41,26 @@ class Nav extends React.Component {
 	};
 
 	render() {
-		const { isNavigationOpened } = this.context;
+		const { isNavigationOpened, isMobile } = this.context;
 
 		return (
 			<div ref={node => { this.node = node; }}>
-				<Toggle handleClick={this.handleClick} />
+				{
+					isMobile
+						?
+							<Toggle handleClick={this.handleClick}/>
+						:
+							''
+				}
 				<div
 					id={"navigation-container"}
-					className={isNavigationOpened ? 'opened' : 'closed'}
+					className={
+						isMobile
+							?
+								isNavigationOpened ? 'opened' : 'closed'
+							:
+								'opened'
+					}
 				>
 					{
 						Logo(

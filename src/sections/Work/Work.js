@@ -43,7 +43,7 @@ const Work = () => (
 					?
 						require("../../assets/images/products/cut-paste-copy_mobile.webp")
 					:
-						require("../../assets/images/products/cut-paste-copy_mobile.jpg")
+						require("../../assets/images/products/cut-paste-copy_mobile.png")
 				)
 			}
 		</div>
