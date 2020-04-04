@@ -46,6 +46,22 @@ const Work = () => (
 						require("../../assets/images/products/cut-paste-copy_mobile.png")
 				)
 			}
+			{
+				Product(
+					"Nicholas Adamou Personal Website",
+					"https://nicholasadamou.com/",
+					isWebpSupported()
+						?
+						require("../../assets/images/products/nicholasadamou_desktop.webp")
+						:
+						require("../../assets/images/products/nicholasadamou_desktop.png"),
+					isWebpSupported()
+						?
+						require("../../assets/images/products/nicholasadamou_mobile.webp")
+						:
+						require("../../assets/images/products/nicholasadamou_mobile.png")
+				)
+			}
 		</div>
 		{
 			FooterText(
