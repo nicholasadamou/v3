@@ -32,7 +32,7 @@ class Repo extends React.Component {
 		const { repository } = this.state;
 
 		if (JSON.stringify(repository) !== "{}") {
-			const lastFetchedOn = moment(repository.fetchedOn);
+			const lastFetchedOn = moment(repository.fetched_on);
 			const now = moment(moment(new Date()).format("YYYY-MM-DD"));
 
 			const daysSinceLastFetch = moment.duration(lastFetchedOn.diff(now)).asDays();
@@ -47,7 +47,7 @@ class Repo extends React.Component {
 			.then(data => {
 				const repository = {
 					...data,
-					fetchedOn: moment(new Date()).format("YYYY-MM-DD")
+					fetched_on: moment(new Date()).format("YYYY-MM-DD")
 				};
 
 				localStorage.setItem(`${fullName}`, JSON.stringify(repository));
