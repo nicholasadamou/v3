@@ -55,7 +55,7 @@ const Work = () => {
 						"Nicholas Adamou's Personal Website",
 						"https://nicholasadamou.com/",
 						require('../../assets/images/products/nicholasadamou_desktop.png'),
-						require('../../assets/images/products/nicholasadamou_desktop.png')
+						require('../../assets/images/products/nicholasadamou_mobile.png')
 					)
 				}
 			</div>
