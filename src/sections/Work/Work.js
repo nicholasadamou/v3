@@ -44,12 +44,12 @@ const Work = () => {
 							?
 							require("../../assets/images/products/advanced-electrical-services_desktop.webp")
 							:
-							require("../../assets/images/products/advanced-electrical-services_desktop.jpg"),
+							require("../../assets/images/products/advanced-electrical-services_desktop.png"),
 						isWebpSupported()
 							?
 							require("../../assets/images/products/advanced-electrical-services_mobile.webp")
 							:
-							require("../../assets/images/products/advanced-electrical-services_mobile.jpg")
+							require("../../assets/images/products/advanced-electrical-services_mobile.png")
 					)
 				}
 				{
@@ -60,7 +60,7 @@ const Work = () => {
 							?
 							require("../../assets/images/products/cut-paste-copy_desktop.webp")
 							:
-							require("../../assets/images/products/cut-paste-copy_desktop.jpg"),
+							require("../../assets/images/products/cut-paste-copy_desktop.png"),
 						isWebpSupported()
 							?
 							require("../../assets/images/products/cut-paste-copy_mobile.webp")
