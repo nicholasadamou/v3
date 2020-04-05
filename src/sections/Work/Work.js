@@ -38,24 +38,24 @@ const Work = () => {
 					Product(
 						"Advanced Electrical Services",
 						"https://advanced-electrical-services.netlify.com/",
-						require('../../assets/images/products/advanced-electrical-services_desktop.png'),
-						require('../../assets/images/products/advanced-electrical-services_mobile.png')
+						require('../../assets/images/products/advanced-electrical-services_desktop.webp'),
+						require('../../assets/images/products/advanced-electrical-services_mobile.webp')
 					)
 				}
 				{
 					Product(
 						"Cut, Paste, & Copy",
 						"https://cut-paste-copy.github.io/",
-						require('../../assets/images/products/cut-paste-copy_desktop.png'),
-						require('../../assets/images/products/cut-paste-copy_mobile.png')
+						require('../../assets/images/products/cut-paste-copy_desktop.webp'),
+						require('../../assets/images/products/cut-paste-copy_mobile.webp')
 					)
 				}
 				{
 					Product(
 						"Nicholas Adamou's Personal Website",
 						"https://nicholasadamou.com/",
-						require('../../assets/images/products/nicholasadamou_desktop.png'),
-						require('../../assets/images/products/nicholasadamou_mobile.png')
+						require('../../assets/images/products/nicholasadamou_desktop.webp'),
+						require('../../assets/images/products/nicholasadamou_mobile.webp')
 					)
 				}
 			</div>
