@@ -17,7 +17,7 @@ Personal landing page, powered by [facebook/create-react-app](https://github.com
 ## Description
 
 After many iterations and deployments throughout many providers, I decided to
-optimize my landing page by using [facebook/create-react-app](https://github.com/facebok/create-react-app) 
+optimize my landing page by using [facebook/create-react-app](https://github.com/facebok/create-react-app)
 and host it statically on [surge.sh](http://surge.sh).
 
 ## Development

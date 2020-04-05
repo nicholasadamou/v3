@@ -13,6 +13,12 @@
   margin-top: 40px;
   margin-bottom: 20px;
 
+  &.is-emphasized {
+	animation: tada;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+  }
+
   @include until($iphone-7) {
   	flex: 1 1 100%;
 

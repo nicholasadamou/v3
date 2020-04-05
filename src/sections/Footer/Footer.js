@@ -5,6 +5,7 @@ import moment from 'moment'
 import './index.scss'
 
 import Logo from "../../components/Logo/Logo";
+import Animate from "animate.css-react";
 
 const Footer = () => (
 	<footer>
@@ -65,7 +66,7 @@ const Footer = () => (
 
 		<p>
 			Handcrafted with{' '}
-			<i className="fas fa-heart" style={{ color: 'red' }}/>
+			<i className="animated heartBeat infinite fas fa-heart" style={{ color: 'red' }}/>
 			{' '}by myself. Copyright &copy; {moment(Date.now()).year()}.
 		</p>
 		<p>

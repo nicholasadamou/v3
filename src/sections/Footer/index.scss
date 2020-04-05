@@ -57,5 +57,13 @@ footer {
 	@include until($iphone-5) {
 	  font-size: 0.8rem;
 	}
+
+	& > div {
+	  display: inline;
+
+	  #heart {
+		animation-iteration-count: infinite;
+	  }
+	}
   }
 }
