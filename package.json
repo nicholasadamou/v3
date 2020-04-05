@@ -50,7 +50,6 @@
     "carbon-components": "^10.10.3",
     "carbon-components-react": "^7.10.3",
     "carbon-icons": "^7.0.7",
-    "git-scripts": "^0.4.3",
     "husky": "^4.2.3",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
