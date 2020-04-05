@@ -70,7 +70,7 @@ const Work = () => {
 				}
 				{
 					Product(
-						"Nicholas Adamou Personal Website",
+						"Nicholas Adamou's Personal Website",
 						"https://nicholasadamou.com/",
 						isWebpSupported()
 							?
