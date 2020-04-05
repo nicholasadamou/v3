@@ -32,12 +32,9 @@ class Repo extends React.Component {
 		const { repository } = this.state;
 
 		if (JSON.stringify(repository) !== "{}") {
-			const lastFetchedOn = moment(repository.fetched_on);
 			const now = moment(moment(new Date()).format("YYYY-MM-DD"));
 
-			const daysSinceLastFetch = moment.duration(lastFetchedOn.diff(now)).asDays();
-
-			if (daysSinceLastFetch < 1) return;
+			if (repository.fetched_on === now.format("YYYY-MM-DD")) return;
 		}
 
 		const fullName = this.props.link.split('/').slice(-2).join('/');
