@@ -21,11 +21,6 @@
     "deploy": "npx surge --project build/ --domain nicholasadamou.com",
     "test": "exit 0"
   },
-  "git": {
-    "scripts": {
-      "pre-push": "npx yarn build && npx yarn postbuild && npx yarn deploy"
-    }
-  },
   "husky": {
     "hooks": {
       "pre-push": "npx yarn build && npx yarn postbuild && npx yarn deploy"
