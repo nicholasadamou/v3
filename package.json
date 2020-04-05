@@ -14,6 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "purgecss --css build/static/css/*.css --content build/static/index.html build/static/js/*.js --output build/static/css",
     "eject": "react-scripts eject",
     "update-dependencies": "npx yarn-check -u",
     "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json",
@@ -41,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "@material-ui/core": "^4.9.9",
     "animate.css": "^3.7.2",
     "animate.css-react": "^1.0.0",
