@@ -2,7 +2,11 @@ import React from 'react';
 
 import './index.scss'
 
-import moment from "moment";
+import moment from "moment"
+
+import { SkeletonText } from 'carbon-components-react'
+
+import Loading from "../../../../components/Loading/Loading"
 
 // Round the number like "3.5k" https://stackoverflow.com/a/9461657
 const round = num => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
@@ -16,6 +20,7 @@ class Repo extends React.Component {
 		const fullName = link.split('/').slice(-2).join('/');
 
 		this.state = {
+			loading: true,
 			repository: localStorage.getItem(`${fullName}`)
 				?
 					JSON.parse(localStorage.getItem(`${fullName}`))
@@ -34,7 +39,13 @@ class Repo extends React.Component {
 		if (JSON.stringify(repository) !== "{}") {
 			const now = moment(moment(new Date()).format("YYYY-MM-DD"));
 
-			if (repository.fetched_on === now.format("YYYY-MM-DD")) return;
+			if (repository.fetched_on === now.format("YYYY-MM-DD")) {
+				this.setState({
+					loading: false
+				});
+				
+				return;
+			};
 		}
 
 		const fullName = this.props.link.split('/').slice(-2).join('/');
@@ -50,7 +61,8 @@ class Repo extends React.Component {
 				localStorage.setItem(`${fullName}`, JSON.stringify(repository));
 
 				this.setState({
-					repository
+					repository,
+					loading: false
 				})
 			})
 	};
@@ -58,38 +70,39 @@ class Repo extends React.Component {
 	render() {
 		const { link, emoji, label } = this.props;
 
-		const { repository } = this.state;
+		const { repository, loading } = this.state;
 
-		const { name, description, stargazers_count, fork_count } = repository;
+		const { name, description, stargazers_count, forks_count } = repository;
 
 		return (
 			<article className="repo">
-
 				<div className="top">
 					<div className="left">
-					<span
-						className="emoji"
-						role="img"
-						aria-label={label}
-					>
-						{emoji}
-					</span>
-						<a
-							href={link}
-							target="_blank"
-							aria-hidden="true"
-							rel="noopener noreferrer"
+						<span
+							className="emoji"
+							role="img"
+							aria-label={label}
 						>
-						<span className="repo-title">
-							{
-								name
-									?
-										name.toLowerCase()
-									:
-										'Loading'
-							}
+							{emoji}
 						</span>
-						</a>
+						{
+							loading
+								?
+									<span className="repo-title">
+										<Loading />
+									</span>
+								:
+									<a
+										href={link}
+										target="_blank"
+										aria-hidden="true"
+										rel="noopener noreferrer"
+									>
+										<span className="repo-title">
+											{name.toLowerCase()}
+										</span>
+									</a>
+						}
 					</div>
 					<div className="right">
 						<a
@@ -107,11 +120,13 @@ class Repo extends React.Component {
 						>
 							<i className="fas fa-star"></i>
 							{
-								stargazers_count
+								loading
 									?
-										` ${round(stargazers_count)}`
+										<>
+										{' '}<Loading />
+										</>
 									:
-										` 0`
+										` ${round(stargazers_count)}`
 							}
 						</span>
 						</a>
@@ -130,11 +145,13 @@ class Repo extends React.Component {
 						>
 							<i className="fas fa-code-branch"></i>
 							{
-								fork_count
+								loading
 									?
-										` ${round(fork_count)}`
+										<>
+											{' '}<Loading />
+										</>
 									:
-										` 0`
+										` ${round(forks_count)}`
 							}
 						</span>
 						</a>
@@ -143,11 +160,16 @@ class Repo extends React.Component {
 				<div className="bottom">
 				<span className="desc">
 					{
-						description
+						loading
 							?
-								description
+								<SkeletonText
+									heading={false}
+									lineCount={2}
+									paragraph
+									width="100%"
+								/>
 							:
-								'Loading repository, please wait.'
+								description
 					}
 				</span>
 				</div>

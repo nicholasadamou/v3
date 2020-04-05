@@ -49,6 +49,7 @@
 
 	.repo-title {
 	  color: var(--red);
+	  font-size: 15px;
 	  text-decoration: underline;
 
 	  transition: color 0.25ms ease-in-out;
@@ -73,5 +74,13 @@
 
   .desc {
 	font-size: var(--copy-size);
+
+	div {
+	  margin-top: 20px;
+
+	  .bx--skeleton__text {
+		height: 0.75rem;
+	  }
+	}
   }
 }

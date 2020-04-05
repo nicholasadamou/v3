@@ -1,10 +1,10 @@
 @import "src/sass/settings/mixins";
 
 footer {
-  display: grid;
+  display: grid !important;
   place-content: center;
 
-  margin: 5rem auto 5rem auto;
+  margin: 7rem 0 !important;
 
   text-align: center;
 
