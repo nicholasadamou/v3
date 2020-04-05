@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
 import { isWebpSupported } from 'react-image-webp/dist/utils';
 

@@ -23,10 +23,7 @@ const OpenSource = () => (
 			>
 				avid open-sourcer
 			</a>
-			.{' '}
-		</p>
-		<p className="subtitle" style={{ marginTop: -18 }}>
-			I have{' '}
+			{' '}and I have{' '}
 			<a
 				href="https://github.com/nicholasadamou"
 				target="_blank"
