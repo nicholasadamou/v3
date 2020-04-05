@@ -23,7 +23,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npx yarn build && npx yarn postbuild && npx yarn deploy"
+      "pre-push": "npx yarn build && npx yarn deploy"
     }
   },
   "eslintConfig": {

@@ -23,7 +23,6 @@ jobs:
       # Execute the steps required for deployment
       - run: npx yarn install
       - run: npx yarn build
-      - run: npx yarn postbuild
       - run: npx yarn deploy
         env:
           CI: true
