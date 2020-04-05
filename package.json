@@ -26,6 +26,11 @@
       "pre-push": "npx yarn build && npx yarn postbuild && npx yarn deploy"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npx yarn build && npx yarn postbuild && npx yarn deploy"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -51,6 +56,7 @@
     "carbon-components-react": "^7.10.3",
     "carbon-icons": "^7.0.7",
     "git-scripts": "^0.4.3",
+    "husky": "^4.2.3",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react-css-burger": "^0.2.0",
