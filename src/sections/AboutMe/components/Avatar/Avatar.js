@@ -1,14 +1,6 @@
 import styled from 'styled-components'
 
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-
-let image = null;
-
-isWebpSupported()
-	?
-		image = require("../../../../assets/images/avatar.webp")
-	:
-		image = require("../../../../assets/images/avatar.jpg");
+import image from '../../../../assets/images/avatar'
 
 const Avatar = styled.div`
 	position: relative;

@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react';
 
-import { isWebpSupported } from 'react-image-webp/dist/utils';
-
 import Product from './components/Product/Product'
 
 import FooterText from "../../components/FooterText/FooterText";
@@ -40,48 +38,24 @@ const Work = () => {
 					Product(
 						"Advanced Electrical Services",
 						"https://advanced-electrical-services.netlify.com/",
-						isWebpSupported()
-							?
-							require("../../assets/images/products/advanced-electrical-services_desktop.webp")
-							:
-							require("../../assets/images/products/advanced-electrical-services_desktop.png"),
-						isWebpSupported()
-							?
-							require("../../assets/images/products/advanced-electrical-services_mobile.webp")
-							:
-							require("../../assets/images/products/advanced-electrical-services_mobile.png")
+						require('../../assets/images/products/advanced-electrical-services_desktop.png'),
+						require('../../assets/images/products/advanced-electrical-services_mobile.png')
 					)
 				}
 				{
 					Product(
 						"Cut, Paste, & Copy",
 						"https://cut-paste-copy.github.io/",
-						isWebpSupported()
-							?
-							require("../../assets/images/products/cut-paste-copy_desktop.webp")
-							:
-							require("../../assets/images/products/cut-paste-copy_desktop.png"),
-						isWebpSupported()
-							?
-							require("../../assets/images/products/cut-paste-copy_mobile.webp")
-							:
-							require("../../assets/images/products/cut-paste-copy_mobile.png")
+						require('../../assets/images/products/cut-paste-copy_desktop.png'),
+						require('../../assets/images/products/cut-paste-copy_mobile.png')
 					)
 				}
 				{
 					Product(
 						"Nicholas Adamou's Personal Website",
 						"https://nicholasadamou.com/",
-						isWebpSupported()
-							?
-							require("../../assets/images/products/nicholasadamou_desktop.webp")
-							:
-							require("../../assets/images/products/nicholasadamou_desktop.png"),
-						isWebpSupported()
-							?
-							require("../../assets/images/products/nicholasadamou_mobile.webp")
-							:
-							require("../../assets/images/products/nicholasadamou_mobile.png")
+						require('../../assets/images/products/nicholasadamou_desktop.png'),
+						require('../../assets/images/products/nicholasadamou_desktop.png')
 					)
 				}
 			</div>
