@@ -75,10 +75,10 @@ class Nav extends React.Component {
 							About Me
 						</Link>
 						<Link
-							to="work"
+							to="websites"
 							smooth={true}
 						>
-							Work
+							Websites
 						</Link>
 						<Link
 							to="open-source"

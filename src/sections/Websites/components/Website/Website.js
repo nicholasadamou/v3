@@ -2,8 +2,8 @@ import React from 'react';
 
 import './index.scss'
 
-const Product = (title, link, desktop, mobile) => (
-	<div className="product">
+const Website = (title, link, desktop, mobile) => (
+	<div className="website">
 		<a
 			href={link}
 			target="_blank"
@@ -29,4 +29,4 @@ const Product = (title, link, desktop, mobile) => (
 	</div>
 );
 
-export default Product;
+export default Website;

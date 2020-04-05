@@ -6,7 +6,7 @@ import Nav from './components/Nav/Nav'
 import Wrapper from "./components/Wrapper/Wrapper"
 
 import AboutMe from "./sections/AboutMe/AboutMe"
-import Work from "./sections/Work/Work"
+import Websites from "./sections/Websites/Websites"
 import OpenSource from "./sections/OpenSource/OpenSource"
 import Experiments from "./sections/Experiments/Experiments"
 import Papers from "./sections/Papers/Papers"
@@ -21,7 +21,7 @@ function App() {
 		<Wrapper>
 			<AboutMe />
 			<hr />
-			<Work />
+			<Websites />
 			<hr />
 			<OpenSource />
 			<hr />
