@@ -14,7 +14,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "purgecss --css build/static/css/*.css --content build/static/index.html build/static/js/*.js --output build/static/css",
     "eject": "react-scripts eject",
     "update-dependencies": "npx yarn-check -u",
     "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json",
