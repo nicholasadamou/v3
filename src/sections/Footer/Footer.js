@@ -5,7 +5,6 @@ import moment from 'moment'
 import './index.scss'
 
 import Logo from "../../components/Logo/Logo";
-import Animate from "animate.css-react";
 
 const Footer = () => (
 	<footer>
