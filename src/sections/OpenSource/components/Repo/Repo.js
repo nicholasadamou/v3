@@ -6,7 +6,7 @@ import moment from "moment"
 
 import { SkeletonText } from 'carbon-components-react'
 
-import Loading from "../../../../components/Loading/Loading"
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 // Round the number like "3.5k" https://stackoverflow.com/a/9461657
 const round = num => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
@@ -43,7 +43,7 @@ class Repo extends React.Component {
 				this.setState({
 					loading: false
 				});
-				
+
 				return;
 			};
 		}
@@ -89,7 +89,7 @@ class Repo extends React.Component {
 							loading
 								?
 									<span className="repo-title">
-										<Loading />
+										<CircularProgress />
 									</span>
 								:
 									<a
@@ -123,7 +123,7 @@ class Repo extends React.Component {
 								loading
 									?
 										<>
-										{' '}<Loading />
+										{' '}<CircularProgress />
 										</>
 									:
 										` ${round(stargazers_count)}`
@@ -148,7 +148,7 @@ class Repo extends React.Component {
 								loading
 									?
 										<>
-											{' '}<Loading />
+											{' '}<CircularProgress />
 										</>
 									:
 										` ${round(forks_count)}`

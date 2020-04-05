@@ -35,6 +35,12 @@
 
 	font-size: 1rem;
 
+	.MuiCircularProgress-root {
+	  width: 10px !important;
+	  height: 10px !important;
+	  color: var(--black);
+	}
+
 	.repo-title,
 	.stars, .forks {
 	  margin-left: 10px;
