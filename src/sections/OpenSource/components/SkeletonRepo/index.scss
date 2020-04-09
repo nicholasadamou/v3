@@ -1,0 +1,92 @@
+@import "src/sass/settings/mixins";
+
+.repo {
+  margin: 10px 20px;
+
+  overflow: visible;
+
+  @include until($iphone-7) {
+	width: 100%;
+	max-width: 100%;
+
+	margin: 20px 0;
+	padding: 0 20px;
+  }
+
+  .emoji {
+	margin-right: 0;
+  }
+
+  a {
+	text-decoration: none;
+	color: var(--black);
+
+	&:hover {
+	  cursor: pointer;
+	  animation: rainbow 1s linear infinite;
+	}
+  }
+
+  .top {
+	display: flex;
+	flex-direction: row;
+
+	margin-bottom: 10px;
+
+	font-size: 1rem;
+
+	.MuiCircularProgress-root {
+	  width: 10px !important;
+	  height: 10px !important;
+	  color: var(--black);
+	}
+
+	.repo-title,
+	.stars, .forks {
+	  margin-left: 10px;
+
+	  padding: 5px;
+
+	  background: var(--grey);
+	  border-radius: 5px;
+
+	  color: var(--black);
+	}
+
+	.repo-title {
+	  color: var(--red);
+	  font-size: 15px;
+	  text-decoration: underline;
+
+	  transition: color 0.25ms ease-in-out;
+
+	  &:hover {
+		color: var(--light-grey);
+	  }
+	}
+
+	.stars {
+	  color: var(--star);
+	}
+
+	.fas {
+	  transition: all 0.25s ease-in-out;
+
+	  &:hover {
+		transform: scale(1.25);
+	  }
+	}
+  }
+
+  .desc {
+	font-size: var(--copy-size);
+
+	div {
+	  margin-top: 20px;
+
+	  .bx--skeleton__text {
+		height: 0.75rem;
+	  }
+	}
+  }
+}

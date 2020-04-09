@@ -2,12 +2,11 @@ import React from 'react';
 
 import './index.scss'
 
-// Round the number like "3.5k" https://stackoverflow.com/a/9461657
-const round = num => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
+import { SkeletonText } from 'carbon-components-react'
 
-const Repo = (repository, emoji, label ) => {
-	const { name, description, link, stars, forks } = repository;
+import CircularProgress from "@material-ui/core/CircularProgress";
 
+const SkeletonRepo = (emoji, label) => {
 	return (
 		<article className="repo">
 			<div className="top">
@@ -19,23 +18,17 @@ const Repo = (repository, emoji, label ) => {
 					>
 						{emoji}
 					</span>
-					<a
-						href={link}
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-					>
-						<span className="repo-title">
-							{name.toLowerCase()}
-						</span>
-					</a>
+					<span className="repo-title">
+						<CircularProgress />
+					</span>
 				</div>
 				<div className="right">
+					{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 					<a
-						href={link}
+						href="#"
 						target="_blank"
 						aria-hidden="true"
-						aria-label={`${name} github stars`}
+						aria-label={`github stars`}
 						title="star"
 						rel="noopener noreferrer"
 					>
@@ -45,14 +38,17 @@ const Repo = (repository, emoji, label ) => {
 							aria-label="star"
 						>
 							<i className="fas fa-star"></i>
-							{' '}{round(stars)}
+								<>
+									{' '}<CircularProgress />
+								</>
 						</span>
 					</a>
+					{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 					<a
-						href={`${link}/fork`}
+						href="#"
 						target="_blank"
 						aria-hidden="true"
-						aria-label={`fork ${name} on github`}
+						aria-label={`fork on github`}
 						title="fork"
 						rel="noopener noreferrer"
 					>
@@ -62,18 +58,25 @@ const Repo = (repository, emoji, label ) => {
 							aria-label="branch"
 						>
 							<i className="fas fa-code-branch"></i>
-							{' '}{round(forks)}
+								<>
+									{' '}<CircularProgress />
+								</>
 						</span>
 					</a>
 				</div>
 			</div>
 			<div className="bottom">
 				<span className="desc">
-					{description}
+					<SkeletonText
+						heading={false}
+						lineCount={2}
+						paragraph
+						width="100%"
+					/>
 				</span>
 			</div>
 		</article>
 	)
 }
 
-export default Repo
+export default SkeletonRepo
