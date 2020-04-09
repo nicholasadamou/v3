@@ -4,8 +4,6 @@ import { isWebpSupported } from 'react-image-webp/dist/utils';
 
 import Website from './components/Website/Website'
 
-import FooterText from "../../components/FooterText/FooterText";
-
 import './index.scss'
 
 const emphasize = () => {
@@ -85,14 +83,6 @@ const Websites = () => {
 					)
 				}
 			</div>
-			{
-				FooterText(
-					"More can be found on my ",
-					"LinkedIn",
-					"https://linkedin.com/in/nicholas-adamou/",
-					"linkedin"
-				)
-			}
 		</section>
 	)
 };
