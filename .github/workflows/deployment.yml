@@ -23,9 +23,10 @@ jobs:
       # Execute the steps required for deployment
       - run: npx yarn install
       - run: npx yarn build
+        env:
+          REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
       - run: npx yarn deploy
         env:
           CI: true
           SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
           SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-          REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
