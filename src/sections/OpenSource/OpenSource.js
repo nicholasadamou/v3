@@ -50,8 +50,6 @@ class OpenSource extends React.Component {
 			this.setState({
 				loading: false,
 				repositories
-			}, () => {
-				console.log(repositories)
 			})
 		})
 	}
