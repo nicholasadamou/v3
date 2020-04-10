@@ -17,14 +17,17 @@
 			transform: scale(1.1);
 		}
 
+		&:last-child > img {
+			margin-bottom: 0;
+		}
+
 		img {
 			width: 70%;
 
 			@include until($iphone-7) {
 				display: block;
 
-				margin: 0 auto;
-				margin-bottom: 40px;
+				margin: 0 auto 65px;
 
 				width: 50%;
 			}
