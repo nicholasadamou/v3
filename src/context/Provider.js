@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 
 import Context from './Context'
 
-import { isMobile } from "../utilities/utilities";
+import { isMobile } from "../utilities/utilities"
 
 class Provider extends Component {
 	constructor(props) {
-		super(props);
+		super(props)
 
 		this.state = {
 			isNavigationOpened: false,
@@ -27,7 +27,7 @@ class Provider extends Component {
 	};
 
 	render() {
-		const { children } = this.props;
+		const { children } = this.props
 
 		return (
 			<Context.Provider

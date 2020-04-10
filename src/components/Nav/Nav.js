@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import { Link, animateScroll as scroll } from "react-scroll"
 
@@ -7,13 +7,13 @@ import Toggle from './components/Toggle/Toggle'
 import Logo from '../Logo/Logo'
 
 import './index.scss'
-import Context from "../../context/Context";
+import Context from "../../context/Context"
 
 class Nav extends React.Component {
-	static contextType = Context;
+	static contextType = Context
 
 	constructor(props) {
-		super(props);
+		super(props)
 
 		this.state = {}
 	}
@@ -22,9 +22,9 @@ class Nav extends React.Component {
 		const { isNavigationOpened, toggleNavigation } = this.context;
 
 		if (!isNavigationOpened) {
-			document.addEventListener('click', this.handleOutSideClick, false);
+			document.addEventListener('click', this.handleOutSideClick, false)
 		} else {
-			document.removeEventListener('click', this.handleOutSideClick, false);
+			document.removeEventListener('click', this.handleOutSideClick, false)
 		}
 
 		toggleNavigation()
@@ -73,6 +73,12 @@ class Nav extends React.Component {
 							smooth={true}
 						>
 							About Me
+						</Link>
+						<Link
+							to="internships"
+							smooth={true}
+						>
+							Internships
 						</Link>
 						<Link
 							to="websites"

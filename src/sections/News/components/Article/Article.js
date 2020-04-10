@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import './index.scss'
 
@@ -26,6 +26,6 @@ const Article = (title, desc, link) => (
 			{desc}
 		</p>
 	</article>
-);
+)
 
 export default Article

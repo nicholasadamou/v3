@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import { isWebpSupported } from 'react-image-webp/dist/utils';
+import { isWebpSupported } from 'react-image-webp/dist/utils'
 
 import Website from './components/Website/Website'
 
@@ -17,7 +17,7 @@ const emphasize = () => {
 
 		websites[i].classList.remove('is-emphasized')
 	}
-};
+}
 
 const Websites = () => {
 	useEffect(
@@ -85,6 +85,6 @@ const Websites = () => {
 			</div>
 		</section>
 	)
-};
+}
 
 export default Websites;

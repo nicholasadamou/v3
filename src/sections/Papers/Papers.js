@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import Paper from "./components/Paper/Paper";
+import Paper from "./components/Paper/Paper"
 
 import './index.scss'
 
@@ -33,6 +33,6 @@ const Papers = () => (
 			}
 		</div>
 	</section>
-);
+)
 
 export default Papers

@@ -9,7 +9,7 @@
   margin: 2rem 1rem 2rem;
 
   @include until($iphone-7) {
-	display: block;
-	margin: 0;
+		display: block;
+		margin: 0;
   }
 }

@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'
+
+import './index.scss'
 
 import Experiment from './components/Experiment/Experiment'
 
-import './index.scss'
-import FooterText from "../../components/FooterText/FooterText";
+import FooterText from "../../components/FooterText/FooterText"
 
 const Experiments = () => (
 	<section id="experiments">
@@ -49,6 +50,6 @@ const Experiments = () => (
 			)
 		}
 	</section>
-);
+)
 
 export default Experiments

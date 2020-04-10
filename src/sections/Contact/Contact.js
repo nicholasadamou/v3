@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 import './index.scss'
 
@@ -33,11 +33,11 @@ const Contact = () => (
 				<label className="field-label" htmlFor="email">Email</label>
 				<div className="control">
 					<input
-							className="input"
-						   type="email"
-						   name="email"
-						   placeholder="Your email"
-						   aria-label="email"
+						className="input"
+						type="email"
+						name="email"
+						placeholder="Your email"
+						aria-label="email"
 					/>
 				</div>
 			</div>
@@ -65,6 +65,6 @@ const Contact = () => (
 			/>
 		</form>
 	</section>
-);
+)
 
 export default Contact

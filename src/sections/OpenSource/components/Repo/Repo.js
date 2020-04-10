@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 import './index.scss'
 
 // Round the number like "3.5k" https://stackoverflow.com/a/9461657
-const round = num => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
+const round = num => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num)
 
 const Repo = (repository, emoji, label ) => {
 	const { name, description, link, stars, forks } = repository;

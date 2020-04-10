@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import Article from "./components/Article/Article";
+import Article from "./components/Article/Article"
 
 import './index.scss'
 
@@ -19,6 +19,6 @@ const News = () => (
 			}
 		</div>
 	</section>
-);
+)
 
 export default News

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import Repo from "./components/Repo/Repo";
-import SkeletonRepo from "./components/SkeletonRepo/SkeletonRepo";
+import Repo from "./components/Repo/Repo"
+import SkeletonRepo from "./components/SkeletonRepo/SkeletonRepo"
 
 import './index.scss'
 
-import FooterText from "../../components/FooterText/FooterText";
+import FooterText from "../../components/FooterText/FooterText"
 
 import GitHub from 'github-api'
 
@@ -16,7 +16,7 @@ const gh = new GitHub({
 
 class OpenSource extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
 
 		this.state = {
 			loading: true,

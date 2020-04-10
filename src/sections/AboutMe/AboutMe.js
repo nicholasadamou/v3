@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import Avatar from './components/Avatar/Avatar'
 
@@ -19,7 +19,7 @@ const AboutMe = () => (
 			I am currently a Computer Science student at{' '}
 			<a
 				className="cornell"
-			   	href="https://www.cornellcollege.edu/"
+				href="https://www.cornellcollege.edu/"
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
@@ -101,6 +101,6 @@ const AboutMe = () => (
 			</a>
 		</div>
 	</section>
-);
+)
 
 export default AboutMe

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import './index.scss'
 
@@ -25,6 +25,6 @@ const Experiment = (title, desc, link, emoji, label) => (
 			{desc}
 		</p>
 	</div>
-);
+)
 
 export default Experiment

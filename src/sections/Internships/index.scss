@@ -1,0 +1,39 @@
+@import "src/sass/settings/mixins";
+
+#internships {
+	padding: 0 5px;
+
+	.internships {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		place-items: center;
+
+		margin: 2rem 1rem 2rem;
+
+	a {
+		transition: all 0.25s ease-in-out;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		img {
+			width: 70%;
+
+			@include until($iphone-7) {
+				display: block;
+
+				margin: 0 auto;
+				margin-bottom: 40px;
+
+				width: 50%;
+			}
+		}
+	}
+
+		@include until($iphone-7) {
+			display: block;
+			margin: 0;
+		}
+	}
+}

@@ -1,14 +1,14 @@
-import React from "react";
+import React from "react"
 
-import Animate from "animate.css-react";
-import Burger from "react-css-burger";
+import Animate from "animate.css-react"
+import Burger from "react-css-burger"
 
 import Context from '../../../../context/Context'
 
 import './index.scss'
 
 const Toggle = (props) => {
-	const { isNavigationOpened } = React.useContext(Context);
+	const { isNavigationOpened } = React.useContext(Context)
 
 	return (
 		<Animate
@@ -26,6 +26,6 @@ const Toggle = (props) => {
 			/>
 		</Animate>
 	)
-};
+}
 
 export default Toggle

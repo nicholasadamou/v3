@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import './index.scss'
 
@@ -15,6 +15,6 @@ const FooterText = (content, linkBody, link, linkClassName) => (
 			{linkBody}
 		</a>
 	</p>
-);
+)
 
-export default FooterText;
+export default FooterText

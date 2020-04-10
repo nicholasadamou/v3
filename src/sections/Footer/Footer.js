@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"
 
 import moment from 'moment'
 
 import './index.scss'
 
-import Logo from "../../components/Logo/Logo";
+import Logo from "../../components/Logo/Logo"
 
 const Footer = () => (
 	<footer>
@@ -104,6 +104,6 @@ const Footer = () => (
 			.
 		</p>
 	</footer>
-);
+)
 
 export default Footer
