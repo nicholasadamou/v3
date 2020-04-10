@@ -15,7 +15,7 @@ const Internships = () => (
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
-				title="IBM logo"
+				title="IBM"
 			>
 				<img
 					src={
