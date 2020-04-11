@@ -2,10 +2,11 @@ import React from "react";
 
 import "./index.scss";
 
-import Experience from "./components/Experience/Experience";
-import Review from "./components/Review/Review";
-import SkeletonProject from "./components/SkeletonProject/SkeletonProject";
-import Project from "./components/Project/Project";
+import Awards from "../../components/Awards/Awards";
+import Experience from "../../components/Experience/Experience";
+import Review from "../../components/Review/Review";
+import Project from "../../components/Project/Project";
+import SkeletonProject from "../../components/SkeletonProject/SkeletonProject";
 import FooterText from "../../components/FooterText/FooterText";
 
 import GitHub from "github-api";
@@ -177,7 +178,30 @@ class Internships extends React.Component {
         </div>
 
         <h2 className="title" style={{ fontSize: "1.5rem" }}>
-          What Others are Sayin' About Me
+          Awards and Recognition{" "}
+          <span role="img" aria-label="trophy">
+            🏆
+          </span>
+        </h2>
+        <p className="subtitle" style={{ fontSize: "1.1rem" }}>
+          Some awards that I have received while I was an intern.
+        </p>
+
+        <div className="awards">
+          {Awards(
+            "https://media-exp1.licdn.com/dms/image/C4E0BAQGnYJiWaENTZA/company-logo_100_100/0?e=1594857600&v=beta&t=FZQRHFvZPD4nobNJtCL1WL2cwahwJ3it9m9izzr25GY",
+            "IBM",
+            () => (
+              <>
+                ➤ <strong>2019 HackCIO Project Winner</strong> voted{" "}
+                <em>Most Likely to be Used by IBM</em>
+              </>
+            )
+          )}
+        </div>
+
+        <h2 className="title" style={{ fontSize: "1.5rem" }}>
+          What My Co-Workers are Sayin'
         </h2>
         <p className="subtitle" style={{ fontSize: "1.1rem" }}>
           Many people who I have worked with seem to think that I am awesome, I

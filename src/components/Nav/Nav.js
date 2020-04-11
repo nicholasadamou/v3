@@ -61,6 +61,9 @@ class Nav extends React.Component {
             <Link to="top" smooth={true}>
               About Me
             </Link>
+            <Link to="education" smooth={true}>
+              Education
+            </Link>
             <Link to="internships" smooth={true}>
               Internships
             </Link>
