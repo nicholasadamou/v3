@@ -119,7 +119,7 @@ class Internships extends React.Component {
 					className="subtitle"
 					style={{ fontSize: '1.1rem' }}
 				>
-					Various projects that I completed as an intern at these companies.
+					Various projects that I've completed as an intern at these companies.
 				</p>
 
 				<div className="projects">
