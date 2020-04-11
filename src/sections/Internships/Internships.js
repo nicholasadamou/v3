@@ -164,7 +164,7 @@ class Internships extends React.Component {
 					{
 						Review(
 							'Stephen Alt',
-							'CIO SWE Intern, IBM',
+							'Software Developer Intern, IBM',
 							"Nick is a YOUNG GOD on the REACT",
 							require('../../assets/images/reviewers/stephen.jpg')
 						)
