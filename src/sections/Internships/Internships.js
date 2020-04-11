@@ -173,7 +173,7 @@ class Internships extends React.Component {
 
 				{
 					FooterText(
-						"Read more about them on my ",
+						"Read more about my internships on my ",
 						"LinkedIn",
 						"https://linkedin.com/in/nicholas-adamou/",
 						"linkedin"
