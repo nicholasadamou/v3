@@ -44,6 +44,10 @@ footer {
           color: var(--linkedin);
         }
 
+        &.instagram {
+          color: var(--instagram);
+        }
+
         &:hover {
           -webkit-transform: scale(1.2);
           transform: scale(1.2);

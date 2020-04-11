@@ -3,7 +3,7 @@
 #about-me {
   text-align: center;
 
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 
   @include until($iphone-7) {
     width: 100%;
@@ -136,14 +136,23 @@
   }
 
   .btn-wrapper {
-    margin-top: 1.3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    place-items: center;
+
+    margin: 0 100px;
+
+    @include until($iphone-7) {
+      grid-template-columns: 1fr;
+
+      margin: 0 20px;
+    }
 
     .btn {
       display: inline-block;
 
-      margin-right: 20px;
-
-      width: 200px;
+      width: 100%;
       height: 50px;
 
       text-align: center;
@@ -158,14 +167,8 @@
 
       transition: all 150ms ease-in-out;
 
-      &:last-child {
-        margin-right: 0;
-      }
-
-      @include until($iphone-7) {
-        width: 90%;
-
-        margin: 10px auto;
+      @include until($ipad) {
+        width: 100%;
       }
     }
 
@@ -195,6 +198,16 @@
 
       &:hover {
         background-color: var(--linkedin);
+        color: var(--white);
+      }
+    }
+
+    #instagram {
+      border-color: var(--instagram);
+      color: var(--instagram);
+
+      &:hover {
+        background-color: var(--instagram);
         color: var(--white);
       }
     }

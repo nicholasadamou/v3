@@ -106,6 +106,16 @@ const AboutMe = () => (
       >
         Follow Me on <i className="fab fa-twitter" />
       </a>
+      <a
+        className="btn"
+        href="https://www.instagram.com/nicholasadamou/"
+        target="_blank"
+        aria-hidden="true"
+        rel="noopener noreferrer"
+        id="instagram"
+      >
+        Follow Me on <i className="fab fa-instagram" />
+      </a>
     </div>
   </section>
 );

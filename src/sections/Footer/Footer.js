@@ -60,6 +60,18 @@ const Footer = () => (
             <i className="fab fa-twitter" />
           </li>
         </a>
+        <a
+          href="https://instagram.com/nicholasadamou"
+          target="_blank"
+          aria-hidden="true"
+          aria-label="Instagram"
+          title="Instagram"
+          rel="noopener noreferrer"
+        >
+          <li className="instagram">
+            <i className="fab fa-instagram" />
+          </li>
+        </a>
       </ul>
     </div>
 
