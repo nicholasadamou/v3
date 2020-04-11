@@ -1,7 +1,7 @@
 @import "src/sass/settings/mixins";
 
 #internships {
-	padding: 0 5px;
+	padding: 0 25px;
 
 	.internships {
 		display: grid;
@@ -10,32 +10,47 @@
 
 		margin: 2rem 1rem 2rem;
 
-	a {
-		transition: all 0.25s ease-in-out;
-
-		&:hover {
-			transform: scale(1.1);
+		@include until($iphone-7) {
+			display: block;
+			margin: 0;
 		}
 
-		&:last-child > img {
-			margin-bottom: 0;
-		}
+		a {
+			transition: all 0.25s ease-in-out;
 
-		img {
-			width: 70%;
+			&:hover {
+				transform: scale(1.1);
+			}
 
-			@include until($iphone-7) {
-				display: block;
+			&:last-child > img {
+				margin-bottom: 0;
+			}
 
-				margin: 0 auto 65px;
+			img {
+				width: 70%;
 
-				width: 50%;
+				@include until($iphone-7) {
+					display: block;
+
+					margin: 0 auto 65px;
+
+					width: 50%;
+				}
 			}
 		}
 	}
 
+	.projects {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		margin: 2rem 1rem 2rem;
+
+		text-align: left;
+
 		@include until($iphone-7) {
 			display: block;
+
 			margin: 0;
 		}
 	}

@@ -9,7 +9,7 @@ import FooterText from "../../components/FooterText/FooterText"
 
 import GitHub from 'github-api'
 
-const gh = new GitHub({
+const github = new GitHub({
 	username: 'nicholasadamou',
 	token: process.env.REACT_APP_GITHUB_TOKEN
 })
@@ -27,10 +27,10 @@ class OpenSource extends React.Component {
 	}
 
 	componentDidMount() {
-		gh.getUser().listRepos().then(response => {
+		github.getUser().listRepos().then(response => {
 			let repositories = response.data.map(repository => {
 				return {
-					key: repository.id,
+					id: repository.id,
 					name: repository.name,
 					description: repository.description,
 					link: repository.html_url,
@@ -91,8 +91,8 @@ class OpenSource extends React.Component {
 					{
 						loading
 							?
-								repositories.map(() => {
-									return SkeletonRepo("🛠️", "hammer-and-wrench")
+								repositories.map((current, index) => {
+									return SkeletonRepo(index, "⏳", "hourglass")
 								})
 							:
 								repositories.map(repository => {

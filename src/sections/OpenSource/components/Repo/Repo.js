@@ -6,10 +6,10 @@ import './index.scss'
 const round = num => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num)
 
 const Repo = (repository, emoji, label ) => {
-	const { name, description, link, stars, forks } = repository;
+	const { name, description, id, link, stars, forks } = repository;
 
 	return (
-		<article className="repo">
+		<article className="repo" key={id}>
 			<div className="top">
 				<div className="left">
 					<span

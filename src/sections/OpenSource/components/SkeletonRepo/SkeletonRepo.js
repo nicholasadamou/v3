@@ -6,8 +6,8 @@ import { SkeletonText } from 'carbon-components-react'
 
 import CircularProgress from "@material-ui/core/CircularProgress"
 
-const SkeletonRepo = (emoji, label) => (
-	<article className="repo">
+const SkeletonRepo = (id, emoji, label) => (
+	<article className="repo" key={id}>
 		<div className="top">
 			<div className="left">
 				<span
