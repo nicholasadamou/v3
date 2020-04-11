@@ -47,7 +47,7 @@
       border-radius: 5px;
 
       color: var(--red);
-      font-size: 15px;
+      font-size: var(--copy-size);
       text-decoration: underline;
 
       -webkit-transition: color 0.25ms ease-in-out;

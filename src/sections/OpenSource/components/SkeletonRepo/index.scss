@@ -35,7 +35,7 @@
 
     margin-bottom: 10px;
 
-    font-size: 1rem;
+    font-size: var(--copy-size);
 
     .MuiCircularProgress-root {
       width: 10px !important;
@@ -58,7 +58,7 @@
 
     .repo-title {
       color: var(--red);
-      font-size: 15px;
+      font-size: var(--copy-size);
       text-decoration: underline;
 
       -webkit-transition: color 0.25ms ease-in-out;

@@ -34,7 +34,7 @@
 
     margin-bottom: 10px;
 
-    font-size: 1rem;
+    font-size: var(--copy-size);
 
     .MuiCircularProgress-root {
       width: 10px !important;
@@ -51,7 +51,7 @@
       border-radius: 5px;
 
       color: var(--red);
-      font-size: 15px;
+      font-size: var(--copy-size);
       text-decoration: underline;
 
       -webkit-transition: color 0.25ms ease-in-out;

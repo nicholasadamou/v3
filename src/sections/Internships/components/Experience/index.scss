@@ -1,0 +1,55 @@
+@import "src/sass/settings/mixins";
+
+.experience {
+  display: flex;
+  align-items: flex-start;
+
+  @include until($iphone-7) {
+    display: block;
+
+    margin-bottom: 20px;
+
+    text-align: left;
+  }
+
+  .experience-company-logo {
+    margin-top: 5px;
+
+    border-radius: 5%;
+
+    width: 50px;
+    height: 50px;
+
+    @include until($iphone-7) {
+      margin: 0;
+    }
+  }
+
+  .experience-meta {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 1rem;
+
+    text-align: left;
+
+    font-size: var(--copy-size);
+
+    @include until($iphone-7) {
+      margin: 0;
+    }
+
+    .experience-title {
+      font-weight: bold;
+    }
+
+    .experience-location,
+    .experience-duration {
+      color: #a6a6a6;
+    }
+
+    .experience-description {
+      margin-top: 5px;
+    }
+  }
+}

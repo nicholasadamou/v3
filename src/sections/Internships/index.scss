@@ -42,6 +42,21 @@
     }
   }
 
+  .experiences {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+
+    margin: 0 2rem;
+
+    @include until($iphone-7) {
+      grid-template-columns: 1fr;
+      grid-gap: initial;
+
+      margin: 0;
+    }
+  }
+
   .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
