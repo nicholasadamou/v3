@@ -1,46 +1,49 @@
 @import "src/sass/settings/mixins";
 
 .review {
-	text-align: left;
+  text-align: left;
 
-	.review-quote {
-		font-size: 16px;
-		font-style: italic;
+  .review-quote {
+    font-size: 16px;
+    font-style: italic;
 
-		.review-footer {
-			display: flex;
-			align-items: center;
+    .review-footer {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
 
-			margin-top: 10px;
+      margin-top: 10px;
 
-			font-style: normal;
+      font-style: normal;
 
-			.review-image {
-				width: 2.2806973457em;
-				height: 2.2806973457em;
+      .review-image {
+        width: 2.2806973457em;
+        height: 2.2806973457em;
 
-				border-radius: 1000px;
+        border-radius: 1000px;
 
-				@include until($iphone-7) {
-					width: 3.2473210255em;
-					height: 3.2473210255em;
-				}
-			}
+        @include until($iphone-7) {
+          width: 3.2473210255em;
+          height: 3.2473210255em;
+        }
+      }
 
-			.review-cite {
-				display: flex;
-				flex-flow: column;
+      .review-cite {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-flow: column;
 
-				margin-left: 1em;
+        margin-left: 1em;
 
-				font-size: .7901234568em;
+        font-size: 0.7901234568em;
 
-				.review-author {
-					font-weight: bold;
-				}
-			}
-		}
-	}
-
-
+        .review-author {
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }

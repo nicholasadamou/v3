@@ -1,8 +1,12 @@
 @import "src/sass/settings/mixins";
 
 .website {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-flex: 1;
   flex: 1 1 33%;
 
   position: relative;
@@ -14,66 +18,70 @@
   margin-bottom: 20px;
 
   &.is-emphasized {
-	animation: tada;
-	animation-duration: 1s;
-	animation-fill-mode: both;
+    -webkit-animation: tada;
+    animation: tada;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
   }
 
   @include until($iphone-7) {
-  	flex: 1 1 100%;
+    -webkit-box-flex: 1;
+    flex: 1 1 100%;
 
-  	width: 100%;
-  	max-width: 100%;
+    width: 100%;
+    max-width: 100%;
   }
 
   a {
-	display: block;
+    display: block;
 
-	position: relative;
+    position: relative;
 
-	margin: 0 20px;
+    margin: 0 20px;
 
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: black;
 
-	&:hover {
-	  cursor: pointer;
-	}
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   img {
-	width: 100%;
-	display: block;
+    width: 100%;
+    display: block;
 
-	image-rendering: optimizeSpeed;
-	/* Legal fallback */
-	image-rendering: -moz-crisp-edges;
-	/* Firefox        */
-	image-rendering: -o-crisp-edges;
-	/* Opera          */
-	image-rendering: -webkit-optimize-contrast;
-	/* Safari         */
-	image-rendering: optimize-contrast;
-	/* CSS3 Proposed  */
-	image-rendering: crisp-edges;
-	/* CSS4 Proposed  */
-	image-rendering: pixelated;
-	/* CSS4 Proposed  */
-	-ms-interpolation-mode: nearest-neighbor;
-	/* IE8+           */
+    image-rendering: optimizeSpeed;
+    /* Legal fallback */
+    image-rendering: -moz-crisp-edges;
+    /* Firefox        */
+    image-rendering: -o-crisp-edges;
+    /* Opera          */
+    image-rendering: -webkit-optimize-contrast;
+    /* Safari         */
+    image-rendering: optimize-contrast;
+    /* CSS3 Proposed  */
+    image-rendering: crisp-edges;
+    /* CSS4 Proposed  */
+    image-rendering: pixelated;
+    /* CSS4 Proposed  */
+    -ms-interpolation-mode: nearest-neighbor;
+    /* IE8+           */
   }
 
   .title {
-	position: absolute;
-	top: 0;
-	left: 60px;
+    position: absolute;
+    top: 0;
+    left: 60px;
 
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 
-	color: var(--white);
-	line-height: 20px;
-	font-size: .7em;
+    color: var(--white);
+    line-height: 20px;
+    font-size: 0.7em;
   }
 }
 
@@ -86,32 +94,33 @@
   border: 0px solid var(--black);
   border-width: 20px 0 0 0;
   border-radius: 3px 3px 6px 6px;
-  box-shadow: 1px 1px 20px -5px rgba(var(--black), .5);
+  box-shadow: 1px 1px 20px -5px rgba(var(--black), 0.5);
 
-  &::before, &::after {
-	content: "";
+  &::before,
+  &::after {
+    content: "";
 
-	position: absolute;
-	top: -15px;
-	left: 8px;
+    position: absolute;
+    top: -15px;
+    left: 8px;
 
-	width: 9px;
-	height: 9px;
+    width: 9px;
+    height: 9px;
 
-	z-index: 10;
+    z-index: 10;
 
-	background: var(--red);
-	border-radius: 50%;
+    background: var(--red);
+    border-radius: 50%;
   }
 
   &::after {
-	left: 24px;
+    left: 24px;
 
-	background: var(--green);
+    background: var(--green);
   }
 
   img {
-	border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
   }
 }
 
@@ -131,17 +140,17 @@
   box-shadow: 1px 1px 20px -5px rgba(var(--black), 0.5);
 
   &::before {
-	content: "";
+    content: "";
 
-	position: absolute;
-	bottom: 2px;
-	left: calc(50% - 16px);
+    position: absolute;
+    bottom: 2px;
+    left: calc(50% - 16px);
 
-	width: 32px;
-	height: 2px;
+    width: 32px;
+    height: 2px;
 
-	background: var(--black);
+    background: var(--black);
 
-	border-radius: 5px;
+    border-radius: 5px;
   }
 }

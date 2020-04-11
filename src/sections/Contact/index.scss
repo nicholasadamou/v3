@@ -8,123 +8,129 @@
   width: 75%;
 
   .title:nth-child(2) {
-	margin-top: -15px;
-	margin-bottom: 30px;
+    margin-top: -15px;
+    margin-bottom: 30px;
   }
 
   @include until($iphone-7) {
-	width: 100%;
+    width: 100%;
   }
 
   form {
-	position: relative;
-	width: 100%;
-	margin: 20px auto 0;
+    position: relative;
+    width: 100%;
+    margin: 20px auto 0;
 
-	@include until($ipad) {
-	  width: 100%;
+    @include until($ipad) {
+      width: 100%;
 
-	  .field.is-horizontal {
-		text-align: left;
-	  }
-	}
+      .field.is-horizontal {
+        text-align: left;
+      }
+    }
 
-	@include until($iphone-7) {
-		width: 90%;
-	}
+    @include until($iphone-7) {
+      width: 90%;
+    }
 
-	.button,
-	.field-label,
-	.input,
-	.textarea {
-	  font-family: var(--secondary);
-	  color: var(--black);
-	}
+    .button,
+    .field-label,
+    .input,
+    .textarea {
+      font-family: var(--secondary);
+      color: var(--black);
+    }
 
-	.field-label {
-	  font-weight: 400;
-	  margin: 0 10px 0 0;
+    .field-label {
+      font-weight: 400;
+      margin: 0 10px 0 0;
 
-	  flex-grow: 0;
+      -webkit-box-flex: 0;
 
-	  @include until($iphone-7) {
-		margin-right: 0;
-		text-align: left;
-	  }
-	}
+      flex-grow: 0;
 
-	.control {
-	  width: 100%;
+      @include until($iphone-7) {
+        margin-right: 0;
+        text-align: left;
+      }
+    }
 
-	  @include until($iphone-7) {
-		margin-top: 10px;
-	  }
-	}
+    .control {
+      width: 100%;
 
-	.input,
-	.textarea {
-	  background: transparent;
-	  border: 5px solid var(--black);
-	  border-radius: 0;
+      @include until($iphone-7) {
+        margin-top: 10px;
+      }
+    }
 
-	  transition: all 150ms ease-in-out;
+    .input,
+    .textarea {
+      background: transparent;
+      border: 5px solid var(--black);
+      border-radius: 0;
 
-	  &::-webkit-input-placeholder {
-		color: var(--black);
-	  }
+      -webkit-transition: all 150ms ease-in-out;
 
-	  &:-moz-placeholder {
-		color: var(--black);
-	  }
+      transition: all 150ms ease-in-out;
 
-	  &::-moz-placeholder {
-		color: var(--black);
-	  }
+      &::-webkit-input-placeholder {
+        color: var(--black);
+      }
 
-	  &:-ms-input-placeholder {
-		color: var(--black);
-	  }
+      &:-moz-placeholder {
+        color: var(--black);
+      }
 
-	  &:focus {
-		border-color: var(--red);
-	  }
-	}
+      &::-moz-placeholder {
+        color: var(--black);
+      }
 
-	.field.is-grouped {
-	  justify-content: flex-end;
+      &:-ms-input-placeholder {
+        color: var(--black);
+      }
 
-	  @include until($iphone-7) {
-		justify-content: center;
-		margin-bottom: 0;
-	  }
+      &:focus {
+        border-color: var(--red);
+      }
+    }
 
-	  .control {
-		text-align: right;
+    .field.is-grouped {
+      -webkit-box-pack: end;
+      justify-content: flex-end;
 
-		@include until($iphone-7) {
-		  width: 100%;
-		}
-	  }
+      @include until($iphone-7) {
+        -webkit-box-pack: center;
+        justify-content: center;
+        margin-bottom: 0;
+      }
 
-	  .button {
-		background: var(--red);
-		border-radius: 0;
-		width: 200px;
-		padding: 0;
+      .control {
+        text-align: right;
 
-		color: var(--white);
+        @include until($iphone-7) {
+          width: 100%;
+        }
+      }
 
-		&:hover {
-		  color: var(--black);
-		  border: 5px solid var(--red);
-		  background: transparent;
-		}
+      .button {
+        background: var(--red);
+        border-radius: 0;
+        width: 200px;
+        padding: 0;
 
-		@include until($iphone-7) {
-		  width: 100%;
-		  margin-top: 10px;
-		}
-	  }
-	}
+        color: var(--white);
+
+        &:hover {
+          color: var(--black);
+          border: 5px solid var(--red);
+          background: transparent;
+        }
+
+        @include until($iphone-7) {
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
   }
 }

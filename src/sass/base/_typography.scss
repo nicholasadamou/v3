@@ -1,74 +1,74 @@
 h1,
 h2,
 h3 {
-	font-family: var(--primary);
+  font-family: var(--primary);
 }
 
 h1 {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-	font-size: 2.5rem;
-	font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 700;
 
-	@include until($ipad) {
-		font-size: 4rem;
-	}
+  @include until($ipad) {
+    font-size: 4rem;
+  }
 
-	@include until($iphone-7) {
-		font-size: 2rem;
-	}
+  @include until($iphone-7) {
+    font-size: 2rem;
+  }
 }
 
 h3 {
-	font-size: 2rem;
-	font-weight: 700;
+  font-size: 2rem;
+  font-weight: 700;
 
-	@include until($iphone-7) {
-		font-size: 1.5rem;
-	}
+  @include until($iphone-7) {
+    font-size: 1.5rem;
+  }
 }
 
 .title {
-	margin: 25px 0;
+  margin: 25px 0;
 
-	line-height: 1;
+  line-height: 1;
 }
 
 .subtitle {
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 
-	color: darken(#ccc, 15);
-	line-height: 1.5;
+  color: darken(#ccc, 15);
+  line-height: 1.5;
 
-	@include until($iphone-7) {
-		font-size: 1.15rem;
-		margin-bottom: 25px !important;
-	}
+  @include until($iphone-7) {
+    font-size: 1.15rem;
+    margin-bottom: 25px !important;
+  }
 
-	@include until($iphone-5) {
-		font-size: 1rem;
+  @include until($iphone-5) {
+    font-size: 1rem;
 
-		padding: 0 10px;
-	}
+    padding: 0 10px;
+  }
 }
 
 p {
-	font-size: var(--copy-size);
+  font-size: var(--copy-size);
 
-	color: var(--black);
+  color: var(--black);
 
-	@include until($iphone-7) {
-		font-size: 1rem;
-	}
+  @include until($iphone-7) {
+    font-size: 1rem;
+  }
 }
 
 .link {
-	text-decoration: underline;
-	color: var(--red);
+  text-decoration: underline;
+  color: var(--red);
 
-	&:hover {
-		color: darken(#ccc, 15);
-	}
+  &:hover {
+    color: darken(#ccc, 15);
+  }
 }

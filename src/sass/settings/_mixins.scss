@@ -5,7 +5,7 @@ $ipad-pro: 1024px;
 $ipad: 768px;
 
 @mixin until($device) {
-	@media screen and (max-width: $device) {
-		@content;
-	}
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }

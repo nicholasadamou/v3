@@ -4,28 +4,33 @@
   width: 100%;
 
   .subtitle {
-	margin-bottom: 16px;
+    margin-bottom: 16px;
   }
 
   .articles {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
 
-	text-align: left;
+    text-align: left;
 
-	overflow: hidden;
+    overflow: hidden;
 
-	margin: auto 5rem 20px;
+    margin: auto 5rem 20px;
 
-	@include until($ipad) {
-		margin: auto 0rem 20px;
-	}
+    @include until($ipad) {
+      margin: auto 0rem 20px;
+    }
 
-	@include until($iphone-7) {
-	  margin: auto 1rem 20px;
-	}
+    @include until($iphone-7) {
+      margin: auto 1rem 20px;
+    }
   }
 }

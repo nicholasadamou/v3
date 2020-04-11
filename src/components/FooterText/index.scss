@@ -4,20 +4,20 @@
   font-size: 1rem;
 
   .link {
-	&.linkedin {
-	  color: var(--linkedin);
-	}
+    &.linkedin {
+      color: var(--linkedin);
+    }
 
-	&.github {
-	  color: var(--github);
-	}
+    &.github {
+      color: var(--github);
+    }
 
-	&.codepen {
-	  color: var(--codepen);
-	}
+    &.codepen {
+      color: var(--codepen);
+    }
 
-	&:hover {
-	  color: darken(#ccc, 15);
-	}
+    &:hover {
+      color: darken(#ccc, 15);
+    }
   }
 }

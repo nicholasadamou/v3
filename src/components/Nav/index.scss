@@ -12,63 +12,65 @@
   z-index: 999;
 
   &.opened {
-	left: 0;
+    left: 0;
   }
 
   &.closed {
-	left: -130px;
+    left: -130px;
   }
 
   a {
-	display: block;
-	padding-left: 20px;
-	text-decoration: none;
+    display: block;
+    padding-left: 20px;
+    text-decoration: none;
 
-	color: var(--black);
-	font-size: 16px;
+    color: var(--black);
+    font-size: 16px;
 
-	cursor: pointer;
+    cursor: pointer;
 
-	&:hover {
-	  color: var(--red);
-	  text-decoration: underline;
-	}
+    &:hover {
+      color: var(--red);
+      text-decoration: underline;
+    }
   }
 
   #navigation {
-	display: grid;
-	grid-gap: 20px;
+    display: grid;
+    grid-gap: 20px;
 
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
 
-	text-align: left;
-	width: 100%;
+    text-align: left;
+    width: 100%;
 
-	font-family: var(--secondary);
-	font-weight: 400;
+    font-family: var(--secondary);
+    font-weight: 400;
 
-	@include until($iphone-7) {
-	  font-size: 14px;
-	}
+    @include until($iphone-7) {
+      font-size: 14px;
+    }
   }
 
   #email-link {
-	position: absolute;
-	bottom: 10px;
-	left: 50%;
-	transform: translate(-50%, 0);
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 
-	width: 100%;
+    width: 100%;
 
-	padding: 0 0 0 20px;
+    padding: 0 0 0 20px;
 
-	font-family: var(--secondary);
-	font-weight: 400;
+    font-family: var(--secondary);
+    font-weight: 400;
 
-	@include until($iphone-7) {
-	  font-size: 14px;
-	}
+    @include until($iphone-7) {
+      font-size: 14px;
+    }
   }
 }

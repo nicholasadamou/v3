@@ -1,68 +1,74 @@
 @import "src/sass/settings/mixins";
 
 .project {
-	margin: 10px 20px;
+  margin: 10px 20px;
 
-	overflow: visible;
+  overflow: visible;
 
-	.emoji {
-		margin-right: 0;
-	}
+  .emoji {
+    margin-right: 0;
+  }
 
-	@include until($iphone-7) {
-		width: 100%;
-		max-width: 100%;
+  @include until($iphone-7) {
+    width: 100%;
+    max-width: 100%;
 
-		margin: 20px 0;
-	}
+    margin: 20px 0;
+  }
 
-	a {
-		text-decoration: none;
-		color: var(--black);
+  a {
+    text-decoration: none;
+    color: var(--black);
 
-		&:hover {
-			cursor: pointer;
-			animation: rainbow 1s linear infinite;
-		}
-	}
+    &:hover {
+      cursor: pointer;
+      -webkit-animation: rainbow 1s linear infinite;
+      animation: rainbow 1s linear infinite;
+    }
+  }
 
-	.top {
-		display: flex;
-		flex-direction: row;
+  .top {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
 
-		margin-bottom: 10px;
+    margin-bottom: 10px;
 
-		font-size: 1rem;
+    font-size: 1rem;
 
-		.project-title {
-			margin-left: 5px;
+    .project-title {
+      margin-left: 5px;
 
-			padding: 5px;
+      padding: 5px;
 
-			background: var(--grey);
-			border-radius: 5px;
+      background: var(--grey);
+      border-radius: 5px;
 
-			color: var(--red);
-			font-size: 15px;
-			text-decoration: underline;
+      color: var(--red);
+      font-size: 15px;
+      text-decoration: underline;
 
-			transition: color 0.25ms ease-in-out;
+      -webkit-transition: color 0.25ms ease-in-out;
 
-			&:hover {
-				color: var(--light-grey);
-			}
-		}
-	}
+      transition: color 0.25ms ease-in-out;
 
-	.desc {
-		font-size: var(--copy-size);
+      &:hover {
+        color: var(--light-grey);
+      }
+    }
+  }
 
-		div {
-			margin-top: 20px;
+  .desc {
+    font-size: var(--copy-size);
 
-			.bx--skeleton__text {
-				height: 0.75rem;
-			}
-		}
-	}
+    div {
+      margin-top: 20px;
+
+      .bx--skeleton__text {
+        height: 0.75rem;
+      }
+    }
+  }
 }

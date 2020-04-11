@@ -9,8 +9,8 @@
   margin: 2rem 1rem 2rem;
 
   @include until($iphone-7) {
-		grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
 
-		margin: 0;
+    margin: 0;
   }
 }

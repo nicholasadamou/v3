@@ -1,13 +1,15 @@
-
 #websites {
   overflow: hidden;
 
   .websites {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
 
-	margin: 0 20px 4rem;
+    margin: 0 20px 4rem;
   }
 }

@@ -6,39 +6,41 @@
   overflow: visible;
 
   @include until($iphone-7) {
-	margin: 10px 0;
+    margin: 10px 0;
 
-	padding: 0 20px;
+    padding: 0 20px;
 
-	width: 100%;
-	max-width: 100%;
+    width: 100%;
+    max-width: 100%;
   }
 
   .top {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 
-	.experiment-link {
-	  margin-left: 5px;
+    .experiment-link {
+      margin-left: 5px;
 
-	  padding: 5px;
+      padding: 5px;
 
-	  background: var(--grey);
+      background: var(--grey);
 
-	  border-radius: 5px;
+      border-radius: 5px;
 
-	  font-size: 1rem;
-	  color: var(--red);
-	  text-decoration: underline;
+      font-size: 1rem;
+      color: var(--red);
+      text-decoration: underline;
 
-	  transition: color 0.25ms ease-in-out;
+      -webkit-transition: color 0.25ms ease-in-out;
 
-	  &:hover {
-		color: var(--light-grey);
-	  }
-	}
+      transition: color 0.25ms ease-in-out;
+
+      &:hover {
+        color: var(--light-grey);
+      }
+    }
   }
 
   p {
-	font-size: var(--copy-size);
+    font-size: var(--copy-size);
   }
 }

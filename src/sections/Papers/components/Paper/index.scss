@@ -1,7 +1,10 @@
 @import "src/sass/settings/mixins";
 
 .paper {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
 
   width: 90%;
@@ -12,26 +15,27 @@
   overflow: hidden;
 
   @include until($iphone-7) {
-	display: block;
-	flex: none;
+    display: block;
+    -webkit-box-flex: 0;
+    flex: none;
 
-	width: 100%;
-	max-width: 100%;
+    width: 100%;
+    max-width: 100%;
   }
 
   .emoji {
-	margin-right: 5px;
+    margin-right: 5px;
   }
 
   .link {
-	font-size: 1rem;
+    font-size: 1rem;
   }
 
   p {
-	font-size: var(--copy-size);
+    font-size: var(--copy-size);
 
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-import './index.scss'
+import "./index.scss";
 
-const Wrapper = ({ children }) => (
-	<div className={"wrapper"}>
-		{ children }
-	</div>
-)
+const Wrapper = ({ children }) => <div className={"wrapper"}>{children}</div>;
 
-export default Wrapper
+export default Wrapper;
