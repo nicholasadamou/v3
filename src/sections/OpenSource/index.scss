@@ -8,8 +8,12 @@
 
 	text-align: left;
 
+	@include until($ipad) {
+		grid-template-columns: 1fr;
+	}
+
   @include until($iphone-7) {
-		display: block;
+		grid-template-columns: 1fr;
 
 		margin: 0;
   }

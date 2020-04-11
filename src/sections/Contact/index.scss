@@ -21,12 +21,16 @@
 	width: 100%;
 	margin: 20px auto 0;
 
-	@include until($iphone-7) {
-	  width: 90%;
+	@include until($ipad) {
+	  width: 100%;
 
 	  .field.is-horizontal {
 		text-align: left;
 	  }
+	}
+
+	@include until($iphone-7) {
+		width: 90%;
 	}
 
 	.button,

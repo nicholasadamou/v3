@@ -20,6 +20,10 @@
 
 	margin: auto 5rem 20px;
 
+	@include until($ipad) {
+		margin: auto 0rem 20px;
+	}
+
 	@include until($iphone-7) {
 	  margin: auto 1rem 20px;
 	}

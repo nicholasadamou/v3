@@ -63,6 +63,10 @@
 
 		margin: 2rem 5rem 2rem;
 
+		@include until($ipad) {
+			margin: 2rem 2rem 2rem;
+		}
+
 		@include until($iphone-7) {
 			display: block;
 
