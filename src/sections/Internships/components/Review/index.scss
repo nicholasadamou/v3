@@ -1,0 +1,46 @@
+@import "src/sass/settings/mixins";
+
+.review {
+	text-align: left;
+
+	.review-quote {
+		font-size: 16px;
+		font-style: italic;
+
+		.review-footer {
+			display: flex;
+			align-items: center;
+
+			margin-top: 10px;
+
+			font-style: normal;
+
+			.review-image {
+				width: 2.2806973457em;
+				height: 2.2806973457em;
+
+				border-radius: 1000px;
+
+				@include until($iphone-7) {
+					width: 3.2473210255em;
+					height: 3.2473210255em;
+				}
+			}
+
+			.review-cite {
+				display: flex;
+				flex-flow: column;
+
+				margin-left: 1em;
+
+				font-size: .7901234568em;
+
+				.review-author {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+
+
+}
