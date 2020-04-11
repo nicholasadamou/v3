@@ -2,6 +2,7 @@ import React from 'react'
 
 import './index.scss'
 
+import Review from './components/Review/Review'
 import SkeletonProject from './components/SkeletonProject/SkeletonProject'
 import Project from './components/Project/Project'
 import FooterText from "../../components/FooterText/FooterText"
@@ -133,6 +134,40 @@ class Internships extends React.Component {
 								projects.map(project => {
 									return Project(project)
 								})
+					}
+				</div>
+
+				<h2
+					className="title"
+					style={{ fontSize: '1.5rem' }}
+				>
+					What Others are Sayin' About Me
+				</h2>
+				<p
+					className="subtitle"
+					style={{ fontSize: '1.1rem' }}
+				>
+					Many people who I have worked with seem to think that I am awesome, I guess.{' '}
+					<span role="img" aria-label="tipping-hand-man">💁🏼‍♂️</span>
+					<span role="img" aria-label="rolling-on-the-floor-laughing">🤣</span>
+				</p>
+
+				<div id="reviews">
+					{
+						Review(
+							'Kamal Shaham',
+							'Software Engineer, IBM',
+							"Nick that ToggleContent module was so clever, mad props lol had to make a whole module just to define a callback haha i was like oOoOoOo he slick",
+							require('../../assets/images/reviewers/kamal.jpg')
+						)
+					}
+					{
+						Review(
+							'Stephen Alt',
+							'CIO SWE Intern, IBM',
+							"Nick is a YOUNG GOD on the REACT",
+							require('../../assets/images/reviewers/stephen.jpg')
+						)
 					}
 				</div>
 

@@ -54,4 +54,27 @@
 			margin: 0;
 		}
 	}
+
+	#reviews {
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
+
+		margin: 2rem 5rem 2rem;
+
+		@include until($iphone-7) {
+			display: block;
+
+			margin: 0;
+
+			.review {
+				margin-top: 20px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+		}
+	}
 }
