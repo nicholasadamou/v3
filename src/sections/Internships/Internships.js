@@ -205,17 +205,10 @@ class Internships extends React.Component {
         </div>
 
         <h2 className="title" style={{ fontSize: "1.5rem" }}>
-          What My Co-Workers are Sayin'
+          Thoughts from my Co-Workers
         </h2>
         <p className="subtitle" style={{ fontSize: "1.1rem" }}>
-          Many people who I have worked with seem to think that I am awesome, I
-          guess.{" "}
-          <span role="img" aria-label="tipping-hand-man">
-            💁🏼‍♂️
-          </span>
-          <span role="img" aria-label="rolling-on-the-floor-laughing">
-            🤣
-          </span>
+          What my co-workers have to say about my work.{" "}
         </p>
 
         <div id="reviews">
