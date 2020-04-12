@@ -9,7 +9,7 @@ const Experience = (company, title, location, duration, description, image) => (
       <span className="experience-title">{title}</span>
       <span className="experience-duration">{duration}</span>
       <span className="experience-location">{location}</span>
-      <span className="experience-description">{description}</span>
+      <span className="experience-description">{description()}</span>
     </div>
   </div>
 );

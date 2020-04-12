@@ -175,7 +175,17 @@ class Education extends React.Component {
             "Bachelors of Arts, Computer Science",
             "Mt. Vernon, IA",
             "August 2018 - May 2020",
-            "Cumulative GPA: 3.98 out of 4.0",
+            () => (
+              <>
+                <em>Cumulative GPA:</em>
+                {" 3.98 out of 4.0"}
+                <br />
+                <em>Overall</em>
+                {" Class Rank: 5/212 ("}
+                <em>2.35%</em>
+                {")"}
+              </>
+            ),
             "https://media-exp1.licdn.com/dms/image/C4D0BAQF7q4SbDai9Og/company-logo_100_100/0?e=1594857600&v=beta&t=MfrSYYJ8IqCtfKL_ymEhfW_MXXxHXpSd9SFWDamE31M"
           )}
           {Experience(
@@ -183,7 +193,12 @@ class Education extends React.Component {
             "Transferred; Computer Science Major",
             "Oneonta, NY",
             "August 2016 - May 2018",
-            "Cumulative GPA: 3.96 out of 4.0",
+            () => (
+              <>
+                <em>Cumulative GPA:</em>
+                {" 3.96 out of 4.0"}
+              </>
+            ),
             "https://media-exp1.licdn.com/dms/image/C510BAQGKNCEAE6ptOQ/company-logo_100_100/0?e=1594857600&v=beta&t=HxyZzaPhdKwZWlF55i7YDRhnoNzOr5WhWu3IHJLV7Xo"
           )}
         </div>
