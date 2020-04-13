@@ -180,7 +180,7 @@ class Education extends React.Component {
                 <em>Graduating </em> <strong>Sum Cum Laude</strong>
                 <br />
                 {" and "}
-                <strong>with distinction</strong>
+                <strong>With Honors</strong>
                 {" in "}
                 <em>Computer Science</em>
                 <br />
