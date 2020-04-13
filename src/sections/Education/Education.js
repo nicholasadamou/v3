@@ -239,12 +239,12 @@ class Education extends React.Component {
               <>
                 ➤ <em>High Honors Dean's List</em> (Fall ‘18)
                 <br />➤ <em>Highest Honors Dean's List</em> (Spring ‘19, Fall
-                '19)
+                '19, Spring '20)
                 <br />➤ <em>Midwest Conference Academic All-Conference</em>{" "}
-                (Fall '18, Spring ‘19, Fall '19)
+                (Fall '18, Spring ‘19, Fall '19, Spring '20)
                 <br />➤{" "}
                 <em>Intercollegiate Tennis Association Scholar-Athlete</em>{" "}
-                (Fall '18, Spring ‘19, Fall '19)
+                (Fall '18, Spring ‘19, Fall '19, Spring '20)
               </>
             )
           )}
