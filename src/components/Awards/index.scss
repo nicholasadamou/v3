@@ -6,7 +6,7 @@
   grid-gap: 20px;
   place-content: center;
 
-  margin: 0 7rem;
+  margin: 0 5rem;
 
   @include until($iphone-7) {
     grid-template-columns: 1fr;
