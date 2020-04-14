@@ -177,7 +177,7 @@ class Education extends React.Component {
             "August 2018 - May 2020",
             () => (
               <>
-                <em>Graduating </em> <strong>Sum Cum Laude</strong>
+                <em>Graduating </em> <strong>Summa Cum Laude</strong>
                 <br />
                 {" and "}
                 <strong>With Honors</strong>
