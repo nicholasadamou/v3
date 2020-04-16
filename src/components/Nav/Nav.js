@@ -87,8 +87,14 @@ class Nav extends React.Component {
             </Link>
           </nav>
 
-          <a href="mailto:nicholasadamouemail@gmail.com" id="email-link">
-            + Email Me
+          <a
+            href="mailto:nicholasadamouemail@gmail.com?subject=Hello"
+            id="email-link"
+          >
+            Say "Hi"{" "}
+            <span className="wave-emoji" role="img" aria-label="wave">
+              👋🏼
+            </span>
           </a>
         </div>
       </div>
