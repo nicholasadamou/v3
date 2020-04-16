@@ -4,6 +4,8 @@ import { Link, animateScroll as scroll } from "react-scroll";
 
 import Toggle from "./components/Toggle/Toggle";
 
+import WaveEmoji from "../WaveEmoji/WaveEmoji";
+
 import Logo from "../Logo/Logo";
 
 import "./index.scss";
@@ -91,10 +93,7 @@ class Nav extends React.Component {
             href="mailto:nicholasadamouemail@gmail.com?subject=Hello"
             id="email-link"
           >
-            Say "Hi"{" "}
-            <span className="wave-emoji" role="img" aria-label="wave">
-              👋🏼
-            </span>
+            Say "Hi" <WaveEmoji />
           </a>
         </div>
       </div>

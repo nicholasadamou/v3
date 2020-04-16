@@ -1,15 +1,13 @@
 import React from "react";
 
+import WaveEmoji from "../../components/WaveEmoji/WaveEmoji";
+
 import "./index.scss";
 
 const Contact = () => (
   <section id="contact">
     <h2 className="title">
-      Want to say "Hi"{" "}
-      <span className="wave-emoji" role="img" aria-label="wave">
-        👋🏼
-      </span>
-      ?
+      Want to say "Hi" <WaveEmoji />?
     </h2>
     <h2 className="title">Drop me a line!</h2>
     <p className="subtitle">

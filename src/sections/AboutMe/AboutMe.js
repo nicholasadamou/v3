@@ -2,6 +2,8 @@ import React from "react";
 
 import Avatar from "./components/Avatar/Avatar";
 
+import WaveEmoji from "../../components/WaveEmoji/WaveEmoji";
+
 import "./index.scss";
 
 const AboutMe = () => (
@@ -9,11 +11,7 @@ const AboutMe = () => (
     <Avatar />
 
     <h1 className="title">
-      Hi,{" "}
-      <span className="wave-emoji" role="img" aria-label="wave">
-        👋🏼
-      </span>
-      ! I'm <span>Nicholas Adamou</span>
+      Hi, <WaveEmoji />! I'm <span>Nicholas Adamou</span>
     </h1>
 
     <p>

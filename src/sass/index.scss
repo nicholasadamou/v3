@@ -1,3 +1,7 @@
+//
+// Settings
+// --------------------------------------------------
+
 @import "settings/mixins";
 @import "settings/vendors";
 
@@ -8,10 +12,3 @@
 @import "base/variables";
 @import "base/base";
 @import "base/typography";
-
-//
-// Modules
-// --------------------------------------------------
-
-@import "modules/wave";
-@import "modules/seperator";

@@ -59,3 +59,12 @@ body {
 section {
   width: 100%;
 }
+
+hr {
+  margin: 10px auto;
+
+  width: 90%;
+  height: 5px;
+
+  background: var(--white);
+}
