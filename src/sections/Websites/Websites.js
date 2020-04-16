@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 
-import { isWebpSupported } from "react-image-webp/dist/utils";
-
 import Website from "./components/Website/Website";
 
 import "./index.scss";
@@ -43,32 +41,20 @@ const Websites = () => {
         {Website(
           "Advanced Electrical Services",
           "https://advanced-electrical-services.netlify.com/",
-          isWebpSupported()
-            ? require("../../assets/images/websites/advanced-electrical-services/desktop/webp/desktop.webp")
-            : require("../../assets/images/websites/advanced-electrical-services/desktop/png/desktop.png"),
-          isWebpSupported()
-            ? require("../../assets/images/websites/advanced-electrical-services/mobile/webp/mobile.webp")
-            : require("../../assets/images/websites/advanced-electrical-services/mobile/png/mobile.png")
+          require("../../assets/images/websites/advanced-electrical-services/desktop/desktop.png"),
+          require("../../assets/images/websites/advanced-electrical-services/mobile/mobile.png")
         )}
         {Website(
           "Cut, Paste, & Copy",
           "https://cut-paste-copy.github.io/",
-          isWebpSupported()
-            ? require("../../assets/images/websites/cut-paste-copy/desktop/webp/desktop.webp")
-            : require("../../assets/images/websites/cut-paste-copy/desktop/png/desktop.png"),
-          isWebpSupported()
-            ? require("../../assets/images/websites/cut-paste-copy/mobile/webp/mobile.webp")
-            : require("../../assets/images/websites/cut-paste-copy/mobile/png/mobile.png")
+          require("../../assets/images/websites/cut-paste-copy/desktop/desktop.png"),
+          require("../../assets/images/websites/cut-paste-copy/mobile/mobile.png")
         )}
         {Website(
           "Nicholas Adamou's Personal Website",
           "https://nicholasadamou.com/",
-          isWebpSupported()
-            ? require("../../assets/images/websites/nicholas-adamou/desktop/webp/desktop.webp")
-            : require("../../assets/images/websites/nicholas-adamou/desktop/png/desktop.png"),
-          isWebpSupported()
-            ? require("../../assets/images/websites/nicholas-adamou/mobile/webp/mobile.webp")
-            : require("../../assets/images/websites/nicholas-adamou/mobile/png/mobile.png")
+          require("../../assets/images/websites/nicholas-adamou/desktop/desktop.png"),
+          require("../../assets/images/websites/nicholas-adamou/mobile/mobile.png")
         )}
       </div>
     </section>
