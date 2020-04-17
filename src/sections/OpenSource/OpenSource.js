@@ -9,6 +9,35 @@ import SkeletonRepo from "./components/SkeletonRepo/SkeletonRepo";
 
 import FooterText from "../../components/FooterText/FooterText";
 
+import styled from "styled-components";
+
+import { device, until } from "../../utilities/mixins";
+
+const Repositories = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  margin: 2rem 1rem 2rem;
+
+  text-align: left;
+
+  ${until(
+    device.iPad(),
+    () => `
+		grid-template-columns: 1fr;
+	`
+  )}
+
+  ${until(
+    device.iPhone(),
+    () => `
+		grid-template-columns: 1fr;
+
+		margin: 0;
+	`
+  )}
+`;
+
 const MAX_NUMBER_OF_REPOSITORIES = 9;
 
 class OpenSource extends React.Component {
@@ -92,7 +121,7 @@ class OpenSource extends React.Component {
           .
         </p>
 
-        <div className="repositories">
+        <Repositories>
           {isLoading
             ? repositories.map((current, index) => {
                 return SkeletonRepo(index);
@@ -100,7 +129,7 @@ class OpenSource extends React.Component {
             : repositories.map((repository) => {
                 return Repo(repository);
               })}
-        </div>
+        </Repositories>
 
         {FooterText(
           "More can be found on my ",

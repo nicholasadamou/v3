@@ -1,9 +1,27 @@
 import React from "react";
 
-import "./index.scss";
+import styled from "styled-components";
+
+const Container = styled.div`
+  position: relative;
+
+  width: 100%;
+  height: 80px;
+
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 80px;
+
+    g {
+      fill: var(--black);
+    }
+  }
+`;
 
 const Logo = (handleOnClick) => (
-  <div className="logo" onClick={() => handleOnClick()}>
+  <Container onClick={() => handleOnClick()}>
     <svg
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +65,7 @@ c-47 -3 -137 -8 -200 -11 l-115 -5 -165 191 c-91 105 -169 199 -174 210 -7 14
         />
       </g>
     </svg>
-  </div>
+  </Container>
 );
 
 export default Logo;

@@ -1,13 +1,206 @@
 import React from "react";
 
-import Avatar from "./components/Avatar/Avatar";
+import Avatar from "../../sass/components/Avatar";
 
 import WaveEmoji from "../../components/WaveEmoji/WaveEmoji";
 
+import styled from "styled-components";
+
+import { device, until } from "../../utilities/mixins";
+
 import "./index.scss";
 
+const Container = styled.section`
+  text-align: center;
+
+  padding-bottom: 20px;
+
+  ${until(
+    device.iPhone(),
+    () => `
+		width: 100%;
+	`
+  )}
+
+  h1 {
+    font-size: 2.5rem;
+
+    margin-top: 20px;
+
+    color: #37474f;
+
+    ${until(
+      device.iPadPro(),
+      () => `
+			font-size: 2.3rem;
+		`
+    )}
+
+    ${until(
+      device.iPhone(),
+      () => `
+			margin: 0;
+
+			padding-top: 20px;
+			padding-bottom: 10px;
+
+			font-size: 1.5rem;
+			text-align: center;
+		`
+    )}
+
+    span {
+      color: var(--red);
+    }
+  }
+
+  p {
+    margin: 0 5rem 20px;
+
+    text-align: center;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    ${until(
+      device.iPad(),
+      () => `
+			margin: 0 2rem 20px;
+		`
+    )}
+
+    ${until(
+      device.iPhone(),
+      () => `
+			margin: 0 auto;
+
+			padding: 10px 25px;
+
+			text-align: center;
+		`
+    )}
+
+		a {
+      display: inline-block;
+
+      position: relative;
+
+      text-decoration: none;
+
+      color: var(--black);
+
+      -webkit-transition: color 200ms;
+
+      transition: color 200ms;
+
+      &:before {
+        content: "";
+
+        position: absolute;
+        top: 80%;
+        left: 0;
+        right: 0;
+
+        height: 2px;
+
+        opacity: 1;
+        background-color: currentColor;
+
+        -webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      &.cornell {
+        &:before {
+          background-color: var(--cornell);
+        }
+
+        &:hover {
+          color: var(--cornell);
+        }
+      }
+
+      &.blackbird {
+        &:before {
+          background-color: var(--blackbird);
+        }
+
+        &:hover {
+          color: var(--blackbird);
+        }
+      }
+
+      &.mack-media-group {
+        &:before {
+          background-color: var(--mack-media-group);
+        }
+
+        &:hover {
+          color: var(--mack-media-group);
+        }
+      }
+
+      &.ibm {
+        &:before {
+          background-color: var(--ibm);
+        }
+
+        &:hover {
+          color: var(--ibm);
+        }
+      }
+    }
+  }
+`;
+
+const Social = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  place-items: center;
+
+  margin: 0 100px;
+
+  ${until(
+    device.iPhone(),
+    () => `
+		grid-template-columns: 1fr;
+
+		margin: 0 20px;
+	`
+  )}
+
+  a {
+    display: inline-block;
+
+    width: 100%;
+    height: 50px;
+
+    text-align: center;
+    font-size: 16px;
+
+    border: 2px solid;
+
+    line-height: 3;
+    text-decoration: none;
+
+    -webkit-transition: all 150ms ease-in-out;
+
+    transition: all 150ms ease-in-out;
+
+    ${until(
+      device.iPad(),
+      () => `
+			width: 100%;
+		`
+    )}
+  }
+`;
+
 const AboutMe = () => (
-  <section id="about-me">
+  <Container id="about-me">
     <Avatar />
 
     <h1 className="title">
@@ -73,9 +266,8 @@ const AboutMe = () => (
       company's bottom-line.
     </p>
 
-    <div className="btn-wrapper">
+    <Social>
       <a
-        className="btn"
         href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
         target="_blank"
         aria-hidden="true"
@@ -85,7 +277,6 @@ const AboutMe = () => (
         Read My Resume
       </a>
       <a
-        className="btn"
         href="https://linkedin.com/in/nicholas-adamou/"
         target="_blank"
         aria-hidden="true"
@@ -95,7 +286,6 @@ const AboutMe = () => (
         Connect with Me on <i className="fab fa-linkedin" />
       </a>
       <a
-        className="btn"
         href="https://twitter.com/NicholasAdamou"
         target="_blank"
         aria-hidden="true"
@@ -105,7 +295,6 @@ const AboutMe = () => (
         Follow Me on <i className="fab fa-twitter" />
       </a>
       <a
-        className="btn"
         href="https://www.instagram.com/nicholasadamou/"
         target="_blank"
         aria-hidden="true"
@@ -114,8 +303,8 @@ const AboutMe = () => (
       >
         Follow Me on <i className="fab fa-instagram" />
       </a>
-    </div>
-  </section>
+    </Social>
+  </Container>
 );
 
 export default AboutMe;

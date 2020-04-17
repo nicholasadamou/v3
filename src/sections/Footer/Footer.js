@@ -2,15 +2,87 @@ import React from "react";
 
 import moment from "moment";
 
-import "./index.scss";
-
 import Logo from "../../components/Logo/Logo";
 
+import styled from "styled-components";
+
+const Container = styled.footer`
+  display: grid !important;
+  place-content: center;
+
+  margin: 7rem 0 !important;
+
+  text-align: center;
+
+  div:first-child {
+    margin-bottom: 2rem;
+
+    cursor: inherit;
+
+    opacity: 0.25;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+
+    font-size: 0.9rem;
+
+    & > div {
+      display: inline;
+
+      #heart {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+`;
+
+const Social = styled.div`
+  list-style-type: none;
+
+  margin-bottom: 1rem;
+
+  a {
+    text-decoration: none;
+
+    li {
+      display: inline-block;
+
+      margin: 0 10px;
+
+      font-size: 1.5rem;
+      color: var(--black);
+
+      -webkit-transition: all 0.25s ease-in-out;
+
+      transition: all 0.25s ease-in-out;
+
+      &.twitter {
+        color: var(--twitter);
+      }
+
+      &.linkedin {
+        color: var(--linkedin);
+      }
+
+      &.instagram {
+        color: var(--instagram);
+      }
+
+      &:hover {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    }
+  }
+`;
+
 const Footer = () => (
-  <footer>
+  <Container>
     <Logo />
 
-    <div className="social">
+    <Social>
       <ul>
         <a
           href="https://codepen.io/NicholasAdamou"
@@ -73,7 +145,7 @@ const Footer = () => (
           </li>
         </a>
       </ul>
-    </div>
+    </Social>
 
     <p>
       Handcrafted with{" "}
@@ -119,7 +191,7 @@ const Footer = () => (
       </a>
       .
     </p>
-  </footer>
+  </Container>
 );
 
 export default Footer;

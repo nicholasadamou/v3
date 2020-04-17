@@ -1,89 +1,9 @@
-@import "src/sass/settings/mixins";
+.fas {
+	-webkit-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
 
-.repo {
-  margin: 10px 20px;
-
-  overflow: visible;
-
-  @include until($iphone-7) {
-    width: 100%;
-    max-width: 100%;
-
-    margin: 10px 0;
-    padding: 0 20px;
-  }
-
-  a {
-    text-decoration: none;
-    color: var(--black);
-
-    &:hover {
-      cursor: pointer;
-      -webkit-animation: rainbow 1s linear infinite;
-      animation: rainbow 1s linear infinite;
-    }
-  }
-
-  .top {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    flex-direction: row;
-
-    margin-bottom: 10px;
-
-    font-size: var(--copy-size);
-
-    .repo-title,
-    .stars,
-    .forks {
-      padding: 5px;
-
-      background: var(--grey);
-      border-radius: 5px;
-
-      color: var(--black);
-		}
-
-		.stars, .forks {
-			margin-left: 10px;
-		}
-
-    .repo-title {
-      color: var(--red);
-      font-size: var(--copy-size);
-      text-decoration: underline;
-
-      -webkit-transition: color 0.25ms ease-in-out;
-
-      transition: color 0.25ms ease-in-out;
-
-      &:hover {
-        color: var(--light-grey);
-      }
-    }
-
-    .stars {
-      color: var(--star);
-    }
-
-    .fas {
-      -webkit-transition: all 0.25s ease-in-out;
-      transition: all 0.25s ease-in-out;
-
-      &:hover {
-        -webkit-transform: scale(1.25);
-        transform: scale(1.25);
-      }
-    }
-  }
-
-  .desc {
-    font-size: var(--copy-size);
-
-    div {
-      margin-top: 20px;
-    }
-  }
+	&:hover {
+		-webkit-transform: scale(1.25);
+		transform: scale(1.25);
+	}
 }

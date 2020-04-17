@@ -1,21 +1,95 @@
 import React from "react";
 
-import "./index.scss";
-
-import Awards from "../../components/Awards/Awards";
+import AwardListing from "../../components/AwardListing/AwardListing";
 import Experience from "../../components/Experience/Experience";
 import Review from "../../components/Review/Review";
 import Project from "../../components/Project/Project";
 import FooterText from "../../components/FooterText/FooterText";
 
+import Awards from "../../sass/components/Awards";
+import Projects from "../../sass/components/Projects";
+import Reviews from "../../sass/components/Reviews";
+
+import styled from "styled-components";
+
+import { device, until } from "../../utilities/mixins";
+
+const Container = styled.section`
+  padding: 0 25px;
+`;
+
+const Companies = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+
+  margin: 2rem 1rem 2rem;
+
+  ${until(
+    device.iPhone(),
+    () => `
+		display: block;
+
+		margin: 0;
+	`
+  )}
+
+  a {
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    &:last-child > img {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 70%;
+
+      ${until(
+        device.iPhone(),
+        () => `
+				display: block;
+
+				margin: 0 auto 65px;
+
+				width: 50%;
+			`
+      )}
+    }
+  }
+`;
+
+const Experiences = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+
+  margin: 0 2rem;
+
+  ${until(
+    device.iPhone(),
+    () => `
+		grid-template-columns: 1fr;
+		grid-gap: initial;
+
+		margin: 0;
+	`
+  )}
+`;
+
 const Internships = () => (
-  <section id="internships">
+  <Container>
     <h2 className="title">Internships</h2>
     <p className="subtitle">
       Some companies where I've had the privilege to intern at in the past.
     </p>
 
-    <div className="internships">
+    <Companies>
       <a
         href="https://ibm.com/"
         target="_blank"
@@ -46,7 +120,7 @@ const Internships = () => (
           alt="Mack Media Group"
         />
       </a>
-    </div>
+    </Companies>
 
     <h2 className="title" style={{ fontSize: "1.6rem" }}>
       Internship Experiences
@@ -55,7 +129,7 @@ const Internships = () => (
       What I accomplished while I an intern at these respective companies.
     </p>
 
-    <div className="experiences">
+    <Experiences>
       {Experience(
         "IBM",
         "Software Engineering Co-Op",
@@ -96,7 +170,7 @@ const Internships = () => (
           "Leveraged Google AMP pages to develop a user-friendly home page for the agency. The AMP page conversion provided an 80% faster page load time than a traditional web page load time.",
         "https://media-exp1.licdn.com/dms/image/C4D0BAQFvNy_qa6NVAA/company-logo_100_100/0?e=1594857600&v=beta&t=CgLsZPYQ1LQUQUrH80B50JIk05O0UMp3ZXrRHN1pIog"
       )}
-    </div>
+    </Experiences>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>
       Internship Projects
@@ -105,10 +179,10 @@ const Internships = () => (
       Various projects that I've completed as an intern at these companies.
     </p>
 
-    <div className="projects">
+    <Projects>
       {Project("mack-media-group-internship-project", "📱", "smart-phone")}
       {Project("down-to-network", "🖇", "two-paperclips")}
-    </div>
+    </Projects>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>
       Awards and Recognition{" "}
@@ -120,8 +194,8 @@ const Internships = () => (
       Some awards that I have received while I was an intern.
     </p>
 
-    <div className="awards">
-      {Awards(
+    <Awards>
+      {AwardListing(
         "https://media-exp1.licdn.com/dms/image/C4E0BAQGnYJiWaENTZA/company-logo_100_100/0?e=1594857600&v=beta&t=FZQRHFvZPD4nobNJtCL1WL2cwahwJ3it9m9izzr25GY",
         "IBM",
         () => (
@@ -131,7 +205,7 @@ const Internships = () => (
           </>
         )
       )}
-    </div>
+    </Awards>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>
       Thoughts from my Co-Workers
@@ -140,7 +214,7 @@ const Internships = () => (
       What my co-workers have to say about my work.{" "}
     </p>
 
-    <div id="reviews">
+    <Reviews>
       {Review(
         "Kamal Shaham",
         "Software Engineer, IBM",
@@ -153,7 +227,7 @@ const Internships = () => (
         "Nick is a YOUNG GOD on the REACT",
         require("./assets/stephen.jpg")
       )}
-    </div>
+    </Reviews>
 
     {FooterText(
       "Read more about my internships on my ",
@@ -161,6 +235,6 @@ const Internships = () => (
       "https://linkedin.com/in/nicholas-adamou/",
       "linkedin"
     )}
-  </section>
+  </Container>
 );
 export default Internships;

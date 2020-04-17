@@ -1,20 +1,46 @@
 import React from "react";
 
-import "./index.scss";
+import styled from "styled-components";
+
+const Container = styled.p`
+  margin-top: 2rem;
+
+  font-size: 1rem;
+
+  a {
+    text-decoration: underline;
+
+    &.linkedin {
+      color: var(--linkedin);
+    }
+
+    &.github {
+      color: var(--github);
+    }
+
+    &.codepen {
+      color: var(--codepen);
+    }
+
+    &:hover {
+      color: #a6a6a6;
+    }
+  }
+`;
 
 const FooterText = (content, linkBody, link, linkClassName) => (
-  <p className="footer-text">
+  <Container>
     {content}
     <a
       href={link}
       target="_blank"
       aria-hidden="true"
       rel="noopener noreferrer"
-      className={`${linkClassName} link`}
+      className={linkClassName}
     >
       {linkBody}
     </a>
-  </p>
+  </Container>
 );
 
 export default FooterText;

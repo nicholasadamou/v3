@@ -1,215 +1,39 @@
-@import "../../sass/settings/mixins";
+#resume {
+	border-color: var(--red);
+	color: var(--red);
 
-#about-me {
-  text-align: center;
+	&:hover {
+		background-color: var(--red);
+		color: var(--white);
+	}
+}
 
-  padding-bottom: 20px;
+#twitter {
+	border-color: var(--twitter);
+	color: var(--twitter);
 
-  @include until($iphone-7) {
-    width: 100%;
-  }
+	&:hover {
+		background-color: var(--twitter);
+		color: var(--white);
+	}
+}
 
-  .title {
-    font-size: 2.5rem;
+#linkedin {
+	border-color: var(--linkedin);
+	color: var(--linkedin);
 
-    margin-top: 20px;
+	&:hover {
+		background-color: var(--linkedin);
+		color: var(--white);
+	}
+}
 
-    color: #37474f;
+#instagram {
+	border-color: var(--instagram);
+	color: var(--instagram);
 
-    span {
-      color: var(--red);
-    }
-
-    @include until($ipad-pro) {
-      font-size: 2.3rem;
-    }
-
-    @include until($iphone-7) {
-      margin: 0;
-
-      padding-top: 20px;
-      padding-bottom: 10px;
-
-      font-size: 1.5rem;
-      text-align: center;
-    }
-
-    @include until($iphone-5) {
-      font-size: 1.5rem;
-
-      margin-top: 40px;
-    }
-  }
-
-  p {
-    margin: 0 5rem 20px;
-
-    text-align: center;
-
-    &:last-child {
-      margin: 0;
-    }
-
-    @include until($ipad) {
-      margin: 0 2rem 20px;
-    }
-
-    @include until($iphone-7) {
-      margin: 0 auto;
-
-      padding: 10px 25px;
-
-      text-align: center;
-    }
-
-    a {
-      display: inline-block;
-
-      position: relative;
-
-      text-decoration: none;
-
-      color: var(--black);
-
-      -webkit-transition: color 200ms;
-
-      transition: color 200ms;
-
-      &:before {
-        content: "";
-
-        position: absolute;
-        top: 80%;
-        left: 0;
-        right: 0;
-
-        height: 2px;
-
-        opacity: 1;
-        background-color: currentColor;
-
-        -webkit-transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-        transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      }
-
-      &.cornell {
-        &:before {
-          background-color: var(--cornell);
-        }
-
-        &:hover {
-          color: var(--cornell);
-        }
-      }
-
-      &.blackbird {
-        &:before {
-          background-color: var(--blackbird);
-        }
-
-        &:hover {
-          color: var(--blackbird);
-        }
-      }
-
-      &.mack-media-group {
-        &:before {
-          background-color: var(--mack-media-group);
-        }
-
-        &:hover {
-          color: var(--mack-media-group);
-        }
-      }
-
-      &.ibm {
-        &:before {
-          background-color: var(--ibm);
-        }
-
-        &:hover {
-          color: var(--ibm);
-        }
-      }
-    }
-  }
-
-  .btn-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    place-items: center;
-
-    margin: 0 100px;
-
-    @include until($iphone-7) {
-      grid-template-columns: 1fr;
-
-      margin: 0 20px;
-    }
-
-    .btn {
-      display: inline-block;
-
-      width: 100%;
-      height: 50px;
-
-      text-align: center;
-      font-size: 16px;
-
-      border: 2px solid;
-
-      line-height: 3;
-      text-decoration: none;
-
-      -webkit-transition: all 150ms ease-in-out;
-
-      transition: all 150ms ease-in-out;
-
-      @include until($ipad) {
-        width: 100%;
-      }
-    }
-
-    #resume {
-      border-color: var(--red);
-      color: var(--red);
-
-      &:hover {
-        background-color: var(--red);
-        color: var(--white);
-      }
-    }
-
-    #twitter {
-      border-color: var(--twitter);
-      color: var(--twitter);
-
-      &:hover {
-        background-color: var(--twitter);
-        color: var(--white);
-      }
-    }
-
-    #linkedin {
-      border-color: var(--linkedin);
-      color: var(--linkedin);
-
-      &:hover {
-        background-color: var(--linkedin);
-        color: var(--white);
-      }
-    }
-
-    #instagram {
-      border-color: var(--instagram);
-      color: var(--instagram);
-
-      &:hover {
-        background-color: var(--instagram);
-        color: var(--white);
-      }
-    }
-  }
+	&:hover {
+		background-color: var(--instagram);
+		color: var(--white);
+	}
 }

@@ -1,21 +1,49 @@
 import React from "react";
 
-import "./index.scss";
-
-import Awards from "../../components/Awards/Awards";
+import AwardListing from "../../components/AwardListing/AwardListing";
 import Experience from "../../components/Experience/Experience";
 import Review from "../../components/Review/Review";
 import Project from "../../components/Project/Project";
 import FooterText from "../../components/FooterText/FooterText";
 
+import Awards from "../../sass/components/Awards";
+import Projects from "../../sass/components/Projects";
+import Reviews from "../../sass/components/Reviews";
+
+import styled from "styled-components";
+
+import { device, until } from "../../utilities/mixins";
+
+const Container = styled.section`
+  padding: 0 25px;
+`;
+
+const Experiences = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+
+  margin: 0 2rem;
+
+  ${until(
+    device.iPhone(),
+    () => `
+		grid-template-columns: 1fr;
+		grid-gap: initial;
+
+		margin: 0;
+	`
+  )}
+`;
+
 const Education = () => (
-  <section id="education">
+  <Container id="education">
     <h2 className="title">Education</h2>
     <p className="subtitle">
       Some schools where I learned all that I know about software engineering.
     </p>
 
-    <div className="experiences">
+    <Experiences>
       {Experience(
         "Cornell College",
         "Bachelors of Arts, Computer Science",
@@ -54,7 +82,7 @@ const Education = () => (
         ),
         "https://media-exp1.licdn.com/dms/image/C510BAQGKNCEAE6ptOQ/company-logo_100_100/0?e=1594857600&v=beta&t=HxyZzaPhdKwZWlF55i7YDRhnoNzOr5WhWu3IHJLV7Xo"
       )}
-    </div>
+    </Experiences>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>
       Computer Science Projects
@@ -63,7 +91,7 @@ const Education = () => (
       Various projects that I've completed as an computer science student.
     </p>
 
-    <div className="projects">
+    <Projects>
       {Project("distributed-load-balancer", "С", "С")}
       {Project("producer-consumer-simulator", "С", "С")}
       {Project("python-udp-chat-client", "🐍", "python")}
@@ -71,7 +99,7 @@ const Education = () => (
       {Project("python-proxy", "🐍", "python")}
       {Project("cpu-cache-simulator", "🐍", "python")}
       {Project("project-management-capstone-project", "С#", "C#")}
-    </div>
+    </Projects>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>
       Awards and Recognition{" "}
@@ -83,8 +111,8 @@ const Education = () => (
       Some awards that I have received from my studies at either institution.
     </p>
 
-    <div className="awards">
-      {Awards(
+    <Awards>
+      {AwardListing(
         "https://media-exp1.licdn.com/dms/image/C4D0BAQF7q4SbDai9Og/company-logo_100_100/0?e=1594857600&v=beta&t=MfrSYYJ8IqCtfKL_ymEhfW_MXXxHXpSd9SFWDamE31M",
         "Cornell College",
         () => (
@@ -101,7 +129,7 @@ const Education = () => (
           </>
         )
       )}
-      {Awards(
+      {AwardListing(
         "https://media-exp1.licdn.com/dms/image/C510BAQGKNCEAE6ptOQ/company-logo_100_100/0?e=1594857600&v=beta&t=HxyZzaPhdKwZWlF55i7YDRhnoNzOr5WhWu3IHJLV7Xo",
         "Hartwick College",
         () => (
@@ -123,7 +151,7 @@ const Education = () => (
           </>
         )
       )}
-    </div>
+    </Awards>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>
       Thoughts from my Professors and Coaches
@@ -135,7 +163,7 @@ const Education = () => (
       </span>
     </p>
 
-    <div id="reviews">
+    <Reviews>
       {Review(
         "Peter Dumas",
         "Head Tennis Coach, Cornell College",
@@ -156,7 +184,7 @@ const Education = () => (
           "During this time, I have known Nick to be extremely diligent and proficient in his approach with everything that he does.",
         require("./assets/peter.jpg")
       )}
-    </div>
+    </Reviews>
 
     {FooterText(
       "Read more about my education on my ",
@@ -164,7 +192,7 @@ const Education = () => (
       "https://linkedin.com/in/nicholas-adamou/",
       "linkedin"
     )}
-  </section>
+  </Container>
 );
 
 export default Education;

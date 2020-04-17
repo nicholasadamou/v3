@@ -1,7 +1,4 @@
-$iphone-7: 430px;
-$iphone-5: 320px;
-$ipad-pro-landscape: 1400px;
-$ipad-pro: 1024px;
+$iphone: 430px;
 $ipad: 768px;
 
 @mixin until($device) {

@@ -16,7 +16,7 @@ h2 {
     font-size: 4rem;
   }
 
-  @include until($iphone-7) {
+  @include until($iphone) {
     font-size: 2rem;
   }
 }
@@ -25,7 +25,7 @@ h3 {
   font-size: 2rem;
   font-weight: 700;
 
-  @include until($iphone-7) {
+  @include until($iphone) {
     font-size: 1.5rem;
   }
 }
@@ -42,15 +42,9 @@ h3 {
   color: darken(#ccc, 15);
   line-height: 1.5;
 
-  @include until($iphone-7) {
+  @include until($iphone) {
     font-size: 1.15rem;
     margin-bottom: 25px !important;
-  }
-
-  @include until($iphone-5) {
-    font-size: 1rem;
-
-    padding: 0 10px;
   }
 }
 
@@ -59,7 +53,7 @@ p {
 
   color: var(--black);
 
-  @include until($iphone-7) {
+  @include until($iphone) {
     font-size: 1rem;
   }
 }

@@ -1,6 +1,6 @@
-@import "../../sass/settings/mixins";
+import styled from "styled-components";
 
-.wrapper {
+const Container = styled.div`
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
@@ -17,19 +17,10 @@
 
   background: white;
 
-  @include until($ipad) {
-    width: 100%;
-  }
-
-  @include until($iphone-7) {
-    width: 100%;
-    max-width: 100%;
-
-    margin: 10rem auto 0;
-  }
-
   section {
     text-align: center;
     color: var(--black);
   }
-}
+`;
+
+export default Container;

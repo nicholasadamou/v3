@@ -2,7 +2,23 @@ import React, { useEffect } from "react";
 
 import Website from "./components/Website/Website";
 
-import "./index.scss";
+import styled from "styled-components";
+
+const Container = styled.section`
+  overflow: hidden;
+`;
+
+const Sites = styled.div`
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+
+  margin: 0 20px 4rem;
+`;
 
 const emphasize = () => {
   const websites = document.querySelectorAll(".website");
@@ -25,7 +41,7 @@ const Websites = () => {
   });
 
   return (
-    <section id="websites">
+    <Container id="websites">
       <h2 className="title">
         Websites I've Made{" "}
         <span role="img" aria-label="candy">
@@ -37,7 +53,7 @@ const Websites = () => {
         me.
       </p>
 
-      <div className="websites">
+      <Sites>
         {Website(
           "Advanced Electrical Services",
           "https://advanced-electrical-services.netlify.com/",
@@ -56,8 +72,8 @@ const Websites = () => {
           require("./assets/nicholas-adamou/desktop/desktop.png"),
           require("./assets/nicholas-adamou/mobile/mobile.png")
         )}
-      </div>
-    </section>
+      </Sites>
+    </Container>
   );
 };
 

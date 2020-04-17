@@ -3,14 +3,14 @@ import React from "react";
 import Provider from "./context/Provider";
 
 import Nav from "./components/Nav/Nav";
-import Wrapper from "./components/Wrapper/Wrapper";
+import Container from "./components/Container/Container";
 
 import AboutMe from "./sections/AboutMe/AboutMe";
 import Education from "./sections/Education/Education";
 import Internships from "./sections/Internships/Internships";
 import Websites from "./sections/Websites/Websites";
 import OpenSource from "./sections/OpenSource/OpenSource";
-import Experiments from "./sections/Experiments/Experiments";
+import Prototypes from "./sections/Prototypes/Prototypes";
 import Papers from "./sections/Papers/Papers";
 import News from "./sections/News/News";
 import Contact from "./sections/Contact/Contact";
@@ -20,7 +20,7 @@ function App() {
   return (
     <Provider>
       <Nav />
-      <Wrapper>
+      <Container>
         <AboutMe />
         <hr />
         <Education />
@@ -31,14 +31,14 @@ function App() {
         <hr />
         <OpenSource />
         <hr />
-        <Experiments />
+        <Prototypes />
         <hr />
         <Papers />
         <hr />
         <News />
         <hr />
         <Contact />
-      </Wrapper>
+      </Container>
       <Footer />
     </Provider>
   );

@@ -52,26 +52,28 @@ const Container = styled.div`
 		`
     )}
 
-    aside {
-      color: #a6a6a6;
-    }
-
     span {
       margin-top: 5px;
+      margin-left: 20px;
+
+      ${until(
+        device.iPhone(),
+        () => `
+				margin-left: 0;
+			`
+      )}
     }
   }
 `;
 
-const Experience = (company, title, location, duration, description, image) => (
+const AwardListing = (logo, institution, content) => (
   <Container>
-    <img src={image} alt={company} />
+    <img src={logo} alt={institution} />
     <div>
-      <strong>{title}</strong>
-      <aside>{duration}</aside>
-      <aside>{location}</aside>
-      <span>{description()}</span>
+      <strong>{institution} Awards</strong>
+      <span>{content()}</span>
     </div>
   </Container>
 );
 
-export default Experience;
+export default AwardListing;

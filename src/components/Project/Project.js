@@ -1,15 +1,73 @@
 import React, { useState, useEffect } from "react";
 
-import "./index.scss";
-
 import SkeletonProject from "../SkeletonProject/SkeletonProject";
 
 import GitHub from "github-api";
+
+import styled from "styled-components";
+
+import { device, until } from "../../utilities/mixins";
 
 const github = new GitHub({
   username: "nicholasadamou",
   token: process.env.REACT_APP_GITHUB_TOKEN,
 });
+
+const Container = styled.article`
+  margin: 10px 20px;
+
+  ${until(
+    device.iPhone(),
+    () => `
+		width: 100%;
+    max-width: 100%;
+
+    margin: 20px 0;
+	`
+  )}
+`;
+
+const Top = styled.div`
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+  align-items: center;
+
+  margin-bottom: 10px;
+
+  font-size: 1rem;
+
+  span[role="img"] {
+    margin-right: 0;
+  }
+
+  a {
+    margin-left: 5px;
+
+    padding: 5px;
+
+    background: var(--grey);
+    border-radius: 5px;
+
+    color: var(--red);
+    font-size: var(--copy-size);
+    text-decoration: underline;
+
+    -webkit-transition: color 0.25ms ease-in-out;
+
+    transition: color 0.25ms ease-in-out;
+
+    &:hover {
+      color: var(--light-grey);
+    }
+  }
+`;
+
+const Description = styled.span`
+  font-size: var(--copy-size);
+`;
 
 const Project = (repositoryName, emoji, emojiLabel) => {
   const [repository, setRepository] = useState({});
@@ -38,9 +96,9 @@ const Project = (repositoryName, emoji, emojiLabel) => {
   const { name, description, link } = repository;
 
   return (
-    <article className="project">
-      <div className="top">
-        <span className="emoji" role="img" aria-label={emojiLabel}>
+    <Container>
+      <Top>
+        <span role="img" aria-label={emojiLabel}>
           {emoji}
         </span>
         <a
@@ -49,13 +107,11 @@ const Project = (repositoryName, emoji, emojiLabel) => {
           aria-hidden="true"
           rel="noopener noreferrer"
         >
-          <span className="project-title">{name}</span>
+          {name}
         </a>
-      </div>
-      <div className="bottom">
-        <span className="desc">{description}</span>
-      </div>
-    </article>
+      </Top>
+      <Description>{description}</Description>
+    </Container>
   );
 };
 
