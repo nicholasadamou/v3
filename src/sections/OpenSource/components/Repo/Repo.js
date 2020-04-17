@@ -6,24 +6,12 @@ import "./index.scss";
 const round = (num) => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
 
 const Repo = (repository) => {
-  const {
-    id,
-    name,
-    description,
-    link,
-    stars,
-    forks,
-    emoji,
-    emojiLabel,
-  } = repository;
+  const { id, name, description, link, stars, forks } = repository;
 
   return (
     <article className="repo" key={id}>
       <div className="top">
         <div className="left">
-          <span className="emoji" role="img" aria-label={emojiLabel}>
-            {emoji}
-          </span>
           <a
             href={link}
             target="_blank"

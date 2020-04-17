@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./index.scss";
-
 import { SkeletonText } from "carbon-components-react";
 
 import CircularProgress from "@material-ui/core/CircularProgress";

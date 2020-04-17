@@ -13,10 +13,6 @@
     padding: 0 20px;
   }
 
-  .emoji {
-    margin-right: 0;
-  }
-
   a {
     text-decoration: none;
     color: var(--black);
@@ -39,24 +35,20 @@
 
     font-size: var(--copy-size);
 
-    .MuiCircularProgress-root {
-      width: 10px !important;
-      height: 10px !important;
-      color: var(--black);
-    }
-
     .repo-title,
     .stars,
     .forks {
-      margin-left: 10px;
-
       padding: 5px;
 
       background: var(--grey);
       border-radius: 5px;
 
       color: var(--black);
-    }
+		}
+
+		.stars, .forks {
+			margin-left: 10px;
+		}
 
     .repo-title {
       color: var(--red);
@@ -92,10 +84,6 @@
 
     div {
       margin-top: 20px;
-
-      .bx--skeleton__text {
-        height: 0.75rem;
-      }
     }
   }
 }

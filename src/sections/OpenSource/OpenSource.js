@@ -38,8 +38,6 @@ class OpenSource extends React.Component {
             link: repository.html_url,
             stars: repository.stargazers_count,
             forks: repository.forks_count,
-            emoji: "🛠️",
-            emojiLabel: "hammer-and-wrench",
           };
         });
 
