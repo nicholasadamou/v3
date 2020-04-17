@@ -55,7 +55,7 @@ This project uses the following technologies:
 - [**Carbon Design System**](https://carbondesignsystem.com) - Carbon is the design system for IBM web and product. It is a series of individual styles, components, and guidelines used for creating unified UI.
 - [**Figma**](https://www.figma.com/) - Build better products as a team. Design, prototype, and gather feedback all in one place with Figma.
 
-## ✅ CI/CD Pipeline
+## ⛓️ CI/CD Pipeline
 
 This project uses the following CI/CD Pipeline:
 
