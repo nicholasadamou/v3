@@ -107,7 +107,7 @@ const Internships = () => (
 
     <div className="projects">
       {Project("mack-media-group-internship-project", "📱", "smart-phone")}
-      {Project("producer-consumer-simulator", "🖇", "two-paperclips")}
+      {Project("down-to-network", "🖇", "two-paperclips")}
     </div>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>
