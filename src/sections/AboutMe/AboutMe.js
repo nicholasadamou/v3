@@ -10,6 +10,8 @@ import { device, until } from "../../utilities/mixins";
 
 import "./index.scss";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Container = styled.section`
   text-align: center;
 
@@ -284,7 +286,7 @@ const AboutMe = () => (
         rel="noopener noreferrer"
         id="linkedin"
       >
-        Connect with Me on <i className="fab fa-linkedin" />
+        Connect with Me on <FontAwesomeIcon icon={["fab", "linkedin"]} />
       </a>
       <a
         href="https://twitter.com/NicholasAdamou"
@@ -293,7 +295,7 @@ const AboutMe = () => (
         rel="noopener noreferrer"
         id="twitter"
       >
-        Follow Me on <i className="fab fa-twitter" />
+        Follow Me on <FontAwesomeIcon icon={["fab", "twitter"]} />
       </a>
       <a
         href="https://www.instagram.com/nicholasadamou/"
@@ -302,7 +304,7 @@ const AboutMe = () => (
         rel="noopener noreferrer"
         id="instagram"
       >
-        Follow Me on <i className="fab fa-instagram" />
+        Follow Me on <FontAwesomeIcon icon={["fab", "instagram"]} />
       </a>
     </Social>
   </Container>

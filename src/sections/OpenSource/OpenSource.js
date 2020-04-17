@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./index.scss";
-
 import Repo from "./components/Repo/Repo";
 import SkeletonRepo from "./components/SkeletonRepo/SkeletonRepo";
 
@@ -12,6 +10,8 @@ import styled from "styled-components";
 import { github } from "../../utilities/utilities";
 
 import { device, until } from "../../utilities/mixins";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Repositories = styled.div`
   display: grid;
@@ -87,7 +87,11 @@ class OpenSource extends React.Component {
     return (
       <section id="open-source">
         <h2 className="title">
-          Open Source <i className="fab fa-git-alt"></i>
+          Open Source{" "}
+          <FontAwesomeIcon
+            icon={["fab", "git-alt"]}
+            style={{ fontSize: "2.5rem", color: "var(--git)" }}
+          />
         </h2>
         <p className="subtitle">
           I am an{" "}

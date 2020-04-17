@@ -46,6 +46,16 @@ const Repository = styled.article`
       width: 100%;
     }
 
+    svg[data-prefix="fas"] {
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
+      }
+    }
+
     a {
       color: var(--red);
       font-size: var(--copy-size);

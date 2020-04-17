@@ -16,6 +16,16 @@ import News from "./sections/News/News";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import {
+  faHeart,
+  faStar,
+  faCodeBranch,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, faHeart, faStar, faCodeBranch);
+
 function App() {
   return (
     <Provider>

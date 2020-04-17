@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./index.scss";
-
 import Repository from "../../../../sass/components/Repository";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Round the number like "3.5k" https://stackoverflow.com/a/9461657
 const round = (num) => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
@@ -30,7 +30,7 @@ const Repo = (repository) => {
           rel="noopener noreferrer"
         >
           <span role="img" aria-label="star">
-            <i className="fas fa-star"></i> {round(stars)}
+            <FontAwesomeIcon icon={["fas", "star"]} /> {round(stars)}
           </span>
         </a>
         <a
@@ -42,7 +42,7 @@ const Repo = (repository) => {
           rel="noopener noreferrer"
         >
           <span role="img" aria-label="branch">
-            <i className="fas fa-code-branch"></i> {round(forks)}
+            <FontAwesomeIcon icon={["fas", "code-branch"]} /> {round(forks)}
           </span>
         </a>
       </div>

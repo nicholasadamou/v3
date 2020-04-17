@@ -6,6 +6,8 @@ import Logo from "../../components/Logo/Logo";
 
 import styled from "styled-components";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Container = styled.footer`
   display: grid !important;
   place-content: center;
@@ -93,7 +95,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li>
-            <i className="fab fa-codepen" />
+            <FontAwesomeIcon icon={["fab", "codepen"]} />
           </li>
         </a>
         <a
@@ -105,7 +107,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li>
-            <i className="fab fa-github" />
+            <FontAwesomeIcon icon={["fab", "github"]} />
           </li>
         </a>
         <a
@@ -117,7 +119,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li className="linkedin">
-            <i className="fab fa-linkedin" />
+            <FontAwesomeIcon icon={["fab", "linkedin"]} />
           </li>
         </a>
         <a
@@ -129,7 +131,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li className="twitter">
-            <i className="fab fa-twitter" />
+            <FontAwesomeIcon icon={["fab", "twitter"]} />
           </li>
         </a>
         <a
@@ -141,7 +143,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li className="instagram">
-            <i className="fab fa-instagram" />
+            <FontAwesomeIcon icon={["fab", "instagram"]} />
           </li>
         </a>
       </ul>
@@ -149,8 +151,9 @@ const Footer = () => (
 
     <p>
       Handcrafted with{" "}
-      <i
-        className="animated heartBeat infinite fas fa-heart"
+      <FontAwesomeIcon
+        icon={["fas", "heart"]}
+        className="animated heartBeat infinite"
         style={{ color: "red" }}
       />{" "}
       by myself. Copyright &copy; {moment(Date.now()).year()}.

@@ -4,6 +4,8 @@ import { SkeletonText } from "carbon-components-react";
 
 import CircularProgress from "@material-ui/core/CircularProgress";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Repository from "../../../../sass/components/Repository";
 
 const SkeletonRepo = (id) => (
@@ -22,7 +24,7 @@ const SkeletonRepo = (id) => (
         rel="noopener noreferrer"
       >
         <span role="img" aria-label="star">
-          <i className="fas fa-star"></i>
+          <FontAwesomeIcon icon={["fas", "star"]} />
           <>
             {" "}
             <CircularProgress />
@@ -39,7 +41,7 @@ const SkeletonRepo = (id) => (
         rel="noopener noreferrer"
       >
         <span role="img" aria-label="branch">
-          <i className="fas fa-code-branch"></i>
+          <FontAwesomeIcon icon={["fas", "code-branch"]} />
           <>
             {" "}
             <CircularProgress />
