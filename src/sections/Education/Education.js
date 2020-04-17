@@ -14,6 +14,8 @@ import styled from "styled-components";
 
 import { device, until } from "../../utilities/mixins";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Container = styled.section`
   padding: 0 25px;
 `;
@@ -38,7 +40,12 @@ const Experiences = styled.div`
 
 const Education = () => (
   <Container id="education">
-    <h2 className="title">Education</h2>
+    <h2 className="title">
+      Education{" "}
+      <span role="img" aria-label="graduate">
+        👨🏼‍🎓
+      </span>
+    </h2>
     <p className="subtitle">
       Some schools where I learned all that I know about software engineering.
     </p>

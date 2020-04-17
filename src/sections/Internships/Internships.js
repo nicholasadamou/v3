@@ -84,7 +84,12 @@ const Experiences = styled.div`
 
 const Internships = () => (
   <Container>
-    <h2 className="title">Internships</h2>
+    <h2 className="title">
+      Internships{" "}
+      <span role="img" aria-label="coder">
+        👨🏼‍💻
+      </span>
+    </h2>
     <p className="subtitle">
       Some companies where I've had the privilege to intern at in the past.
     </p>
