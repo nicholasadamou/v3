@@ -14,8 +14,6 @@ import styled from "styled-components";
 
 import { device, until } from "../../utilities/mixins";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 const Container = styled.section`
   padding: 0 25px;
 `;
