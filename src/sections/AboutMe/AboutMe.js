@@ -40,6 +40,7 @@ const Container = styled.section`
       device.iPhone(),
       () => `
 			margin: 0;
+			margin-bottom: 0px !important;
 
 			padding-top: 20px;
 			padding-bottom: 10px;
