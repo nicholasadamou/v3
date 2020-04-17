@@ -1,117 +1,118 @@
-import React from 'react'
+import React from "react";
 
-import Repo from "./components/Repo/Repo"
-import SkeletonRepo from "./components/SkeletonRepo/SkeletonRepo"
+import Context from "../../context/Context";
 
-import './index.scss'
+import "./index.scss";
 
-import FooterText from "../../components/FooterText/FooterText"
+import Repo from "./components/Repo/Repo";
+import SkeletonRepo from "./components/SkeletonRepo/SkeletonRepo";
 
-import GitHub from 'github-api'
+import FooterText from "../../components/FooterText/FooterText";
 
-const github = new GitHub({
-	username: 'nicholasadamou',
-	token: process.env.REACT_APP_GITHUB_TOKEN
-})
+const MAX_NUMBER_OF_REPOSITORIES = 9;
 
 class OpenSource extends React.Component {
-	constructor(props) {
-		super(props)
+  static contextType = Context;
 
-		this.state = {
-			loading: true,
-			repositories: [
-				{}, {}, {}
-			]
-		}
-	}
+  constructor(props) {
+    super(props);
 
-	componentDidMount() {
-		github.getUser().listRepos().then(response => {
-			let repositories = response.data.map(repository => {
-				return {
-					id: repository.id,
-					name: repository.name,
-					description: repository.description,
-					link: repository.html_url,
-					stars: repository.stargazers_count,
-					forks: repository.forks_count
-				}
-			})
+    this.state = {
+      isLoading: true,
+      repositories: new Array(MAX_NUMBER_OF_REPOSITORIES).fill({}),
+    };
+  }
 
-			repositories.sort((a, b) => {
-				if (a.stars < b.stars) return 1;
-				if (a.stars > b.stars) return -1;
-				return 0;
-			})
+  componentDidMount() {
+    const { github } = this.context;
 
-			repositories = repositories.slice(0, 3)
+    github
+      .getUser()
+      .listRepos()
+      .then((response) => {
+        let repositories = response.data.map((repository) => {
+          return {
+            id: repository.id,
+            name: repository.name.toLowerCase(),
+            description: repository.description,
+            link: repository.html_url,
+            stars: repository.stargazers_count,
+            forks: repository.forks_count,
+            emoji: "🛠️",
+            emojiLabel: "hammer-and-wrench",
+          };
+        });
 
-			this.setState({
-				loading: false,
-				repositories
-			})
-		})
-	}
+        repositories.sort((a, b) => {
+          if (a.stars < b.stars) return 1;
+          if (a.stars > b.stars) return -1;
+          return 0;
+        });
 
-	render() {
-		const { repositories, loading } = this.state
+        repositories = repositories.slice(0, MAX_NUMBER_OF_REPOSITORIES);
 
-		return (
-			<section id="open-source">
-				<h2 className="title">
-					Open Source{' '}
-					<i className="fab fa-git-alt"></i>
-				</h2>
-				<p className="subtitle">
-					I am an{' '}
-					<a
-						href="http://git-awards.com/users/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						avid open-sourcer
-					</a>
-					{' '}and I have{' '}
-					<a
-						href="https://github.com/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						many repositories
-					</a>
-					{' '}. Take a <span role="img" aria-label="eyes">👀</span>.
-				</p>
+        this.setState({
+          isLoading: false,
+          repositories,
+        });
+      });
+  }
 
-				<div className="repositories">
-					{
-						loading
-							?
-								repositories.map((current, index) => {
-									return SkeletonRepo(index, "⏳", "hourglass")
-								})
-							:
-								repositories.map(repository => {
-									return Repo(repository, "🛠️", "hammer-and-wrench")
-								})
-					}
-				</div>
+  render() {
+    const { repositories, isLoading } = this.state;
 
-				{
-					FooterText(
-						"More can be found on my ",
-						"GitHub",
-						"https://github.com/nicholasadamou",
-						"github"
-					)
-				}
-			</section>
-		)
-	}
+    return (
+      <section id="open-source">
+        <h2 className="title">
+          Open Source <i className="fab fa-git-alt"></i>
+        </h2>
+        <p className="subtitle">
+          I am an{" "}
+          <a
+            href="http://git-awards.com/users/nicholasadamou"
+            target="_blank"
+            aria-hidden="true"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            avid open-sourcer
+          </a>{" "}
+          and I have{" "}
+          <a
+            href="https://github.com/nicholasadamou"
+            target="_blank"
+            aria-hidden="true"
+            rel="noopener noreferrer"
+            className="link"
+          >
+            many repositories
+          </a>{" "}
+          . Take a{" "}
+          <span role="img" aria-label="eyes">
+            👀
+          </span>
+          .
+        </p>
+
+        <div className="repositories">
+          {isLoading
+            ? repositories.map((current, index) => {
+                return SkeletonRepo(index);
+              })
+            : repositories.map((repository) => {
+                return Repo(repository);
+              })}
+        </div>
+
+        {FooterText(
+          "More can be found on my ",
+          "GitHub",
+          "https://github.com/nicholasadamou",
+          "github"
+        )}
+      </section>
+    );
+  }
 }
 
 export default OpenSource;

@@ -6,12 +6,12 @@ import { SkeletonText } from "carbon-components-react";
 
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-const SkeletonRepo = (id, emoji, label) => (
+const SkeletonRepo = (id) => (
   <article className="repo" key={id}>
     <div className="top">
       <div className="left">
-        <span className="emoji" role="img" aria-label={label}>
-          {emoji}
+        <span className="emoji" role="img" aria-label="hourglass">
+          ⏳
         </span>
         <span className="repo-title">
           <CircularProgress />

@@ -5,14 +5,23 @@ import "./index.scss";
 // Round the number like "3.5k" https://stackoverflow.com/a/9461657
 const round = (num) => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
 
-const Repo = (repository, emoji, label) => {
-  const { name, description, id, link, stars, forks } = repository;
+const Repo = (repository) => {
+  const {
+    id,
+    name,
+    description,
+    link,
+    stars,
+    forks,
+    emoji,
+    emojiLabel,
+  } = repository;
 
   return (
     <article className="repo" key={id}>
       <div className="top">
         <div className="left">
-          <span className="emoji" role="img" aria-label={label}>
+          <span className="emoji" role="img" aria-label={emojiLabel}>
             {emoji}
           </span>
           <a
@@ -21,7 +30,7 @@ const Repo = (repository, emoji, label) => {
             aria-hidden="true"
             rel="noopener noreferrer"
           >
-            <span className="repo-title">{name.toLowerCase()}</span>
+            <span className="repo-title">{name}</span>
           </a>
         </div>
         <div className="right">

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import image from "../../../../assets/images/avatar";
+import image from "../../assets/avatar";
 
 const Avatar = styled.div`
   position: relative;
@@ -16,13 +16,6 @@ const Avatar = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-
-  @include until($iphone-7) {
-    width: 200px;
-    height: 200px;
-
-    margin-top: -100px;
-  }
 `;
 
 export default Avatar;
