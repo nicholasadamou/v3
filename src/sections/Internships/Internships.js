@@ -126,7 +126,7 @@ const Internships = () => (
       Internship Experiences
     </h2>
     <p className="subtitle" style={{ fontSize: "1.125rem" }}>
-      What I accomplished while I an intern at these respective companies.
+      What I accomplished while I was an intern at these respective companies.
     </p>
 
     <Experiences>
