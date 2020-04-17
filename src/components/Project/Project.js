@@ -2,16 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import SkeletonProject from "../SkeletonProject/SkeletonProject";
 
-import GitHub from "github-api";
-
 import styled from "styled-components";
 
-import { device, until } from "../../utilities/mixins";
+import { github } from "../../utilities/utilities";
 
-const github = new GitHub({
-  username: "nicholasadamou",
-  token: process.env.REACT_APP_GITHUB_TOKEN,
-});
+import { device, until } from "../../utilities/mixins";
 
 const Container = styled.article`
   margin: 10px 20px;

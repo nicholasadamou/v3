@@ -1,7 +1,5 @@
 import React from "react";
 
-import Context from "../../context/Context";
-
 import "./index.scss";
 
 import Repo from "./components/Repo/Repo";
@@ -10,6 +8,8 @@ import SkeletonRepo from "./components/SkeletonRepo/SkeletonRepo";
 import FooterText from "../../components/FooterText/FooterText";
 
 import styled from "styled-components";
+
+import { github } from "../../utilities/utilities";
 
 import { device, until } from "../../utilities/mixins";
 
@@ -41,8 +41,6 @@ const Repositories = styled.div`
 const MAX_NUMBER_OF_REPOSITORIES = 9;
 
 class OpenSource extends React.Component {
-  static contextType = Context;
-
   constructor(props) {
     super(props);
 
@@ -53,8 +51,6 @@ class OpenSource extends React.Component {
   }
 
   componentDidMount() {
-    const { github } = this.context;
-
     github
       .getUser()
       .listRepos()
