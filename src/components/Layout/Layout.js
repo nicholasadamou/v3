@@ -10,7 +10,7 @@ import Provider from "../../context/Provider";
 
 import GlobalStyles from "../../sass/GlobalStyles";
 
-import Fonts from "../..//assets/Fonts/Fonts";
+import Fonts from "../../assets/Fonts/Fonts";
 
 import Nav from "../Nav/Nav";
 import Container from "../Container/Container";
