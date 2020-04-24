@@ -2,6 +2,8 @@ import React from "react";
 
 import styled from "styled-components";
 
+import Media from "../Media/Media";
+
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.div`
@@ -68,7 +70,7 @@ const Container = styled.div`
 
 const AwardListing = (logo, institution, content) => (
   <Container>
-    <img src={logo} alt={institution} />
+    <Media url={logo} alt={institution} size={50} />
     <div>
       <strong>{institution} Awards</strong>
       <span>{content()}</span>

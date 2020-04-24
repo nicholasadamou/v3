@@ -2,6 +2,8 @@ import React from "react";
 
 import styled from "styled-components";
 
+import Media from "../Media/Media";
+
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.div`
@@ -64,7 +66,7 @@ const Container = styled.div`
 
 const Experience = (company, title, location, duration, description, image) => (
   <Container>
-    <img src={image} alt={company} />
+    <Media url={image} alt={company} size={50} />
     <div>
       <strong>{title}</strong>
       <aside>{duration}</aside>

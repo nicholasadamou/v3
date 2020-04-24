@@ -32,7 +32,14 @@ export const github = new GitHub({
   token: process.env.REACT_APP_GITHUB_TOKEN,
 });
 
+export const useWeserv = (url, size) => {
+  return `https://images.weserv.nl/?url=${encodeURIComponent(
+    url
+  )}&w=${size}&h=${size}`;
+};
+
 export default {
   isMobile,
   github,
+  useWeserv,
 };
