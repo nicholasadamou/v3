@@ -6,9 +6,9 @@ import Review from "../../components/Review/Review";
 import Project from "../../components/Project/Project";
 import FooterText from "../../components/FooterText/FooterText";
 
-import Awards from "../../sass/components/Awards";
-import Projects from "../../sass/components/Projects";
-import Reviews from "../../sass/components/Reviews";
+import Awards from "../../sass/Awards";
+import Projects from "../../sass/Projects";
+import Reviews from "../../sass/Reviews";
 
 import styled from "styled-components";
 
@@ -83,7 +83,7 @@ const Experiences = styled.div`
 `;
 
 const Internships = () => (
-  <Container>
+  <Container id="internships">
     <h2 className="title">
       Internships{" "}
       <span role="img" aria-label="coder">

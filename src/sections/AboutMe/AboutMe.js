@@ -1,6 +1,6 @@
 import React from "react";
 
-import Avatar from "../../sass/components/Avatar";
+import Avatar from "../../sass/Avatar";
 
 import WaveEmoji from "../../components/WaveEmoji/WaveEmoji";
 

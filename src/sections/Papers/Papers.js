@@ -2,7 +2,7 @@ import React from "react";
 
 import Article from "../../components/Article/Article";
 
-import Articles from "../../sass/components/Articles";
+import Articles from "../../sass/Articles";
 
 const Papers = () => (
   <section id="papers">

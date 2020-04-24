@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { device, until } from "../../utilities/mixins";
+import { device, until } from "../utilities/mixins";
 
 const Reviews = styled.div`
   display: grid;

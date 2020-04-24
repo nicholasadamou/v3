@@ -6,7 +6,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import Repository from "../../../../sass/components/Repository";
+import Repository from "../../../../sass/Repository";
 
 const SkeletonRepo = (id) => (
   <Repository key={id}>

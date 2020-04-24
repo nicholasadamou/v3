@@ -1,9 +1,6 @@
 import React from "react";
 
-import Provider from "./context/Provider";
-
-import Nav from "./components/Nav/Nav";
-import Container from "./components/Container/Container";
+import Layout from "./components/Layout/Layout";
 
 import AboutMe from "./sections/AboutMe/AboutMe";
 import Education from "./sections/Education/Education";
@@ -14,44 +11,29 @@ import Prototypes from "./sections/Prototypes/Prototypes";
 import Papers from "./sections/Papers/Papers";
 import News from "./sections/News/News";
 import Contact from "./sections/Contact/Contact";
-import Footer from "./sections/Footer/Footer";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import {
-  faHeart,
-  faStar,
-  faCodeBranch,
-} from "@fortawesome/free-solid-svg-icons";
-
-library.add(fab, faHeart, faStar, faCodeBranch);
 
 function App() {
-  return (
-    <Provider>
-      <Nav />
-      <Container>
-        <AboutMe />
-        <hr />
-        <Education />
-        <hr />
-        <Internships />
-        <hr />
-        <Websites />
-        <hr />
-        <OpenSource />
-        <hr />
-        <Prototypes />
-        <hr />
-        <Papers />
-        <hr />
-        <News />
-        <hr />
-        <Contact />
-      </Container>
-      <Footer />
-    </Provider>
-  );
+  return Layout(() => (
+    <>
+      <AboutMe />
+      <hr />
+      <Education />
+      <hr />
+      <Internships />
+      <hr />
+      <Websites />
+      <hr />
+      <OpenSource />
+      <hr />
+      <Prototypes />
+      <hr />
+      <Papers />
+      <hr />
+      <News />
+      <hr />
+      <Contact />
+    </>
+  ));
 }
 
 export default App;

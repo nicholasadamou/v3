@@ -1,6 +1,6 @@
 import React from "react";
 
-import Repository from "../../../../sass/components/Repository";
+import Repository from "../../../../sass/Repository";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 

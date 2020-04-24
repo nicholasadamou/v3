@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { device, until } from "../../utilities/mixins";
+import { device, until } from "../utilities/mixins";
 
 const Repository = styled.article`
   margin: 10px 20px;
