@@ -64,7 +64,7 @@ const Description = styled.span`
   font-size: var(--copy-size);
 `;
 
-const Project = (repositoryName, emoji, emojiLabel) => {
+const useGitHub = (repositoryName) => {
   const [repository, setRepository] = useState({});
 
   useEffect(() => {
@@ -85,6 +85,12 @@ const Project = (repositoryName, emoji, emojiLabel) => {
 
     fetchRepository();
   }, [repositoryName, repository]);
+
+  return repository;
+};
+
+const Project = (repositoryName, emoji, emojiLabel) => {
+  const repository = useGitHub(repositoryName);
 
   if (JSON.stringify(repository) === "{}") return <SkeletonProject />;
 
