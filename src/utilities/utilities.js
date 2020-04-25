@@ -35,7 +35,7 @@ export const github = new GitHub({
 });
 
 export const useCloudinary = (public_id, transformation) => {
-  if (!transformation) transformation = `q_auto,f_auto`;
+  if (!transformation) transformation = `dpr_2.0,q_auto,f_auto`;
 
   const to_sign = [decodeURI(transformation), decodeURI(public_id)].join("/");
 
