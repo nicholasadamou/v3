@@ -93,6 +93,8 @@ const Container = styled.section`
 
       color: var(--black);
 
+      font-weight: bolder;
+
       -webkit-transition: color 200ms;
 
       transition: color 200ms;
@@ -116,42 +118,34 @@ const Container = styled.section`
       }
 
       &.cornell {
+        color: var(--cornell);
+
         &:before {
           background-color: var(--cornell);
-        }
-
-        &:hover {
-          color: var(--cornell);
         }
       }
 
       &.blackbird {
+        color: var(--blackbird);
+
         &:before {
           background-color: var(--blackbird);
-        }
-
-        &:hover {
-          color: var(--blackbird);
         }
       }
 
       &.mack-media-group {
+        color: var(--mack-media-group);
+
         &:before {
           background-color: var(--mack-media-group);
-        }
-
-        &:hover {
-          color: var(--mack-media-group);
         }
       }
 
       &.ibm {
+        color: var(--ibm);
+
         &:before {
           background-color: var(--ibm);
-        }
-
-        &:hover {
-          color: var(--ibm);
         }
       }
     }

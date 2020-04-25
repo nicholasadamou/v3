@@ -61,6 +61,7 @@ const Pen = (title, desc, link, emoji, label) => (
         target="_blank"
         aria-hidden="true"
         rel="noopener noreferrer"
+        className="link"
       >
         {title}
       </a>

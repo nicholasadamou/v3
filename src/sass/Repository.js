@@ -89,6 +89,11 @@ const Repository = styled.article`
           }
         }
 
+        &[aria-label="star"],
+        &[aria-label="branch"] {
+          font-weight: normal;
+        }
+
         &[aria-label="star"] {
           color: var(--star);
         }

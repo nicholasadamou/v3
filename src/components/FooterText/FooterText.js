@@ -36,7 +36,7 @@ const FooterText = (content, linkBody, link, linkClassName) => (
       target="_blank"
       aria-hidden="true"
       rel="noopener noreferrer"
-      className={linkClassName}
+      className={`link ${linkClassName}`}
     >
       {linkBody}
     </a>

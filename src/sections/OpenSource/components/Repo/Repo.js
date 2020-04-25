@@ -18,6 +18,7 @@ const Repo = (repository) => {
           target="_blank"
           aria-hidden="true"
           rel="noopener noreferrer"
+          className="link"
         >
           <span aria-label="title">{name}</span>
         </a>

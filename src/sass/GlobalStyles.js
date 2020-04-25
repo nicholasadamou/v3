@@ -173,6 +173,11 @@ const GlobalStyles = createGlobalStyle`
     )}
 	}
 
+	.link {
+		font-weight: normal;
+		font-style: normal;
+	}
+
 	p {
 	  font-size: var(--copy-size);
 

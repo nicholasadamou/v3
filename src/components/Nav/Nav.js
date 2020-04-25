@@ -40,6 +40,7 @@ const Container = styled.div`
 
     color: var(--black);
     font-size: 16px;
+    font-weight: normal;
 
     cursor: pointer;
 
@@ -84,7 +85,6 @@ const Container = styled.div`
     padding: 0 0 0 20px;
 
     font-family: var(--secondary);
-    font-weight: 400;
 
     text-decoration: none;
 
@@ -177,6 +177,7 @@ class Nav extends React.Component {
           <a
             href="mailto:nicholasadamouemail@gmail.com?subject=Hello"
             id="email"
+            className="link"
           >
             Say "Hi" <WaveEmoji />
           </a>

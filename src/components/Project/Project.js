@@ -107,6 +107,7 @@ const Project = (repositoryName, emoji, emojiLabel) => {
           target="_blank"
           aria-hidden="true"
           rel="noopener noreferrer"
+          className="link"
         >
           {name}
         </a>
