@@ -176,6 +176,10 @@ const GlobalStyles = createGlobalStyle`
 	.link {
 		font-weight: normal;
 		font-style: normal;
+
+		&:hover {
+			color: var(--light-grey);
+		}
 	}
 
 	p {
