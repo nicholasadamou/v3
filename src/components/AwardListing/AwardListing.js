@@ -2,8 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 
-import Media from "../Media/Media";
-
+import { useCloudinary } from "../../utilities/utilities";
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.div`
@@ -27,7 +26,6 @@ const Container = styled.div`
     border-radius: 5%;
 
     width: 50px;
-    height: 50px;
 
     ${until(
       device.iPhone(),
@@ -70,7 +68,7 @@ const Container = styled.div`
 
 const AwardListing = (logo, institution, content) => (
   <Container>
-    <Media url={logo} alt={institution} size={50} />
+    <img src={useCloudinary(logo)} alt={institution} />
     <div>
       <strong>{institution} Awards</strong>
       <span>{content()}</span>

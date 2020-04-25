@@ -33,7 +33,7 @@ and host it statically on [surge.sh](http://surge.sh).
 git clone https://github.com/nicholasadamou/nicholasadamou.com
 cd nicholasadamou.com
 npx yarn install
-npx yarn dev
+npx yarn netlify
 ```
 
 ## 📚 The Tech. Stack

@@ -2,8 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 
-import Media from "../Media/Media";
-
+import { useCloudinary } from "../../utilities/utilities";
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.div`
@@ -25,6 +24,8 @@ const Container = styled.div`
     margin-top: 5px;
 
     border-radius: 5%;
+
+    width: 50px;
 
     ${until(
       device.iPhone(),
@@ -63,7 +64,7 @@ const Container = styled.div`
 
 const Experience = (company, title, location, duration, description, image) => (
   <Container>
-    <Media url={image} alt={company} size={50} />
+    <img src={useCloudinary(image)} alt={company} />
     <div>
       <strong>{title}</strong>
       <aside>{duration}</aside>
