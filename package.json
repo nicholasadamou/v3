@@ -11,17 +11,21 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "netlify": "^4.0.5",
+    "netlify-lambda": "^1.6.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "postinstall": "netlify-lambda install",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
+    "netlify": "netlify dev",
     "update-dependencies": "npx yarn-check -u",
     "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json",
-    "deploy": "npx surge --project build/ --domain nicholasadamou.com",
+    "deploy": "netlify deploy",
     "test": "exit 0"
   },
   "eslintConfig": {
@@ -56,7 +60,8 @@
     "react-css-burger": "^0.2.0",
     "react-helmet": "^6.0.0",
     "react-scroll": "^1.7.16",
+    "sha1": "^1.1.1",
     "styled-components": "^5.0.1",
-    "surge": "^0.21.3"
+    "urlsafe-base64": "^1.0.0"
   }
 }

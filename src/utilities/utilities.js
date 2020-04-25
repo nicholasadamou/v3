@@ -1,4 +1,6 @@
 import GitHub from "github-api";
+import URLSafeBase64 from "urlsafe-base64";
+import sha1 from "sha1";
 
 export const isMobile = {
   Android: function () {
@@ -32,14 +34,23 @@ export const github = new GitHub({
   token: process.env.REACT_APP_GITHUB_TOKEN,
 });
 
-export const useWeserv = (url, size) => {
-  return `https://images.weserv.nl/?url=${encodeURIComponent(
-    url
-  )}&w=${size}&h=${size}`;
+export const useCloudinary = (public_id, transformation) => {
+  if (!transformation) transformation = `q_auto,f_auto`;
+
+  const to_sign = [decodeURI(transformation), decodeURI(public_id)].join("/");
+
+  const signature = `s--${URLSafeBase64.encode(
+    sha1(to_sign + process.env.REACT_APP_CLOUDINARY_API_SECRET).slice(0, 8)
+  )}--`;
+
+  return `https://res.cloudinary.com/nicholasadamou/image/fetch/${[
+    signature,
+    to_sign,
+  ].join("/")}`;
 };
 
 export default {
   isMobile,
   github,
-  useWeserv,
+  useCloudinary,
 };

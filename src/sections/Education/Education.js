@@ -72,7 +72,7 @@ const Education = () => (
             {")"}
           </>
         ),
-        "https://media-exp1.licdn.com/dms/image/C4D0BAQF7q4SbDai9Og/company-logo_100_100/0?e=1594857600&v=beta&t=MfrSYYJ8IqCtfKL_ymEhfW_MXXxHXpSd9SFWDamE31M"
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/cornell-college.png"
       )}
       {Experience(
         "Hartwick College",
@@ -85,7 +85,7 @@ const Education = () => (
             {" 3.96 out of 4.0"}
           </>
         ),
-        "https://media-exp1.licdn.com/dms/image/C510BAQGKNCEAE6ptOQ/company-logo_100_100/0?e=1594857600&v=beta&t=HxyZzaPhdKwZWlF55i7YDRhnoNzOr5WhWu3IHJLV7Xo"
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/hartwick-college.png"
       )}
     </Experiences>
 
@@ -118,7 +118,7 @@ const Education = () => (
 
     <Awards>
       {AwardListing(
-        "https://media-exp1.licdn.com/dms/image/C4D0BAQF7q4SbDai9Og/company-logo_100_100/0?e=1594857600&v=beta&t=MfrSYYJ8IqCtfKL_ymEhfW_MXXxHXpSd9SFWDamE31M",
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/cornell-college.png",
         "Cornell College",
         () => (
           <>
@@ -135,7 +135,7 @@ const Education = () => (
         )
       )}
       {AwardListing(
-        "https://media-exp1.licdn.com/dms/image/C510BAQGKNCEAE6ptOQ/company-logo_100_100/0?e=1594857600&v=beta&t=HxyZzaPhdKwZWlF55i7YDRhnoNzOr5WhWu3IHJLV7Xo",
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/hartwick-college.png",
         "Hartwick College",
         () => (
           <>
@@ -173,13 +173,13 @@ const Education = () => (
         "Peter Dumas",
         "Head Tennis Coach, Cornell College",
         "Nick is an incredibly gifted student and he will serve as an impressive example for publications about recent graduates and future recruitment of computer science majors.",
-        require("./assets/peter.jpg")
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/peter.jpg"
       )}
       {Review(
         "Peter Dumas",
         "Head Tennis Coach, Cornell College",
         "Nick is  an example of the best type of student that this environment can produce. He is active on campus and is a leader on our team.",
-        require("./assets/peter.jpg")
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/peter.jpg"
       )}
       {Review(
         "Peter Dumas",
@@ -187,7 +187,7 @@ const Education = () => (
         "I have known Nick since he was a junior in high school and " +
           "I recruited Nick to be a member of my men’s tennis team at Hartwick College starting in 2016. " +
           "During this time, I have known Nick to be extremely diligent and proficient in his approach with everything that he does.",
-        require("./assets/peter.jpg")
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/peter.jpg"
       )}
     </Reviews>
 

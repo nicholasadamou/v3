@@ -12,6 +12,7 @@ import Reviews from "../../sass/Reviews";
 
 import styled from "styled-components";
 
+import { useCloudinary } from "../../utilities/utilities";
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.section`
@@ -102,7 +103,12 @@ const Internships = () => (
         rel="noopener noreferrer"
         title="IBM"
       >
-        <img src={require("./assets/ibm.png")} alt="IBM" />
+        <img
+          src={useCloudinary(
+            "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/ibm_alt.png"
+          )}
+          alt="IBM"
+        />
       </a>
       <a
         href="https://flyblackbird.com/"
@@ -111,7 +117,12 @@ const Internships = () => (
         rel="noopener noreferrer"
         title="flyblackbird"
       >
-        <img src={require("./assets/blackbird.png")} alt="flyblackbird" />
+        <img
+          src={useCloudinary(
+            "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/blackbird_alt.png"
+          )}
+          alt="flyblackbird"
+        />
       </a>
       <a
         href="https://mackmediagroup.com/"
@@ -121,7 +132,9 @@ const Internships = () => (
         title="Mack Media Group"
       >
         <img
-          src={require("./assets/mack-media-group.png")}
+          src={useCloudinary(
+            "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/mack-media-group_alt.png"
+          )}
           alt="Mack Media Group"
         />
       </a>
@@ -143,7 +156,7 @@ const Internships = () => (
         () =>
           "Continued the work I finished as a intern, but now as a Co-Op while I was away at school. I participated in weekly stand-up meetings relating to the JIRA stories I was assigned. With each story, " +
           "I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the application.",
-        "https://media-exp1.licdn.com/dms/image/C4E0BAQGnYJiWaENTZA/company-logo_100_100/0?e=1594857600&v=beta&t=FZQRHFvZPD4nobNJtCL1WL2cwahwJ3it9m9izzr25GY"
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/ibm.png"
       )}
       {Experience(
         "IBM",
@@ -154,7 +167,7 @@ const Internships = () => (
           "I worked and collaborated with a diverse team of developers, UX/UI designers, PO's, IM's, and testers from around the world in order to develop a web application utilizing React " +
           "for the front-end along with Jenkins for unit testing, and a variety of technologies for the back-end, such as SQL, Java with JDBC, Kubernetes for container-orchestration, Apache Kafka" +
           " for stream-processing of micro-services and Docker for containerization.",
-        "https://media-exp1.licdn.com/dms/image/C4E0BAQGnYJiWaENTZA/company-logo_100_100/0?e=1594857600&v=beta&t=FZQRHFvZPD4nobNJtCL1WL2cwahwJ3it9m9izzr25GY"
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/ibm.png"
       )}
       {Experience(
         "Blackbird",
@@ -164,7 +177,7 @@ const Internships = () => (
         () =>
           "As a software engineer at Blackbird, I worked closely with the CTO and the engineering team to construct custom components for the Blackbird web and mobile apps leveraging " +
           "React, React Native, React Native Web, GraphQL, Apollo, and ES6 JavaScript. In addition, I provided QA (Quality Assurance) and unit testing on multiple builds of the Blackbird web and mobile apps.",
-        "https://media-exp1.licdn.com/dms/image/C4E0BAQH2SO-POcIrLQ/company-logo_100_100/0?e=1594857600&v=beta&t=dCwd97PktvKZ9AKGh_xbZW5alcazfSkBo1FxJRdg8Hc"
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/blackbird.png"
       )}
       {Experience(
         "Mack Media Group",
@@ -173,7 +186,7 @@ const Internships = () => (
         "December 2016 - December 2016",
         () =>
           "Leveraged Google AMP pages to develop a user-friendly home page for the agency. The AMP page conversion provided an 80% faster page load time than a traditional web page load time.",
-        "https://media-exp1.licdn.com/dms/image/C4D0BAQFvNy_qa6NVAA/company-logo_100_100/0?e=1594857600&v=beta&t=CgLsZPYQ1LQUQUrH80B50JIk05O0UMp3ZXrRHN1pIog"
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/mack-media-group.png"
       )}
     </Experiences>
 
@@ -201,7 +214,7 @@ const Internships = () => (
 
     <Awards>
       {AwardListing(
-        "https://media-exp1.licdn.com/dms/image/C4E0BAQGnYJiWaENTZA/company-logo_100_100/0?e=1594857600&v=beta&t=FZQRHFvZPD4nobNJtCL1WL2cwahwJ3it9m9izzr25GY",
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/ibm.png",
         "IBM",
         () => (
           <>
@@ -224,13 +237,13 @@ const Internships = () => (
         "Kamal Shaham",
         "Software Engineer, IBM",
         "Nick that ToggleContent module was so clever, mad props lol had to make a whole module just to define a callback haha i was like oOoOoOo he slick",
-        require("./assets/kamal.jpg")
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/kamal.jpg"
       )}
       {Review(
         "Stephen Alt",
         "Software Developer Intern, IBM",
         "Nick is a YOUNG GOD on the REACT",
-        require("./assets/stephen.jpg")
+        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/stephen.jpg"
       )}
     </Reviews>
 

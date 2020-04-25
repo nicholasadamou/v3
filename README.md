@@ -26,6 +26,7 @@ and host it statically on [surge.sh](http://surge.sh).
 
 -   [Node.js](https://nodejs.org/en/)
 -   [Yarn](https://yarnpkg.com/en/) (recommended)
+-   [Netlify](https://netlify.com)
 
 ### Steps
 
@@ -33,7 +34,7 @@ and host it statically on [surge.sh](http://surge.sh).
 git clone https://github.com/nicholasadamou/nicholasadamou.com
 cd nicholasadamou.com
 npx yarn install
-npx yarn start
+npx yarn dev
 ```
 
 ## 📚 The Tech. Stack
@@ -52,8 +53,7 @@ This project uses the following technologies:
 This project uses the following CI/CD Pipeline:
 
 1. [**Travis CI**](https://travis-ci.org/nicholasadamou/nicholasadamou.com) - Travis is used to test whether or not this project builds successfully.
-2. [**GitHub Actions**](https://github.com/actions) - My [deploy to Surge.sh](https://github.com/nicholasadamou/deploy-with-surge) workflow is used for continuous deployment to my [Surge.sh](https://surge.sh/) domain.
-	- [**Surge.sh**](https://surge.sh/) - Surge.sh is the service used to host my website.
+2. [**Netlify**](https://netlify.com) - Netlify is used for continuous deployment.
 
 ## 📚 The Design Stack
 

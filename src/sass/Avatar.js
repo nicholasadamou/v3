@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import image from "../assets/Avatar";
+import { useCloudinary } from "../utilities/utilities";
 
 const Avatar = styled.div`
   position: relative;
@@ -12,7 +12,9 @@ const Avatar = styled.div`
 
   border-radius: 50%;
 
-  background-image: url(${image});
+  background-image: url(${useCloudinary(
+    "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/nicholas.jpg"
+  )});
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

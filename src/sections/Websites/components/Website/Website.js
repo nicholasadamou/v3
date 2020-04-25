@@ -2,6 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { useCloudinary } from "../../../../utilities/utilities";
 import { device, until } from "../../../../utilities/mixins";
 
 const Container = styled.div`
@@ -166,10 +167,10 @@ const Website = (title, link, desktop, mobile) => (
   <Container className="website">
     <a href={link} target="_blank" aria-hidden="true" rel="noopener noreferrer">
       <Browser>
-        <img src={desktop} alt="web-browser" />
+        <img src={useCloudinary(desktop)} alt="web-browser" />
       </Browser>
       <Mobile>
-        <img src={mobile} alt="mobile-device" />
+        <img src={useCloudinary(mobile)} alt="mobile-device" />
       </Mobile>
     </a>
     <h3>{title}</h3>

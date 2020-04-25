@@ -57,20 +57,20 @@ const Websites = () => {
         {Website(
           "Advanced Electrical Services",
           "https://advanced-electrical-services.netlify.com/",
-          require("./assets/advanced-electrical-services/desktop/desktop.png"),
-          require("./assets/advanced-electrical-services/mobile/mobile.png")
+          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/advanced-electrical-services/desktop/desktop.png",
+          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/advanced-electrical-services/mobile/mobile.png"
         )}
         {Website(
           "Cut, Paste, & Copy",
           "https://cut-paste-copy.github.io/",
-          require("./assets/cut-paste-copy/desktop/desktop.png"),
-          require("./assets/cut-paste-copy/mobile/mobile.png")
+          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/cut-paste-copy/desktop/desktop.png",
+          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/cut-paste-copy/mobile/mobile.png"
         )}
         {Website(
           "Nicholas Adamou's Personal Website",
           "https://nicholasadamou.com/",
-          require("./assets/nicholas-adamou/desktop/desktop.png"),
-          require("./assets/nicholas-adamou/mobile/mobile.png")
+          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/nicholasadamou/desktop/desktop.png",
+          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/nicholasadamou/mobile/mobile.png"
         )}
       </Sites>
     </Container>

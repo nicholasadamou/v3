@@ -26,9 +26,6 @@ const Container = styled.div`
 
     border-radius: 5%;
 
-    width: 50px;
-    height: 50px;
-
     ${until(
       device.iPhone(),
       () => `
