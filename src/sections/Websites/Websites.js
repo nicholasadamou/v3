@@ -69,8 +69,8 @@ const Websites = () => {
         {Website(
           "Nicholas Adamou's Personal Website",
           "https://nicholasadamou.com/",
-          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/nicholasadamou/desktop/desktop.png",
-          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/nicholasadamou/mobile/mobile.png"
+          "https://res.cloudinary.com/nicholasadamou/image/upload/v1589155405/nicholasadamou.com/websites/nicholasadamou/desktop/desktop.png",
+          "https://res.cloudinary.com/nicholasadamou/image/upload/v1589155485/nicholasadamou.com/websites/nicholasadamou/mobile/mobile.png"
         )}
       </Sites>
     </Container>

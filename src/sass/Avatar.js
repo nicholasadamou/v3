@@ -13,7 +13,7 @@ const Avatar = styled.div`
   border-radius: 50%;
 
   background-image: url(${useCloudinary(
-    "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/nicholas.jpg"
+    "https://res.cloudinary.com/nicholasadamou/image/upload/v1589057095/nicholasadamou.com/avatars/nicholas.jpg"
   )});
   background-size: cover;
   background-position: center center;
