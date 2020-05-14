@@ -56,7 +56,7 @@ const Education = () => (
         "August 2018 - May 2020",
         () => (
           <>
-            <em>Graduating </em> <strong>Summa Cum Laude</strong>
+            <em>Graduated </em> <strong>Summa Cum Laude</strong>
             <br />
             {" and "}
             <strong>With Honors</strong>

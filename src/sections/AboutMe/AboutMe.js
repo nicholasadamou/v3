@@ -205,7 +205,11 @@ const AboutMe = () => (
     </h1>
 
     <p>
-      I am currently a Computer Science student at{" "}
+      I am currently a{" "}
+      <span role="img" aria-label="ibm">
+        👀🐝Ⓜ️
+      </span>{" "}
+      Software Engineer and a recent graduate from{" "}
       <a
         className="cornell"
         href="https://www.cornellcollege.edu/"
@@ -214,11 +218,11 @@ const AboutMe = () => (
         rel="noopener noreferrer"
       >
         Cornell College
-      </a>{" "}
-      and a future 👀🐝Ⓜ️ Software Engineer. My mission is to learn as much as I
-      can about different areas of the computer. I absolutely love programming.
-      The mere ability to write a few lines of code and have something unique
-      and interesting come up on the screen fascinates me each and every day!
+      </a>
+      . My mission is to learn as much as I can about different areas of the
+      computer. I absolutely love programming. The mere ability to write a few
+      lines of code and have something unique and interesting come up on the
+      screen fascinates me each and every day!
     </p>
 
     <p>
