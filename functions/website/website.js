@@ -80,7 +80,7 @@ exports.handler = async (event, context) => {
 	const qs = new URLSearchParams(event.queryStringParameters);
 
 	console.log(
-		`${process.env.URL || `http://localhost:8888`}/website?${qs.toString()}`
+		`${process.env.URL || `http://localhost:34567`}/website?${qs.toString()}`
 	);
 
 	const screenshot = await getScreenshot(
