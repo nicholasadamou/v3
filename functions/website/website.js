@@ -24,7 +24,7 @@ async function getOptions(isDev) {
 
 async function getScreenshot(url, type = "desktop", isDev) {
 	console.log({url, type, isDev, cached: cache.has(`${url}:${type}`)})
-	
+
 	const key = `${url}:${type}`;
 	let screenshot = cache.get(key);
 	if (screenshot) {
