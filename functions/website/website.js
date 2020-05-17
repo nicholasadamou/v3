@@ -24,8 +24,9 @@ async function getOptions(isDev) {
 
 async function getScreenshot(url, type = "desktop", isDev) {
 	console.log({url, type, isDev, cached: cache.has(`${url}:${type}`)})
-
-	let screenshot = cache.get(`${url}:${type}`);
+	
+	const key = `${url}:${type}`;
+	let screenshot = cache.get(key);
 	if (screenshot) {
 		return screenshot;
 	}
@@ -66,7 +67,7 @@ async function getScreenshot(url, type = "desktop", isDev) {
 
 	const buffer = await page.screenshot({type: "png"});
 	screenshot = buffer.toString("base64");
-	cache.set(`${url}:${type}`, screenshot);
+	cache.set(key, screenshot);
 
 	await page.close();
 	await browser.close();
