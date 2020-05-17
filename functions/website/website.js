@@ -79,8 +79,14 @@ async function getScreenshot(url, type = "desktop", isDev) {
 exports.handler = async (event, context) => {
 	const qs = new URLSearchParams(event.queryStringParameters);
 
+	let prefix = `${process.env.URL}/.netlify/functions/`
+
+	if (process.env.URL.includes("http://localhost")) {
+		prefix = `${process.env.URL}:34567`
+	}
+
 	console.log(
-		`${process.env.URL || `http://localhost:34567`}/website?${qs.toString()}`
+		`${prefix}/website?${qs.toString()}`
 	);
 
 	const screenshot = await getScreenshot(
