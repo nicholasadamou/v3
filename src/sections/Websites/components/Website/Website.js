@@ -2,8 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 
-import { useCloudinary } from "../../../../utilities/utilities";
-import { device, until } from "../../../../utilities/mixins";
+import {device, until} from "../../../../utilities/mixins";
 
 const Container = styled.div`
   display: -webkit-box;
@@ -32,15 +31,15 @@ const Container = styled.div`
   }
 
   ${until(
-    device.iPhone(),
-    () => `
+	device.iPhone(),
+	() => `
 		-webkit-box-flex: 1;
     flex: 1 1 100%;
 
     width: 100%;
     max-width: 100%;
 	`
-  )}
+)}
 
   a {
     display: block;
@@ -164,17 +163,22 @@ const Mobile = styled.div`
 `;
 
 const Website = (title, link, desktop, mobile) => (
-  <Container className="website">
-    <a href={link} target="_blank" aria-hidden="true" rel="noopener noreferrer">
-      <Browser>
-        <img src={useCloudinary(desktop)} alt="web-browser" />
-      </Browser>
-      <Mobile>
-        <img src={useCloudinary(mobile)} alt="mobile-device" />
-      </Mobile>
-    </a>
-    <h3>{title}</h3>
-  </Container>
+	<Container className="website">
+		<a
+			href={link}
+			target="_blank"
+			aria-hidden="true"
+			rel="noopener noreferrer"
+		>
+			<Browser>
+				<img src={desktop} alt="web-browser" />
+			</Browser>
+			<Mobile>
+				<img src={mobile} alt="mobile-device" />
+			</Mobile>
+		</a>
+		<h3>{title}</h3>
+	</Container>
 );
 
 export default Website;

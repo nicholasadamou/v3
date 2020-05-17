@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from "react";
 
 import Website from "./components/Website/Website";
 
@@ -21,60 +21,64 @@ const Sites = styled.div`
 `;
 
 const emphasize = () => {
-  const websites = document.querySelectorAll(".website");
-  const target = Math.floor(Math.random() * websites.length);
+	const websites = document.querySelectorAll(".website");
+	const target = Math.floor(Math.random() * websites.length);
 
-  websites[target].classList.add("is-emphasized");
+	websites[target].classList.add("is-emphasized");
 
-  for (let i = 0; i < websites.length; i++) {
-    if (i === target) continue;
+	for (let i = 0; i < websites.length; i++) {
+		if (i === target) continue;
 
-    websites[i].classList.remove("is-emphasized");
-  }
+		websites[i].classList.remove("is-emphasized");
+	}
 };
 
-const Websites = () => {
-  useEffect(() => {
-    setInterval(() => {
-      emphasize();
-    }, 4000);
-  });
+const getImageURL = (url, type) => {
+	return `${window.location.protocol}//${window.location.hostname}:34567/.netlify/functions/website?url=${url}&type=${type}`
+}
 
-  return (
-    <Container id="websites">
-      <h2 className="title">
-        Websites I've Made{" "}
-        <span role="img" aria-label="candy">
+const Websites = () => {
+	useEffect(() => {
+		setInterval(() => {
+			emphasize();
+		}, 4000);
+	});
+
+	return (
+		<Container id="websites">
+			<h2 className="title">
+				Websites I've Made{" "}
+				<span role="img" aria-label="candy">
           🍫
         </span>
-      </h2>
-      <p className="subtitle">
-        A selection of websites that was designed, programmed and delivered by
-        me.
-      </p>
+			</h2>
+			<p className="subtitle">
+				A selection of websites that was designed, programmed and delivered by
+				me.
+			</p>
 
-      <Sites>
-        {Website(
-          "Advanced Electrical Services",
-          "https://advanced-electrical-services.netlify.com/",
-          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/advanced-electrical-services/desktop/desktop.png",
-          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/advanced-electrical-services/mobile/mobile.png"
-        )}
-        {Website(
-          "Cut, Paste, & Copy",
-          "https://cut-paste-copy.github.io/",
-          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/cut-paste-copy/desktop/desktop.png",
-          "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/websites/cut-paste-copy/mobile/mobile.png"
-        )}
-        {Website(
-          "Nicholas Adamou's Personal Website",
-          "https://nicholasadamou.com/",
-          "https://res.cloudinary.com/nicholasadamou/image/upload/v1589155405/nicholasadamou.com/websites/nicholasadamou/desktop/desktop.png",
-          "https://res.cloudinary.com/nicholasadamou/image/upload/v1589155485/nicholasadamou.com/websites/nicholasadamou/mobile/mobile.png"
-        )}
-      </Sites>
-    </Container>
-  );
+			<Sites>
+				{Website(
+					"Advanced Electrical Services",
+					"http://advanced-electrical-services.netlify.app/",
+					getImageURL('advanced-electrical-services.netlify.app', 'desktop'),
+					getImageURL('advanced-electrical-services.netlify.app', 'mobile')
+				)}
+				{Website(
+					"Cut, Paste, & Copy",
+					"https://cutpastecopy.github.io/",
+					getImageURL('cutpastecopy.github.io', 'desktop'),
+					getImageURL('cutpastecopy.github.io', 'mobile')
+				)}
+				{Website(
+					"Nicholas Adamou's Personal Website",
+					"https://nicholasadamou.com/",
+					getImageURL('nicholasadamou.com', 'desktop'),
+					getImageURL('nicholasadamou.com', 'mobile')
+				)}
+			</Sites>
+		</Container>
+	);
 };
 
 export default Websites;

@@ -52,5 +52,5 @@ export const useCloudinary = (public_id, transformation) => {
 export default {
   isMobile,
   github,
-  useCloudinary,
+  useCloudinary
 };
