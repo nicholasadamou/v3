@@ -4,7 +4,7 @@
 
 Personal landing page, powered by [facebook/create-react-app](https://github.com/facebok/create-react-app) ✨
 
-![Project Preview](https://nicholasadamou.com:8888/website?url=nicholasadamou.com&type=desktop)
+![Project Preview](https://nicholasadamou.com/.netlify/functions/website?url=nicholasadamou.com&type=desktop)
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 [![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/nicholasadamou.com.svg?style=flat-square)](https://david-dm.org/nicholasadamou/nicholasadamou.com#info=devDependencies)
