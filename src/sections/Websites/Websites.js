@@ -34,7 +34,12 @@ const emphasize = () => {
 };
 
 const getImageURL = (url, type) => {
-	return `${window.location.protocol}//${window.location.hostname}:8888/.netlify/functions/website?url=${url}&type=${type}`
+	let prefix = `${window.location.protocol}//${window.location.hostname}`;
+
+	if (window.location.href.includes('localhost'))
+		prefix = `${window.location.protocol}//${window.location.hostname}:8888`
+
+	return `${prefix}/.netlify/functions/website?url=${url}&type=${type}`
 }
 
 const Websites = () => {
