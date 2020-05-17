@@ -34,7 +34,7 @@ const emphasize = () => {
 };
 
 const getImageURL = (url, type) => {
-	return `${window.location.protocol}//${window.location.hostname}:34567/.netlify/functions/website?url=${url}&type=${type}`
+	return `${window.location.protocol}//${window.location.hostname}:8888/.netlify/functions/website?url=${url}&type=${type}`
 }
 
 const Websites = () => {
