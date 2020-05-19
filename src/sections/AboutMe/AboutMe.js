@@ -226,7 +226,7 @@ const AboutMe = () => (
     </p>
 
     <p>
-      Because of my interest in computers, I've had the unique opportunity to
+      Because of my interest in computers, I've had the awesome and unique opportunity to
       intern and work for a few software engineering companies such as{" "}
       <a
         className="blackbird"
