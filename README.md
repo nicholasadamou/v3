@@ -16,7 +16,7 @@ Personal landing page, powered by [facebook/create-react-app](https://github.com
 
 After many iterations and deployments throughout many providers, I decided to
 optimize my landing page by using [facebook/create-react-app](https://github.com/facebook/create-react-app)
-and host it statically on [surge.sh](http://surge.sh).
+and host it statically on [netlify.com](http://netlify.com).
 
 ## Development
 
