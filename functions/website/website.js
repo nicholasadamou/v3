@@ -2,6 +2,8 @@ const chromium = require("chrome-aws-lambda");
 const puppeteer = require("puppeteer-core");
 const wait = require('waait');
 
+const cache = new Map();
+
 async function getOptions(isDev) {
 	if (isDev) {
 		return {
@@ -22,6 +24,12 @@ async function getOptions(isDev) {
 
 async function getScreenshot(url, type = "desktop", isDev) {
 	console.log({url, type, isDev})
+
+	const key = `${url}:${type}`;
+
+	if (cache.has(key)) {
+		return cache.get(key);
+	}
 
 	const options = await getOptions(isDev);
 	const browser = await puppeteer.launch(options);
@@ -59,6 +67,7 @@ async function getScreenshot(url, type = "desktop", isDev) {
 
 	const buffer = await page.screenshot({type: "png"});
 	const screenshot = buffer.toString("base64");
+	cache.set(key, screenshot);
 
 	await page.close();
 	await browser.close();
