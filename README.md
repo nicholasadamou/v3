@@ -2,7 +2,7 @@
 
 # Nicholas Adamou's Personal Website [![Netlify Status](https://api.netlify.com/api/v1/badges/3efa6b22-d87a-43e7-97a0-a5f73f1661c6/deploy-status)](https://app.netlify.com/sites/nicholasadamou/deploys) [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.com.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.com)
 
-Personal landing page, powered by [facebook/create-react-app](https://github.com/facebok/create-react-app) ✨
+Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app) ✨
 
 ![Project Preview](https://nicholasadamou.com/.netlify/functions/website?url=nicholasadamou.com&type=desktop)
 
