@@ -35,7 +35,7 @@ const Top = styled.div`
   font-size: 1rem;
 
   span[role="img"] {
-    margin-right: 0;
+    margin-right: 5px;
   }
 
   a {
