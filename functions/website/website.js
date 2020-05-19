@@ -51,7 +51,7 @@ async function getScreenshot(url, type = "desktop", isDev) {
 			waitUntil: 'domcontentloaded',
 			timeout: 0
 		});
-		await wait(3500);
+		await wait(4000);
 	} catch (error) {
 		await page.close();
 		await browser.close();
