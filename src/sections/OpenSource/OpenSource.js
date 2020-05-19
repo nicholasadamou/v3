@@ -52,7 +52,7 @@ class OpenSource extends React.Component {
 
   componentDidMount() {
     github
-      .getUser()
+      .getUser('nicholasadamou')
       .listRepos()
       .then((response) => {
         let repositories = response.data.map((repository) => {
