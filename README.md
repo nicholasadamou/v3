@@ -7,7 +7,6 @@ Personal landing page, powered by [facebook/create-react-app](https://github.com
 ![Project Preview](https://nicholasadamou.com/.netlify/functions/website?url=nicholasadamou.com&type=desktop)
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
-[![DevDependencies](https://img.shields.io/david/dev/nicholasadamou/nicholasadamou.com.svg?style=flat-square)](https://david-dm.org/nicholasadamou/nicholasadamou.com#info=devDependencies)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/nicholasadamou)](https://dependabot.com)
 ![javascript style guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 
