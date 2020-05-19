@@ -64,12 +64,6 @@ const Websites = () => {
 
 			<Sites>
 				{Website(
-					"Advanced Electrical Services",
-					"http://advanced-electrical-services.netlify.app/",
-					getImageURL('advanced-electrical-services.netlify.app', 'desktop'),
-					getImageURL('advanced-electrical-services.netlify.app', 'mobile')
-				)}
-				{Website(
 					"Cut, Paste, & Copy",
 					"https://cutpastecopy.github.io/",
 					getImageURL('cutpastecopy.github.io', 'desktop'),
