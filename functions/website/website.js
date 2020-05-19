@@ -51,7 +51,7 @@ async function getScreenshot(url, type = "desktop", isDev) {
 			waitUntil: 'domcontentloaded',
 			timeout: 0
 		});
-		await wait(4000);
+		await wait(3500);
 	} catch (error) {
 		await page.close();
 		await browser.close();
@@ -91,6 +91,6 @@ exports.handler = async (event, context) => {
 	return {
 		statusCode: 200,
 		body: screenshot,
-		isBase64Encoded: true,
+		isBase64Encoded: true
 	};
 };

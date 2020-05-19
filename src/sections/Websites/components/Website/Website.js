@@ -171,10 +171,10 @@ const Website = (title, link, desktop, mobile) => (
 			rel="noopener noreferrer"
 		>
 			<Browser>
-				<img src={desktop} alt="web-browser" />
+				<img src={desktop} alt="web-browser"/>
 			</Browser>
 			<Mobile>
-				<img src={mobile} alt="mobile-device" />
+				<img src={mobile} alt="mobile-device"/>
 			</Mobile>
 		</a>
 		<h3>{title}</h3>
