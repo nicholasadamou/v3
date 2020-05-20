@@ -23,7 +23,6 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 
 -   [Node.js](https://nodejs.org/en/)
 -   [Yarn](https://yarnpkg.com/en/) (recommended)
--   [Netlify](https://netlify.com)
 
 ### Steps
 
@@ -31,7 +30,7 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 git clone https://github.com/nicholasadamou/nicholasadamou.com
 cd nicholasadamou.com
 npx yarn install
-npx yarn netlify
+npx yarn start
 ```
 
 ## 📚 The Tech. Stack
@@ -50,7 +49,6 @@ This project uses the following technologies:
 This project uses the following CI/CD Pipeline:
 
 1. [**Travis CI**](https://travis-ci.org/nicholasadamou/nicholasadamou.com) - Travis is used to test whether or not this project builds successfully.
-2. [**Netlify**](https://netlify.com) - Netlify is used for continuous deployment.
 
 ## 📚 The Design Stack
 
