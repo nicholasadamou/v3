@@ -24,11 +24,22 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 
 ### Steps
 
+Starting the front-end:
+
 ```bash
 git clone https://github.com/nicholasadamou/nicholasadamou.com
 cd nicholasadamou.com
 npx yarn install
 npx yarn start
+```
+
+Starting the back-end:
+
+```bash
+# Assuming you're already inside the nicholasadamou.com/ git directory we've just cloned.
+cd api/website
+npx yarn install
+npx yarn dev
 ```
 
 ## 📚 The Tech. Stack
@@ -41,6 +52,11 @@ This project uses the following technologies:
   - [**React Context API**](https://reactjs.org/docs/context.html) - Context provides a way to pass data through the component tree without having to pass props down manually at every level.
   - [**React Hooks**](https://reactjs.org/docs/hooks-intro.html) - Hooks let you use state and other React features without writing a class
   - [**Styled-Components**](https://www.styled-components.com/) - for styling.
+
+**The Back-End**:
+
+- [**Node.js**](https://nodejs.com) - The runtime used for the backe-end server.
+- [**Express.js**](https://expressjs.com/) - The web application framework used for handling API requests.
 
 ## ⛓️ CI/CD Pipeline
 

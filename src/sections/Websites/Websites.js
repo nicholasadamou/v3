@@ -39,7 +39,7 @@ const getImageURL = (url, type) => {
 	if (window.location.href.includes('localhost'))
 		prefix = `${window.location.protocol}//${window.location.hostname}:8888`
 
-	return `${prefix}/.netlify/functions/website?url=${url}&type=${type}`
+	return `${prefix}/website?url=${url}&type=${type}`
 }
 
 const Websites = () => {
@@ -69,12 +69,12 @@ const Websites = () => {
 					getImageURL('cutpastecopy.github.io', 'desktop'),
 					getImageURL('cutpastecopy.github.io', 'mobile')
 				)}
-				{Website(
-					"Nicholas Adamou's Personal Website",
-					"https://nicholasadamou.com/",
-					getImageURL('nicholasadamou.com', 'desktop'),
-					getImageURL('nicholasadamou.com', 'mobile')
-				)}
+				{/*{Website(*/}
+				{/*	"Nicholas Adamou's Personal Website",*/}
+				{/*	"https://nicholasadamou.com/",*/}
+				{/*	getImageURL('nicholasadamou.com', 'desktop'),*/}
+				{/*	getImageURL('nicholasadamou.com', 'mobile')*/}
+				{/*)}*/}
 			</Sites>
 		</Container>
 	);

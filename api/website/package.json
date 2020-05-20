@@ -1,0 +1,21 @@
+{
+ "name": "website",
+ "version": "1.0.0",
+ "description": "",
+ "main": "website.js",
+ "scripts": {
+  "start": "URL=http://localhost PORT=8888 node website.js",
+  "dev": "URL=http://localhost PORT=8888 nodemon website.js",
+  "update-dependencies": "npx yarn-check -u",
+  "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json"
+ },
+ "author": "Nicholas Adamou",
+ "license": "ISC",
+ "dependencies": {
+  "chrome-aws-lambda": "^2.1.1",
+  "express": "^4.17.1",
+  "nodemon": "^1.19.1",
+  "puppeteer-core": "^2.1.1",
+  "waait": "^1.0.5"
+ }
+}
