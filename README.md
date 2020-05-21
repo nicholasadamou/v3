@@ -2,7 +2,7 @@
 
 # Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.com.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.com)
 
-Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app)
+Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](netlify.com/).
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/nicholasadamou)](https://dependabot.com)
@@ -13,7 +13,7 @@ Personal landing page, powered by [facebook/create-react-app](https://github.com
 ## Description
 
 After many iterations and deployments throughout many providers, I decided to
-optimize my landing page by using [facebook/create-react-app](https://github.com/facebook/create-react-app).
+optimize my landing page by using [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](netlify.com/).
 
 ## Development
 
