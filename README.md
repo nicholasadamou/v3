@@ -46,7 +46,7 @@ This project uses the following technologies:
 
 **The Back-End**:
 
-- [**Netlify**](netlify.com/) - For serverless [**functions/**](functions/)
+- [**Netlify**](netlify.com/) - For serverless [**functions**](functions/).
 
 ## ⛓️ CI/CD Pipeline
 
