@@ -2,7 +2,7 @@
 
 # Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.com.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.com)
 
-Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](netlify.com/).
+Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](https://netlify.com/).
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/nicholasadamou)](https://dependabot.com)
@@ -13,7 +13,7 @@ Personal landing page, powered by [facebook/create-react-app](https://github.com
 ## Description
 
 After many iterations and deployments throughout many providers, I decided to
-optimize my landing page by using [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](netlify.com/).
+optimize my landing page by using [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](https://netlify.com/).
 
 ## Development
 
@@ -46,14 +46,14 @@ This project uses the following technologies:
 
 **The Back-End**:
 
-- [**Netlify**](netlify.com/) - For serverless [**functions**](functions/).
+- [**Netlify**](https://netlify.com/) - For serverless [**functions**](functions/).
 
 ## ⛓️ CI/CD Pipeline
 
 This project uses the following CI/CD Pipeline:
 
 1. [**Travis CI**](https://travis-ci.org/nicholasadamou/nicholasadamou.com) - Travis is used to test whether or not this project builds successfully.
-2. [**Netlify**](netlify.com/) - For continuous deployment to [*nicholasadamou.com*](https://nicholasadamou.com).
+2. [**Netlify**](https://netlify.com/) - For continuous deployment to [*nicholasadamou.com*](https://nicholasadamou.com).
 
 ## 📚 The Design Stack
 
