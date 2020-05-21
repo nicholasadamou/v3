@@ -69,12 +69,6 @@ const Websites = () => {
 					getImageURL('cutpastecopy.github.io'),
 					getImageURL('cutpastecopy.github.io', 'mobile')
 				)}
-				{/*{Website(*/}
-				{/*	"Nicholas Adamou's Personal Website",*/}
-				{/*	"https://nicholasadamou.com/",*/}
-				{/*	getImageURL('nicholasadamou.com'),*/}
-				{/*	getImageURL('nicholasadamou.com', 'mobile')*/}
-				{/*)}*/}
 			</Sites>
 		</Container>
 	);
