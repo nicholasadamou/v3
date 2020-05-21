@@ -53,7 +53,7 @@ This project uses the following technologies:
 This project uses the following CI/CD Pipeline:
 
 1. [**Travis CI**](https://travis-ci.org/nicholasadamou/nicholasadamou.com) - Travis is used to test whether or not this project builds successfully.
-2. [**Netlify**](netlify.com/) - For continuous deployment to [*nicholasadamou.com*](https://nicholasadamou.com)
+2. [**Netlify**](netlify.com/) - For continuous deployment to [*nicholasadamou.com*](https://nicholasadamou.com).
 
 ## 📚 The Design Stack
 
