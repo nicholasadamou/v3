@@ -24,22 +24,13 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 
 ### Steps
 
-Starting the front-end:
+Starting the front-end and *Netlify* serverless (λ) functions:
 
 ```bash
 git clone https://github.com/nicholasadamou/nicholasadamou.com
 cd nicholasadamou.com
 npx yarn install
-npx yarn start
-```
-
-Starting the back-end:
-
-```bash
-# Assuming you're already inside the nicholasadamou.com/ git directory we've just cloned.
-cd api/website
-npx yarn install
-npx yarn dev
+npx yarn netlify
 ```
 
 ## 📚 The Tech. Stack
@@ -55,14 +46,14 @@ This project uses the following technologies:
 
 **The Back-End**:
 
-- [**Node.js**](https://nodejs.com) - The runtime used for the backe-end server.
-- [**Express.js**](https://expressjs.com/) - The web application framework used for handling API requests.
+- [**Netlify**](netlify.com/) - For serverless [**functions/**](functions/)
 
 ## ⛓️ CI/CD Pipeline
 
 This project uses the following CI/CD Pipeline:
 
 1. [**Travis CI**](https://travis-ci.org/nicholasadamou/nicholasadamou.com) - Travis is used to test whether or not this project builds successfully.
+2. - [**Netlify**](netlify.com/) - For continuous deployment to [*nicholasadamou.com*](https://nicholasadamou.com)
 
 ## 📚 The Design Stack
 

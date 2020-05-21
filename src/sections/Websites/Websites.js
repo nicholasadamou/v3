@@ -33,13 +33,13 @@ const emphasize = () => {
 	}
 };
 
-const getImageURL = (url, type) => {
+const getImageURL = (url, device = 'desktop') => {
 	let prefix = `${window.location.protocol}//${window.location.hostname}`;
 
 	if (window.location.href.includes('localhost'))
 		prefix = `${window.location.protocol}//${window.location.hostname}:8888`
 
-	return `${prefix}/website?url=${url}&type=${type}`
+	return `${prefix}/.netlify/functions/website?url=${url}&device=${device}`
 }
 
 const Websites = () => {
@@ -66,13 +66,13 @@ const Websites = () => {
 				{Website(
 					"Cut, Paste, & Copy",
 					"https://cutpastecopy.github.io/",
-					getImageURL('cutpastecopy.github.io', 'desktop'),
+					getImageURL('cutpastecopy.github.io'),
 					getImageURL('cutpastecopy.github.io', 'mobile')
 				)}
 				{/*{Website(*/}
 				{/*	"Nicholas Adamou's Personal Website",*/}
 				{/*	"https://nicholasadamou.com/",*/}
-				{/*	getImageURL('nicholasadamou.com', 'desktop'),*/}
+				{/*	getImageURL('nicholasadamou.com'),*/}
 				{/*	getImageURL('nicholasadamou.com', 'mobile')*/}
 				{/*)}*/}
 			</Sites>
