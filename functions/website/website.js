@@ -6,8 +6,7 @@ const cache = new Map();
 
 function isValidURL(str) {
 	try {
-		const url = new URL(str);
-		return url.hostname.includes('.');
+		return new URL(str).hostname.includes('.');
 	} catch (e) {
 		console.error(e.message);
 		return false;
@@ -15,32 +14,30 @@ function isValidURL(str) {
 }
 
 async function getOptions(isDev) {
-	if (isDev) {
-		return {
-			product: "chrome",
-			args: [],
-			executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
-			headless: true,
-		};
-	}
-
-	return {
-		product: "chrome",
-		args: chromium.args,
-		executablePath: await chromium.executablePath,
-		headless: chromium.headless,
-	};
+	return isDev 
+		? 
+			{
+				product: "chrome",
+				args: [],
+				executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+				headless: true,
+			};
+		:
+			{
+				product: "chrome",
+				args: chromium.args,
+				executablePath: await chromium.executablePath,
+				headless: chromium.headless,
+			};
 }
 
 async function getScreenshot(url, device = "desktop", type = 'png', isDev) {
 	console.log({url, device, type})
 
 	const options = await getOptions(isDev);
-
 	const browser = await chromium.puppeteer.launch(options);
-
 	const page = await browser.newPage();
-
+	
 	await chromium.font('https://raw.githack.com/googlei18n/noto-emoji/master/fonts/NotoColorEmoji.ttf');
 
 	if (device === "mobile") {
