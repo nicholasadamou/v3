@@ -6,9 +6,9 @@ const cache = new Map();
 
 function isOneOfMySites(url) {
 	return [
-		'https://cutpastecopy.github.io',
-		'https://nicholasadamou.com',
-		'https://advanced-electrical-services.netlify.app'
+		'https://cutpastecopy.github.io/',
+		'https://nicholasadamou.com/',
+		'https://advanced-electrical-services.netlify.app/'
 	].includes(url);
 }
 
@@ -110,7 +110,7 @@ exports.handler = async (event, context) => {
 				return {
 					statusCode: 400,
 					body: JSON.stringify({
-						message: `Bad Request: The provided URL ${url} is not one of Nicholas Adamou's websites.`
+						message: `Bad Request: The provided URL '${url}' is not one of Nicholas Adamou's websites.`
 					})
 				}
 			}
@@ -118,7 +118,7 @@ exports.handler = async (event, context) => {
 			return {
 				statusCode: 400,
 				body: JSON.stringify({
-					message: `Bad Request: The provided URL ${url} is not valid.`
+					message: `Bad Request: The provided URL '${url}' is not valid.`
 				})
 			}
 		}
