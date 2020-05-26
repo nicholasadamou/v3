@@ -2,7 +2,6 @@ import React from "react";
 
 import styled from "styled-components";
 
-import { useCloudinary } from "../../utilities/utilities";
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.div`
@@ -64,7 +63,7 @@ const Container = styled.div`
 
 const Experience = (company, title, location, duration, description, image) => (
   <Container>
-    <img src={useCloudinary(image)} alt={company} />
+    <img src={image} alt={company} />
     <div>
       <strong>{title}</strong>
       <aside>{duration}</aside>

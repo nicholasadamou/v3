@@ -72,7 +72,7 @@ const Education = () => (
             {")"}
           </>
         ),
-        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/cornell-college.png"
+        require("../../assets/images/logos/cornell-college.png")
       )}
       {Experience(
         "Hartwick College",
@@ -85,7 +85,7 @@ const Education = () => (
             {" 3.96 out of 4.0"}
           </>
         ),
-        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/hartwick-college.png"
+        require("../../assets/images/logos/hartwick-college.png")
       )}
     </Experiences>
 
@@ -118,7 +118,7 @@ const Education = () => (
 
     <Awards>
       {AwardListing(
-        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/cornell-college.png",
+        require("../../assets/images/logos/cornell-college.png"),
         "Cornell College",
         () => (
           <>
@@ -135,7 +135,7 @@ const Education = () => (
         )
       )}
       {AwardListing(
-        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/logos/hartwick-college.png",
+        require("../../assets/images/logos/hartwick-college.png"),
         "Hartwick College",
         () => (
           <>
@@ -173,13 +173,13 @@ const Education = () => (
         "Peter Dumas",
         "Head Tennis Coach, Cornell College",
         "Nick is an incredibly gifted student and he will serve as an impressive example for publications about recent graduates and future recruitment of computer science majors.",
-        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/peter.jpg"
+        require("../../assets/images/avatars/peter.jpg")
       )}
       {Review(
         "Peter Dumas",
         "Head Tennis Coach, Cornell College",
         "Nick is  an example of the best type of student that this environment can produce. He is active on campus and is a leader on our team.",
-        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/peter.jpg"
+        require("../../assets/images/avatars/peter.jpg")
       )}
       {Review(
         "Peter Dumas",
@@ -187,7 +187,7 @@ const Education = () => (
         "I have known Nick since he was a junior in high school and " +
           "I recruited Nick to be a member of my men’s tennis team at Hartwick College starting in 2016. " +
           "During this time, I have known Nick to be extremely diligent and proficient in his approach with everything that he does.",
-        "https://res.cloudinary.com/nicholasadamou/image/upload/nicholasadamou.com/avatars/peter.jpg"
+        require("../../assets/images/avatars/peter.jpg")
       )}
     </Reviews>
 

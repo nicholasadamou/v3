@@ -9,13 +9,3 @@ install:
 language: node_js
 node_js:
   - 'lts/*'
-
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-
-notifications:
-  email:
-    on_failure: always
-    on_success: never

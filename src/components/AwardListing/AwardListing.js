@@ -2,7 +2,6 @@ import React from "react";
 
 import styled from "styled-components";
 
-import { useCloudinary } from "../../utilities/utilities";
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.div`
@@ -68,7 +67,7 @@ const Container = styled.div`
 
 const AwardListing = (logo, institution, content) => (
   <Container>
-    <img src={useCloudinary(logo)} alt={institution} />
+    <img src={logo} alt={institution} />
     <div>
       <strong>{institution} Awards</strong>
       <span>{content()}</span>

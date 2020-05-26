@@ -2,7 +2,6 @@ import React from "react";
 
 import styled from "styled-components";
 
-import { useCloudinary } from "../../utilities/utilities";
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.div`
@@ -63,7 +62,7 @@ const Review = (author, source, quote, image) => (
     <blockquote>
       <q>"{quote}"</q>
       <article>
-        <img src={useCloudinary(image)} alt="avatar" />
+        <img src={image} alt="avatar" />
         <Meta>
           <strong>{author}</strong>
           <span>{source}</span>
