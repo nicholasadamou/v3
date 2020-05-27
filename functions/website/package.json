@@ -2,7 +2,7 @@
  "name": "website",
  "version": "1.0.0",
  "description": "A serverless lambda function that spawns a Chrome instance using Puppeteer and takes and returns a screenshot of a given website either on mobile or desktop style devices.",
- "main": "index.js",
+ "main": "website.js",
  "scripts": {
   "update": "npx yarn-check -u",
   "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json"
