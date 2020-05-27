@@ -5,7 +5,6 @@
 Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](https://netlify.com/).
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=nicholasadamou/nicholasadamou)](https://dependabot.com)
 ![javascript style guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 
 </div>
