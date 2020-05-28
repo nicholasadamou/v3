@@ -1,25 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 
-import SkeletonProject from "../SkeletonProject/SkeletonProject";
+import {SkeletonText} from "carbon-components-react";
+
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 import styled from "styled-components";
 
-import { github } from "../../utilities/utilities";
+import {github} from "../../utilities/utilities";
 
-import { device, until } from "../../utilities/mixins";
+import {device, until} from "../../utilities/mixins";
 
 const Container = styled.article`
   margin: 10px 20px;
 
   ${until(
-    device.iPhone(),
-    () => `
+	device.iPhone(),
+	() => `
 		width: 100%;
     max-width: 100%;
 
     margin: 20px 0;
 	`
-  )}
+)}
 `;
 
 const Top = styled.div`
@@ -65,56 +67,72 @@ const Description = styled.span`
 `;
 
 const useGitHub = (repositoryName) => {
-  const [repository, setRepository] = useState({});
+	const [repository, setRepository] = useState({});
 
-  useEffect(() => {
-    function fetchRepository() {
-      github
-        .getRepo("nicholasadamou", repositoryName)
-        .getDetails()
-        .then((response) => {
-          const { name, description, html_url } = response.data;
+	useEffect(() => {
+		function fetchRepository() {
+			github
+				.getRepo("nicholasadamou", repositoryName)
+				.getDetails()
+				.then((response) => {
+					const {name, description, html_url} = response.data;
 
-          setRepository({
-            name: name.toLowerCase(),
-            description,
-            link: html_url,
-          });
-        });
-    }
+					setRepository({
+						name: name.toLowerCase(),
+						description,
+						link: html_url,
+					});
+				});
+		}
 
-    fetchRepository();
-  }, [repositoryName, repository]);
+		fetchRepository();
+	}, [repositoryName, repository]);
 
-  return repository;
+	return repository;
 };
 
 const Project = (repositoryName, emoji, emojiLabel) => {
-  const repository = useGitHub(repositoryName);
+	const repository = useGitHub(repositoryName);
 
-  if (JSON.stringify(repository) === "{}") return <SkeletonProject />;
+	if (JSON.stringify(repository) === "{}") return <SkeletonProject />;
 
-  const { name, description, link } = repository;
+	const {name, description, link} = repository;
 
-  return (
-    <Container>
-      <Top>
+	return (
+		<Container>
+			<Top>
         <span role="img" aria-label={emojiLabel}>
           {emoji}
         </span>
-        <a
-          href={link}
-          target="_blank"
-          aria-hidden="true"
-          rel="noopener noreferrer"
-          className="link"
-        >
-          {name}
-        </a>
-      </Top>
-      <Description>{description}</Description>
-    </Container>
-  );
+				<a
+					href={link}
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link"
+				>
+					{name}
+				</a>
+			</Top>
+			<Description>{description}</Description>
+		</Container>
+	);
 };
+
+const SkeletonProject = () => (
+	<Container>
+		<Top>
+			<span role="img" aria-label="hourglass">
+				⏳
+			</span>
+			<span>
+				<CircularProgress/>
+			</span>
+		</Top>
+		<Description>
+			<SkeletonText heading={false} lineCount={2} paragraph width="100%"/>
+		</Description>
+	</Container>
+);
 
 export default Project;

@@ -11,8 +11,9 @@ const GlobalStyles = createGlobalStyle`
 	  --light-grey: #ccc;
 	  --green: #10b500;
 	  --yellow: #fff498;
+
 	  --github: #161514;
-	  --star: #ffd602;
+	  --git: #fd7e14;
 	  --codepen: #212121;
 	  --twitter: #55acee;
 	  --linkedin: #0077b5;
@@ -21,16 +22,21 @@ const GlobalStyles = createGlobalStyle`
 	  --blackbird: #3c4156;
 	  --mack-media-group: #80bd01;
 	  --ibm: #5392ff;
-	  --git: #fd7e14;
+
+	  --star: #ffd602;
+
 	  --scrollbar: var(--white);
 	  --scrollbar-bg: var(--black);
+
 	  --systemFonts: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
 		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
+
 	  --primary: var(--systemFonts);
-	  --secondary: "Roboto Slab";
+
 	  --highlight: var(--yellow);
 	  --selection: var(--black);
+
 	  --copy: var(--white);
 	  --copy-size: 1rem;
 	}
@@ -77,9 +83,11 @@ const GlobalStyles = createGlobalStyle`
 	body {
 	  font-family: var(--primary);
 	  color: var(--copy);
+
 	  -webkit-text-size-adjust: 100%;
 	  -moz-text-size-adjust: 100%;
 	  -ms-text-size-adjust: 100%;
+
 	  line-height: 1.6em;
 
 	  background: var(--white);

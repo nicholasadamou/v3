@@ -10,8 +10,6 @@ import Provider from "../../context/Provider";
 
 import GlobalStyles from "../../sass/GlobalStyles";
 
-import Fonts from "../../assets/Fonts/Fonts";
-
 import Nav from "../Nav/Nav";
 import Container from "../Container/Container";
 
@@ -30,7 +28,6 @@ library.add(fab, faHeart, faStar, faCodeBranch);
 const Layout = (content) => (
   <Provider>
     <GlobalStyles />
-    <Fonts />
     <Helmet htmlAttributes={{ lang: "en", id: "top" }} title="Nicholas Adamou">
       <link rel="icon" href="/assets/favicons/favicon.ico" />
       <link

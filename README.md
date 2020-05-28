@@ -42,6 +42,9 @@ This project uses the following technologies:
   - [**React Context API**](https://reactjs.org/docs/context.html) - Context provides a way to pass data through the component tree without having to pass props down manually at every level.
   - [**React Hooks**](https://reactjs.org/docs/hooks-intro.html) - Hooks let you use state and other React features without writing a class
   - [**Styled-Components**](https://www.styled-components.com/) - for styling.
+  - [**instant.page**](https://instant.page/) - Make your site's pages instant in 1 minute and improve your conversion rate by 1%.
+  - [**github-api**](https://www.npmjs.com/package/github-api) - For making requests to the GitHub API within React.
+
 
 **The Back-End**:
 

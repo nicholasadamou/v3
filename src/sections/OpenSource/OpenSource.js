@@ -1,7 +1,6 @@
 import React from "react";
 
-import Repo from "./components/Repo/Repo";
-import SkeletonRepo from "./components/SkeletonRepo/SkeletonRepo";
+import { Repository, SkeletonRepository } from "./components/Repository/Repository";
 
 import FooterText from "../../components/FooterText/FooterText";
 
@@ -124,10 +123,10 @@ class OpenSource extends React.Component {
         <Repositories>
           {isLoading
             ? repositories.map((current, index) => {
-                return SkeletonRepo(index);
+                return SkeletonRepository(index);
               })
             : repositories.map((repository) => {
-                return Repo(repository);
+                return Repository(repository);
               })}
         </Repositories>
 
