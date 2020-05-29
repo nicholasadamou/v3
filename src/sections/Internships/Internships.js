@@ -3,7 +3,7 @@ import React from "react";
 import AwardListing from "../../components/AwardListing/AwardListing";
 import Experience from "../../components/Experience/Experience";
 import Review from "../../components/Review/Review";
-import Project from "../../components/Project/Project";
+import Repository from "../../components/Repository/Repository";
 import FooterText from "../../components/FooterText/FooterText";
 
 import Awards from "../../sass/Awards";
@@ -191,8 +191,8 @@ const Internships = () => (
     </p>
 
     <Projects>
-      {Project("mack-media-group-internship-project", "📱", "smart-phone")}
-      {Project("down-to-network", "🖇", "two-paperclips")}
+      {Repository("mack-media-group-internship-project")}
+      {Repository("down-to-network")}
     </Projects>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>

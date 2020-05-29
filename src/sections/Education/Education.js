@@ -3,7 +3,7 @@ import React from "react";
 import AwardListing from "../../components/AwardListing/AwardListing";
 import Experience from "../../components/Experience/Experience";
 import Review from "../../components/Review/Review";
-import Project from "../../components/Project/Project";
+import Repository from '../../components/Repository/Repository'
 import FooterText from "../../components/FooterText/FooterText";
 
 import Awards from "../../sass/Awards";
@@ -97,13 +97,13 @@ const Education = () => (
     </p>
 
     <Projects>
-      {Project("distributed-load-balancer", "С", "С")}
-      {Project("producer-consumer-simulator", "С", "С")}
-      {Project("python-udp-chat-client", "🐍", "python")}
-      {Project("python-dynamic-web-server", "🐍", "python")}
-      {Project("python-proxy", "🐍", "python")}
-      {Project("cpu-cache-simulator", "🐍", "python")}
-      {Project("project-management-capstone-project", "С#", "C#")}
+      {Repository("distributed-load-balancer")}
+      {Repository("producer-consumer-simulator")}
+      {Repository("python-udp-chat-client")}
+      {Repository("python-dynamic-web-server")}
+      {Repository("python-proxy")}
+      {Repository("cpu-cache-simulator")}
+      {Repository("project-management-capstone-project")}
     </Projects>
 
     <h2 className="title" style={{ fontSize: "1.5rem" }}>
