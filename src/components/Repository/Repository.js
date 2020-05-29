@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { SkeletonText } from "carbon-components-react";
 
@@ -12,7 +12,7 @@ import styled from "styled-components";
 
 import { device, until } from "../../utilities/mixins";
 
-import { github } from "../../utilities/utilities";
+import useGitHub, { round } from "../../hooks/useGithub";
 
 const Container = styled.article`
   margin: 10px 20px;
@@ -117,36 +117,6 @@ const Container = styled.article`
     }
   }
 `;
-
-// Round the number like "3.5k" https://stackoverflow.com/a/9461657
-const round = (num) => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
-
-const useGitHub = (repositoryName) => {
-	const [repository, setRepository] = useState({});
-
-	useEffect(() => {
-		function fetchRepository() {
-			github
-				.getRepo(github.__auth.username, repositoryName)
-				.getDetails()
-				.then((response) => {
-					const { name, description, html_url, stargazers_count, forks_count } = response.data;
-
-					setRepository({
-						name: name.toLowerCase(),
-						description,
-						link: html_url,
-						stars: stargazers_count,
-						forks: forks_count
-					});
-				});
-		}
-
-		fetchRepository();
-	}, [repositoryName, repository]);
-
-	return repository;
-};
 
 const Repository = (repositoryName) => {
 	const repository = useGitHub(repositoryName);

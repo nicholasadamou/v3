@@ -1,5 +1,3 @@
-import GitHub from "github-api";
-
 export const isMobile = {
   Android: function () {
     return navigator.userAgent.match(/Android/i);
@@ -27,12 +25,6 @@ export const isMobile = {
   },
 };
 
-export const github = new GitHub({
-  username: "nicholasadamou",
-  token: process.env.REACT_APP_GITHUB_TOKEN,
-});
-
 export default {
-  isMobile,
-  github
+  isMobile
 };
