@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 
 import {SkeletonText} from "carbon-components-react";
 
@@ -6,7 +6,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 import styled from "styled-components";
 
-import {github} from "../../utilities/utilities";
+import useGitHub from "../../hooks/useGithub";
 
 import {device, until} from "../../utilities/mixins";
 
@@ -65,31 +65,6 @@ const Top = styled.div`
 const Description = styled.span`
   font-size: var(--copy-size);
 `;
-
-const useGitHub = (repositoryName) => {
-	const [repository, setRepository] = useState({});
-
-	useEffect(() => {
-		function fetchRepository() {
-			github
-				.getRepo("nicholasadamou", repositoryName)
-				.getDetails()
-				.then((response) => {
-					const {name, description, html_url} = response.data;
-
-					setRepository({
-						name: name.toLowerCase(),
-						description,
-						link: html_url,
-					});
-				});
-		}
-
-		fetchRepository();
-	}, [repositoryName, repository]);
-
-	return repository;
-};
 
 const Project = (repositoryName, emoji, emojiLabel) => {
 	const repository = useGitHub(repositoryName);
