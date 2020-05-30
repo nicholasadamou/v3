@@ -138,6 +138,7 @@ class Nav extends React.Component {
         }}
       >
         {isMobile ? <Toggle handleClick={this.handleClick} /> : ""}
+
         <Container
           className={
             isMobile ? (isNavigationOpened ? "opened" : "closed") : "opened"

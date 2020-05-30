@@ -9,9 +9,9 @@ import "animate.css/animate.min.css";
 import Provider from "../../context/Provider";
 
 import GlobalStyles from "../../sass/GlobalStyles";
+import Container from "../../sass/Container";
 
 import Nav from "../Nav/Nav";
-import Container from "../Container/Container";
 
 import Footer from "../../sections/Footer/Footer";
 
