@@ -183,6 +183,9 @@ const Repository = (repositoryName) => {
 const SkeletonRepository = (id) => (
 	<Container key={id}>
 		<div>
+			<span role="img" aria-label="git">
+				<FontAwesomeIcon icon={["fab", "git-alt"]} />
+			</span>
 			<span aria-label="title">
 				<CircularProgress />
 			</span>
