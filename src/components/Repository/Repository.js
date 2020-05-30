@@ -58,6 +58,12 @@ const Container = styled.article`
       width: 100%;
     }
 
+    span[aria-label="git"] {
+    	margin-right: 5px;
+
+    	color: var(--git);
+    }
+
     svg[data-prefix="fas"] {
       -webkit-transition: all 0.25s ease-in-out;
       transition: all 0.25s ease-in-out;
@@ -128,6 +134,9 @@ const Repository = (repositoryName) => {
 	return (
 		<Container key={id}>
 			<div>
+				<span role="img" aria-label="git">
+					<FontAwesomeIcon icon={["fab", "git-alt"]} />
+				</span>
 				<a
 					href={link}
 					target="_blank"
@@ -137,30 +146,34 @@ const Repository = (repositoryName) => {
 				>
 					<span aria-label="title">{name}</span>
 				</a>
-				<a
-					href={link}
-					target="_blank"
-					aria-hidden="true"
-					aria-label={`${name} github stars`}
-					title="star"
-					rel="noopener noreferrer"
-				>
-					<span role="img" aria-label="star">
-						<FontAwesomeIcon icon={["fas", "star"]} /> {round(stars)}
-					</span>
-				</a>
-				<a
-					href={`${link}/fork`}
-					target="_blank"
-					aria-hidden="true"
-					aria-label={`fork ${name} on github`}
-					title="fork"
-					rel="noopener noreferrer"
-				>
-					<span role="img" aria-label="branch">
-						<FontAwesomeIcon icon={["fas", "code-branch"]} /> {round(forks)}
-					</span>
-				</a>
+				{stars !== 0 &&
+					<a
+						href={link}
+						target="_blank"
+						aria-hidden="true"
+						aria-label={`${name} github stars`}
+						title="star"
+						rel="noopener noreferrer"
+					>
+						<span role="img" aria-label="star">
+							<FontAwesomeIcon icon={["fas", "star"]} /> {round(stars)}
+						</span>
+					</a>
+				}
+				{forks !== 0 &&
+					<a
+						href={`${link}/fork`}
+						target="_blank"
+						aria-hidden="true"
+						aria-label={`fork ${name} on github`}
+						title="fork"
+						rel="noopener noreferrer"
+					>
+						<span role="img" aria-label="branch">
+							<FontAwesomeIcon icon={["fas", "code-branch"]} /> {round(forks)}
+						</span>
+					</a>
+				}
 			</div>
 			<p>{description}</p>
 		</Container>
