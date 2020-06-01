@@ -23,14 +23,18 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 
 ### Steps
 
-Starting the front-end and *Netlify* serverless (λ) functions:
+Run the live-reload server on <http://localhost:3000>
 
 ```bash
-git clone https://github.com/nicholasadamou/nicholasadamou.com
-cd nicholasadamou.com
-npx yarn install
-npx yarn netlify
+make dev
 ```
+
+Or run the live-reload server on <http://localhost:8888> with _Netlify_ (λ) functions:
+
+```bash
+make netlify
+```
+
 
 ## 📚 The Tech. Stack
 
