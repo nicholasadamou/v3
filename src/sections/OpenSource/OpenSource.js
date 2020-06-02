@@ -36,7 +36,7 @@ const Repositories = styled.div`
 `;
 
 const OpenSource = () => (
-	<section id="open-source">
+	<section>
 		<h2 className="title">
 			Open Source{" "}
 			<FontAwesomeIcon

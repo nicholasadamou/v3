@@ -27,7 +27,7 @@ const Pens = styled.div`
 `;
 
 const Prototypes = () => (
-  <section id="prototypes">
+  <section>
     <h2 className="title">
       Prototypes{" "}
       <span role="img" aria-label="test tube">

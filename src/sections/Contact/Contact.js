@@ -161,7 +161,7 @@ const Form = styled.form`
 `;
 
 const Contact = () => (
-  <Container id="contact">
+  <Container>
     <h2 className="title">
       Want to say "Hi" <WaveEmoji />?
     </h2>

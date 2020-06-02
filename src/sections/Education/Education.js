@@ -37,7 +37,7 @@ const Experiences = styled.div`
 `;
 
 const Education = () => (
-  <Container id="education">
+  <Container>
     <h2 className="title">
       Education{" "}
       <span role="img" aria-label="graduate">

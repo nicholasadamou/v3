@@ -55,9 +55,7 @@
     "github-api": "3.3.0",
     "moment": "2.26.0",
     "node-sass": "4.14.1",
-    "react-css-burger": "0.2.0",
     "react-helmet": "6.0.0",
-    "react-scroll": "1.7.16",
     "styled-components": "5.1.1"
   }
 }

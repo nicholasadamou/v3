@@ -197,7 +197,7 @@ const Social = styled.div`
 `;
 
 const AboutMe = () => (
-  <Container id="about-me">
+  <Container>
     <Avatar />
 
     <h1 className="title">

@@ -6,12 +6,8 @@ import "carbon-components/scss/globals/scss/styles.scss";
 import "bulma/css/bulma.min.css";
 import "animate.css/animate.min.css";
 
-import Provider from "../../context/Provider";
-
 import GlobalStyles from "../../sass/GlobalStyles";
 import Container from "../../sass/Container";
-
-import Nav from "../Nav/Nav";
 
 import Footer from "../../sections/Footer/Footer";
 
@@ -26,7 +22,7 @@ import {
 library.add(fab, faHeart, faStar, faCodeBranch);
 
 const Layout = (content) => (
-  <Provider>
+  <>
     <GlobalStyles />
     <Helmet htmlAttributes={{ lang: "en", id: "top" }} title="Nicholas Adamou">
       <link rel="icon" href="/assets/favicons/favicon.ico" />
@@ -124,10 +120,9 @@ const Layout = (content) => (
         content="/assets/favicons/mstile-310x310.png"
       />
     </Helmet>
-    <Nav />
     <Container>{content()}</Container>
     <Footer />
-  </Provider>
+  </>
 );
 
 export default Layout;

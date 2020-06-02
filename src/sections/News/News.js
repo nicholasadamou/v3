@@ -5,7 +5,7 @@ import Article from "../../components/Article/Article";
 import Articles from "../../sass/Articles";
 
 const News = () => (
-  <section id="news">
+  <section>
     <h2 className="title">Nick in the News</h2>
     <p className="subtitle">Some articles that were written about me.</p>
 

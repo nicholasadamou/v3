@@ -5,7 +5,7 @@ import Article from "../../components/Article/Article";
 import Articles from "../../sass/Articles";
 
 const Papers = () => (
-  <section id="papers">
+  <section>
     <h2 className="title">Papers</h2>
     <p className="subtitle">
       These are papers I have written over the years for school that I am proud

@@ -83,7 +83,7 @@ const Experiences = styled.div`
 `;
 
 const Internships = () => (
-  <Container id="internships">
+  <Container>
     <h2 className="title">
       Internships{" "}
       <span role="img" aria-label="coder">
