@@ -2,7 +2,7 @@
 
 # Nicholas Adamou's Personal Website [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.com.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.com) [![CircleCI](https://circleci.com/gh/nicholasadamou/nicholasadamou.com.svg?style=svg)](https://circleci.com/gh/nicholasadamou/nicholasadamou.com)
 
-Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app), [Netlify](https://netlify.com/) and [nicholasadamou/react-starter-kit](https://github.com/nicholasadamou/react-starter-kit).
+Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app), [Netlify](https://netlify.com/).
 
 ![license](https://img.shields.io/apm/l/vim-mode.svg)
 ![javascript style guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
@@ -18,8 +18,8 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 
 ### Requirements
 
--   [Node.js](https://nodejs.org/en/)
--   [Yarn](https://yarnpkg.com/en/) (recommended)
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/en/) (recommended)
 
 ### Steps
 
@@ -35,7 +35,6 @@ Or run the live-reload server on <http://localhost:8888> with _Netlify_ (λ) fun
 make netlify
 ```
 
-
 ## 📚 The Tech. Stack
 
 This project uses the following technologies:
@@ -47,7 +46,6 @@ This project uses the following technologies:
   - [**instant.page**](https://instant.page/) - Make your site's pages instant in 1 minute and improve your conversion rate by 1%.
   - [**github-api**](https://www.npmjs.com/package/github-api) - For making requests to the GitHub API within React.
 
-
 **The Back-End**:
 
 - [**Netlify**](https://netlify.com/) - For serverless [**functions**](functions/).
@@ -57,7 +55,7 @@ This project uses the following technologies:
 This project uses the following CI/CD Pipeline:
 
 1. [**Travis CI**](https://travis-ci.org/nicholasadamou/nicholasadamou.com) - Travis is used to test whether or not this project builds successfully.
-2. [**Netlify**](https://netlify.com/) - For continuous deployment to [*nicholasadamou.com*](https://nicholasadamou.com).
+2. [**Netlify**](https://netlify.com/) - For continuous deployment to [_nicholasadamou.com_](https://nicholasadamou.com).
 3. [**CircleCI**](https://circleci.com/) - Used for the same reason as Travis CI.
 
 ## 📚 The Design Stack
@@ -67,12 +65,6 @@ This project uses the following technologies:
 - [**Bulma**](https://bulma.io/) - A free, open-source CSS framework based on Flexbox and used by more than 200,000 developers.
 - [**Carbon Design System**](https://carbondesignsystem.com) - Carbon is the design system for IBM web and product. It is a series of individual styles, components, and guidelines used for creating unified UI.
 - [**Figma**](https://www.figma.com/) - Build better products as a team. Design, prototype, and gather feedback all in one place with Figma.
-
-## Partners
-
-![BrowserStack](browserstack-logo.png)
-
-[BrowserStack](https://www.browserstack.com/) is used as a cloud web and mobile testing platform that enables developers, like myself, to test their websites and mobile applications across on-demand browsers, operating systems and real mobile devices, without requiring users to install or maintain an internal lab of virtual machines, devices or emulators.
 
 ## License
 
