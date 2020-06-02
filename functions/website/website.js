@@ -4,14 +4,6 @@ const validator = require('validator');
 
 const cache = new Map();
 
-function isOneOfMySites(url) {
-	return [
-		'https://cutpastecopy.github.io/',
-		'https://nicholasadamou.com/',
-		'https://advanced-electrical-services.netlify.app/'
-	].includes(url);
-}
-
 async function getOptions() {
 	return process.env.URL.includes("http://localhost")
 		?
@@ -69,51 +61,42 @@ exports.handler = async (event, context) => {
 		if (validator.isURL(`https://${url}/`, {
 			protocols: ['http', 'https']
 		})) {
-			if (isOneOfMySites(`https://${url}/`)) {
-				let screenshot = '';
-				const key = `https://${url}/:${device}`;
+			let screenshot = '';
+			const key = `https://${url}/:${device}`;
 
-				if (cache.has(key)) {
-					screenshot = await cache.get(key);
-				} else {
-					let prefix = `${process.env.URL}/.netlify/functions/`
-
-					if (process.env.URL.includes("http://localhost")) {
-						prefix = `${process.env.URL}`
-					}
-
-					console.log(
-						`${prefix}/website?${new URLSearchParams(event.queryStringParameters).toString()}`
-					);
-
-					screenshot = await getScreenshot(
-						`https://${url}/`,
-						`${device}`,
-						`${type}`
-					);
-
-					cache.set(key, screenshot);
-				}
-
-				console.log({
-					statusCode: 200,
-					'Content-Type': `image/${type}`,
-					'Content-Length': screenshot.length,
-				});
-
-				return {
-					statusCode: 200,
-					body: screenshot,
-					isBase64Encoded: true
-				};
+			if (cache.has(key)) {
+				screenshot = await cache.get(key);
 			} else {
-				return {
-					statusCode: 400,
-					body: JSON.stringify({
-						message: `Bad Request: The provided URL '${url}' is not one of Nicholas Adamou's websites.`
-					})
+				let prefix = `${process.env.URL}/.netlify/functions/`
+
+				if (process.env.URL.includes("http://localhost")) {
+					prefix = `${process.env.URL}`
 				}
+
+				console.log(
+					`${prefix}/website?${new URLSearchParams(event.queryStringParameters).toString()}`
+				);
+
+				screenshot = await getScreenshot(
+					`https://${url}/`,
+					`${device}`,
+					`${type}`
+				);
+
+				cache.set(key, screenshot);
 			}
+
+			console.log({
+				statusCode: 200,
+				'Content-Type': `image/${type}`,
+				'Content-Length': screenshot.length,
+			});
+
+			return {
+				statusCode: 200,
+				body: screenshot,
+				isBase64Encoded: true
+			};
 		} else {
 			return {
 				statusCode: 400,
