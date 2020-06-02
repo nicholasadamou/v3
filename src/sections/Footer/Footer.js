@@ -153,7 +153,6 @@ const Footer = () => (
       Handcrafted with{" "}
       <FontAwesomeIcon
         icon={["fas", "heart"]}
-        className="animated heartBeat infinite"
         style={{ color: "red" }}
       />{" "}
       by myself. Copyright &copy; {moment(Date.now()).year()}.

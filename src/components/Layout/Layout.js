@@ -4,7 +4,6 @@ import { Helmet } from "react-helmet";
 
 import "carbon-components/scss/globals/scss/styles.scss";
 import "bulma/css/bulma.min.css";
-import "animate.css/animate.min.css";
 
 import GlobalStyles from "../../sass/GlobalStyles";
 import Container from "../../sass/Container";
