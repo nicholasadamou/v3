@@ -64,7 +64,6 @@ This project uses the following technologies:
 
 - [**Bulma**](https://bulma.io/) - A free, open-source CSS framework based on Flexbox and used by more than 200,000 developers.
 - [**Carbon Design System**](https://carbondesignsystem.com) - Carbon is the design system for IBM web and product. It is a series of individual styles, components, and guidelines used for creating unified UI.
-- [**Figma**](https://www.figma.com/) - Build better products as a team. Design, prototype, and gather feedback all in one place with Figma.
 
 ## License
 
