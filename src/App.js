@@ -5,7 +5,6 @@ import Layout from "./components/Layout/Layout";
 import AboutMe from "./sections/AboutMe/AboutMe";
 import Education from "./sections/Education/Education";
 import Internships from "./sections/Internships/Internships";
-import Websites from "./sections/Websites/Websites";
 import OpenSource from "./sections/OpenSource/OpenSource";
 import Prototypes from "./sections/Prototypes/Prototypes";
 import Papers from "./sections/Papers/Papers";
@@ -20,8 +19,6 @@ function App() {
       <Education />
       <hr />
       <Internships />
-      <hr />
-      <Websites />
       <hr />
       <OpenSource />
       <hr />

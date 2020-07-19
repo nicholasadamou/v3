@@ -123,18 +123,6 @@ const Footer = () => (
           </li>
         </a>
         <a
-          href="https://twitter.com/NicholasAdamou"
-          target="_blank"
-          aria-hidden="true"
-          aria-label="Twitter"
-          title="Twitter"
-          rel="noopener noreferrer"
-        >
-          <li className="twitter">
-            <FontAwesomeIcon icon={["fab", "twitter"]} />
-          </li>
-        </a>
-        <a
           href="https://instagram.com/nicholasadamou"
           target="_blank"
           aria-hidden="true"

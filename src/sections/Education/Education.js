@@ -169,25 +169,17 @@ const Education = () => (
     </p>
 
     <Reviews>
-      {Review(
+			{Review(
         "Peter Dumas",
         "Head Tennis Coach, Cornell College",
-        "Nick is an incredibly gifted student and he will serve as an impressive example for publications about recent graduates and future recruitment of computer science majors.",
+				"Nick is one of those athletes that you love having on your team. He always gave his best during practice and matches while maintaining a high level of academic excellence. Even though Nick was only a Ram for two years after transferring from Hartwick and his senior season was cut short, he had a large impact on his teammates and his coach.",
         require("../../assets/images/avatars/peter.jpg")
       )}
-      {Review(
-        "Peter Dumas",
-        "Head Tennis Coach, Cornell College",
-        "Nick is  an example of the best type of student that this environment can produce. He is active on campus and is a leader on our team.",
-        require("../../assets/images/avatars/peter.jpg")
-      )}
-      {Review(
-        "Peter Dumas",
-        "Head Tennis Coach, Cornell College",
-        "I have known Nick since he was a junior in high school and " +
-          "I recruited Nick to be a member of my men’s tennis team at Hartwick College starting in 2016. " +
-          "During this time, I have known Nick to be extremely diligent and proficient in his approach with everything that he does.",
-        require("../../assets/images/avatars/peter.jpg")
+			{Review(
+        "Leon Tabak",
+        "Professor of Computer Science, Cornell College",
+				"Nick’s classmates saw his initiative and responded with their own ideas and energy. Nick organized activities for his classmates like those in which he had participated during two great internships. He shared enthusiasm and skills gained in Silicon Valley and at IBM.",
+        require("../../assets/images/avatars/leon.jpg")
       )}
     </Reviews>
 

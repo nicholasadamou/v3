@@ -154,7 +154,7 @@ const Container = styled.section`
 
 const Social = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   place-items: center;
 
@@ -205,11 +205,7 @@ const AboutMe = () => (
     </h1>
 
     <p>
-      I am currently a{" "}
-      <span role="img" aria-label="ibm">
-        👀🐝Ⓜ️
-      </span>{" "}
-      Software Engineer and a recent graduate from{" "}
+      I am currently a IBM Software Engineer and a recent graduate from{" "}
       <a
         className="cornell"
         href="https://www.cornellcollege.edu/"
@@ -218,11 +214,8 @@ const AboutMe = () => (
         rel="noopener noreferrer"
       >
         Cornell College
-      </a>
-      . My mission is to learn as much as I can about different areas of the
-      computer. I absolutely love programming. The mere ability to write a few
-      lines of code and have something unique and interesting come up on the
-      screen fascinates me each and every day!
+      </a>{" "}
+      where I earned my B.A. in Computer Science with a concentration in Software Engineering. I am a highly organized and hard-working individual who absolutely loves programming. The mere ability to write a few lines of code and have something unique and interesting come up on the screen fascinates me each and every day!
     </p>
 
     <p>
@@ -285,15 +278,6 @@ const AboutMe = () => (
         id="linkedin"
       >
         Connect with Me on <FontAwesomeIcon icon={["fab", "linkedin"]} />
-      </a>
-      <a
-        href="https://twitter.com/NicholasAdamou"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        id="twitter"
-      >
-        Follow Me on <FontAwesomeIcon icon={["fab", "twitter"]} />
       </a>
       <a
         href="https://www.instagram.com/nicholasadamou/"
