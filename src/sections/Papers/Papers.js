@@ -8,7 +8,7 @@ const Papers = () => (
   <section>
     <h2 className="title">Papers</h2>
     <p className="subtitle">
-      These are papers I have written over the years for school.
+      Papers I have written over the years for school.
     </p>
 
     <Articles>
