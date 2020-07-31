@@ -1,12 +1,10 @@
 <div align="center">
 
 # Nicholas Adamou's Personal Website 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fedaa871-c59d-4923-9c65-f29330bf60da/deploy-status)](https://app.netlify.com/sites/nicholasadamou/deploys) [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.com.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.com) [![CircleCI](https://circleci.com/gh/nicholasadamou/nicholasadamou.com.svg?style=svg)](https://circleci.com/gh/nicholasadamou/nicholasadamou.com)
 
 Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](https://netlify.com/).
 
-![license](https://img.shields.io/apm/l/vim-mode.svg)
-![javascript style guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fedaa871-c59d-4923-9c65-f29330bf60da/deploy-status)](https://app.netlify.com/sites/nicholasadamou/deploys) [![Build Status](https://travis-ci.org/nicholasadamou/nicholasadamou.com.svg?branch=master)](https://travis-ci.org/nicholasadamou/nicholasadamou.com) [![CircleCI](https://circleci.com/gh/nicholasadamou/nicholasadamou.com.svg?style=svg)](https://circleci.com/gh/nicholasadamou/nicholasadamou.com) ![license](https://img.shields.io/apm/l/vim-mode.svg) ![javascript style guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)
 
 </div>
 
