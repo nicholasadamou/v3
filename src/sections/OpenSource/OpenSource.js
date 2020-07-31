@@ -64,11 +64,7 @@ const OpenSource = () => (
 				className="link"
 			>
 				many repositories
-			</a>{" "}
-			. Take a{" "}
-			<span role="img" aria-label="eyes">
-            👀
-          </span>
+			</a>
 			.
 		</p>
 

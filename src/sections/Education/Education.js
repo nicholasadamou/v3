@@ -67,8 +67,8 @@ const Education = () => (
             {" 3.98 out of 4.0"}
             <br />
             <em>Overall</em>
-            {" Class Rank: 5/212 ("}
-            <em>2.35%</em>
+            {" Class Rank: 5/261 ("}
+            <em>2.29%</em>
             {")"}
           </>
         ),
