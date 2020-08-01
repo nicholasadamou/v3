@@ -35,7 +35,7 @@ const Prototypes = () => (
       </span>
     </h2>
     <p className="subtitle">
-      Quick experiments or work-in-progress I've done in JavaScript.
+      Experiments or work-in-progress I've done in JavaScript.
     </p>
 
     <Pens>
