@@ -113,7 +113,7 @@ const Education = () => (
       </span>
     </h2>
     <p className="subtitle" style={{ fontSize: "1.1rem" }}>
-      Some awards that I have received from my studies at either institution.
+      Awards that I have received from my studies at either institution.
     </p>
 
     <Awards>
