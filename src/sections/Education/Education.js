@@ -45,7 +45,7 @@ const Education = () => (
       </span>
     </h2>
     <p className="subtitle">
-      Some schools where I learned all that I know about software engineering.
+      Schools where I learned all that I know about software engineering.
     </p>
 
     <Experiences>
