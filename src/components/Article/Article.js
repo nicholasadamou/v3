@@ -13,6 +13,10 @@ const Container = styled.article`
 
 	margin-bottom: 25px;
 
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 	${until(
     device.iPhone(),
     () => `
