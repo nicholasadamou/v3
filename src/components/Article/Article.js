@@ -40,7 +40,7 @@ const Container = styled.article`
 			text-decoration: none;
 
 			h4 {
-				font-size: 1.25rem;
+				font-size: 1.1rem;
 				font-weight: bold;
 
 				margin-bottom: 5px;
