@@ -35,12 +35,6 @@ const Container = styled.article`
   span[role="img"] {
     margin-right: 5px;
   }
-
-  p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
 `;
 
 const Article = (title, desc, link, emoji, emojiLabel) => (

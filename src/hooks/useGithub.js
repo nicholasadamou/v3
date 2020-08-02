@@ -32,7 +32,7 @@ const useGitHub = (repositoryName) => {
 		}
 
 		fetchRepository();
-	}, [repositoryName, repository]);
+	}, [repositoryName]);
 
 	return repository;
 };
