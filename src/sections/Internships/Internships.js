@@ -91,7 +91,7 @@ const Internships = () => (
       </span>
     </h2>
     <p className="subtitle">
-      Some companies where I've had the privilege to intern at in the past.
+      Companies where I've had the privilege to intern at in the past.
     </p>
 
     <Companies>
@@ -202,7 +202,7 @@ const Internships = () => (
       </span>
     </h2>
     <p className="subtitle" style={{ fontSize: "1.1rem" }}>
-      Some awards that I have received while I was an intern.
+      Awards that I have received while I was an intern.
     </p>
 
     <Awards>
@@ -225,7 +225,7 @@ const Internships = () => (
       </span>
     </h2>
     <p className="subtitle" style={{ fontSize: "1.1rem" }}>
-      Some certifications and badges that I have received while I was an intern.
+      Certifications and badges that I have received while I was an intern.
 			<br />
 			More badges can be found at my {" "}
 			<a
