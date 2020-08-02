@@ -29,6 +29,13 @@ const Container = styled.article`
 	.article-details {
 		width: 70%;
 
+		${until(
+    device.iPhone(),
+    () => `
+			width: 100%;
+	`
+  )}
+
 		.link {
 			text-decoration: none;
 
