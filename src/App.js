@@ -2,33 +2,10 @@ import React from "react";
 
 import Layout from "./components/Layout/Layout";
 
-import AboutMe from "./sections/AboutMe/AboutMe";
-import Education from "./sections/Education/Education";
-import Internships from "./sections/Internships/Internships";
-import OpenSource from "./sections/OpenSource/OpenSource";
-import Prototypes from "./sections/Prototypes/Prototypes";
-import Papers from "./sections/Papers/Papers";
-import News from "./sections/News/News";
-import Contact from "./sections/Contact/Contact";
-
 function App() {
   return Layout(() => (
     <>
-      <AboutMe />
-      <hr />
-      <Education />
-      <hr />
-      <Internships />
-      <hr />
-      <OpenSource />
-      <hr />
-      <Prototypes />
-      <hr />
-      <Papers />
-      <hr />
-      <News />
-      <hr />
-      <Contact />
+    	<h1><em>nicholasadamou.com</em> is down for maintenance.</h1>
     </>
   ));
 }
