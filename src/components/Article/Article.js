@@ -14,7 +14,7 @@ const Container = styled.article`
 	margin-bottom: 25px;
 
 	.masthead {
-		width: 180px;
+		width: 150px;
 
 		border-radius: 8px;
 
