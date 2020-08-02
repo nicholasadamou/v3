@@ -6,7 +6,12 @@ import Articles from "../../sass/Articles";
 
 const News = () => (
   <section>
-    <h2 className="title">Nick in the News</h2>
+    <h2 className="title">
+			Nick in the News{" "}
+			<span role="img" aria-label="rolled-up-newspaper">
+			🗞️
+      </span>
+		</h2>
     <p className="subtitle">Articles that were written about me.</p>
 
     <Articles>
