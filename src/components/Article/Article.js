@@ -2,59 +2,89 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { parseURL } from "../../utilities/utilities";
+
 import { device, until } from "../../utilities/mixins";
 
 const Container = styled.article`
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-  width: 90%;
-  max-width: 100%;
+	margin-bottom: 25px;
 
-  margin: 10px auto;
+	.masthead {
+		width: 180px;
 
-  overflow: hidden;
+		border-radius: 8px;
 
-  font-size: var(--copy-size);
+		${until(
+    device.iPhone(),
+    () => `
+			display: none;
+	`
+  )}
+	}
+
+	.article-details {
+		width: 70%;
+
+		.link {
+			text-decoration: none;
+
+			h4 {
+				font-size: 1.25rem;
+				font-weight: bold;
+
+				margin-bottom: 5px;
+			}
+		}
+
+		div {
+			display: flex;
+			align-items: center;
+
+			margin-bottom: 5px;
+
+			img {
+				margin-right: 10px;
+
+				width: 15px;
+				height: 15px;
+			}
+
+			p {
+				color: var(--light-grey);
+			}
+		}
+	}
 
   ${until(
     device.iPhone(),
     () => `
-		display: block;
-		-webkit-box-flex: 0;
-		flex: none;
-
-		width: 100%;
-		max-width: 100%;
+			flex-direction: column;
 	`
   )}
-
-  span[role="img"] {
-    margin-right: 5px;
-  }
 `;
 
-const Article = (title, desc, link, emoji, emojiLabel) => (
-  <Container>
-    <div>
-      <span role="img" aria-label={emojiLabel}>
-        ️️️{emoji}
-      </span>
-      <a
-        href={link}
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        className="link"
-      >
-        {title}
-      </a>
-    </div>
-    <p>{desc}</p>
-  </Container>
-);
+const Article = (title, description, image, link) => {
+	const URL = parseURL(link);
+
+	return (
+		<Container>
+			<div class="article-details">
+				<div>
+					<img src={URL.favicon} alt={`${URL.parts[1]}'s favicon`} />
+					<p>{URL.parts[1]}</p>
+				</div>
+				<a href={link} class="link" target="_blank" rel="noopener noreferrer">
+					<h4>{title}</h4>
+				</a>
+				<p>{description}</p>
+			</div>
+			<img src={image} class="masthead" alt="article masthead" />
+		</Container>
+	)
+}
 
 export default Article;

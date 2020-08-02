@@ -7,7 +7,6 @@ import Education from "./sections/Education/Education";
 import Internships from "./sections/Internships/Internships";
 import OpenSource from "./sections/OpenSource/OpenSource";
 import Prototypes from "./sections/Prototypes/Prototypes";
-import Papers from "./sections/Papers/Papers";
 import News from "./sections/News/News";
 import Contact from "./sections/Contact/Contact";
 
@@ -23,8 +22,6 @@ function App() {
       <OpenSource />
       <hr />
       <Prototypes />
-      <hr />
-      <Papers />
       <hr />
       <News />
       <hr />
