@@ -10,20 +10,23 @@ import Container from "../../sass/Container";
 
 import Footer from "../../sections/Footer/Footer";
 
+import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
+
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
   faHeart,
   faStar,
-  faCodeBranch,
+	faCodeBranch,
+	faArrowUp
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faHeart, faStar, faCodeBranch);
+library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp);
 
 const Layout = (content) => (
   <>
     <GlobalStyles />
-    <Helmet htmlAttributes={{ lang: "en", id: "top" }} title="Nicholas Adamou">
+    <Helmet htmlAttributes={{ lang: "en" }} title="Nicholas Adamou">
       <link rel="icon" href="/assets/favicons/favicon.ico" />
       <link
         rel="apple-touch-icon-precomposed"
@@ -121,6 +124,7 @@ const Layout = (content) => (
     </Helmet>
     <Container>{content()}</Container>
     <Footer />
+		<ScrollToTopButton />
   </>
 );
 
