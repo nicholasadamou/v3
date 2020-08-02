@@ -13,6 +13,14 @@ const Container = styled.article`
 
 	margin-bottom: 25px;
 
+	${until(
+    device.iPhone(),
+    () => `
+			justify-content: center;
+			flex-direction: column-reverse;
+	`
+  )}
+
 	.masthead {
 		width: 150px;
 
@@ -21,7 +29,9 @@ const Container = styled.article`
 		${until(
     device.iPhone(),
     () => `
-			display: none;
+			width: 280px;
+
+			margin-bottom: 20px;
 	`
   )}
 	}
