@@ -37,8 +37,6 @@ const Container = styled.article`
   )}
 
 		.link {
-			text-decoration: none;
-
 			h4 {
 				font-size: 1.1rem;
 				font-weight: bold;
