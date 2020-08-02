@@ -17,10 +17,22 @@ const News = () => (
         "https://news.cornellcollege.edu/2020/06/passion-computer-science-leads-job-ibm-adamou-՚20/",
       )}
 			{Article(
+				"Cornell College shares this week's senior profile on Nicholas Adamou",
+				"This week's senior profile is Nicholas Adamou '20. Congrats on your many accomplishments, Nicholas!",
+				"",
+        "https://www.instagram.com/p/CBlTkx2FFIA"
+			)}
+			{Article(
 				"Adamou holds computer science internship at IBM",
 				"Nick Adamou will start his senior year with new insights and knowledge following his computer science internship.",
 				require("../../assets/images/news/nicholas-2.jpg"),
         "https://news.cornellcollege.edu/2019/08/adamou-holds-computer-science-internship-ibm/"
+			)}
+			{Article(
+				"Nick Adamou shares insights and knowledge following his computer science internship",
+				"Nick Adamou (pictured on the left) started his senior year with new insights and knowledge following his computer science internship. He spent his summer as a software engineering intern at IBM under IBM’s Finance and Operations Department in Southbury, Connecticut. Way to go Nick!",
+				"",
+				"https://www.instagram.com/p/B1v-gCHHAer"
 			)}
     </Articles>
   </section>

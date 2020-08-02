@@ -25,7 +25,7 @@ export const isMobile = {
   },
 };
 
-export const parseURL = (URL) => {
+export const parseURL = (URL = 'https://example.com') => {
 	let url = {},
 			tempProtocol
 

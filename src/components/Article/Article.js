@@ -83,17 +83,23 @@ const Article = (title, description, image, link) => {
 
 	return (
 		<Container>
-			<div class="article-details">
+			<div className="article-details">
 				<div>
 					<img src={URL.favicon} alt={`${URL.parts[1]}'s favicon`} />
 					<p>{URL.parts[1]}</p>
 				</div>
-				<a href={link} class="link" target="_blank" rel="noopener noreferrer">
+				<a href={link} className="link" target="_blank" rel="noopener noreferrer">
 					<h4>{title}</h4>
 				</a>
 				<p>{description}</p>
 			</div>
-			<img src={image} class="masthead" alt="article masthead" />
+			{
+				image !== ''
+					?
+						<img src={image} className="masthead" alt="article masthead" />
+					:
+						<div style={{width: 150}}></div>
+			}
 		</Container>
 	)
 }
