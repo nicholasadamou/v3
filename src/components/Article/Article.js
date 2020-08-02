@@ -53,7 +53,6 @@ const Container = styled.article`
 		.link {
 			h4 {
 				font-size: 1.1rem;
-				font-weight: bold;
 
 				margin-bottom: 5px;
 			}
