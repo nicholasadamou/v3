@@ -31,7 +31,7 @@ const Container = styled.article`
     () => `
 			width: 280px;
 
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 	`
   )}
 	}
@@ -73,13 +73,6 @@ const Container = styled.article`
 			}
 		}
 	}
-
-  ${until(
-    device.iPhone(),
-    () => `
-			flex-direction: column;
-	`
-  )}
 `;
 
 const Article = (title, description, image, link) => {
