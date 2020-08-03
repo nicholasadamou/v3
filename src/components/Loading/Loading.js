@@ -11,8 +11,8 @@ const Container = styled.div`
 	height: 100vh;
 
 	.MuiCircularProgress-root {
-		width: 50px !important;
-		height: 50px !important;
+		width: 50px;
+		height: 50px;
 
 		circle {
 			stroke: var(--red);

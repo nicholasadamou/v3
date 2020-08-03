@@ -30,6 +30,15 @@ const Container = styled.article`
 	`
 )}
 
+	.MuiCircularProgress-root {
+		width: 10px !important;
+		height: 10px !important;
+
+		circle {
+			stroke: var(--black);
+		}
+	}
+
   a {
     text-decoration: none;
     color: var(--black);
