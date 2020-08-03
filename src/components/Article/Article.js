@@ -56,8 +56,12 @@ const Container = styled.article`
 			h4 {
 				font-size: 1.1rem;
 
-				margin-bottom: 5px;
+				margin-bottom: 3px;
 			}
+		}
+
+		p {
+			margin-bottom: 3px;
 		}
 
 		small {
@@ -68,7 +72,7 @@ const Container = styled.article`
 			display: flex;
 			align-items: center;
 
-			margin-bottom: 5px;
+			margin-bottom: 3px;
 
 			img {
 				margin-right: 10px;
