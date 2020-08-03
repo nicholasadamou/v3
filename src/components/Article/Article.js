@@ -2,6 +2,8 @@ import React from "react";
 
 import styled from "styled-components";
 
+import moment from "moment";
+
 import { parseURL } from "../../utilities/utilities";
 
 import { device, until } from "../../utilities/mixins";
@@ -58,6 +60,10 @@ const Container = styled.article`
 			}
 		}
 
+		small {
+			color: var(--light-grey);
+		}
+
 		div {
 			display: flex;
 			align-items: center;
@@ -78,7 +84,8 @@ const Container = styled.article`
 	}
 `;
 
-const Article = (title, description, image, link) => {
+
+const Article = (title, description, date, image, link) => {
 	const URL = parseURL(link);
 
 	return (
@@ -92,6 +99,15 @@ const Article = (title, description, image, link) => {
 					<h4>{title}</h4>
 				</a>
 				<p>{description}</p>
+				<small>
+					{
+						(moment(new Date(date)).fromNow() === 'a year ago') || (moment(new Date(date)).fromNow() === '3 months ago')
+							?
+								`${date}`
+							:
+								moment(new Date(date)).fromNow()
+					}
+				</small>
 			</div>
 			{
 				image !== ''
