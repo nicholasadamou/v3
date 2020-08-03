@@ -6,27 +6,11 @@ import "carbon-components/scss/globals/scss/styles.scss";
 import "bulma/css/bulma.min.css";
 
 import GlobalStyles from "../../sass/GlobalStyles";
-import Container from "../../sass/Container";
 
-import Footer from "../../sections/Footer/Footer";
-
-import ScrollToTopButton from "../ScrollToTopButton/ScrollToTopButton";
-
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import {
-  faHeart,
-  faStar,
-	faCodeBranch,
-	faArrowUp
-} from "@fortawesome/free-solid-svg-icons";
-
-library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp);
-
-const Layout = (content) => (
+const Layout = (props) => (
   <>
     <GlobalStyles />
-    <Helmet htmlAttributes={{ lang: "en" }} title="Nicholas Adamou">
+		<Helmet htmlAttributes={{ lang: "en" }} title="Nicholas Adamou">
       <link rel="icon" href="/assets/favicons/favicon.ico" />
       <link
         rel="apple-touch-icon-precomposed"
@@ -122,9 +106,8 @@ const Layout = (content) => (
         content="/assets/favicons/mstile-310x310.png"
       />
     </Helmet>
-    <Container>{content()}</Container>
-    <Footer />
-		<ScrollToTopButton />
+
+		{props.children}
   </>
 );
 

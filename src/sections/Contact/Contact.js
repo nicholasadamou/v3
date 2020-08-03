@@ -234,7 +234,7 @@ const Contact = () => (
         </div>
       </div>
 
-      <input type="hidden" name="_next" value="form-success.html" />
+      <input type="hidden" name="_next" value="/form-success" />
       <input
         type="hidden"
         name="_subject"

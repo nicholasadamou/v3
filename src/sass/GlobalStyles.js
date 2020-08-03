@@ -106,15 +106,6 @@ const GlobalStyles = createGlobalStyle`
 	  background: var(--white);
 	}
 
-	.MuiCircularProgress-root {
-		width: 10px !important;
-		height: 10px !important;
-
-		circle {
-			stroke: var(--black);
-		}
-	}
-
 	.bx--skeleton__text {
 		height: 0.75rem;
 	}
