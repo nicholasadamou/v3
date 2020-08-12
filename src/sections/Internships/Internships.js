@@ -103,7 +103,8 @@ const Internships = () => (
         title="IBM"
       >
         <img
-          src={require("../../assets/images/logos/ibm_alt.png")}
+					loading="lazy"
+					src={require("../../assets/images/logos/ibm_alt.png")}
           alt="IBM"
         />
       </a>
@@ -115,6 +116,7 @@ const Internships = () => (
         title="flyblackbird"
       >
         <img
+					loading="lazy"
           src={require("../../assets/images/logos/blackbird_alt.png")}
           alt="flyblackbird"
         />
@@ -127,6 +129,7 @@ const Internships = () => (
         title="Mack Media Group"
       >
         <img
+					loading="lazy"
           src={require("../../assets/images/logos/mack-media-group_alt.png")}
           alt="Mack Media Group"
         />

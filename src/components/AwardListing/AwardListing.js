@@ -67,7 +67,7 @@ const Container = styled.div`
 
 const AwardListing = (logo, institution, content) => (
   <Container>
-    <img src={logo} alt={institution} />
+    <img loading="lazy" src={logo} alt={institution} />
     <div>
       <strong>{institution} Awards</strong>
       <span>{content()}</span>

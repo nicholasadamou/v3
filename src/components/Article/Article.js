@@ -96,7 +96,7 @@ const Article = (title, description, date, image, link) => {
 		<Container>
 			<div className="article-details">
 				<div>
-					<img src={URL.favicon} alt={`${URL.parts[1]}'s favicon`} />
+					<img loading="lazy" src={URL.favicon} alt={`${URL.parts[1]}'s favicon`} />
 					<p>{URL.parts[1]}</p>
 				</div>
 				<a href={link} className="link" target="_blank" rel="noopener noreferrer">
@@ -116,7 +116,7 @@ const Article = (title, description, date, image, link) => {
 			{
 				image !== ''
 					?
-						<img src={image} className="masthead" alt="article masthead" />
+						<img loading="lazy" src={image} className="masthead" alt="article masthead" />
 					:
 						<div style={{width: 150}}></div>
 			}

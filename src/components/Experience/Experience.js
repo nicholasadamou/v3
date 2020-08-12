@@ -63,7 +63,7 @@ const Container = styled.div`
 
 const Experience = (company, title, location, duration, description, image) => (
   <Container>
-    <img src={image} alt={company} />
+    <img loading="lazy" src={image} alt={company} />
     <div>
       <strong>{title}</strong>
       <aside>{duration}</aside>

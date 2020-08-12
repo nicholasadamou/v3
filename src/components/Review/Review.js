@@ -62,7 +62,7 @@ const Review = (author, source, quote, image) => (
     <blockquote>
       <q>"{quote}"</q>
       <article>
-        <img src={image} alt="avatar" />
+        <img loading="lazy" src={image} alt="avatar" />
         <Meta>
           <strong>{author}</strong>
           <span>{source}</span>
