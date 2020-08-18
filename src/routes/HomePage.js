@@ -9,6 +9,7 @@ import Education from "../sections/Education/Education";
 import Internships from "../sections/Internships/Internships";
 import OpenSource from "../sections/OpenSource/OpenSource";
 import Prototypes from "../sections/Prototypes/Prototypes";
+import Tennis from "../sections/Tennis/Tennis";
 import News from "../sections/News/News";
 import Contact from "../sections/Contact/Contact";
 
@@ -39,6 +40,8 @@ const HomePage = () => (
 			<OpenSource />
 			<hr />
 			<Prototypes />
+			<hr />
+			<Tennis />
 			<hr />
 			<News />
 			<hr />

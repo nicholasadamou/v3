@@ -84,7 +84,7 @@ const Container = styled.section`
 		`
     )}
 
-		a {
+	a {
       display: inline-block;
 
       position: relative;
