@@ -5,10 +5,10 @@ import Experience from "../../components/Experience/Experience";
 import Review from "../../components/Review/Review";
 import Repository from '../../components/Repository/Repository'
 import FooterText from "../../components/FooterText/FooterText";
+import Masonry from "../../components/Masonry/Masonry";
 
 import Awards from "../../sass/Awards";
 import Projects from "../../sass/Projects";
-import Reviews from "../../sass/Reviews";
 
 import styled from "styled-components";
 
@@ -16,6 +16,14 @@ import { device, until } from "../../utilities/mixins";
 
 const Container = styled.section`
   padding: 0 25px;
+
+  .reviews {
+  	width: 95%;
+
+  	blockquote {
+  		padding: 10px;
+  	}
+  }
 `;
 
 const Experiences = styled.div`
@@ -168,7 +176,10 @@ const Education = () => (
       </span>
     </p>
 
-    <Reviews>
+    <Masonry
+		className="reviews"
+		columns={2}
+	>
 			{Review(
         "Peter Dumas",
         "Head Tennis Coach, Cornell College",
@@ -181,7 +192,7 @@ const Education = () => (
 				"Nick’s classmates saw his initiative and responded with their own ideas and energy. Nick organized activities for his classmates like those in which he had participated during two great internships. He shared enthusiasm and skills gained in Silicon Valley and at IBM.",
         require("../../assets/images/avatars/leon.jpg")
       )}
-    </Reviews>
+    </Masonry>
 
     {FooterText(
       "Read more about my education on my ",

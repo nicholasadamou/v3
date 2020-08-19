@@ -1,10 +1,8 @@
 import React from 'react';
 
-import ImageMasonry from 'react-image-masonry';
-
 import FooterText from '../../components/FooterText/FooterText';
 
-import Reviews from '../../sass/Reviews';
+import Masonry from "../../components/Masonry/Masonry";
 import Review from '../../components/Review/Review';
 
 import Article from './components/Article/Article';
@@ -26,6 +24,14 @@ const Container = styled.section`
     &:before {
       background-color: var(--cornell);
     }
+  }
+
+  .reviews {
+  	width: 95%;
+
+  	blockquote {
+  		padding: 10px;
+  	}
   }
 `;
 
@@ -150,8 +156,8 @@ const Tennis = () => (
         </Column>
         <Column>
           <Photos>
-            <ImageMasonry
-              imageUrls={[
+            <Masonry
+              images={[
                 require('../../assets/images/tennis/nicholas-adamou-forehand-shot.jpg'),
                 require('../../assets/images/tennis/home-match-spring-2019.jpg'),
                 require('../../assets/images/tennis/simpson-college-2019.jpg'),
@@ -164,7 +170,7 @@ const Tennis = () => (
                 require('../../assets/images/tennis/nicholas-adamou-serving-2019.jpg'),
                 require('../../assets/images/tennis/cornell-vs-lake-forest.jpg'),
               ]}
-              numCols={2}
+              columns={2}
             />
           </Photos>
         </Column>
@@ -214,7 +220,10 @@ const Tennis = () => (
       </span>
     </p>
 
-    <Reviews>
+    <Masonry
+		className="reviews"
+		columns={2}
+	>
       {Review(
         'Peter Dumas',
         'Head Tennis Coach, Cornell College',
@@ -251,7 +260,7 @@ const Tennis = () => (
         'I am so glad I got the chance to get to know Nick these last 2 years. He was always there for me as a friend and teammate; he always listened to me when I was struggling mentally. I am sure he will do big things in life. #IBM',
         require('../../assets/images/avatars/ravi.jpg'),
       )}
-    </Reviews>
+    </Masonry>
 
     {FooterText(
       'Read more about my collegiate tennis career at ',

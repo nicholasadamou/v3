@@ -5,10 +5,10 @@ import Experience from "../../components/Experience/Experience";
 import Review from "../../components/Review/Review";
 import Repository from "../../components/Repository/Repository";
 import FooterText from "../../components/FooterText/FooterText";
+import Masonry from "../../components/Masonry/Masonry";
 
 import Awards from "../../sass/Awards";
 import Projects from "../../sass/Projects";
-import Reviews from "../../sass/Reviews";
 
 import styled from "styled-components";
 
@@ -16,6 +16,14 @@ import { device, until } from "../../utilities/mixins";
 
 const Container = styled.section`
   padding: 0 25px;
+
+  .reviews {
+  	width: 95%;
+
+  	blockquote {
+  		padding: 10px;
+  	}
+  }
 `;
 
 const Companies = styled.div`
@@ -282,7 +290,10 @@ const Internships = () => (
       What my co-workers have to say about my work.{" "}
     </p>
 
-    <Reviews>
+    <Masonry
+		className="reviews"
+		columns={2}
+	>
       {Review(
         "Kamal Shaham",
         "Software Engineer, IBM",
@@ -295,7 +306,7 @@ const Internships = () => (
         "Nick is a YOUNG GOD on the REACT",
         require("../../assets/images/avatars/stephen.jpg")
       )}
-    </Reviews>
+    </Masonry>
 
     {FooterText(
       "Read more about my internships on my ",
