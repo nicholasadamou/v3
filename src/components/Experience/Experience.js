@@ -62,7 +62,7 @@ const Container = styled.div`
 `;
 
 const Experience = (company, title, location, duration, description, image) => (
-  <Container>
+  <Container className="experience">
     <img loading="lazy" src={image} alt={company} />
     <div>
       <strong>{title}</strong>

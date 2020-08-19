@@ -27,11 +27,11 @@ const Container = styled.section`
 	`,
     )};
 
-    div {
+    .experience {
       padding-bottom: 10px;
 
       &:last-child {
-    	  padding-bottom: 0;
+      	padding-bottom: 0;
       }
 
       ${until(
