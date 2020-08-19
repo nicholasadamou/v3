@@ -84,7 +84,7 @@ const Container = styled.article`
     }
 
     a {
-      color: var(--red);
+      color: var(--black);
       font-size: var(--copy-size);
       text-decoration: none;
 
@@ -107,7 +107,7 @@ const Container = styled.article`
         }
 
         &[aria-label="title"] {
-          color: var(--red);
+          color: var(--link);
 
           text-decoration: underline;
 

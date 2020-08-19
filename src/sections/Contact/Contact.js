@@ -99,11 +99,11 @@ const Form = styled.form`
     }
 
     &:focus {
-      border-color: var(--red);
+      border-color: var(--black);
     }
 
     &:hover {
-      border-color: var(--red);
+      border-color: var(--black);
     }
   }
 
@@ -135,17 +135,18 @@ const Form = styled.form`
     }
 
     button {
-      background: var(--red);
+      background: var(--white);
       border-radius: 0;
+      border: 5px solid var(--black);
       width: 200px;
       padding: 0;
 
-      color: var(--white);
+      color: var(--black);
 
       &:hover {
-        color: var(--black);
-        border: 5px solid var(--red);
-        background: transparent;
+        color: var(--white);
+        border: 5px solid var(--black);
+        background: var(--black);
       }
 
       ${until(
@@ -165,7 +166,6 @@ const Contact = () => (
     <h2 className="title">
       Want to say "Hi" <WaveEmoji />?
     </h2>
-    <h2 className="title">Drop me a line!</h2>
     <p className="subtitle">
       Contact me via{" "}
       <a

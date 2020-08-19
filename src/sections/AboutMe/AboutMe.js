@@ -29,7 +29,7 @@ const Container = styled.section`
 
     margin-top: 20px;
 
-    color: #37474f;
+    color: var(--black);
 
     ${until(
       device.iPadPro(),
@@ -53,7 +53,7 @@ const Container = styled.section`
     )}
 
     span {
-      color: var(--red);
+      color: var(--black);
     }
   }
 

@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
 	  --red: #fc4349;
 	  --grey: #f5f5f5;
 	  --light-grey: #ccc;
+	  --light-black: #37474f;
 	  --green: #10b500;
 	  --yellow: #fff498;
 
@@ -39,6 +40,7 @@ const GlobalStyles = createGlobalStyle`
 
 	  --copy: var(--white);
 	  --copy-size: 1rem;
+	  --link: var(--black);
 	}
 
 	*,
@@ -196,7 +198,7 @@ const GlobalStyles = createGlobalStyle`
 
 	.link {
 	  text-decoration: underline;
-	  color: var(--red);
+	  color: var(--link);
 
 	  &:hover {
 		color: darken(#ccc, 15);

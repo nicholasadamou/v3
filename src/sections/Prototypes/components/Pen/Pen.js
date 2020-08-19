@@ -37,7 +37,7 @@ const Top = styled.div`
     border-radius: 5px;
 
     font-size: 1rem;
-    color: var(--red);
+    color: var(--link);
     text-decoration: underline;
 
     -webkit-transition: color 0.25ms ease-in-out;

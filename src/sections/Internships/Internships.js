@@ -17,6 +17,28 @@ import { device, until } from '../../utilities/mixins';
 const Container = styled.section`
   padding: 0 25px;
 
+  .experiences {
+    ${until(
+      device.iPhone(),
+      () => `
+		.react-masonry-column {
+			width: 100% !important;
+		}
+	`,
+    )};
+
+    div {
+      padding-bottom: 10px;
+
+      ${until(
+        device.iPhone(),
+        () => `
+				padding-bottom: 0;
+			`,
+      )};
+    }
+  }
+
   .reviews {
     width: 95%;
 
@@ -90,24 +112,6 @@ const Companies = styled.div`
   }
 `;
 
-const Experiences = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
-
-  margin: 0 2rem;
-
-  ${until(
-    device.iPhone(),
-    () => `
-		grid-template-columns: 1fr;
-		grid-gap: initial;
-
-		margin: 0;
-	`,
-  )}
-`;
-
 const Internships = () => (
   <Container>
     <h2 className="title">
@@ -169,7 +173,7 @@ const Internships = () => (
       What I accomplished while I was an intern at these respective companies.
     </p>
 
-    <Experiences>
+    <Masonry className="experiences" columns={2}>
       {Experience(
         'IBM',
         'Software Engineering Co-Op',
@@ -210,7 +214,7 @@ const Internships = () => (
           'Leveraged Google AMP pages to develop a user-friendly home page for the agency. The AMP page conversion provided an 80% faster page load time than a traditional web page load time.',
         require('../../assets/images/logos/mack-media-group.png'),
       )}
-    </Experiences>
+    </Masonry>
 
     <h2 className="title" style={{ fontSize: '1.5rem' }}>
       Internship Projects

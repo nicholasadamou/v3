@@ -15,7 +15,7 @@ const Container = styled.div`
 		height: 50px;
 
 		circle {
-			stroke: var(--red);
+			stroke: var(--black);
 		}
 	}
 `
