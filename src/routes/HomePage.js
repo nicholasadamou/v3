@@ -35,15 +35,15 @@ const HomePage = () => (
 			<hr />
 			<Education />
 			<hr />
+			<Tennis />
+			<hr />
+			<News />
+			<hr />
 			<Internships />
 			<hr />
 			<OpenSource />
 			<hr />
 			<Prototypes />
-			<hr />
-			<Tennis />
-			<hr />
-			<News />
 			<hr />
 			<Contact />
 		</Container>
