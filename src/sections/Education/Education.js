@@ -20,8 +20,20 @@ const Container = styled.section`
   .reviews {
   	width: 95%;
 
+  	${until(device.iPhone(), () => `
+		width: 100%;
+
+		.react-masonry-column {
+			width: 100% !important;
+		}
+	`)};
+
   	blockquote {
   		padding: 10px;
+
+  		${until(device.iPhone(), () => `
+			padding: 0;
+  		`)};
   	}
   }
 `;

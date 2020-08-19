@@ -2,7 +2,7 @@ import React from 'react';
 
 import FooterText from '../../components/FooterText/FooterText';
 
-import Masonry from "../../components/Masonry/Masonry";
+import Masonry from '../../components/Masonry/Masonry';
 import Review from '../../components/Review/Review';
 
 import Article from './components/Article/Article';
@@ -27,11 +27,29 @@ const Container = styled.section`
   }
 
   .reviews {
-  	width: 95%;
+    width: 95%;
 
-  	blockquote {
-  		padding: 10px;
-  	}
+    ${until(
+      device.iPhone(),
+      () => `
+		width: 100%;
+
+		.react-masonry-column {
+			width: 100% !important;
+		}
+	`,
+    )};
+
+    blockquote {
+      padding: 10px;
+
+      ${until(
+        device.iPhone(),
+        () => `
+			padding: 0;
+  		`,
+      )};
+    }
   }
 `;
 
@@ -220,10 +238,7 @@ const Tennis = () => (
       </span>
     </p>
 
-    <Masonry
-		className="reviews"
-		columns={2}
-	>
+    <Masonry className="reviews" columns={2}>
       {Review(
         'Peter Dumas',
         'Head Tennis Coach, Cornell College',
