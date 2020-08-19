@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
-import "carbon-components/scss/globals/scss/styles.scss";
-import "bulma/css/bulma.min.css";
+import 'carbon-components/scss/globals/scss/styles.scss';
+import 'bulma/css/bulma.min.css';
 
-import GlobalStyles from "../../sass/GlobalStyles";
+import GlobalStyles from '../../sass/GlobalStyles';
 
 const Layout = (props) => (
   <>
     <GlobalStyles />
-		<Helmet htmlAttributes={{ lang: "en" }} title="Nicholas Adamou">
+    <Helmet htmlAttributes={{ lang: 'en' }} title="Nicholas Adamou">
       <link rel="icon" href="/assets/favicons/favicon.ico" />
       <link
         rel="apple-touch-icon-precomposed"
@@ -107,7 +107,7 @@ const Layout = (props) => (
       />
     </Helmet>
 
-		{props.children}
+    {props.children}
   </>
 );
 

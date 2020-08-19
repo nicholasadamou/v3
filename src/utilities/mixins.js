@@ -1,7 +1,7 @@
 export const device = {
-  iPhone: () => "430px",
-  iPad: () => "768px",
-  iPadPro: () => "1024px",
+  iPhone: () => '430px',
+  iPad: () => '768px',
+  iPadPro: () => '1024px',
 };
 
 export const until = (device, content) => {

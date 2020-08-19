@@ -1,39 +1,39 @@
 #resume {
-	border-color: var(--red);
-	color: var(--red);
+  border-color: var(--red);
+  color: var(--red);
 
-	&:hover {
-		background-color: var(--red);
-		color: var(--white);
-	}
+  &:hover {
+    background-color: var(--red);
+    color: var(--white);
+  }
 }
 
 #twitter {
-	border-color: var(--twitter);
-	color: var(--twitter);
+  border-color: var(--twitter);
+  color: var(--twitter);
 
-	&:hover {
-		background-color: var(--twitter);
-		color: var(--white);
-	}
+  &:hover {
+    background-color: var(--twitter);
+    color: var(--white);
+  }
 }
 
 #linkedin {
-	border-color: var(--linkedin);
-	color: var(--linkedin);
+  border-color: var(--linkedin);
+  color: var(--linkedin);
 
-	&:hover {
-		background-color: var(--linkedin);
-		color: var(--white);
-	}
+  &:hover {
+    background-color: var(--linkedin);
+    color: var(--white);
+  }
 }
 
 #instagram {
-	border-color: var(--instagram);
-	color: var(--instagram);
+  border-color: var(--instagram);
+  color: var(--instagram);
 
-	&:hover {
-		background-color: var(--instagram);
-		color: var(--white);
-	}
+  &:hover {
+    background-color: var(--instagram);
+    color: var(--white);
+  }
 }

@@ -30,6 +30,10 @@ const Container = styled.section`
     div {
       padding-bottom: 10px;
 
+      &:last-child {
+    	  padding-bottom: 0;
+      }
+
       ${until(
         device.iPhone(),
         () => `

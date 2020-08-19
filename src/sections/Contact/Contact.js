@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import WaveEmoji from "../../components/WaveEmoji/WaveEmoji";
+import WaveEmoji from '../../components/WaveEmoji/WaveEmoji';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../../utilities/mixins";
+import { device, until } from '../../utilities/mixins';
 
 const Container = styled.section`
   position: relative;
@@ -22,7 +22,7 @@ const Container = styled.section`
     device.iPhone(),
     () => `
 		width: 100%;
-	`
+	`,
   )}
 `;
 
@@ -39,14 +39,14 @@ const Form = styled.form`
 		.field.is-horizontal {
 			text-align: left;
 		}
-	`
+	`,
   )}
 
   ${until(
     device.iPhone(),
     () => `
 		width: 90%;
-	`
+	`,
   )}
 
 	button, label, input, textarea {
@@ -68,7 +68,7 @@ const Form = styled.form`
 			margin-right: 0;
 
 			text-align: left;
-		`
+		`,
     )}
   }
 
@@ -107,7 +107,7 @@ const Form = styled.form`
     }
   }
 
-  div[data-name="field"] {
+  div[data-name='field'] {
     -webkit-box-pack: end;
     justify-content: flex-end;
 
@@ -118,7 +118,7 @@ const Form = styled.form`
 			justify-content: center;
 
 			margin-bottom: 10px;
-		`
+		`,
     )}
 
     div[data-name="control"] {
@@ -130,7 +130,7 @@ const Form = styled.form`
         device.iPhone(),
         () => `
 				margin-top: 10px;
-			`
+			`,
       )}
     }
 
@@ -155,7 +155,7 @@ const Form = styled.form`
 				width: 100%;
 
 				margin-top: 10px;
-			`
+			`,
       )}
     }
   }
@@ -167,14 +167,14 @@ const Contact = () => (
       Want to say "Hi" <WaveEmoji />?
     </h2>
     <p className="subtitle">
-      Contact me via{" "}
+      Contact me via{' '}
       <a
         href="mailto:nicholasadamouemail@gmail.com?subject=Hello"
         aria-hidden="true"
         className="link"
       >
         email
-      </a>{" "}
+      </a>{' '}
       for business inquiries.
     </p>
 

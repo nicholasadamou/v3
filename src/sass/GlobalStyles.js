@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import { device, until } from "../utilities/mixins";
+import { device, until } from '../utilities/mixins';
 
 const GlobalStyles = createGlobalStyle`
 	:root {
@@ -130,14 +130,14 @@ const GlobalStyles = createGlobalStyle`
       device.iPad(),
       () => `
 	  font-size: 4rem;
-	  `
+	  `,
     )}
 
 		${until(
       device.iPhone(),
       () => `
 		font-size: 2rem;
-		`
+		`,
     )}
 	}
 
@@ -149,7 +149,7 @@ const GlobalStyles = createGlobalStyle`
       device.iPhone(),
       () => `
 		font-size: 1.5rem;
-		`
+		`,
     )}
 	}
 
@@ -170,7 +170,7 @@ const GlobalStyles = createGlobalStyle`
       () => `
 		font-size: 1.15rem;
 		margin-bottom: 25px !important;
-		`
+		`,
     )}
 	}
 
@@ -192,7 +192,7 @@ const GlobalStyles = createGlobalStyle`
       device.iPhone(),
       () => `
 		font-size: 1rem;
-		`
+		`,
     )}
 	}
 

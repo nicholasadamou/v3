@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
-import React from "react";
+import React from 'react';
 
-import { SkeletonText } from "carbon-components-react";
+import { SkeletonText } from 'carbon-components-react';
 
-import CircularProgress from "@material-ui/core/CircularProgress";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../../utilities/mixins";
+import { device, until } from '../../utilities/mixins';
 
-import useGitHub, { round } from "../../hooks/useGithub";
+import useGitHub, { round } from '../../hooks/useGithub';
 
 const Container = styled.article`
   margin: 10px 20px;
@@ -20,24 +20,24 @@ const Container = styled.article`
   font-size: var(--copy-size);
 
   ${until(
-	device.iPhone(),
-	() => `
+    device.iPhone(),
+    () => `
 		width: 100%;
     max-width: 100%;
 
     margin: 10px 0;
     padding: 0 20px;
-	`
-)}
+	`,
+  )}
 
-	.MuiCircularProgress-root {
-		width: 10px !important;
-		height: 10px !important;
+  .MuiCircularProgress-root {
+    width: 10px !important;
+    height: 10px !important;
 
-		circle {
-			stroke: var(--black);
-		}
-	}
+    circle {
+      stroke: var(--black);
+    }
+  }
 
   a {
     text-decoration: none;
@@ -67,13 +67,13 @@ const Container = styled.article`
       width: 100%;
     }
 
-    span[aria-label="git"] {
-    	margin-right: 5px;
+    span[aria-label='git'] {
+      margin-right: 5px;
 
-    	color: var(--git);
+      color: var(--git);
     }
 
-    svg[data-prefix="fas"] {
+    svg[data-prefix='fas'] {
       -webkit-transition: all 0.25s ease-in-out;
       transition: all 0.25s ease-in-out;
 
@@ -102,11 +102,11 @@ const Container = styled.article`
         background: var(--grey);
         border-radius: 5px;
 
-        &[role="img"] {
+        &[role='img'] {
           margin-left: 10px;
         }
 
-        &[aria-label="title"] {
+        &[aria-label='title'] {
           color: var(--link);
 
           text-decoration: underline;
@@ -116,16 +116,16 @@ const Container = styled.article`
           }
         }
 
-        &[aria-label="star"],
-        &[aria-label="branch"] {
+        &[aria-label='star'],
+        &[aria-label='branch'] {
           font-weight: normal;
         }
 
-        &[aria-label="star"] {
+        &[aria-label='star'] {
           color: var(--star);
         }
 
-        &[aria-label="branch"] {
+        &[aria-label='branch'] {
           color: var(--black);
         }
       }
@@ -134,103 +134,99 @@ const Container = styled.article`
 `;
 
 const Repository = (repositoryName) => {
-	const repository = useGitHub(repositoryName);
+  const repository = useGitHub(repositoryName);
 
-	if (JSON.stringify(repository) === "{}") return <SkeletonRepository />;
+  if (JSON.stringify(repository) === '{}') return <SkeletonRepository />;
 
-	const { id, name, description, link, stars, forks } = repository;
+  const { id, name, description, link, stars, forks } = repository;
 
-	return (
-		<Container key={id}>
-			<div>
-				<span role="img" aria-label="git">
-					<FontAwesomeIcon icon={["fab", "git-alt"]} />
-				</span>
-				<a
-					href={link}
-					target="_blank"
-					aria-hidden="true"
-					rel="noopener noreferrer"
-					className="link"
-				>
-					<span aria-label="title">{name}</span>
-				</a>
-				{stars !== 0 &&
-					<a
-						href={link}
-						target="_blank"
-						aria-hidden="true"
-						aria-label={`${name} github stars`}
-						title="star"
-						rel="noopener noreferrer"
-					>
-						<span role="img" aria-label="star">
-							<FontAwesomeIcon icon={["fas", "star"]} /> {round(stars)}
-						</span>
-					</a>
-				}
-				{forks !== 0 &&
-					<a
-						href={`${link}/fork`}
-						target="_blank"
-						aria-hidden="true"
-						aria-label={`fork ${name} on github`}
-						title="fork"
-						rel="noopener noreferrer"
-					>
-						<span role="img" aria-label="branch">
-							<FontAwesomeIcon icon={["fas", "code-branch"]} /> {round(forks)}
-						</span>
-					</a>
-				}
-			</div>
-			<p>{description}</p>
-		</Container>
-	);
+  return (
+    <Container key={id}>
+      <div>
+        <span role="img" aria-label="git">
+          <FontAwesomeIcon icon={['fab', 'git-alt']} />
+        </span>
+        <a
+          href={link}
+          target="_blank"
+          aria-hidden="true"
+          rel="noopener noreferrer"
+          className="link"
+        >
+          <span aria-label="title">{name}</span>
+        </a>
+        {stars !== 0 && (
+          <a
+            href={link}
+            target="_blank"
+            aria-hidden="true"
+            aria-label={`${name} github stars`}
+            title="star"
+            rel="noopener noreferrer"
+          >
+            <span role="img" aria-label="star">
+              <FontAwesomeIcon icon={['fas', 'star']} /> {round(stars)}
+            </span>
+          </a>
+        )}
+        {forks !== 0 && (
+          <a
+            href={`${link}/fork`}
+            target="_blank"
+            aria-hidden="true"
+            aria-label={`fork ${name} on github`}
+            title="fork"
+            rel="noopener noreferrer"
+          >
+            <span role="img" aria-label="branch">
+              <FontAwesomeIcon icon={['fas', 'code-branch']} /> {round(forks)}
+            </span>
+          </a>
+        )}
+      </div>
+      <p>{description}</p>
+    </Container>
+  );
 };
 
 const SkeletonRepository = (id) => (
-	<Container key={id}>
-		<div>
-			<span role="img" aria-label="git">
-				<FontAwesomeIcon icon={["fab", "git-alt"]} />
-			</span>
-			<span aria-label="title">
-				<CircularProgress />
-			</span>
-			<a
-				href="#"
-				target="_blank"
-				aria-hidden="true"
-				aria-label="github stars"
-				title="star"
-				rel="noopener noreferrer"
-			>
-				<span role="img" aria-label="star">
-					<FontAwesomeIcon icon={["fas", "star"]} />
-					{" "}
-					<CircularProgress />
-				</span>
-			</a>
-			<a
-				href="#"
-				target="_blank"
-				aria-hidden="true"
-				aria-label="fork on github"
-				title="fork"
-				rel="noopener noreferrer"
-			>
-				<span role="img" aria-label="branch">
-					<FontAwesomeIcon icon={["fas", "code-branch"]} />
-					{" "}
-					<CircularProgress />
-				</span>
-			</a>
-		</div>
-		<div>
-			<SkeletonText heading={false} lineCount={2} paragraph width="100%" />
-		</div>
-	</Container>
+  <Container key={id}>
+    <div>
+      <span role="img" aria-label="git">
+        <FontAwesomeIcon icon={['fab', 'git-alt']} />
+      </span>
+      <span aria-label="title">
+        <CircularProgress />
+      </span>
+      <a
+        href="#"
+        target="_blank"
+        aria-hidden="true"
+        aria-label="github stars"
+        title="star"
+        rel="noopener noreferrer"
+      >
+        <span role="img" aria-label="star">
+          <FontAwesomeIcon icon={['fas', 'star']} /> <CircularProgress />
+        </span>
+      </a>
+      <a
+        href="#"
+        target="_blank"
+        aria-hidden="true"
+        aria-label="fork on github"
+        title="fork"
+        rel="noopener noreferrer"
+      >
+        <span role="img" aria-label="branch">
+          <FontAwesomeIcon icon={['fas', 'code-branch']} /> <CircularProgress />
+        </span>
+      </a>
+    </div>
+    <div>
+      <SkeletonText heading={false} lineCount={2} paragraph width="100%" />
+    </div>
+  </Container>
 );
 
 export default Repository;

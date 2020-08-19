@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../../../../utilities/mixins";
+import { device, until } from '../../../../utilities/mixins';
 
 const Container = styled.div`
   margin: 10px 20px;
@@ -16,7 +16,7 @@ const Container = styled.div`
 
 		width: 100%;
 		max-width: 100%;
-	`
+	`,
   )}
 
   p {

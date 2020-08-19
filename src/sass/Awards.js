@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../utilities/mixins";
+import { device, until } from '../utilities/mixins';
 
 const Awards = styled.div`
   display: grid;
@@ -17,7 +17,7 @@ const Awards = styled.div`
 		grid-gap: initial;
 
 		margin: 0;
-	`
+	`,
   )}
 `;
 

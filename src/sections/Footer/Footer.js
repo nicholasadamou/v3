@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import moment from "moment";
+import moment from 'moment';
 
-import Logo from "../../components/Logo/Logo";
+import Logo from '../../components/Logo/Logo';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Container = styled.footer`
   display: grid !important;
@@ -95,7 +95,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li>
-            <FontAwesomeIcon icon={["fab", "codepen"]} />
+            <FontAwesomeIcon icon={['fab', 'codepen']} />
           </li>
         </a>
         <a
@@ -107,7 +107,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li>
-            <FontAwesomeIcon icon={["fab", "github"]} />
+            <FontAwesomeIcon icon={['fab', 'github']} />
           </li>
         </a>
         <a
@@ -119,7 +119,7 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li className="linkedin">
-            <FontAwesomeIcon icon={["fab", "linkedin"]} />
+            <FontAwesomeIcon icon={['fab', 'linkedin']} />
           </li>
         </a>
         <a
@@ -131,22 +131,19 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <li className="instagram">
-            <FontAwesomeIcon icon={["fab", "instagram"]} />
+            <FontAwesomeIcon icon={['fab', 'instagram']} />
           </li>
         </a>
       </ul>
     </Social>
 
     <p>
-      Handcrafted with{" "}
-      <FontAwesomeIcon
-        icon={["fas", "heart"]}
-        style={{ color: "red" }}
-      />{" "}
-      by myself. Copyright &copy; {moment(Date.now()).year()}.
+      Handcrafted with{' '}
+      <FontAwesomeIcon icon={['fas', 'heart']} style={{ color: 'red' }} /> by
+      myself. Copyright &copy; {moment(Date.now()).year()}.
     </p>
     <p>
-      Made with{" "}
+      Made with{' '}
       <a
         href="https://bulma.io/"
         target="_blank"
@@ -155,8 +152,8 @@ const Footer = () => (
         className="link"
       >
         Bulma
-      </a>{" "}
-      and{" "}
+      </a>{' '}
+      and{' '}
       <a
         href="https://github.com/facebook/create-react-app"
         target="_blank"
@@ -169,7 +166,7 @@ const Footer = () => (
       .
     </p>
     <p>
-      Source code available on{" "}
+      Source code available on{' '}
       <a
         href="https://github.com/nicholasadamou/nicholasadamou.com"
         target="_blank"

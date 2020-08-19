@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import Avatar from "../../sass/Avatar";
+import Avatar from '../../sass/Avatar';
 
-import WaveEmoji from "../../components/WaveEmoji/WaveEmoji";
+import WaveEmoji from '../../components/WaveEmoji/WaveEmoji';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../../utilities/mixins";
+import { device, until } from '../../utilities/mixins';
 
-import "./index.scss";
+import './index.scss';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Container = styled.section`
   text-align: center;
@@ -21,7 +21,7 @@ const Container = styled.section`
     device.iPhone(),
     () => `
 		width: 100%;
-	`
+	`,
   )}
 
   h1 {
@@ -35,7 +35,7 @@ const Container = styled.section`
       device.iPadPro(),
       () => `
 			font-size: 2.3rem;
-		`
+		`,
     )}
 
     ${until(
@@ -49,7 +49,7 @@ const Container = styled.section`
 
 			font-size: 1.5rem;
 			text-align: center;
-		`
+		`,
     )}
 
     span {
@@ -70,7 +70,7 @@ const Container = styled.section`
       device.iPad(),
       () => `
 			margin: 0 2rem 20px;
-		`
+		`,
     )}
 
     ${until(
@@ -81,7 +81,7 @@ const Container = styled.section`
 			padding: 10px 25px;
 
 			text-align: center;
-		`
+		`,
     )}
 
 	a {
@@ -100,7 +100,7 @@ const Container = styled.section`
       transition: color 200ms;
 
       &:before {
-        content: "";
+        content: '';
 
         position: absolute;
         top: 80%;
@@ -166,7 +166,7 @@ const Social = styled.div`
 		grid-template-columns: 1fr;
 
 		margin: 0 20px;
-	`
+	`,
   )}
 
   a {
@@ -191,7 +191,7 @@ const Social = styled.div`
       device.iPad(),
       () => `
 			width: 100%;
-		`
+		`,
     )}
   }
 `;
@@ -205,7 +205,7 @@ const AboutMe = () => (
     </h1>
 
     <p>
-      I am currently a IBM Software Engineer and a recent graduate from{" "}
+      I am currently a IBM Software Engineer and a recent graduate from{' '}
       <a
         className="cornell"
         href="https://www.cornellcollege.edu/"
@@ -214,13 +214,18 @@ const AboutMe = () => (
         rel="noopener noreferrer"
       >
         Cornell College
-      </a>{" "}
-      where I earned my B.A. in Computer Science with a concentration in Software Engineering. I am a highly organized and hard-working individual who absolutely loves programming. The mere ability to write a few lines of code and have something unique and interesting come up on the screen fascinates me each and every day!
+      </a>{' '}
+      where I earned my B.A. in Computer Science with a concentration in
+      Software Engineering. I am a highly organized and hard-working individual
+      who absolutely loves programming. The mere ability to write a few lines of
+      code and have something unique and interesting come up on the screen
+      fascinates me each and every day!
     </p>
 
     <p>
-      Because of my interest in computers, I've had the awesome and unique opportunity to
-      intern and work for a few software engineering companies such as{" "}
+      Because of my interest in computers, I've had the awesome and unique
+      opportunity to intern and work for a few software engineering companies
+      such as{' '}
       <a
         className="blackbird"
         href="https://flyblackbird.com"
@@ -230,7 +235,7 @@ const AboutMe = () => (
       >
         Blackbird
       </a>
-      ,{" "}
+      ,{' '}
       <a
         className="mack-media-group"
         href="https://mackmediagroup.com/"
@@ -240,7 +245,7 @@ const AboutMe = () => (
       >
         Mack Media Group
       </a>
-      , and{" "}
+      , and{' '}
       <a
         className="ibm"
         href="https://ibm.com/"
@@ -249,7 +254,7 @@ const AboutMe = () => (
         rel="noopener noreferrer"
       >
         IBM
-      </a>{" "}
+      </a>{' '}
       where I met and networked with many great and vastly talented engineers.
     </p>
 
@@ -277,7 +282,7 @@ const AboutMe = () => (
         rel="noopener noreferrer"
         id="linkedin"
       >
-        Connect with Me on <FontAwesomeIcon icon={["fab", "linkedin"]} />
+        Connect with Me on <FontAwesomeIcon icon={['fab', 'linkedin']} />
       </a>
       <a
         href="https://www.instagram.com/nicholasadamou/"
@@ -286,7 +291,7 @@ const AboutMe = () => (
         rel="noopener noreferrer"
         id="instagram"
       >
-        Follow Me on <FontAwesomeIcon icon={["fab", "instagram"]} />
+        Follow Me on <FontAwesomeIcon icon={['fab', 'instagram']} />
       </a>
     </Social>
   </Container>

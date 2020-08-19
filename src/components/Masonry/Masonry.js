@@ -173,9 +173,9 @@ class Masonry extends React.Component {
           const shortestColumn = this.getShortestColumn(container);
 
           this.setState({
-            [`col-${shortestColumn}`]: this.state[`col-${shortestColumn}`].concat([
-              tile,
-            ]),
+            [`col-${shortestColumn}`]: this.state[
+              `col-${shortestColumn}`
+            ].concat([tile]),
           });
         })
         .catch((error) => {

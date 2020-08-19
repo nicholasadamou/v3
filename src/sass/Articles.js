@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../utilities/mixins";
+import { device, until } from '../utilities/mixins';
 
 const Articles = styled.div`
   display: -webkit-box;
@@ -24,14 +24,14 @@ const Articles = styled.div`
     device.iPad(),
     () => `
 		margin: auto 0 20px;
-	`
+	`,
   )}
 
   ${until(
     device.iPhone(),
     () => `
 		margin: auto 1rem 20px;
-	`
+	`,
   )}
 `;
 

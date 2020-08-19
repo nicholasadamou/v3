@@ -1,6 +1,6 @@
 <div align="center">
 
-# Nicholas Adamou's Personal Website 
+# Nicholas Adamou's Personal Website
 
 Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](https://netlify.com/).
 

@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../utilities/mixins";
+import { device, until } from '../utilities/mixins';
 
 const Projects = styled.div`
   display: grid;
@@ -16,7 +16,7 @@ const Projects = styled.div`
 		display: block;
 
 		margin: 0;
-	`
+	`,
   )}
 `;
 

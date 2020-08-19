@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../../utilities/mixins";
+import { device, until } from '../../utilities/mixins';
 
 const Container = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ const Container = styled.div`
 		margin-bottom: 20px;
 
 		text-align: left;
-	`
+	`,
   )}
 
   img {
@@ -30,7 +30,7 @@ const Container = styled.div`
       device.iPhone(),
       () => `
 			margin: 0;
-		`
+		`,
     )}
   }
 
@@ -48,7 +48,7 @@ const Container = styled.div`
       device.iPhone(),
       () => `
 			margin: 0;
-		`
+		`,
     )}
 
     span {
@@ -59,7 +59,7 @@ const Container = styled.div`
         device.iPhone(),
         () => `
 				margin-left: 0;
-			`
+			`,
       )}
     }
   }

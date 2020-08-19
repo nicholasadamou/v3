@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { device, until } from "../../utilities/mixins";
+import { device, until } from '../../utilities/mixins';
 
 const Container = styled.div`
   text-align: left;
@@ -15,7 +15,7 @@ const Container = styled.div`
       device.iPhone(),
       () => `
 			margin-top: 20px;
-		`
+		`,
     )}
 
     article {
@@ -38,7 +38,7 @@ const Container = styled.div`
           () => `
 					width: 3.2473210255em;
           height: 3.2473210255em;
-				`
+				`,
         )}
       }
     }

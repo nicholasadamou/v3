@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import image from '../assets/images/avatars/nicholas.jpg'
+import image from '../assets/images/avatars/nicholas.jpg';
 
 const Avatar = styled.div`
   position: relative;
