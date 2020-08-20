@@ -25,6 +25,7 @@ const useGitHub = (repositoryName) => {
             html_url,
             stargazers_count,
             forks_count,
+            updated_at,
           } = response.data;
 
           setRepository({
@@ -33,6 +34,7 @@ const useGitHub = (repositoryName) => {
             link: html_url,
             stars: stargazers_count,
             forks: forks_count,
+            lastUpdated: updated_at,
           });
         });
     }

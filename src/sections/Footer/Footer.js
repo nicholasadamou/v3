@@ -4,9 +4,13 @@ import moment from 'moment';
 
 import Logo from '../../components/Logo/Logo';
 
+import useGitHub from "../../hooks/useGithub";
+
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { SkeletonText } from "carbon-components-react";
 
 const Container = styled.footer`
   display: grid !important;
@@ -15,6 +19,14 @@ const Container = styled.footer`
   margin: 7rem 0 !important;
 
   text-align: center;
+
+  .footer--loading > div {
+  	margin: 0 80px;
+
+  	.bx--skeleton__text {
+  		width: 100% !important;
+  	}
+  }
 
   div:first-child {
     margin-bottom: 2rem;
@@ -80,105 +92,125 @@ const Social = styled.div`
   }
 `;
 
-const Footer = () => (
-  <Container>
-    <Logo />
+const Footer = () => {
+	const repository = useGitHub("nicholasadamou.com")
 
-    <Social>
-      <ul>
-        <a
-          href="https://codepen.io/NicholasAdamou"
-          target="_blank"
-          aria-hidden="true"
-          aria-label="CodePen"
-          title="CodePen"
-          rel="noopener noreferrer"
-        >
-          <li>
-            <FontAwesomeIcon icon={['fab', 'codepen']} />
-          </li>
-        </a>
-        <a
-          href="https://github.com/nicholasadamou"
-          target="_blank"
-          aria-hidden="true"
-          aria-label="GitHub"
-          title="GitHub"
-          rel="noopener noreferrer"
-        >
-          <li>
-            <FontAwesomeIcon icon={['fab', 'github']} />
-          </li>
-        </a>
-        <a
-          href="https://linkedin.com/in/nicholas-adamou/"
-          target="_blank"
-          aria-hidden="true"
-          aria-label="LinkedIn"
-          title="LinkedIn"
-          rel="noopener noreferrer"
-        >
-          <li className="linkedin">
-            <FontAwesomeIcon icon={['fab', 'linkedin']} />
-          </li>
-        </a>
-        <a
-          href="https://instagram.com/nicholasadamou"
-          target="_blank"
-          aria-hidden="true"
-          aria-label="Instagram"
-          title="Instagram"
-          rel="noopener noreferrer"
-        >
-          <li className="instagram">
-            <FontAwesomeIcon icon={['fab', 'instagram']} />
-          </li>
-        </a>
-      </ul>
-    </Social>
+	console.log(repository);
 
-    <p>
-      Handcrafted with{' '}
-      <FontAwesomeIcon icon={['fas', 'heart']} style={{ color: 'red' }} /> by
-      myself. Copyright &copy; {moment(Date.now()).year()}.
-    </p>
-    <p>
-      Made with{' '}
-      <a
-        href="https://bulma.io/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        className="link"
-      >
-        Bulma
-      </a>{' '}
-      and{' '}
-      <a
-        href="https://github.com/facebook/create-react-app"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        className="link"
-      >
-        create-react-app
-      </a>
-      .
-    </p>
-    <p>
-      Source code available on{' '}
-      <a
-        href="https://github.com/nicholasadamou/nicholasadamou.com"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        className="link"
-      >
-        GitHub
-      </a>
-      .
-    </p>
-  </Container>
-);
+	return (
+		<Container>
+			<Logo/>
+
+			<Social>
+				<ul>
+					<a
+						href="https://codepen.io/NicholasAdamou"
+						target="_blank"
+						aria-hidden="true"
+						aria-label="CodePen"
+						title="CodePen"
+						rel="noopener noreferrer"
+					>
+						<li>
+							<FontAwesomeIcon icon={['fab', 'codepen']}/>
+						</li>
+					</a>
+					<a
+						href="https://github.com/nicholasadamou"
+						target="_blank"
+						aria-hidden="true"
+						aria-label="GitHub"
+						title="GitHub"
+						rel="noopener noreferrer"
+					>
+						<li>
+							<FontAwesomeIcon icon={['fab', 'github']}/>
+						</li>
+					</a>
+					<a
+						href="https://linkedin.com/in/nicholas-adamou/"
+						target="_blank"
+						aria-hidden="true"
+						aria-label="LinkedIn"
+						title="LinkedIn"
+						rel="noopener noreferrer"
+					>
+						<li className="linkedin">
+							<FontAwesomeIcon icon={['fab', 'linkedin']}/>
+						</li>
+					</a>
+					<a
+						href="https://instagram.com/nicholasadamou"
+						target="_blank"
+						aria-hidden="true"
+						aria-label="Instagram"
+						title="Instagram"
+						rel="noopener noreferrer"
+					>
+						<li className="instagram">
+							<FontAwesomeIcon icon={['fab', 'instagram']}/>
+						</li>
+					</a>
+				</ul>
+			</Social>
+
+			<p>
+				Handcrafted with{' '}
+				<FontAwesomeIcon icon={['fas', 'heart']} style={{color: 'red'}}/> by
+				myself. Copyright &copy; {moment(Date.now()).year()}.
+			</p>
+			<p>
+				Made with{' '}
+				<a
+					href="https://bulma.io/"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link"
+				>
+					Bulma
+				</a>{' '}
+				and{' '}
+				<a
+					href="https://github.com/facebook/create-react-app"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link"
+				>
+					create-react-app
+				</a>
+				.
+			</p>
+			<p>
+				Source code available on{' '}
+				<a
+					href="https://github.com/nicholasadamou/nicholasadamou.com"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link"
+				>
+					GitHub
+				</a>
+				.
+			</p>
+			{
+				JSON.stringify(repository) === '{}'
+					?
+						<div className="footer--loading">
+							<SkeletonText heading={false} lineCount={1} paragraph width="100%" />
+						</div>
+					:
+						<p>
+							Last updated{" "}{
+								moment(new Date(repository.lastUpdated)).fromNow()
+							}
+							{"."}
+						</p>
+			}
+		</Container>
+	)
+};
 
 export default Footer;
