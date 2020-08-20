@@ -54,7 +54,7 @@ const Social = styled.div`
       margin: 0 10px;
 
       font-size: 1.5rem;
-      color: var(--black);
+      color: var(--copy);
 
       -webkit-transition: all 0.25s ease-in-out;
 
