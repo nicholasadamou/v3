@@ -14,7 +14,7 @@ const Avatar = styled.div`
 
   background-image: url(${image});
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
 `;
 
