@@ -19,7 +19,7 @@ const Container = styled.div`
 
   section {
     text-align: center;
-    color: var(--black);
+    color: var(--copy);
   }
 `;
 

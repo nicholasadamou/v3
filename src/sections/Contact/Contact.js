@@ -135,13 +135,14 @@ const Form = styled.form`
     }
 
     button {
-      background: var(--white);
+      background: var(--black);
       border-radius: 0;
       border: 5px solid var(--black);
       width: 200px;
       padding: 0;
 
-      color: var(--black);
+      color: var(--white);
+      font-weight: bold;
 
       &:hover {
         color: var(--white);

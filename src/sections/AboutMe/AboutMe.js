@@ -29,7 +29,7 @@ const Container = styled.section`
 
     margin-top: 20px;
 
-    color: var(--black);
+    color: var(--title);
 
     ${until(
       device.iPadPro(),
@@ -53,7 +53,7 @@ const Container = styled.section`
     )}
 
     span {
-      color: var(--black);
+      color: var(--title);
     }
   }
 
@@ -61,6 +61,8 @@ const Container = styled.section`
     margin: 0 5rem 20px;
 
     text-align: center;
+
+    color: var(--copy);
 
     &:last-child {
       margin: 0;
@@ -91,7 +93,7 @@ const Container = styled.section`
 
       text-decoration: none;
 
-      color: var(--black);
+      color: var(--link);
 
       font-weight: bolder;
 

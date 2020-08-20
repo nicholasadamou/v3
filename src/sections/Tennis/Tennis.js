@@ -20,10 +20,6 @@ const Container = styled.section`
   a.cornell {
     color: var(--cornell);
     text-decoration: underline;
-
-    &:before {
-      background-color: var(--cornell);
-    }
   }
 
   .reviews {

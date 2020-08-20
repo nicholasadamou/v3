@@ -41,7 +41,7 @@ const OpenSource = () => (
       Open Source{' '}
       <FontAwesomeIcon
         icon={['fab', 'git-alt']}
-        style={{ fontSize: '2.5rem', color: 'var(--git)' }}
+        style={{ fontSize: '2.5rem', color: 'var(--light-black)' }}
       />
     </h2>
     <p className="subtitle">

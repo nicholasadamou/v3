@@ -38,9 +38,12 @@ const GlobalStyles = createGlobalStyle`
 	  --highlight: var(--yellow);
 	  --selection: var(--black);
 
-	  --copy: var(--white);
+	  --copy: var(--black);
 	  --copy-size: 1rem;
-	  --link: var(--black);
+	  --link: var(--light-black);
+	  --title: var(--light-black);
+	  --loading: var(--light-black);
+	  --background: var(--white);
 	}
 
 	*,
@@ -157,6 +160,8 @@ const GlobalStyles = createGlobalStyle`
 	  margin: 25px 0;
 
 	  line-height: 1;
+
+	  color: var(--title);
 	}
 
 	.subtitle {
@@ -186,7 +191,7 @@ const GlobalStyles = createGlobalStyle`
 	p {
 	  font-size: var(--copy-size);
 
-	  color: var(--black);
+	  color: var(--copy);
 
 	  ${until(
       device.iPhone(),

@@ -9,6 +9,8 @@ class Masonry extends React.Component {
     for (let i = 0; i < this.props.columns; i++) state[`col-${i}`] = [];
 
     this.state = state;
+
+    this.container = React.createRef();
   }
 
   componentDidMount() {
@@ -17,26 +19,26 @@ class Masonry extends React.Component {
     this.addTiles(tiles);
   }
 
-  componentWillReceiveProps(nextProps, any) {
+  componentDidUpdate(prevProps, prevState, nextProps) {
     try {
       if (
-        nextProps.columns !== this.props.columns ||
-        !this.areArraysEqual(nextProps.images, this.props.images) ||
-        (nextProps.children || []).length !==
+        prevProps.columns !== this.props.columns ||
+        !this.areArraysEqual(prevProps.images, this.props.images) ||
+        (prevProps.children || []).length !==
           (this.props.children || []).length ||
-        !(nextProps.children || []).every((child, i) => {
-          return nextProps.children[i].key === this.props.children[i].key;
+        !(prevProps.children || []).every((child, i) => {
+          return prevProps.children[i].key === this.props.children[i].key;
         })
       ) {
         let newState = {};
-        for (let i = 0; i < nextProps.columns; i++) {
+        for (let i = 0; i < prevProps.columns; i++) {
           newState[`col-${i}`] = [];
         }
         this.setState(newState);
 
         this.cancel();
 
-        const tiles = this.getTiles(nextProps);
+        const tiles = this.getTiles(prevProps);
 
         this.addTiles(tiles);
       }
@@ -47,7 +49,7 @@ class Masonry extends React.Component {
 
   cancel = () => {};
 
-  areArraysEqual = (a, b) => {
+  areArraysEqual = (a = [], b = []) => {
     return (
       a.length === b.length &&
       a.sort().every(function (value, index) {
@@ -56,8 +58,20 @@ class Masonry extends React.Component {
     );
   };
 
-  getShortestColumn = (container) => {
-    const columns = container.querySelectorAll('.react-masonry-column');
+  getColumns = () => {
+    let columns = [];
+
+    this.container.current.childNodes.forEach((node) => {
+      if (node.className.includes('react-masonry-column')) {
+        columns.push(node);
+      }
+    });
+
+    return columns;
+  };
+
+  getShortestColumn = () => {
+    const columns = this.getColumns();
 
     let shortestColumn = 0;
     columns.forEach((column, index) => {
@@ -131,7 +145,15 @@ class Masonry extends React.Component {
         );
       });
     } else if (props.children) {
-      tiles = props.children;
+      tiles = React.Children.map(props.children, (child, index) => {
+        const props = { key: `child-${index}${Date.now()}` };
+
+        if (React.isValidElement(child)) {
+          return React.cloneElement(child, props);
+        }
+
+        return child;
+      });
     } else {
       console.warn('No images were passed into react-masonry');
     }
@@ -164,13 +186,7 @@ class Masonry extends React.Component {
       const images = this.getImages(tile);
       this.loadImages(images)
         .then(() => {
-          const container = this.refs.container;
-
-          if (!container) {
-            return;
-          }
-
-          const shortestColumn = this.getShortestColumn(container);
+          const shortestColumn = this.getShortestColumn();
 
           this.setState({
             [`col-${shortestColumn}`]: this.state[
@@ -187,10 +203,10 @@ class Masonry extends React.Component {
   render() {
     let columns = [];
 
-    const containerWidth = this.props.hasOwnProperty('width')
+    const width = this.props.hasOwnProperty('width')
       ? this.props.width
       : '100%';
-    const containerHeight = this.props.hasOwnProperty('height')
+    const height = this.props.hasOwnProperty('height')
       ? this.props.height
       : this.props.scrollable
       ? '500px'
@@ -233,10 +249,10 @@ class Masonry extends React.Component {
 
     return (
       <div
-        ref="container"
+        ref={this.container}
         style={{
-          width: containerWidth,
-          height: containerHeight,
+          width: width,
+          height: height,
           overflowX: 'hidden',
           overflowY: overflowY,
           margin: 'auto',

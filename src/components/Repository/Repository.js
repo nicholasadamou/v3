@@ -35,13 +35,13 @@ const Container = styled.article`
     height: 10px !important;
 
     circle {
-      stroke: var(--black);
+      stroke: var(--loading);
     }
   }
 
   a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--link);
   }
 
   div {
@@ -70,7 +70,7 @@ const Container = styled.article`
     span[aria-label='git'] {
       margin-right: 5px;
 
-      color: var(--git);
+      color: var(--light-black);
     }
 
     svg[data-prefix='fas'] {
@@ -84,7 +84,7 @@ const Container = styled.article`
     }
 
     a {
-      color: var(--black);
+      color: var(--link);
       font-size: var(--copy-size);
       text-decoration: none;
 
@@ -126,7 +126,7 @@ const Container = styled.article`
         }
 
         &[aria-label='branch'] {
-          color: var(--black);
+          color: var(--light-black);
         }
       }
     }
