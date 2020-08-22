@@ -1,11 +1,12 @@
 import React from 'react';
 
+import Masonry from '@nicholasadamou/react-masonry';
+
 import AwardListing from '../../components/AwardListing/AwardListing';
 import Experience from '../../components/Experience/Experience';
 import Review from '../../components/Review/Review';
 import Repository from '../../components/Repository/Repository';
 import FooterText from '../../components/FooterText/FooterText';
-import Masonry from '../../components/Masonry/Masonry';
 
 import Awards from '../../sass/Awards';
 import Projects from '../../sass/Projects';

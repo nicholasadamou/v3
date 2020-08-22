@@ -1,8 +1,9 @@
 import React from 'react';
 
+import Masonry from '@nicholasadamou/react-masonry';
+
 import FooterText from '../../components/FooterText/FooterText';
 
-import Masonry from '../../components/Masonry/Masonry';
 import Review from '../../components/Review/Review';
 
 import Article from './components/Article/Article';
