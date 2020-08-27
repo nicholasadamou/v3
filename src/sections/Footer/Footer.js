@@ -205,7 +205,7 @@ const Footer = () => {
 						<p>
 							Last updated{" "}
 							<a
-								href={repository['commit'].url}
+								href={repository.commit.link}
 								target="_blank"
 								aria-hidden="true"
 								rel="noopener noreferrer"
