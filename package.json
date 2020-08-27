@@ -52,7 +52,6 @@
     "carbon-components-react": "7.12.0",
     "carbon-icons": "7.0.7",
     "env-create-react-app": "1.1.1",
-    "github-api": "3.3.0",
     "moment": "2.26.0",
     "node-sass": "4.14.1",
     "react-helmet": "6.0.0",

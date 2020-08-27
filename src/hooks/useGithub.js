@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react';
 
-import GitHub from 'github-api';
-
-const github = new GitHub({
-  username: 'nicholasadamou',
-  token: process.env.REACT_APP_GITHUB_TOKEN,
-});
-
 // Round the number like "3.5k" https://stackoverflow.com/a/9461657
 const round = (num) => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
 
@@ -15,27 +8,43 @@ const useGitHub = (repositoryName) => {
 
   useEffect(() => {
     function fetchRepository() {
-      github
-        .getRepo(github.__auth.username, repositoryName)
-        .getDetails()
-        .then((response) => {
-          const {
-            name,
-            description,
-            html_url,
-            stargazers_count,
-            forks_count,
-            updated_at,
-          } = response.data;
+      fetch(`https://api.github.com/repos/nicholasadamou/${repositoryName}`, {
+			headers: {
+				'Authorization': `Basic ${process.env.REACT_APP_GITHUB_TOKEN}`
+			}
+		})
+		  .then(response => response.json())
+		  .then((response) => {
+			  const {
+				name,
+				description,
+				html_url,
+				stargazers_count,
+				forks_count,
+				updated_at,
+			  } = response;
 
-          setRepository({
-            name: name.toLowerCase(),
-            description,
-            link: html_url,
-            stars: stargazers_count,
-            forks: forks_count,
-            lastUpdated: updated_at,
-          });
+				fetch(`https://api.github.com/repos/nicholasadamou/${repositoryName}/branches/master`, {
+					headers: {
+						'Authorization': `Basic ${process.env.REACT_APP_GITHUB_TOKEN}`
+					}
+				})
+				.then(response => response.json())
+				.then(data => {
+					setRepository({
+						name: name.toLowerCase(),
+						description,
+						link: html_url,
+						stars: stargazers_count,
+						forks: forks_count,
+						lastUpdated: updated_at,
+						commit: {
+							sha: data['commit'].sha,
+							message: data['commit']['commit'].message,
+							url: `https://github.com/nicholasadamou/${repositoryName}/commit/${data['commit'].sha}`
+						}
+					});
+				});
         });
     }
 
@@ -47,4 +56,4 @@ const useGitHub = (repositoryName) => {
 
 export default useGitHub;
 
-export { github, round };
+export { round };

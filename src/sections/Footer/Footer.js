@@ -203,9 +203,18 @@ const Footer = () => {
 						</div>
 					:
 						<p>
-							Last updated{" "}{
-								moment(new Date(repository.lastUpdated)).fromNow()
-							}
+							Last updated{" "}
+							<a
+								href={repository['commit'].url}
+								target="_blank"
+								aria-hidden="true"
+								rel="noopener noreferrer"
+								className="link"
+							>
+								{
+									moment(new Date(repository.lastUpdated)).fromNow()
+								}
+							</a>
 							{"."}
 						</p>
 			}
