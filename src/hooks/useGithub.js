@@ -30,7 +30,7 @@ const useGitHub = (repositoryName) => {
 					}
 				})
 				.then(response => response.json())
-				.then(data => {
+				.then(response => {
 					setRepository({
 						name: name.toLowerCase(),
 						description,
@@ -39,9 +39,7 @@ const useGitHub = (repositoryName) => {
 						forks: forks_count,
 						lastUpdated: updated_at,
 						commit: {
-							sha: data['commit'].sha,
-							message: data['commit']['commit'].message,
-							url: `https://github.com/nicholasadamou/${repositoryName}/commit/${data['commit'].sha}`
+							link: response.commit.html_url
 						}
 					});
 				});
