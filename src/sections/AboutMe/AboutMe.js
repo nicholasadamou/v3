@@ -286,7 +286,7 @@ const AboutMe = () => (
       >
         Connect with Me on <FontAwesomeIcon icon={['fab', 'linkedin']} />
       </a>
-      <a
+      {/* <a
         href="https://www.instagram.com/nicholasadamou/"
         target="_blank"
         aria-hidden="true"
@@ -294,7 +294,7 @@ const AboutMe = () => (
         id="instagram"
       >
         Follow Me on <FontAwesomeIcon icon={['fab', 'instagram']} />
-      </a>
+      </a> */}
     </Social>
   </Container>
 );

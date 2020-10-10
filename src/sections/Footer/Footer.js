@@ -139,7 +139,7 @@ const Footer = () => {
 							<FontAwesomeIcon icon={['fab', 'linkedin']}/>
 						</li>
 					</a>
-					<a
+					{/* <a
 						href="https://instagram.com/nicholasadamou"
 						target="_blank"
 						aria-hidden="true"
@@ -150,7 +150,7 @@ const Footer = () => {
 						<li className="instagram">
 							<FontAwesomeIcon icon={['fab', 'instagram']}/>
 						</li>
-					</a>
+					</a> */}
 				</ul>
 			</Social>
 
