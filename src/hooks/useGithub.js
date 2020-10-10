@@ -10,7 +10,7 @@ const useGitHub = (repositoryName) => {
     function fetchRepository() {
       fetch(`https://api.github.com/repos/nicholasadamou/${repositoryName}`, {
 			headers: {
-				'Authorization': `Basic ${process.env.REACT_APP_GITHUB_TOKEN}`
+				'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
 			}
 		})
 		  .then(response => response.json())
@@ -26,7 +26,7 @@ const useGitHub = (repositoryName) => {
 
 				fetch(`https://api.github.com/repos/nicholasadamou/${repositoryName}/branches/master`, {
 					headers: {
-						'Authorization': `Basic ${process.env.REACT_APP_GITHUB_TOKEN}`
+						'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
 					}
 				})
 				.then(response => response.json())
