@@ -35,8 +35,6 @@ const HomePage = () => (
       <hr />
       <Education />
       <hr />
-      <Tennis />
-      <hr />
       <News />
       <hr />
       <Internships />
