@@ -45,13 +45,11 @@
     ]
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "2.2.0",
-    "@material-ui/core": "4.10.0",
+    "@material-ui/core": "^4.11.0",
     "bulma": "0.8.2",
     "carbon-components": "10.12.0",
     "carbon-components-react": "7.12.0",
     "carbon-icons": "7.0.7",
-    "env-create-react-app": "1.1.1",
     "moment": "2.26.0",
     "node-sass": "4.14.1",
     "react-helmet": "6.0.0",

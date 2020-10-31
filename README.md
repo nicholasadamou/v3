@@ -25,13 +25,13 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 Run the live-reload server on <http://localhost:3000>
 
 ```bash
-make dev
+yarn dev
 ```
 
 Or run the live-reload server on <http://localhost:8888> with _Netlify_ (λ) functions:
 
 ```bash
-make netlify
+yarn netlify
 ```
 
 ## 📚 The Tech. Stack
