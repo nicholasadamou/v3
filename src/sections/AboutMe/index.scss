@@ -3,26 +3,29 @@
   color: var(--white);
 
   &:hover {
+    background-color: var(--white);
     border-color: var(--red);
     color: var(--red);
   }
 }
 
 #linkedin {
-  background-color: var(--white);
-  color: var(--linkedin);
+  background-color: var(--linkedin);
+  color: var(--white);
 
   &:hover {
+    background-color: var(--white);
     border-color: var(--linkedin);
     color: var(--linkedin);
   }
 }
 
 #github {
-  background-color: var(--white);
-  color: var(--github);
+  background-color: var(--github);
+  color: var(--white);
 
   &:hover {
+    background-color: var(--white);
     border-color: var(--github);
     color: var(--github);
   }
