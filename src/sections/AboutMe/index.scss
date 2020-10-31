@@ -37,3 +37,13 @@
     color: var(--white);
   }
 }
+
+#github {
+  border-color: var(--github);
+  color: var(--github);
+
+  &:hover {
+    background-color: var(--github);
+    color: var(--white);
+  }
+}

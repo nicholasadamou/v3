@@ -156,7 +156,7 @@ const Container = styled.section`
 
 const Social = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   place-items: center;
 
@@ -285,6 +285,15 @@ const AboutMe = () => (
         id="linkedin"
       >
         Connect with Me on <FontAwesomeIcon icon={['fab', 'linkedin']} />
+      </a>
+			<a
+        href="https://www.github.com/nicholasadamou"
+        target="_blank"
+        aria-hidden="true"
+        rel="noopener noreferrer"
+        id="github"
+      >
+        View my Project on <FontAwesomeIcon icon={['fab', 'github']} />
       </a>
       {/* <a
         href="https://www.instagram.com/nicholasadamou/"
