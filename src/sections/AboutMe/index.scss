@@ -9,8 +9,8 @@
 }
 
 #linkedin {
-  background-color: var(--linkedin);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--linkedin);
 
   &:hover {
     border-color: var(--linkedin);
@@ -19,31 +19,11 @@
 }
 
 #github {
-  background-color: var(--github);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--github);
 
   &:hover {
     border-color: var(--github);
     color: var(--github);
-  }
-}
-
-#instagram {
-  border-color: var(--instagram);
-  color: var(--instagram);
-
-  &:hover {
-    background-color: var(--instagram);
-    color: var(--white);
-  }
-}
-
-#twitter {
-  border-color: var(--twitter);
-  color: var(--twitter);
-
-  &:hover {
-    background-color: var(--twitter);
-    color: var(--white);
   }
 }
