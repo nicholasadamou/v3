@@ -6,6 +6,7 @@ import Container from '../sass/Container';
 
 import AboutMe from '../sections/AboutMe/AboutMe';
 import Education from '../sections/Education/Education';
+import Tennis from '../sections/Tennis/Tennis';
 import Internships from '../sections/Internships/Internships';
 import OpenSource from '../sections/OpenSource/OpenSource';
 import Prototypes from '../sections/Prototypes/Prototypes';
@@ -36,6 +37,8 @@ const HomePage = () => (
       <hr />
       <News />
       <hr />
+			<Tennis />
+			<hr />
       <Internships />
       <hr />
       <OpenSource />
