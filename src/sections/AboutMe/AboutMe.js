@@ -293,7 +293,7 @@ const AboutMe = () => (
         rel="noopener noreferrer"
         id="github"
       >
-        View my Project on <FontAwesomeIcon icon={['fab', 'github']} />
+        View my Projects on <FontAwesomeIcon icon={['fab', 'github']} />
       </a>
       {/* <a
         href="https://www.instagram.com/nicholasadamou/"
