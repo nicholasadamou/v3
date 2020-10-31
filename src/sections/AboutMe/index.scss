@@ -1,30 +1,30 @@
 #resume {
-  border-color: var(--red);
-  color: var(--red);
+  background-color: var(--red);
+  color: var(--white);
 
   &:hover {
-    background-color: var(--red);
-    color: var(--white);
-  }
-}
-
-#twitter {
-  border-color: var(--twitter);
-  color: var(--twitter);
-
-  &:hover {
-    background-color: var(--twitter);
-    color: var(--white);
+    border-color: var(--red);
+    color: var(--red);
   }
 }
 
 #linkedin {
-  border-color: var(--linkedin);
-  color: var(--linkedin);
+  background-color: var(--linkedin);
+  color: var(--white);
 
   &:hover {
-    background-color: var(--linkedin);
-    color: var(--white);
+    border-color: var(--linkedin);
+    color: var(--linkedin);
+  }
+}
+
+#github {
+  background-color: var(--github);
+  color: var(--white);
+
+  &:hover {
+    border-color: var(--github);
+    color: var(--github);
   }
 }
 
@@ -38,12 +38,12 @@
   }
 }
 
-#github {
-  border-color: var(--github);
-  color: var(--github);
+#twitter {
+  border-color: var(--twitter);
+  color: var(--twitter);
 
   &:hover {
-    background-color: var(--github);
+    background-color: var(--twitter);
     color: var(--white);
   }
 }
