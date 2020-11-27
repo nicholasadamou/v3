@@ -6,10 +6,13 @@ import AwardListing from '../../components/AwardListing/AwardListing';
 import Experience from '../../components/Experience/Experience';
 import Review from '../../components/Review/Review';
 import Repository from '../../components/Repository/Repository';
+import Article from '../../components/Article/Article';
 import FooterText from '../../components/FooterText/FooterText';
 
 import Awards from '../../sass/Awards';
 import Projects from '../../sass/Projects';
+import Articles from '../../sass/Articles';
+
 
 import styled from 'styled-components';
 
@@ -50,8 +53,6 @@ const Experiences = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
 
-  margin: 0 2rem;
-
   ${until(
     device.iPhone(),
     () => `
@@ -75,49 +76,50 @@ const Education = () => (
       Schools where I learned all that I know about software engineering.
     </p>
 
-    <Experiences>
-      {Experience(
-        'Cornell College',
-        'Bachelors of Arts, Computer Science',
-        'Mt. Vernon, IA',
-        'August 2018 - May 2020',
-        () => (
-          <>
-            <em>Graduated </em> <strong>Summa Cum Laude</strong>
-            <br />
-            {' and '}
-            <strong>With Honors</strong>
-            {' in '}
-            <em>Computer Science</em>
-            <br />
-            <em>Cumulative GPA:</em>
-            {' 3.98 out of 4.0'}
-            <br />
-            <em>Overall</em>
-            {' Class Rank: 6/261 ('}
-            <em>2.29%</em>
-            {')'}
-          </>
-        ),
-        require('../../assets/images/logos/cornell-college.png'),
-      )}
-      {Experience(
-        'Hartwick College',
-        'Transferred; Computer Science Major',
-        'Oneonta, NY',
-        'August 2016 - May 2018',
-        () => (
-          <>
-            <em>Cumulative GPA:</em>
-            {' 3.96 out of 4.0'}
-          </>
-        ),
-        require('../../assets/images/logos/hartwick-college.png'),
-      )}
-    </Experiences>
+		<Experiences>
+			{Experience(
+				'Cornell College',
+				'Bachelors of Arts, Computer Science',
+				'Mt. Vernon, IA',
+				'August 2018 - May 2020',
+				() => (
+					<>
+						<em>Graduated </em> <strong>Summa Cum Laude</strong>
+						{' and '}
+						<strong>with honors</strong>
+						{' in '}
+						<em>Computer Science</em>{'.'}
+						<br />
+						<em>Cumulative GPA:</em>
+						{' 3.98 out of 4.0'}
+						<br />
+						<em>Overall</em>
+						{' Class Rank: 6/261 ('}
+						<em>2.29%</em>
+						{')'}
+					</>
+				),
+				require('../../assets/images/logos/cornell-college.png'),
+			)}
+
+			{Experience(
+				'Hartwick College',
+				'Transferred; Computer Science Major',
+				'Oneonta, NY',
+				'August 2016 - May 2018',
+				() => (
+					<>
+						<em>Cumulative GPA:</em>
+						{' 3.96 out of 4.0'}
+					</>
+				),
+				require('../../assets/images/logos/hartwick-college.png'),
+			)}
+		</Experiences>
 
     <h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Computer Science Projects
+      Computer Science Projects{' '}
+			<span role="img" aria-label="toolbox">🧰</span>
     </h2>
     <p className="subtitle" style={{ fontSize: '1.1rem' }}>
       Various projects that I've completed as an computer science student.
@@ -185,7 +187,48 @@ const Education = () => (
       )}
     </Awards>
 
-    <h2 className="title" style={{ fontSize: '1.5rem' }}>
+		<h2 className="title" style={{ fontSize: '1.5rem' }}>
+      Campus News{' '}
+      <span role="img" aria-label="rolled-up-newspaper">
+        🗞️
+      </span>
+    </h2>
+    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
+			Articles that were written about me while I was at both colleges.
+		</p>
+
+    <Articles>
+      {Article(
+        "Cornell College shares this week's senior profile on Nicholas Adamou",
+        "This week's senior profile is Nicholas Adamou '20. Congrats on your many accomplishments, Nicholas!",
+        'June 18, 2020',
+        '',
+        'https://www.instagram.com/p/CBlTkx2FFIA',
+      )}
+      {Article(
+        'Passion for computer science leads to job at IBM for Adamou',
+        'An interest in the classic video game Asteroids for Windows 98 spawned a passion for computer science at a young age for Nicholas Adamou ՚20.',
+        'June 17, 2020',
+        require('../../assets/images/news/nicholas-1.png'),
+        'https://news.cornellcollege.edu/2020/06/passion-computer-science-leads-job-ibm-adamou-՚20/',
+      )}
+      {Article(
+        'Nick Adamou shares insights and knowledge following his computer science internship',
+        'Nick Adamou (pictured on the left) started his senior year with new insights and knowledge following his computer science internship. He spent his summer as a software engineering intern at IBM under IBM’s Finance and Operations Department in Southbury, Connecticut. Way to go Nick!',
+        'August 29, 2019',
+        '',
+        'https://www.instagram.com/p/B1v-gCHHAer',
+      )}
+      {Article(
+        'Adamou holds computer science internship at IBM',
+        'Nick Adamou will start his senior year with new insights and knowledge following his computer science internship.',
+        'August 27, 2019',
+        require('../../assets/images/news/nicholas-2.jpg'),
+        'https://news.cornellcollege.edu/2019/08/adamou-holds-computer-science-internship-ibm/',
+      )}
+    </Articles>
+
+		<h2 className="title" style={{ fontSize: '1.5rem' }}>
       Thoughts from my Professors and Coaches
     </h2>
     <p className="subtitle" style={{ fontSize: '1.1rem' }}>

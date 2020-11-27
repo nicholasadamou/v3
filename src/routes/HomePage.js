@@ -9,7 +9,6 @@ import Education from '../sections/Education/Education';
 import Work from '../sections/Work/Work';
 import OpenSource from '../sections/OpenSource/OpenSource';
 import Prototypes from '../sections/Prototypes/Prototypes';
-import News from '../sections/News/News';
 import Contact from '../sections/Contact/Contact';
 
 import Footer from '../sections/Footer/Footer';
@@ -33,8 +32,6 @@ const HomePage = () => (
       <AboutMe />
       <hr />
       <Education />
-      <hr />
-      <News />
       <hr />
       <Work />
       <hr />

@@ -1,8 +1,5 @@
 import React from 'react';
 
-import Masonry from '@nicholasadamou/react-masonry';
-
-import AwardListing from '../../components/AwardListing/AwardListing';
 import Experience from '../../components/Experience/Experience';
 import Repository from '../../components/Repository/Repository';
 import FooterText from '../../components/FooterText/FooterText';
@@ -171,14 +168,13 @@ const Work = () => (
     </Companies>
 
     <h2 className="title" style={{ fontSize: '1.6rem' }}>
-      Work Experience
+      Current and Previous Work Experience
     </h2>
     <p className="subtitle" style={{ fontSize: '1.125rem' }}>
       What I accomplished while I was employed at these respective companies.
     </p>
 
-    <Masonry className="experiences" columns={2}>
-			{Experience(
+    {Experience(
 				'IBM',
 				'Software Engineer',
 				'Southbury, CT',
@@ -189,6 +185,7 @@ const Work = () => (
 					'tested using Jenkins and JUnit along with leveraging a host of CI/CD software to provide automated testing and deployment of cloud-native applications including Travis CI, and including a slew of other internal IBM CI/CD proprietary software.',
 					require('../../assets/images/logos/ibm.png'),
 			)}
+
       {Experience(
         'IBM',
         'Software Engineering Co-Op',
@@ -199,6 +196,7 @@ const Work = () => (
           'I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the application.',
         require('../../assets/images/logos/ibm.png'),
       )}
+
       {Experience(
         'IBM',
         'Software Engineering Intern',
@@ -210,7 +208,8 @@ const Work = () => (
           ' for stream-processing of micro-services and Docker for containerization.',
         require('../../assets/images/logos/ibm.png'),
       )}
-      {Experience(
+
+			{Experience(
         'Blackbird',
         'Software Engineering Intern',
         'San Francisco, CA',
@@ -220,7 +219,8 @@ const Work = () => (
           'React, React Native, React Native Web, GraphQL, Apollo, and ES6 JavaScript. In addition, I provided QA (Quality Assurance) and unit testing on multiple builds of the Blackbird web and mobile apps.',
         require('../../assets/images/logos/blackbird.png'),
       )}
-      {Experience(
+
+			{Experience(
         'Mack Media Group',
         'Software Engineering Intern',
         'Brookfield, CT',
@@ -229,47 +229,32 @@ const Work = () => (
           'Leveraged Google AMP pages to develop a user-friendly home page for the agency. The AMP page conversion provided an 80% faster page load time than a traditional web page load time.',
         require('../../assets/images/logos/mack-media-group.png'),
       )}
-    </Masonry>
 
-    <h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Projects
+		<h2 className="title" style={{ fontSize: '1.6rem' }}>
+      Projects{' '}
+			<span role="img" aria-label="toolbox">🧰</span>
     </h2>
-    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      Various projects that I've completed at these companies.
+    <p className="subtitle" style={{ fontSize: '1.125rem' }}>
+      Various projects that I've open sourced while working at these companies.
     </p>
 
     <Projects>
-      {Repository('mack-media-group-internship-project')}
       {Repository('down-to-network')}
+			{Repository('firebase-react-starter-kit')}
+			{Repository('watson-chatbot')}
+			{Repository('react-iframe')}
+			{Repository('node-cache')}
+			{Repository('mack-media-group-internship-project')}
     </Projects>
 
-    <h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Awards and Recognition{' '}
-      <span role="img" aria-label="trophy">
-        🏆
-      </span>
-    </h2>
-    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      Some awards that I have received in the past.
-    </p>
-
-    <Awards>
-      {AwardListing(require('../../assets/images/logos/ibm.png'), 'IBM', () => (
-        <>
-          ➤ <strong>2019 HackCIO Project Winner</strong> voted{' '}
-          <em>Most Likely to be Used by IBM</em>
-        </>
-      ))}
-    </Awards>
-
-    <h2 className="title" style={{ fontSize: '1.5rem' }}>
+    <h3 className="title" style={{ fontSize: '1.6rem' }}>
       Badges and Certifications{' '}
       <span role="img" aria-label="badge">
         🎫
       </span>
-    </h2>
-    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      Certifications and badges that I have received.
+    </h3>
+    <p className="subtitle" style={{ fontSize: '1.125rem' }}>
+      Certifications and badges that I have received at IBM.
       <br />
       More badges can be found at my{' '}
       <a

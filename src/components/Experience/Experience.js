@@ -8,12 +8,19 @@ const Container = styled.div`
   display: flex;
   align-items: flex-start;
 
+	width: 95%;
+	margin: 0 auto;
+
+	padding-bottom: 20px;
+
   ${until(
     device.iPhone(),
     () => `
 		display: block;
 
 		margin-bottom: 20px;
+
+		padding-bottom: 0;
 
 		text-align: left;
 	`,
@@ -38,7 +45,11 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+		position: relative;
+
     margin-left: 1rem;
+
+		width: 100%;
 
     text-align: left;
 
@@ -57,6 +68,15 @@ const Container = styled.div`
 
     span {
       margin-top: 5px;
+
+			width: 90%;
+
+			${until(
+      device.iPhone(),
+      () => `
+				width: 100%;
+		`,
+    )}
     }
   }
 `;

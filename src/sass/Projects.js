@@ -16,6 +16,10 @@ const Projects = styled.div`
 		display: block;
 
 		margin: 0;
+
+		article {
+			padding: 0;
+		}
 	`,
   )}
 `;

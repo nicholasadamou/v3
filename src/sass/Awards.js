@@ -8,7 +8,7 @@ const Awards = styled.div`
   grid-gap: 20px;
   place-content: center;
 
-  margin: 0 5rem;
+  margin: 0 2rem;
 
   ${until(
     device.iPhone(),
