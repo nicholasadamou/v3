@@ -156,11 +156,11 @@ const Container = styled.section`
 
 const Social = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
   place-items: center;
 
-  margin: 0 100px;
+  margin: 0 50px;
 
   ${until(
     device.iPhone(),
@@ -294,6 +294,15 @@ const AboutMe = () => (
         id="github"
       >
         View my Projects on <FontAwesomeIcon icon={['fab', 'github']} />
+      </a>
+			<a
+        href="https://codepen.io/nicholasadamou"
+        target="_blank"
+        aria-hidden="true"
+        rel="noopener noreferrer"
+        id="codepen"
+      >
+        View my Pens on <FontAwesomeIcon icon={['fab', 'codepen']} />
       </a>
       {/* <a
         href="https://www.instagram.com/nicholasadamou/"

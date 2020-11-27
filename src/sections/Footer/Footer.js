@@ -104,7 +104,7 @@ const Footer = () => {
 			<Social>
 				<ul>
 					<a
-						href="https://codepen.io/NicholasAdamou"
+						href="https://codepen.io/nicholasadamou"
 						target="_blank"
 						aria-hidden="true"
 						aria-label="CodePen"
