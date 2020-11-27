@@ -4,7 +4,6 @@ import Masonry from '@nicholasadamou/react-masonry';
 
 import AwardListing from '../../components/AwardListing/AwardListing';
 import Experience from '../../components/Experience/Experience';
-import Review from '../../components/Review/Review';
 import Repository from '../../components/Repository/Repository';
 import FooterText from '../../components/FooterText/FooterText';
 
@@ -117,16 +116,16 @@ const Companies = styled.div`
   }
 `;
 
-const Internships = () => (
+const Work = () => (
   <Container>
     <h2 className="title">
-      Internships{' '}
+      Work Experience{' '}
       <span role="img" aria-label="coder">
         👨🏼‍💻
       </span>
     </h2>
     <p className="subtitle">
-      Companies where I've had the privilege to intern at in the past.
+      Companies where I've had the privilege to work or intern at in the past.
     </p>
 
     <Companies>
@@ -172,18 +171,29 @@ const Internships = () => (
     </Companies>
 
     <h2 className="title" style={{ fontSize: '1.6rem' }}>
-      Internship Experiences
+      Work Experience
     </h2>
     <p className="subtitle" style={{ fontSize: '1.125rem' }}>
-      What I accomplished while I was an intern at these respective companies.
+      What I accomplished while I was employed at these respective companies.
     </p>
 
     <Masonry className="experiences" columns={2}>
+			{Experience(
+				'IBM',
+				'Software Engineer',
+				'Southbury, CT',
+				'June 2020 - Present',
+				() =>
+					'Full-stack software engineer focused primarily on the front-end and back-end of cloud-native applications. Works with testers, PO\'s, IM\'s, UI/UX designers, and users to develop cloud-native software ' +
+					'using DB2, k8s, istio, IBM Cloud, Docker, along with Java RESTful services using JDBC and SQL for the back-end, and React and NodeJS for the front-end. Applications are version controlled using GitHub, unit ' +
+					'tested using Jenkins and JUnit along with leveraging a host of CI/CD software to provide automated testing and deployment of cloud-native applications including Travis CI, and including a slew of other internal IBM CI/CD proprietary software.',
+					require('../../assets/images/logos/ibm.png'),
+			)}
       {Experience(
         'IBM',
         'Software Engineering Co-Op',
         'Southbury, CT',
-        'August 2019 - June 2019',
+        'August 2019 - June 2020',
         () =>
           'Continued the work I finished as a intern, but now as a Co-Op while I was away at school. I participated in weekly stand-up meetings relating to the JIRA stories I was assigned. With each story, ' +
           'I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the application.',
@@ -222,10 +232,10 @@ const Internships = () => (
     </Masonry>
 
     <h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Internship Projects
+      Projects
     </h2>
     <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      Various projects that I've completed as an intern at these companies.
+      Various projects that I've completed at these companies.
     </p>
 
     <Projects>
@@ -240,7 +250,7 @@ const Internships = () => (
       </span>
     </h2>
     <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      Awards that I have received while I was an intern.
+      Some awards that I have received in the past.
     </p>
 
     <Awards>
@@ -259,7 +269,7 @@ const Internships = () => (
       </span>
     </h2>
     <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      Certifications and badges that I have received while I was an intern.
+      Certifications and badges that I have received.
       <br />
       More badges can be found at my{' '}
       <a
@@ -304,34 +314,12 @@ const Internships = () => (
       )}
     </Awards>
 
-    <h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Thoughts from my Co-Workers
-    </h2>
-    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      What my co-workers have to say about my work.{' '}
-    </p>
-
-    <Masonry className="reviews" columns={2}>
-      {Review(
-        'Kamal Shaham',
-        'Software Engineer, IBM',
-        'Nick that ToggleContent module was so clever, mad props lol had to make a whole module just to define a callback haha i was like oOoOoOo he slick',
-        require('../../assets/images/avatars/kamal.jpg'),
-      )}
-      {Review(
-        'Stephen Alt',
-        'Software Developer Intern, IBM',
-        'Nick is a YOUNG GOD on the REACT',
-        require('../../assets/images/avatars/stephen.jpg'),
-      )}
-    </Masonry>
-
     {FooterText(
-      'Read more about my internships on my ',
+      'Read more about my work experience on my ',
       'LinkedIn',
       'https://linkedin.com/in/nicholas-adamou/',
       'linkedin',
     )}
   </Container>
 );
-export default Internships;
+export default Work;

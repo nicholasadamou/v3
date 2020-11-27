@@ -2,6 +2,8 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { device, until } from '../../../../utilities/mixins';
 
 const Container = styled.div`
@@ -50,12 +52,10 @@ const Top = styled.div`
   }
 `;
 
-const Pen = (title, desc, link, emoji, label) => (
+const Pen = (title, desc, link) => (
   <Container>
     <Top>
-      <span role="img" aria-label={label}>
-        {emoji}
-      </span>
+			<FontAwesomeIcon icon={['fab', 'codepen']} />
       <a
         href={link}
         target="_blank"
