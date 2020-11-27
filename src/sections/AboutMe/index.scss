@@ -20,8 +20,7 @@
   }
 }
 
-#github,
-#codepen {
+#github {
   background-color: var(--github);
   color: var(--white);
 
@@ -29,5 +28,16 @@
     background-color: var(--white);
     border-color: var(--github);
     color: var(--github);
+  }
+}
+
+#codepen {
+  background-color: var(--codepen);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--white);
+    border-color: var(--codepen);
+    color: var(--codepen);
   }
 }

@@ -160,7 +160,14 @@ const Social = styled.div`
   grid-gap: 5px;
   place-items: center;
 
-  margin: 0 50px;
+	margin: 0 50px;
+
+	${until(
+		device.iPadPro(),
+		() => `
+		margin: 0 10px;
+		`
+	)}
 
   ${until(
     device.iPhone(),

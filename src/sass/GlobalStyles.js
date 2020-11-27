@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
 
 	  --github: #161514;
 	  --git: #fd7e14;
-	  --codepen: #212121;
+	  --codepen: #1e1f26;
 	  --twitter: #55acee;
 	  --linkedin: #0077b5;
 	  --instagram: #e1306c;
