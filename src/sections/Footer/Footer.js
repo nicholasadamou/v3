@@ -6,6 +6,8 @@ import Logo from '../../components/Logo/Logo';
 
 import useGitHub from "../../hooks/useGithub";
 
+import { device, until } from '../../utilities/mixins';
+
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,7 +24,14 @@ const Container = styled.footer`
 
   .footer--loading {
 	width: 45%;
-    margin: 0 auto;
+	margin: 0 auto;
+
+	${until(
+    device.iPhone(),
+    () => `
+		width: 80%;
+	`,
+  )}
   }
 
   .footer--loading > div {
