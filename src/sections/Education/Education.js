@@ -299,9 +299,6 @@ const Education = () => (
         🗞️
       </span>
     </h2>
-    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-			Articles that were written about me while I was at both colleges.
-		</p>
 
     <Articles>
 			<Article
@@ -338,9 +335,6 @@ const Education = () => (
         🏆
       </span>
     </h2>
-    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      Awards that I have received from my studies at either institution.
-    </p>
 
     <Awards>
       {AwardListing(

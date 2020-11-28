@@ -75,9 +75,6 @@ const Work = () => (
         👨🏼‍💻
       </span>
     </h2>
-    <p className="subtitle">
-      Companies where I've had the privilege to work or intern at in the past.
-    </p>
 
 		{Experience(
 			'IBM',
