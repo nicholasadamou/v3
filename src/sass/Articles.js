@@ -18,7 +18,7 @@ const Articles = styled.div`
 
   overflow: hidden;
 
-  margin: auto 5rem 20px;
+  margin: auto 2rem 20px;
 
   ${until(
     device.iPad(),

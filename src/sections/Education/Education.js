@@ -68,77 +68,6 @@ const Experiences = styled.div`
   )}
 `;
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  width: 100%;
-`;
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  width: 100%;
-
-  ${until(
-    device.iPhone(),
-    () => `
-		flex-direction: column-reverse;
-	`,
-  )}
-`;
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-
-  ${until(
-    device.iPhone(),
-    () => `
-		flex: auto;
-	`,
-	)}
-
-	#tennis-articles {
-		margin: 0 30px;
-
-		text-align: left;
-
-		${until(
-			device.iPhone(),
-			() => `
-			margin: 0 20px;
-		`,
-		)}
-
-		article {
-			.article-details {
-				width: 100%;
-			}
-
-			.image-placeholder {
-				display: none;
-			}
-		}
-	}
-`;
-
-const Photos = styled.div`
-  margin-right: 30px;
-
-  ${until(
-    device.iPhone(),
-    () => `
-		margin: 0 20px;
-		margin-bottom: 20px;
-	`,
-  )}
-`;
-
 const Education = () => (
   <Container>
     <h2 className="title">
@@ -211,89 +140,6 @@ const Education = () => (
     </Projects>
 
 		<h2 className="title" style={{ fontSize: '1.5rem' }}>
-      College Tennis{' '}
-      <span role="img" aria-label="tennis ball">
-        🎾
-      </span>
-    </h2>
-    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-			My time as a{' '}
-			<span role="img" aria-label="ram">
-			🐑
-			</span>
-			{' '}at{' '}
-      <a
-        className="cornell"
-        href="https://www.cornellcollege.edu/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-      >
-        Cornell College
-      </a>
-      {'.'}
-    </p>
-
-    <Content>
-      <Row>
-        <Column>
-          <div id="tennis-articles">
-						<Article
-							title={"Tight wins bump Cornell's record-tying start to 10-2"}
-							description={"Cornell's sterling 10-2 start to the men's tennis season has not gone without several close calls in the win column. And the Rams have taken them all."}
-							date={"March 1, 2020"}
-              link={"https://www.cornellrams.com/article/3679"}
-						/>
-            <Article
-							title={"Red-hot Rams rally at Wartburg, climb to 8-1 in duals"}
-							description={"Shoma Kishimoto (SR/Rancho Palos Verdes, Calif.) and Alejandro Colorado (SO/Antiguo Cuscatlan, El Salvador) both prevailed in pivotal third-set singles tiebreakers Sunday, helping Cornell's surging men's tennis team to a 5-4 comeback win at Wartburg."}
-							date={"February 23, 2020"}
-							link={"https://www.cornellrams.com/article/3666"}
-						/>
-						<Article
-							title={"Cornell men off to strong 5-1 start in dual play"}
-							description={"Cornell's men's tennis team came away with a split Saturday after rolling to a 7-2 victory over short-handed Hamline in a neutral-site dual."}
-							date={"February 16, 2020"}
-							link={"https://www.cornellrams.com/article/3650"}
-						/>
-						<Article
-							title={"Cornell sweeps Dubuque, climbs to 4-0 in dual play"}
-							description={"Cornell's men's tennis team kept its undefeated dual season intact with a 9-0 shutout at the University of Dubuque Sunday morning."}
-							date={"February 9, 2020"}
-							link={"https://www.cornellrams.com/article/3640"}
-						/>
-						<Article
-							title={"Adamou wins twice at Midwest Open Championships"}
-							description={"Cornell senior Nick Adamou (SR/New Milford, Conn.) came away with two victories this weekend in his first appearance at the Midwest Open Men's Tennis Championships hosted by Gustavus Adolphus College."}
-							date={"September 29, 2019"}
-							link={"https://www.cornellrams.com/article/3485"}
-						/>
-          </div>
-        </Column>
-        <Column>
-          <Photos>
-            <Masonry
-              images={[
-                require('../../assets/images/tennis/nicholas-adamou-forehand-shot.jpg'),
-                require('../../assets/images/tennis/home-match-spring-2019.jpg'),
-                require('../../assets/images/tennis/simpson-college-2019.jpg'),
-                require('../../assets/images/tennis/team-photo.jpg'),
-                require('../../assets/images/tennis/hilton-head-doubles.jpg'),
-                require('../../assets/images/tennis/home-match-indoor-spring-2019.jpg'),
-                require('../../assets/images/tennis/nicholas-adamou-backhand-indoor.jpg'),
-                require('../../assets/images/tennis/2018-2019-team.jpg'),
-                require('../../assets/images/tennis/nicholas-adamou-doubles-2019.jpg'),
-                require('../../assets/images/tennis/nicholas-adamou-serving-2019.jpg'),
-                require('../../assets/images/tennis/cornell-vs-lake-forest.jpg'),
-              ]}
-              columns={2}
-            />
-          </Photos>
-        </Column>
-      </Row>
-    </Content>
-
-		<h2 className="title" style={{ fontSize: '1.5rem' }}>
       Campus News{' '}
       <span role="img" aria-label="rolled-up-newspaper">
         🗞️
@@ -313,6 +159,13 @@ const Education = () => (
 				date={"June 17, 2020"}
 				image={require('../../assets/images/news/nicholas-1.png')}
 				link={"https://news.cornellcollege.edu/2020/06/passion-computer-science-leads-job-ibm-adamou-՚20/"}
+			/>
+			<Article
+				title={"Adamou wins twice at Midwest Open Championships"}
+				description={"Cornell senior Nick Adamou (SR/New Milford, Conn.) came away with two victories this weekend in his first appearance at the Midwest Open Men's Tennis Championships hosted by Gustavus Adolphus College."}
+				date={"September 29, 2019"}
+				image={require('../../assets/images/news/nicholas-3.jpg')}
+				link={"https://www.cornellrams.com/article/3485"}
 			/>
 			<Article
 				title={"Nick Adamou shares insights and knowledge following his computer science internship"}
