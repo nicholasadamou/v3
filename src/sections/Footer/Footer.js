@@ -23,8 +23,15 @@ const Container = styled.footer`
   text-align: center;
 
   .footer--loading {
-	width: 45%;
+	width: 100%;
 	margin: 0 auto;
+
+	${until(
+		'956px',
+		() => `
+		width: 45%;
+		`
+	)}
 
 	${until(
     device.iPhone(),
