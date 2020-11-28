@@ -20,6 +20,11 @@ const Container = styled.footer`
 
   text-align: center;
 
+  .footer--loading {
+	width: 45%;
+    margin: 0 auto;
+  }
+
   .footer--loading > div {
   	margin: 0 80px;
 
@@ -139,18 +144,6 @@ const Footer = () => {
 							<FontAwesomeIcon icon={['fab', 'linkedin']}/>
 						</li>
 					</a>
-					{/* <a
-						href="https://instagram.com/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						aria-label="Instagram"
-						title="Instagram"
-						rel="noopener noreferrer"
-					>
-						<li className="instagram">
-							<FontAwesomeIcon icon={['fab', 'instagram']}/>
-						</li>
-					</a> */}
 				</ul>
 			</Social>
 
