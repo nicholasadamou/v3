@@ -196,14 +196,9 @@ const Education = () => (
         () => (
           <>
             ➤ <em>High Honors Dean's List</em> (Fall ‘18)
-            <br />➤ <em>Highest Honors Dean's List</em> (Spring ‘19, Fall '19,
+            <br />
+						➤ <em>Highest Honors Dean's List</em> (Spring ‘19, Fall '19,
             Spring '20)
-            <br />➤ <em>Midwest Conference Academic All-Conference</em> (Fall
-            '18, Spring ‘19, Fall '19, Spring '20)
-            <br />➤ <em>
-              Intercollegiate Tennis Association Scholar-Athlete
-            </em>{' '}
-            (Fall '18, Spring ‘19, Fall '19, Spring '20)
           </>
         ),
       )}
@@ -215,9 +210,11 @@ const Education = () => (
             ➤ Team Nadal Award (Spring '19)
             <br />
             ➤ Team Most Improved Player (Spring '20)
-            <br />➤ <em>Midwest Conference Academic All-Conference</em> (Fall
+            <br />
+						➤ <em>Midwest Conference Academic All-Conference</em> (Fall
             '18, Spring ‘19, Fall '19, Spring '20)
-            <br />➤ <em>
+            <br />
+						➤ <em>
               Intercollegiate Tennis Association Scholar-Athlete
             </em>{' '}
             (Fall '18, Spring ‘19, Fall '19, Spring '20)
@@ -230,15 +227,20 @@ const Education = () => (
         () => (
           <>
             ➤ <em>Dean's List</em> (Fall ‘16, ‘17), (Spring ‘17, ‘18)
-            <br />➤ <em>Presidents List</em> (Fall '16, '17), (Spring ‘17, ‘18)
-            <br />➤ <em>Empire8 Sportsman of the Year</em> (2017)
-            <br />➤{' '}
+            <br />
+						➤ <em>Presidents List</em> (Fall '16, '17), (Spring ‘17, ‘18)
+            <br />
+						➤ <em>Empire8 Sportsman of the Year</em> (2017)
+            <br />
+						➤{' '}
             <em>
               The Philip S. Wilder Jr. Award for Academic Distinction
             </em>{' '}
             (2017, 2018)
-            <br />➤ <em>Summer Entrepreneurship Award</em> (2017)
-            <br />➤{' '}
+            <br />
+						➤ <em>Summer Entrepreneurship Award</em> (2017)
+            <br />
+						➤{' '}
             <em>
               The Departmental Award for Excellence in Computer Science
             </em>{' '}
