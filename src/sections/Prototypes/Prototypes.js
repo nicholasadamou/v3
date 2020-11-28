@@ -81,7 +81,7 @@ const Prototypes = () => (
     {FooterText(
       'More can be found on my ',
       'CodePen',
-      'https://codepen.io/NicholasAdamou',
+      'https://codepen.io/nicholasadamou',
       'codepen',
     )}
   </section>
