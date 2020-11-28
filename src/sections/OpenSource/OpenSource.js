@@ -16,19 +16,14 @@ const Repositories = styled.div`
 
   margin: 2rem 1rem 2rem;
 
-  text-align: left;
-
-	${until(
-    '932px',
-    () => `
-		margin: 2rem 0.75rem 2rem;
-	`,
-  )}
+	text-align: left;
 
   ${until(
-    device.iPad(),
+    '956px',
     () => `
-		grid-template-columns: 1fr;
+		grid-template-columns: 1fr 1fr;
+
+		margin: 2rem;
 	`,
   )}
 

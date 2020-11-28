@@ -14,7 +14,16 @@ const Pens = styled.div`
 
   text-align: left;
 
-  margin: 2rem 1rem 2rem;
+	margin: 2rem 1rem 2rem;
+
+  ${until(
+    '956px',
+    () => `
+		grid-template-columns: 1fr 1fr;
+
+		margin: 2rem;
+	`,
+  )}
 
   ${until(
     device.iPhone(),
