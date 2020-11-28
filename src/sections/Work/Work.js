@@ -67,51 +67,51 @@ const Container = styled.section`
   }
 `;
 
-const Companies = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  place-items: center;
+// const Companies = styled.div`
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   place-items: center;
 
-  margin: 2rem 1rem 2rem;
+//   margin: 2rem 1rem 2rem;
 
-  ${until(
-    device.iPhone(),
-    () => `
-		display: block;
+//   ${until(
+//     device.iPhone(),
+//     () => `
+// 		display: block;
 
-		margin: 0;
-	`,
-  )}
+// 		margin: 0;
+// 	`,
+//   )}
 
-  a {
-    -webkit-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
+//   a {
+//     -webkit-transition: all 0.25s ease-in-out;
+//     transition: all 0.25s ease-in-out;
 
-    &:hover {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-    }
+//     &:hover {
+//       -webkit-transform: scale(1.1);
+//       transform: scale(1.1);
+//     }
 
-    &:last-child > img {
-      margin-bottom: 0;
-    }
+//     &:last-child > img {
+//       margin-bottom: 0;
+//     }
 
-    img {
-      width: 70%;
+//     img {
+//       width: 70%;
 
-      ${until(
-        device.iPhone(),
-        () => `
-				display: block;
+//       ${until(
+//         device.iPhone(),
+//         () => `
+// 				display: block;
 
-				margin: 0 auto 65px;
+// 				margin: 0 auto 65px;
 
-				width: 50%;
-			`,
-      )}
-    }
-  }
-`;
+// 				width: 50%;
+// 			`,
+//       )}
+//     }
+//   }
+// `;
 
 const Work = () => (
   <Container>
