@@ -31,9 +31,9 @@ const HomePage = () => (
     <Container>
       <AboutMe />
       <hr />
-      <Education />
+			<Work />
       <hr />
-      <Work />
+			<Education />
       <hr />
       <OpenSource />
       <hr />
