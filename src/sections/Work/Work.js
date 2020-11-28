@@ -167,14 +167,15 @@ const Work = () => (
       </a>
     </Companies>
 
-    <h2 className="title" style={{ fontSize: '1.6rem' }}>
+    {/* <h2 className="title" style={{ fontSize: '1.6rem' }}>
       Current and Previous Work Experience
     </h2>
     <p className="subtitle" style={{ fontSize: '1.125rem' }}>
       What I accomplished while I was employed at these respective companies.
-    </p>
+    </p> */}
 
-    {Experience(
+    <div style={{ marginTop: 20 }}>
+		{Experience(
 				'IBM',
 				'Software Engineer',
 				'Southbury, CT',
@@ -229,6 +230,8 @@ const Work = () => (
           'Leveraged Google AMP pages to develop a user-friendly home page for the agency. The AMP page conversion provided an 80% faster page load time than a traditional web page load time.',
         require('../../assets/images/logos/mack-media-group.png'),
       )}
+
+		</div>
 
 		<h2 className="title" style={{ fontSize: '1.6rem' }}>
       Projects{' '}

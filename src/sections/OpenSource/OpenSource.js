@@ -18,6 +18,13 @@ const Repositories = styled.div`
 
   text-align: left;
 
+	${until(
+    '932px',
+    () => `
+		margin: 2rem 0.75rem 2rem;
+	`,
+  )}
+
   ${until(
     device.iPad(),
     () => `

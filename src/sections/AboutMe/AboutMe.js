@@ -214,7 +214,7 @@ const AboutMe = () => (
     </h1>
 
     <p>
-      I am currently a IBM Software Engineer and a recent graduate from{' '}
+      I am currently an IBM Software Engineer and a recent graduate from{' '}
       <a
         className="cornell"
         href="https://www.cornellcollege.edu/"

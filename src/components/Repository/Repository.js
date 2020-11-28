@@ -19,6 +19,13 @@ const Container = styled.article`
 
   font-size: var(--copy-size);
 
+	${until(
+		'932px',
+		() => `
+			margin: 10px 5px;
+		`
+	)}
+
   ${until(
     device.iPhone(),
     () => `
