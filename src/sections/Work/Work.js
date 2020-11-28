@@ -7,6 +7,8 @@ import FooterText from '../../components/FooterText/FooterText';
 import Awards from '../../sass/Awards';
 import Projects from '../../sass/Projects';
 
+import './index.scss';
+
 import styled from 'styled-components';
 
 import { device, until } from '../../utilities/mixins';
@@ -75,6 +77,29 @@ const Work = () => (
         👨🏼‍💻
       </span>
     </h2>
+		<p className="subtitle">
+      Please read my{' '}
+			<a
+				href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
+				target="_blank"
+				aria-hidden="true"
+        rel="noopener noreferrer"
+				className="link"
+				id="resume"
+			>
+				resume
+			</a>{' and connect with me on '}
+			<a
+				href="https://linkedin.com/in/nicholas-adamou/"
+				target="_blank"
+				aria-hidden="true"
+        rel="noopener noreferrer"
+				className="link"
+				id="linkedin"
+			>
+				LinkedIn
+			</a>{'.'}
+    </p>
 
 		{Experience(
 			'IBM',

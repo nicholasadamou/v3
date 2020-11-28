@@ -8,10 +8,6 @@ import styled from 'styled-components';
 
 import { device, until } from '../../utilities/mixins';
 
-import './index.scss';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 const Container = styled.section`
   text-align: center;
 
@@ -63,10 +59,6 @@ const Container = styled.section`
     text-align: center;
 
     color: var(--copy);
-
-    &:last-child {
-      margin: 0;
-    }
 
     ${until(
       device.iPad(),
@@ -154,57 +146,6 @@ const Container = styled.section`
   }
 `;
 
-const Social = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 5px;
-  place-items: center;
-
-	margin: 0 50px;
-
-	${until(
-		device.iPadPro(),
-		() => `
-		margin: 0 10px;
-		`
-	)}
-
-  ${until(
-    device.iPhone(),
-    () => `
-		grid-template-columns: 1fr;
-
-		margin: 0 20px;
-	`,
-  )}
-
-  a {
-    display: inline-block;
-
-    width: 100%;
-    height: 50px;
-
-    text-align: center;
-    font-size: 16px;
-
-    border: 2px solid;
-
-    line-height: 3;
-    text-decoration: none;
-
-    -webkit-transition: all 150ms ease-in-out;
-
-    transition: all 150ms ease-in-out;
-
-    ${until(
-      device.iPad(),
-      () => `
-			width: 100%;
-		`,
-    )}
-  }
-`;
-
 const AboutMe = () => (
   <Container>
     <Avatar />
@@ -273,54 +214,6 @@ const AboutMe = () => (
       Amazon AWS and more to construct applications driven to excel each
       company's bottom-line.
     </p>
-
-    <Social>
-      <a
-        href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        id="resume"
-      >
-        Read My Resume
-      </a>
-      <a
-        href="https://linkedin.com/in/nicholas-adamou/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        id="linkedin"
-      >
-        Connect with Me on <FontAwesomeIcon icon={['fab', 'linkedin']} />
-      </a>
-			<a
-        href="https://www.github.com/nicholasadamou"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        id="github"
-      >
-        View my Projects on <FontAwesomeIcon icon={['fab', 'github']} />
-      </a>
-			<a
-        href="https://codepen.io/nicholasadamou"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        id="codepen"
-      >
-        View my Pens on <FontAwesomeIcon icon={['fab', 'codepen']} />
-      </a>
-      {/* <a
-        href="https://www.instagram.com/nicholasadamou/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        id="instagram"
-      >
-        Follow Me on <FontAwesomeIcon icon={['fab', 'instagram']} />
-      </a> */}
-    </Social>
   </Container>
 );
 
