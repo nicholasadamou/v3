@@ -125,7 +125,7 @@ const Work = () => (
       Companies where I've had the privilege to work or intern at in the past.
     </p>
 
-    <Companies>
+    {/* <Companies>
       <a
         href="https://ibm.com/"
         target="_blank"
@@ -165,7 +165,7 @@ const Work = () => (
           alt="Mack Media Group"
         />
       </a>
-    </Companies>
+    </Companies> */}
 
     {/* <h2 className="title" style={{ fontSize: '1.6rem' }}>
       Current and Previous Work Experience
@@ -174,7 +174,7 @@ const Work = () => (
       What I accomplished while I was employed at these respective companies.
     </p> */}
 
-    <div style={{ marginTop: 20 }}>
+    <>
 		{Experience(
 				'IBM',
 				'Software Engineer',
@@ -231,7 +231,7 @@ const Work = () => (
         require('../../assets/images/logos/mack-media-group.png'),
       )}
 
-		</div>
+		</>
 
 		<h2 className="title" style={{ fontSize: '1.6rem' }}>
       Projects{' '}
