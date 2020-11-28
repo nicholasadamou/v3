@@ -1,5 +1,6 @@
 #resume {
   background-color: var(--red);
+  border-color: var(--red);
   color: var(--white);
 
   &:hover {
@@ -11,6 +12,7 @@
 
 #linkedin {
   background-color: var(--linkedin);
+  border-color: var(--linkedin);
   color: var(--white);
 
   &:hover {
@@ -22,6 +24,7 @@
 
 #github {
   background-color: var(--github);
+  border-color: var(--github);
   color: var(--white);
 
   &:hover {
@@ -33,6 +36,7 @@
 
 #codepen {
   background-color: var(--codepen);
+  border-color: var(--codepen);
   color: var(--white);
 
   &:hover {
