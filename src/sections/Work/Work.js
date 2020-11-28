@@ -67,52 +67,6 @@ const Container = styled.section`
   }
 `;
 
-// const Companies = styled.div`
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   place-items: center;
-
-//   margin: 2rem 1rem 2rem;
-
-//   ${until(
-//     device.iPhone(),
-//     () => `
-// 		display: block;
-
-// 		margin: 0;
-// 	`,
-//   )}
-
-//   a {
-//     -webkit-transition: all 0.25s ease-in-out;
-//     transition: all 0.25s ease-in-out;
-
-//     &:hover {
-//       -webkit-transform: scale(1.1);
-//       transform: scale(1.1);
-//     }
-
-//     &:last-child > img {
-//       margin-bottom: 0;
-//     }
-
-//     img {
-//       width: 70%;
-
-//       ${until(
-//         device.iPhone(),
-//         () => `
-// 				display: block;
-
-// 				margin: 0 auto 65px;
-
-// 				width: 50%;
-// 			`,
-//       )}
-//     }
-//   }
-// `;
-
 const Work = () => (
   <Container>
     <h2 className="title">
@@ -125,113 +79,61 @@ const Work = () => (
       Companies where I've had the privilege to work or intern at in the past.
     </p>
 
-    {/* <Companies>
-      <a
-        href="https://ibm.com/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        title="IBM"
-      >
-        <img
-          loading="lazy"
-          src={require('../../assets/images/logos/ibm_alt.png')}
-          alt="IBM"
-        />
-      </a>
-      <a
-        href="https://flyblackbird.com/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        title="flyblackbird"
-      >
-        <img
-          loading="lazy"
-          src={require('../../assets/images/logos/blackbird_alt.png')}
-          alt="flyblackbird"
-        />
-      </a>
-      <a
-        href="https://mackmediagroup.com/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-        title="Mack Media Group"
-      >
-        <img
-          loading="lazy"
-          src={require('../../assets/images/logos/mack-media-group_alt.png')}
-          alt="Mack Media Group"
-        />
-      </a>
-    </Companies> */}
-
-    {/* <h2 className="title" style={{ fontSize: '1.6rem' }}>
-      Current and Previous Work Experience
-    </h2>
-    <p className="subtitle" style={{ fontSize: '1.125rem' }}>
-      What I accomplished while I was employed at these respective companies.
-    </p> */}
-
-    <>
 		{Experience(
-				'IBM',
-				'Software Engineer',
-				'Southbury, CT',
-				'June 2020 - Present',
-				() =>
-					'Full-stack software engineer focused primarily on the front-end and back-end of cloud-native applications. Works with testers, PO\'s, IM\'s, UI/UX designers, and users to develop cloud-native software ' +
-					'using DB2, k8s, istio, IBM Cloud, Docker, along with Java RESTful services using JDBC and SQL for the back-end, and React and NodeJS for the front-end. Applications are version controlled using GitHub, unit ' +
-					'tested using Jenkins and JUnit along with leveraging a host of CI/CD software to provide automated testing and deployment of cloud-native applications including Travis CI, and including a slew of other internal IBM CI/CD proprietary software.',
-					require('../../assets/images/logos/ibm.png'),
-			)}
+			'IBM',
+			'Software Engineer',
+			'Southbury, CT',
+			'June 2020 - Present',
+			() =>
+				'Full-stack software engineer focused primarily on the front-end and back-end of cloud-native applications. Works with testers, PO\'s, IM\'s, UI/UX designers, and users to develop cloud-native software ' +
+				'using DB2, k8s, istio, IBM Cloud, Docker, along with Java RESTful services using JDBC and SQL for the back-end, and React and NodeJS for the front-end. Applications are version controlled using GitHub, unit ' +
+				'tested using Jenkins and JUnit along with leveraging a host of CI/CD software to provide automated testing and deployment of cloud-native applications including Travis CI, and including a slew of other internal IBM CI/CD proprietary software.',
+				require('../../assets/images/logos/ibm.png'),
+		)}
 
-      {Experience(
-        'IBM',
-        'Software Engineering Co-Op',
-        'Southbury, CT',
-        'August 2019 - June 2020',
-        () =>
-          'Continued the work I finished as a intern, but now as a Co-Op while I was away at school. I participated in weekly stand-up meetings relating to the JIRA stories I was assigned. With each story, ' +
-          'I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the application.',
-        require('../../assets/images/logos/ibm.png'),
-      )}
+		{Experience(
+			'IBM',
+			'Software Engineering Co-Op',
+			'Southbury, CT',
+			'August 2019 - June 2020',
+			() =>
+				'Continued the work I finished as a intern, but now as a Co-Op while I was away at school. I participated in weekly stand-up meetings relating to the JIRA stories I was assigned. With each story, ' +
+				'I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the application.',
+			require('../../assets/images/logos/ibm.png'),
+		)}
 
-      {Experience(
-        'IBM',
-        'Software Engineering Intern',
-        'Southbury, CT',
-        'May 2019 - August 2019',
-        () =>
-          "I worked and collaborated with a diverse team of developers, UX/UI designers, PO's, IM's, and testers from around the world in order to develop a web application utilizing React " +
-          'for the front-end along with Jenkins for unit testing, and a variety of technologies for the back-end, such as SQL, Java with JDBC, Kubernetes for container-orchestration, Apache Kafka' +
-          ' for stream-processing of micro-services and Docker for containerization.',
-        require('../../assets/images/logos/ibm.png'),
-      )}
+		{Experience(
+			'IBM',
+			'Software Engineering Intern',
+			'Southbury, CT',
+			'May 2019 - August 2019',
+			() =>
+				"I worked and collaborated with a diverse team of developers, UX/UI designers, PO's, IM's, and testers from around the world in order to develop a web application utilizing React " +
+				'for the front-end along with Jenkins for unit testing, and a variety of technologies for the back-end, such as SQL, Java with JDBC, Kubernetes for container-orchestration, Apache Kafka' +
+				' for stream-processing of micro-services and Docker for containerization.',
+			require('../../assets/images/logos/ibm.png'),
+		)}
 
-			{Experience(
-        'Blackbird',
-        'Software Engineering Intern',
-        'San Francisco, CA',
-        'June 2018 - August 2018',
-        () =>
-          'As a software engineer at Blackbird, I worked closely with the CTO and the engineering team to construct custom components for the Blackbird web and mobile apps leveraging ' +
-          'React, React Native, React Native Web, GraphQL, Apollo, and ES6 JavaScript. In addition, I provided QA (Quality Assurance) and unit testing on multiple builds of the Blackbird web and mobile apps.',
-        require('../../assets/images/logos/blackbird.png'),
-      )}
+		{Experience(
+			'Blackbird',
+			'Software Engineering Intern',
+			'San Francisco, CA',
+			'June 2018 - August 2018',
+			() =>
+				'As a software engineer at Blackbird, I worked closely with the CTO and the engineering team to construct custom components for the Blackbird web and mobile apps leveraging ' +
+				'React, React Native, React Native Web, GraphQL, Apollo, and ES6 JavaScript. In addition, I provided QA (Quality Assurance) and unit testing on multiple builds of the Blackbird web and mobile apps.',
+			require('../../assets/images/logos/blackbird.png'),
+		)}
 
-			{Experience(
-        'Mack Media Group',
-        'Software Engineering Intern',
-        'Brookfield, CT',
-        'December 2016 - December 2016',
-        () =>
-          'Leveraged Google AMP pages to develop a user-friendly home page for the agency. The AMP page conversion provided an 80% faster page load time than a traditional web page load time.',
-        require('../../assets/images/logos/mack-media-group.png'),
-      )}
-
-		</>
+		{Experience(
+			'Mack Media Group',
+			'Software Engineering Intern',
+			'Brookfield, CT',
+			'December 2016 - December 2016',
+			() =>
+				'Leveraged Google AMP pages to develop a user-friendly home page for the agency. The AMP page conversion provided an 80% faster page load time than a traditional web page load time.',
+			require('../../assets/images/logos/mack-media-group.png'),
+		)}
 
 		<h2 className="title" style={{ fontSize: '1.6rem' }}>
       Projects{' '}

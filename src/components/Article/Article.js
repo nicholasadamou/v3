@@ -88,8 +88,12 @@ const Container = styled.article`
   }
 `;
 
-const Article = (title, description, date, image, link) => {
-  const URL = parseURL(link);
+const Article = (props) => {
+	const { title, description, date, image, link } = props;
+
+	const URL = parseURL(link);
+
+	debugger;
 
   return (
     <Container>
@@ -118,7 +122,7 @@ const Article = (title, description, date, image, link) => {
             : moment(new Date(date)).fromNow()}
         </small>
       </div>
-      {image !== '' ? (
+      {image !== undefined ? (
         <img
           loading="lazy"
           src={image}
@@ -126,7 +130,7 @@ const Article = (title, description, date, image, link) => {
           alt="article masthead"
         />
       ) : (
-        <div style={{ width: 150 }}></div>
+				<div className="image-placeholder" style={{ width: 150 }}></div>
       )}
     </Container>
   );
