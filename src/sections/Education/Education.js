@@ -77,7 +77,6 @@ const Education = () => (
 				),
 				require('../../assets/images/logos/georgia-tech.jpg'),
 			)} */}
-
 			{Experience(
 				'Cornell College',
 				'Bachelors of Arts, Computer Science',
@@ -102,7 +101,6 @@ const Education = () => (
 				),
 				require('../../assets/images/logos/cornell-college.png'),
 			)}
-
 			{Experience(
 				'Hartwick College',
 				'Transferred; Computer Science Major',
@@ -227,14 +225,6 @@ const Education = () => (
             <br />
 						➤ <em>Presidents List</em> (Fall '16, '17), (Spring ‘17, ‘18)
             <br />
-						➤ <em>Empire8 Sportsman of the Year</em> (2017)
-            <br />
-						➤{' '}
-            <em>
-              The Philip S. Wilder Jr. Award for Academic Distinction
-            </em>{' '}
-            (2017, 2018)
-            <br />
 						➤ <em>Summer Entrepreneurship Award</em> (2017)
             <br />
 						➤{' '}
@@ -242,6 +232,21 @@ const Education = () => (
               The Departmental Award for Excellence in Computer Science
             </em>{' '}
             (2018)
+          </>
+        ),
+      )}
+			{AwardListing(
+        require('../../assets/images/logos/hartwick-hawks.png'),
+        'Hartwick Hawks',
+        () => (
+          <>
+						➤ <em>Empire8 Sportsman of the Year</em> (2017)
+            <br />
+						➤{' '}
+            <em>
+              The Philip S. Wilder Jr. Award for Academic Distinction
+            </em>{' '}
+            (2017, 2018)
           </>
         ),
       )}
