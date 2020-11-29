@@ -52,22 +52,6 @@ const Container = styled.section`
   }
 `;
 
-const Experiences = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 15px;
-
-  ${until(
-    device.iPhone(),
-    () => `
-		grid-template-columns: 1fr;
-		grid-gap: initial;
-
-		margin: 0;
-	`,
-  )}
-`;
-
 const Education = () => (
   <Container>
     <h2 className="title">
@@ -80,7 +64,20 @@ const Education = () => (
       Schools where I learned all that I know about software engineering.
     </p>
 
-		<Experiences>
+		<>
+		{/* {Experience(
+				'Georgia Tech',
+				'Master\'s of Science, Computer Science',
+				'Atlanta, Georgia',
+				'August 2021 - May 2023',
+				() => (
+					<>
+						Incoming graduate student.
+					</>
+				),
+				require('../../assets/images/logos/georgia-tech.jpg'),
+			)} */}
+
 			{Experience(
 				'Cornell College',
 				'Bachelors of Arts, Computer Science',
@@ -95,12 +92,12 @@ const Education = () => (
 						<em>Computer Science</em>{'.'}
 						<br />
 						<em>Cumulative GPA:</em>
-						{' 3.98 out of 4.0'}
+						{' 3.98 out of 4.0.'}
 						<br />
 						<em>Overall</em>
 						{' Class Rank: 6/261 ('}
 						<em>2.29%</em>
-						{')'}
+						{').'}
 					</>
 				),
 				require('../../assets/images/logos/cornell-college.png'),
@@ -114,12 +111,12 @@ const Education = () => (
 				() => (
 					<>
 						<em>Cumulative GPA:</em>
-						{' 3.96 out of 4.0'}
+						{' 3.96 out of 4.0.'}
 					</>
 				),
 				require('../../assets/images/logos/hartwick-college.png'),
 			)}
-		</Experiences>
+		</>
 
     <h2 className="title" style={{ fontSize: '1.5rem' }}>
       Computer Science Projects{' '}
