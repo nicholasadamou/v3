@@ -171,6 +171,7 @@ const Work = () => (
 			{Repository('watson-chatbot')}
 			{Repository('react-iframe')}
 			{Repository('node-cache')}
+      {Repository('storage')}
 			{Repository('mack-media-group-internship-project')}
     </Projects>
 
