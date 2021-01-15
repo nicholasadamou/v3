@@ -141,8 +141,8 @@ const Container = styled.article`
   }
 `;
 
-const Repository = (repositoryName) => {
-  const repository = useGitHub(repositoryName);
+const Repository = (user='nicholasadamou', repositoryName) => {
+  const repository = useGitHub(user, repositoryName);
 
   if (JSON.stringify(repository) === '{}') return <SkeletonRepository />;
 

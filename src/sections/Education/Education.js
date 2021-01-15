@@ -125,13 +125,13 @@ const Education = () => (
     </p>
 
     <Projects>
-      {Repository('distributed-load-balancer')}
-      {Repository('producer-consumer-simulator')}
-      {Repository('python-udp-chat-client')}
-      {Repository('python-dynamic-web-server')}
-      {Repository('python-proxy')}
-      {Repository('cpu-cache-simulator')}
-      {Repository('project-management-capstone-project')}
+      {Repository('nicholasadamou', 'distributed-load-balancer')}
+      {Repository('nicholasadamou', 'producer-consumer-simulator')}
+      {Repository('nicholasadamou', 'python-udp-chat-client')}
+      {Repository('nicholasadamou', 'python-dynamic-web-server')}
+      {Repository('nicholasadamou', 'python-proxy')}
+      {Repository('nicholasadamou', 'cpu-cache-simulator')}
+      {Repository('nicholasadamou', 'project-management-capstone-project')}
     </Projects>
 
 		<h2 className="title" style={{ fontSize: '1.5rem' }}>

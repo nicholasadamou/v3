@@ -173,7 +173,7 @@ const Work = () => (
 			'New Milford, CT',
 			'March 2016 - March 2016',
 			() =>
-				"Worked with classmates to design and develop a responsive mobile-first homepage for the student-run design agency. Leveraging Gulp.js, Jade, SCSS, and ES6 JavaScript.",
+				"Worked with classmates to design and develop a responsive mobile-first homepage for the student-run design agency. Leveraging Jade, SCSS, and ES6 JavaScript.",
 			require('../../assets/images/logos/cut-paste-copy.png'),
 		)}
 
@@ -186,13 +186,15 @@ const Work = () => (
     </p>
 
     <Projects>
-      {Repository('down-to-network')}
-			{Repository('firebase-react-starter-kit')}
-			{Repository('watson-chatbot')}
-			{Repository('react-iframe')}
-			{Repository('node-cache')}
-      {Repository('storage')}
-			{Repository('mack-media-group-internship-project')}
+      {Repository('nicholasadamou', 'down-to-network')}
+			{Repository('nicholasadamou', 'firebase-react-starter-kit')}
+			{Repository('nicholasadamou', 'watson-chatbot')}
+			{Repository('nicholasadamou', 'react-iframe')}
+			{Repository('nicholasadamou', 'node-cache')}
+      {Repository('nicholasadamou', 'storage')}
+			{Repository('nicholasadamou', 'mack-media-group-internship-project')}
+			{Repository('nicholasadamou', 'advanced-electrical-services')}
+			{Repository('cutpastecopy', 'cutpastecopy.com')}
     </Projects>
 
     <h3 className="title" style={{ fontSize: '1.6rem' }}>

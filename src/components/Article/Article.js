@@ -93,8 +93,6 @@ const Article = (props) => {
 
 	const URL = parseURL(link);
 
-	debugger;
-
   return (
     <Container>
       <div className="article-details">

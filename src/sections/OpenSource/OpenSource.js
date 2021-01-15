@@ -71,12 +71,12 @@ const OpenSource = () => (
     </p>
 
     <Repositories>
-      {Repository('minipwner')}
-      {Repository('auto-wifi-hotspot')}
-      {Repository('starter-kit')}
-      {Repository('pifi')}
-      {Repository('megalith')}
-      {Repository('set-me-up')}
+      {Repository('nicholasadamou', 'minipwner')}
+      {Repository('nicholasadamou', 'auto-wifi-hotspot')}
+      {Repository('nicholasadamou', 'starter-kit')}
+      {Repository('nicholasadamou', 'pifi')}
+      {Repository('nicholasadamou', 'megalith')}
+      {Repository('nicholasadamou', 'set-me-up')}
     </Repositories>
 
     {FooterText(

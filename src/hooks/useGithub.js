@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 // Round the number like "3.5k" https://stackoverflow.com/a/9461657
 const round = (num) => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
 
-const useGitHub = (repositoryName) => {
+const useGitHub = (user, repositoryName) => {
   const [repository, setRepository] = useState({});
 
   useEffect(() => {
     function fetchRepository() {
-      fetch(`https://api.github.com/repos/nicholasadamou/${repositoryName}`, {
+      fetch(`https://api.github.com/repos/${user}/${repositoryName}`, {
 			headers: {
 				'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
 			}
@@ -24,7 +24,7 @@ const useGitHub = (repositoryName) => {
 				updated_at,
 			  } = response;
 
-				fetch(`https://api.github.com/repos/nicholasadamou/${repositoryName}/branches/master`, {
+				fetch(`https://api.github.com/repos/${user}/${repositoryName}/branches/master`, {
 					headers: {
 						'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
 					}
@@ -47,7 +47,7 @@ const useGitHub = (repositoryName) => {
     }
 
     fetchRepository();
-  }, [repositoryName]);
+  }, [user, repositoryName]);
 
   return repository;
 };
