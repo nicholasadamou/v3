@@ -158,7 +158,7 @@ const Work = () => (
 		)}
 
 		{Experience(
-			'Advanced Electrical Services, Inc',
+			'Advanced Electrical Services',
 			'Freelance Web Developer',
 			'New Milford, CT',
 			'June 2016 - June 2016',

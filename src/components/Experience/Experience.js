@@ -85,7 +85,8 @@ const Experience = (company, title, location, duration, description, image) => (
   <Container className="experience">
     <img loading="lazy" src={image} alt={company} />
     <div>
-      <strong>{title}</strong>
+			<strong>{company}</strong>
+      <em>{title}</em>
       <aside>{duration}</aside>
       <aside>{location}</aside>
       <span>{description()}</span>
