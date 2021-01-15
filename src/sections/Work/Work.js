@@ -153,8 +153,28 @@ const Work = () => (
 			'Brookfield, CT',
 			'December 2016 - December 2016',
 			() =>
-				'Leveraged Google AMP pages to develop a user-friendly home page for the agency. The AMP page conversion provided an 80% faster page load time than a traditional web page load time.',
+				'Leveraged Google AMP pages to develop a user-friendly and responsive homepage for the agency.',
 			require('../../assets/images/logos/mack-media-group.png'),
+		)}
+
+		{Experience(
+			'Advanced Electrical Services, Inc',
+			'Freelance Web Developer',
+			'New Milford, CT',
+			'June 2016 - June 2016',
+			() =>
+				"Worked closely with the client to develop a new sleek and intuitive homepage for the company. Utilized various web technologies, such as Pug (previously Jade), SASS, and ES6 JavaScript.",
+			require('../../assets/images/logos/advanced-electrical-services.png'),
+		)}
+
+		{Experience(
+			'Cut, Paste, & Copy',
+			'Student Web Developer',
+			'New Milford, CT',
+			'March 2016 - March 2016',
+			() =>
+				"Worked with classmates to design and develop a responsive mobile-first homepage for the student-run design agency. Leveraging Gulp.js, Jade, SCSS, and ES6 JavaScript.",
+			require('../../assets/images/logos/cut-paste-copy.png'),
 		)}
 
 		<h2 className="title" style={{ fontSize: '1.6rem' }}>

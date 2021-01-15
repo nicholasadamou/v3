@@ -165,16 +165,15 @@ const AboutMe = () => (
       >
         Cornell College
       </a>{' '}
-      where I earned my B.A. in Computer Science with a concentration in
-      Software Engineering. I am a highly organized and hard-working individual
-      who absolutely loves programming. The mere ability to write a few lines of
-      code and have something unique and interesting come up on the screen
-      fascinates me each and every day!
+      where I earned my B.A. in Computer Science. I am a highly organized and a goal driven individual who
+      is a problem solver by nature. I absolutely loves programming. The mere ability
+      to write a few lines of code and have something unique and interesting come up on
+      the screen fascinates me each and every day!
     </p>
 
     <p>
       Because of my interest in computers, I've had the awesome and unique
-      opportunity to intern and work for a few software engineering companies
+      opportunity to intern and work for innovative software engineering companies
       such as{' '}
       <a
         className="blackbird"
