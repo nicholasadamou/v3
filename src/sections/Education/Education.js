@@ -85,10 +85,7 @@ const Education = () => (
 				() => (
 					<>
 						<em>Graduated </em> <strong>Summa Cum Laude</strong>
-						{' and '}
-						<strong>with honors</strong>
-						{' in '}
-						<em>Computer Science</em>{'.'}
+						{'.'}
 						<br />
 						<em>Cumulative GPA:</em>
 						{' 3.98 out of 4.0.'}
