@@ -43,10 +43,6 @@ This project uses the following technologies:
 - [**React.js**](https://reactjs.org/) - For building the interface along with:
   - [**Styled-Components**](https://www.styled-components.com/) - for styling.
 
-**The Back-End**:
-
-- [**Netlify**](https://netlify.com/) - For serverless [**functions**](functions/).
-
 ## ⛓️ CI/CD Pipeline
 
 This project uses the following CI/CD Pipeline:
