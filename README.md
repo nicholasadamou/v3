@@ -42,8 +42,6 @@ This project uses the following technologies:
 
 - [**React.js**](https://reactjs.org/) - For building the interface along with:
   - [**Styled-Components**](https://www.styled-components.com/) - for styling.
-  - [**instant.page**](https://instant.page/) - Make your site's pages instant in 1 minute and improve your conversion rate by 1%.
-  - [**github-api**](https://www.npmjs.com/package/github-api) - For making requests to the GitHub API within React.
 
 **The Back-End**:
 
