@@ -139,7 +139,7 @@ const GlobalStyles = createGlobalStyle`
 		${until(
       device.iPhone(),
       () => `
-		font-size: 2rem;
+		font-size: 1.7rem;
 		`,
     )}
 	}

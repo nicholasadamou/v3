@@ -21,7 +21,7 @@ const Container = styled.section`
   )}
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 
     margin-top: 20px;
 
@@ -43,7 +43,7 @@ const Container = styled.section`
 			padding-top: 20px;
 			padding-bottom: 10px;
 
-			font-size: 1.5rem;
+			font-size: 1.7rem;
 			text-align: center;
 		`,
     )}
@@ -54,7 +54,7 @@ const Container = styled.section`
   }
 
   p {
-    margin: 0 5rem 20px;
+    margin: 0 8rem 5px;
 
     text-align: center;
 
@@ -155,8 +155,8 @@ const AboutMe = () => (
     </h1>
 
     <p>
-      I am currently an IBM Software Engineer and a recent graduate from{' '}
-      <a
+      Currently, I am an IBM software engineer. I primarily focus on the front-end and back-end of cloud-native applications. Recently I graduated <em>Summa Cum Laude</em> from{' '}
+			<a
         className="cornell"
         href="https://www.cornellcollege.edu/"
         target="_blank"
@@ -165,53 +165,8 @@ const AboutMe = () => (
       >
         Cornell College
       </a>{' '}
-      where I earned my B.A. in Computer Science. I am a highly organized and a goal driven individual who
-      is a problem solver by nature. I absolutely loves programming. The mere ability
-      to write a few lines of code and have something unique and interesting come up on
-      the screen fascinates me each and every day!
-    </p>
-
-    <p>
-      Because of my interest in computers, I've had the unique
-      opportunity to intern and work for innovative software engineering companies
-      such as{' '}
-      <a
-        className="blackbird"
-        href="https://flyblackbird.com"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-      >
-        Blackbird
-      </a>
-      ,{' '}
-      <a
-        className="mack-media-group"
-        href="https://mackmediagroup.com/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-      >
-        Mack Media Group
-      </a>
-      , and{' '}
-      <a
-        className="ibm"
-        href="https://ibm.com/"
-        target="_blank"
-        aria-hidden="true"
-        rel="noopener noreferrer"
-      >
-        IBM
-      </a>{' '}
-      where I met and networked with many great and vastly talented engineers.
-    </p>
-
-    <p>
-      At all three of those companies, I leveraged cutting-edge JavaScript
-      technologies such as React, React Native, Graph QL, Apollo, React Redux,
-      Amazon AWS and more to construct applications driven to excel each
-      company's bottom-line.
+			where I earned my degree in Computer Science. I have always been a highly organized and goal driven individual who
+      is a problem solver by nature. To me, solving everyday problems that improve the lives of others is why I love programming.
     </p>
   </Container>
 );
