@@ -169,29 +169,6 @@ const Footer = () => {
 				myself. Copyright &copy; {moment(Date.now()).year()}.
 			</p>
 			<p>
-				Made with{' '}
-				<a
-					href="https://bulma.io/"
-					target="_blank"
-					aria-hidden="true"
-					rel="noopener noreferrer"
-					className="link"
-				>
-					Bulma
-				</a>{' '}
-				and{' '}
-				<a
-					href="https://github.com/facebook/create-react-app"
-					target="_blank"
-					aria-hidden="true"
-					rel="noopener noreferrer"
-					className="link"
-				>
-					create-react-app
-				</a>
-				.
-			</p>
-			<p>
 				Source code available on{' '}
 				<a
 					href="https://github.com/nicholasadamou/nicholasadamou.com"
