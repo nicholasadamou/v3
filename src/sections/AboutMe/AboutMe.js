@@ -155,7 +155,7 @@ const AboutMe = () => (
     </h1>
 
     <p>
-      Currently, I am an IBM software engineer. I primarily focus on the front-end and back-end of cloud-native applications. Recently I graduated <em>Summa Cum Laude</em> from{' '}
+      Currently, I am an IBM software engineer. I primarily focus on the front-end and back-end of cloud-native applications. Recently I graduated Summa Cum Laude from{' '}
 			<a
         className="cornell"
         href="https://www.cornellcollege.edu/"
@@ -165,8 +165,7 @@ const AboutMe = () => (
       >
         Cornell College
       </a>{' '}
-			where I earned my degree in Computer Science. I have always been a highly organized and goal driven individual who
-      is a problem solver by nature. To me, solving everyday problems that improve the lives of others is why I love programming.
+			where I earned my degree in Computer Science. I have always been a highly organized and goal-driven individual who is a problem solver by nature. Using my skills as a software engineer to improve the lives of others by developing fun and intuitive applications are why I love programming.
     </p>
   </Container>
 );
