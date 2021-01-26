@@ -222,7 +222,7 @@ const Work = () => (
     <Awards>
 	{Experience(
         'IBM',
-        'IBM Developer Jumpstart Practioner',
+        'IBM Developer Jumpstart Practitioner',
         '',
         '26 January 2021',
         () =>
