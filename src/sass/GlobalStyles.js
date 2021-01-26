@@ -83,6 +83,15 @@ const GlobalStyles = createGlobalStyle`
 	  height: auto;
 
 	  background: none;
+
+	  zoom: 125%;
+
+	  ${until(
+      device.iPad(),
+      () => `
+	  zoom: 100%;
+	  `,
+    )}
 	}
 
 	body {
