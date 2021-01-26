@@ -220,6 +220,15 @@ const Work = () => (
     </p>
 
     <Awards>
+	{Experience(
+        'IBM',
+        'IBM Developer Jumpstart Practioner',
+        '',
+        '26 January 2021',
+        () =>
+          "The earner has acquired a practical knowledge of IBM Design Thinking, Agile Software development/Project management skills and practical development (coding/designing) skills. They have also demonstrated the ability to use and implement components of IBM's Cloud Computing offerings to solve valid business challenges within IBM. As a Practitioner, the badge earner has demonstrated the ability to to work as a team, with their Stakeholders to deliver well designed solutions to business challenges.",
+        'https://images.youracclaim.com/size/680x680/images/a65e1c69-32c0-4b7f-8222-3d3c340f252c/IBM-Developer-Jumpstart-Practitioner.png',
+      )}
       {Experience(
         'IBM',
         'Beyond the Basics: Istio and IBM Cloud Kubernetes Service',
