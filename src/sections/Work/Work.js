@@ -221,10 +221,19 @@ const Work = () => (
 
     <Awards>
 	{Experience(
+		'IBM',
+		'IBM Developer JumpStart Explorer',
+		'',
+		'5 February 2021',
+		() =>
+			"The IBM Developer Jumpstart badge ensures an understanding of key skills and knowledge required by software and hardware developers to apply core practices such as IBM Design Thinking and agile to their work, and have taken steps to build their skills and experiences as developers through a 4 module set of e-Learning.",
+		'https://images.youracclaim.com/size/340x340/images/9fa05621-437d-44ba-8ea5-ecd611e5cde5/IBM-Developer-Jumpstart-Explorer.png',
+	)}
+	{Experience(
         'IBM',
-        'IBM Developer Jumpstart Practitioner',
+        'IBM Developer JumpStart Practitioner',
         '',
-        '26 January 2021',
+        '25 January 2021',
         () =>
           "The earner has acquired a practical knowledge of IBM Design Thinking, Agile Software development/Project management skills and practical development (coding/designing) skills. They have also demonstrated the ability to use and implement components of IBM's Cloud Computing offerings to solve valid business challenges within IBM. As a Practitioner, the badge earner has demonstrated the ability to to work as a team, with their Stakeholders to deliver well designed solutions to business challenges.",
         'https://images.youracclaim.com/size/680x680/images/a65e1c69-32c0-4b7f-8222-3d3c340f252c/IBM-Developer-Jumpstart-Practitioner.png',
