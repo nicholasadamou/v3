@@ -75,7 +75,7 @@ const Education = () => (
 						Incoming graduate student.
 					</>
 				),
-				require('../../assets/images/logos/georgia-tech.jpg'),
+				require('../../assets/images/logos/georgia-tech.jpg').default,
 			)} */}
 			{Experience(
 				'Cornell College',
@@ -96,7 +96,7 @@ const Education = () => (
 						{').'}
 					</>
 				),
-				require('../../assets/images/logos/cornell-college.png'),
+				require('../../assets/images/logos/cornell-college.png').default,
 			)}
 			{Experience(
 				'Hartwick College',
@@ -109,7 +109,7 @@ const Education = () => (
 						{' 3.96 out of 4.0.'}
 					</>
 				),
-				require('../../assets/images/logos/hartwick-college.png'),
+				require('../../assets/images/logos/hartwick-college.png').default,
 			)}
 		</>
 
@@ -149,14 +149,14 @@ const Education = () => (
 				title={"Passion for computer science leads to job at IBM for Adamou"}
 				description={"An interest in the classic video game Asteroids for Windows 98 spawned a passion for computer science at a young age for Nicholas Adamou ՚20."}
 				date={"June 17, 2020"}
-				image={require('../../assets/images/news/nicholas-1.png')}
+				image={require('../../assets/images/news/nicholas-1.png').default}
 				link={"https://news.cornellcollege.edu/2020/06/passion-computer-science-leads-job-ibm-adamou-՚20/"}
 			/>
 			<Article
 				title={"Adamou wins twice at Midwest Open Championships"}
 				description={"Cornell senior Nick Adamou (SR/New Milford, Conn.) came away with two victories this weekend in his first appearance at the Midwest Open Men's Tennis Championships hosted by Gustavus Adolphus College."}
 				date={"September 29, 2019"}
-				image={require('../../assets/images/news/nicholas-3.jpg')}
+				image={require('../../assets/images/news/nicholas-3.jpg').default}
 				link={"https://www.cornellrams.com/article/3485"}
 			/>
 			<Article
@@ -169,7 +169,7 @@ const Education = () => (
 				title={"Adamou holds computer science internship at IBM"}
 				description={"Nick Adamou will start his senior year with new insights and knowledge following his computer science internship."}
 				date={"August 27, 2019"}
-				image={require('../../assets/images/news/nicholas-2.jpg')}
+				image={require('../../assets/images/news/nicholas-2.jpg').default}
 				link={"https://news.cornellcollege.edu/2019/08/adamou-holds-computer-science-internship-ibm/"}
 			/>
     </Articles>
@@ -183,7 +183,7 @@ const Education = () => (
 
     <Awards>
       {AwardListing(
-        require('../../assets/images/logos/cornell-college.png'),
+        require('../../assets/images/logos/cornell-college.png').default,
         'Cornell College',
         () => (
           <>
@@ -195,7 +195,7 @@ const Education = () => (
         ),
       )}
 			{AwardListing(
-        require('../../assets/images/logos/cornell-rams.png'),
+        require('../../assets/images/logos/cornell-rams.png').default,
         'Cornell Rams',
         () => (
           <>
@@ -214,7 +214,7 @@ const Education = () => (
         ),
       )}
       {AwardListing(
-        require('../../assets/images/logos/hartwick-college.png'),
+        require('../../assets/images/logos/hartwick-college.png').default,
         'Hartwick College',
         () => (
           <>
@@ -233,7 +233,7 @@ const Education = () => (
         ),
       )}
 			{AwardListing(
-        require('../../assets/images/logos/hartwick-hawks.png'),
+        require('../../assets/images/logos/hartwick-hawks.png').default,
         'Hartwick Hawks',
         () => (
           <>
@@ -261,49 +261,49 @@ const Education = () => (
         'Leon Tabak',
         'Professor of Computer Science, Cornell College',
         'Nick’s classmates saw his initiative and responded with their own ideas and energy. Nick organized activities for his classmates like those in which he had participated during two great internships. He shared enthusiasm and skills gained in Silicon Valley and at IBM.',
-        require('../../assets/images/avatars/leon.jpg'),
+        require('../../assets/images/avatars/leon.jpg').default,
       )}
       {Review(
         'Peter Dumas',
         'Head Tennis Coach, Cornell College',
         'Nick is one of those athletes that you love having on your team. He always gave his best during practice and matches while maintaining a high level of academic excellence. Even though Nick was only a Ram for two years after transferring from Hartwick and his senior season was cut short, he had a large impact on his teammates and his coach.',
-        require('../../assets/images/avatars/peter.jpg'),
+        require('../../assets/images/avatars/peter.jpg').default,
       )}
 			{Review(
         'Peter Dumas',
         'Head Tennis Coach, Cornell College',
         'I am in the unique position of having known Nick since he was a junior in high school. I recruited Nick to be a member of my men’s tennis team at Hartwick College starting 5 years ago. During this time, I have known Nick to be extremely diligent and proficient in his approach with everything that he does. Nick applied to Hartwick and received the top scholarship at that institution and joined our team.',
-        require('../../assets/images/avatars/peter.jpg'),
+        require('../../assets/images/avatars/peter.jpg').default,
       )}
       {Review(
         'Peter Dumas',
         'Head Tennis Coach, Cornell College',
         'Nick is an incredibly gifted student and he chooses Cornell for many reasons, most of which because of our outstanding academic reputation. He has clearly succeeded at two liberal arts colleges and is an example of the best type of student that this environment can produce. He is active on campus and is a leader on our team.',
-        require('../../assets/images/avatars/peter.jpg'),
+        require('../../assets/images/avatars/peter.jpg').default,
       )}
       {Review(
         'Amanda Dragon',
         'Teammate',
         'It has been so great to have Nick on the team the past 2 years. Watching him grow as a person and tennis player has been amazing. He has done so much not only in his time at Cornell, but also back in NY. He has had a big impact on this team and Cornell. He is going to do great things in the world with all of his crazy computer stuff (that he is really good at + really hard for everyone else). I believe with my whole heart that Nick will continue to have an impact on everyone and every thing he will do.',
-        require('../../assets/images/avatars/amanda.jpg'),
+        require('../../assets/images/avatars/amanda.jpg').default,
       )}
       {Review(
         'Abbey Nelson',
         'Teammate',
         'Nick has such a hard working drive that I admire. He works so hard for everything and with passion. He also has a very kind heart.',
-        require('../../assets/images/avatars/abbey.jpg'),
+        require('../../assets/images/avatars/abbey.jpg').default,
       )}
       {Review(
         'Natalie Brandt',
         'Teammate',
         'It was a pleasure to get to know Nick over the past year. He is so smart and a talented player - he will do big things after he leaves Cornell. I appreciated he friendship and he always made me feel welcomed on the team and at Cornell.',
-        require('../../assets/images/avatars/natalie.jpg'),
+        require('../../assets/images/avatars/natalie.jpg').default,
       )}
       {Review(
         'Ravi Parekh',
         'Teammate',
         'I am so glad I got the chance to get to know Nick these last 2 years. He was always there for me as a friend and teammate; he always listened to me when I was struggling mentally. I am sure he will do big things in life. #IBM',
-        require('../../assets/images/avatars/ravi.jpg'),
+        require('../../assets/images/avatars/ravi.jpg').default,
       )}
     </Masonry>
 
