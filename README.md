@@ -28,12 +28,6 @@ Run the live-reload server on <http://localhost:3000>
 yarn dev
 ```
 
-Or run the live-reload server on <http://localhost:8888> with _Netlify_ (λ) functions:
-
-```bash
-yarn netlify
-```
-
 ## 📚 The Tech. Stack
 
 This project uses the following technologies:

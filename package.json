@@ -12,8 +12,6 @@
     "@testing-library/jest-dom": "5.8.0",
     "@testing-library/react": "10.0.4",
     "@testing-library/user-event": "10.3.5",
-    "netlify": "4.1.7",
-    "netlify-lambda": "1.6.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-router-dom": "^5.2.0",
@@ -24,8 +22,6 @@
     "build": "react-scripts build && echo '/* /index.html 200' | cat > build/_redirects",
     "eject": "react-scripts eject",
     "test": "react-scripts test",
-    "postinstall": "netlify-lambda install",
-    "netlify": "netlify dev",
     "update": "npx yarn-check -u",
     "clean": "sudo rm -rf node_modules/ yarn.lock package-lock.json"
   },
