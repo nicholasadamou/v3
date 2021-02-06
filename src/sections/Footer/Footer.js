@@ -116,8 +116,6 @@ const Social = styled.div`
 const Footer = () => {
 	const repository = useGitHub("nicholasadamou", "nicholasadamou.com")
 
-	console.log(repository);
-
 	return (
 		<Container>
 			<Logo/>
