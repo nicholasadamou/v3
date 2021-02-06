@@ -25,7 +25,7 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 Run the live-reload server on <http://localhost:3000>
 
 ```bash
-yarn dev
+yarn start
 ```
 
 ## 📚 The Tech. Stack
