@@ -4,111 +4,111 @@ import Logo from '../../components/Logo/Logo';
 
 import useGitHub from "../../hooks/useGithub";
 
-import { device, until } from '../../utilities/mixins';
+import {device, until} from '../../utilities/mixins';
 
 import styled from 'styled-components';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import { SkeletonText } from "carbon-components-react";
+import {SkeletonText} from "carbon-components-react";
 
 const Container = styled.footer`
-  display: grid !important;
-  place-content: center;
+	display: grid !important;
+	place-content: center;
 
-  margin: 7rem 0 !important;
+	margin: 7rem 0 !important;
 
-  text-align: center;
+	text-align: center;
 
-  .footer--loading {
-	width: 100%;
-	margin: 0 auto;
+	.footer--loading {
+		width: 100%;
+		margin: 0 auto;
 
-	${until(
-		'956px',
-		() => `
+		${until(
+			'956px',
+			() => `
 		width: 45%;
 		`
-	)}
+		)}
 
-	${until(
-    device.iPhone(),
-    () => `
+		${until(
+			device.iPhone(),
+			() => `
 		width: 80%;
 	`,
-  )}
-  }
+		)}
+	}
 
-  .footer--loading > div {
-  	margin: 0 80px;
+	.footer--loading > div {
+		margin: 0 80px;
 
-  	.bx--skeleton__text {
-  		width: 100% !important;
-  	}
-  }
+		.bx--skeleton__text {
+			width: 100% !important;
+		}
+	}
 
-  div:first-child {
-    margin-bottom: 2rem;
+	div:first-child {
+		margin-bottom: 2rem;
 
-    cursor: inherit;
+		cursor: inherit;
 
-    opacity: 0.25;
-  }
+		opacity: 0.25;
+	}
 
-  p {
-    margin-bottom: 0.5rem;
+	p {
+		margin-bottom: 0.5rem;
 
-    font-size: 0.9rem;
+		font-size: 0.9rem;
 
-    & > div {
-      display: inline;
+		& > div {
+			display: inline;
 
-      #heart {
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-      }
-    }
-  }
+			#heart {
+				-webkit-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+			}
+		}
+	}
 `;
 
 const Social = styled.div`
-  list-style-type: none;
+	list-style-type: none;
 
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 
-  a {
-    text-decoration: none;
+	a {
+		text-decoration: none;
 
-    li {
-      display: inline-block;
+		li {
+			display: inline-block;
 
-      margin: 0 10px;
+			margin: 0 10px;
 
-      font-size: 1.5rem;
-      color: var(--copy);
+			font-size: 1.5rem;
+			color: var(--copy);
 
-      -webkit-transition: all 0.25s ease-in-out;
+			-webkit-transition: all 0.25s ease-in-out;
 
-      transition: all 0.25s ease-in-out;
+			transition: all 0.25s ease-in-out;
 
-      &.twitter {
-        color: var(--twitter);
-      }
+			&.twitter {
+				color: var(--twitter);
+			}
 
-      &.linkedin {
-        color: var(--linkedin);
-      }
+			&.linkedin {
+				color: var(--linkedin);
+			}
 
-      &.instagram {
-        color: var(--instagram);
-      }
+			&.instagram {
+				color: var(--instagram);
+			}
 
-      &:hover {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-      }
-    }
-  }
+			&:hover {
+				-webkit-transform: scale(1.2);
+				transform: scale(1.2);
+			}
+		}
+	}
 `;
 
 const Footer = () => {
@@ -180,25 +180,25 @@ const Footer = () => {
 			{
 				JSON.stringify(repository) === '{}'
 					?
-						<div className="footer--loading">
-							<SkeletonText heading={false} lineCount={1} paragraph width="100%" />
-						</div>
+					<div className="footer--loading">
+						<SkeletonText heading={false} lineCount={1} paragraph width="100%"/>
+					</div>
 					:
-						<p>
-							Last updated{" "}
-							<a
-								href={repository.commit.link}
-								target="_blank"
-								aria-hidden="true"
-								rel="noopener noreferrer"
-								className="link"
-							>
-								{
-									moment(new Date(repository.lastUpdated)).fromNow()
-								}
-							</a>
-							{"."}
-						</p>
+					<p>
+						Last updated{" "}
+						<a
+							href={repository.commit.link}
+							target="_blank"
+							aria-hidden="true"
+							rel="noopener noreferrer"
+							className="link"
+						>
+							{
+								moment(new Date(repository.lastUpdated)).fromNow()
+							}
+						</a>
+						{"."}
+					</p>
 			}
 		</Container>
 	)

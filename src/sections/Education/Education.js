@@ -13,54 +13,54 @@ import Articles from '../../sass/Articles';
 
 import styled from 'styled-components';
 
-import { device, until } from '../../utilities/mixins';
+import {device, until} from '../../utilities/mixins';
 
 const Container = styled.section`
 	padding: 0 25px;
 
 	a.cornell {
-    color: var(--cornell);
-    text-decoration: underline;
-  }
+		color: var(--cornell);
+		text-decoration: underline;
+	}
 
-  .reviews {
-    width: 95%;
+	.reviews {
+		width: 95%;
 
-    ${until(
-      device.iPhone(),
-      () => `
+		${until(
+			device.iPhone(),
+			() => `
 		width: 100%;
 
 		.react-masonry-column {
 			width: 100% !important;
 		}
 	`,
-    )};
+		)};
 
-    blockquote {
-      padding: 10px;
+		blockquote {
+			padding: 10px;
 
-      ${until(
-        device.iPhone(),
-        () => `
+			${until(
+				device.iPhone(),
+				() => `
 			padding: 0;
   		`,
-      )};
-    }
-  }
+			)};
+		}
+	}
 `;
 
 const Education = () => (
-  <Container>
-    <h2 className="title">
-      Education{' '}
-      <span role="img" aria-label="graduate">
+	<Container>
+		<h2 className="title">
+			Education{' '}
+			<span role="img" aria-label="graduate">
         👨🏼‍🎓
       </span>
-    </h2>
-    <p className="subtitle">
-      Schools where I learned all that I know about software engineering.
-    </p>
+		</h2>
+		<p className="subtitle">
+			Schools where I learned all that I know about software engineering.
+		</p>
 
 		<>
 			{/*{Experience(*/}
@@ -84,10 +84,10 @@ const Education = () => (
 					<>
 						<em>Graduated </em> <strong>Summa Cum Laude</strong>
 						{'.'}
-						<br />
+						<br/>
 						<em>Cumulative GPA:</em>
 						{' 3.98 out of 4.0.'}
-						<br />
+						<br/>
 						<em>Overall</em>
 						{' Class Rank: 6/261 ('}
 						<em>2.29%</em>
@@ -111,32 +111,32 @@ const Education = () => (
 			)}
 		</>
 
-    <h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Computer Science Projects{' '}
+		<h2 className="title" style={{fontSize: '1.5rem'}}>
+			Computer Science Projects{' '}
 			<span role="img" aria-label="toolbox">🧰</span>
-    </h2>
-    <p className="subtitle" style={{ fontSize: '1.1rem' }}>
-      Various projects that I've completed as an computer science student.
-    </p>
+		</h2>
+		<p className="subtitle" style={{fontSize: '1.1rem'}}>
+			Various projects that I've completed as an computer science student.
+		</p>
 
-    <Projects>
-      {Repository('nicholasadamou', 'distributed-load-balancer')}
-      {Repository('nicholasadamou', 'producer-consumer-simulator')}
-      {Repository('nicholasadamou', 'python-udp-chat-client')}
-      {Repository('nicholasadamou', 'python-dynamic-web-server')}
-      {Repository('nicholasadamou', 'python-proxy')}
-      {Repository('nicholasadamou', 'cpu-cache-simulator')}
-      {Repository('nicholasadamou', 'project-management-capstone-project')}
-    </Projects>
+		<Projects>
+			{Repository('nicholasadamou', 'distributed-load-balancer')}
+			{Repository('nicholasadamou', 'producer-consumer-simulator')}
+			{Repository('nicholasadamou', 'python-udp-chat-client')}
+			{Repository('nicholasadamou', 'python-dynamic-web-server')}
+			{Repository('nicholasadamou', 'python-proxy')}
+			{Repository('nicholasadamou', 'cpu-cache-simulator')}
+			{Repository('nicholasadamou', 'project-management-capstone-project')}
+		</Projects>
 
-		<h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Campus News{' '}
-      <span role="img" aria-label="rolled-up-newspaper">
+		<h2 className="title" style={{fontSize: '1.5rem'}}>
+			Campus News{' '}
+			<span role="img" aria-label="rolled-up-newspaper">
         🗞️
       </span>
-    </h2>
+		</h2>
 
-    <Articles>
+		<Articles>
 			<Article
 				title={"Cornell College shares this week's senior profile on Nicholas Adamou"}
 				description={"This week's senior profile is Nicholas Adamou '20. Congrats on your many accomplishments, Nicholas!"}
@@ -170,148 +170,148 @@ const Education = () => (
 				image={require('../../assets/images/news/nicholas-2.jpg').default}
 				link={"https://news.cornellcollege.edu/2019/08/adamou-holds-computer-science-internship-ibm/"}
 			/>
-    </Articles>
+		</Articles>
 
-		<h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Awards and Recognition{' '}
-      <span role="img" aria-label="trophy">
+		<h2 className="title" style={{fontSize: '1.5rem'}}>
+			Awards and Recognition{' '}
+			<span role="img" aria-label="trophy">
         🏆
       </span>
-    </h2>
+		</h2>
 
-    <Awards>
-      {AwardListing(
-        require('../../assets/images/logos/cornell-college.png').default,
-        'Cornell College',
-        () => (
-          <>
-            ➤ <em>High Honors Dean's List</em> (Fall ‘18)
-            <br />
+		<Awards>
+			{AwardListing(
+				require('../../assets/images/logos/cornell-college.png').default,
+				'Cornell College',
+				() => (
+					<>
+						➤ <em>High Honors Dean's List</em> (Fall ‘18)
+						<br/>
 						➤ <em>Highest Honors Dean's List</em> (Spring ‘19, Fall '19,
-            Spring '20)
-          </>
-        ),
-      )}
+						Spring '20)
+					</>
+				),
+			)}
 			{AwardListing(
-        require('../../assets/images/logos/cornell-rams.png').default,
-        'Cornell Rams',
-        () => (
-          <>
-            ➤ Team Nadal Award (Spring '19)
-            <br />
-            ➤ Team Most Improved Player (Spring '20)
-            <br />
+				require('../../assets/images/logos/cornell-rams.png').default,
+				'Cornell Rams',
+				() => (
+					<>
+						➤ Team Nadal Award (Spring '19)
+						<br/>
+						➤ Team Most Improved Player (Spring '20)
+						<br/>
 						➤ <em>Midwest Conference Academic All-Conference</em> (Fall
-            '18, Spring ‘19, Fall '19, Spring '20)
-            <br />
+						'18, Spring ‘19, Fall '19, Spring '20)
+						<br/>
 						➤ <em>
-              Intercollegiate Tennis Association Scholar-Athlete
-            </em>{' '}
-            (Fall '18, Spring ‘19, Fall '19, Spring '20)
-          </>
-        ),
-      )}
-      {AwardListing(
-        require('../../assets/images/logos/hartwick-college.png').default,
-        'Hartwick College',
-        () => (
-          <>
-            ➤ <em>Dean's List</em> (Fall ‘16, ‘17), (Spring ‘17, ‘18)
-            <br />
-						➤ <em>Presidents List</em> (Fall '16, '17), (Spring ‘17, ‘18)
-            <br />
-						➤ <em>Summer Entrepreneurship Award</em> (2017)
-            <br />
-						➤{' '}
-            <em>
-              The Departmental Award for Excellence in Computer Science
-            </em>{' '}
-            (2018)
-          </>
-        ),
-      )}
+						Intercollegiate Tennis Association Scholar-Athlete
+					</em>{' '}
+						(Fall '18, Spring ‘19, Fall '19, Spring '20)
+					</>
+				),
+			)}
 			{AwardListing(
-        require('../../assets/images/logos/hartwick-hawks.png').default,
-        'Hartwick Hawks',
-        () => (
-          <>
-						➤ <em>Empire8 Sportsman of the Year</em> (2017)
-            <br />
+				require('../../assets/images/logos/hartwick-college.png').default,
+				'Hartwick College',
+				() => (
+					<>
+						➤ <em>Dean's List</em> (Fall ‘16, ‘17), (Spring ‘17, ‘18)
+						<br/>
+						➤ <em>Presidents List</em> (Fall '16, '17), (Spring ‘17, ‘18)
+						<br/>
+						➤ <em>Summer Entrepreneurship Award</em> (2017)
+						<br/>
 						➤{' '}
-            <em>
-              The Philip S. Wilder Jr. Award for Academic Distinction
-            </em>{' '}
-            (2017, 2018)
-          </>
-        ),
-      )}
-    </Awards>
+						<em>
+							The Departmental Award for Excellence in Computer Science
+						</em>{' '}
+						(2018)
+					</>
+				),
+			)}
+			{AwardListing(
+				require('../../assets/images/logos/hartwick-hawks.png').default,
+				'Hartwick Hawks',
+				() => (
+					<>
+						➤ <em>Empire8 Sportsman of the Year</em> (2017)
+						<br/>
+						➤{' '}
+						<em>
+							The Philip S. Wilder Jr. Award for Academic Distinction
+						</em>{' '}
+						(2017, 2018)
+					</>
+				),
+			)}
+		</Awards>
 
-		<h2 className="title" style={{ fontSize: '1.5rem' }}>
-      Thoughts from my Professors, Coaches, and Teammates{' '}
+		<h2 className="title" style={{fontSize: '1.5rem'}}>
+			Thoughts from my Professors, Coaches, and Teammates{' '}
 			<span role="img" aria-label="thought-balloon">
         💭
       </span>
-    </h2>
+		</h2>
 
-    <Masonry className="reviews" columns={2}>
+		<Masonry className="reviews" columns={2}>
 			{Review(
-        'Leon Tabak',
-        'Professor of Computer Science, Cornell College',
-        'Nick’s classmates saw his initiative and responded with their own ideas and energy. Nick organized activities for his classmates like those in which he had participated during two great internships. He shared enthusiasm and skills gained in Silicon Valley and at IBM.',
-        require('../../assets/images/avatars/leon.jpg').default,
-      )}
-      {Review(
-        'Peter Dumas',
-        'Head Tennis Coach, Cornell College',
-        'Nick is one of those athletes that you love having on your team. He always gave his best during practice and matches while maintaining a high level of academic excellence. Even though Nick was only a Ram for two years after transferring from Hartwick and his senior season was cut short, he had a large impact on his teammates and his coach.',
-        require('../../assets/images/avatars/peter.jpg').default,
-      )}
+				'Leon Tabak',
+				'Professor of Computer Science, Cornell College',
+				'Nick’s classmates saw his initiative and responded with their own ideas and energy. Nick organized activities for his classmates like those in which he had participated during two great internships. He shared enthusiasm and skills gained in Silicon Valley and at IBM.',
+				require('../../assets/images/avatars/leon.jpg').default,
+			)}
 			{Review(
-        'Peter Dumas',
-        'Head Tennis Coach, Cornell College',
-        'I am in the unique position of having known Nick since he was a junior in high school. I recruited Nick to be a member of my men’s tennis team at Hartwick College starting 5 years ago. During this time, I have known Nick to be extremely diligent and proficient in his approach with everything that he does. Nick applied to Hartwick and received the top scholarship at that institution and joined our team.',
-        require('../../assets/images/avatars/peter.jpg').default,
-      )}
-      {Review(
-        'Peter Dumas',
-        'Head Tennis Coach, Cornell College',
-        'Nick is an incredibly gifted student and he chooses Cornell for many reasons, most of which because of our outstanding academic reputation. He has clearly succeeded at two liberal arts colleges and is an example of the best type of student that this environment can produce. He is active on campus and is a leader on our team.',
-        require('../../assets/images/avatars/peter.jpg').default,
-      )}
-      {Review(
-        'Amanda Dragon',
-        'Teammate',
-        'It has been so great to have Nick on the team the past 2 years. Watching him grow as a person and tennis player has been amazing. He has done so much not only in his time at Cornell, but also back in NY. He has had a big impact on this team and Cornell. He is going to do great things in the world with all of his crazy computer stuff (that he is really good at + really hard for everyone else). I believe with my whole heart that Nick will continue to have an impact on everyone and every thing he will do.',
-        require('../../assets/images/avatars/amanda.jpg').default,
-      )}
-      {Review(
-        'Abbey Nelson',
-        'Teammate',
-        'Nick has such a hard working drive that I admire. He works so hard for everything and with passion. He also has a very kind heart.',
-        require('../../assets/images/avatars/abbey.jpg').default,
-      )}
-      {Review(
-        'Natalie Brandt',
-        'Teammate',
-        'It was a pleasure to get to know Nick over the past year. He is so smart and a talented player - he will do big things after he leaves Cornell. I appreciated he friendship and he always made me feel welcomed on the team and at Cornell.',
-        require('../../assets/images/avatars/natalie.jpg').default,
-      )}
-      {Review(
-        'Ravi Parekh',
-        'Teammate',
-        'I am so glad I got the chance to get to know Nick these last 2 years. He was always there for me as a friend and teammate; he always listened to me when I was struggling mentally. I am sure he will do big things in life. #IBM',
-        require('../../assets/images/avatars/ravi.jpg').default,
-      )}
-    </Masonry>
+				'Peter Dumas',
+				'Head Tennis Coach, Cornell College',
+				'Nick is one of those athletes that you love having on your team. He always gave his best during practice and matches while maintaining a high level of academic excellence. Even though Nick was only a Ram for two years after transferring from Hartwick and his senior season was cut short, he had a large impact on his teammates and his coach.',
+				require('../../assets/images/avatars/peter.jpg').default,
+			)}
+			{Review(
+				'Peter Dumas',
+				'Head Tennis Coach, Cornell College',
+				'I am in the unique position of having known Nick since he was a junior in high school. I recruited Nick to be a member of my men’s tennis team at Hartwick College starting 5 years ago. During this time, I have known Nick to be extremely diligent and proficient in his approach with everything that he does. Nick applied to Hartwick and received the top scholarship at that institution and joined our team.',
+				require('../../assets/images/avatars/peter.jpg').default,
+			)}
+			{Review(
+				'Peter Dumas',
+				'Head Tennis Coach, Cornell College',
+				'Nick is an incredibly gifted student and he chooses Cornell for many reasons, most of which because of our outstanding academic reputation. He has clearly succeeded at two liberal arts colleges and is an example of the best type of student that this environment can produce. He is active on campus and is a leader on our team.',
+				require('../../assets/images/avatars/peter.jpg').default,
+			)}
+			{Review(
+				'Amanda Dragon',
+				'Teammate',
+				'It has been so great to have Nick on the team the past 2 years. Watching him grow as a person and tennis player has been amazing. He has done so much not only in his time at Cornell, but also back in NY. He has had a big impact on this team and Cornell. He is going to do great things in the world with all of his crazy computer stuff (that he is really good at + really hard for everyone else). I believe with my whole heart that Nick will continue to have an impact on everyone and every thing he will do.',
+				require('../../assets/images/avatars/amanda.jpg').default,
+			)}
+			{Review(
+				'Abbey Nelson',
+				'Teammate',
+				'Nick has such a hard working drive that I admire. He works so hard for everything and with passion. He also has a very kind heart.',
+				require('../../assets/images/avatars/abbey.jpg').default,
+			)}
+			{Review(
+				'Natalie Brandt',
+				'Teammate',
+				'It was a pleasure to get to know Nick over the past year. He is so smart and a talented player - he will do big things after he leaves Cornell. I appreciated he friendship and he always made me feel welcomed on the team and at Cornell.',
+				require('../../assets/images/avatars/natalie.jpg').default,
+			)}
+			{Review(
+				'Ravi Parekh',
+				'Teammate',
+				'I am so glad I got the chance to get to know Nick these last 2 years. He was always there for me as a friend and teammate; he always listened to me when I was struggling mentally. I am sure he will do big things in life. #IBM',
+				require('../../assets/images/avatars/ravi.jpg').default,
+			)}
+		</Masonry>
 
-    {FooterText(
-      'Read more about my education on my ',
-      'LinkedIn',
-      'https://linkedin.com/in/nicholas-adamou/',
-      'linkedin',
-    )}
-  </Container>
+		{FooterText(
+			'Read more about my education on my ',
+			'LinkedIn',
+			'https://linkedin.com/in/nicholas-adamou/',
+			'linkedin',
+		)}
+	</Container>
 );
 
 export default Education;

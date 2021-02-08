@@ -1,5 +1,5 @@
 const WaveEmoji = () => (
-  <span role="img" aria-label="wave">
+	<span role="img" aria-label="wave">
     👋🏼
   </span>
 );

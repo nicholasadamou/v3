@@ -1,123 +1,123 @@
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
-import { device, until } from '../utilities/mixins';
+import {device, until} from '../utilities/mixins';
 
 const GlobalStyles = createGlobalStyle`
 	:root {
-	  --white: #fafafa;
-	  --black: #212121;
-	  --red: #fc4349;
-	  --grey: #f5f5f5;
-	  --light-grey: #ccc;
-	  --light-black: #37474f;
-	  --green: #10b500;
-	  --yellow: #fff498;
+		--white: #fafafa;
+		--black: #212121;
+		--red: #fc4349;
+		--grey: #f5f5f5;
+		--light-grey: #ccc;
+		--light-black: #37474f;
+		--green: #10b500;
+		--yellow: #fff498;
 
-	  --github: #161514;
-	  --git: #fd7e14;
-	  --codepen: #1e1f26;
-	  --twitter: #55acee;
-	  --linkedin: #0077b5;
-	  --instagram: #e1306c;
-	  --cornell: #583d78;
-	  --blackbird: #3c4156;
-	  --mack-media-group: #80bd01;
-	  --ibm: #5392ff;
+		--github: #161514;
+		--git: #fd7e14;
+		--codepen: #1e1f26;
+		--twitter: #55acee;
+		--linkedin: #0077b5;
+		--instagram: #e1306c;
+		--cornell: #583d78;
+		--blackbird: #3c4156;
+		--mack-media-group: #80bd01;
+		--ibm: #5392ff;
 
-	  --star: #ffd602;
+		--star: #ffd602;
 
-	  --scrollbar: var(--white);
-	  --scrollbar-bg: var(--black);
+		--scrollbar: var(--white);
+		--scrollbar-bg: var(--black);
 
-	  --systemFonts: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		--systemFonts: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
 		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
 
-	  --primary: var(--systemFonts);
+		--primary: var(--systemFonts);
 
-	  --highlight: var(--yellow);
-	  --selection: var(--black);
+		--highlight: var(--yellow);
+		--selection: var(--black);
 
-	  --copy: var(--black);
-	  --copy-size: 1rem;
-	  --link: var(--light-black);
-	  --title: var(--light-black);
-	  --loading: var(--light-black);
-	  --background: var(--white);
+		--copy: var(--black);
+		--copy-size: 1rem;
+		--link: var(--light-black);
+		--title: var(--light-black);
+		--loading: var(--light-black);
+		--background: var(--white);
 	}
 
 	*,
 	*::before,
 	*::after {
-	  box-sizing: border-box;
-	  -webkit-font-smoothing: antialiased;
-	  -moz-osx-font-smoothing: grayscale;
-	  text-rendering: optimizeLegibility;
+		box-sizing: border-box;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
 	}
 
 	*::selection {
-	  background: var(--highlight);
-	  color: var(--selection);
+		background: var(--highlight);
+		color: var(--selection);
 	}
 
 	::-webkit-scrollbar-track {
-	  background-color: var(--scrollbar);
+		background-color: var(--scrollbar);
 	}
 
 	::-webkit-scrollbar {
-	  width: 10px;
-	  background-color: var(--scrollbar);
+		width: 10px;
+		background-color: var(--scrollbar);
 	}
 
 	::-webkit-scrollbar-thumb {
-	  background-color: var(--scrollbar-bg);
+		background-color: var(--scrollbar-bg);
 	}
 
 	* {
-	  margin: 0;
-	  padding: 0;
+		margin: 0;
+		padding: 0;
 	}
 
 	html {
-	  overflow: auto;
-	  height: auto;
+		overflow: auto;
+		height: auto;
 
-	  background: none;
+		background: none;
 
-	  zoom: 125%;
+		zoom: 125%;
 
-	  ${until(
-      device.iPad(),
-      () => `
+		${until(
+			device.iPad(),
+			() => `
 	  zoom: 100%;
 	  `,
-    )}
+		)}
 	}
 
 	body {
-	  font-family: var(--primary);
-	  color: var(--copy);
+		font-family: var(--primary);
+		color: var(--copy);
 
-	  -webkit-text-size-adjust: 100%;
-	  -moz-text-size-adjust: 100%;
-	  -ms-text-size-adjust: 100%;
+		-webkit-text-size-adjust: 100%;
+		-moz-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
 
-	  line-height: 1.6em;
+		line-height: 1.6em;
 
-	  background: var(--white);
+		background: var(--white);
 	}
 
 	section {
-	  width: 100%;
+		width: 100%;
 	}
 
 	hr {
-	  margin: 10px auto;
+		margin: 10px auto;
 
-	  width: 90%;
-	  height: 5px;
+		width: 90%;
+		height: 5px;
 
-	  background: var(--white);
+		background: var(--white);
 	}
 
 	.bx--skeleton__text {
@@ -127,65 +127,65 @@ const GlobalStyles = createGlobalStyle`
 	h1,
 	h2,
 	h3 {
-	  font-family: var(--primary);
+		font-family: var(--primary);
 	}
 
 	h1 {
-	  font-size: 3rem;
+		font-size: 3rem;
 	}
 
 	h2 {
-	  font-size: 2.5rem;
-	  font-weight: 700;
-
-	  ${until(
-      device.iPad(),
-      () => `
-	  font-size: 4rem;
-	  `,
-    )}
+		font-size: 2.5rem;
+		font-weight: 700;
 
 		${until(
-      device.iPhone(),
-      () => `
+			device.iPad(),
+			() => `
+	  font-size: 4rem;
+	  `,
+		)}
+
+		${until(
+			device.iPhone(),
+			() => `
 		font-size: 1.7rem;
 		`,
-    )}
+		)}
 	}
 
 	h3 {
-	  font-size: 2rem;
-	  font-weight: 700;
+		font-size: 2rem;
+		font-weight: 700;
 
-	  ${until(
-      device.iPhone(),
-      () => `
+		${until(
+			device.iPhone(),
+			() => `
 		font-size: 1.5rem;
 		`,
-    )}
+		)}
 	}
 
 	.title {
-	  margin: 25px 0;
+		margin: 25px 0;
 
-	  line-height: 1;
+		line-height: 1;
 
-	  color: var(--title);
+		color: var(--title);
 	}
 
 	.subtitle {
-	  margin-bottom: 50px;
+		margin-bottom: 50px;
 
-	  color: darken(#ccc, 15);
-	  line-height: 1.5;
+		color: darken(#ccc, 15);
+		line-height: 1.5;
 
-	  ${until(
-      device.iPhone(),
-      () => `
+		${until(
+			device.iPhone(),
+			() => `
 		font-size: 1.15rem;
 		margin-bottom: 25px !important;
 		`,
-    )}
+		)}
 	}
 
 	.link {
@@ -198,25 +198,25 @@ const GlobalStyles = createGlobalStyle`
 	}
 
 	p {
-	  font-size: var(--copy-size);
+		font-size: var(--copy-size);
 
-	  color: var(--copy);
+		color: var(--copy);
 
-	  ${until(
-      device.iPhone(),
-      () => `
+		${until(
+			device.iPhone(),
+			() => `
 		font-size: 1rem;
 		`,
-    )}
+		)}
 	}
 
 	.link {
-	  text-decoration: underline;
-	  color: var(--link);
+		text-decoration: underline;
+		color: var(--link);
 
-	  &:hover {
-		color: darken(#ccc, 15);
-	  }
+		&:hover {
+			color: darken(#ccc, 15);
+		}
 	}
 `;
 

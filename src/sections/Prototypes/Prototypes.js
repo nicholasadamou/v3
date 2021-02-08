@@ -4,66 +4,66 @@ import FooterText from '../../components/FooterText/FooterText';
 
 import styled from 'styled-components';
 
-import { device, until } from '../../utilities/mixins';
+import {device, until} from '../../utilities/mixins';
 
 const Pens = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 
-  text-align: left;
+	text-align: left;
 
 	margin: 2rem 1rem 2rem;
 
-  ${until(
-    '956px',
-    () => `
+	${until(
+		'956px',
+		() => `
 		grid-template-columns: 1fr 1fr;
 
 		margin: 2rem;
 	`,
-  )}
+	)}
 
-  ${until(
-    device.iPhone(),
-    () => `
+	${until(
+		device.iPhone(),
+		() => `
 		grid-template-columns: 1fr;
 
 		margin: 0;
 	`,
-  )}
+	)}
 `;
 
 const Prototypes = () => (
-  <section>
-    <h2 className="title">
-      Prototypes{' '}
-      <span role="img" aria-label="test tube">
+	<section>
+		<h2 className="title">
+			Prototypes{' '}
+			<span role="img" aria-label="test tube">
         🧪
       </span>
-    </h2>
-    <p className="subtitle">Experiments I've done in various technologies.</p>
+		</h2>
+		<p className="subtitle">Experiments I've done in various technologies.</p>
 
-    <Pens>
-      {Pen(
-        'Low Poly Earth',
-        'THREE.js implementation of the Earth using only polygons.',
-        'https://codepen.io/nicholasadamou/pen/xQKxgN'
-      )}
-      {Pen(
-        'Star Field',
-        'A multi-layered star-field constructed using ES6 JavaScript.',
-        'https://codepen.io/nicholasadamou/pen/QZVddm'
-      )}
-      {Pen(
-        'Matrix',
-        'The matrix text effect implemented using ES6 JavaScript.',
-        'https://codepen.io/nicholasadamou/pen/oaQMZV'
-      )}
+		<Pens>
 			{Pen(
-        'Easy React Modal with Hooks',
-        'Create a React-based modal using react-hooks and react-portals.',
-        'https://codepen.io/nicholasadamou/pen/NQXxmL'
-      )}
+				'Low Poly Earth',
+				'THREE.js implementation of the Earth using only polygons.',
+				'https://codepen.io/nicholasadamou/pen/xQKxgN'
+			)}
+			{Pen(
+				'Star Field',
+				'A multi-layered star-field constructed using ES6 JavaScript.',
+				'https://codepen.io/nicholasadamou/pen/QZVddm'
+			)}
+			{Pen(
+				'Matrix',
+				'The matrix text effect implemented using ES6 JavaScript.',
+				'https://codepen.io/nicholasadamou/pen/oaQMZV'
+			)}
+			{Pen(
+				'Easy React Modal with Hooks',
+				'Create a React-based modal using react-hooks and react-portals.',
+				'https://codepen.io/nicholasadamou/pen/NQXxmL'
+			)}
 			{Pen(
 				'Angled Edge SASS Mixin',
 				'A SASS mixin for creating an angled div.',
@@ -74,15 +74,15 @@ const Prototypes = () => (
 				'A terminal-like-webpage based off of Darren Kitchen\'s website.',
 				'https://codepen.io/nicholasadamou/pen/gwmAGX'
 			)}
-    </Pens>
+		</Pens>
 
-    {FooterText(
-      'More can be found on my ',
-      'CodePen',
-      'https://codepen.io/nicholasadamou',
-      'codepen',
-    )}
-  </section>
+		{FooterText(
+			'More can be found on my ',
+			'CodePen',
+			'https://codepen.io/nicholasadamou',
+			'codepen',
+		)}
+	</section>
 );
 
 export default Prototypes;
