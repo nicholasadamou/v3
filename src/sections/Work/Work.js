@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Experience from '../../components/Experience/Experience';
 import Repository from '../../components/Repository/Repository';
 import FooterText from '../../components/FooterText/FooterText';

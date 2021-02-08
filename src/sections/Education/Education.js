@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Masonry from '@nicholasadamou/react-masonry';
 
 import AwardListing from '../../components/AwardListing/AwardListing';
@@ -65,18 +63,18 @@ const Education = () => (
     </p>
 
 		<>
-		{/* {Experience(
-				'Georgia Tech',
-				'Master\'s of Science, Computer Science',
-				'Atlanta, Georgia',
-				'August 2021 - May 2023',
-				() => (
-					<>
-						Incoming graduate student.
-					</>
-				),
-				require('../../assets/images/logos/georgia-tech.jpg').default,
-			)} */}
+			{/*{Experience(*/}
+			{/*	'Georgia Tech',*/}
+			{/*	'Master\'s of Science, Computer Science',*/}
+			{/*	'Atlanta, Georgia',*/}
+			{/*	'August 2021 - May 2023',*/}
+			{/*	() => (*/}
+			{/*		<>*/}
+			{/*			Incoming graduate student.*/}
+			{/*		</>*/}
+			{/*	),*/}
+			{/*	require('../../assets/images/logos/georgia-tech.jpg').default,*/}
+			{/*)}*/}
 			{Experience(
 				'Cornell College',
 				'Bachelors of Arts, Computer Science',

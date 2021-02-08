@@ -1,5 +1,3 @@
-import React from 'react';
-
 import WaveEmoji from '../../components/WaveEmoji/WaveEmoji';
 
 import styled from 'styled-components';
