@@ -9,6 +9,10 @@ const Container = styled.div`
 		font-size: var(--copy-size);
 		font-style: italic;
 
+		q {
+			line-height: 1.6;
+		}
+
 		${until(
 			device.iPhone(),
 			() => `

@@ -102,7 +102,7 @@ const GlobalStyles = createGlobalStyle`
 		-moz-text-size-adjust: 100%;
 		-ms-text-size-adjust: 100%;
 
-		line-height: 1.6em;
+		line-height: 1.6;
 
 		background: var(--white);
 	}
@@ -128,6 +128,7 @@ const GlobalStyles = createGlobalStyle`
 	h2,
 	h3 {
 		font-family: var(--primary);
+		line-height: 1.1;
 	}
 
 	h1 {
@@ -201,6 +202,8 @@ const GlobalStyles = createGlobalStyle`
 		font-size: var(--copy-size);
 
 		color: var(--copy);
+
+		line-height: 1.6;
 
 		${until(
 			device.iPhone(),

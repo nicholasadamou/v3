@@ -67,6 +67,8 @@ const Container = styled.div`
 
 			width: 90%;
 
+			line-height: 1.6;
+
 			${until(
 				device.iPhone(),
 				() => `
