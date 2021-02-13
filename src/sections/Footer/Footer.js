@@ -1,6 +1,7 @@
 import moment from 'moment';
 
-import Logo from '../../components/Logo/Logo';
+import Avatar from '../../sass/Avatar';
+
 import SocialMediaButton from '../../components/SocialMediaButton/SocialMediaButton';
 
 import useGitHub from "../../hooks/useGithub";
@@ -49,6 +50,15 @@ const Container = styled.footer`
 	}
 
 	div:first-child {
+		--size: 100px;
+
+		width: var(--size);
+		height: var(--size);
+		min-width: var(--size);
+		min-height: var(--size);
+
+		margin: 0 auto 20px;
+
 		cursor: inherit;
 
 		opacity: 0.25;
@@ -65,7 +75,6 @@ const Container = styled.footer`
 				font-size: 1rem;
 			`,
 		)}
-
 		& > div {
 			display: inline;
 
@@ -82,7 +91,7 @@ const Footer = () => {
 
 	return (
 		<Container>
-			<Logo/>
+			<Avatar />
 
 			<span>
 				<SocialMediaButton
