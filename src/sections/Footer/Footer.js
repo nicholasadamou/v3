@@ -62,6 +62,13 @@ const Container = styled.footer`
 		cursor: inherit;
 
 		opacity: 0.25;
+
+		${until(
+			device.iPhone(),
+			() => `
+				margin-bottom: 10px;
+			`,
+		)}
 	}
 
 	p {
