@@ -36,10 +36,7 @@ const Pens = styled.div`
 const Prototypes = () => (
 	<section>
 		<h2 className="title">
-			Prototypes{' '}
-			<span role="img" aria-label="test tube">
-        🧪
-      </span>
+			Prototypes
 		</h2>
 		<p className="subtitle">Experiments I've done in various technologies.</p>
 

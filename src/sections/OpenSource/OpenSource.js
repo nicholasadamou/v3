@@ -6,8 +6,6 @@ import styled from 'styled-components';
 
 import {device, until} from '../../utilities/mixins';
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
 const Repositories = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -38,11 +36,7 @@ const Repositories = styled.div`
 const OpenSource = () => (
 	<section>
 		<h2 className="title">
-			Open Source{' '}
-			<FontAwesomeIcon
-				icon={['fab', 'git-alt']}
-				style={{fontSize: '2.5rem', color: 'var(--light-black)'}}
-			/>
+			Open Source
 		</h2>
 		<p className="subtitle">
 			I am an{' '}

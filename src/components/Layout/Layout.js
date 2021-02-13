@@ -103,6 +103,19 @@ const Layout = (props) => (
 				name="msapplication-square310x310logo"
 				content="/assets/favicons/mstile-310x310.png"
 			/>
+
+			<link
+				rel="preconnect"
+				href="https://fonts.gstatic.com"
+			/>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&display=swap"
+				rel="stylesheet"
+			/>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto:wght@400;700;900&display=swap"
+				rel="stylesheet"
+			/>
 		</Helmet>
 
 		{props.children}

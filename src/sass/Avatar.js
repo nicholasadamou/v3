@@ -2,28 +2,36 @@ import styled from 'styled-components';
 
 import {device, until} from '../utilities/mixins';
 
-import image from '../assets/images/avatars/nicholas.jpg';
+import image from '../assets/images/avatars/nicholas.png';
 
 const Avatar = styled.div`
+	--size: 250px;
+
 	position: relative;
 
-	margin: -125px auto 0;
-
-	width: 250px;
-	height: 250px;
+	width: var(--size);
+	height: var(--size);
+	min-width: var(--size);
+	min-height: var(--size);
 
 	border-radius: 50%;
 
 	background-image: url(${image});
-	background-size: cover;
+	background-size: 150%;
 	background-position: center top;
 	background-repeat: no-repeat;
 
 	${until(
+		device.iPadPro(),
+		() => `
+		--size: 200px;
+	`,
+	)}
+
+	${until(
 		device.iPhone(),
 		() => `
-		width: 190px;
-		height: 190px;
+		--size: 190px;
 	`,
 	)}
 `;

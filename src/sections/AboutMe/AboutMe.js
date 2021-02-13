@@ -1,20 +1,40 @@
 import Avatar from '../../sass/Avatar';
 
 import WaveEmoji from '../../components/WaveEmoji/WaveEmoji';
+import SocialMediaButton from "../../components/SocialMediaButton/SocialMediaButton";
 
 import styled from 'styled-components';
 
 import {device, until} from '../../utilities/mixins';
 
 const Container = styled.section`
-	text-align: center;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: center;
 
-	padding-bottom: 20px;
+	margin-top: 40px;
+
+	padding: 0 50px;
+
+	width: 100%;
+
+	text-align: left !important;
 
 	${until(
-		device.iPhone(),
+		device.iPadPro(),
 		() => `
 		width: 100%;
+
+		flex-direction: column;
+
+		margin: 0;
+
+		padding: 0;
+
+		div:first-child {
+			margin-top: -100px;
+		}
 	`,
 	)}
 	h1 {
@@ -31,7 +51,7 @@ const Container = styled.section`
 		`,
 		)}
 		${until(
-			device.iPhone(),
+			device.iPadPro(),
 			() => `
 			margin: 0;
 			margin-bottom: 0px !important;
@@ -49,28 +69,23 @@ const Container = styled.section`
 	}
 
 	p {
-		margin: 0 8rem 5px;
-
-		text-align: center;
+		width: 90%;
 
 		color: var(--copy);
 
 		${until(
-			device.iPad(),
-			() => `
-			margin: 0 2rem 20px;
-		`,
-		)}
-		${until(
-			device.iPhone(),
+			device.iPadPro(),
 			() => `
 			margin: 0 auto;
 
 			padding: 10px 25px;
 
-			text-align: center;
+			width: 100%;
+
+			text-align: left;
 		`,
 		)}
+
 		a {
 			display: inline-block;
 
@@ -80,7 +95,7 @@ const Container = styled.section`
 
 			color: var(--link);
 
-			font-weight: bolder;
+			font-weight: 800;
 
 			-webkit-transition: color 200ms;
 
@@ -139,30 +154,93 @@ const Container = styled.section`
 	}
 `;
 
+const Content = styled.div`
+	width: 75%;
+
+	${until(
+		device.iPadPro(),
+		() => `
+			width: 100%;
+
+			.title {
+				margin-left: 24px;
+				font-size: 2rem;
+				text-align: left;
+			}
+		`,
+	)}
+`;
+
+const Social = styled.div`
+	margin-top: 10px;
+	margin-left: -10px;
+
+	${until(
+		device.iPadPro(),
+		() => `
+			margin-top: -10px;
+			margin-left: 10px;
+		`,
+	)}
+
+	${until(
+		device.iPhone(),
+		() => `
+			margin-left: 15px;
+		`,
+	)}
+`;
+
 const AboutMe = () => (
 	<Container>
 		<Avatar/>
 
-		<h1 className="title">
-			Hi, <WaveEmoji/>! I'm <span>Nicholas Adamou</span>
-		</h1>
+		<Content>
+			<h1 className="title">
+				Hi, <WaveEmoji/>! I'm <span>Nicholas Adamou.</span>
+			</h1>
 
-		<p>
-			Currently, I am an IBM software engineer. I primarily focus on the front-end and back-end of cloud-native
-			applications. Recently I graduated Summa Cum Laude from{' '}
-			<a
-				className="cornell"
-				href="https://www.cornellcollege.edu/"
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-			>
-				Cornell College
-			</a>{' '}
-			where I earned my degree in Computer Science. I have always been a highly organized and goal-driven
-			individual who is a problem solver by nature. Using my skills as a software engineer to improve the lives of
-			others by developing fun and intuitive applications are why I love programming.
-		</p>
+			<p>
+				Currently, I am an{" "}
+				<a
+					className="ibm"
+					href="https://www.cornellcollege.edu/"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+				>
+					IBM
+				</a>
+				{" "}software engineer. I primarily focus on the front-end and back-end of cloud-native
+				applications. Recently I graduated Summa Cum Laude from{' '}
+				<a
+					className="cornell"
+					href="https://www.cornellcollege.edu/"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+				>
+					Cornell College
+				</a>{' '}
+				where I earned my degree in Computer Science. I have always been a highly organized and goal-driven
+				individual who is a problem solver by nature. I love programming because I can use my skills as a software engineer to improve the lives of
+				others by developing fun and intuitive applications.
+			</p>
+			<Social>
+				<SocialMediaButton
+					href="#"
+					icon="github"
+				/>
+				<SocialMediaButton
+					href="#"
+					icon="codepen"
+				/>
+				<SocialMediaButton
+					href="#"
+					icon="linkedin"
+				/>
+			</Social>
+		</Content>
 	</Container>
 );
 

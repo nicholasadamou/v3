@@ -22,18 +22,15 @@ const GlobalStyles = createGlobalStyle`
 		--cornell: #583d78;
 		--blackbird: #3c4156;
 		--mack-media-group: #80bd01;
-		--ibm: #5392ff;
+		--ibm: #006699;
 
 		--star: #ffd602;
 
 		--scrollbar: var(--white);
 		--scrollbar-bg: var(--black);
 
-		--systemFonts: Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-		sans-serif;
-
-		--primary: var(--systemFonts);
+		--primary: "Roboto Slab";
+		--secondary: "Roboto";
 
 		--highlight: var(--yellow);
 		--selection: var(--black);
@@ -83,15 +80,6 @@ const GlobalStyles = createGlobalStyle`
 		height: auto;
 
 		background: none;
-
-		zoom: 125%;
-
-		${until(
-			device.iPad(),
-			() => `
-	  zoom: 100%;
-	  `,
-		)}
 	}
 
 	body {
@@ -196,6 +184,10 @@ const GlobalStyles = createGlobalStyle`
 		&:hover {
 			color: var(--light-grey);
 		}
+	}
+
+	p, blockquote, q, span, em, strong {
+		font-family: var(--secondary);
 	}
 
 	p {

@@ -1,8 +1,5 @@
-import Masonry from '@nicholasadamou/react-masonry';
-
 import AwardListing from '../../components/AwardListing/AwardListing';
 import Experience from '../../components/Experience/Experience';
-import Review from '../../components/Review/Review';
 import Repository from '../../components/Repository/Repository';
 import Article from '../../components/Article/Article';
 import FooterText from '../../components/FooterText/FooterText';
@@ -53,10 +50,7 @@ const Container = styled.section`
 const Education = () => (
 	<Container>
 		<h2 className="title">
-			Education{' '}
-			<span role="img" aria-label="graduate">
-        👨🏼‍🎓
-      </span>
+			Education
 		</h2>
 		<p className="subtitle">
 			Schools where I learned all that I know about software engineering.
@@ -112,8 +106,7 @@ const Education = () => (
 		</>
 
 		<h2 className="title" style={{fontSize: '1.5rem'}}>
-			Computer Science Projects{' '}
-			<span role="img" aria-label="toolbox">🧰</span>
+			Computer Science Projects
 		</h2>
 		<p className="subtitle" style={{fontSize: '1.1rem'}}>
 			Various projects that I've completed as an computer science student.
@@ -130,10 +123,7 @@ const Education = () => (
 		</Projects>
 
 		<h2 className="title" style={{fontSize: '1.5rem'}}>
-			Campus News{' '}
-			<span role="img" aria-label="rolled-up-newspaper">
-        🗞️
-      </span>
+			Campus News
 		</h2>
 
 		<Articles>
@@ -173,10 +163,7 @@ const Education = () => (
 		</Articles>
 
 		<h2 className="title" style={{fontSize: '1.5rem'}}>
-			Awards and Recognition{' '}
-			<span role="img" aria-label="trophy">
-        🏆
-      </span>
+			Awards and Recognition
 		</h2>
 
 		<Awards>
@@ -246,64 +233,6 @@ const Education = () => (
 				),
 			)}
 		</Awards>
-
-		<h2 className="title" style={{fontSize: '1.5rem'}}>
-			Thoughts from my Professors, Coaches, and Teammates{' '}
-			<span role="img" aria-label="thought-balloon">
-        💭
-      </span>
-		</h2>
-
-		<Masonry className="reviews" columns={2}>
-			{Review(
-				'Leon Tabak',
-				'Professor of Computer Science, Cornell College',
-				'Nick’s classmates saw his initiative and responded with their own ideas and energy. Nick organized activities for his classmates like those in which he had participated during two great internships. He shared enthusiasm and skills gained in Silicon Valley and at IBM.',
-				require('../../assets/images/avatars/leon.jpg').default,
-			)}
-			{Review(
-				'Peter Dumas',
-				'Head Tennis Coach, Cornell College',
-				'Nick is one of those athletes that you love having on your team. He always gave his best during practice and matches while maintaining a high level of academic excellence. Even though Nick was only a Ram for two years after transferring from Hartwick and his senior season was cut short, he had a large impact on his teammates and his coach.',
-				require('../../assets/images/avatars/peter.jpg').default,
-			)}
-			{Review(
-				'Peter Dumas',
-				'Head Tennis Coach, Cornell College',
-				'I am in the unique position of having known Nick since he was a junior in high school. I recruited Nick to be a member of my men’s tennis team at Hartwick College starting 5 years ago. During this time, I have known Nick to be extremely diligent and proficient in his approach with everything that he does. Nick applied to Hartwick and received the top scholarship at that institution and joined our team.',
-				require('../../assets/images/avatars/peter.jpg').default,
-			)}
-			{Review(
-				'Peter Dumas',
-				'Head Tennis Coach, Cornell College',
-				'Nick is an incredibly gifted student and he chooses Cornell for many reasons, most of which because of our outstanding academic reputation. He has clearly succeeded at two liberal arts colleges and is an example of the best type of student that this environment can produce. He is active on campus and is a leader on our team.',
-				require('../../assets/images/avatars/peter.jpg').default,
-			)}
-			{Review(
-				'Amanda Dragon',
-				'Teammate',
-				'It has been so great to have Nick on the team the past 2 years. Watching him grow as a person and tennis player has been amazing. He has done so much not only in his time at Cornell, but also back in NY. He has had a big impact on this team and Cornell. He is going to do great things in the world with all of his crazy computer stuff (that he is really good at + really hard for everyone else). I believe with my whole heart that Nick will continue to have an impact on everyone and every thing he will do.',
-				require('../../assets/images/avatars/amanda.jpg').default,
-			)}
-			{Review(
-				'Abbey Nelson',
-				'Teammate',
-				'Nick has such a hard working drive that I admire. He works so hard for everything and with passion. He also has a very kind heart.',
-				require('../../assets/images/avatars/abbey.jpg').default,
-			)}
-			{Review(
-				'Natalie Brandt',
-				'Teammate',
-				'It was a pleasure to get to know Nick over the past year. He is so smart and a talented player - he will do big things after he leaves Cornell. I appreciated he friendship and he always made me feel welcomed on the team and at Cornell.',
-				require('../../assets/images/avatars/natalie.jpg').default,
-			)}
-			{Review(
-				'Ravi Parekh',
-				'Teammate',
-				'I am so glad I got the chance to get to know Nick these last 2 years. He was always there for me as a friend and teammate; he always listened to me when I was struggling mentally. I am sure he will do big things in life. #IBM',
-				require('../../assets/images/avatars/ravi.jpg').default,
-			)}
-		</Masonry>
 
 		{FooterText(
 			'Read more about my education on my ',

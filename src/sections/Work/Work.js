@@ -70,10 +70,7 @@ const Container = styled.section`
 const Work = () => (
 	<Container>
 		<h2 className="title">
-			Work Experience{' '}
-			<span role="img" aria-label="coder">
-        👨🏼‍💻
-      </span>
+			Work Experience
 		</h2>
 		<p className="subtitle">
 			Please read my{' '}
@@ -176,8 +173,7 @@ const Work = () => (
 		)}
 
 		<h2 className="title" style={{fontSize: '1.6rem'}}>
-			Projects{' '}
-			<span role="img" aria-label="toolbox">🧰</span>
+			Projects
 		</h2>
 		<p className="subtitle" style={{fontSize: '1.125rem'}}>
 			Various projects that I've open sourced while working at these companies.
@@ -196,10 +192,7 @@ const Work = () => (
 		</Projects>
 
 		<h3 className="title" style={{fontSize: '1.6rem'}}>
-			Badges and Certifications{' '}
-			<span role="img" aria-label="badge">
-        🎫
-      </span>
+			Badges and Certifications
 		</h3>
 		<p className="subtitle" style={{fontSize: '1.125rem'}}>
 			Certifications and badges that I have received at IBM.

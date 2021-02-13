@@ -1,6 +1,7 @@
 import moment from 'moment';
 
 import Logo from '../../components/Logo/Logo';
+import SocialMediaButton from '../../components/SocialMediaButton/SocialMediaButton';
 
 import useGitHub from "../../hooks/useGithub";
 
@@ -48,8 +49,6 @@ const Container = styled.footer`
 	}
 
 	div:first-child {
-		margin-bottom: 2rem;
-
 		cursor: inherit;
 
 		opacity: 0.25;
@@ -58,7 +57,14 @@ const Container = styled.footer`
 	p {
 		margin-bottom: 0.5rem;
 
-		font-size: 0.9rem;
+		font-size: 1.05rem;
+
+		${until(
+			device.iPhone(),
+			() => `
+				font-size: 1rem;
+			`,
+		)}
 
 		& > div {
 			display: inline;
@@ -71,46 +77,6 @@ const Container = styled.footer`
 	}
 `;
 
-const Social = styled.div`
-	list-style-type: none;
-
-	margin-bottom: 1rem;
-
-	a {
-		text-decoration: none;
-
-		li {
-			display: inline-block;
-
-			margin: 0 10px;
-
-			font-size: 1.5rem;
-			color: var(--copy);
-
-			-webkit-transition: all 0.25s ease-in-out;
-
-			transition: all 0.25s ease-in-out;
-
-			&.twitter {
-				color: var(--twitter);
-			}
-
-			&.linkedin {
-				color: var(--linkedin);
-			}
-
-			&.instagram {
-				color: var(--instagram);
-			}
-
-			&:hover {
-				-webkit-transform: scale(1.2);
-				transform: scale(1.2);
-			}
-		}
-	}
-`;
-
 const Footer = () => {
 	const repository = useGitHub("nicholasadamou", "nicholasadamou.com")
 
@@ -118,46 +84,20 @@ const Footer = () => {
 		<Container>
 			<Logo/>
 
-			<Social>
-				<ul>
-					<a
-						href="https://codepen.io/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						aria-label="CodePen"
-						title="CodePen"
-						rel="noopener noreferrer"
-					>
-						<li>
-							<FontAwesomeIcon icon={['fab', 'codepen']}/>
-						</li>
-					</a>
-					<a
-						href="https://github.com/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						aria-label="GitHub"
-						title="GitHub"
-						rel="noopener noreferrer"
-					>
-						<li>
-							<FontAwesomeIcon icon={['fab', 'github']}/>
-						</li>
-					</a>
-					<a
-						href="https://linkedin.com/in/nicholas-adamou/"
-						target="_blank"
-						aria-hidden="true"
-						aria-label="LinkedIn"
-						title="LinkedIn"
-						rel="noopener noreferrer"
-					>
-						<li className="linkedin">
-							<FontAwesomeIcon icon={['fab', 'linkedin']}/>
-						</li>
-					</a>
-				</ul>
-			</Social>
+			<span>
+				<SocialMediaButton
+					href="#"
+					icon="github"
+				/>
+				<SocialMediaButton
+					href="#"
+					icon="codepen"
+				/>
+				<SocialMediaButton
+					href="#"
+					icon="linkedin"
+				/>
+			</span>
 
 			<p>
 				Handcrafted with{' '}

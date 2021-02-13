@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import {device, until} from '../utilities/mixins';
+
 const Container = styled.div`
 	display: -webkit-box;
 	display: flex;
@@ -16,6 +18,19 @@ const Container = styled.div`
 	max-width: 970px;
 
 	background: white;
+
+	border-radius: 20px;
+
+	zoom: 125%;
+
+	${until(
+		device.iPad(),
+		() => `
+			zoom: 100%;
+
+			border-radius: 0;
+		`,
+	)}
 
 	section {
 		text-align: center;
