@@ -204,7 +204,7 @@ const AboutMe = () => (
 				Currently, I am an{" "}
 				<a
 					className="ibm"
-					href="https://www.cornellcollege.edu/"
+					href="https://ibm.com/"
 					target="_blank"
 					aria-hidden="true"
 					rel="noopener noreferrer"
@@ -228,15 +228,15 @@ const AboutMe = () => (
 			</p>
 			<Social>
 				<SocialMediaButton
-					href="#"
+					href="https://github.com/nicholasadamou"
 					icon="github"
 				/>
 				<SocialMediaButton
-					href="#"
+					href="https://codepen.io/nicholasadamou"
 					icon="codepen"
 				/>
 				<SocialMediaButton
-					href="#"
+					href="https://www.linkedin.com/in/nicholas-adamou"
 					icon="linkedin"
 				/>
 			</Social>

@@ -86,15 +86,15 @@ const Footer = () => {
 
 			<span>
 				<SocialMediaButton
-					href="#"
+					href="https://github.com/nicholasadamou"
 					icon="github"
 				/>
 				<SocialMediaButton
-					href="#"
+					href="https://codepen.io/nicholasadamou"
 					icon="codepen"
 				/>
 				<SocialMediaButton
-					href="#"
+					href="https://www.linkedin.com/in/nicholas-adamou"
 					icon="linkedin"
 				/>
 			</span>
