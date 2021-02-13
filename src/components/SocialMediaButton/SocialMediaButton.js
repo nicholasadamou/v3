@@ -21,13 +21,16 @@ const Button = styled.a`
 
 	font-size: var(--size);
 	text-decoration: none;
-	line-height: 1.7;
+	line-height: 1.9;
 	text-align: center;
 
-	user-select: none;
 	cursor: pointer;
 
 	transition: all 86ms ease-out;
+
+	.svg-inline--fa {
+		vertical-align: 0;
+	}
 `;
 
 const SocialMediaButton = (props) => {

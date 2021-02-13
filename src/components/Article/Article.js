@@ -124,7 +124,7 @@ const Article = (props) => {
 					alt="article masthead"
 				/>
 			) : (
-				<div className="image-placeholder" style={{width: 150}}></div>
+				<div style={{ width: 150, height: 150 }} />
 			)}
 		</Container>
 	);
