@@ -173,7 +173,7 @@ const Content = styled.div`
 
 const Social = styled.div`
 	margin-top: 10px;
-	margin-left: -10px;
+	margin-left: -15px;
 
 	${until(
 		device.iPadPro(),
