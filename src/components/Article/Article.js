@@ -124,7 +124,7 @@ const Article = (props) => {
 					alt="article masthead"
 				/>
 			) : (
-				<div style={{ width: 150, height: 150 }} />
+				<div style={{ width: 150 }} />
 			)}
 		</Container>
 	);
