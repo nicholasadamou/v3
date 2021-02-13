@@ -6,7 +6,7 @@ import './index.scss';
 
 const Button = styled.a`
 	--container_size: 56px;
-	--size: 28px;
+	--size: 26px;
 
 	display: inline-block;
 
@@ -21,7 +21,7 @@ const Button = styled.a`
 
 	font-size: var(--size);
 	text-decoration: none;
-	line-height: 1.6;
+	line-height: 1.7;
 	text-align: center;
 
 	user-select: none;
