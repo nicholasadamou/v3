@@ -182,13 +182,6 @@ const Social = styled.div`
 			margin-left: 10px;
 		`,
 	)}
-
-	${until(
-		device.iPhone(),
-		() => `
-			margin-left: 15px;
-		`,
-	)}
 `;
 
 const AboutMe = () => (
