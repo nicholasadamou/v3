@@ -23,6 +23,7 @@ const GlobalStyles = createGlobalStyle`
 		--blackbird: #3c4156;
 		--mack-media-group: #80bd01;
 		--ibm: #006699;
+		--netlify: #15837d;
 
 		--star: #ffd602;
 

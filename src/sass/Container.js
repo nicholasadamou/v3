@@ -19,7 +19,7 @@ const Container = styled.div`
 
 	background: white;
 
-	border-radius: 20px;
+	border-radius: 32px;
 
 	zoom: 125%;
 

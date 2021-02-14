@@ -72,7 +72,7 @@ const Form = styled.form`
 	textarea {
 		background: transparent;
 		border: 5px solid var(--black);
-		border-radius: 0;
+		border-radius: 10px;
 
 		-webkit-transition: all 150ms ease-in-out;
 
@@ -101,6 +101,13 @@ const Form = styled.form`
 		&:hover {
 			border-color: var(--black);
 		}
+
+		${until(
+			device.iPhone(),
+			() => `
+			border-radius: 0;
+		`,
+		)}
 	}
 
 	div[data-name='field'] {
@@ -131,7 +138,7 @@ const Form = styled.form`
 
 		button {
 			background: var(--black);
-			border-radius: 0;
+			border-radius: 10px;
 			border: 5px solid var(--black);
 			width: 200px;
 			padding: 0;
@@ -151,6 +158,8 @@ const Form = styled.form`
 				width: 100%;
 
 				margin-top: 10px;
+
+				border-radius: 0;
 			`,
 			)}
 		}
@@ -213,12 +222,12 @@ const Contact = () => (
 					Message
 				</label>
 				<div className="control" data-name="control">
-          <textarea
-			  className="textarea"
-			  name="message"
-			  placeholder="Your message"
-			  aria-label="message"
-		  ></textarea>
+				  <textarea
+					  className="textarea"
+					  name="message"
+					  placeholder="Your message"
+					  aria-label="message"
+				  />
 				</div>
 			</div>
 

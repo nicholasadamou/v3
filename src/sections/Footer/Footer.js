@@ -18,9 +18,13 @@ const Container = styled.footer`
 	display: grid !important;
 	place-content: center;
 
-	margin: 7rem 0 !important;
+	margin: 15rem 0 !important;
 
 	text-align: center;
+
+	span > a {
+		line-height: 2;
+	}
 
 	.footer--loading {
 		width: 100%;
@@ -82,6 +86,7 @@ const Container = styled.footer`
 				font-size: 1rem;
 			`,
 		)}
+
 		& > div {
 			display: inline;
 
@@ -89,6 +94,14 @@ const Container = styled.footer`
 				-webkit-animation-iteration-count: infinite;
 				animation-iteration-count: infinite;
 			}
+		}
+
+		.github {
+			color: var(--github);
+		}
+
+		.netlify {
+			color: var(--netlify);
 		}
 	}
 `;
@@ -127,9 +140,22 @@ const Footer = () => {
 					target="_blank"
 					aria-hidden="true"
 					rel="noopener noreferrer"
-					className="link"
+					className="link github"
 				>
 					GitHub
+				</a>
+				.
+			</p>
+			<p>
+				Proudly hosted on{' '}
+				<a
+					href="https://www.netlify.com/"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link netlify"
+				>
+					Netlify
 				</a>
 				.
 			</p>

@@ -4,6 +4,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import styled from 'styled-components';
 
+import {device, until} from '../../utilities/mixins';
+
 const Container = styled.div`
 	align-items: center;
 	justify-content: center;
@@ -21,12 +23,21 @@ const Container = styled.div`
 
 	cursor: pointer;
 
+	border-radius: 10px;
+
 	background: #f5f5f5;
 
 	animation: fadeIn 0.3s;
 	transition: opacity 0.4s;
 
 	opacity: 0.5;
+
+	${until(
+		device.iPhone(),
+		() => `
+			border-radius: 0;
+		`,
+	)}
 
 	svg {
 		color: black;
