@@ -22,11 +22,15 @@ const Container = styled.div`
 	border-radius: 32px;
 
 	zoom: 125%;
+	-moz-transform: scale(1.25);
+	-moz-transform-origin: top;
 
 	${until(
 		device.iPad(),
 		() => `
 			zoom: 100%;
+			-moz-transform: scale(1);
+			-moz-transform-origin: top;
 
 			border-radius: 0;
 		`,
