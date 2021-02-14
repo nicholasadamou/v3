@@ -11,6 +11,10 @@ const Container = styled.section`
 
 	width: 75%;
 
+	.title span {
+		font-size: 2rem;
+	}
+
 	.title:nth-child(2) {
 		margin-top: -15px;
 		margin-bottom: 30px;
