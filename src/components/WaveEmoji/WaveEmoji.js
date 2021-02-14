@@ -1,7 +1,7 @@
 const WaveEmoji = () => (
 	<span role="img" aria-label="wave">
-    👋🏼
-  </span>
+		👋🏼
+  	</span>
 );
 
 export default WaveEmoji;

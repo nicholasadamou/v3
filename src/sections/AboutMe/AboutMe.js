@@ -38,7 +38,9 @@ const Container = styled.section`
 	`,
 	)}
 	h1 {
-		font-size: 2.3rem;
+		--font-size: 2.3rem;
+
+		font-size: var(--font-size);
 
 		margin-top: 20px;
 
@@ -65,6 +67,8 @@ const Container = styled.section`
 		)}
 		span {
 			color: var(--title);
+
+			font-size: var(--font-size);
 		}
 	}
 
@@ -190,7 +194,7 @@ const AboutMe = () => (
 
 		<Content>
 			<h1 className="title">
-				Hi, <WaveEmoji/>! I'm <span>Nicholas Adamou.</span>
+				Hi, <WaveEmoji/>! I'm Nicholas Adamou.
 			</h1>
 
 			<p>

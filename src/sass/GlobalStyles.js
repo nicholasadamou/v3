@@ -187,13 +187,12 @@ const GlobalStyles = createGlobalStyle`
 		}
 	}
 
-	p, blockquote, q, span, em, strong {
+	p, blockquote, q, span, em, strong, aside {
 		font-family: var(--secondary);
+		font-size: var(--copy-size);
 	}
 
 	p {
-		font-size: var(--copy-size);
-
 		color: var(--copy);
 
 		line-height: 1.6;

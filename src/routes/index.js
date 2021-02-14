@@ -1,5 +1,6 @@
 import {withRouter} from 'react-router-dom';
 
+import PageWrapper from "../sass/PageWrapper";
 import Container from '../sass/Container';
 
 import AboutMe from '../sections/AboutMe/AboutMe';
@@ -20,7 +21,7 @@ import {faArrowUp, faCodeBranch, faHeart, faStar} from '@fortawesome/free-solid-
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp);
 
 const IndexPage = () => (
-	<>
+	<PageWrapper>
 		<Container>
 			<AboutMe/>
 			<hr/>
@@ -36,7 +37,7 @@ const IndexPage = () => (
 		</Container>
 		<Footer/>
 		<ScrollToTopButton/>
-	</>
+	</PageWrapper>
 );
 
 export default withRouter(IndexPage);
