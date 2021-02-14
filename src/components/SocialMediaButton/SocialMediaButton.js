@@ -30,6 +30,9 @@ const Button = styled.a`
 
 	.svg-inline--fa {
 		vertical-align: 0;
+
+		width: var(--size);
+		height: var(--size);
 	}
 `;
 
