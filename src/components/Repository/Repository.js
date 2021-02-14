@@ -159,7 +159,7 @@ const Repository = (user = 'nicholasadamou', repositoryName) => {
 				</a>
 				{stars !== 0 && (
 					<a
-						href={link}
+						href={`${link}/stargazers`}
 						target="_blank"
 						aria-hidden="true"
 						aria-label={`${name} github stars`}

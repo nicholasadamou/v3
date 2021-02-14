@@ -195,9 +195,7 @@ const Work = () => (
 			Badges and Certifications
 		</h3>
 		<p className="subtitle" style={{fontSize: '1.125rem'}}>
-			Certifications and badges that I have received at IBM.
-			<br/>
-			More badges can be found at my{' '}
+			More can be found at my{' '}
 			<a
 				href="https://www.youracclaim.com/users/nicholas-adamou/badges"
 				target="_blank"
@@ -237,24 +235,6 @@ const Work = () => (
 				() =>
 					'The badge earner can install Istio in a cluster, deploy a sample app, and set up the Istio Ingress controller. The individual knows how to use metrics, logging and tracing to observe services. The earner is also able to perform simple traffic management such as A/B tests and canary deployments, secure a service mesh, and enforce policies for microservices.',
 				'https://images.youracclaim.com/size/680x680/images/8d34d489-84bf-4861-a4a0-9e9d68318c5c/Beyond%2Bbasics%2Bof%2BIstio%2Bon%2BCloud%2Bv2.png',
-			)}
-			{Experience(
-				'IBM',
-				'Getting started with Microservices with Istio and IBM Cloud Kubernetes Service',
-				'',
-				'19 June 2020',
-				() =>
-					"The badge earner is able to: describe the 12-factor app principles, list the benefits of cloud native apps and the microservices architecture, describe how microservices are managed with IBM Cloud Container Service and Istio, show how to design microservices and how they communicate, show how a service mesh helps with microservice implementations, describe how Istio can be used to connect, manage, and secure microservices, and describe the logical components of Istio's data and control plane.",
-				'https://images.youracclaim.com/size/680x680/images/376369e8-1901-44fa-af45-ce4422818f0c/Itsio%2Band%2BIBM%2BCloud%2BContainer%2BService.png',
-			)}
-			{Experience(
-				'IBM',
-				'Containers, K8s and Istio on IBM Cloud',
-				'',
-				'19 June 2020',
-				() =>
-					'After completing this learning path, the badge earner understands 12-factor apps and how microservices are managed with the IBM Cloud Kubernetes Service and Istio. The individual understands containers, Kubernetes, and how to deploy containerized apps. The earner can also deploy microservices in a cluster and knows how to connect, manage, and secure those microservices.',
-				'https://images.youracclaim.com/size/680x680/images/c848b101-661f-4f3a-bc8f-f9c977a55524/Containers-K8s-istio-IBM%2Bcloud%2Bv2.png',
 			)}
 		</Awards>
 
