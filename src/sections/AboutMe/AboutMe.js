@@ -49,22 +49,17 @@ const Container = styled.section`
 		${until(
 			device.iPadPro(),
 			() => `
-			font-size: 2.3rem;
-		`,
-		)}
-		${until(
-			device.iPadPro(),
-			() => `
 			margin: 0;
 			margin-bottom: 0px !important;
 
 			padding-top: 20px;
 			padding-bottom: 10px;
 
-			font-size: 1.7rem;
+			font-size: 2.3rem;
 			text-align: center;
 		`,
 		)}
+
 		span {
 			color: var(--title);
 
@@ -87,6 +82,13 @@ const Container = styled.section`
 			width: 100%;
 
 			text-align: left;
+		`,
+		)}
+
+		${until(
+			device.iPhone(),
+			() => `
+			padding: 10px 16px;
 		`,
 		)}
 
@@ -173,6 +175,15 @@ const Content = styled.div`
 			}
 		`,
 	)}
+
+	${until(
+		device.iPhone(),
+		() => `
+			.title {
+				margin-left: 16px;
+			}
+		`,
+	)}
 `;
 
 const Social = styled.div`
@@ -184,6 +195,13 @@ const Social = styled.div`
 		() => `
 			margin-top: -10px;
 			margin-left: 10px;
+		`,
+	)}
+
+	${until(
+		device.iPhone(),
+		() => `
+			margin-left: 0;
 		`,
 	)}
 `;

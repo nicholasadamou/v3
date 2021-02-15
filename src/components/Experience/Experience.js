@@ -7,6 +7,7 @@ const Container = styled.div`
 	align-items: flex-start;
 
 	width: 95%;
+
 	margin: 0 auto;
 
 	padding-bottom: 20px;
@@ -17,6 +18,8 @@ const Container = styled.div`
 		display: block;
 
 		margin-bottom: 20px;
+		margin-left: 0;
+		margin-right: 0;
 
 		padding-bottom: 0;
 

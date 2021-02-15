@@ -14,6 +14,13 @@ import {device, until} from '../../utilities/mixins';
 const Container = styled.section`
 	padding: 0 25px;
 
+	${until(
+		device.iPhone(),
+		() => `
+		padding: 0 16px;
+	`,
+	)};
+
 	.experiences {
 		${until(
 			device.iPhone(),
