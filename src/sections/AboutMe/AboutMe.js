@@ -201,6 +201,7 @@ const Social = styled.div`
 	${until(
 		device.iPhone(),
 		() => `
+			margin-top: 0;
 			margin-left: 0;
 		`,
 	)}
