@@ -26,13 +26,6 @@ const Articles = styled.div`
 		margin: auto 0 20px;
 	`,
 	)}
-
-	${until(
-		device.iPhone(),
-		() => `
-		margin: auto 1rem 20px;
-	`,
-	)}
 `;
 
 export default Articles;
