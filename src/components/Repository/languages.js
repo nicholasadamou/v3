@@ -47,7 +47,7 @@ const languages = {
 	},
 	"shell": {
 		icon: <FontAwesomeIcon icon={['fas', 'file-code']}/>,
-		text: 'Bash',
+		text: 'Shell',
 	}
 }
 

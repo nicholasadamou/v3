@@ -68,7 +68,7 @@ const OpenSource = () => (
 			{Repository('nicholasadamou', 'starter-kit', 'gulp')}
 			{Repository('nicholasadamou', 'pifi')}
 			{Repository('nicholasadamou', 'megalith')}
-			{Repository('nicholasadamou', 'set-me-up', 'bash')}
+			{Repository('nicholasadamou', 'set-me-up', 'shell')}
 		</Repositories>
 
 		{FooterText(
