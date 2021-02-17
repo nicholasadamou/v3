@@ -22,6 +22,7 @@ const useGitHub = (user, repositoryName) => {
 						stargazers_count,
 						forks_count,
 						updated_at,
+						language,
 					} = response;
 
 					fetch(`https://api.github.com/repos/${user}/${repositoryName}/branches/master`, {
@@ -31,17 +32,32 @@ const useGitHub = (user, repositoryName) => {
 					})
 						.then(response => response.json())
 						.then(response => {
-							setRepository({
-								name: name.toLowerCase(),
-								description,
-								link: html_url,
-								stars: stargazers_count,
-								forks: forks_count,
-								lastUpdated: updated_at,
-								commit: {
-									link: response.commit.html_url
+							const {
+								commit
+							} = response;
+
+							fetch(`https://api.github.com/repos/${user}/${repositoryName}/languages`, {
+								headers: {
+									'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
 								}
-							});
+							})
+								.then(response => response.json())
+								.then(response => {
+
+									setRepository({
+										name: name.toLowerCase(),
+										description,
+										link: html_url,
+										stars: stargazers_count,
+										forks: forks_count,
+										lastUpdated: updated_at,
+										language: language.toLowerCase(),
+										languages: response,
+										commit: {
+											link: commit.html_url
+										}
+									});
+								})
 						});
 				});
 		}

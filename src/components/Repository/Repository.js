@@ -10,6 +10,8 @@ import {device, until} from '../../utilities/mixins';
 
 import useGitHub, {round} from '../../hooks/useGithub';
 
+import languages from "./languages";
+
 const Container = styled.article`
 	margin: 10px 20px;
 
@@ -55,6 +57,15 @@ const Container = styled.article`
 
 		margin-bottom: 10px;
 
+		${until(
+			device.iPhone(),
+			() => `
+			span[aria-label='language'] {
+				display: none;
+			}
+			`,
+		)}
+
 		span > div {
 			display: inline-block;
 
@@ -85,6 +96,14 @@ const Container = styled.article`
 			}
 		}
 
+		span[role='img'] {
+			margin-left: 10px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
 		a {
 			color: var(--link);
 			font-size: var(--copy-size);
@@ -106,6 +125,10 @@ const Container = styled.article`
 
 				&[role='img'] {
 					margin-left: 10px;
+
+					&:first-child {
+						margin-left: 10px;
+					}
 				}
 
 				&[aria-label='title'] {
@@ -135,7 +158,29 @@ const Container = styled.article`
 	}
 `;
 
-const Repository = (user = 'nicholasadamou', repositoryName) => {
+const LanguageIcon = styled.span`
+	display: flex;
+	align-items: center;
+
+	padding: 5px;
+
+	margin-left: -5px;
+
+	span {
+		margin-left: 5px;
+
+		font-size: 0.8rem;
+	}
+`;
+
+const LanguageTag = (language) => (
+	<LanguageIcon>
+		{languages[language].icon}
+		<span>{languages[language].text}</span>
+	</LanguageIcon>
+);
+
+const Repository = (user = 'nicholasadamou', repositoryName, language) => {
 	const repository = useGitHub(user, repositoryName);
 
 	if (JSON.stringify(repository) === '{}') return <SkeletonRepository/>;
@@ -145,9 +190,9 @@ const Repository = (user = 'nicholasadamou', repositoryName) => {
 	return (
 		<Container key={id}>
 			<div>
-        <span role="img" aria-label="git">
-          <FontAwesomeIcon icon={['fab', 'git-alt']}/>
-        </span>
+				<span role="img" aria-label="git">
+				  <FontAwesomeIcon icon={['fab', 'git-alt']}/>
+				</span>
 				<a
 					href={link}
 					target="_blank"
@@ -166,9 +211,9 @@ const Repository = (user = 'nicholasadamou', repositoryName) => {
 						title="star"
 						rel="noopener noreferrer"
 					>
-            <span role="img" aria-label="star">
-              <FontAwesomeIcon icon={['fas', 'star']}/> {round(stars)}
-            </span>
+						<span role="img" aria-label="star">
+						  <FontAwesomeIcon icon={['fas', 'star']}/> {round(stars)}
+						</span>
 					</a>
 				)}
 				{forks !== 0 && (
@@ -180,11 +225,16 @@ const Repository = (user = 'nicholasadamou', repositoryName) => {
 						title="fork"
 						rel="noopener noreferrer"
 					>
-            <span role="img" aria-label="branch">
-              <FontAwesomeIcon icon={['fas', 'code-branch']}/> {round(forks)}
-            </span>
+						<span role="img" aria-label="branch">
+						  <FontAwesomeIcon icon={['fas', 'code-branch']}/> {round(forks)}
+						</span>
 					</a>
 				)}
+				<span role="img" aria-label="language">
+					{LanguageTag(
+						language !== undefined ? language : repository.language
+					)}
+				</span>
 			</div>
 			<p>{description}</p>
 		</Container>
@@ -194,12 +244,12 @@ const Repository = (user = 'nicholasadamou', repositoryName) => {
 const SkeletonRepository = (id) => (
 	<Container key={id}>
 		<div>
-      <span role="img" aria-label="git">
-        <FontAwesomeIcon icon={['fab', 'git-alt']}/>
-      </span>
+		  <span role="img" aria-label="git">
+			<FontAwesomeIcon icon={['fab', 'git-alt']}/>
+		  </span>
 			<span aria-label="title">
-        <CircularProgress/>
-      </span>
+        		<CircularProgress/>
+      		</span>
 			<a
 				href="#"
 				target="_blank"
@@ -208,9 +258,9 @@ const SkeletonRepository = (id) => (
 				title="star"
 				rel="noopener noreferrer"
 			>
-        <span role="img" aria-label="star">
-          <FontAwesomeIcon icon={['fas', 'star']}/> <CircularProgress/>
-        </span>
+				<span role="img" aria-label="star">
+				  <FontAwesomeIcon icon={['fas', 'star']}/> <CircularProgress/>
+				</span>
 			</a>
 			<a
 				href="#"
@@ -220,10 +270,13 @@ const SkeletonRepository = (id) => (
 				title="fork"
 				rel="noopener noreferrer"
 			>
-        <span role="img" aria-label="branch">
-          <FontAwesomeIcon icon={['fas', 'code-branch']}/> <CircularProgress/>
-        </span>
+				<span role="img" aria-label="branch">
+				  <FontAwesomeIcon icon={['fas', 'code-branch']}/> <CircularProgress/>
+				</span>
 			</a>
+			<span role="img" aria-label="language">
+				<CircularProgress/>
+			</span>
 		</div>
 		<div>
 			<SkeletonText heading={false} lineCount={2} paragraph width="100%"/>

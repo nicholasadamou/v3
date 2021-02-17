@@ -187,15 +187,16 @@ const Work = () => (
 		</p>
 
 		<Projects>
-			{Repository('nicholasadamou', 'down-to-network')}
-			{Repository('nicholasadamou', 'firebase-react-starter-kit')}
-			{Repository('nicholasadamou', 'watson-chatbot')}
-			{Repository('nicholasadamou', 'react-iframe')}
-			{Repository('nicholasadamou', 'node-cache')}
-			{Repository('nicholasadamou', 'storage')}
+			{Repository('nicholasadamou', 'down-to-network', 'react')}
+			{Repository('nicholasadamou', 'firebase-react-starter-kit', 'react')}
+			{Repository('nicholasadamou', 'watson-chatbot', 'angular')}
+			{Repository('nicholasadamou', 'react-iframe', 'react')}
+			{Repository('nicholasadamou', 'node-cache', 'node')}
+			{Repository('nicholasadamou', 'storage', 'react')}
+			{Repository('nicholasadamou', 'krios-github-bot', 'node')}
 			{Repository('nicholasadamou', 'mack-media-group-internship-project')}
-			{Repository('nicholasadamou', 'advanced-electrical-services')}
-			{Repository('cutpastecopy', 'cutpastecopy.com')}
+			{Repository('nicholasadamou', 'advanced-electrical-services', 'html')}
+			{Repository('cutpastecopy', 'cutpastecopy.com', 'html')}
 		</Projects>
 
 		<h3 className="title" style={{fontSize: '1.6rem'}}>

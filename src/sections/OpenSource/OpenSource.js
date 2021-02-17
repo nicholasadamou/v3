@@ -8,9 +8,9 @@ import {device, until} from '../../utilities/mixins';
 
 const Repositories = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 
-	margin: 2rem 1rem 2rem;
+	margin: 1rem calc(25px + 1rem);
 
 	text-align: left;
 
@@ -65,7 +65,7 @@ const OpenSource = () => (
 		<Repositories>
 			{Repository('nicholasadamou', 'minipwner')}
 			{Repository('nicholasadamou', 'auto-wifi-hotspot')}
-			{Repository('nicholasadamou', 'starter-kit')}
+			{Repository('nicholasadamou', 'starter-kit', 'gulp')}
 			{Repository('nicholasadamou', 'pifi')}
 			{Repository('nicholasadamou', 'megalith')}
 			{Repository('nicholasadamou', 'set-me-up')}

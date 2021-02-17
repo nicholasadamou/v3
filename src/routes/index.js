@@ -16,9 +16,9 @@ import ScrollToTopButton from '../components/ScrollToTopButton/ScrollToTopButton
 
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fab} from '@fortawesome/free-brands-svg-icons';
-import {faArrowUp, faCodeBranch, faHeart, faStar} from '@fortawesome/free-solid-svg-icons';
+import {faArrowUp, faCodeBranch, faHeart, faStar, faFileCode} from '@fortawesome/free-solid-svg-icons';
 
-library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp);
+library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode);
 
 const IndexPage = () => (
 	<PageWrapper>

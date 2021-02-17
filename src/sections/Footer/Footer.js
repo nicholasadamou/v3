@@ -78,7 +78,7 @@ const Container = styled.footer`
 	p {
 		margin-bottom: 0.5rem;
 
-		font-size: 1.05rem;
+		font-size: 0.95rem;
 
 		${until(
 			device.iPhone(),

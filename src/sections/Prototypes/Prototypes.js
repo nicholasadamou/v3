@@ -8,11 +8,11 @@ import {device, until} from '../../utilities/mixins';
 
 const Pens = styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 
 	text-align: left;
 
-	margin: 2rem 1rem 2rem;
+	margin: 1rem calc(25px + 1rem);
 
 	${until(
 		'956px',
