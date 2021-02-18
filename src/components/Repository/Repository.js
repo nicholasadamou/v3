@@ -57,15 +57,6 @@ const Container = styled.article`
 
 		margin-bottom: 10px;
 
-		${until(
-			device.iPhone(),
-			() => `
-			span[aria-label='language'] {
-				display: none;
-			}
-			`,
-		)}
-
 		span > div {
 			display: inline-block;
 
