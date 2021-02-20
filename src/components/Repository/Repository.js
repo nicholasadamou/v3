@@ -157,6 +157,10 @@ const LanguageIcon = styled.span`
 
 	margin-left: -5px;
 
+	svg[data-prefix='fas']:hover {
+		transform: scale(1) !important;
+	}
+
 	span {
 		margin-left: 5px;
 
