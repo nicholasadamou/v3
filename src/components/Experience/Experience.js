@@ -1,4 +1,8 @@
+import React from "react";
+
 import styled from 'styled-components';
+
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import {device, until} from '../../utilities/mixins';
 
@@ -26,19 +30,11 @@ const Container = styled.div`
 		text-align: left;
 	`,
 	)}
+
 	img {
-		margin-top: 5px;
+		object-fit: inherit !important;
 
 		border-radius: 5%;
-
-		width: 50px;
-
-		${until(
-			device.iPhone(),
-			() => `
-			margin: 0;
-		`,
-		)}
 	}
 
 	div {
@@ -82,17 +78,38 @@ const Container = styled.div`
 	}
 `;
 
-const Experience = (company, title, location, duration, description, image) => (
-	<Container className="experience">
-		<img loading="lazy" src={image} alt={company}/>
-		<div>
-			<strong>{company}</strong>
-			<em>{title}</em>
-			<aside>{duration}</aside>
-			<aside>{location}</aside>
-			<span>{description()}</span>
-		</div>
-	</Container>
-);
+const Image = styled.img`
+	margin-top: 5px;
+
+	width: 50px;
+
+	${until(
+		device.iPhone(),
+		() => `
+		margin: 0;
+	`,
+	)}
+`;
+
+const Experience = (company, title, location, duration, description, image) => {
+	return (
+		<Container className="experience">
+			{
+				typeof image === 'string'
+				?
+					<Image loading="lazy" src={image} alt={company} />
+				:
+					<GatsbyImage image={image} alt={company} />
+			}
+			<div style={{ marginTop: typeof image !== 'string' ? -6 : 'inherit' }}>
+				<strong>{company}</strong>
+				<em>{title}</em>
+				<aside>{duration}</aside>
+				<aside>{location}</aside>
+				<span>{description()}</span>
+			</div>
+		</Container>
+	)
+};
 
 export default Experience;

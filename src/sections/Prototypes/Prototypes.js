@@ -1,3 +1,5 @@
+import React from "react";
+
 import Pen from './components/Pen/Pen';
 
 import FooterText from '../../components/FooterText/FooterText';

@@ -1,3 +1,5 @@
+import React from "react";
+
 import WaveEmoji from '../../components/WaveEmoji/WaveEmoji';
 
 import styled from 'styled-components';
@@ -226,12 +228,12 @@ const Contact = () => (
 					Message
 				</label>
 				<div className="control" data-name="control">
-				  <textarea
-					  className="textarea"
-					  name="message"
-					  placeholder="Your message"
-					  aria-label="message"
-				  />
+				<textarea
+					className="textarea"
+					name="message"
+					placeholder="Your message"
+					aria-label="message"
+				/>
 				</div>
 			</div>
 

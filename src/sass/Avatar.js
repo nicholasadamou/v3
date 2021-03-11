@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 import {device, until} from '../utilities/mixins';
 
-import image from '../assets/images/avatars/nicholas.png';
-
 const Avatar = styled.div`
 	--size: 250px;
 
@@ -16,7 +14,7 @@ const Avatar = styled.div`
 
 	border-radius: 50%;
 
-	background-image: url(${image});
+	background-image: url(${props => props.image});
 	background-size: 150%;
 	background-position: center top;
 	background-repeat: no-repeat;

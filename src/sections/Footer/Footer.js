@@ -1,3 +1,5 @@
+import React from "react";
+
 import moment from 'moment';
 
 import Avatar from '../../sass/Avatar';
@@ -106,12 +108,14 @@ const Container = styled.footer`
 	}
 `;
 
-const Footer = () => {
+const Footer = (props) => {
 	const repository = useGitHub("nicholasadamou", "nicholasadamou.com")
 
 	return (
 		<Container>
-			<Avatar />
+			<Avatar
+				image={props.avatar.childImageSharp.gatsbyImageData.images.fallback.src}
+			/>
 
 			<span>
 				<SocialMediaButton

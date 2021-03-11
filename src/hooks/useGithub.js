@@ -10,7 +10,7 @@ const useGitHub = (user, repositoryName) => {
 		function fetchRepository() {
 			fetch(`https://api.github.com/repos/${user}/${repositoryName}`, {
 				headers: {
-					'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
+					'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`
 				}
 			})
 				.then(response => response.json())
@@ -27,7 +27,7 @@ const useGitHub = (user, repositoryName) => {
 
 					fetch(`https://api.github.com/repos/${user}/${repositoryName}/branches/master`, {
 						headers: {
-							'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
+							'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`
 						}
 					})
 						.then(response => response.json())
@@ -38,7 +38,7 @@ const useGitHub = (user, repositoryName) => {
 
 							fetch(`https://api.github.com/repos/${user}/${repositoryName}/languages`, {
 								headers: {
-									'Authorization': `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`
+									'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`
 								}
 							})
 								.then(response => response.json())

@@ -1,3 +1,5 @@
+import React from "react";
+
 import Avatar from '../../sass/Avatar';
 
 import WaveEmoji from '../../components/WaveEmoji/WaveEmoji';
@@ -207,9 +209,12 @@ const Social = styled.div`
 	)}
 `;
 
-const AboutMe = () => (
+
+const AboutMe = (props) => (
 	<Container>
-		<Avatar/>
+		<Avatar
+			image={props.avatar.childImageSharp.gatsbyImageData.images.fallback.src}
+		/>
 
 		<Content>
 			<h1 className="title">

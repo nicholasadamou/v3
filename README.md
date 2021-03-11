@@ -22,7 +22,7 @@ optimize my landing page by using [facebook/create-react-app](https://github.com
 
 ### Steps
 
-Run the live-reload server on <http://localhost:3000>
+Run the live-reload server on <http://localhost:8000>
 
 ```bash
 yarn start
@@ -35,6 +35,7 @@ This project uses the following technologies:
 **The Front-End**:
 
 - [**React.js**](https://reactjs.org/) - For building the interface along with:
+  - [**Gatsby**](<https://www.gatsbyjs.com/>) - Used as base React framework.
   - [**Styled-Components**](https://www.styled-components.com/) - for styling.
 
 ## ⛓️ CI/CD Pipeline

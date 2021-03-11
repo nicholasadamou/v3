@@ -1,18 +1,3 @@
-# editors
-.idea/
-.vscode/
-
-# react-scripts
-build
-
-# NPM/Yarn
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.npm/
-yarn.lock
-
-# misc
-.env
-.DS_Store
+.cache/
+public

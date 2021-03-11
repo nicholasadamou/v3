@@ -1,8 +1,10 @@
+import React from "react";
+
 import styled from 'styled-components';
 
 import moment from 'moment';
 
-import {parseURL} from '../../utilities/utilities';
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import {device, until} from '../../utilities/mixins';
 
@@ -25,8 +27,6 @@ const Container = styled.article`
 	`,
 	)}
 	.masthead {
-		width: 150px;
-
 		border-radius: 8px;
 
 		${until(
@@ -84,8 +84,25 @@ const Container = styled.article`
 	}
 `;
 
+const parseURL = (link = 'https://example.com') => {
+	let url = {};
+
+	try {
+		url = new URL(link);
+	} catch(_) {
+		return url;
+	}
+
+	return {
+		favicon: `https://s2.googleusercontent.com/s2/favicons?domain=${link}`,
+		hostname: url.hostname.split('.')[1]
+	};
+}
+
 const Article = (props) => {
 	const {title, description, date, image, link} = props;
+
+	debugger;
 
 	const URL = parseURL(link);
 
@@ -96,9 +113,9 @@ const Article = (props) => {
 					<img
 						loading="lazy"
 						src={URL.favicon}
-						alt={`${URL.parts[1]}'s favicon`}
+						alt={`${URL.hostname}'s favicon`}
 					/>
-					<p>{URL.parts[1]}</p>
+					<p>{URL.hostname}</p>
 				</div>
 				<a
 					href={link}
@@ -116,16 +133,27 @@ const Article = (props) => {
 						: moment(new Date(date)).fromNow()}
 				</small>
 			</div>
-			{image !== undefined ? (
-				<img
-					loading="lazy"
-					src={image}
-					className="masthead"
-					alt="article masthead"
-				/>
-			) : (
-				<div style={{ width: 150 }} />
-			)}
+			{
+				image !== undefined
+				?
+					typeof image === 'string'
+					?
+						<img
+							loading="lazy"
+							src={image}
+							className="masthead"
+							alt="article masthead"
+						/>
+					:
+						<GatsbyImage
+							image={image}
+							className="masthead"
+							alt="article masthead"
+						/>
+				: (
+					<div style={{ width: 150 }} />
+				)
+			}
 		</Container>
 	);
 };

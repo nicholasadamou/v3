@@ -1,3 +1,5 @@
+import React from "react";
+
 import AwardListing from '../../components/AwardListing/AwardListing';
 import Experience from '../../components/Experience/Experience';
 import Repository from '../../components/Repository/Repository';
@@ -11,6 +13,7 @@ import Articles from '../../sass/Articles';
 import styled from 'styled-components';
 
 import {device, until} from '../../utilities/mixins';
+import {findImageByName} from '../../utilities/utilities';
 
 const Container = styled.section`
 	padding: 0 25px;
@@ -54,7 +57,7 @@ const Container = styled.section`
 	}
 `;
 
-const Education = () => (
+const Education = (props) => (
 	<Container>
 		<h2 className="title">
 			Education
@@ -74,7 +77,7 @@ const Education = () => (
 			{/*			Incoming graduate student.*/}
 			{/*		</>*/}
 			{/*	),*/}
-			{/*	require('../../assets/images/logos/georgia-tech.jpg').default,*/}
+			{/*	findImageByName('georgia-tech.png', props.logos, 'fixed'),*/}
 			{/*)}*/}
 			{Experience(
 				'Cornell College',
@@ -95,7 +98,7 @@ const Education = () => (
 						{').'}
 					</>
 				),
-				require('../../assets/images/logos/cornell-college.png').default,
+				findImageByName('cornell-college.png', props.logos, 'fixed'),
 			)}
 			{Experience(
 				'Hartwick College',
@@ -108,7 +111,7 @@ const Education = () => (
 						{' 3.96 out of 4.0.'}
 					</>
 				),
-				require('../../assets/images/logos/hartwick-college.png').default,
+				findImageByName('hartwick-college.jpg', props.logos, 'fixed'),
 			)}
 		</>
 
@@ -144,14 +147,14 @@ const Education = () => (
 				title={"Passion for computer science leads to job at IBM for Adamou"}
 				description={"An interest in the classic video game Asteroids for Windows 98 spawned a passion for computer science at a young age for Nicholas Adamou ՚20."}
 				date={"June 17, 2020"}
-				image={require('../../assets/images/news/nicholas-1.png').default}
+				image={findImageByName('nicholas-1.png', props.news, 'fixed')}
 				link={"https://news.cornellcollege.edu/2020/06/passion-computer-science-leads-job-ibm-adamou-՚20/"}
 			/>
 			<Article
 				title={"Adamou wins twice at Midwest Open Championships"}
 				description={"Cornell senior Nick Adamou (SR/New Milford, Conn.) came away with two victories this weekend in his first appearance at the Midwest Open Men's Tennis Championships hosted by Gustavus Adolphus College."}
 				date={"September 29, 2019"}
-				image={require('../../assets/images/news/nicholas-3.jpg').default}
+				image={findImageByName('nicholas-2.jpg', props.news, 'fixed')}
 				link={"https://www.cornellrams.com/article/3485"}
 			/>
 			<Article
@@ -164,7 +167,7 @@ const Education = () => (
 				title={"Adamou holds computer science internship at IBM"}
 				description={"Nick Adamou will start his senior year with new insights and knowledge following his computer science internship."}
 				date={"August 27, 2019"}
-				image={require('../../assets/images/news/nicholas-2.jpg').default}
+				image={findImageByName('nicholas-3.jpg', props.news, 'fixed')}
 				link={"https://news.cornellcollege.edu/2019/08/adamou-holds-computer-science-internship-ibm/"}
 			/>
 		</Articles>
@@ -175,7 +178,7 @@ const Education = () => (
 
 		<Awards>
 			{AwardListing(
-				require('../../assets/images/logos/cornell-college.png').default,
+				findImageByName('cornell-college.png', props.logos, 'fixed'),
 				'Cornell College',
 				() => (
 					<>
@@ -187,7 +190,7 @@ const Education = () => (
 				),
 			)}
 			{AwardListing(
-				require('../../assets/images/logos/cornell-rams.png').default,
+				findImageByName('cornell-rams.png', props.logos, 'fixed'),
 				'Cornell Rams',
 				() => (
 					<>
@@ -206,7 +209,7 @@ const Education = () => (
 				),
 			)}
 			{AwardListing(
-				require('../../assets/images/logos/hartwick-college.png').default,
+				findImageByName('hartwick-college.jpg', props.logos, 'fixed'),
 				'Hartwick College',
 				() => (
 					<>
@@ -225,7 +228,7 @@ const Education = () => (
 				),
 			)}
 			{AwardListing(
-				require('../../assets/images/logos/hartwick-hawks.png').default,
+				findImageByName('hartwick-hawks.png', props.logos, 'fixed'),
 				'Hartwick Hawks',
 				() => (
 					<>

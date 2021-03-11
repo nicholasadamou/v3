@@ -1,12 +1,12 @@
-import React from 'react';
-
-import {Redirect, withRouter} from 'react-router-dom';
+import React, { Component } from "react";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import {device, until} from '../utilities/mixins';
 
 import styled from 'styled-components';
+
+import Layout from '../components/Layout/Layout';
 
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {faThumbsUp} from '@fortawesome/free-solid-svg-icons';
@@ -42,9 +42,21 @@ const Container = styled.div`
 			}
 		`,
 	)}
+
+	em {
+		font-size: 24px;
+
+		${until(
+		device.iPhone(),
+		() => `
+			font-size: 18px;
+		`,
+	)}
+
+	}
 `;
 
-class FormSuccessPage extends React.Component {
+class FormSuccessPage extends Component {
 	constructor(props) {
 		super(props);
 
@@ -62,10 +74,14 @@ class FormSuccessPage extends React.Component {
 	}
 
 	render() {
-		return this.state.redirect ? (
-			<Redirect to="/"/>
-		) : (
-			<>
+		if (this.state.redirect) {
+			if (typeof window !== 'undefined') {
+				window.location = '/';
+			}
+		}
+
+		return (
+			<Layout>
 				<Container>
 					<section className="hero is-fullheight is-widescreen">
 						<div className="hero-body">
@@ -81,9 +97,9 @@ class FormSuccessPage extends React.Component {
 						</div>
 					</section>
 				</Container>
-			</>
+			</Layout>
 		);
 	}
 }
 
-export default withRouter(FormSuccessPage);
+export default FormSuccessPage;

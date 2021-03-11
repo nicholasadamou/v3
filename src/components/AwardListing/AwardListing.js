@@ -1,4 +1,8 @@
+import React from "react";
+
 import styled from 'styled-components';
+
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import {device, until} from '../../utilities/mixins';
 
@@ -16,19 +20,11 @@ const Container = styled.div`
 		text-align: left;
 	`,
 	)}
+
 	img {
-		margin-top: 5px;
+		object-fit: inherit !important;
 
 		border-radius: 5%;
-
-		width: 50px;
-
-		${until(
-			device.iPhone(),
-			() => `
-			margin: 0;
-		`,
-		)}
 	}
 
 	div {
@@ -61,10 +57,29 @@ const Container = styled.div`
 	}
 `;
 
-const AwardListing = (logo, institution, content) => (
+const Image = styled.img`
+	margin-top: 5px;
+
+	width: 50px;
+
+	${until(
+		device.iPhone(),
+		() => `
+		margin: 0;
+	`,
+	)}
+`;
+
+const AwardListing = (image, institution, content) => (
 	<Container>
-		<img loading="lazy" src={logo} alt={institution}/>
-		<div>
+		{
+			typeof image === 'string'
+			?
+				<Image loading="lazy" src={image} alt={institution} />
+			:
+				<GatsbyImage image={image} alt={institution} />
+		}
+		<div style={{ marginTop: typeof image !== 'string' ? -6 : 'inherit' }}>
 			<strong>{institution} Awards</strong>
 			<span>{content()}</span>
 		</div>
