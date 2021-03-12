@@ -28,6 +28,8 @@ Run the live-reload server on <http://localhost:8000>
 yarn start
 ```
 
+If needed, you can then access the GraphiQL interface on <http://localhost:8000/__graphiql>
+
 ## 📚 The Tech. Stack
 
 This project uses the following technologies:
