@@ -92,7 +92,7 @@ const Education = (props) => {
 			</p>
 
 			<>
-				{Experience(
+				{/* {Experience(
 					'Georgia Tech',
 					'Master\'s of Science, Computer Science',
 					'Atlanta, Georgia',
@@ -102,8 +102,8 @@ const Education = (props) => {
 							Incoming graduate student.
 					</>
 					),
-					findImageByName('georgia-tech.png', props.logos),
-				)}
+					findImageByName('georgia-tech.jpg', props.logos),
+				)} */}
 				{Experience(
 					'Cornell College',
 					'Bachelors of Arts, Computer Science',
