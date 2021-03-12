@@ -79,7 +79,7 @@ const AwardListing = (image, institution, content) => (
 			:
 				<GatsbyImage image={image} alt={institution} />
 		}
-		<div style={{ marginTop: typeof image !== 'string' ? -6 : 'inherit' }}>
+		<div>
 			<strong>{institution} Awards</strong>
 			<span>{content()}</span>
 		</div>

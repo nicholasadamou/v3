@@ -213,7 +213,7 @@ const Social = styled.div`
 const AboutMe = (props) => (
 	<Container>
 		<Avatar
-			image={props.avatar.childImageSharp.gatsbyImageData.images.fallback.src}
+			image={props.avatar.images.fallback.src}
 		/>
 
 		<Content>

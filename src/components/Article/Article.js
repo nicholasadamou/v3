@@ -32,8 +32,6 @@ const Container = styled.article`
 		${until(
 			device.iPhone(),
 			() => `
-			width: 280px;
-
 			margin-bottom: 10px;
 	`,
 		)}
@@ -102,8 +100,6 @@ const parseURL = (link = 'https://example.com') => {
 const Article = (props) => {
 	const {title, description, date, image, link} = props;
 
-	debugger;
-
 	const URL = parseURL(link);
 
 	return (
@@ -151,7 +147,7 @@ const Article = (props) => {
 							alt="article masthead"
 						/>
 				: (
-					<div style={{ width: 150 }} />
+					<div style={{ width: 200 }} />
 				)
 			}
 		</Container>

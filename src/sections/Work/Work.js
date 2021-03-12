@@ -116,7 +116,7 @@ const Work = (props) => {
 					'Full-stack software engineer focused primarily on the front-end and back-end of cloud-native applications. Works with testers, PO\'s, IM\'s, UI/UX designers, and users to develop cloud-native software ' +
 					'using DB2, k8s, istio, IBM Cloud, Docker, along with Java RESTful services using JDBC and SQL for the back-end, and React and NodeJS for the front-end. Applications are version controlled using GitHub, unit ' +
 					'tested using Jenkins and JUnit along with leveraging a host of CI/CD software to provide automated testing and deployment of cloud-native applications including Travis CI, and including a slew of other internal IBM CI/CD proprietary software.',
-				findImageByName('ibm.png', props.logos, 'fixed'),
+				findImageByName('ibm.png', props.logos),
 			)}
 
 			{Experience(
@@ -127,7 +127,7 @@ const Work = (props) => {
 				() =>
 					'Continued the work I finished as a intern, but now as a Co-Op while I was away at school. I participated in weekly stand-up meetings relating to the JIRA stories I was assigned. With each story, ' +
 					'I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the application.',
-				findImageByName('ibm.png', props.logos, 'fixed'),
+				findImageByName('ibm.png', props.logos),
 			)}
 
 			{Experience(
@@ -139,7 +139,7 @@ const Work = (props) => {
 					"I worked and collaborated with a diverse team of developers, UX/UI designers, PO's, IM's, and testers from around the world in order to develop a web application utilizing React " +
 					'for the front-end along with Jenkins for unit testing, and a variety of technologies for the back-end, such as SQL, Java with JDBC, Kubernetes for container-orchestration, Apache Kafka' +
 					' for stream-processing of micro-services and Docker for containerization.',
-				findImageByName('ibm.png', props.logos, 'fixed'),
+				findImageByName('ibm.png', props.logos),
 			)}
 
 			{Experience(
@@ -150,7 +150,7 @@ const Work = (props) => {
 				() =>
 					'As a software engineer at Blackbird, I worked closely with the CTO and the engineering team to construct custom components for the Blackbird web and mobile apps leveraging ' +
 					'React, React Native, React Native Web, GraphQL, Apollo, and ES6 JavaScript. In addition, I provided QA (Quality Assurance) and unit testing on multiple builds of the Blackbird web and mobile apps.',
-				findImageByName('blackbird.png', props.logos, 'fixed'),
+				findImageByName('blackbird.png', props.logos),
 			)}
 
 			{Experience(
@@ -160,7 +160,7 @@ const Work = (props) => {
 				'December 2016 - December 2016',
 				() =>
 					'Leveraged Google AMP pages to develop a user-friendly and responsive homepage for the agency.',
-				findImageByName('mack-media-group.png', props.logos, 'fixed'),
+				findImageByName('mack-media-group.png', props.logos),
 			)}
 
 			{Experience(
@@ -170,7 +170,7 @@ const Work = (props) => {
 				'June 2016 - June 2016',
 				() =>
 					"Worked closely with the client to develop a new sleek and intuitive homepage for the company. Utilized various web technologies, such as Pug (previously Jade), SASS, and ES6 JavaScript.",
-				findImageByName('advanced-electrical-services.png', props.logos, 'fixed'),
+				findImageByName('advanced-electrical-services.png', props.logos),
 			)}
 
 			{Experience(
@@ -180,7 +180,7 @@ const Work = (props) => {
 				'March 2016 - March 2016',
 				() =>
 					"Worked with classmates to design and develop a responsive mobile-first homepage for the student-run design agency. Leveraging Jade, SCSS, and ES6 JavaScript.",
-				findImageByName('cut-paste-copy.png', props.logos, 'fixed'),
+				findImageByName('cut-paste-copy.png', props.logos),
 			)}
 
 			<h2 className="title" style={{fontSize: '1.6rem'}}>
@@ -198,7 +198,7 @@ const Work = (props) => {
 				{Repository('nicholasadamou', 'node-cache', 'node')}
 				{Repository('nicholasadamou', 'storage', 'react')}
 				{Repository('nicholasadamou', 'krios-github-bot', 'node')}
-							{Repository('nicholasadamou', 'toasty', 'react')}
+				{Repository('nicholasadamou', 'toasty', 'react')}
 				{Repository('nicholasadamou', 'mack-media-group-internship-project')}
 				{Repository('nicholasadamou', 'advanced-electrical-services', 'html')}
 				{Repository('cutpastecopy', 'cutpastecopy.com', 'html')}

@@ -99,6 +99,15 @@ const Container = styled.article`
 			}
 		}
 
+		${until(
+			device.iPhone(),
+			() => `
+			span[aria-label='language'] {
+				display: none;
+			}
+			`,
+		)}
+
 		a {
 			color: var(--link);
 			font-size: var(--copy-size);

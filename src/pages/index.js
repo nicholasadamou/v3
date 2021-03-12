@@ -2,6 +2,8 @@ import * as React from "react"
 
 import {graphql} from 'gatsby';
 
+import { getImage } from "gatsby-plugin-image";
+
 import PageWrapper from "../sass/PageWrapper";
 import Container from '../sass/Container';
 
@@ -24,13 +26,13 @@ import {faArrowUp, faCodeBranch, faHeart, faStar, faFileCode} from '@fortawesome
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode);
 
 const IndexPage = ({data}) => {
-	//console.log(data);
+	console.log(data);
 	return (
 		<Layout>
 			<PageWrapper>
 				<Container>
 					<AboutMe
-						avatar={data.avatar}
+						avatar={getImage(data.avatar)}
 					/>
 					<hr/>
 					<Work
@@ -39,7 +41,6 @@ const IndexPage = ({data}) => {
 					<hr/>
 					<Education
 						logos={data.logos.edges}
-						news={data.news.edges}
 					/>
 					<hr/>
 					<OpenSource/>
@@ -61,23 +62,25 @@ export const query = graphql`
 	query {
 		avatar: file(relativePath: {eq: "avatars/nicholas.png"}) {
 			childImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, formats: [AUTO, WEBP])
+				gatsbyImageData(
+					layout: FIXED,
+					quality: 100,
+					placeholder: BLURRED,
+					formats: [AUTO, WEBP]
+				)
 			}
 		}
 		logos: allFile(filter: {relativeDirectory: {eq: "logos"}}) {
 				edges {
 					node {
 					childImageSharp {
-						gatsbyImageData(layout: FIXED, width: 50, quality: 100, formats: [AUTO, WEBP])
-					}
-				}
-			}
-		}
-		news: allFile(filter: {relativeDirectory: {eq: "news"}}) {
-				edges {
-					node {
-					childImageSharp {
-						gatsbyImageData(layout: FIXED, width: 150, quality: 100, formats: [AUTO, WEBP])
+						gatsbyImageData(
+							layout: FIXED,
+							width: 50,
+							quality: 100,
+							placeholder: BLURRED,
+							formats: [AUTO, WEBP]
+						)
 					}
 				}
 			}

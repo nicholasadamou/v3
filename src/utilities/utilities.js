@@ -1,9 +1,13 @@
 /* eslint-disable import/no-anonymous-default-export */
 
-export const findImageByName = (name = '', logos = []) => {
+export const findImageByName = (name = '', data = []) => {
 	let image = {};
 
-	const target = logos.filter(edge => {
+	if (data === undefined) {
+		return image;
+	}
+
+	const target = data.filter(edge => {
 		let currentImage = edge.node.childImageSharp.gatsbyImageData;
 
 		if (currentImage.images.fallback.src.includes(name)) {

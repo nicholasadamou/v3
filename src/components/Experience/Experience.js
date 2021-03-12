@@ -55,6 +55,7 @@ const Container = styled.div`
 			device.iPhone(),
 			() => `
 			margin: 0;
+			margin-top: 5px;
 		`,
 		)}
 		aside {
@@ -101,7 +102,7 @@ const Experience = (company, title, location, duration, description, image) => {
 				:
 					<GatsbyImage image={image} alt={company} />
 			}
-			<div style={{ marginTop: typeof image !== 'string' ? -6 : 'inherit' }}>
+			<div>
 				<strong>{company}</strong>
 				<em>{title}</em>
 				<aside>{duration}</aside>
