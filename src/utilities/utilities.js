@@ -1,27 +1,28 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 export const findImageByName = (name = '', data = []) => {
-	let image = {};
+  let image = {};
 
-	if (data === undefined) {
-		return image;
-	}
+  if (data === undefined) {
+    return image;
+  }
 
-	const target = data.filter(edge => {
-		let currentImage = edge.node.childImageSharp.gatsbyImageData;
+  const target = data.filter((edge) => {
+    const currentImage = edge.node.childImageSharp.gatsbyImageData;
 
-		if (currentImage.images.fallback.src.includes(name)) {
-			return currentImage;
-		}
+    if (currentImage.images.fallback.src.includes(name)) {
+      return currentImage;
+    }
 
-		return null;
-	})
+    return null;
+  });
 
-	image = target.length !== 0 ? target[0].node.childImageSharp.gatsbyImageData : '';
+  image =
+    target.length !== 0 ? target[0].node.childImageSharp.gatsbyImageData : '';
 
-	return image;
-}
+  return image;
+};
 
 export default {
-	findImageByName
+  findImageByName,
 };

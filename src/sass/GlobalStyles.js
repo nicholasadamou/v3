@@ -1,6 +1,6 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-import {device, until} from '../utilities/mixins';
+import { device, until } from '../utilities/mixins';
 
 const GlobalStyles = createGlobalStyle`
 	:root {
@@ -129,18 +129,18 @@ const GlobalStyles = createGlobalStyle`
 		font-weight: 700;
 
 		${until(
-			device.iPad(),
-			() => `
+      device.iPad(),
+      () => `
 	  font-size: 4rem;
-	  `,
-		)}
+	  `
+    )}
 
 		${until(
-			device.iPhone(),
-			() => `
+      device.iPhone(),
+      () => `
 		font-size: 1.7rem;
-		`,
-		)}
+		`
+    )}
 	}
 
 	h3 {
@@ -148,11 +148,11 @@ const GlobalStyles = createGlobalStyle`
 		font-weight: 700;
 
 		${until(
-			device.iPhone(),
-			() => `
+      device.iPhone(),
+      () => `
 		font-size: 1.5rem;
-		`,
-		)}
+		`
+    )}
 	}
 
 	.title {
@@ -170,12 +170,12 @@ const GlobalStyles = createGlobalStyle`
 		line-height: 1.5;
 
 		${until(
-			device.iPhone(),
-			() => `
+      device.iPhone(),
+      () => `
 		font-size: 1.15rem;
 		margin-bottom: 25px !important;
-		`,
-		)}
+		`
+    )}
 	}
 
 	.link {
@@ -198,11 +198,11 @@ const GlobalStyles = createGlobalStyle`
 		line-height: 1.6;
 
 		${until(
-			device.iPhone(),
-			() => `
+      device.iPhone(),
+      () => `
 		font-size: 1rem;
-		`,
-		)}
+		`
+    )}
 	}
 
 	.link {
