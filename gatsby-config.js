@@ -55,6 +55,27 @@ module.exports = {
       },
 		},
 		'gatsby-plugin-offline',
-		'gatsby-plugin-netlify'
+		'gatsby-plugin-netlify',
+		{
+			resolve: `gatsby-plugin-nprogress`,
+			options: {
+				// Setting a color is optional.
+				color: `#212121`,
+				// Disable the loading spinner.
+				showSpinner: false,
+			},
+		},
+		{
+			resolve: "gatsby-plugin-page-progress",
+			options: {
+				includePaths: ["/"],
+				excludePaths: [],
+				height: 3,
+				prependToBody: false,
+				color: `#212121`,
+				footerHeight: 500,
+				headerHeight: 0,
+			}
+		}
   ],
 };
