@@ -16,45 +16,41 @@ const useGitHub = (user, repositoryName) => {
   const [repository, setRepository] = useState({});
 
   useEffect(() => {
-    function fetchRepository() {
-      github(`https://api.github.com/repos/${user}/${repositoryName}`).then(
-        (response) => {
-          const {
-            name,
-            description,
-            html_url,
-            stargazers_count,
-            forks_count,
-            updated_at,
-            language,
-          } = response;
-
-          github(
-            `https://api.github.com/repos/${user}/${repositoryName}/branches/master`
-          ).then((response) => {
-            const { commit } = response;
-
-            github(
-              `https://api.github.com/repos/${user}/${repositoryName}/languages`
-            ).then((response) => {
-              setRepository({
-                name: name.toLowerCase(),
-                description,
-                link: html_url,
-                stars: stargazers_count,
-                forks: forks_count,
-                lastUpdated: updated_at,
-                language: language.toLowerCase(),
-                languages: response,
-                commit: {
-                  link: commit.html_url,
-                },
-              });
-            });
-          });
-        }
+    const fetchRepository = async () => {
+      const repo = await github(
+        `https://api.github.com/repos/${user}/${repositoryName}`
       );
-    }
+      const commit = await github(
+        `https://api.github.com/repos/${user}/${repositoryName}/branches/master`
+      );
+      const languages = await github(
+        `https://api.github.com/repos/${user}/${repositoryName}/languages`
+      );
+
+      const {
+        name,
+        description,
+        html_url,
+        stargazers_count,
+        forks_count,
+        updated_at,
+        language,
+      } = repo;
+
+      setRepository({
+        name: name.toLowerCase(),
+        description,
+        link: html_url,
+        stars: stargazers_count,
+        forks: forks_count,
+        lastUpdated: updated_at,
+        language: language.toLowerCase(),
+        languages,
+        commit: {
+          link: commit.html_url,
+        },
+      });
+    };
 
     fetchRepository();
   }, [user, repositoryName]);
