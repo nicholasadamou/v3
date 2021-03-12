@@ -26,7 +26,7 @@ import {faArrowUp, faCodeBranch, faHeart, faStar, faFileCode} from '@fortawesome
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode);
 
 const IndexPage = ({data}) => {
-	console.log(data);
+	//console.log(data);
 	return (
 		<Layout>
 			<PageWrapper>
