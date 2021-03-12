@@ -19,7 +19,7 @@ const Button = styled.a`
   width: var(--container_size);
   height: var(--container_size);
 
-  padding: 6px 0;
+  padding: 7px 0;
 
   border-radius: 100%;
 
