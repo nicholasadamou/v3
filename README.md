@@ -22,13 +22,13 @@ optimize my landing page by using [gatsbyjs](https://www.gatsbyjs.com/) and [Net
 
 ### Steps
 
-Run the live-reload server on <http://localhost:8000>
+Run the live-reload server on <http://localhost:8000>.
 
 ```bash
 yarn start
 ```
 
-If needed, you can then access the [GraphiQL](https://www.gatsbyjs.com/docs/how-to/querying-data/running-queries-with-graphiql/) interface on <http://localhost:8000/___graphql>
+If needed, you can then access the [GraphiQL](https://www.gatsbyjs.com/docs/how-to/querying-data/running-queries-with-graphiql/) interface on <http://localhost:8000/___graphql>.
 
 ## 📚 The Tech. Stack
 
