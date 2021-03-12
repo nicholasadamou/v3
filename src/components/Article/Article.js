@@ -43,6 +43,17 @@ const Container = styled.article`
     )}
   }
 
+  .image-placeholder {
+    width: 150px;
+
+    ${until(
+      device.iPhone(),
+      () => `
+			width: 280px;
+	`
+    )}
+  }
+
   .article-details {
     width: 70%;
 
@@ -151,7 +162,7 @@ const Article = (props) => {
           />
         )
       ) : (
-        <div style={{ width: 200 }} />
+        <div className="image-placeholder" />
       )}
     </Container>
   );
