@@ -1,47 +1,47 @@
+/* eslint-disable global-require */
 require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    title: "Nicholas Adamou",
-		description: "Nicholas Adamou - He is a web developer, and an open source contributor.",
-		author: "Nicholas Adamou"
+    title: 'Nicholas Adamou',
+    description:
+      'Nicholas Adamou - He is a web developer, and an open source contributor.',
+    author: 'Nicholas Adamou',
   },
   plugins: [
-    "gatsby-plugin-styled-components",
+    'gatsby-plugin-styled-components',
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: process.env.GOOGLE_TRACKING_ID,
       },
     },
-		{
-			resolve: `gatsby-plugin-sass`,
-			options: {
-				implementation: require("node-sass"),
-			},
-		},
-		"gatsby-plugin-image",
-    "gatsby-plugin-sharp",
-		"gatsby-transformer-sharp",
-    "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-sass`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        implementation: require('node-sass'),
       },
-      __key: "images",
     },
-		{
-			resolve: `gatsby-plugin-env-variables`,
-			options: {
-				allowList: [
-					"GITHUB_TOKEN", "GOOGLE_TRACKING_ID"
-				]
-			}
-		},
-		{
-			resolve: `gatsby-plugin-manifest`,
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
+    },
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ['GITHUB_TOKEN', 'GOOGLE_TRACKING_ID'],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Nicholas Adamou`,
         short_name: `Nicholas Adamou - He is a web developer, and an open source contributor.`,
@@ -53,29 +53,8 @@ module.exports = {
         display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
-		},
-		'gatsby-plugin-offline',
-		'gatsby-plugin-netlify',
-		{
-			resolve: `gatsby-plugin-nprogress`,
-			options: {
-				// Setting a color is optional.
-				color: `#212121`,
-				// Disable the loading spinner.
-				showSpinner: false,
-			},
-		},
-		{
-			resolve: "gatsby-plugin-page-progress",
-			options: {
-				includePaths: ["/"],
-				excludePaths: [],
-				height: 3,
-				prependToBody: false,
-				color: `#212121`,
-				footerHeight: 500,
-				headerHeight: 0,
-			}
-		}
+    },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-netlify',
   ],
 };
