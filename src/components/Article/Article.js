@@ -29,11 +29,15 @@ const Container = styled.article`
 	`
   )}
   .masthead {
+    width: 150px;
+
     border-radius: 8px;
 
     ${until(
       device.iPhone(),
       () => `
+			width: 280px;
+
 			margin-bottom: 10px;
 	`
     )}
