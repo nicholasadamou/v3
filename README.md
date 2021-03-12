@@ -28,7 +28,7 @@ Run the live-reload server on <http://localhost:8000>
 yarn start
 ```
 
-If needed, you can then access the [GraphiQL](https://www.gatsbyjs.com/docs/how-to/querying-data/running-queries-with-graphiql/) interface on <http://localhost:8000/__graphiql>
+If needed, you can then access the [GraphiQL](https://www.gatsbyjs.com/docs/how-to/querying-data/running-queries-with-graphiql/) interface on <http://localhost:8000/___graphql>
 
 ## 📚 The Tech. Stack
 
