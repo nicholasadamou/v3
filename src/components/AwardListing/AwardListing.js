@@ -41,6 +41,7 @@ const Container = styled.div`
 			device.iPhone(),
 			() => `
 			margin: 0;
+			margin-top: 5px;
 		`,
 		)}
 		span {
