@@ -2,7 +2,7 @@
 
 # Nicholas Adamou's Personal Website
 
-Personal landing page, powered by [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](https://netlify.com/).
+Personal landing page, powered by [gatsbyjs](https://www.gatsbyjs.com/) and [Netlify](https://netlify.com/).
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fedaa871-c59d-4923-9c65-f29330bf60da/deploy-status)](https://app.netlify.com/sites/nicholasadamou/deploys) [![CircleCI](https://circleci.com/gh/nicholasadamou/nicholasadamou.com.svg?style=svg)](https://circleci.com/gh/nicholasadamou/nicholasadamou.com) ![license](https://img.shields.io/apm/l/vim-mode.svg)
 
@@ -11,7 +11,7 @@ Personal landing page, powered by [facebook/create-react-app](https://github.com
 ## Description
 
 After many iterations and deployments throughout many providers, I decided to
-optimize my landing page by using [facebook/create-react-app](https://github.com/facebook/create-react-app) and [Netlify](https://netlify.com/).
+optimize my landing page by using [gatsbyjs](https://www.gatsbyjs.com/) and [Netlify](https://netlify.com/).
 
 ## Development
 
