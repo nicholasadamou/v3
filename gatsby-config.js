@@ -9,37 +9,6 @@ module.exports = {
     author: 'Nicholas Adamou',
   },
   plugins: [
-    'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: process.env.GOOGLE_TRACKING_ID,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        implementation: require('node-sass'),
-      },
-    },
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: './src/images/',
-      },
-      __key: 'images',
-    },
-    {
-      resolve: `gatsby-plugin-env-variables`,
-      options: {
-        allowList: ['GITHUB_TOKEN', 'GOOGLE_TRACKING_ID'],
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -55,6 +24,37 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GOOGLE_TRACKING_ID,
+      },
+    },
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require('node-sass'),
+      },
+    },
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/images/',
+      },
+      __key: 'images',
+    },
     'gatsby-plugin-netlify',
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ['GITHUB_TOKEN', 'GOOGLE_TRACKING_ID'],
+      },
+    },
   ],
 };
