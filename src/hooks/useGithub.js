@@ -17,7 +17,7 @@ const useGitHub = (user, repositoryName) => {
 
   useEffect(() => {
     const fetchRepository = async () => {
-      const repo = await github(
+      const repository = await github(
         `https://api.github.com/repos/${user}/${repositoryName}`
       );
       const commit = await github(
@@ -35,7 +35,7 @@ const useGitHub = (user, repositoryName) => {
         forks_count,
         updated_at,
         language,
-      } = repo;
+      } = repository;
 
       setRepository({
         name: name.toLowerCase(),
