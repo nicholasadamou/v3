@@ -1,5 +1,7 @@
 /* eslint-disable global-require */
-require('dotenv').config();
+require('dotenv').config({
+  path: '.env',
+});
 
 module.exports = {
   siteMetadata: {
@@ -54,6 +56,17 @@ module.exports = {
       resolve: `gatsby-plugin-env-variables`,
       options: {
         allowList: ['GITHUB_TOKEN', 'GOOGLE_TRACKING_ID'],
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'GitHub',
+        fieldName: 'github',
+        url: 'https://api.github.com/graphql',
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
       },
     },
   ],
