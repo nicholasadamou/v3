@@ -159,7 +159,7 @@ const Education = (props) => (
           "Cornell senior Nick Adamou (SR/New Milford, Conn.) came away with two victories this weekend in his first appearance at the Midwest Open Men's Tennis Championships hosted by Gustavus Adolphus College."
         }
         date="September 29, 2019"
-        image="articles/nicholas-2.jpg"
+        image="articles/nicholas-3.jpg"
         link="https://www.cornellrams.com/article/3485"
       />
       <Article
@@ -172,7 +172,7 @@ const Education = (props) => (
         title="Adamou holds computer science internship at IBM"
         description="Nick Adamou will start his senior year with new insights and knowledge following his computer science internship."
         date="August 27, 2019"
-        image="articles/nicholas-3.jpg"
+        image="articles/nicholas-2.jpg"
         link="https://news.cornellcollege.edu/2019/08/adamou-holds-computer-science-internship-ibm/"
       />
     </Articles>
