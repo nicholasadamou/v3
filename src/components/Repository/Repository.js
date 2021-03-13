@@ -18,10 +18,16 @@ import useGitHub, { round } from 'hooks/useGithub';
 import languages from './languages';
 
 const Container = styled.article`
-  margin: 10px 20px;
+  margin: 10px 10px;
 
   font-size: var(--copy-size);
 
+  ${until(
+    '1200px',
+    () => `
+			margin: 10px 10px;
+		`
+  )}
   ${until(
     '932px',
     () => `

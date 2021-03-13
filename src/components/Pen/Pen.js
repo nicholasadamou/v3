@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { device, until } from 'utilities/mixins';
 
 const Container = styled.div`
-  margin: 10px 20px;
+  margin: 10px;
 
   ${until(
     device.iPhone(),
@@ -61,7 +61,7 @@ const Pen = (title, desc, link) => (
         rel="noopener noreferrer"
         className="link"
       >
-        {title}
+        {title.toLowerCase()}
       </a>
     </Top>
     <p>{desc}</p>

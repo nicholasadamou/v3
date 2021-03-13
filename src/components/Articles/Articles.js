@@ -20,7 +20,14 @@ const Container = styled.div`
 
   overflow: hidden;
 
-  margin: auto 2rem 20px;
+  margin: auto 10px 20px;
+
+  ${until(
+    '1200px',
+    () => `
+		margin: auto 10px 20px;
+	`
+  )}
 
   ${until(
     device.iPad(),

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/prop-types */
 import React from 'react';
@@ -44,14 +45,7 @@ const Container = styled.article`
   }
 
   .image-placeholder {
-    width: 150px;
-
-    ${until(
-      '1200px',
-      () => `
-			width: 280px;
-	`
-    )}
+    width: 280px;
   }
 
   .article-details {

@@ -14,7 +14,7 @@ const Pens = styled.div`
 
   text-align: left;
 
-  margin: 1rem calc(25px + 1rem);
+  margin: 1rem 25px;
 
   ${until(
     '956px',

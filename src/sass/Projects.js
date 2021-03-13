@@ -6,9 +6,16 @@ const Projects = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  margin: 1rem 1rem 2rem;
+  margin: 1rem 0 2rem;
 
   text-align: left;
+
+  ${until(
+    '1200px',
+    () => `
+		margin: 1rem 0 2rem;
+		`
+  )}
 
   ${until(
     device.iPhone(),

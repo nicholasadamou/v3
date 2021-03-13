@@ -12,7 +12,7 @@ const Repositories = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  margin: 1rem calc(25px + 1rem);
+  margin: 1rem 25px;
 
   text-align: left;
 
