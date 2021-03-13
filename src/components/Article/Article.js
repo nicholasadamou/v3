@@ -139,12 +139,7 @@ const Article = (props) => {
           <h4>{title}</h4>
         </a>
         <p>{description}</p>
-        <small>
-          {moment(new Date(date)).fromNow() === 'a year ago' ||
-          moment(new Date(date)).fromNow() === '3 months ago'
-            ? `${moment(new Date(date)).format('MMMM DD, YYYY')}`
-            : moment(new Date(date)).fromNow()}
-        </small>
+        <small>{`${moment(new Date(date)).format('MMMM DD, YYYY')}`}</small>
       </div>
       {image !== undefined ? (
         typeof image === 'string' ? (
