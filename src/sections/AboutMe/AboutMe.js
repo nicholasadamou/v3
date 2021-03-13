@@ -174,6 +174,7 @@ const Content = styled.div`
 
 			.title {
 				margin-left: 24px;
+
 				font-size: 2rem;
 				text-align: left;
 			}
@@ -183,6 +184,8 @@ const Content = styled.div`
   ${until(
     device.iPhone(),
     () => `
+			width: 100%;
+
 			.title {
 				margin-left: 16px;
 			}
