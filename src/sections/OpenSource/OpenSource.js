@@ -1,11 +1,12 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 
 import styled from 'styled-components';
-import Repository from '../../components/Repository/Repository';
+import Repository from 'components/Repository/Repository';
 
-import FooterText from '../../components/FooterText/FooterText';
+import FooterText from 'components/FooterText/FooterText';
 
-import { device, until } from '../../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const Repositories = styled.div`
   display: grid;

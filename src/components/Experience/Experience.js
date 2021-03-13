@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-import { device, until } from '../../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const Container = styled.div`
   display: flex;

@@ -1,17 +1,17 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
 import styled from 'styled-components';
-import Experience from '../../components/Experience/Experience';
-import Repository from '../../components/Repository/Repository';
-import FooterText from '../../components/FooterText/FooterText';
+import Experience from 'components/Experience/Experience';
+import Repository from 'components/Repository/Repository';
+import FooterText from 'components/FooterText/FooterText';
 
-import Awards from '../../sass/Awards';
-import Projects from '../../sass/Projects';
-
-import { device, until } from '../../utilities/mixins';
-import { findImageByName } from '../../utilities/utilities';
+import { device, until } from 'utilities/mixins';
+import { findImageByName } from 'utilities/utilities';
+import Awards from 'sass/Awards';
+import Projects from 'sass/Projects';
 
 import './index.scss';
 

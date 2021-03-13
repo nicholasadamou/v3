@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/prop-types */
 import * as React from 'react';
 
@@ -14,20 +15,21 @@ import {
   faStar,
   faFileCode,
 } from '@fortawesome/free-solid-svg-icons';
-import PageWrapper from '../sass/PageWrapper';
-import Container from '../sass/Container';
 
-import AboutMe from '../sections/AboutMe/AboutMe';
-import Education from '../sections/Education/Education';
-import Work from '../sections/Work/Work';
-import OpenSource from '../sections/OpenSource/OpenSource';
-import Prototypes from '../sections/Prototypes/Prototypes';
-import Contact from '../sections/Contact/Contact';
+import PageWrapper from 'sass/PageWrapper';
+import Container from 'sass/Container';
 
-import Footer from '../sections/Footer/Footer';
+import AboutMe from 'sections/AboutMe/AboutMe';
+import Education from 'sections/Education/Education';
+import Work from 'sections/Work/Work';
+import OpenSource from 'sections/OpenSource/OpenSource';
+import Prototypes from 'sections/Prototypes/Prototypes';
+import Contact from 'sections/Contact/Contact';
 
-import Layout from '../components/Layout/Layout';
-import ScrollToTopButton from '../components/ScrollToTopButton/ScrollToTopButton';
+import Footer from 'sections/Footer/Footer';
+
+import Layout from 'components/Layout/Layout';
+import ScrollToTopButton from 'components/ScrollToTopButton/ScrollToTopButton';
 
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode);
 

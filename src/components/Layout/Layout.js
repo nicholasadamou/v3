@@ -9,7 +9,7 @@ import { Helmet } from 'react-helmet';
 import 'carbon-components/scss/globals/scss/styles.scss';
 import 'bulma/css/bulma.min.css';
 
-import GlobalStyles from '../../sass/GlobalStyles';
+import GlobalStyles from 'sass/GlobalStyles';
 
 const Layout = (props) => {
   const { site } = useStaticQuery(

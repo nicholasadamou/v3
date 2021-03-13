@@ -1,10 +1,11 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { device, until } from '../../../../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const Container = styled.div`
   margin: 10px 20px;

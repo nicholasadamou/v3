@@ -6,7 +6,7 @@ const PageWrapper = styled.div`
   zoom: 125%;
 
   ${until(
-    device.iPad(),
+    '1200px',
     () => `
 			zoom: 100%;
 		`

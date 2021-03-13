@@ -1,11 +1,12 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 
 import styled from 'styled-components';
-import Pen from './components/Pen/Pen';
 
-import FooterText from '../../components/FooterText/FooterText';
+import FooterText from 'components/FooterText/FooterText';
+import Pen from 'components/Pen/Pen';
 
-import { device, until } from '../../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const Pens = styled.div`
   display: grid;

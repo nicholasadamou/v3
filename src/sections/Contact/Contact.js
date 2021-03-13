@@ -2,9 +2,9 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import WaveEmoji from '../../components/WaveEmoji/WaveEmoji';
+import WaveEmoji from 'components/WaveEmoji/WaveEmoji';
 
-import { device, until } from '../../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const Container = styled.section`
   position: relative;

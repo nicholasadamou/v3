@@ -25,6 +25,20 @@ module.exports = {
         implementation: require('node-sass'),
       },
     },
+    {
+      resolve: `gatsby-alias-imports`,
+      options: {
+        aliases: {
+          assets: 'src/assets',
+          images: 'src/assets/images',
+          components: 'src/components',
+          sections: 'src/sections',
+          hooks: 'src/hooks',
+          sass: 'src/sass',
+          utilities: 'src/utilities',
+        },
+      },
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

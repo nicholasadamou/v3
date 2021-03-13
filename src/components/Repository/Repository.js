@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React from 'react';
@@ -10,9 +11,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styled from 'styled-components';
 
-import { device, until } from '../../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
-import useGitHub, { round } from '../../hooks/useGithub';
+import useGitHub, { round } from 'hooks/useGithub';
 
 import languages from './languages';
 
@@ -100,7 +101,7 @@ const Container = styled.article`
     }
 
     ${until(
-      device.iPhone(),
+      device.iPad(),
       () => `
 			span[aria-label='language'] {
 				display: none;

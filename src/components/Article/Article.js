@@ -8,7 +8,7 @@ import moment from 'moment';
 
 import { GatsbyImage } from 'gatsby-plugin-image';
 
-import { device, until } from '../../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const Container = styled.article`
   display: flex;
@@ -47,7 +47,7 @@ const Container = styled.article`
     width: 150px;
 
     ${until(
-      device.iPhone(),
+      '1200px',
       () => `
 			width: 280px;
 	`

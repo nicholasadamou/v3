@@ -1,14 +1,15 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React from 'react';
 
 import styled from 'styled-components';
-import Avatar from '../../sass/Avatar';
 
-import WaveEmoji from '../../components/WaveEmoji/WaveEmoji';
-import SocialMediaButton from '../../components/SocialMediaButton/SocialMediaButton';
+import WaveEmoji from 'components/WaveEmoji/WaveEmoji';
+import SocialMediaButton from 'components/SocialMediaButton/SocialMediaButton';
 
-import { device, until } from '../../utilities/mixins';
+import { device, until } from 'utilities/mixins';
+import Avatar from 'sass/Avatar';
 
 const Container = styled.section`
   display: flex;

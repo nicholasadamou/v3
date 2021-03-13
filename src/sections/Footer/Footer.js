@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React from 'react';
@@ -7,13 +8,14 @@ import moment from 'moment';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SkeletonText } from 'carbon-components-react';
-import Avatar from '../../sass/Avatar';
 
-import SocialMediaButton from '../../components/SocialMediaButton/SocialMediaButton';
+import SocialMediaButton from 'components/SocialMediaButton/SocialMediaButton';
 
-import useGitHub from '../../hooks/useGithub';
+import { device, until } from 'utilities/mixins';
 
-import { device, until } from '../../utilities/mixins';
+import Avatar from 'sass/Avatar';
+
+import useGitHub from 'hooks/useGithub';
 
 const Container = styled.footer`
   display: grid !important;
