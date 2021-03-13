@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import AwardListing from 'components/AwardListing/AwardListing';
 import Experience from 'components/Experience/Experience';
 import Repository from 'components/Repository/Repository';
-import Article from 'components/Article/Article';
+import Articles from 'components/Articles/Articles';
 import FooterText from 'components/FooterText/FooterText';
 
 import { device, until } from 'utilities/mixins';
@@ -16,7 +16,6 @@ import { findImageByName } from 'utilities/utilities';
 
 import Awards from 'sass/Awards';
 import Projects from 'sass/Projects';
-import Articles from 'sass/Articles';
 
 const Container = styled.section`
   padding: 0 25px;
@@ -137,47 +136,7 @@ const Education = (props) => (
       Campus News
     </h2>
 
-    <Articles>
-      <Article
-        title={
-          "Cornell College shares this week's senior profile on Nicholas Adamou"
-        }
-        description={
-          "This week's senior profile is Nicholas Adamou '20. Congrats on your many accomplishments, Nicholas!"
-        }
-        date="June 18, 2020"
-        link="https://www.instagram.com/p/CBlTkx2FFIA"
-      />
-      <Article
-        title="Passion for computer science leads to job at IBM for Adamou"
-        description="An interest in the classic video game Asteroids for Windows 98 spawned a passion for computer science at a young age for Nicholas Adamou ՚20."
-        date="June 17, 2020"
-        image="articles/nicholas-1.png"
-        link="https://news.cornellcollege.edu/2020/06/passion-computer-science-leads-job-ibm-adamou-՚20/"
-      />
-      <Article
-        title="Adamou wins twice at Midwest Open Championships"
-        description={
-          "Cornell senior Nick Adamou (SR/New Milford, Conn.) came away with two victories this weekend in his first appearance at the Midwest Open Men's Tennis Championships hosted by Gustavus Adolphus College."
-        }
-        date="September 29, 2019"
-        image="articles/nicholas-3.jpg"
-        link="https://www.cornellrams.com/article/3485"
-      />
-      <Article
-        title="Nick Adamou shares insights and knowledge following his computer science internship"
-        description="Nick Adamou (pictured on the left) started his senior year with new insights and knowledge following his computer science internship. He spent his summer as a software engineering intern at IBM under IBM’s Finance and Operations Department in Southbury, Connecticut. Way to go Nick!"
-        date="August 29, 2019"
-        link="https://www.instagram.com/p/B1v-gCHHAer"
-      />
-      <Article
-        title="Adamou holds computer science internship at IBM"
-        description="Nick Adamou will start his senior year with new insights and knowledge following his computer science internship."
-        date="August 27, 2019"
-        image="articles/nicholas-2.jpg"
-        link="https://news.cornellcollege.edu/2019/08/adamou-holds-computer-science-internship-ibm/"
-      />
-    </Articles>
+    <Articles />
 
     <h2 className="title" style={{ fontSize: '1.5rem' }}>
       Awards and Recognition

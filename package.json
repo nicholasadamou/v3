@@ -46,6 +46,7 @@
 		"gatsby-plugin-styled-components": "^4.0.0",
 		"gatsby-source-filesystem": "^3.0.0",
 		"gatsby-source-graphql": "^3.0.0",
+		"gatsby-transformer-remark": "^3.0.0",
 		"gatsby-transformer-sharp": "^3.0.0",
 		"moment": "2.29.1",
 		"node-sass": "5.0.0",

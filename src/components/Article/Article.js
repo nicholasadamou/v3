@@ -142,7 +142,7 @@ const Article = (props) => {
         <small>
           {moment(new Date(date)).fromNow() === 'a year ago' ||
           moment(new Date(date)).fromNow() === '3 months ago'
-            ? `${date}`
+            ? `${moment(new Date(date)).format('MMMM DD, YYYY')}`
             : moment(new Date(date)).fromNow()}
         </small>
       </div>

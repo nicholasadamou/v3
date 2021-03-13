@@ -31,6 +31,7 @@ module.exports = {
         aliases: {
           assets: 'src/assets',
           images: 'src/assets/images',
+          articles: 'src/assets/articles',
           components: 'src/components',
           sections: 'src/sections',
           hooks: 'src/hooks',
@@ -39,6 +40,7 @@ module.exports = {
         },
       },
     },
+    'gatsby-transformer-remark',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -46,9 +48,17 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: './src/assets/images/',
+        path: './src/assets/images',
       },
       __key: 'images',
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'articles',
+        path: './src/assets/articles',
+      },
+      __key: 'articles',
     },
     'gatsby-plugin-netlify',
     {

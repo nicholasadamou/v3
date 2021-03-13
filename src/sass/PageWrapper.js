@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { device, until } from '../utilities/mixins';
+import { until } from '../utilities/mixins';
 
 const PageWrapper = styled.div`
   zoom: 125%;

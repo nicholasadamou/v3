@@ -3,14 +3,9 @@ import styled from 'styled-components';
 import { device, until } from '../utilities/mixins';
 
 const Container = styled.div`
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
 
   margin: 10rem auto 0;
