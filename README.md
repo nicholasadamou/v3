@@ -47,13 +47,6 @@ This project uses the following CI/CD Pipeline:
 1. [**CircleCI**](https://circleci.com/) - CircleCI is used to test whether or not this project builds successfully.
 2. [**Netlify**](https://netlify.com/) - For continuous deployment to [_nicholasadamou.com_](https://nicholasadamou.com).
 
-## 📚 The Design Stack
-
-This project uses the following technologies:
-
-- [**Bulma**](https://bulma.io/) - A free, open-source CSS framework based on Flexbox and used by more than 200,000 developers.
-- [**Carbon Design System**](https://carbondesignsystem.com) - Carbon is the design system for IBM web and product. It is a series of individual styles, components, and guidelines used for creating unified UI.
-
 ## License
 
 © Nicholas Adamou.
