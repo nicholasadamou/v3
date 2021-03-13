@@ -11,8 +11,8 @@
 		"node": ">=0.12"
 	},
 	"scripts": {
-		"develop": "gatsby develop",
-		"start": "gatsby develop --host $(ifconfig | awk '/inet 192\\.168\\.[0-9]+\\.[0-9]+/{print $2}') --port 8000",
+		"develop": "gatsby develop --host 0.0.0.0 --port 8000",
+		"start": "yarn develop",
 		"build": "gatsby build",
 		"serve": "gatsby serve",
 		"clean": "gatsby clean",
