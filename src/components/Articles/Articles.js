@@ -56,8 +56,6 @@ const Articles = () => {
       new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date)
   );
 
-  debugger;
-
   return (
     <Container>
       {sortedArticlesByDate.map((edge) => {

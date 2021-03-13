@@ -20,7 +20,7 @@ const useGitHub = (user, repositoryName) => {
       const repository = await github(
         `https://api.github.com/repos/${user}/${repositoryName}`
       );
-      const commit = await github(
+      const latestCommit = await github(
         `https://api.github.com/repos/${user}/${repositoryName}/branches/master`
       );
       const languages = await github(
@@ -36,6 +36,8 @@ const useGitHub = (user, repositoryName) => {
         updated_at,
         language,
       } = repository;
+
+      const { commit } = latestCommit;
 
       setRepository({
         name: name.toLowerCase(),
