@@ -8,7 +8,7 @@ const round = (num) => (num > 999 ? `${(num / 1000).toFixed(1)}k` : num);
 const github = (URL) =>
   fetch(URL, {
     headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+      Authorization: `Bearer ${process.env.GATSBY_GITHUB_TOKEN}`,
     },
   }).then((response) => response.json());
 
