@@ -36,9 +36,12 @@ This project uses the following technologies:
 
 **The Front-End**:
 
-- [**React.js**](https://reactjs.org/) - For building the interface along with:
-  - [**Gatsby**](<https://www.gatsbyjs.com/>) - Used as base React framework.
+- [**Gatsby**](<https://www.gatsbyjs.com/>) - Used as base React framework along with:
   - [**Styled-Components**](https://www.styled-components.com/) - for styling.
+  - [**Font Awesome**](https://fontawesome.com/how-to-use/on-the-web/using-with/react) - for icons.
+  - [**Carbon**](https://react.carbondesignsystem.com/?path=/story/getting-started-welcome--welcome) & [**Material UI**](https://material-ui.com/) - for loading animations.
+  - [**Bulma**](https://bulma.io/) - for layout styling.
+  - [**Moment.js**](https://momentjs.com/) - for handling dates.
 
 ## ⛓️ CI/CD Pipeline
 
