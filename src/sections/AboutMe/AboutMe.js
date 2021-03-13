@@ -170,7 +170,7 @@ const Content = styled.div`
   ${until(
     device.iPadPro(),
     () => `
-			width: 100%;
+			width: 90%;
 
 			.title {
 				margin-left: 24px;
