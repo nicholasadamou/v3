@@ -65,6 +65,7 @@ const Container = styled.article`
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
+    align-items: center;
 
     margin-bottom: 10px;
 
@@ -135,10 +136,20 @@ const Container = styled.article`
         border-radius: 5px;
 
         &[role='img'] {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          line-height: 1;
+
           margin-left: 10px;
 
           &:first-child {
             margin-left: 10px;
+          }
+
+          svg {
+            margin-right: 4px;
           }
         }
 
