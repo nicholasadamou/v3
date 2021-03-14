@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
@@ -112,6 +113,8 @@ const Container = styled.footer`
 const Footer = (props) => {
   const repository = useGitHub('nicholasadamou', 'nicholasadamou.com');
 
+  const { commit, updated_at } = repository;
+
   return (
     <Container>
       <Avatar
@@ -172,13 +175,13 @@ const Footer = (props) => {
         <p>
           Last updated{' '}
           <a
-            href={repository.commit.html_url}
+            href={commit.html_url}
             target="_blank"
             aria-hidden="true"
             rel="noopener noreferrer"
             className="link"
           >
-            {moment(new Date(repository.lastUpdated)).fromNow()}
+            {moment(new Date(updated_at)).fromNow()}
           </a>
           .
         </p>

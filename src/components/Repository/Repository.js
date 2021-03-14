@@ -212,7 +212,14 @@ const Repository = (user = 'nicholasadamou', repositoryName, language) => {
 
   if (JSON.stringify(repository) === '{}') return <SkeletonRepository />;
 
-  const { id, name, description, html_url, stars, forks } = repository;
+  const {
+    id,
+    name,
+    description,
+    html_url,
+    stargazers_count,
+    forks_count,
+  } = repository;
 
   return (
     <Container key={id}>
@@ -229,21 +236,22 @@ const Repository = (user = 'nicholasadamou', repositoryName, language) => {
         >
           <span aria-label="title">{name}</span>
         </a>
-        {stars !== 0 && (
+        {stargazers_count !== 0 && (
           <a
             href={`${html_url}/stargazers`}
             target="_blank"
             aria-hidden="true"
-            aria-label={`${name} github stars`}
+            aria-label={`${name} github stargazers_count`}
             title="star"
             rel="noopener noreferrer"
           >
             <span role="img" aria-label="star">
-              <FontAwesomeIcon icon={['fas', 'star']} /> {round(stars)}
+              <FontAwesomeIcon icon={['fas', 'star']} />{' '}
+              {round(stargazers_count)}
             </span>
           </a>
         )}
-        {forks !== 0 && (
+        {forks_count !== 0 && (
           <a
             href={`${html_url}/fork`}
             target="_blank"
@@ -253,7 +261,8 @@ const Repository = (user = 'nicholasadamou', repositoryName, language) => {
             rel="noopener noreferrer"
           >
             <span role="img" aria-label="branch">
-              <FontAwesomeIcon icon={['fas', 'code-branch']} /> {round(forks)}
+              <FontAwesomeIcon icon={['fas', 'code-branch']} />{' '}
+              {round(forks_count)}
             </span>
           </a>
         )}
@@ -279,7 +288,7 @@ const SkeletonRepository = (id) => (
         href="#"
         target="_blank"
         aria-hidden="true"
-        aria-label="github stars"
+        aria-label="github stargazers_count"
         title="star"
         rel="noopener noreferrer"
       >
