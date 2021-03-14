@@ -149,8 +149,8 @@ const Container = styled.article`
             margin-left: 10px;
           }
 
-          svg {
-            margin-right: 4px;
+          .MuiCircularProgress-root {
+            margin-left: 5px;
           }
         }
 
