@@ -91,6 +91,8 @@ const Container = styled.article`
     }
 
     svg[data-prefix='fas'] {
+      margin-right: 5px;
+
       -webkit-transition: all 0.25s ease-in-out;
       transition: all 0.25s ease-in-out;
 
