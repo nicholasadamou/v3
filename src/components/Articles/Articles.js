@@ -3,6 +3,8 @@ import React from 'react';
 
 import { useStaticQuery, graphql } from 'gatsby';
 
+import { getImage } from 'gatsby-plugin-image';
+
 import styled from 'styled-components';
 
 import Article from 'components/Article/Article';
@@ -38,7 +40,7 @@ const Container = styled.div`
 `;
 
 const Articles = () => {
-  const { allMarkdownRemark } = useStaticQuery(
+  const { allMarkdownRemark, allFile } = useStaticQuery(
     graphql`
       query {
         allMarkdownRemark(limit: 1000) {
@@ -50,6 +52,22 @@ const Articles = () => {
                 date
                 image
                 link
+              }
+              id
+            }
+          }
+        }
+        allFile(filter: { relativeDirectory: { eq: "articles" } }) {
+          edges {
+            node {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FIXED
+                  width: 280
+                  quality: 100
+                  placeholder: BLURRED
+                  formats: [AUTO, WEBP]
+                )
               }
             }
           }
@@ -63,6 +81,17 @@ const Articles = () => {
       new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date)
   );
 
+  sortedArticlesByDate.forEach((a) => {
+    allFile.edges.forEach((b) => {
+      const { image } = a.node.frontmatter;
+      const { src } = b.node.childImageSharp.gatsbyImageData.images.fallback;
+
+      if (image !== '' && src.includes(image)) {
+        a.node.frontmatter.image = getImage(b.node);
+      }
+    });
+  });
+
   return (
     <Container>
       {sortedArticlesByDate.map((edge) => {
@@ -74,7 +103,7 @@ const Articles = () => {
             title={title}
             description={description}
             date={date}
-            image={image !== '' ? `articles/${image}` : undefined}
+            image={getImage(image)}
             link={link}
             key={id}
           />

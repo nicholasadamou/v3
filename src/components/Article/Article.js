@@ -29,6 +29,24 @@ const Container = styled.article`
 			flex-direction: column-reverse;
 	`
   )}
+
+  .gatsby-image-wrapper {
+    width: 180px !important;
+    height: 140px !important;
+
+    img {
+      border-radius: 8px;
+    }
+
+    ${until(
+      device.iPhone(),
+      () => `
+			width: 280px !important;
+			height: 225px !important;
+	`
+    )}
+  }
+
   .masthead {
     width: 150px;
 
@@ -45,7 +63,7 @@ const Container = styled.article`
   }
 
   .image-placeholder {
-    width: 280px;
+    width: 180px;
   }
 
   .article-details {
