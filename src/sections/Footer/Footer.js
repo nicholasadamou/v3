@@ -15,7 +15,7 @@ import { device, until } from 'utilities/mixins';
 
 import Avatar from 'sass/Avatar';
 
-import useGitHub from 'hooks/useGithub';
+import useGitHub from 'hooks/useGitHub';
 
 const Container = styled.footer`
   display: grid !important;
@@ -172,7 +172,7 @@ const Footer = (props) => {
         <p>
           Last updated{' '}
           <a
-            href={repository.commit.link}
+            href={repository.commit.html_url}
             target="_blank"
             aria-hidden="true"
             rel="noopener noreferrer"

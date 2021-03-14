@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
@@ -13,7 +14,7 @@ import styled from 'styled-components';
 
 import { device, until } from 'utilities/mixins';
 
-import useGitHub, { round } from 'hooks/useGithub';
+import useGitHub, { round } from 'hooks/useGitHub';
 
 import languages from './languages';
 
@@ -211,7 +212,7 @@ const Repository = (user = 'nicholasadamou', repositoryName, language) => {
 
   if (JSON.stringify(repository) === '{}') return <SkeletonRepository />;
 
-  const { id, name, description, link, stars, forks } = repository;
+  const { id, name, description, html_url, stars, forks } = repository;
 
   return (
     <Container key={id}>
@@ -220,7 +221,7 @@ const Repository = (user = 'nicholasadamou', repositoryName, language) => {
           <FontAwesomeIcon icon={['fab', 'git-alt']} />
         </span>
         <a
-          href={link}
+          href={html_url}
           target="_blank"
           aria-hidden="true"
           rel="noopener noreferrer"
@@ -230,7 +231,7 @@ const Repository = (user = 'nicholasadamou', repositoryName, language) => {
         </a>
         {stars !== 0 && (
           <a
-            href={`${link}/stargazers`}
+            href={`${html_url}/stargazers`}
             target="_blank"
             aria-hidden="true"
             aria-label={`${name} github stars`}
@@ -244,7 +245,7 @@ const Repository = (user = 'nicholasadamou', repositoryName, language) => {
         )}
         {forks !== 0 && (
           <a
-            href={`${link}/fork`}
+            href={`${html_url}/fork`}
             target="_blank"
             aria-hidden="true"
             aria-label={`fork ${name} on github`}

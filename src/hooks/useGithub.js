@@ -42,15 +42,13 @@ const useGitHub = (user, repositoryName) => {
       setRepository({
         name: name.toLowerCase(),
         description,
-        link: html_url,
+        html_url,
         stars: stargazers_count,
         forks: forks_count,
         lastUpdated: updated_at,
         language: language.toLowerCase(),
         languages,
-        commit: {
-          link: commit.html_url,
-        },
+        commit,
       });
     };
 
