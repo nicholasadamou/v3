@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 
 import styled from 'styled-components';
@@ -101,7 +102,7 @@ const Experience = (company, title, location, duration, description, image) => (
     )}
     <div>
       <strong>{company}</strong>
-      <em>{title}</em>
+      <p>{title}</p>
       <aside>{duration}</aside>
       <aside>{location}</aside>
       <span>{description()}</span>
