@@ -199,6 +199,7 @@ const Work = (props) => (
       {Repository('nicholasadamou', 'storage', 'react')}
       {Repository('nicholasadamou', 'krios-github-bot', 'node')}
       {Repository('nicholasadamou', 'toasty', 'react')}
+      {Repository('nicholasadamou', 'jwt-spring-security-demo', 'java')}
       {Repository('nicholasadamou', 'mack-media-group-internship-project')}
       {Repository('nicholasadamou', 'advanced-electrical-services', 'html')}
       {Repository('cutpastecopy', 'cutpastecopy.com', 'html')}
