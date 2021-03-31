@@ -113,9 +113,7 @@ const Work = (props) => (
       'Southbury, CT',
       'June 2020 - Present',
       () =>
-        "Full-stack software engineer focused primarily on the front-end and back-end of cloud-native applications. Works with testers, PO's, IM's, UI/UX designers, and users to develop cloud-native software " +
-        'using DB2, k8s, istio, IBM Cloud, Docker, along with Java RESTful services using JDBC and SQL for the back-end, and React and NodeJS for the front-end. Applications are version controlled using GitHub, unit ' +
-        'tested using Jenkins and JUnit along with leveraging a host of CI/CD software to provide automated testing and deployment of cloud-native applications including Travis CI, and including a slew of other internal IBM CI/CD proprietary software.',
+        "Full-stack software engineer focused primarily on the front-end and back-end of the cloud-native applications GLUI, the single-entry point to IBM’s ledger for all global Journal activity as well as GUDA, the global unified department application for all IBM departmental activities. Works with testers, PO's, IM's, UI/UX designers, and users to enhance IBM's cloud-native Journaling and Departmental software using DB2, k8s, istio, IBM Hybrid Cloud, Docker, Go, along with Java RESTful services using Spring, JDBC, and SQL for the back-end, and React and NodeJS for the front-end. Applications are version controlled using GitHub, along with leveraging a host of CI/CD software to provide automated testing and continuous deployment of cloud-native applications including Travis CI, and including a slew of other internal IBM CI/CD proprietary software.",
       findImageByName('ibm.png', props.logos)
     )}
 
@@ -136,9 +134,7 @@ const Work = (props) => (
       'Southbury, CT',
       'May 2019 - August 2019',
       () =>
-        "I worked and collaborated with a diverse team of developers, UX/UI designers, PO's, IM's, and testers from around the world in order to develop a web application utilizing React " +
-        'for the front-end along with Jenkins for unit testing, and a variety of technologies for the back-end, such as SQL, Java with JDBC, Kubernetes for container-orchestration, Apache Kafka' +
-        ' for stream-processing of micro-services and Docker for containerization.',
+        "At IBM, I worked and collaborated with a diverse team of developers, UX/UI designers, PO's, IM's, testers, etc. from around the world in order to transition IBM’s global ledger application for all Journal activity to a cloud-native solution utilizing React for the front-end, and a variety of technologies for the back-end micro-services, such as SQL, Java Spring, JDBC, k8s for container-orchestration, and Docker for containerization. As a team, we additionally leveraged a host of CI/CD software to develop the application along with Git and GitHub for version control, and Travis for integrated build tests along with a host of other internal IBM CI/CD software.",
       findImageByName('ibm.png', props.logos)
     )}
 
