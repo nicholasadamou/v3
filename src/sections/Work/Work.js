@@ -123,8 +123,7 @@ const Work = (props) => (
       'Southbury, CT',
       'August 2019 - June 2020',
       () =>
-        'Continued the work I finished as a intern, but now as a Co-Op while I was away at school. I participated in weekly stand-up meetings relating to the JIRA stories I was assigned. With each story, ' +
-        'I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the application.',
+        'Continued the work I finished as a intern, but now as a Co-Op while I was away at school. I participated in weekly stand-up meetings relating to the JIRA stories I was assigned. With each story, I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the application.',
       findImageByName('ibm.png', props.logos)
     )}
 
