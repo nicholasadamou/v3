@@ -123,7 +123,7 @@ const Work = (props) => (
       'Southbury, CT',
       'August 2019 - June 2020',
       () =>
-        'Continued the work I finished as an intern, but now as a Co-Op while I was a student at Cornell College. I participated in weekly stand-up meetings relating to the JIRA stories I was assigned. With each story, I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the ledger application.',
+        'Continued the work I finished as an intern, but now as a Co-Op while I was a student at Cornell College. I participated in weekly stand-up meetings relating to the JIRA stories, I was assigned. With each story, I assisted the team remotely with various bug fixes and quality assurance testing of the front-end and back-end of the ledger application.',
       findImageByName('ibm.png', props.logos)
     )}
 
@@ -139,43 +139,13 @@ const Work = (props) => (
 
     {Experience(
       'Blackbird',
-      'Software Engineering Intern',
+      'Software Engineer',
       'San Francisco, CA',
       'June 2018 - August 2018',
       () =>
         'As a software engineer at Blackbird, I worked closely with the CTO and the engineering team to construct custom components for the Blackbird web and mobile apps leveraging ' +
         'React, React Native, React Native Web, GraphQL, Apollo, and ES6 JavaScript. In addition, I provided QA (Quality Assurance) and unit testing on multiple builds of the Blackbird web and mobile apps.',
       findImageByName('blackbird.png', props.logos)
-    )}
-
-    {Experience(
-      'Mack Media Group',
-      'Software Engineering Intern',
-      'Brookfield, CT',
-      'December 2016 - December 2016',
-      () =>
-        'Leveraged Google AMP pages to develop a user-friendly and responsive homepage for the agency.',
-      findImageByName('mack-media-group.png', props.logos)
-    )}
-
-    {Experience(
-      'Advanced Electrical Services',
-      'Freelance Web Developer',
-      'New Milford, CT',
-      'June 2016 - June 2016',
-      () =>
-        'Worked closely with the client to develop a new sleek and intuitive homepage for the company. Utilized various web technologies, such as Pug (previously Jade), SASS, and ES6 JavaScript.',
-      findImageByName('advanced-electrical-services.png', props.logos)
-    )}
-
-    {Experience(
-      'Cut, Paste, & Copy',
-      'Student Web Developer',
-      'New Milford, CT',
-      'March 2016 - March 2016',
-      () =>
-        'Worked with classmates to design and develop a responsive mobile-first homepage for the student-run design agency. Leveraging Jade, SCSS, and ES6 JavaScript.',
-      findImageByName('cut-paste-copy.png', props.logos)
     )}
 
     <h2 className="title" style={{ fontSize: '1.6rem' }}>
@@ -195,9 +165,6 @@ const Work = (props) => (
       {Repository('nicholasadamou', 'krios-github-bot', 'node')}
       {Repository('nicholasadamou', 'toasty', 'react')}
       {Repository('nicholasadamou', 'jwt-spring-security-demo', 'java')}
-      {Repository('nicholasadamou', 'mack-media-group-internship-project')}
-      {Repository('nicholasadamou', 'advanced-electrical-services', 'html')}
-      {Repository('cutpastecopy', 'cutpastecopy.com', 'html')}
     </Projects>
 
     <h3 className="title" style={{ fontSize: '1.6rem' }}>
