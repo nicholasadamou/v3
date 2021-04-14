@@ -67,18 +67,16 @@ const Education = (props) => (
     </p>
 
     <>
-      {/* {Experience(
-					'Georgia Tech',
-					'Master\'s of Science, Computer Science',
-					'Atlanta, Georgia',
-					'August 2021 - May 2023',
-					() => (
-						<>
-							Incoming graduate student.
-					</>
-					),
-					findImageByName('georgia-tech.jpg', props.logos),
-				)} */}
+      {Experience(
+        'Georgia Tech',
+        "Master's of Science, Computer Science",
+        'Atlanta, Georgia',
+        'August 2021 - May 2023',
+        () => (
+          <>Incoming graduate student.</>
+        ),
+        findImageByName('georgia-tech.jpg', props.logos)
+      )}
       {Experience(
         'Cornell College',
         'Bachelors of Arts, Computer Science',
