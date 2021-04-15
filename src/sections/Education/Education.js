@@ -69,7 +69,7 @@ const Education = (props) => (
     <>
       {Experience(
         'Georgia Tech',
-        "Master's of Science, Computer Science",
+        'Master of Science in Computer Science',
         'Atlanta, Georgia',
         'August 2021 - May 2023',
         () => (
