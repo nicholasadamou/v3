@@ -112,7 +112,8 @@ const Work = (props) => (
       'Senior Software Engineer',
       'Southbury, CT',
       'May 2021 - Present',
-      () => '',
+      () =>
+        "Leads the software development team for IBM's cloud native ledger software, GLUI-NG. Works with developers, UI/UX designers, PO's, IM's, testers, and users to enhance the journaling software. Leverages modern technologies such as PostgreSQL, GraphQL, Apollo, MQ, Apache POI, Go, and IBM Hybrid Cloud to bring a new modern face to IBM's ledger application.",
       findImageByName('ibm.png', props.logos)
     )}
 
