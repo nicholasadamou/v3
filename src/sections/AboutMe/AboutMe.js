@@ -235,8 +235,7 @@ const AboutMe = (props) => (
           IBM
         </a>{' '}
         senior software engineer. I primarily focus on the front-end and
-        back-end of cloud-native applications. Recently I graduated Summa Cum
-        Laude from{' '}
+        back-end of cloud-native applications. I graduated Summa Cum Laude from{' '}
         <a
           className="cornell"
           href="https://www.cornellcollege.edu/"
