@@ -42,8 +42,8 @@ const IndexPage = ({ data }) => (
         <hr />
         <Work logos={data.logos.edges} />
         <hr />
-        <Education logos={data.logos.edges} />
-        <hr />
+        {/* <Education logos={data.logos.edges} />
+        <hr /> */}
         <OpenSource />
         <hr />
         <Prototypes />
