@@ -20,7 +20,7 @@ import PageWrapper from 'sass/PageWrapper';
 import Container from 'sass/Container';
 
 import AboutMe from 'sections/AboutMe/AboutMe';
-import Education from 'sections/Education/Education';
+// import Education from 'sections/Education/Education';
 import Work from 'sections/Work/Work';
 import OpenSource from 'sections/OpenSource/OpenSource';
 import Prototypes from 'sections/Prototypes/Prototypes';
