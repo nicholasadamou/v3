@@ -1,14 +1,19 @@
-version: 2.1
+version: '2.1'
+orbs:
+  node: circleci/node@4.5.1
 jobs:
   build:
-    docker:
-      - image: circleci/node
+    executor: 
+       name: node/default
+       tag: 'lts'
     steps:
       - checkout
-      - setup_remote_docker
-      - run: npm install
-      - run: npm build
-
+      - node/install:
+          lts: true
+          install-yarn: true
+      - node/install-packages:
+          pkg-manager: yarn
+      - run: yarn build
 workflows:
   version: 2
   build:
