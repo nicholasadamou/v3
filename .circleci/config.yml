@@ -8,11 +8,9 @@ jobs:
        tag: 'lts'
     steps:
       - checkout
-      - node/install:
-          install-yarn: true
-      - node/install-packages:
-          pkg-manager: yarn
-      - run: yarn build
+      - node/install
+      - node/install-packages
+      - run: npm run build
 workflows:
   version: 2
   build:
