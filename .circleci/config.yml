@@ -9,7 +9,6 @@ jobs:
     steps:
       - checkout
       - node/install:
-          lts: true
           install-yarn: true
       - node/install-packages:
           pkg-manager: yarn
