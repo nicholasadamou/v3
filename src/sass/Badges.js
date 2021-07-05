@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { device, until } from '../utilities/mixins';
 
-const Awards = styled.div`
+const Badges = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 20px;
@@ -21,4 +21,4 @@ const Awards = styled.div`
   )}
 `;
 
-export default Awards;
+export default Badges;

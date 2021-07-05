@@ -10,7 +10,7 @@ import FooterText from 'components/FooterText/FooterText';
 
 import { device, until } from 'utilities/mixins';
 import { findImageByName } from 'utilities/utilities';
-import Awards from 'sass/Awards';
+import Badges from 'sass/Badges';
 import Projects from 'sass/Projects';
 
 import './index.scss';
@@ -194,7 +194,7 @@ const Work = (props) => (
       page.
     </p>
 
-    <Awards>
+    <Badges>
       {Experience(
         'IBM',
         'IBM Developer JumpStart Explorer',
@@ -222,7 +222,7 @@ const Work = (props) => (
           'The badge earner can install Istio in a cluster, deploy a sample app, and set up the Istio Ingress controller. The individual knows how to use metrics, logging and tracing to observe services. The earner is also able to perform simple traffic management such as A/B tests and canary deployments, secure a service mesh, and enforce policies for microservices.',
         'https://images.youracclaim.com/size/680x680/images/8d34d489-84bf-4861-a4a0-9e9d68318c5c/Beyond%2Bbasics%2Bof%2BIstio%2Bon%2BCloud%2Bv2.png'
       )}
-    </Awards>
+    </Badges>
 
     {FooterText(
       'Read more about my work experience on my ',

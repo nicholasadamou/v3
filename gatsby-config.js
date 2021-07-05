@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     title: 'Nicholas Adamou',
     description:
-      'Nicholas Adamou - He is a IBM Software Engineer and an open source contributor.',
+      'Nicholas Adamou - He is a IBM senior software engineer and an open source contributor.',
     author: 'Nicholas Adamou',
   },
   plugins: [
@@ -51,14 +51,6 @@ module.exports = {
         path: './src/assets/images',
       },
       __key: 'images',
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'articles',
-        path: './src/assets/articles',
-      },
-      __key: 'articles',
     },
     'gatsby-plugin-netlify',
     {
