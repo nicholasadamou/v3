@@ -106,6 +106,8 @@ const GlobalStyles = createGlobalStyle`
 		width: 90%;
 		height: 5px;
 
+		border-radius: 10px;
+
 		background: var(--white);
 	}
 
