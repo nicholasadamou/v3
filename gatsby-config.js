@@ -31,7 +31,6 @@ module.exports = {
         aliases: {
           assets: 'src/assets',
           images: 'src/assets/images',
-          articles: 'src/assets/articles',
           components: 'src/components',
           sections: 'src/sections',
           hooks: 'src/hooks',

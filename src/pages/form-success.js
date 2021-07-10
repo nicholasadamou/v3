@@ -6,8 +6,10 @@ import styled from 'styled-components';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import Layout from '../components/Layout/Layout';
-import { device, until } from '../utilities/mixins';
+
+import Layout from 'components/Layout';
+
+import { device, until } from 'utilities/mixins';
 
 library.add(faThumbsUp);
 

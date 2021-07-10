@@ -6,40 +6,27 @@ const GlobalStyles = createGlobalStyle`
 	:root {
 		--white: #fafafa;
 		--black: #212121;
-		--red: #fc4349;
-		--grey: #f5f5f5;
 		--light-grey: #ccc;
-		--light-black: #37474f;
-		--green: #10b500;
-		--yellow: #fff498;
+		--yellow: #ffd602;
+		--blue: #5496FF;
 
 		--github: #161514;
-		--git: #fd7e14;
 		--codepen: #1e1f26;
-		--twitter: #55acee;
 		--linkedin: #0077b5;
-		--instagram: #e1306c;
-		--cornell: #583d78;
-		--blackbird: #3c4156;
-		--mack-media-group: #80bd01;
-		--ibm: #006699;
 		--netlify: #15837d;
-
-		--star: #ffd602;
 
 		--scrollbar: var(--white);
 		--scrollbar-bg: var(--black);
 
 		--primary: "Roboto Slab";
-		--secondary: "Roboto";
+		--secondary: "Inter";
 
-		--highlight: var(--yellow);
+		--highlight: var(--blue);
 		--selection: var(--black);
 
 		--copy: var(--black);
 		--copy-size: 1rem;
-		--link: var(--light-black);
-		--title: var(--light-black);
+
 		--loading: var(--light-black);
 		--background: var(--white);
 	}
@@ -162,13 +149,14 @@ const GlobalStyles = createGlobalStyle`
 
 		line-height: 1;
 
-		color: var(--title);
+		color: var(--copy);
 	}
 
 	.subtitle {
 		margin-bottom: 50px;
 
-		color: darken(#ccc, 15);
+		font-family: var(--secondary);
+		color: darken(var(--light-grey), 15);
 		line-height: 1.5;
 
 		${until(
@@ -202,17 +190,17 @@ const GlobalStyles = createGlobalStyle`
 		${until(
       device.iPhone(),
       () => `
-		font-size: 1rem;
+		font-size: var(--copy-size);
 		`
     )}
 	}
 
 	.link {
 		text-decoration: underline;
-		color: var(--link);
+		color: var(--copy);
 
 		&:hover {
-			color: darken(#ccc, 15);
+			color: darken(var(--light-grey), 15);
 		}
 	}
 `;

@@ -19,56 +19,36 @@ import {
 import PageWrapper from 'sass/PageWrapper';
 import Container from 'sass/Container';
 
-import AboutMe from 'sections/AboutMe/AboutMe';
-// import Education from 'sections/Education/Education';
-import Work from 'sections/Work/Work';
-import OpenSource from 'sections/OpenSource/OpenSource';
-import Prototypes from 'sections/Prototypes/Prototypes';
-import Contact from 'sections/Contact/Contact';
+import Work from 'sections/Work';
+import Contact from 'sections/Contact';
+import Footer from 'sections/Footer';
 
-import Footer from 'sections/Footer/Footer';
-
-import Layout from 'components/Layout/Layout';
-import ScrollToTopButton from 'components/ScrollToTopButton/ScrollToTopButton';
+import Layout from 'components/Layout';
+import Dust from 'components/Dust';
+import ScrollToTopButton from 'components/ScrollToTopButton';
 
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode);
 
-const IndexPage = ({ data }) => (
-  // console.log(data);
-  <Layout>
-    <PageWrapper>
+const IndexPage = ({ data }) => {
+  console.log(data);
+  return (
+    <Layout>
+      <Dust dust={data.dust.edges} height="100vh">
+		<h1>Hello World.</h1>
+      </Dust>
+      {/* <PageWrapper>
       <Container>
-        <AboutMe avatar={getImage(data.avatar)} />
-        <hr />
-        <Work logos={data.logos.edges} />
-        <hr />
-        {/* <Education logos={data.logos.edges} />
-        <hr /> */}
-        <OpenSource />
-        <hr />
-        <Prototypes />
-        <hr />
-        <Contact />
+       <></>
       </Container>
-      <Footer avatar={data.avatar} />
+      <Footer />
       <ScrollToTopButton />
-    </PageWrapper>
-  </Layout>
-);
+    </PageWrapper> */}
+    </Layout>
+  );
+};
 
 export const query = graphql`
   query {
-    avatar: file(relativePath: { eq: "avatars/nicholas.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          layout: FIXED
-          quality: 90
-          width: 600
-          placeholder: BLURRED
-          formats: [AUTO, WEBP]
-        )
-      }
-    }
     logos: allFile(filter: { relativeDirectory: { eq: "logos" } }) {
       edges {
         node {
@@ -76,6 +56,35 @@ export const query = graphql`
             gatsbyImageData(
               layout: FIXED
               width: 50
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+      }
+    }
+    badges: allFile(filter: { relativeDirectory: { eq: "badges" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FIXED
+              width: 36
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+      }
+    }
+    dust: allFile(filter: { relativeDirectory: { eq: "dust" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FIXED
               quality: 100
               placeholder: BLURRED
               formats: [AUTO, WEBP]
