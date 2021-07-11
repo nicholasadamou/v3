@@ -13,15 +13,23 @@ import {device, until} from 'utilities/mixins'
 
 import Logo from 'images/nicholas-adamou.svg';
 
-import './index.scss';
-
 const Container = styled.div`
 	margin: 0 2rem;
 
 	color: var(--white);
 
+	overflow: hidden;
+
 	#overlay {
 		display: none;
+
+		position: absolute;
+
+		inset: 0;
+
+		background-color: black;
+
+		opacity: 0.8;
 	}
 
 	header {
@@ -259,11 +267,14 @@ const Jumbotron = styled.div`
 const MobileNavigation = (props) => {
 	const {isOpen, toggleNavigation} = React.useContext(NavigationContext);
 
-	const overlay = document.querySelector('#overlay');
 	const mobileNav = document.querySelector('#mobile-nav');
+	const overlay = document.querySelector('#overlay');
 
-	if (mobileNav !== null && overlay !== null) {
+	if (mobileNav !== null) {
 		mobileNav.style.display = isOpen ? 'block' : 'none';
+	}
+
+	if (overlay !== null) {
 		overlay.style.display = isOpen ? 'block' : 'none';
 	}
 
@@ -382,7 +393,7 @@ const Header = (props) => (
 const Hero = (props) => {
 	const {dust} = props;
 
-	const {toggleNavigation} = React.useContext(NavigationContext);
+	const { toggleNavigation} = React.useContext(NavigationContext);
 
 	return (
 		<Dust dust={dust} height="100vh">
@@ -393,7 +404,7 @@ const Hero = (props) => {
 						<h1><span>Full Stack</span> Software Engineer.</h1>
 						<h2>I focus on the front-end & back-end of cloud native applications.</h2>
 					</Jumbotron>
-					<div id="overlay" onClick={() => toggleNavigation()}/>
+					<div id="overlay" onClick={() => toggleNavigation()} />
 				</Container>
 				<Wave/>
 			</>

@@ -24,12 +24,12 @@ const IndexPage = ({data}) => {
 		<Layout>
 			<PageWrapper>
 				<NavigationProvider>
-					<Hero dust={data.dust.edges}/>
+					<Hero dust={data.dust.edges} />
 				</NavigationProvider>
 			</PageWrapper>
 		</Layout>
 	);
-};
+}
 
 export const query = graphql`
   query {
