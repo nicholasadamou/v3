@@ -2,9 +2,10 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 export const device = {
-  iPhone: () => '430px',
-  iPad: () => '768px',
-  iPadPro: () => '1024px',
+	iPhone: () => '430px',
+	iPad: () => '768px',
+	iPadPro: () => '1024px',
+	iPadProLandscape: () => '1194px'
 };
 
 export const until = (device, content) => `
@@ -14,6 +15,6 @@ export const until = (device, content) => `
 	`;
 
 export default {
-  until,
-  device,
+	until,
+	device,
 };

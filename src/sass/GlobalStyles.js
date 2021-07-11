@@ -15,14 +15,14 @@ const GlobalStyles = createGlobalStyle`
 		--linkedin: #0077b5;
 		--netlify: #15837d;
 
-		--scrollbar: var(--white);
-		--scrollbar-bg: var(--black);
+		--scrollbar: var(--black);
+		--scrollbar-bg: var(--white);
 
 		--primary: "Roboto Slab";
 		--secondary: "Inter";
 
 		--highlight: var(--blue);
-		--selection: var(--black);
+		--selection: var(--white);
 
 		--copy: var(--black);
 		--copy-size: 1rem;
@@ -68,6 +68,8 @@ const GlobalStyles = createGlobalStyle`
 		height: auto;
 
 		background: none;
+
+		overflow-x: hidden;
 	}
 
 	body {

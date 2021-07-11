@@ -2,49 +2,29 @@
 /* eslint-disable react/prop-types */
 import * as React from 'react';
 
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 
-import { getImage } from 'gatsby-plugin-image';
-
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import {
-  faArrowUp,
-  faCodeBranch,
-  faHeart,
-  faStar,
-  faFileCode,
-} from '@fortawesome/free-solid-svg-icons';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {fab} from '@fortawesome/free-brands-svg-icons';
+import {faArrowUp, faBookOpen, faCodeBranch, faFileCode, faHeart, faStar, faBars} from '@fortawesome/free-solid-svg-icons';
 
 import PageWrapper from 'sass/PageWrapper';
-import Container from 'sass/Container';
 
-import Work from 'sections/Work';
-import Contact from 'sections/Contact';
-import Footer from 'sections/Footer';
+import Hero from 'sections/Hero';
 
 import Layout from 'components/Layout';
-import Dust from 'components/Dust';
-import ScrollToTopButton from 'components/ScrollToTopButton';
 
-library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode);
+library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode, faBookOpen, faBars);
 
-const IndexPage = ({ data }) => {
-  console.log(data);
-  return (
-    <Layout>
-      <Dust dust={data.dust.edges} height="100vh">
-		<h1>Hello World.</h1>
-      </Dust>
-      {/* <PageWrapper>
-      <Container>
-       <></>
-      </Container>
-      <Footer />
-      <ScrollToTopButton />
-    </PageWrapper> */}
-    </Layout>
-  );
+const IndexPage = ({data}) => {
+	console.log(data);
+	return (
+		<Layout>
+			<PageWrapper>
+				<Hero dust={data.dust.edges}/>
+			</PageWrapper>
+		</Layout>
+	);
 };
 
 export const query = graphql`

@@ -113,8 +113,6 @@ const Container = styled.div`
 
 const Content = styled.div`
 	z-index: 9999;
-
-	color: var(--white);
 `;
 
 const twinkle = (id, duration) => {
