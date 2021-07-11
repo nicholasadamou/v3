@@ -2,14 +2,14 @@ import * as React from 'react';
 
 import styled from 'styled-components';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import NavigationContext from "contexts/NavigationContext";
 
 import Dust from 'components/Dust';
 import Wave from 'components/Wave';
 
-import { device, until } from 'utilities/mixins'
+import {device, until} from 'utilities/mixins'
 
 import Logo from 'images/nicholas-adamou.svg';
 
@@ -43,7 +43,6 @@ const Container = styled.div`
 				top: -36px;
 			`
 		)}
-
 		#logo {
 			width: 150px;
 
@@ -142,7 +141,6 @@ const Container = styled.div`
 				display: none;
 			`
 			)}
-
 			a {
 				color: var(--white);
 			}
@@ -196,14 +194,12 @@ const Jumbotron = styled.div`
 			margin-left: -10rem;
 		`
 	)}
-
 	${until(
 		device.iPadPro(),
 		() => `
 			margin-left: 0;
 		`
 	)}
-
 	h1 {
 		font-family: var(--primary);
 		font-size: 3.6rem;
@@ -220,7 +216,6 @@ const Jumbotron = styled.div`
 			width: 100%;
 		`
 		)}
-
 		span {
 			font-size: inherit;
 			font-weight: inherit;
@@ -262,7 +257,7 @@ const Jumbotron = styled.div`
 `;
 
 const MobileNavigation = (props) => {
-	const { isOpen, toggleNavigation } = React.useContext(NavigationContext);
+	const {isOpen, toggleNavigation} = React.useContext(NavigationContext);
 
 	const overlay = document.querySelector('#overlay');
 	const mobileNav = document.querySelector('#mobile-nav');
@@ -275,11 +270,11 @@ const MobileNavigation = (props) => {
 	return (
 		<>
 			<span id="mobile-nav-toggle" onClick={() => toggleNavigation()}>
-				<FontAwesomeIcon icon={['fas', 'bars']} />
+				<FontAwesomeIcon icon={['fas', 'bars']}/>
 			</span>
 			<ul id="mobile-nav">
 				<li>
-					<FontAwesomeIcon icon={['fas', 'book-open']} />
+					<FontAwesomeIcon icon={['fas', 'book-open']}/>
 					<a
 						href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
 						target="_blank"
@@ -291,7 +286,7 @@ const MobileNavigation = (props) => {
 					</a>
 				</li>
 				<li>
-					<FontAwesomeIcon icon={['fab', 'github']} />
+					<FontAwesomeIcon icon={['fab', 'github']}/>
 					<a
 						href="https://github.com/nicholasadamou"
 						target="_blank"
@@ -303,7 +298,7 @@ const MobileNavigation = (props) => {
 					</a>
 				</li>
 				<li>
-					<FontAwesomeIcon icon={['fab', 'codepen']} />
+					<FontAwesomeIcon icon={['fab', 'codepen']}/>
 					<a
 						href="https://codepen.io/nicholasadamou"
 						target="_blank"
@@ -315,7 +310,7 @@ const MobileNavigation = (props) => {
 					</a>
 				</li>
 				<li>
-					<FontAwesomeIcon icon={['fab', 'linkedin']} />
+					<FontAwesomeIcon icon={['fab', 'linkedin']}/>
 					<a
 						href="https://www.linkedin.com/in/nicholas-adamou"
 						target="_blank"
@@ -334,7 +329,7 @@ const MobileNavigation = (props) => {
 const Navigation = (props) => (
 	<nav>
 		<span id="resume">
-			<FontAwesomeIcon icon={['fas', 'book-open']} />
+			<FontAwesomeIcon icon={['fas', 'book-open']}/>
 			<a
 				href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
 				target="_blank"
@@ -353,7 +348,7 @@ const Navigation = (props) => (
 			rel="noopener noreferrer"
 			className="link"
 		>
-			<FontAwesomeIcon icon={['fab', 'github']} />
+			<FontAwesomeIcon icon={['fab', 'github']}/>
 		</a>
 		<a
 			href="https://codepen.io/nicholasadamou"
@@ -362,7 +357,7 @@ const Navigation = (props) => (
 			rel="noopener noreferrer"
 			className="link"
 		>
-			<FontAwesomeIcon icon={['fab', 'codepen']} />
+			<FontAwesomeIcon icon={['fab', 'codepen']}/>
 		</a>
 		<a
 			href="https://www.linkedin.com/in/nicholas-adamou"
@@ -371,36 +366,36 @@ const Navigation = (props) => (
 			rel="noopener noreferrer"
 			className="link"
 		>
-			<FontAwesomeIcon icon={['fab', 'linkedin']} />
+			<FontAwesomeIcon icon={['fab', 'linkedin']}/>
 		</a>
 	</nav>
 )
 
 const Header = (props) => (
 	<header>
-		<Logo id="logo" />
-		<MobileNavigation />
-		<Navigation />
+		<Logo id="logo"/>
+		<MobileNavigation/>
+		<Navigation/>
 	</header>
 )
 
 const Hero = (props) => {
-	const { dust } = props;
+	const {dust} = props;
 
-	const { toggleNavigation } = React.useContext(NavigationContext);
+	const {toggleNavigation} = React.useContext(NavigationContext);
 
 	return (
 		<Dust dust={dust} height="100vh">
 			<>
 				<Container>
-					<Header />
+					<Header/>
 					<Jumbotron>
 						<h1><span>Full Stack</span> Software Engineer.</h1>
 						<h2>I focus on the front-end & back-end of cloud native applications.</h2>
 					</Jumbotron>
-					<div id="overlay" onClick={() => toggleNavigation()} />
+					<div id="overlay" onClick={() => toggleNavigation()}/>
 				</Container>
-				<Wave />
+				<Wave/>
 			</>
 		</Dust>
 	)
