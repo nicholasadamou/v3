@@ -8,6 +8,8 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import {faArrowUp, faBookOpen, faCodeBranch, faFileCode, faHeart, faStar, faBars} from '@fortawesome/free-solid-svg-icons';
 
+import NavigationProvider from "providers/NavigationProvider";
+
 import PageWrapper from 'sass/PageWrapper';
 
 import Hero from 'sections/Hero';
@@ -21,7 +23,9 @@ const IndexPage = ({data}) => {
 	return (
 		<Layout>
 			<PageWrapper>
-				<Hero dust={data.dust.edges}/>
+				<NavigationProvider>
+					<Hero dust={data.dust.edges}/>
+				</NavigationProvider>
 			</PageWrapper>
 		</Layout>
 	);

@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import NavigationContext from "contexts/NavigationContext";
+
 import Dust from 'components/Dust';
 import Wave from 'components/Wave';
 
@@ -259,8 +261,8 @@ const Jumbotron = styled.div`
 	}
 `;
 
-const Header = (props) => {
-	const { isOpen, open } = props;
+const MobileNavigation = (props) => {
+	const { isOpen, toggleNavigation } = React.useContext(NavigationContext);
 
 	const overlay = document.querySelector('#overlay');
 	const mobileNav = document.querySelector('#mobile-nav');
@@ -271,9 +273,8 @@ const Header = (props) => {
 	}
 
 	return (
-		<header>
-			<Logo id="logo" />
-			<span id="mobile-nav-toggle" onClick={() => open(!isOpen)}>
+		<>
+			<span id="mobile-nav-toggle" onClick={() => toggleNavigation()}>
 				<FontAwesomeIcon icon={['fas', 'bars']} />
 			</span>
 			<ul id="mobile-nav">
@@ -326,67 +327,78 @@ const Header = (props) => {
 					</a>
 				</li>
 			</ul>
-			<nav>
-			<span id="resume">
-				<FontAwesomeIcon icon={['fas', 'book-open']} />
-				<a
-					href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
-					target="_blank"
-					aria-hidden="true"
-					rel="noopener noreferrer"
-					className="link"
-				>
-					Resume
-				</a>
-			</span>
-				<span>|</span>
-				<a
-					href="https://github.com/nicholasadamou"
-					target="_blank"
-					aria-hidden="true"
-					rel="noopener noreferrer"
-					className="link"
-				>
-					<FontAwesomeIcon icon={['fab', 'github']} />
-				</a>
-				<a
-					href="https://codepen.io/nicholasadamou"
-					target="_blank"
-					aria-hidden="true"
-					rel="noopener noreferrer"
-					className="link"
-				>
-					<FontAwesomeIcon icon={['fab', 'codepen']} />
-				</a>
-				<a
-					href="https://www.linkedin.com/in/nicholas-adamou"
-					target="_blank"
-					aria-hidden="true"
-					rel="noopener noreferrer"
-					className="link"
-				>
-					<FontAwesomeIcon icon={['fab', 'linkedin']} />
-				</a>
-			</nav>
-		</header>
+		</>
 	)
 }
+
+const Navigation = (props) => (
+	<nav>
+		<span id="resume">
+			<FontAwesomeIcon icon={['fas', 'book-open']} />
+			<a
+				href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
+				target="_blank"
+				aria-hidden="true"
+				rel="noopener noreferrer"
+				className="link"
+			>
+				Resume
+			</a>
+		</span>
+		<span>|</span>
+		<a
+			href="https://github.com/nicholasadamou"
+			target="_blank"
+			aria-hidden="true"
+			rel="noopener noreferrer"
+			className="link"
+		>
+			<FontAwesomeIcon icon={['fab', 'github']} />
+		</a>
+		<a
+			href="https://codepen.io/nicholasadamou"
+			target="_blank"
+			aria-hidden="true"
+			rel="noopener noreferrer"
+			className="link"
+		>
+			<FontAwesomeIcon icon={['fab', 'codepen']} />
+		</a>
+		<a
+			href="https://www.linkedin.com/in/nicholas-adamou"
+			target="_blank"
+			aria-hidden="true"
+			rel="noopener noreferrer"
+			className="link"
+		>
+			<FontAwesomeIcon icon={['fab', 'linkedin']} />
+		</a>
+	</nav>
+)
+
+const Header = (props) => (
+	<header>
+		<Logo id="logo" />
+		<MobileNavigation />
+		<Navigation />
+	</header>
+)
 
 const Hero = (props) => {
 	const { dust } = props;
 
-	const [isOpen, open] = React.useState(false);
+	const { toggleNavigation } = React.useContext(NavigationContext);
 
 	return (
 		<Dust dust={dust} height="100vh">
 			<>
 				<Container>
-					<Header isOpen={isOpen} open={open} />
+					<Header />
 					<Jumbotron>
 						<h1><span>Full Stack</span> Software Engineer.</h1>
 						<h2>I focus on the front-end & back-end of cloud native applications.</h2>
 					</Jumbotron>
-					<div id="overlay" onClick={() => open(!isOpen)} />
+					<div id="overlay" onClick={() => toggleNavigation()} />
 				</Container>
 				<Wave />
 			</>

@@ -32,6 +32,8 @@ module.exports = {
           assets: 'src/assets',
           images: 'src/assets/images',
           components: 'src/components',
+		  contexts: 'src/contexts',
+		  providers: 'src/providers',
           sections: 'src/sections',
           hooks: 'src/hooks',
           sass: 'src/sass',
