@@ -2,190 +2,20 @@ import * as React from 'react';
 
 import styled from 'styled-components';
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-
 import NavigationContext from "contexts/NavigationContext";
 
 import Dust from 'components/Dust';
+import Header from 'components/Header';
 import Wave from 'components/Wave';
 
-import {device, until} from 'utilities/mixins'
+import Overlay from 'sass/Overlay';
 
-import Logo from 'images/nicholas-adamou.svg';
+import {device, until} from 'utilities/mixins';
 
 const Container = styled.div`
 	margin: 0 2rem;
 
 	color: var(--white);
-
-	overflow: hidden;
-
-	#overlay {
-		display: none;
-
-		position: absolute;
-
-		inset: 0;
-
-		background-color: black;
-
-		opacity: 0.8;
-	}
-
-	header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		position: absolute;
-		top: -30px;
-		left: 0;
-
-		width: 100%;
-
-		padding: 0 2rem;
-
-		${until(
-			device.iPhone(),
-			() => `
-				top: -36px;
-			`
-		)}
-		#logo {
-			width: 150px;
-
-			${until(
-				device.iPhone(),
-				() => `
-				width: 150px;
-			`
-			)}
-		}
-
-		#mobile-nav-toggle {
-			display: none;
-
-			font-size: 32px;
-			color: var(--blue);
-
-			cursor: pointer;
-
-			${until(
-				device.iPhone(),
-				() => `
-				display: block;
-			`
-			)}
-		}
-
-		#mobile-nav {
-			display: none;
-
-			${until(
-				device.iPhone(),
-				() => `
-				padding: 20px;
-
-				list-style-type: none;
-
-				position: absolute;
-				bottom: -100vh;
-				left: 0;
-
-				border-top-left-radius: 20px;
-				border-top-right-radius: 20px;
-				border-top: 5px solid var(--blue);
-
-				height: 31rem;
-				width: 100%;
-
-				background-color: #111122;
-
-				z-index: 1;
-
-				li {
-					display: flex;
-					flex-direction: row;
-					align-items: center;
-					gap: 16px;
-
-					padding: 16px 0;
-
-					&:first-child {
-						border-bottom: 1px solid #3a2139;
-					}
-
-					a, svg {
-						color: var(--blue);
-					}
-
-					svg {
-						font-size: 24px;
-					}
-
-					a {
-						font-size: 18px;
-
-						text-decoration: none;
-
-						&:hover {
-							text-decoration: underline;
-						}
-					}
-				}
-			`
-			)}
-		}
-
-		nav {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 10px;
-
-			${until(
-				device.iPhone(),
-				() => `
-				display: none;
-			`
-			)}
-			a {
-				color: var(--white);
-			}
-
-			.fa-book-open, span:nth-child(2) {
-				font-size: 18px;
-
-				color: var(--blue);
-			}
-
-			a {
-				margin-left: 10px;
-
-				font-size: 18px;
-			}
-
-			svg {
-				font-size: 24px;
-			}
-
-			#resume {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-
-				a {
-					color: var(--blue);
-
-					text-decoration: none;
-
-					&:hover {
-						text-decoration: underline;
-					}
-				}
-			}
-		}
-	}
 `;
 
 const Jumbotron = styled.div`
@@ -264,147 +94,21 @@ const Jumbotron = styled.div`
 	}
 `;
 
-const MobileNavigation = (props) => {
-	const {isOpen, toggleNavigation} = React.useContext(NavigationContext);
-
-	const mobileNav = document.querySelector('#mobile-nav');
-	const overlay = document.querySelector('#overlay');
-
-	if (mobileNav !== null) {
-		mobileNav.style.display = isOpen ? 'block' : 'none';
-	}
-
-	if (overlay !== null) {
-		overlay.style.display = isOpen ? 'block' : 'none';
-	}
-
-	return (
-		<>
-			<span id="mobile-nav-toggle" onClick={() => toggleNavigation()}>
-				<FontAwesomeIcon icon={['fas', 'bars']}/>
-			</span>
-			<ul id="mobile-nav">
-				<li>
-					<FontAwesomeIcon icon={['fas', 'book-open']}/>
-					<a
-						href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						Resume
-					</a>
-				</li>
-				<li>
-					<FontAwesomeIcon icon={['fab', 'github']}/>
-					<a
-						href="https://github.com/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						GitHub
-					</a>
-				</li>
-				<li>
-					<FontAwesomeIcon icon={['fab', 'codepen']}/>
-					<a
-						href="https://codepen.io/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						CodePen
-					</a>
-				</li>
-				<li>
-					<FontAwesomeIcon icon={['fab', 'linkedin']}/>
-					<a
-						href="https://www.linkedin.com/in/nicholas-adamou"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						Linkedin
-					</a>
-				</li>
-			</ul>
-		</>
-	)
-}
-
-const Navigation = (props) => (
-	<nav>
-		<span id="resume">
-			<FontAwesomeIcon icon={['fas', 'book-open']}/>
-			<a
-				href="https://drive.google.com/file/d/1p819Jx1v50zcBD_DnCo0paoiSnqBXw41/view?usp=sharing"
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-				className="link"
-			>
-				Resume
-			</a>
-		</span>
-		<span>|</span>
-		<a
-			href="https://github.com/nicholasadamou"
-			target="_blank"
-			aria-hidden="true"
-			rel="noopener noreferrer"
-			className="link"
-		>
-			<FontAwesomeIcon icon={['fab', 'github']}/>
-		</a>
-		<a
-			href="https://codepen.io/nicholasadamou"
-			target="_blank"
-			aria-hidden="true"
-			rel="noopener noreferrer"
-			className="link"
-		>
-			<FontAwesomeIcon icon={['fab', 'codepen']}/>
-		</a>
-		<a
-			href="https://www.linkedin.com/in/nicholas-adamou"
-			target="_blank"
-			aria-hidden="true"
-			rel="noopener noreferrer"
-			className="link"
-		>
-			<FontAwesomeIcon icon={['fab', 'linkedin']}/>
-		</a>
-	</nav>
-)
-
-const Header = (props) => (
-	<header>
-		<Logo id="logo"/>
-		<MobileNavigation/>
-		<Navigation/>
-	</header>
-)
-
 const Hero = (props) => {
 	const {dust} = props;
 
-	const { toggleNavigation} = React.useContext(NavigationContext);
+	const { toggleNavigation } = React.useContext(NavigationContext);
 
 	return (
 		<Dust dust={dust} height="100vh">
 			<>
 				<Container>
-					<Header/>
+					<Header />
 					<Jumbotron>
 						<h1><span>Full Stack</span> Software Engineer.</h1>
 						<h2>I focus on the front-end & back-end of cloud native applications.</h2>
 					</Jumbotron>
-					<div id="overlay" onClick={() => toggleNavigation()} />
+					<Overlay id="overlay" onClick={() => toggleNavigation()} />
 				</Container>
 				<Wave/>
 			</>

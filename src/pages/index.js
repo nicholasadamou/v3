@@ -10,8 +10,6 @@ import {faArrowUp, faBookOpen, faCodeBranch, faFileCode, faHeart, faStar, faBars
 
 import NavigationProvider from "providers/NavigationProvider";
 
-import PageWrapper from 'sass/PageWrapper';
-
 import Hero from 'sections/Hero';
 
 import Layout from 'components/Layout';
@@ -22,11 +20,9 @@ const IndexPage = ({data}) => {
 	console.log(data);
 	return (
 		<Layout>
-			<PageWrapper>
-				<NavigationProvider>
-					<Hero dust={data.dust.edges} />
-				</NavigationProvider>
-			</PageWrapper>
+			<NavigationProvider>
+				<Hero dust={data.dust.edges} />
+			</NavigationProvider>
 		</Layout>
 	);
 }
