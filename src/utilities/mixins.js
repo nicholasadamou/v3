@@ -5,7 +5,8 @@ export const device = {
 	iPhone: () => '430px',
 	iPad: () => '768px',
 	iPadPro: () => '1024px',
-	iPadProLandscape: () => '1194px'
+	iPadProLandscape: () => '1194px',
+	MacbookAir: () => '1440px'
 };
 
 export const until = (device, content) => `

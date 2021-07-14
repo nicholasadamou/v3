@@ -19,29 +19,36 @@ const Container = styled.div`
 `;
 
 const Jumbotron = styled.div`
-	display: grid;
-	place-content: center;
+	display: flex;
+	flex-direction: column;
 
-	height: 90vh;
-
-	margin-left: -20rem;
+	margin-left: 5rem;
 
 	${until(
 		device.iPadProLandscape(),
 		() => `
-			margin-left: -10rem;
+			margin-left: 2rem;
 		`
 	)}
+
 	${until(
 		device.iPadPro(),
 		() => `
 			margin-left: 0;
 		`
 	)}
+
 	h1 {
 		font-family: var(--primary);
-		font-size: 3.6rem;
+		font-size: 5rem;
 		font-weight: 800;
+
+		${until(
+			device.MacbookAir(),
+			() => `
+			font-size: 3.6rem;
+		`
+		)}
 
 		${until(
 			device.iPhone(),
@@ -54,6 +61,7 @@ const Jumbotron = styled.div`
 			width: 100%;
 		`
 		)}
+
 		span {
 			font-size: inherit;
 			font-weight: inherit;
@@ -64,18 +72,27 @@ const Jumbotron = styled.div`
 
 	h2 {
 		font-family: var(--secondary);
-		font-size: 1.75rem;
+		font-size: 2.25rem;
 		font-weight: normal;
 		line-height: 2;
-
-		width: 70%;
 
 		margin-top: 10px;
 
 		${until(
+			device.MacbookAir(),
+			() => `
+			font-size: 1.75rem;
+		`
+		)}
+
+		${until(
 			device.iPadPro(),
 			() => `
-			width: 95%;
+			width: 90%;
+
+			br {
+				display: none;
+			}
 		`
 		)}
 
@@ -84,11 +101,11 @@ const Jumbotron = styled.div`
 			() => `
 			margin-top: 10px;
 
-			font-size: 1.7rem;
+			font-size: 1.5rem;
 			font-weight: medium;
 			line-height: 2;
 
-			width: 95%;
+			width: 100%;
 		`
 		)}
 	}
@@ -106,7 +123,11 @@ const Hero = (props) => {
 					<Header />
 					<Jumbotron>
 						<h1><span>Full Stack</span> Software Engineer.</h1>
-						<h2>I focus on the front-end & back-end of cloud native applications.</h2>
+						<h2>
+							I focus on the front-end & back-end of{' '}
+							<br />
+							cloud native applications.
+						</h2>
 					</Jumbotron>
 					<Overlay id="overlay" onClick={() => toggleNavigation()} />
 				</Container>
