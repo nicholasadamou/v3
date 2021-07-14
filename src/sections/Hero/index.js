@@ -40,7 +40,7 @@ const Jumbotron = styled.div`
 
 	h1 {
 		font-family: var(--primary);
-		font-size: 5rem;
+		font-size: 4rem;
 		font-weight: 800;
 
 		${until(
@@ -72,7 +72,7 @@ const Jumbotron = styled.div`
 
 	h2 {
 		font-family: var(--secondary);
-		font-size: 2.25rem;
+		font-size: 2rem;
 		font-weight: normal;
 		line-height: 2;
 

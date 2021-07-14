@@ -4,6 +4,7 @@
 export const device = {
 	iPhone: () => '430px',
 	iPad: () => '768px',
+	iPadProVertical: () => '834px',
 	iPadPro: () => '1024px',
 	iPadProLandscape: () => '1194px',
 	MacbookAir: () => '1440px'

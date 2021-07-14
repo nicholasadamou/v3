@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
 		--white: #fafafa;
 		--black: #212121;
 		--light-grey: #ccc;
+		--grey: #f5f5f5;
 		--yellow: #ffd602;
 		--blue: #5496FF;
 
@@ -29,6 +30,10 @@ const GlobalStyles = createGlobalStyle`
 
 		--loading: var(--light-black);
 		--background: var(--white);
+	}
+
+	#linkedin {
+		color: var(--linkedin);
 	}
 
 	*,
@@ -73,7 +78,7 @@ const GlobalStyles = createGlobalStyle`
 	}
 
 	body {
-		font-family: var(--primary);
+		font-family: var(--secondary);
 		color: var(--copy);
 
 		-webkit-text-size-adjust: 100%;
@@ -122,16 +127,16 @@ const GlobalStyles = createGlobalStyle`
 		${until(
       device.iPad(),
       () => `
-	  font-size: 4rem;
+	  	font-size: 4rem;
 	  `
-    )}
+  	  )}
 
 		${until(
       device.iPhone(),
       () => `
-		font-size: 1.7rem;
+			font-size: 1.7rem;
 		`
-    )}
+		)}
 	}
 
 	h3 {
@@ -141,42 +146,9 @@ const GlobalStyles = createGlobalStyle`
 		${until(
       device.iPhone(),
       () => `
-		font-size: 1.5rem;
+			font-size: 1.5rem;
 		`
-    )}
-	}
-
-	.title {
-		margin: 25px 0;
-
-		line-height: 1;
-
-		color: var(--copy);
-	}
-
-	.subtitle {
-		margin-bottom: 50px;
-
-		font-family: var(--secondary);
-		color: darken(var(--light-grey), 15);
-		line-height: 1.5;
-
-		${until(
-      device.iPhone(),
-      () => `
-		font-size: 1.15rem;
-		margin-bottom: 25px !important;
-		`
-    )}
-	}
-
-	.link {
-		font-weight: normal;
-		font-style: normal;
-
-		&:hover {
-			color: var(--light-grey);
-		}
+		)}
 	}
 
 	p, blockquote, q, span, em, strong, aside {
@@ -192,14 +164,14 @@ const GlobalStyles = createGlobalStyle`
 		${until(
       device.iPhone(),
       () => `
-		font-size: var(--copy-size);
+			font-size: var(--copy-size);
 		`
-    )}
+    	)}
 	}
 
 	.link {
 		text-decoration: underline;
-		color: var(--copy);
+		color: var(--blue);
 
 		&:hover {
 			color: darken(var(--light-grey), 15);

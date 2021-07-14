@@ -11,8 +11,11 @@ import {faArrowUp, faBookOpen, faCodeBranch, faFileCode, faHeart, faStar, faBars
 import NavigationProvider from "providers/NavigationProvider";
 
 import Hero from 'sections/Hero';
+import Work from 'sections/Work';
 
 import Layout from 'components/Layout';
+
+import Container from 'sass/Container';
 
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode, faBookOpen, faBars);
 
@@ -23,6 +26,9 @@ const IndexPage = ({data}) => {
 			<NavigationProvider>
 				<Hero dust={data.dust.edges} />
 			</NavigationProvider>
+			<Container style={{ height: '80vh' }}>
+				<Work logos={data.logos.edges} badges={data.badges.edges} />
+			</Container>
 		</Layout>
 	);
 }
