@@ -45,8 +45,8 @@ const Container = styled.div`
 		top: -8500px;
 		left: -8000px;
 
-		height: 10000px;
-		width: 10000px;
+		height: 20000px;
+		width: 20000px;
 
 		animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
 		animation-name: float;

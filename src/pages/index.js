@@ -12,23 +12,26 @@ import NavigationProvider from "providers/NavigationProvider";
 
 import Hero from 'sections/Hero';
 import Work from 'sections/Work';
+import Projects from 'sections/Projects';
 
 import Layout from 'components/Layout';
-
-import Container from 'sass/Container';
 
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode, faBookOpen, faBars);
 
 const IndexPage = ({data}) => {
 	console.log(data);
+
+	const dust = data.dust.edges;
+	const logos = data.logos.edges;
+	const badges = data.badges.edges;
+
 	return (
 		<Layout>
-			<NavigationProvider>
-				<Hero dust={data.dust.edges} />
-			</NavigationProvider>
-			<Container style={{ height: '80vh' }}>
-				<Work logos={data.logos.edges} badges={data.badges.edges} />
-			</Container>
+				<NavigationProvider>
+					<Hero dust={dust} />
+				</NavigationProvider>
+				<Work logos={logos} badges={badges} />
+				<Projects />
 		</Layout>
 	);
 }

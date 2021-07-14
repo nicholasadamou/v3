@@ -16,18 +16,32 @@ const Container = styled.div`
 	margin: 0 2rem;
 
 	color: var(--white);
+
+	${until(
+		device.iPhone(),
+		() => `
+			margin: 0 1rem;
+		`
+	)}
 `;
 
 const Jumbotron = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	margin-left: 5rem;
+	margin-left: 20rem;
+
+	${until(
+		device.MacbookAir(),
+		() => `
+			margin-left: 10rem;
+		`
+	)}
 
 	${until(
 		device.iPadProLandscape(),
 		() => `
-			margin-left: 2rem;
+			margin-left: 1rem;
 		`
 	)}
 

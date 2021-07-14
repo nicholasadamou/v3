@@ -10,6 +10,7 @@ import 'carbon-components/scss/globals/scss/styles.scss';
 import 'bulma/css/bulma.min.css';
 
 import GlobalStyles from 'sass/GlobalStyles';
+import Zoom from 'sass/Zoom';
 
 const favicon = (icon) =>
   `
@@ -38,7 +39,7 @@ const Layout = (props) => {
   const { title, description, author } = site.siteMetadata;
 
   return (
-    <>
+    <Zoom>
       <GlobalStyles />
       <Helmet
         htmlAttributes={{ lang: 'en' }}
@@ -93,7 +94,7 @@ const Layout = (props) => {
       </Helmet>
 
       {props.children}
-    </>
+    </Zoom>
   );
 };
 

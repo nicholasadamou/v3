@@ -5,20 +5,18 @@ import styled from 'styled-components';
 import { device, until } from 'utilities/mixins';
 
 const Container = styled.div`
-	padding-left: 10rem;
-
 	${until(
-		device.iPadProLandscape(),
+		device.MacbookAir(),
 		() => `
-		padding-left: 3rem;
-	`
+			padding-left: 1rem;
+		`
 	)}
 
 	${until(
-		device.iPadPro(),
+		device.iPhone(),
 		() => `
-		padding-left: 0.75rem;
-	`
+			padding-left: 0;
+		`
 	)}
 
 	.title {
@@ -53,7 +51,7 @@ const Heading = (props) => {
 	const { title, subtitle, theme } = props;
 
 	return (
-		<Container theme={theme} className='heading-container'>
+		<Container theme={theme}>
  			<h3 className="title">{title}</h3>
 			{subtitle()}
 		</Container>
