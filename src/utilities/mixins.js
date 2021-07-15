@@ -12,9 +12,9 @@ export const device = {
 	Desktop: () => '1920px',
 };
 
-export const until = (device, content) => `
+export const until = (device, content, props = {}) => `
 		@media screen and (max-width: ${device}) {
-			${content()}
+			${content(props)}
 		}
 	`;
 

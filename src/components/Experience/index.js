@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import {GatsbyImage} from 'gatsby-plugin-image';
 
 import {device, until} from 'utilities/mixins';
+import { getImage } from 'utilities/utilities';
 
 const Container = styled.div`
 	display: flex;
@@ -30,13 +31,24 @@ const Container = styled.div`
 		left: 10px;
 
 		width: 100%;
-		height: 100%;
+		height: ${props => props.hasBadges ? '115%' : '100%'};
 
 		border-radius: 10px;
 
 		background-color: var(--black);
 
 		z-index: -1;
+
+		@media screen and (max-width: ${device.iPhone12()}) {
+			left: 5px;
+
+			width: 105%;
+			height: ${props => props.hasBadges ? '110%' : '100%'}
+		}
+
+		@media screen and (max-width: ${device.iPhone11()}) {
+			height: ${props => props.hasBadges ? '109%' : '100%'}
+		}
 	}
 
 	${until(
@@ -80,7 +92,7 @@ const Container = styled.div`
 		border-radius: 5%;
 	}
 
-	div {
+	.description {
 		display: flex;
 		flex-direction: column;
 
@@ -135,37 +147,147 @@ const Image = styled.img`
 	)}
 `;
 
-const Experience = (company, title, location, duration, description, image) => (
-	<Container className="experience">
-		{typeof image === 'string' ? (
-			<Image loading="lazy" src={image} alt={company}/>
-		) : (
-			<GatsbyImage image={image} alt={company}/>
+const Badges = styled.div`
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 16px;
+
+	position: absolute !important;
+	left: 2rem;
+	bottom: -3.8rem;
+
+	${until(
+		device.iPadPro(),
+		() => `
+			bottom: -4.25rem;
+		`
+	)}
+
+	${until(
+		device.iPhone12(),
+	() => `
+			left: 1.25rem;
+			bottom: -4.2rem;
+		`
+	)}
+
+	${until(
+	device.iPhone11(),
+	() => `
+			bottom: -4rem;
+		`
+	)}
+
+	h3, small {
+		color: var(--white);
+	}
+
+	h3 {
+		font-size: 1rem;
+		font-weight: 200; // Extra Light
+
+		margin-bottom: 3px;
+
+		${until(
+			device.iPhone12(),
+			() => `
+				font-size: 0.75rem;
+			`
 		)}
-		<div>
-			<strong>{company}</strong>
-			<p>{title}</p>
-			<aside>{duration}</aside>
-			<aside>{location}</aside>
-			<span>{description()}</span>
-		</div>
-		{/* <h3 className="title" style={{ fontSize: '1.6rem' }}>
-					Badges and Certifications
-					</h3>
-					<p className="subtitle" style={{ fontSize: '1.125rem' }}>
-					More can be found at my{' '}
-					<a
-						href="https://www.youracclaim.com/users/nicholas-adamou/badges"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						youracclaim
-					</a>{' '}
-					page.
-					</p> */}
-	</Container>
-);
+	}
+
+	small {
+		font-weight: 200; // Thin
+
+		${until(
+			device.iPhone12(),
+			() => `
+				font-size: 0.75rem;
+			`
+		)}
+
+		${until(
+			device.iPhone12(),
+			() => `
+				font-size: 0.70rem;
+			`
+		)}
+	}
+
+	.badges {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 16px;
+
+		${until(
+			device.iPhone12(),
+			() => `
+				gap: 10px;
+			`
+		)}
+
+		${until(
+			device.iPhone12(),
+			() => `
+				gap: 6px;
+			`
+		)}
+	}
+`;
+
+const Badge = styled.img`
+	width: 100%;
+`;
+
+const Experience = ({ company, title, location, duration, description, image, badges = [] }) => {
+	console.log(badges);
+	return (
+		<Container className="experience" hasBadges={badges.length > 0}>
+			{typeof image === 'string' ? (
+				<Image loading="lazy" src={image} alt={company}/>
+			) : (
+				<GatsbyImage image={image} alt={company}/>
+			)}
+			<div className="description">
+				<strong>{company}</strong>
+				<p>{title}</p>
+				<aside>{duration}</aside>
+				<aside>{location}</aside>
+				<span>{description()}</span>
+			</div>
+			{(badges.length > 0) && (
+				<Badges>
+					<div className="badges-heading">
+						<h3>Badges & Certifications</h3>
+						<small>
+							View more on{' '}
+							<a
+								href="https://www.youracclaim.com/users/nicholas-adamou/badges"
+								target="_blank"
+								aria-hidden="true"
+								rel="noopener noreferrer"
+								className="link"
+							>
+								youracclaim
+							</a>
+							{'.'}
+						</small>
+					</div>
+					<div className="badges">
+						{badges.map((badge, i) => (
+							typeof badge === 'string' ? (
+								<Badge key={i} loading="lazy" src={getImage(badge)} alt={`${company} badge`}/>
+							) : (
+								<GatsbyImage key={i} image={getImage(badge)} alt={`${company} badge`}/>
+							)
+						))}
+					</div>
+				</Badges>
+			)}
+		</Container>
+	)
+}
 
 export default Experience;
