@@ -32,10 +32,10 @@ const Experiences = styled.div`
 	`
 	)}
 	.experience:nth-child(even) {
-		margin: 3.5rem 0 7.5rem auto;
+		margin: 3.5rem 0 6.5rem auto;
 
 		${until(
-			device.iPadPro12Landscape(),
+			'2560px',
 			() => `
 			margin: 2.5rem 0 5.5rem auto
 		`
@@ -44,7 +44,7 @@ const Experiences = styled.div`
 		${until(
 			device.iPadPro(),
 			() => `
-			margin: 3.5rem 0 6.5rem auto;
+			margin: 2.5rem 0 5.5rem auto;
 		`
 		)}
 

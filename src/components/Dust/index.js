@@ -74,6 +74,14 @@ const Container = styled.div`
 		animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
 		animation-name: float;
 		animation-iteration-count: infinite;
+
+		${until(
+			'2560px',
+			() => `
+				width: 20000px;
+				height: 20000px;
+			`
+		)}
 	}
 
 	#img-1 {
