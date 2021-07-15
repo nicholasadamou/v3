@@ -13,7 +13,7 @@ const Container = styled.nav`
 	gap: 10px;
 
 	${until(
-		device.iPhone(),
+		device.iPhone12(),
 		() => `
 				display: none;
 			`

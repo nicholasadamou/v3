@@ -18,7 +18,7 @@ const Container = styled.div`
 	color: var(--white);
 
 	${until(
-		device.iPhone(),
+		device.iPhone12(),
 		() => `
 			margin: 0 1rem;
 		`
@@ -29,7 +29,11 @@ const Jumbotron = styled.div`
 	display: flex;
 	flex-direction: column;
 
-	margin-left: 20rem;
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+
+	margin-left: calc(20rem - 2rem);
 
 	${until(
 		device.MacbookAir(),
@@ -65,7 +69,7 @@ const Jumbotron = styled.div`
 		)}
 
 		${until(
-			device.iPhone(),
+			device.iPhone12(),
 			() => `
 			margin-top: 3rem;
 
@@ -111,15 +115,13 @@ const Jumbotron = styled.div`
 		)}
 
 		${until(
-			device.iPhone(),
+			device.iPhone12(),
 			() => `
 			margin-top: 10px;
 
 			font-size: 1.5rem;
 			font-weight: medium;
 			line-height: 2;
-
-			width: 100%;
 		`
 		)}
 	}
@@ -131,7 +133,7 @@ const Hero = (props) => {
 	const { toggleNavigation } = React.useContext(NavigationContext);
 
 	return (
-		<Dust dust={dust} height="100vh">
+		<Dust dust={dust} height="95vh">
 			<>
 				<Container>
 					<Header />

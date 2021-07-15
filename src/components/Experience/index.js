@@ -3,111 +3,153 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { GatsbyImage } from 'gatsby-plugin-image';
+import {GatsbyImage} from 'gatsby-plugin-image';
 
-import { device, until } from 'utilities/mixins';
+import {device, until} from 'utilities/mixins';
 
 const Container = styled.div`
-  display: flex;
-  align-items: flex-start;
+	display: flex;
+	align-items: flex-start;
 
-  width: 95%;
+	position: relative;
 
-  margin: 0 auto;
+	width: 80%;
 
-  padding-bottom: 20px;
+	padding: 1rem;
 
-  ${until(
-    device.iPhone(),
-    () => `
+	border: 1px solid #666666;
+	border-radius: 10px;
+
+	background-color: var(--white);
+
+	&:after {
+		content: '';
+
+		position: absolute;
+		top: 10px;
+		left: 10px;
+
+		width: 100%;
+		height: 100%;
+
+		border-radius: 10px;
+
+		background-color: var(--black);
+
+		z-index: -1;
+	}
+
+	${until(
+		device.iPadProVertical(),
+		() => `
 		display: block;
 
 		margin-bottom: 20px;
 		margin-left: 0;
 		margin-right: 0;
 
-		padding-bottom: 0;
+		padding-bottom: 20px;
+
+		width: 100%;
 
 		text-align: left;
 	`
-  )}
+	)}
 
-  img {
-    object-fit: inherit !important;
+	${until(
+		device.iPhone12(),
+		() => `
+		margin-bottom: 20px;
+		margin-left: -20px;
+		margin-right: 0;
 
-    border-radius: 5%;
-  }
+		width: 375px;
+	`
+	)}
 
-  div {
-    display: flex;
-    flex-direction: column;
+	${until(
+		device.iPhone11(),
+		() => `
+		width: 360px;
+	`
+	)}
 
-    position: relative;
+	img {
+		object-fit: inherit !important;
 
-    margin-left: 1rem;
+		border-radius: 5%;
+	}
 
-    width: 100%;
+	div {
+		display: flex;
+		flex-direction: column;
 
-    text-align: left;
+		position: relative;
 
-    font-size: var(--copy-size);
+		margin-left: 1rem;
 
-    ${until(
-      device.iPhone(),
-      () => `
+		width: 100%;
+
+		text-align: left;
+
+		font-size: var(--copy-size);
+
+		${until(
+			device.iPhone12(),
+			() => `
 			margin: 0;
 			margin-top: 5px;
 		`
-    )}
-    aside {
-      color: #a6a6a6;
-    }
+		)}
+		aside {
+			color: #a6a6a6;
+		}
 
-    span {
-      margin-top: 5px;
+		span {
+			margin-top: 5px;
 
-      width: 90%;
+			width: 90%;
 
-      line-height: 1.6;
+			line-height: 1.6;
 
-      ${until(
-        device.iPhone(),
-        () => `
+			${until(
+				device.iPhone12(),
+				() => `
 				width: 100%;
 		`
-      )}
-    }
-  }
+			)}
+		}
+	}
 `;
 
 const Image = styled.img`
-  margin-top: 5px;
+	margin-top: 5px;
 
-  width: 50px;
+	width: 50px;
 
-  ${until(
-    device.iPhone(),
-    () => `
+	${until(
+		device.iPhone12(),
+		() => `
 		margin: 0;
 	`
-  )}
+	)}
 `;
 
 const Experience = (company, title, location, duration, description, image) => (
-  <Container className="experience">
-    {typeof image === 'string' ? (
-      <Image loading="lazy" src={image} alt={company} />
-    ) : (
-      <GatsbyImage image={image} alt={company} />
-    )}
-    <div>
-      <strong>{company}</strong>
-      <p>{title}</p>
-      <aside>{duration}</aside>
-      <aside>{location}</aside>
-      <span>{description()}</span>
-    </div>
-    {/* <h3 className="title" style={{ fontSize: '1.6rem' }}>
+	<Container className="experience">
+		{typeof image === 'string' ? (
+			<Image loading="lazy" src={image} alt={company}/>
+		) : (
+			<GatsbyImage image={image} alt={company}/>
+		)}
+		<div>
+			<strong>{company}</strong>
+			<p>{title}</p>
+			<aside>{duration}</aside>
+			<aside>{location}</aside>
+			<span>{description()}</span>
+		</div>
+		{/* <h3 className="title" style={{ fontSize: '1.6rem' }}>
 					Badges and Certifications
 					</h3>
 					<p className="subtitle" style={{ fontSize: '1.125rem' }}>
@@ -123,7 +165,7 @@ const Experience = (company, title, location, duration, description, image) => (
 					</a>{' '}
 					page.
 					</p> */}
-  </Container>
+	</Container>
 );
 
 export default Experience;

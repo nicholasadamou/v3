@@ -22,7 +22,7 @@ const Container = styled.div`
   }
 
   ${until(
-    device.iPhone(),
+    device.iPhone12(),
     () => `
 			.header {
 				font-size: 28px;
@@ -35,7 +35,7 @@ const Container = styled.div`
   }
 
   ${until(
-    device.iPhone(),
+    device.iPhone12(),
     () => `
 			.desc {
 				font-size: 18px;
@@ -47,7 +47,7 @@ const Container = styled.div`
     font-size: 24px;
 
     ${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 			font-size: 18px;
 		`

@@ -20,7 +20,7 @@ const Repositories = styled.div`
 	margin: 0 auto;
 
 	${until(
-		device.iPhone(),
+		device.iPhone12(),
 		() => `
 		display: block;
 

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { device, until } from '../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const GlobalStyles = createGlobalStyle`
 	:root {
@@ -74,7 +74,16 @@ const GlobalStyles = createGlobalStyle`
 
 		background: none;
 
+		border-top: 20px solid var(--white);
+
 		overflow-x: hidden;
+
+		${until(
+			device.iPhone12(),
+			() => `
+			border-width: 10px;
+		`
+		)}
 	}
 
 	body {
@@ -132,7 +141,7 @@ const GlobalStyles = createGlobalStyle`
   	  )}
 
 		${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 			font-size: 1.7rem;
 		`
@@ -144,7 +153,7 @@ const GlobalStyles = createGlobalStyle`
 		font-weight: 700;
 
 		${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 			font-size: 1.5rem;
 		`
@@ -162,7 +171,7 @@ const GlobalStyles = createGlobalStyle`
 		line-height: 1.6;
 
 		${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 			font-size: var(--copy-size);
 		`

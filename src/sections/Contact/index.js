@@ -23,7 +23,7 @@ const Container = styled.section`
   }
 
   ${until(
-    device.iPhone(),
+    device.iPhone12(),
     () => `
 		width: 100%;
 	`
@@ -46,7 +46,7 @@ const Form = styled.form`
 	`
   )}
   ${until(
-    device.iPhone(),
+    device.iPhone12(),
     () => `
 		width: 90%;
 	`
@@ -65,7 +65,7 @@ const Form = styled.form`
     flex-grow: 0;
 
     ${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 			margin-right: 0;
 
@@ -109,7 +109,7 @@ const Form = styled.form`
     }
 
     ${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 			border-radius: 0;
 		`
@@ -121,7 +121,7 @@ const Form = styled.form`
     justify-content: flex-end;
 
     ${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 			-webkit-box-pack: center;
 			justify-content: center;
@@ -135,7 +135,7 @@ const Form = styled.form`
       text-align: right;
 
       ${until(
-        device.iPhone(),
+        device.iPhone12(),
         () => `
 				margin-top: 10px;
 			`
@@ -159,7 +159,7 @@ const Form = styled.form`
       }
 
       ${until(
-        device.iPhone(),
+        device.iPhone12(),
         () => `
 				width: 100%;
 

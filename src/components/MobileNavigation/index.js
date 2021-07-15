@@ -13,12 +13,12 @@ const Container = styled.div`
 		display: none;
 
 		font-size: 32px;
-		color: var(--blue);
+		color: var(--white);
 
 		cursor: pointer;
 
 		${until(
-			device.iPhone(),
+			device.iPhone12(),
 			() => `
 				display: block;
 			`
@@ -29,7 +29,7 @@ const Container = styled.div`
 		display: none;
 
 		${until(
-			device.iPhone(),
+			device.iPhone12(),
 			() => `
 				padding: 10px 20px;
 
@@ -41,12 +41,12 @@ const Container = styled.div`
 
 				border-top-left-radius: 20px;
 				border-top-right-radius: 20px;
-				border-top: 5px solid var(--blue);
+				border-top: 5px solid var(--white);
 
 				height: 31rem;
 				width: 100%;
 
-				background-color: #111122;
+				background-color: var(--black);
 
 				z-index: 1;
 
@@ -59,11 +59,11 @@ const Container = styled.div`
 					padding: 16px 0;
 
 					&:first-child {
-						border-bottom: 1px solid #3a2139;
+						border-bottom: 1px solid var(--white);
 					}
 
 					a, svg {
-						color: var(--blue);
+						color: var(--white);
 					}
 
 					svg {

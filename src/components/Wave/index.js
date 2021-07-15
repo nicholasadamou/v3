@@ -22,7 +22,7 @@ const Container = styled.span`
 		z-index: 2;
 
 		${until(
-			device.iPhone(),
+			device.iPhone12(),
 			() => `
 				width: 115%;
 			`

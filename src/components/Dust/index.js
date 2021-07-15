@@ -3,6 +3,7 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 import {findImageByName} from 'utilities/utilities';
+import {device, until} from 'utilities/mixins';
 
 const Container = styled.div`
 	display: grid;
@@ -12,9 +13,17 @@ const Container = styled.div`
 	height: ${props => props.height};
 	width: 100vw;
 
-	background: linear-gradient(135deg, var(--black) 0%, var(--blue) 100%);
+	background: linear-gradient(135deg, var(--black) 0%, var(--blue) 200%);
+	//background-color: var(--black);
 
 	overflow: hidden;
+
+	${until(
+		device.iPhone12(),
+		() => `
+		height: 100vh;
+	`
+	)}
 
 	#specks {
 		height: 100%;
@@ -60,7 +69,7 @@ const Container = styled.div`
 			findImageByName('dust1.jpg', props.dust).images.fallback.src});
 		background-repeat: repeat;
 
-		animation-duration: 600s;
+		animation-duration: 800s;
 	}
 
 	#img-2 {
@@ -70,7 +79,7 @@ const Container = styled.div`
 			findImageByName('dust2.jpg', props.dust).images.fallback.src});
 		background-repeat: repeat;
 
-		animation-duration: 450s;
+		animation-duration: 650s;
 	}
 
 	#img-3 {
@@ -80,7 +89,7 @@ const Container = styled.div`
 			findImageByName('dust3.jpg', props.dust).images.fallback.src});
 		background-repeat: repeat;
 
-		animation-duration: 350s;
+		animation-duration: 550s;
 	}
 
 	@keyframes twinkle {

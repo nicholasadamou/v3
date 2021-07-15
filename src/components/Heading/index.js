@@ -13,7 +13,7 @@ const Container = styled.div`
 	)}
 
 	${until(
-		device.iPhone(),
+		device.iPhone12(),
 		() => `
 			padding-left: 0;
 		`
@@ -38,7 +38,7 @@ const Container = styled.div`
 		line-height: 1.5;
 
 		${until(
-			device.iPhone(),
+			device.iPhone12(),
 			() => `
 			font-size: 1.15rem;
 			margin-bottom: 25px !important;

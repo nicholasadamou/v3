@@ -15,7 +15,7 @@ const Container = styled.header`
 	align-items: center;
 
 	position: absolute;
-	top: -30px;
+	top: -40px;
 	left: 0;
 
 	width: 100%;
@@ -23,7 +23,7 @@ const Container = styled.header`
 	padding: 0 2rem;
 
 	${until(
-		device.iPhone(),
+		device.iPhone12(),
 		() => `
 				top: -36px;
 			`
@@ -32,9 +32,11 @@ const Container = styled.header`
 		width: 150px;
 
 		${until(
-			device.iPhone(),
+			device.iPhone12(),
 			() => `
 				width: 150px;
+
+				margin-left: -16px;
 			`
 		)}
 	}

@@ -42,7 +42,7 @@ const Container = styled.footer`
     )}
 
     ${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 		width: 80%;
 	`
@@ -72,7 +72,7 @@ const Container = styled.footer`
     opacity: 0.25;
 
     ${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 				margin-bottom: 10px;
 			`
@@ -85,7 +85,7 @@ const Container = styled.footer`
     font-size: 0.95rem;
 
     ${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 				font-size: 1rem;
 			`

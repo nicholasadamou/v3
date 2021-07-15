@@ -36,7 +36,7 @@ const Container = styled.article`
 		`
 	)}
 	${until(
-		device.iPhone(),
+		device.iPhone12(),
 		() => `
 		width: 100%;
 		max-width: 100%;

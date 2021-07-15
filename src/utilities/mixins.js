@@ -2,7 +2,8 @@
 /* eslint-disable import/no-anonymous-default-export */
 
 export const device = {
-	iPhone: () => '430px',
+	iPhone11: () => '375px',
+	iPhone12: () => '430px',
 	iPad: () => '768px',
 	iPadProVertical: () => '834px',
 	iPadPro: () => '1024px',

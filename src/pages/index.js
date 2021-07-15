@@ -15,6 +15,7 @@ import Work from 'sections/Work';
 import Projects from 'sections/Projects';
 
 import Layout from 'components/Layout';
+import ScrollToTopButton from 'components/ScrollToTopButton';
 
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode, faBookOpen, faBars);
 
@@ -32,6 +33,7 @@ const IndexPage = ({data}) => {
 				</NavigationProvider>
 				<Work logos={logos} badges={badges} />
 				<Projects />
+				<ScrollToTopButton />
 		</Layout>
 	);
 }
