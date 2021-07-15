@@ -34,13 +34,6 @@ const Container = styled.div`
 
   opacity: 0.5;
 
-  ${until(
-    device.iPhone12(),
-    () => `
-			border-radius: 0;
-		`
-  )}
-
   svg {
     color: black;
   }

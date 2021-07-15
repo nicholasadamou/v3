@@ -25,16 +25,17 @@ const Container = styled.header`
 	${until(
 		device.iPhone12(),
 		() => `
-				top: -36px;
+				top: -50px;
 			`
 	)}
+
 	#logo {
 		width: 150px;
 
 		${until(
 			device.iPhone12(),
 			() => `
-				width: 150px;
+				width: 125px;
 
 				margin-left: -16px;
 			`

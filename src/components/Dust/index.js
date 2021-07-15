@@ -19,9 +19,23 @@ const Container = styled.div`
 	overflow: hidden;
 
 	${until(
-		device.iPhone12(),
+		device.MacbookAir(),
 		() => `
-		height: 100vh;
+		height: 85vh;
+	`
+	)}
+
+	${until(
+		device.iPadPro(),
+		() => `
+		height: 90vh;
+	`
+	)}
+
+	${until(
+		device.iPhone11(),
+		() => `
+		height: 85vh;
 	`
 	)}
 
@@ -54,8 +68,8 @@ const Container = styled.div`
 		top: -8500px;
 		left: -8000px;
 
-		height: 20000px;
-		width: 20000px;
+		height: 10000px;
+		width: 10000px;
 
 		animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
 		animation-name: float;
@@ -69,7 +83,7 @@ const Container = styled.div`
 			findImageByName('dust1.jpg', props.dust).images.fallback.src});
 		background-repeat: repeat;
 
-		animation-duration: 800s;
+		animation-duration: 600s;
 	}
 
 	#img-2 {
@@ -79,7 +93,7 @@ const Container = styled.div`
 			findImageByName('dust2.jpg', props.dust).images.fallback.src});
 		background-repeat: repeat;
 
-		animation-duration: 650s;
+		animation-duration: 450s;
 	}
 
 	#img-3 {
@@ -89,7 +103,7 @@ const Container = styled.div`
 			findImageByName('dust3.jpg', props.dust).images.fallback.src});
 		background-repeat: repeat;
 
-		animation-duration: 550s;
+		animation-duration: 350s;
 	}
 
 	@keyframes twinkle {

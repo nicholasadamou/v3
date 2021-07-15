@@ -12,7 +12,7 @@ const Container = styled.div`
 	#mobile-nav-toggle {
 		display: none;
 
-		font-size: 32px;
+		font-size: 28px;
 		color: var(--white);
 
 		cursor: pointer;
@@ -43,7 +43,7 @@ const Container = styled.div`
 				border-top-right-radius: 20px;
 				border-top: 5px solid var(--white);
 
-				height: 31rem;
+				height: 35rem;
 				width: 100%;
 
 				background-color: var(--black);

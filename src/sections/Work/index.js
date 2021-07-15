@@ -35,16 +35,23 @@ const Experiences = styled.div`
 		margin: 3.5rem 0 7.5rem auto;
 
 		${until(
-			device.iPadProVertical(),
+			device.iPadPro12Landscape(),
 			() => `
-			margin: 3.5rem 0 7.5rem 0;
+			margin: 2.5rem 0 5.5rem auto
+		`
+		)}
+
+		${until(
+			device.iPadPro(),
+			() => `
+			margin: 3.5rem 0 6.5rem auto;
 		`
 		)}
 
 		${until(
 			device.iPhone12(),
 			() => `
-			margin: 3.5rem 0 7rem -20px;
+			margin: 2.75rem 0 6rem -20px;
 		`
 		)}
 	}

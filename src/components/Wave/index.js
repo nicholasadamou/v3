@@ -24,6 +24,7 @@ const Container = styled.span`
 		${until(
 			device.iPhone12(),
 			() => `
+				left: -10px;
 				width: 115%;
 			`
 		)}

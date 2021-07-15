@@ -15,6 +15,7 @@ const Container = styled.div`
 	position: relative;
 
 	width: 80%;
+	max-width: 960px;
 
 	padding: 1rem;
 
@@ -31,7 +32,7 @@ const Container = styled.div`
 		left: 10px;
 
 		width: 100%;
-		height: ${props => props.hasBadges ? '115%' : '100%'};
+		height: ${props => props.hasBadges ? '110%' : '100%'};
 
 		border-radius: 10px;
 
@@ -43,11 +44,7 @@ const Container = styled.div`
 			left: 5px;
 
 			width: 105%;
-			height: ${props => props.hasBadges ? '110%' : '100%'}
-		}
-
-		@media screen and (max-width: ${device.iPhone11()}) {
-			height: ${props => props.hasBadges ? '109%' : '100%'}
+			height: ${props => props.hasBadges ? '107%' : '100%'}
 		}
 	}
 
@@ -155,12 +152,12 @@ const Badges = styled.div`
 
 	position: absolute !important;
 	left: 2rem;
-	bottom: -3.8rem;
+	bottom: -3.25rem;
 
 	${until(
 		device.iPadPro(),
 		() => `
-			bottom: -4.25rem;
+			bottom: -3.25rem;
 		`
 	)}
 
@@ -168,7 +165,9 @@ const Badges = styled.div`
 		device.iPhone12(),
 	() => `
 			left: 1.25rem;
-			bottom: -4.2rem;
+			bottom: -3.3rem;
+
+			gap: 10px;
 		`
 	)}
 
@@ -190,15 +189,22 @@ const Badges = styled.div`
 		margin-bottom: 3px;
 
 		${until(
+			device.iPadProLandscape(),
+			() => `
+				margin-bottom: 0;
+			`
+		)}
+
+		${until(
 			device.iPhone12(),
 			() => `
-				font-size: 0.75rem;
+				font-size: 0.9rem;
 			`
 		)}
 	}
 
 	small {
-		font-weight: 200; // Thin
+		font-weight: 100; // Extra Light
 
 		${until(
 			device.iPhone12(),
@@ -210,7 +216,7 @@ const Badges = styled.div`
 		${until(
 			device.iPhone12(),
 			() => `
-				font-size: 0.70rem;
+				font-size: 0.78rem;
 			`
 		)}
 	}
@@ -231,7 +237,7 @@ const Badges = styled.div`
 		${until(
 			device.iPhone12(),
 			() => `
-				gap: 6px;
+				gap: 10px;
 			`
 		)}
 	}

@@ -81,7 +81,7 @@ const GlobalStyles = createGlobalStyle`
 		${until(
 			device.iPhone12(),
 			() => `
-			border-width: 10px;
+			border-width: 0;
 		`
 		)}
 	}
@@ -97,6 +97,8 @@ const GlobalStyles = createGlobalStyle`
 		line-height: 1.6;
 
 		background: var(--white);
+
+		overflow-x: hidden;
 	}
 
 	section {

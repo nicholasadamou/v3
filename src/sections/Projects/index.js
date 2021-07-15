@@ -24,7 +24,7 @@ const Repositories = styled.div`
 		() => `
 		display: block;
 
-		margin: 0;
+		margin: 4rem 0;
 
 		article {
 			padding: 0;

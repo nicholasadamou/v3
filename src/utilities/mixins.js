@@ -8,6 +8,7 @@ export const device = {
 	iPadProVertical: () => '834px',
 	iPadPro: () => '1024px',
 	iPadProLandscape: () => '1194px',
+	iPadPro12Landscape: () => '1366px',
 	MacbookAir: () => '1440px',
 	Desktop: () => '1920px',
 };

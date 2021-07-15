@@ -3,7 +3,14 @@ import styled from 'styled-components';
 import { device, until } from 'utilities/mixins';
 
 const Container = styled.div`
-	margin: 5rem 20rem;
+	margin: 5rem 46rem;
+
+	${until(
+		'2560px',
+		() => `
+			margin: 5rem 20rem;
+		`
+	)}
 
 	${until(
 		device.MacbookAir(),
