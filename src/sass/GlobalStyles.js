@@ -74,16 +74,7 @@ const GlobalStyles = createGlobalStyle`
 
 		background: none;
 
-		border-top: 20px solid var(--white);
-
 		overflow-x: hidden;
-
-		${until(
-			device.iPhone12(),
-			() => `
-			border-width: 0;
-		`
-		)}
 	}
 
 	body {

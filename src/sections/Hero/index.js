@@ -61,7 +61,7 @@ const Jumbotron = styled.div`
 	h1 {
 		font-family: var(--primary);
 		font-size: 4rem;
-		font-weight: 800;
+		font-weight: 900;
 
 		${until(
 			device.MacbookAir(),

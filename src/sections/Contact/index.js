@@ -2,257 +2,311 @@
 import React from 'react';
 
 import styled from 'styled-components';
+
+import Container from 'sass/Container';
+import Section from 'sass/Section';
+
+import Heading from 'components/Heading';
 import WaveEmoji from 'components/WaveEmoji';
 
-import { device, until } from 'utilities/mixins';
-
-const Container = styled.section`
-  position: relative;
-
-  margin-bottom: 2rem;
-
-  width: 75%;
-
-  .title span {
-    font-size: 2rem;
-  }
-
-  .title:nth-child(2) {
-    margin-top: -15px;
-    margin-bottom: 30px;
-  }
-
-  ${until(
-    device.iPhone12(),
-    () => `
-		width: 100%;
-	`
-  )}
-`;
+import {device, until} from 'utilities/mixins';
 
 const Form = styled.form`
-  position: relative;
-  width: 100%;
-  margin: 20px auto 0;
+	position: relative;
 
-  ${until(
-    device.iPad(),
-    () => `
-		width: 100%;
+	width: 725px;
+	max-width: 725px;
+
+	margin: 0 auto;
+
+	zoom: 130%;
+
+	${until(
+		device.MacbookAir(),
+		() => `
+		width: 700px;
+		max-width: 7000px;
+
+		zoom: 110%;
 
 		.field.is-horizontal {
 			text-align: left;
 		}
 	`
-  )}
-  ${until(
-    device.iPhone12(),
-    () => `
+	)}
+
+	${until(
+		device.iPad(),
+		() => `
+		width: 100%;
+	`
+	)}
+
+	${until(
+		device.iPhone12(),
+		() => `
 		width: 90%;
 	`
-  )}
+	)}
 	button, label, input, textarea {
-    font-family: var(--secondary);
-    color: var(--black);
-  }
+		font-family: var(--secondary);
+		color: var(--black);
+	}
 
-  label {
-    font-weight: 400;
-    margin: 0 10px 0 0;
+	label {
+		font-weight: 700;
 
-    -webkit-box-flex: 0;
+		margin: 0 10px 0 0;
 
-    flex-grow: 0;
+		-webkit-box-flex: 0;
 
-    ${until(
-      device.iPhone12(),
-      () => `
+		flex-grow: 0;
+
+		${until(
+			device.iPhone12(),
+			() => `
 			margin-right: 0;
 
 			text-align: left;
 		`
-    )}
-  }
+		)}
+	}
 
-  input,
-  textarea {
-    background: transparent;
-    border: 5px solid var(--black);
-    border-radius: 10px;
+	input,
+	textarea {
+		background-color: var(--white);
 
-    -webkit-transition: all 150ms ease-in-out;
+		border: 1px solid var(--black);
+		border-radius: 10px;
 
-    transition: all 150ms ease-in-out;
+		-webkit-transition: all 150ms ease-in-out;
 
-    &::-webkit-input-placeholder {
-      color: var(--black);
-    }
+		transition: all 150ms ease-in-out;
 
-    &:-moz-placeholder {
-      color: var(--black);
-    }
+		&::-webkit-input-placeholder {
+			color: var(--black);
+			font-style: italic;
+		}
 
-    &::-moz-placeholder {
-      color: var(--black);
-    }
+		&:-moz-placeholder {
+			color: var(--black);
+			font-style: italic;
+		}
 
-    &:-ms-input-placeholder {
-      color: var(--black);
-    }
+		&::-moz-placeholder {
+			color: var(--black);
+			font-style: italic;
+		}
 
-    &:focus {
-      border-color: var(--black);
-    }
+		&:-ms-input-placeholder {
+			color: var(--black);
+			font-style: italic;
+		}
 
-    &:hover {
-      border-color: var(--black);
-    }
+		&:focus {
+			border-color: var(--black);
+		}
 
-    ${until(
-      device.iPhone12(),
-      () => `
-			border-radius: 0;
-		`
-    )}
-  }
+		&:hover {
+			border-color: var(--black);
+		}
+	}
 
-  div[data-name='field'] {
-    -webkit-box-pack: end;
-    justify-content: flex-end;
+	div[data-name='field'] {
+		-webkit-box-pack: end;
+		justify-content: flex-end;
 
-    ${until(
-      device.iPhone12(),
-      () => `
+		margin-bottom: 1.5rem;
+
+		${until(
+			device.iPhone12(),
+			() => `
 			-webkit-box-pack: center;
 			justify-content: center;
 
-			margin-bottom: 10px;
+			margin-bottom: 1.25rem;
 		`
-    )}
-    div[data-name="control"] {
-      width: 100%;
+		)}
 
-      text-align: right;
+		div[data-name="control"] {
+			position: relative;
 
-      ${until(
-        device.iPhone12(),
-        () => `
+			width: 100%;
+
+			text-align: right;
+
+			border-radius: 10px;
+
+			&:after {
+				content: '';
+
+				position: absolute;
+				top: 5px;
+				left: 5px;
+
+				width: 100%;
+				height: 100%;
+
+				border-radius: 10px;
+
+				background-color: var(--black);
+
+				z-index: -1;
+			}
+
+			${until(
+				device.iPhone12(),
+				() => `
 				margin-top: 10px;
 			`
-      )}
-    }
+			)}
+		}
 
-    button {
-      background: var(--black);
-      border-radius: 10px;
-      border: 5px solid var(--black);
-      width: 200px;
-      padding: 0;
+		button {
+			position: relative;
 
-      color: var(--white);
-      font-weight: bold;
+			margin-top: 1.5rem;
 
-      &:hover {
-        color: var(--white);
-        border: 5px solid var(--black);
-        background: var(--black);
-      }
+			padding: 1.5rem;
 
-      ${until(
-        device.iPhone12(),
-        () => `
+			background: var(--white);
+
+			border-radius: 10px;
+			border: 1px solid var(--black);
+
+			width: 150px;
+
+			color: var(--black);
+			font-weight: bold;
+
+			&:after {
+				content: '';
+
+				position: absolute;
+				top: 5px;
+				left: 3px;
+
+				width: 100%;
+				height: 100%;
+
+				border-radius: 10px;
+
+				background-color: var(--black);
+
+				z-index: -1;
+			}
+
+			&:hover {
+				background: var(--white);
+
+				border: 1px solid var(--black);
+
+				color: var(--black);
+			}
+
+			${until(
+				device.iPhone12(),
+				() => `
 				width: 100%;
 
 				margin-top: 10px;
-
-				border-radius: 0;
 			`
-      )}
-    }
-  }
+			)}
+		}
+	}
 `;
 
 const Contact = () => (
-  <Container>
-    <h2 className="title">
-      Want to say "Hi" <WaveEmoji />?
-    </h2>
-    <p className="subtitle">
-      Contact me via{' '}
-      <a
-        href="mailto:nicholasadamouemail@gmail.com?subject=Hello"
-        aria-hidden="true"
-        className="link"
-      >
-        email
-      </a>{' '}
-      for business inquiries.
-    </p>
+	<Container
+		style={{
+			marginTop: '-0.5rem'
+		}}
+	>
+		<Section>
+			<Heading
+				title={() => (
+					<h3 className="title">
+						Want to say "Hi" <WaveEmoji/>?
+					</h3>
+				)}
+				subtitle={() => (
+					<p className="subtitle">
+						Contact me via{' '}
+						<a
+							href="mailto:nicholasadamouemail@gmail.com?subject=Hello"
+							aria-hidden="true"
+							className="link"
+						>
+							email
+						</a>{' '}
+						for business inquiries.
+					</p>
+				)}
+			/>
 
-    <Form
-      action="https://formspree.io/nicholasadamouemail@gmail.com"
-      method="POST"
-    >
-      <div className="field is-horizontal" data-name="field">
-        <label className="field-label" htmlFor="name">
-          Name
-        </label>
-        <div className="control" data-name="control">
-          <input
-            className="input"
-            type="text"
-            name="name"
-            placeholder="Your name"
-            aria-label="name"
-          />
-        </div>
-      </div>
+			<Form
+				action="https://formspree.io/nicholasadamouemail@gmail.com"
+				method="POST"
+			>
+				<div className="field is-horizontal" data-name="field">
+					<label className="field-label" htmlFor="name">
+						Name
+					</label>
+					<div className="control" data-name="control">
+						<input
+							className="input"
+							type="text"
+							name="name"
+							placeholder="Your name"
+							aria-label="name"
+						/>
+					</div>
+				</div>
 
-      <div className="field is-horizontal" data-name="field">
-        <label className="field-label" htmlFor="email">
-          Email
-        </label>
-        <div className="control" data-name="control">
-          <input
-            className="input"
-            type="email"
-            name="email"
-            placeholder="Your email"
-            aria-label="email"
-          />
-        </div>
-      </div>
+				<div className="field is-horizontal" data-name="field">
+					<label className="field-label" htmlFor="email">
+						Email
+					</label>
+					<div className="control" data-name="control">
+						<input
+							className="input"
+							type="email"
+							name="email"
+							placeholder="Your email"
+							aria-label="email"
+						/>
+					</div>
+				</div>
 
-      <div className="field is-horizontal" data-name="field">
-        <label className="field-label" htmlFor="message">
-          Message
-        </label>
-        <div className="control" data-name="control">
-          <textarea
-            className="textarea"
-            name="message"
-            placeholder="Your message"
-            aria-label="message"
-          />
-        </div>
-      </div>
+				<div className="field is-horizontal" data-name="field">
+					<label className="field-label" htmlFor="message">
+						Message
+					</label>
+					<div className="control" data-name="control">
+			  <textarea
+				  className="textarea"
+				  name="message"
+				  placeholder="Your message"
+				  aria-label="message"
+			  />
+					</div>
+				</div>
 
-      <div className="field is-grouped" data-name="field">
-        <div className="control" data-name="control">
-          <button className="button is-link" type="submit">
-            Send Message
-          </button>
-        </div>
-      </div>
+				<div className="field is-grouped" data-name="field">
+					<button className="button is-link" type="submit">
+						Send Message
+					</button>
+				</div>
 
-      <input type="hidden" name="_next" value="/form-success" />
-      <input
-        type="hidden"
-        name="_subject"
-        value="New Submission from nicholasadamou.com/"
-      />
-    </Form>
-  </Container>
+				<input type="hidden" name="_next" value="/form-success"/>
+				<input
+					type="hidden"
+					name="_subject"
+					value="New Submission from nicholasadamou.com/"
+				/>
+			</Form>
+		</Section>
+	</Container>
 );
 
 export default Contact;

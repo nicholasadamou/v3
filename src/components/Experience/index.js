@@ -19,7 +19,7 @@ const Container = styled.div`
 
 	padding: 1rem;
 
-	border: 1px solid #666666;
+	border: 1px solid var(--black);
 	border-radius: 10px;
 
 	background-color: var(--white);
@@ -51,6 +51,13 @@ const Container = styled.div`
 			height: ${props => props.hasBadges ? '107%' : '100%'}
 		}
 	}
+
+	${until(
+		device.MacbookAir(),
+		() => `
+		width: 90%;
+	`
+	)}
 
 	${until(
 		device.iPadProVertical(),

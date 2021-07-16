@@ -13,6 +13,8 @@ import NavigationProvider from "providers/NavigationProvider";
 import Hero from 'sections/Hero';
 import Work from 'sections/Work';
 import Projects from 'sections/Projects';
+import Contact from 'sections/Contact';
+import Footer from 'sections/Footer';
 
 import Layout from 'components/Layout';
 import ScrollToTopButton from 'components/ScrollToTopButton';
@@ -33,6 +35,8 @@ const IndexPage = ({data}) => {
 				</NavigationProvider>
 				<Work logos={logos} badges={badges} />
 				<Projects />
+				<Contact />
+				<Footer />
 				<ScrollToTopButton />
 		</Layout>
 	);

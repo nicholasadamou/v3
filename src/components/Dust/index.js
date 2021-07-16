@@ -76,7 +76,7 @@ const Container = styled.div`
 		animation-iteration-count: infinite;
 
 		${until(
-			'2560px',
+			'3200px',
 			() => `
 				width: 20000px;
 				height: 20000px;

@@ -14,10 +14,8 @@ import {device, until} from 'utilities/mixins';
 import Section from 'sass/Section';
 import Container from 'sass/Container';
 
-import './index.scss';
-
 const Experiences = styled.div`
-	padding: 0 4rem;
+	padding: 0 6rem;
 
 	${until(
 		device.iPadProVertical(),

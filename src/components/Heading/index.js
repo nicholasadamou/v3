@@ -24,9 +24,13 @@ const Container = styled.div`
 		margin-bottom: 10px !important;
 
 		font-family: var(--primary);
-		font-weight: bolder;
+		font-weight: 900;
 		color: ${props => props.theme === 'dark' ? 'var(--white)' : 'var(--copy)'};
 		line-height: 1;
+
+		span {
+			font-size: inherit;
+		}
 	}
 
 	.subtitle {
@@ -52,7 +56,12 @@ const Heading = (props) => {
 
 	return (
 		<Container theme={theme}>
- 			<h3 className="title">{title}</h3>
+			{typeof title === 'function'
+				?
+					title()
+				:
+					<h3 className="title">{title}</h3>
+			}
 			{subtitle()}
 		</Container>
 	)

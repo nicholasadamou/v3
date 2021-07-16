@@ -8,14 +8,14 @@ const Container = styled.div`
 	${until(
 		'2560px',
 		() => `
-			margin: 5rem 20rem;
+			margin: 1rem 32rem;
 		`
 	)}
 
 	${until(
 		device.MacbookAir(),
 		() => `
-			margin: 5rem 10rem;
+			margin: 1rem 10rem;
 		`
 	)}
 
@@ -25,7 +25,14 @@ const Container = styled.div`
 			width: 100%;
 			max-width: 100%;
 
-			margin: 2rem 0;
+			margin: 1rem 0;
+		`
+	)}
+
+	${until(
+		device.iPhone12(),
+		() => `
+			margin: 0;
 		`
 	)}
 `;
