@@ -13,9 +13,18 @@ const Container = styled.div`
 	)}
 
 	${until(
+		device.Desktop(),
+		() => `
+			margin: 1rem 16rem;
+		`
+	)}
+
+
+	${until(
 		device.MacbookAir(),
 		() => `
-			margin: 1rem 10rem;
+			margin: 0.5rem 6rem;
+    		margin-bottom: 1rem;
 		`
 	)}
 

@@ -18,15 +18,25 @@ const Experiences = styled.div`
 	padding: 0 6rem;
 
 	${until(
+		device.MacbookAir(),
+		() => `
+		margin: -1rem auto;
+		margin-bottom: 1rem;
+	`
+	)}
+
+	${until(
 		device.iPadProVertical(),
 		() => `
 		padding: 0;
 	`
 	)}
+
 	${until(
 		device.iPhone12(),
 		() => `
-		margin: 4rem 0;
+		margin: 2rem 0;
+		margin-bottom: 1rem;
 	`
 	)}
 	.experience:nth-child(even) {
@@ -57,7 +67,11 @@ const Experiences = styled.div`
 
 const Work = (props) => (
 	<Section>
-		<Container>
+		<Container
+			style={{
+				marginTop: '-1rem',
+			}}
+		>
 			<Heading
 				title="Work Experience"
 				subtitle={() => (

@@ -13,7 +13,7 @@ const Container = styled.div`
 	height: ${props => props.height};
 	width: 100vw;
 
-	background: linear-gradient(135deg, var(--black) 0%, var(--blue) 200%);
+	background: linear-gradient(135deg, var(--black) 0%, var(--white) 400%);
 	//background-color: var(--black);
 
 	overflow: hidden;
@@ -21,14 +21,14 @@ const Container = styled.div`
 	${until(
 		device.MacbookAir(),
 		() => `
-		height: 85vh;
+		height: 100vh;
 	`
 	)}
 
 	${until(
 		device.iPadPro(),
 		() => `
-		height: 90vh;
+		height: 95vh;
 	`
 	)}
 

@@ -40,7 +40,7 @@ const Jumbotron = styled.div`
 	${until(
 		device.MacbookAir(),
 		() => `
-			margin-left: 10rem;
+			margin-left: 5rem;
 		`
 	)}
 
@@ -135,7 +135,7 @@ const Hero = (props) => {
 	const { toggleNavigation } = React.useContext(NavigationContext);
 
 	return (
-		<Dust dust={dust} height="95vh">
+		<Dust dust={dust} height="100vh">
 			<>
 				<Container>
 					<Header />
@@ -149,7 +149,7 @@ const Hero = (props) => {
 					</Jumbotron>
 					<Overlay id="overlay" onClick={() => toggleNavigation()} />
 				</Container>
-				<Wave/>
+				{/*<Wave/>*/}
 			</>
 		</Dust>
 	)

@@ -20,11 +20,20 @@ const Repositories = styled.div`
 	margin: 0 auto;
 
 	${until(
+		device.MacbookAir(),
+		() => `
+		margin: -1rem auto;
+		margin-bottom: 1rem;
+	`
+	)}
+
+	${until(
 		device.iPhone12(),
 		() => `
 		display: block;
 
-		margin: 4rem 0;
+		margin: 2rem 0;
+		margin-bottom: 1rem;
 
 		article {
 			padding: 0;
@@ -47,7 +56,11 @@ const Projects = (props) => {
 				backgroundColor: 'var(--black)'
 			}}
 		>
-			<Container>
+			<Container
+				style={{
+					marginTop: '-1rem'
+				}}
+			>
 				<Heading
 					title="Projects"
 					subtitle={() => (

@@ -219,7 +219,8 @@ const Form = styled.form`
 const Contact = () => (
 	<Container
 		style={{
-			marginTop: '-0.5rem'
+			marginTop: '-1rem',
+			marginBottom: '-0.5rem'
 		}}
 	>
 		<Section>

@@ -18,13 +18,20 @@ const Container = styled.footer`
 	display: grid !important;
 	place-content: center;
 
-	padding: 10rem 0 3rem 0;
+	padding: 5rem 0 3rem 0;
 
 	text-align: center;
 
 	color: var(--white);
 
 	background-color: var(--black);
+
+	${until(
+		device.iPhone12(),
+		() => `
+			padding-top: 10rem;
+		`
+	)}
 
 	span > a {
 		line-height: 2;
@@ -37,15 +44,15 @@ const Container = styled.footer`
 		${until(
 			'956px',
 			() => `
-		width: 45%;
+			width: 45%;
 		`
 		)}
 
 		${until(
 			device.iPhone12(),
 			() => `
-		width: 80%;
-	`
+			width: 80%;
+		`
 		)}
 	}
 
