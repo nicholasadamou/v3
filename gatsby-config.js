@@ -31,8 +31,9 @@ module.exports = {
         aliases: {
           assets: 'src/assets',
           images: 'src/assets/images',
-          articles: 'src/assets/articles',
           components: 'src/components',
+		  contexts: 'src/contexts',
+		  providers: 'src/providers',
           sections: 'src/sections',
           hooks: 'src/hooks',
           sass: 'src/sass',
@@ -51,6 +52,14 @@ module.exports = {
         path: './src/assets/images',
       },
       __key: 'images',
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
     },
     'gatsby-plugin-netlify',
     {

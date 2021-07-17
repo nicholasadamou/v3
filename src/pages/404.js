@@ -6,9 +6,10 @@ import styled from 'styled-components';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import { device, until } from '../utilities/mixins';
 
-import Layout from '../components/Layout/Layout';
+import Layout from 'components/Layout';
+
+import { device, until } from 'utilities/mixins';
 
 library.add(faExclamationTriangle);
 
@@ -21,7 +22,7 @@ const Container = styled.div`
   }
 
   ${until(
-    device.iPhone(),
+    device.iPhone12(),
     () => `
 			.header {
 				font-size: 28px;
@@ -34,7 +35,7 @@ const Container = styled.div`
   }
 
   ${until(
-    device.iPhone(),
+    device.iPhone12(),
     () => `
 			.desc {
 				font-size: 18px;
@@ -46,7 +47,7 @@ const Container = styled.div`
     font-size: 24px;
 
     ${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
 			font-size: 18px;
 		`

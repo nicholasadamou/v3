@@ -1,47 +1,39 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { device, until } from '../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const GlobalStyles = createGlobalStyle`
 	:root {
 		--white: #fafafa;
 		--black: #212121;
-		--red: #fc4349;
-		--grey: #f5f5f5;
 		--light-grey: #ccc;
-		--light-black: #37474f;
-		--green: #10b500;
-		--yellow: #fff498;
+		--grey: #f5f5f5;
+		--yellow: #ffd602;
+		--blue: #5496FF;
 
 		--github: #161514;
-		--git: #fd7e14;
 		--codepen: #1e1f26;
-		--twitter: #55acee;
 		--linkedin: #0077b5;
-		--instagram: #e1306c;
-		--cornell: #583d78;
-		--blackbird: #3c4156;
-		--mack-media-group: #80bd01;
-		--ibm: #006699;
 		--netlify: #15837d;
 
-		--star: #ffd602;
-
-		--scrollbar: var(--white);
-		--scrollbar-bg: var(--black);
+		--scrollbar: var(--black);
+		--scrollbar-bg: var(--white);
 
 		--primary: "Roboto Slab";
-		--secondary: "Roboto";
+		--secondary: "Inter";
 
-		--highlight: var(--yellow);
-		--selection: var(--black);
+		--highlight: var(--blue);
+		--selection: var(--white);
 
 		--copy: var(--black);
 		--copy-size: 1rem;
-		--link: var(--light-black);
-		--title: var(--light-black);
+
 		--loading: var(--light-black);
 		--background: var(--white);
+	}
+
+	#linkedin {
+		color: var(--linkedin);
 	}
 
 	*,
@@ -81,10 +73,12 @@ const GlobalStyles = createGlobalStyle`
 		height: auto;
 
 		background: none;
+
+		overflow-x: hidden;
 	}
 
 	body {
-		font-family: var(--primary);
+		font-family: var(--secondary);
 		color: var(--copy);
 
 		-webkit-text-size-adjust: 100%;
@@ -94,6 +88,8 @@ const GlobalStyles = createGlobalStyle`
 		line-height: 1.6;
 
 		background: var(--white);
+
+		overflow-x: hidden;
 	}
 
 	section {
@@ -133,16 +129,16 @@ const GlobalStyles = createGlobalStyle`
 		${until(
       device.iPad(),
       () => `
-	  font-size: 4rem;
+	  	font-size: 4rem;
 	  `
-    )}
+  	  )}
 
 		${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
-		font-size: 1.7rem;
+			font-size: 1.7rem;
 		`
-    )}
+		)}
 	}
 
 	h3 {
@@ -150,43 +146,11 @@ const GlobalStyles = createGlobalStyle`
 		font-weight: 700;
 
 		${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
-		font-size: 1.5rem;
+			font-size: 1.5rem;
 		`
-    )}
-	}
-
-	.title {
-		margin: 25px 0;
-
-		line-height: 1;
-
-		color: var(--title);
-	}
-
-	.subtitle {
-		margin-bottom: 50px;
-
-		color: darken(#ccc, 15);
-		line-height: 1.5;
-
-		${until(
-      device.iPhone(),
-      () => `
-		font-size: 1.15rem;
-		margin-bottom: 25px !important;
-		`
-    )}
-	}
-
-	.link {
-		font-weight: normal;
-		font-style: normal;
-
-		&:hover {
-			color: var(--light-grey);
-		}
+		)}
 	}
 
 	p, blockquote, q, span, em, strong, aside {
@@ -200,19 +164,19 @@ const GlobalStyles = createGlobalStyle`
 		line-height: 1.6;
 
 		${until(
-      device.iPhone(),
+      device.iPhone12(),
       () => `
-		font-size: 1rem;
+			font-size: var(--copy-size);
 		`
-    )}
+    	)}
 	}
 
 	.link {
 		text-decoration: underline;
-		color: var(--link);
+		color: var(--blue);
 
 		&:hover {
-			color: darken(#ccc, 15);
+			color: darken(var(--light-grey), 15);
 		}
 	}
 `;

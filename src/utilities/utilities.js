@@ -23,6 +23,11 @@ export const findImageByName = (name = '', data = []) => {
   return image;
 };
 
+export const getImage = (image) => {
+	return image.node.childImageSharp.gatsbyImageData;
+}
+
 export default {
   findImageByName,
+	getImage
 };

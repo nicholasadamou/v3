@@ -2,73 +2,48 @@
 /* eslint-disable react/prop-types */
 import * as React from 'react';
 
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 
-import { getImage } from 'gatsby-plugin-image';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {fab} from '@fortawesome/free-brands-svg-icons';
+import {faArrowUp, faBookOpen, faCodeBranch, faFileCode, faHeart, faStar, faBars} from '@fortawesome/free-solid-svg-icons';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import {
-  faArrowUp,
-  faCodeBranch,
-  faHeart,
-  faStar,
-  faFileCode,
-} from '@fortawesome/free-solid-svg-icons';
+import NavigationProvider from "providers/NavigationProvider";
 
-import PageWrapper from 'sass/PageWrapper';
-import Container from 'sass/Container';
+import Hero from 'sections/Hero';
+import Work from 'sections/Work';
+import Projects from 'sections/Projects';
+import Contact from 'sections/Contact';
+import Footer from 'sections/Footer';
 
-import AboutMe from 'sections/AboutMe/AboutMe';
-// import Education from 'sections/Education/Education';
-import Work from 'sections/Work/Work';
-import OpenSource from 'sections/OpenSource/OpenSource';
-import Prototypes from 'sections/Prototypes/Prototypes';
-import Contact from 'sections/Contact/Contact';
+import Layout from 'components/Layout';
+import ScrollToTopButton from 'components/ScrollToTopButton';
 
-import Footer from 'sections/Footer/Footer';
+library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode, faBookOpen, faBars);
 
-import Layout from 'components/Layout/Layout';
-import ScrollToTopButton from 'components/ScrollToTopButton/ScrollToTopButton';
+const IndexPage = ({data}) => {
+	// console.log(data);
 
-library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode);
+	const dust = data.dust.edges;
+	const logos = data.logos.edges;
+	const badges = data.badges.edges;
 
-const IndexPage = ({ data }) => (
-  // console.log(data);
-  <Layout>
-    <PageWrapper>
-      <Container>
-        <AboutMe avatar={getImage(data.avatar)} />
-        <hr />
-        <Work logos={data.logos.edges} />
-        <hr />
-        {/* <Education logos={data.logos.edges} />
-        <hr /> */}
-        <OpenSource />
-        <hr />
-        <Prototypes />
-        <hr />
-        <Contact />
-      </Container>
-      <Footer avatar={data.avatar} />
-      <ScrollToTopButton />
-    </PageWrapper>
-  </Layout>
-);
+	return (
+		<Layout>
+				<NavigationProvider>
+					<Hero dust={dust} />
+				</NavigationProvider>
+				<Work logos={logos} badges={badges} />
+				<Projects />
+				<Contact />
+				<Footer />
+				<ScrollToTopButton />
+		</Layout>
+	);
+}
 
 export const query = graphql`
   query {
-    avatar: file(relativePath: { eq: "avatars/nicholas.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          layout: FIXED
-          quality: 90
-          width: 600
-          placeholder: BLURRED
-          formats: [AUTO, WEBP]
-        )
-      }
-    }
     logos: allFile(filter: { relativeDirectory: { eq: "logos" } }) {
       edges {
         node {
@@ -76,6 +51,35 @@ export const query = graphql`
             gatsbyImageData(
               layout: FIXED
               width: 50
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+      }
+    }
+    badges: allFile(filter: { relativeDirectory: { eq: "badges" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FIXED
+              width: 40
+              quality: 100
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
+          }
+        }
+      }
+    }
+    dust: allFile(filter: { relativeDirectory: { eq: "dust" } }) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData(
+              layout: FIXED
               quality: 100
               placeholder: BLURRED
               formats: [AUTO, WEBP]

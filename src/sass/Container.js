@@ -1,32 +1,56 @@
 import styled from 'styled-components';
 
-import { device, until } from '../utilities/mixins';
+import { device, until } from 'utilities/mixins';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	margin: 1rem 46rem;
 
-  margin: 10rem auto 0;
-
-  max-width: 970px;
-
-  background: white;
-
-  border-radius: 32px;
-
-  ${until(
-    device.iPad(),
-    () => `
-			border-radius: 0;
+	${until(
+		'2560px',
+		() => `
+			margin: 1rem 32rem;
 		`
-  )}
+	)}
 
-  section {
-    text-align: center;
-    color: var(--copy);
-  }
+	${until(
+		'2400px',
+		() => `
+			margin: 1rem 30rem;
+		`
+	)}
+
+	${until(
+		device.Desktop(),
+		() => `
+			margin: 1rem 16rem;
+		`
+	)}
+
+
+	${until(
+		device.MacbookAir(),
+		() => `
+			margin: 0.5rem 6rem;
+    		margin-bottom: 1rem;
+		`
+	)}
+
+	${until(
+		device.iPadProLandscape(),
+		() => `
+			width: 100%;
+			max-width: 100%;
+
+			margin: 1rem 0;
+		`
+	)}
+
+	${until(
+		device.iPhone12(),
+		() => `
+			margin: 0;
+		`
+	)}
 `;
 
 export default Container;
