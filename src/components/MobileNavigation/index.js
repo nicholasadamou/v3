@@ -99,7 +99,7 @@ const MobileNavigation = (props) => {
 		if (overlay !== null) {
 			overlay.style.display = isOpen ? 'block' : 'none';
 		}
-	}, []);
+	}, [isOpen]);
 
 	return (
 		<Container>
