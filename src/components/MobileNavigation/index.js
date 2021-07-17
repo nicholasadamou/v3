@@ -88,16 +88,18 @@ const Container = styled.div`
 const MobileNavigation = (props) => {
 	const {isOpen, toggleNavigation} = React.useContext(NavigationContext);
 
-	const mobileNav = document.querySelector('#mobile-nav');
-	const overlay = document.querySelector('#overlay');
+	React.useEffect(() => {
+		const mobileNav = document.querySelector('#mobile-nav');
+		const overlay = document.querySelector('#overlay');
 
-	if (mobileNav !== null) {
-		mobileNav.style.display = isOpen ? 'block' : 'none';
-	}
+		if (mobileNav !== null) {
+			mobileNav.style.display = isOpen ? 'block' : 'none';
+		}
 
-	if (overlay !== null) {
-		overlay.style.display = isOpen ? 'block' : 'none';
-	}
+		if (overlay !== null) {
+			overlay.style.display = isOpen ? 'block' : 'none';
+		}
+	}, []);
 
 	return (
 		<Container>
