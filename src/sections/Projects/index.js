@@ -76,9 +76,7 @@ const Projects = (props) => {
 				<Repositories>
 					{Repository('nicholasadamou', 'down-to-network', 'react', theme)}
 					{Repository('nicholasadamou', 'firebase-react-starter-kit', 'react', theme)}
-					{Repository('nicholasadamou', 'watson-chatbot', 'angular', theme)}
 					{Repository('nicholasadamou', 'react-iframe', 'react', theme)}
-					{Repository('nicholasadamou', 'node-cache', 'node', theme)}
 					{Repository('nicholasadamou', 'storage', 'react', theme)}
 					{Repository('nicholasadamou', 'krios-github-bot', 'node', theme)}
 					{Repository('nicholasadamou', 'toasty', 'react', theme)}
