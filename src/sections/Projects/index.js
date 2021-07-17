@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import Heading from 'components/Heading';
 import Repository from 'components/Repository';
+import FooterText from 'components/FooterText';
 
 import {device, until} from 'utilities/mixins';
 
@@ -82,6 +83,14 @@ const Projects = (props) => {
 					{Repository('nicholasadamou', 'toasty', 'react', theme)}
 					{Repository('nicholasadamou', 'jwt-spring-security-demo', 'java', theme)}
 				</Repositories>
+
+				{FooterText(
+					'More can be found on my ',
+					'GitHub',
+					'https://github.com/nicholasadamou',
+					'github',
+					theme
+				)}
 			</Container>
 		</Section>
 	)
