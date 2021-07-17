@@ -18,18 +18,16 @@ const Container = styled.footer`
 	display: grid !important;
 	place-content: center;
 
-	padding: 5rem 0 3rem 0;
+	height: 20vh;
 
 	text-align: center;
-
-	color: var(--white);
 
 	background-color: var(--black);
 
 	${until(
-		device.iPhone12(),
+		device.MacbookAir(),
 		() => `
-			padding-top: 10rem;
+			height: 30vh;
 		`
 	)}
 
@@ -143,90 +141,87 @@ const Footer = (props) => {
 	const {commit, updated_at} = repository;
 
 	return (
-		<div style={{position: 'relative'}}>
-			{/*<Wave flip />*/}
-			<Container>
-				<SocialMedia>
-					<a
-						href="https://github.com/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						<FontAwesomeIcon icon={['fab', 'github']}/>
-					</a>
-					<a
-						href="https://codepen.io/nicholasadamou"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						<FontAwesomeIcon icon={['fab', 'codepen']}/>
-					</a>
-					<a
-						href="https://www.linkedin.com/in/nicholas-adamou"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link"
-					>
-						<FontAwesomeIcon icon={['fab', 'linkedin']}/>
-					</a>
-				</SocialMedia>
+		<Container>
+			<SocialMedia>
+				<a
+					href="https://github.com/nicholasadamou"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link"
+				>
+					<FontAwesomeIcon icon={['fab', 'github']}/>
+				</a>
+				<a
+					href="https://codepen.io/nicholasadamou"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link"
+				>
+					<FontAwesomeIcon icon={['fab', 'codepen']}/>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/nicholas-adamou"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link linkedin"
+				>
+					<FontAwesomeIcon icon={['fab', 'linkedin']}/>
+				</a>
+			</SocialMedia>
+			<p>
+				Handcrafted with{' '}
+				<FontAwesomeIcon icon={['fas', 'heart']} style={{color: 'red'}}/> by
+				myself. Copyright &copy; {moment(Date.now()).year()}.
+			</p>
+			<p>
+				Source code available on{' '}
+				<a
+					href="https://github.com/nicholasadamou/nicholasadamou.com"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link github"
+				>
+					GitHub
+				</a>
+				.
+			</p>
+			<p>
+				Proudly hosted on{' '}
+				<a
+					href="https://www.netlify.com/"
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+					className="link netlify"
+				>
+					Netlify
+				</a>
+				.
+			</p>
+			{JSON.stringify(repository) === '{}' ? (
+				<div className="footer--loading">
+					<SkeletonText heading={false} lineCount={1} paragraph width="100%"/>
+				</div>
+			) : (
 				<p>
-					Handcrafted with{' '}
-					<FontAwesomeIcon icon={['fas', 'heart']} style={{color: 'red'}}/> by
-					myself. Copyright &copy; {moment(Date.now()).year()}.
-				</p>
-				<p>
-					Source code available on{' '}
+					Last updated{' '}
 					<a
-						href="https://github.com/nicholasadamou/nicholasadamou.com"
+						href={commit.html_url}
 						target="_blank"
 						aria-hidden="true"
 						rel="noopener noreferrer"
-						className="link github"
+						className="link"
 					>
-						GitHub
+						{moment(new Date(updated_at)).fromNow()}
 					</a>
 					.
 				</p>
-				<p>
-					Proudly hosted on{' '}
-					<a
-						href="https://www.netlify.com/"
-						target="_blank"
-						aria-hidden="true"
-						rel="noopener noreferrer"
-						className="link netlify"
-					>
-						Netlify
-					</a>
-					.
-				</p>
-				{JSON.stringify(repository) === '{}' ? (
-					<div className="footer--loading">
-						<SkeletonText heading={false} lineCount={1} paragraph width="100%"/>
-					</div>
-				) : (
-					<p>
-						Last updated{' '}
-						<a
-							href={commit.html_url}
-							target="_blank"
-							aria-hidden="true"
-							rel="noopener noreferrer"
-							className="link"
-						>
-							{moment(new Date(updated_at)).fromNow()}
-						</a>
-						.
-					</p>
-				)}
-			</Container>
-		</div>
+			)}
+		</Container>
 	);
 };
 

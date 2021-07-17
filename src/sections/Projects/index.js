@@ -24,6 +24,7 @@ const Repositories = styled.div`
 		() => `
 		margin: -1rem auto;
 		margin-bottom: 1rem;
+		margin-top: 1.5rem;
 	`
 	)}
 
@@ -58,7 +59,8 @@ const Projects = (props) => {
 		>
 			<Container
 				style={{
-					marginTop: '-1rem'
+					marginTop: '-1rem',
+					marginBottom: 0
 				}}
 			>
 				<Heading

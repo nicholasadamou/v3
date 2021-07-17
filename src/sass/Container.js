@@ -3,12 +3,19 @@ import styled from 'styled-components';
 import { device, until } from 'utilities/mixins';
 
 const Container = styled.div`
-	margin: 5rem 46rem;
+	margin: 1rem 46rem;
 
 	${until(
 		'2560px',
 		() => `
 			margin: 1rem 32rem;
+		`
+	)}
+
+	${until(
+		'2400px',
+		() => `
+			margin: 1rem 30rem;
 		`
 	)}
 

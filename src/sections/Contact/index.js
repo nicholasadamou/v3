@@ -165,7 +165,7 @@ const Form = styled.form`
 		button {
 			position: relative;
 
-			margin-top: 1.5rem;
+			margin-top: 0.25rem;
 
 			padding: 1.5rem;
 

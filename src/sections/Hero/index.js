@@ -6,7 +6,6 @@ import NavigationContext from "contexts/NavigationContext";
 
 import Dust from 'components/Dust';
 import Header from 'components/Header';
-import Wave from 'components/Wave';
 
 import Overlay from 'sass/Overlay';
 
@@ -75,7 +74,7 @@ const Jumbotron = styled.div`
 			() => `
 			margin-top: 3rem;
 
-			font-size: 2.75rem;
+			font-size: 2.5rem;
 			line-height: 1.5;
 
 			width: 100%;
@@ -121,7 +120,7 @@ const Jumbotron = styled.div`
 			() => `
 			margin-top: 10px;
 
-			font-size: 1.5rem;
+			font-size: 1.3rem;
 			font-weight: medium;
 			line-height: 2;
 		`
@@ -135,7 +134,7 @@ const Hero = (props) => {
 	const { toggleNavigation } = React.useContext(NavigationContext);
 
 	return (
-		<Dust dust={dust} height="100vh">
+		<Dust dust={dust} height="80vh">
 			<>
 				<Container>
 					<Header />
@@ -149,7 +148,6 @@ const Hero = (props) => {
 					</Jumbotron>
 					<Overlay id="overlay" onClick={() => toggleNavigation()} />
 				</Container>
-				{/*<Wave/>*/}
 			</>
 		</Dust>
 	)

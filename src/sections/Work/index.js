@@ -22,6 +22,7 @@ const Experiences = styled.div`
 		() => `
 		margin: -1rem auto;
 		margin-bottom: 1rem;
+		margin-top: 1.5rem;
 	`
 	)}
 

@@ -36,14 +36,14 @@ const Container = styled.div`
 				list-style-type: none;
 
 				position: absolute;
-				bottom: -100vh;
+				bottom: -85vh;
 				left: 0;
 
 				border-top-left-radius: 20px;
 				border-top-right-radius: 20px;
 				border-top: 5px solid var(--white);
 
-				height: 35rem;
+				height: 30rem;
 				width: 100%;
 
 				background-color: var(--black);

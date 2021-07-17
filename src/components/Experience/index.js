@@ -32,7 +32,7 @@ const Container = styled.div`
 		left: 10px;
 
 		width: 100%;
-		height: ${props => props.hasBadges ? '112%' : '100%'};
+		height: ${props => props.hasBadges ? '113%' : '100%'};
 
 		border-radius: 10px;
 
@@ -41,6 +41,10 @@ const Container = styled.div`
 		z-index: -1;
 
 		@media screen and (max-width: ${device.iPadPro12Landscape()}) {
+			height: ${props => props.hasBadges ? '111%' : '100%'}
+		}
+
+		@media screen and (max-width: ${device.iPadPro()}) {
 			height: ${props => props.hasBadges ? '110%' : '100%'}
 		}
 
@@ -166,6 +170,13 @@ const Badges = styled.div`
 	bottom: -3.25rem;
 
 	${until(
+		device.MacbookAir(),
+		() => `
+			bottom: -3.2rem;
+		`
+	)}
+
+	${until(
 		device.iPadPro(),
 		() => `
 			bottom: -3.25rem;
@@ -206,7 +217,7 @@ const Badges = styled.div`
 	}
 
 	small {
-		font-weight: 100; // Thin
+		font-weight: 200; // Extra Light
 
 		${until(
 			device.iPhone12(),

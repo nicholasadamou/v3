@@ -35,7 +35,7 @@ const Container = styled.div`
 
 	.subtitle {
 		margin-top: 0 !important;
-		margin-bottom: 50px;
+		margin-bottom: 2rem;
 
 		font-family: var(--secondary);
 		color: ${props => props.theme === 'dark' ? 'var(--white)' : 'var(--copy)'};
