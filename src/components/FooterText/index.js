@@ -28,7 +28,7 @@ const Container = styled.p`
 		}
 
 		&:hover {
-			color: #a6a6a6;
+			color: var(--light-grey);
 		}
 	}
 `;
