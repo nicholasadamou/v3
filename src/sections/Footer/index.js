@@ -25,6 +25,13 @@ const Container = styled.footer`
 	background-color: var(--black);
 
 	${until(
+		device.Desktop(),
+		() => `
+			height: 25vh;
+		`
+	)}
+
+	${until(
 		device.MacbookAir(),
 		() => `
 			height: 30vh;
@@ -37,6 +44,8 @@ const Container = styled.footer`
 
 	.footer--loading {
 		width: 100%;
+		height: 20px;
+
 		margin: 0 auto;
 
 		${until(
@@ -97,6 +106,11 @@ const Container = styled.footer`
 				font-size: 1rem;
 			`
 		)}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		& > div {
 			display: inline;
 		}
@@ -128,6 +142,10 @@ const SocialMedia = styled.span`
 		font-size: 18px;
 
 		color: var(--white);
+
+		&:hover {
+			color: var(--white);
+		}
 	}
 
 	svg {

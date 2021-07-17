@@ -6,6 +6,7 @@ import NavigationContext from "contexts/NavigationContext";
 
 import Dust from 'components/Dust';
 import Header from 'components/Header';
+import ScrollDown from 'components/ScrollDown';
 
 import Overlay from 'sass/Overlay';
 
@@ -133,6 +134,8 @@ const Hero = (props) => {
 
 	const { toggleNavigation } = React.useContext(NavigationContext);
 
+	// console.log(dust);
+
 	return (
 		<Dust dust={dust} height="80vh">
 			<>
@@ -146,6 +149,7 @@ const Hero = (props) => {
 							cloud native applications.
 						</h2>
 					</Jumbotron>
+					<ScrollDown />
 					<Overlay id="overlay" onClick={() => toggleNavigation()} />
 				</Container>
 			</>

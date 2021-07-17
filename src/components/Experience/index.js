@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 import {GatsbyImage} from 'gatsby-plugin-image';
 
+import {isMobileOnly} from 'react-device-detect';
+
 import {device, until} from 'utilities/mixins';
 import { getImage } from 'utilities/utilities';
 
@@ -261,7 +263,6 @@ const Badge = styled.img`
 `;
 
 const Experience = ({ company, title, location, duration, description, image, badges = [] }) => {
-	console.log(badges);
 	return (
 		<Container className="experience" hasBadges={badges.length > 0}>
 			{typeof image === 'string' ? (
@@ -295,13 +296,17 @@ const Experience = ({ company, title, location, duration, description, image, ba
 						</small>
 					</div>
 					<div className="badges">
-						{badges.map((badge, i) => (
-							typeof badge === 'string' ? (
-								<Badge key={i} loading="lazy" src={getImage(badge)} alt={`${company} badge`}/>
-							) : (
-								<GatsbyImage key={i} image={getImage(badge)} alt={`${company} badge`}/>
+						{badges.map((badge, i) => {
+							if (isMobileOnly && i > 3) return;
+
+							return (
+								typeof badge === 'string' ? (
+									<Badge key={i} loading="lazy" src={getImage(badge)} alt={`${company} badge`}/>
+								) : (
+									<GatsbyImage key={i} image={getImage(badge)} alt={`${company} badge`}/>
+								)
 							)
-						))}
+						})}
 					</div>
 				</Badges>
 			)}

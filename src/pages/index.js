@@ -22,7 +22,7 @@ import ScrollToTopButton from 'components/ScrollToTopButton';
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode, faBookOpen, faBars);
 
 const IndexPage = ({data}) => {
-	console.log(data);
+	// console.log(data);
 
 	const dust = data.dust.edges;
 	const logos = data.logos.edges;
