@@ -42,7 +42,7 @@ const Container = styled.div`
 
 		z-index: -1;
 
-		@media screen and (max-width: ${device.iPadPro12Landscape()}) {
+		@media screen and (max-width: ${device.MacbookAir()}) {
 			height: ${props => props.hasBadges ? '111%' : '100%'}
 		}
 
