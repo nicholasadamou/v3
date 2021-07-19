@@ -8,14 +8,14 @@ const Container = styled.div`
 	${until(
 		'2560px',
 		() => `
-			margin: 1rem 32rem;
+			margin: 1rem 30rem;
 		`
 	)}
 
 	${until(
 		'2400px',
 		() => `
-			margin: 1rem 30rem;
+			margin: 1rem 20rem;
 		`
 	)}
 

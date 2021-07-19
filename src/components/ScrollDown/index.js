@@ -10,45 +10,9 @@ const Container = styled.div`
 	position: absolute;
 	left: 0;
 	right: 0;
+	bottom: 20px;
 
 	text-align: center;
-
-	margin-top: 32vh;
-
-	${until(
-		device.Desktop(),
-		() => `
-			margin-top: 28vh;
-		`
-	)}
-
-	${until(
-		device.MacbookAir(),
-		() => `
-			margin-top: 28vh;
-		`
-	)}
-
-	${until(
-		device.iPadPro(),
-		() => `
-			margin-top: 31vh;
-		`
-	)}
-
-	${until(
-		device.iPhone12(),
-		() => `
-			margin-top: 29vh;
-		`
-	)}
-
-	${until(
-		'390px',
-		() => `
-			margin-top: 29vh;
-		`
-	)}
 
 	& > * {
 		display: inline-block;
