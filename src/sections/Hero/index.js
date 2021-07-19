@@ -45,6 +45,13 @@ const Jumbotron = styled.div`
 	)}
 
 	${until(
+		device.Desktop(),
+		() => `
+			margin-left: 8.5rem;
+		`
+	)}
+
+	${until(
 		device.iPadProLandscape(),
 		() => `
 			margin-left: 1rem;

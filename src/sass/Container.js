@@ -22,7 +22,7 @@ const Container = styled.div`
 	${until(
 		device.Desktop(),
 		() => `
-			margin: 1rem 16rem;
+			margin: 1rem 10rem;
 		`
 	)}
 
