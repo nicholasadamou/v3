@@ -65,6 +65,13 @@ const Jumbotron = styled.div`
 		`
 	)}
 
+	${until(
+		device.iPhone12(),
+		() => `
+			top: 45%;
+		`
+	)}
+
 	h1 {
 		font-family: var(--primary);
 		font-size: 4rem;
@@ -82,7 +89,7 @@ const Jumbotron = styled.div`
 			() => `
 			margin-top: 3rem;
 
-			font-size: 2.5rem;
+			font-size: 3.5rem;
 			line-height: 1.5;
 
 			width: 100%;
@@ -128,7 +135,7 @@ const Jumbotron = styled.div`
 			() => `
 			margin-top: 10px;
 
-			font-size: 1.3rem;
+			font-size: 1.5rem;
 			font-weight: medium;
 			line-height: 2;
 		`
