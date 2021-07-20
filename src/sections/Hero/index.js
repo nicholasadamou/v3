@@ -33,7 +33,7 @@ const Jumbotron = styled.div`
 	top: 50%;
 	transform: translate(0, -50%);
 
-	margin-left: calc(20rem - 2rem);
+	margin-left: 10rem;
 
 	overflow: hidden;
 
@@ -144,7 +144,7 @@ const Hero = (props) => {
 	// console.log(dust);
 
 	return (
-		<Dust dust={dust} height="80vh">
+		<Dust dust={dust} height="100vh">
 			<>
 				<Container>
 					<Header />

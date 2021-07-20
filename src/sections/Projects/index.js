@@ -15,7 +15,7 @@ const Repositories = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 
-	width: 90%;
+	width: 80%;
 	max-width: 90%;
 
 	margin: 0 auto;
