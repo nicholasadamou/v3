@@ -43,7 +43,7 @@ const Container = styled.div`
 				border-top-right-radius: 20px;
 				border-top: 5px solid var(--white);
 
-				height: 30rem;
+				height: 26rem;
 				width: 100%;
 
 				background-color: var(--black);

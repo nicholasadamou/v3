@@ -35,7 +35,7 @@ const Container = styled.div`
 	${until(
 		device.iPhone12(),
 		() => `
-		height: 86vh;
+		height: 86.25vh;
 	`
 	)}
 

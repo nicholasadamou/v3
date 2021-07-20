@@ -47,7 +47,7 @@ const Jumbotron = styled.div`
 	${until(
 		device.Desktop(),
 		() => `
-			margin-left: 8.5rem;
+			margin-left: 2.5rem;
 		`
 	)}
 
@@ -68,7 +68,7 @@ const Jumbotron = styled.div`
 	${until(
 		device.iPhone12(),
 		() => `
-			top: 45%;
+			top: 46%;
 		`
 	)}
 
