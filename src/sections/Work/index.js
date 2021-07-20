@@ -46,7 +46,7 @@ const Experiences = styled.div`
 		${until(
 			'2560px',
 			() => `
-			margin: 2.5rem 0 5.5rem auto
+			margin: 2.25rem 0 5.25rem auto
 		`
 		)}
 

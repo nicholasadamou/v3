@@ -17,14 +17,14 @@ const Container = styled.div`
 	${until(
 		device.MacbookAir(),
 		() => `
-		bottom: 40px;
+		bottom: 20px;
 	`
 	)}
 
 	${until(
 		device.iPadPro(),
 		() => `
-		bottom: 30px;
+		bottom: 10px;
 	`
 	)}
 

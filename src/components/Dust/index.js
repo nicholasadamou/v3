@@ -19,13 +19,6 @@ const Container = styled.div`
 	overflow: hidden;
 
 	${until(
-		device.MacbookAir(),
-		() => `
-		height: 98vh;
-	`
-	)}
-
-	${until(
 		device.iPhone12(),
 		() => `
 		height: 86vh;
