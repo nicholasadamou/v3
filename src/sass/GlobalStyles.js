@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
 		--copy: var(--black);
 		--copy-size: 1rem;
 
-		--loading: var(--light-black);
+		--loading: var(--white);
 		--background: var(--white);
 	}
 

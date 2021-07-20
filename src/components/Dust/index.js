@@ -13,7 +13,7 @@ const Container = styled.div`
 	height: ${props => props.height};
 	width: 100vw;
 
-	//background: linear-gradient(140deg, var(--black) 0%, var(--black) 200%);
+	//background: linear-gradient(135deg, var(--black) 0%, var(--blue) 100%);
 	background-color: var(--black);
 
 	overflow: hidden;
@@ -74,7 +74,7 @@ const Container = styled.div`
 		animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75);
 		animation-name: float;
 		animation-iteration-count: infinite;
-		
+
 		${until(
 			'3200px',
 			() => `

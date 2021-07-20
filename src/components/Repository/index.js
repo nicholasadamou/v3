@@ -229,6 +229,7 @@ const Repository = (user = 'nicholasadamou', repositoryName, language, theme = '
 	} = repository;
 
 	return (
+		// <SkeletonRepository />
 		<Container key={id} theme={theme}>
 			<div>
 				<span role="img" aria-label="git">

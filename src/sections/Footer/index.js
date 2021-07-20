@@ -117,6 +117,10 @@ const Container = styled.footer`
 
 		.link {
 			color: var(--white);
+
+			&:hover {
+				color: var(--light-grey);
+			}
 		}
 
 		.github {
