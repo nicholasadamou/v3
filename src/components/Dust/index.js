@@ -21,21 +21,14 @@ const Container = styled.div`
 	${until(
 		device.MacbookAir(),
 		() => `
-		height: 80vh;
-	`
-	)}
-
-	${until(
-		device.iPadPro(),
-		() => `
-		height: 80vh;
+		height: 98vh;
 	`
 	)}
 
 	${until(
 		device.iPhone12(),
 		() => `
-		height: 100vh;
+		height: 86vh;
 	`
 	)}
 

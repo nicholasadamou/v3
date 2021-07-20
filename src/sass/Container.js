@@ -22,15 +22,14 @@ const Container = styled.div`
 	${until(
 		device.Desktop(),
 		() => `
-			margin: 1rem 10rem;
+			margin: 1rem 5rem;
 		`
 	)}
-
 
 	${until(
 		device.MacbookAir(),
 		() => `
-			margin: 0.5rem 6rem;
+			margin: 0.5rem 3rem;
     		margin-bottom: 1rem;
 		`
 	)}

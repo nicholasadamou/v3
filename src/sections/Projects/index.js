@@ -37,6 +37,9 @@ const Repositories = styled.div`
 		margin: 2rem 0;
 		margin-bottom: 1rem;
 
+		width: 100%;
+		max-width: 100%;
+
 		article {
 			padding: 0;
 

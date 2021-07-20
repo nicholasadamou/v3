@@ -33,16 +33,9 @@ const Jumbotron = styled.div`
 	top: 50%;
 	transform: translate(0, -50%);
 
-	margin-left: 10rem;
+	margin-left: 4rem;
 
 	overflow: hidden;
-
-	${until(
-		device.MacbookAir(),
-		() => `
-			margin-left: 5rem;
-		`
-	)}
 
 	${until(
 		device.Desktop(),

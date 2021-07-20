@@ -10,9 +10,30 @@ const Container = styled.div`
 	position: absolute;
 	left: 0;
 	right: 0;
-	bottom: 20px;
+	bottom: 10px;
 
 	text-align: center;
+
+	${until(
+		device.MacbookAir(),
+		() => `
+		bottom: 40px;
+	`
+	)}
+
+	${until(
+		device.iPadPro(),
+		() => `
+		bottom: 30px;
+	`
+	)}
+
+	${until(
+		device.iPhone12(),
+		() => `
+		bottom: 10px;
+	`
+	)}
 
 	& > * {
 		display: inline-block;

@@ -172,16 +172,23 @@ const Badges = styled.div`
 	bottom: -3.25rem;
 
 	${until(
-		device.MacbookAir(),
+		device.Desktop(),
 		() => `
-			bottom: -3.2rem;
+			bottom: -3.1rem;
+		`
+	)}
+
+	${until(
+		device.iPadPro12Landscape(),
+		() => `
+			bottom: -3rem;
 		`
 	)}
 
 	${until(
 		device.iPadPro(),
 		() => `
-			bottom: -3.25rem;
+			bottom: -3.2rem;
 		`
 	)}
 
