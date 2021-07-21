@@ -270,8 +270,10 @@ const Badge = styled.img`
 `;
 
 const Experience = ({ company, title, location, duration, description, image, badges = [] }) => {
+	const hasBadges = badges.length > 0;
+
 	return (
-		<Container className="experience" hasBadges={badges.length > 0}>
+		<Container className={`experience ${hasBadges && 'has-badges'}`} hasBadges={hasBadges}>
 			{typeof image === 'string' ? (
 				<Image loading="lazy" src={image} alt={company}/>
 			) : (
