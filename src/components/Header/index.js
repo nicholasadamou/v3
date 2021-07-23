@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Navigation from 'components/Navigation';
-import MobileNavigation from "components/MobileNavigation";
+import {MobileNavigationToggle} from 'components/MobileNavigation';
 
 import Logo from 'images/nicholas-adamou.svg';
 
@@ -46,7 +46,7 @@ const Container = styled.header`
 const Header = (props) => (
 	<Container>
 		<Logo id="logo" />
-		<MobileNavigation/>
+		<MobileNavigationToggle />
 		<Navigation/>
 	</Container>
 )

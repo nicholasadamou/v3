@@ -4,15 +4,25 @@ import styled from 'styled-components';
 
 import NavigationContext from "contexts/NavigationContext";
 
-import Dust from 'components/Dust';
 import Header from 'components/Header';
+import MobileNavigation from "components/MobileNavigation";
 import ScrollDown from 'components/ScrollDown';
 
 import Overlay from 'sass/Overlay';
 
 import {device, until} from 'utilities/mixins';
 
+const Background = styled.div`
+	position: relative;
+
+	background-color: var(--black);
+`;
+
 const Container = styled.div`
+	display: grid;
+
+	height: 85vh;
+
 	margin: 0 2rem;
 
 	color: var(--white);
@@ -28,10 +38,7 @@ const Container = styled.div`
 const Jumbotron = styled.div`
 	display: flex;
 	flex-direction: column;
-
-	position: absolute;
-	top: 50%;
-	transform: translate(0, -50%);
+	place-content: center;
 
 	margin-left: 4rem;
 
@@ -61,13 +68,13 @@ const Jumbotron = styled.div`
 	${until(
 		device.iPhone12(),
 		() => `
-			top: 46%;
+			margin-bottom: 10%;
 		`
 	)}
 
 	h1 {
 		font-family: var(--primary);
-		font-size: 4rem;
+		font-size: 5rem;
 		font-weight: 900;
 
 		${until(
@@ -99,7 +106,7 @@ const Jumbotron = styled.div`
 
 	h2 {
 		font-family: var(--secondary);
-		font-size: 2rem;
+		font-size: 2.5rem;
 		font-weight: normal;
 		line-height: 2;
 
@@ -137,30 +144,25 @@ const Jumbotron = styled.div`
 `;
 
 const Hero = (props) => {
-	const {dust} = props;
-
 	const { toggleNavigation } = React.useContext(NavigationContext);
 
-	// console.log(dust);
-
 	return (
-		<Dust dust={dust} height="100vh">
-			<>
-				<Container>
-					<Header />
-					<Jumbotron>
-						<h1><span>Full Stack</span> Software Engineer.</h1>
-						<h2>
-							I focus on the front-end & back-end of{' '}
-							<br />
-							cloud native applications.
-						</h2>
-					</Jumbotron>
-					<ScrollDown />
-					<Overlay id="overlay" onClick={() => toggleNavigation()} />
-				</Container>
-			</>
-		</Dust>
+		<Background>
+			<Container>
+				<Header />
+				<Jumbotron>
+					<h1><span>Full Stack</span> Software Engineer.</h1>
+					<h2>
+						I focus on the front-end & back-end of{' '}
+						<br />
+						cloud native applications.
+					</h2>
+				</Jumbotron>
+				<ScrollDown />
+			</Container>
+			<MobileNavigation/>
+			<Overlay id="overlay" onClick={() => toggleNavigation()} />
+		</Background>
 	)
 }
 

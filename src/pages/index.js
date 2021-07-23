@@ -24,14 +24,13 @@ library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode, faBookOpe
 const IndexPage = ({data}) => {
 	// console.log(data);
 
-	const dust = data.dust.edges;
 	const logos = data.logos.edges;
 	const badges = data.badges.edges;
 
 	return (
 		<Layout>
 				<NavigationProvider>
-					<Hero dust={dust} />
+					<Hero />
 				</NavigationProvider>
 				<Work logos={logos} badges={badges} />
 				<Projects />
@@ -66,20 +65,6 @@ export const query = graphql`
             gatsbyImageData(
               layout: FIXED
               width: 40
-              quality: 100
-              placeholder: BLURRED
-              formats: [AUTO, WEBP]
-            )
-          }
-        }
-      }
-    }
-    dust: allFile(filter: { relativeDirectory: { eq: "dust" } }) {
-      edges {
-        node {
-          childImageSharp {
-            gatsbyImageData(
-              layout: FIXED
               quality: 100
               placeholder: BLURRED
               formats: [AUTO, WEBP]

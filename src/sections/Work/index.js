@@ -56,16 +56,16 @@ const Experiences = styled.div`
 		margin-bottom: 5.25rem !important;
 
 		${until(
-			device.iPadPro12Landscape(),
+			device.MacbookAir(),
 			() => `
-			margin-bottom: 5rem !important;
+			margin-bottom: 4.75rem !important;
 		`
 		)}
 
 		${until(
 			device.iPhone12(),
 			() => `
-			margin-bottom: 5.25rem !important;
+			margin-bottom: 5.75rem !important;
 		`
 		)}
 	}
