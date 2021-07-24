@@ -7,9 +7,9 @@ import styled from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
-import Layout from 'components/Layout';
+import Layout from '@components/Layout';
 
-import { device, until } from 'utilities/mixins';
+import { device, until } from '@utilities/mixins';
 
 library.add(faExclamationTriangle);
 

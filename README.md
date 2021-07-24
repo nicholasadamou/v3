@@ -6,7 +6,7 @@
 </p>
 <p align="center">
   Previous iterations:
-  <a href="https://github.com/nicholasadamou/v1" target="_blank">v1</a>
+  <a href="https://github.com/nicholasadamou/v1" target="_blank">v1</a>.
 </p>
 <p align="center">
   <a href="https://circleci.com/gh/nicholasadamou/nicholasadamou.com" target="_blank">
@@ -17,7 +17,7 @@
   </a>
 </p>
 
-![demo](src/assets/images/demo.png)
+![demo](static/demo.png)
 
 ## 🚨 Forking this repo (please read!)
 

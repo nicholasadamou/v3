@@ -8,16 +8,16 @@ import {library} from '@fortawesome/fontawesome-svg-core';
 import {fab} from '@fortawesome/free-brands-svg-icons';
 import {faArrowUp, faBookOpen, faCodeBranch, faFileCode, faHeart, faStar, faBars} from '@fortawesome/free-solid-svg-icons';
 
-import NavigationProvider from "providers/NavigationProvider";
+import NavigationProvider from "@providers/NavigationProvider";
 
-import Hero from 'sections/Hero';
-import Work from 'sections/Work';
-import Projects from 'sections/Projects';
-import Contact from 'sections/Contact';
-import Footer from 'sections/Footer';
+import Hero from '@sections/Hero';
+import Work from '@sections/Work';
+import Projects from '@sections/Projects';
+import Contact from '@sections/Contact';
+import Footer from '@sections/Footer';
 
-import Layout from 'components/Layout';
-import ScrollToTopButton from 'components/ScrollToTopButton';
+import Layout from "@components/Layout";
+import ScrollToTopButton from "@components/ScrollToTopButton";
 
 library.add(fab, faHeart, faStar, faCodeBranch, faArrowUp, faFileCode, faBookOpen, faBars);
 

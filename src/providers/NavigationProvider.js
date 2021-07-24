@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavigationContext from "contexts/NavigationContext";
+import NavigationContext from "@contexts/NavigationContext";
 
 const NavigationProvider = (props) => {
 	const [isOpen, open] = React.useState(false);

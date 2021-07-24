@@ -7,12 +7,15 @@ module.exports = {
   siteMetadata: {
     title: 'Nicholas Adamou',
     description:
-      'Nicholas Adamou - He is a IBM senior software engineer and an open source contributor.',
+      'Nicholas Adamou is a performance-driven full-stack software engineer. Currently, he is focused on building accessible, human-centered products at IBM.',
     author: 'Nicholas Adamou',
+    twitterUsername: '@nicholasadamou',
     siteUrl: 'https://nicholasadamou.com', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -31,15 +34,16 @@ module.exports = {
       resolve: `gatsby-alias-imports`,
       options: {
         aliases: {
-          assets: 'src/assets',
-          images: 'src/assets/images',
-          components: 'src/components',
-		  contexts: 'src/contexts',
-		  providers: 'src/providers',
-          sections: 'src/sections',
-          hooks: 'src/hooks',
-          sass: 'src/sass',
-          utilities: 'src/utilities',
+          '@assets': 'src/assets',
+          '@images': 'src/assets/images',
+          '@components': 'src/components',
+          '@contexts': 'src/contexts',
+          '@providers': 'src/providers',
+          '@sections': 'src/components/sections',
+          '@hooks': 'src/hooks',
+          '@sass': 'src/sass',
+          '@utilities': 'src/utilities',
+          '@config': 'src/config'
         },
       },
     },

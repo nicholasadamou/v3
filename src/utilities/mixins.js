@@ -14,7 +14,7 @@ export const device = {
 };
 
 export const until = (device, content, props = {}) => `
-		@media screen and (max-width: ${device}) {
+		@media (max-width: ${device}) {
 			${content(props)}
 		}
 	`;

@@ -12,9 +12,9 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import styled from 'styled-components';
 
-import {device, until} from 'utilities/mixins';
+import {device, until} from '@utilities/mixins';
 
-import useGitHub, {round} from 'hooks/useGitHub';
+import useGitHub, {round} from '@hooks/useGitHub';
 
 import languages from './languages';
 
