@@ -1,9 +1,13 @@
 {
-	"name": "nicholasadamou.com",
+	"name": "v2",
 	"version": "1.0.0",
 	"private": true,
 	"description": "Nicholas Adamou's Personal Website",
-	"author": "Nicholas Adamou",
+	"author": "Nicholas Adamou <nicholasadamouemail@gmail.com>",
+	"repository": {
+	  "type": "git",
+	  "url": "https://github.com/nicholadamou/v2"
+	},
 	"keywords": [
 		"gatsby"
 	],
@@ -16,8 +20,17 @@
 		"build": "gatsby build",
 		"serve": "gatsby serve --host 0.0.0.0",
 		"clean": "gatsby clean",
-		"lint": "eslint src",
-		"lint:fix": "eslint src --fix"
+	  	"format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+		"prepare": "husky install",
+		"lint-staged": "lint-staged"
+	},
+	"lint-staged": {
+	  "*.{js,css,json,md}": [
+		"prettier --write"
+	  ],
+	  "*.js": [
+		"eslint --fix"
+	  ]
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-svg-core": "1.2.34",
@@ -58,17 +71,19 @@
 		"styled-components": "^5.2.1"
 	},
 	"devDependencies": {
-		"babel-eslint": "^10.1.0",
-		"eslint": "^7.8.1",
-		"eslint-config-airbnb": "^18.2.0",
-		"eslint-config-prettier": "^6.11.0",
-		"eslint-config-wesbos": "1.0.1",
-		"eslint-plugin-html": "^6.1.0",
-		"eslint-plugin-import": "^2.22.0",
-		"eslint-plugin-jsx-a11y": "^6.3.1",
-		"eslint-plugin-prettier": "^3.1.4",
-		"eslint-plugin-react": "^7.20.6",
-		"eslint-plugin-react-hooks": "^4.1.2",
-		"prettier": "^2.1.1"
+	  "@babel/core": "^7.14.0",
+	  "@babel/eslint-parser": "^7.13.14",
+	  "@babel/preset-react": "^7.13.13",
+	  "@upstatement/eslint-config": "^1.0.0",
+	  "@upstatement/prettier-config": "^1.0.0",
+	  "babel-preset-gatsby": "^1.4.0",
+	  "eslint": "^7.25.0",
+	  "eslint-config-prettier": "^8.3.0",
+	  "eslint-plugin-jsx-a11y": "^6.4.1",
+	  "eslint-plugin-react": "^7.23.2",
+	  "gatsby-remark-code-titles": "^1.1.0",
+	  "husky": "^6.0.0",
+	  "lint-staged": "^10.1.2",
+	  "prettier": "^2.2.1"
 	}
 }

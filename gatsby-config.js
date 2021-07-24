@@ -9,6 +9,8 @@ module.exports = {
     description:
       'Nicholas Adamou - He is a IBM senior software engineer and an open source contributor.',
     author: 'Nicholas Adamou',
+    siteUrl: 'https://nicholasadamou.com', // No trailing slash allowed!
+    image: '/og.png', // Path to your image you placed in the 'static' folder
   },
   plugins: [
     {
@@ -41,7 +43,21 @@ module.exports = {
         },
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            // https://www.gatsbyjs.org/packages/gatsby-remark-external-links
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+            },
+          },
+        ]
+      }
+    },
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
