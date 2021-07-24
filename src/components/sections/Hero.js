@@ -80,7 +80,7 @@ const Jumbotron = styled.div`
   ${until(
     '1600px',
     () => `
-      margin: 1rem 4.5rem;
+      margin: 1rem 4.5rem 5vh;
 		`
   )}
   ${until(
@@ -112,9 +112,9 @@ const Jumbotron = styled.div`
     color: var(--white);
 
     ${until(
-      '2688px',
+      '1600px',
       () => `
-      font-size: 5vw;
+      font-size: 6vw;
 		`
     )}
     ${until(
@@ -150,8 +150,12 @@ const Jumbotron = styled.div`
       '2688px',
       () => `
       max-width: 1200px;
-
-      font-size: 2vw;
+		`
+    )}
+    ${until(
+      '1600px',
+      () => `
+      font-size: 3vw;
 		`
     )}
     ${until(
