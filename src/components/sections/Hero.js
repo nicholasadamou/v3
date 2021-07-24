@@ -85,6 +85,13 @@ const Jumbotron = styled.div`
   )}
 
   ${until(
+    '1600px',
+    () => `
+      margin: 1rem 4.5rem;
+		`
+  )}
+
+  ${until(
     device.MacbookAir(),
     () => `
       margin: 0.5rem 3rem;
