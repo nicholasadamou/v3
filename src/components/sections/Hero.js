@@ -68,21 +68,14 @@ const Container = styled.div`
 `;
 
 const Jumbotron = styled.div`
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   place-content: flex-start;
 
-  margin: 1rem 45rem;
+  margin: 1rem 10rem 5vh;
 
-	overflow: hidden;
-
-  ${until(
-    '2688px',
-    () => `
-      margin: 1rem 30rem;
-		`
-  )}
+  overflow: hidden;
 
   ${until(
     '1600px',
@@ -90,21 +83,18 @@ const Jumbotron = styled.div`
       margin: 1rem 4.5rem;
 		`
   )}
-
   ${until(
     device.MacbookAir(),
     () => `
       margin: 0.5rem 3rem;
 		`
   )}
-
   ${until(
     device.iPadPro(),
     () => `
       margin: 0.5rem 0;
 		`
   )}
-
   ${until(
     device.iPhone12(),
     () => `
@@ -113,29 +103,32 @@ const Jumbotron = styled.div`
       margin: 0;
 		`
   )}
-
   h1 {
     margin: 0;
 
     font-family: var(--primary);
-    font-size: clamp(60px, 8vw, 80px);
+    font-size: clamp(60px, 8vw, 5vw);
     font-weight: 900;
     color: var(--white);
 
+    ${until(
+      '2688px',
+      () => `
+      font-size: 5vw;
+		`
+    )}
     ${until(
       device.iPadPro(),
       () => `
       font-size: 14vw;
 		`
     )}
-
     ${until(
       device.iPhone12(),
       () => `
         font-size: clamp(60px, 8vw, 80px);
 		`
     )}
-
     span {
       color: var(--blue);
       font-size: inherit;
@@ -145,21 +138,28 @@ const Jumbotron = styled.div`
   h2 {
     margin-top: 10px;
 
-    max-width: 840px;
+    max-width: 1600px;
 
     font-family: var(--secondary);
-    font-size: clamp(32px, 4vw, 32px);
+    font-size: clamp(32px, 4vw, 2vw);
     font-weight: 400;
     color: var(--white);
     line-height: 1.4;
 
+    ${until(
+      '2688px',
+      () => `
+      max-width: 1200px;
+
+      font-size: 2vw;
+		`
+    )}
     ${until(
       device.iPadPro(),
       () => `
       font-size: 7vw;
       `
     )}
-
     ${until(
       device.iPhone12(),
       () => `
@@ -170,7 +170,6 @@ const Jumbotron = styled.div`
       }
 		`
     )}
-
     span {
       color: var(--blue);
       font-size: inherit;
