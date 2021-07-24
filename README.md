@@ -1,19 +1,37 @@
-<div align="center">
+<h1 align="center">
+  nicholasadamou.com - v2
+</h1>
+<p align="center">
+  The second iteration of <a href="https://nicholasadamou.com" target="_blank">nicholasadamou.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
+</p>
+<p align="center">
+  Previous iterations:
+  <a href="https://github.com/nicholasadamou/v1" target="_blank">v1</a>
+</p>
+<p align="center">
+  <a href="https://circleci.com/gh/nicholasadamou/nicholasadamou.com" target="_blank">
+    <img src="https://circleci.com/gh/nicholasadamou/nicholasadamou.com.svg?style=svg" alt="CircleCI Status" />
+  </a>
+  <a href="https://app.netlify.com/sites/nicholasadamou/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/fedaa871-c59d-4923-9c65-f29330bf60da/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
 
-# Nicholas Adamou's Personal Website
+![demo](src/assets/images/demo.png)
 
-Personal landing page, powered by [gatsbyjs](https://www.gatsbyjs.com/) and [Netlify](https://netlify.com/).
+## 🚨 Forking this repo (please read!)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fedaa871-c59d-4923-9c65-f29330bf60da/deploy-status)](https://app.netlify.com/sites/nicholasadamou/deploys) [![CircleCI](https://circleci.com/gh/nicholasadamou/nicholasadamou.com.svg?style=svg)](https://circleci.com/gh/nicholasadamou/nicholasadamou.com) ![license](https://img.shields.io/apm/l/vim-mode.svg)
+Many people have contacted me asking me if they can use this code for their own website, and the answer to that question is usually **yes, with attribution**.
 
-</div>
+I value keeping my site open source, but as you all know, _**plagiarism is bad**_. It's always disheartening whenever I find that someone has copied my site without giving me credit. I spent a non-trivial amount of effort building and designing this iteration of my website, and I am proud of it! All I ask of you all is to not claim this effort as your own.
 
-## Description
+Please also note that I did not build this site with the intention of it being a starter theme, so if you have questions about implementation, please refer to the [Gatsby docs](https://www.gatsbyjs.org/docs/).
 
-After many iterations and deployments throughout many providers, I decided to
-optimize my landing page by using [gatsbyjs](https://www.gatsbyjs.com/) and [Netlify](https://netlify.com/).
+### TL;DR
 
-## Development
+Yes, you can fork this repo. Please give me proper credit by linking back to [nicholasadamou.com](https://nicholasadamou.com). Thanks!
+
+## 🛠 Installation & Set Up
 
 ### Requirements
 
@@ -22,13 +40,46 @@ optimize my landing page by using [gatsbyjs](https://www.gatsbyjs.com/) and [Net
 
 ### Steps
 
-Run the live-reload server on <http://localhost:8000>.
+1. Install the Gatsby CLI.
 
-```bash
-yarn start
-```
+   ```sh
+   npm install -g gatsby-cli
+   ```
 
-If needed, you can then access the [GraphiQL](https://www.gatsbyjs.com/docs/how-to/querying-data/running-queries-with-graphiql/) interface on <http://localhost:8000/___graphql>.
+2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm).
+
+   ```sh
+   nvm install
+   ```
+
+3. Install dependencies.
+
+   ```sh
+   yarn
+   ```
+
+4. Run the live-reload server on <http://localhost:8000>.
+
+	```bash
+	yarn start
+	```
+
+    If needed, you can then access the [GraphiQL](https://www.gatsbyjs.com/docs/how-to/querying-data/running-queries-with-graphiql/) interface on <http://localhost:8000/___graphql>.
+
+
+## 🚀 Building and Running for Production
+
+1. Generate a full static production build.
+
+   ```sh
+   npm run build
+   ```
+
+1. Preview the site as it will appear once deployed.
+
+   ```sh
+   npm run serve
+   ```
 
 ## 📚 The Tech. Stack
 

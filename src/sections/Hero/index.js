@@ -21,7 +21,7 @@ const Background = styled.div`
 const Container = styled.div`
 	display: grid;
 
-	height: 85vh;
+	height: 100vh;
 
 	margin: 0 2rem;
 
