@@ -78,7 +78,7 @@ const Jumbotron = styled.div`
   overflow: hidden;
 
   ${until(
-    '1600px',
+    '1866px',
     () => `
       margin: 1rem 4.5rem 5vh;
 		`
@@ -153,6 +153,12 @@ const Jumbotron = styled.div`
 		`
     )}
     ${until(
+      '1866px',
+      () => `
+      max-width: 1000px;
+		`
+    )}
+    ${until(
       '1600px',
       () => `
       font-size: 3vw;
@@ -168,10 +174,6 @@ const Jumbotron = styled.div`
       device.iPhone12(),
       () => `
        font-size: clamp(32px, 4vw, 32px);
-
-      br {
-        display: none;
-      }
 		`
     )}
     span {
