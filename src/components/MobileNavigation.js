@@ -76,6 +76,8 @@ const MobileNav = styled.ul`
 
 					&:hover {
 						text-decoration: underline;
+
+						color: var(--white);
 					}
 				}
 			}
