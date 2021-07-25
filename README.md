@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="static/logo.png" width="100" />
+  <img alt="Logo" src="static/logo.png" width="200" />
 </div>
 <h1 align="center">
   nicholasadamou.com - v2
