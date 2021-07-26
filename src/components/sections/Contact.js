@@ -22,6 +22,9 @@ const Form = styled.form`
 	margin: 0 auto;
 
 	zoom: 130%;
+  
+  font-size: 1rem;
+  line-height: 2;
 
 	${until(
 		device.MacbookAir(),
