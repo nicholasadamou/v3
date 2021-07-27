@@ -21,7 +21,7 @@ const Form = styled.form`
 
 	margin: 0 auto;
 
-	zoom: 130%;
+	zoom: 120%;
   
   font-size: 1rem;
   line-height: 2;
