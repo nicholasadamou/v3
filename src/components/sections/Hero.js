@@ -147,6 +147,12 @@ const Jumbotron = styled.div`
     line-height: 1.4;
 
     ${until(
+      '2722px',
+      () => `
+      max-width: 1300px;
+		`
+    )}
+    ${until(
       '2688px',
       () => `
       max-width: 1200px;
