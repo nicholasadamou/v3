@@ -153,12 +153,6 @@ const Jumbotron = styled.div`
 		`
     )}
     ${until(
-      '2688px',
-      () => `
-      max-width: 1200px;
-		`
-    )}
-    ${until(
       '1866px',
       () => `
       max-width: 1000px;
