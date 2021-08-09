@@ -1,0 +1,88 @@
+article {
+	margin: 10px;
+	margin-left: 0;
+
+	font-size: var(--fz-md);
+
+	a {
+		text-decoration: none;
+	}
+
+	div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 5px;
+
+		margin-bottom: 10px;
+
+		span[aria-label='git'] {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			:global(svg) {
+				color: var(--theme-colors-text);
+			}
+		}
+
+		a {
+			text-decoration: none;
+
+			transition: color 0.25ms ease-in-out;
+
+			&:hover {
+				color: var(--light-grey);
+			}
+
+			span {
+				padding: 5px;
+
+				border-radius: 5px;
+
+				background-color: var(--theme-colors-background-contrast);
+
+				&[role='img'] {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					gap: 5px;
+
+					line-height: 1;
+				}
+
+				&[aria-label='title'] {
+					color: var(--theme-colors-text-contrast);
+
+					text-decoration: underline;
+
+					&:hover {
+						color: var(--light-grey);
+					}
+				}
+
+				&[aria-label='star'],
+				&[aria-label='branch'] {
+					font-weight: normal;
+					color: var(--theme-colors-text-contrast);
+
+					:global(svg) {
+						margin-bottom: 3px;
+
+						color: var(--theme-colors-text-contrast);
+					}
+				}
+
+				&[aria-label='language'] {
+					div {
+						margin-left: 10px;
+					}
+				}
+			}
+		}
+	}
+
+	p {
+		color: var(--theme-colors-text);
+	}
+}

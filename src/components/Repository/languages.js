@@ -1,58 +1,67 @@
-import React from 'react';
-
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faFileCode } from '@fortawesome/free-solid-svg-icons';
+import {
+	faJsSquare,
+	faReact,
+	faAngular,
+	faNode,
+	faGulp,
+	faPython,
+	faHtml5,
+	faCss3Alt,
+	faJava
+} from '@fortawesome/free-brands-svg-icons';
 
 const languages = {
 	javascript: {
-		icon: <FontAwesomeIcon icon={['fab', 'js-square']}/>,
+		icon: faJsSquare,
 		text: 'JavaScript',
 	},
 	typescript: {
-		icon: <FontAwesomeIcon icon={['fab', 'js-square']}/>,
+		icon: faJsSquare,
 		text: 'TypeScript',
 	},
 	react: {
-		icon: <FontAwesomeIcon icon={['fab', 'react']}/>,
+		icon: faReact,
 		text: 'React',
 	},
 	angular: {
-		icon: <FontAwesomeIcon icon={['fab', 'angular']}/>,
+		icon: faAngular,
 		text: 'Angular',
 	},
 	node: {
-		icon: <FontAwesomeIcon icon={['fab', 'node']}/>,
+		icon: faNode,
 		text: 'Node',
 	},
 	gulp: {
-		icon: <FontAwesomeIcon icon={['fab', 'gulp']}/>,
+		icon: faGulp,
 		text: 'Gulp',
 	},
 	python: {
-		icon: <FontAwesomeIcon icon={['fab', 'python']}/>,
+		icon: faPython,
 		text: 'Python',
 	},
 	c: {
-		icon: <FontAwesomeIcon icon={['fas', 'file-code']}/>,
+		icon: faFileCode,
 		text: 'C',
 	},
 	'c#': {
-		icon: <FontAwesomeIcon icon={['fas', 'file-code']}/>,
+		icon: faFileCode,
 		text: 'C#',
 	},
 	html: {
-		icon: <FontAwesomeIcon icon={['fab', 'html5']}/>,
+		icon: faHtml5,
 		text: 'HTML',
 	},
 	css: {
-		icon: <FontAwesomeIcon icon={['fab', 'css3-alt']}/>,
+		icon: faCss3Alt,
 		text: 'CSS',
 	},
 	shell: {
-		icon: <FontAwesomeIcon icon={['fas', 'file-code']}/>,
+		icon: faFileCode,
 		text: 'Shell',
 	},
 	java: {
-		icon: <FontAwesomeIcon icon={['fab', 'java']}/>,
+		icon: faJava,
 		text: 'Java',
 	},
 };

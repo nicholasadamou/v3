@@ -1,0 +1,84 @@
+:root {
+	--light-grey: #cccccc;
+	--blue: #5496ff;
+
+	--ibm: #1f70c1;
+	--linkedin: #0077b5;
+	--netlify: #419490;
+
+	--font-family-primary: 'Inter';
+
+	--fz-xxs: 12px;
+	--fz-xs: 13px;
+	--fz-sm: 14px;
+	--fz-md: 16px;
+	--fz-lg: 18px;
+	--fz-xl: 20px;
+	--fz-xxl: 22px;
+	--fz-heading: 32px;
+}
+
+#svelte {
+	overflow-x: hidden;
+}
+
+/* Text selection styles */
+*::selection {
+	background: var(--theme-colors-background-contrast);
+	color: var(--theme-colors-text-contrast);
+}
+
+body {
+	margin: 0;
+
+	font-family: var(--font-family-primary);
+	font-size: clamp(100%, calc(1rem + 2vw), var(--fz-lg));
+	line-height: 1.3;
+
+	background-color: var(--theme-colors-background);
+	color: var(--theme-colors-text);
+
+	//border-top: 20px solid var(--theme-colors-background-contrast);
+
+	transition: background-color 0.3s;
+}
+
+.link {
+	text-decoration: underline;
+	color: var(--blue);
+
+	&:hover {
+		color: var(--light-grey) !important;
+	}
+}
+
+.ibm {
+	color: var(--ibm) !important;
+}
+
+.github {
+	color: var(--github) !important;
+}
+
+.netlify {
+	color: var(--netlify) !important;
+}
+
+button {
+	padding: 0;
+
+	background: none;
+
+	border: none;
+	outline: inherit;
+
+	font: inherit;
+	color: inherit;
+	line-height: 1;
+
+	cursor: pointer;
+}
+
+p {
+	margin: 0;
+}

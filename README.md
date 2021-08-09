@@ -1,15 +1,13 @@
-<div align="center">
-  <img alt="Logo" src="static/logo.png" width="200" />
-</div>
 <h1 align="center">
-  nicholasadamou.com - v2
+  nicholasadamou.com - v3
 </h1>
 <p align="center">
-  The second iteration of <a href="https://nicholasadamou.com" target="_blank">nicholasadamou.com</a> built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
+  The third iteration of <a href="https://nicholasadamou.com" target="_blank">nicholasadamou.com</a> built with <a href="https://kit.svelte.dev/" target="_blank">SvelteKit</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
 </p>
 <p align="center">
   Previous iterations:
-  <a href="https://github.com/nicholasadamou/v1" target="_blank">v1</a>.
+  <a href="https://github.com/nicholasadamou/v1" target="_blank">v1</a> and
+  <a href="https://github.com/nicholasadamou/v2" target="_blank">v2</a>.
 </p>
 <p align="center">
   <a href="https://circleci.com/gh/nicholasadamou/nicholasadamou.com" target="_blank">
@@ -28,7 +26,7 @@ Many people have contacted me asking me if they can use this code for their own 
 
 I value keeping my site open source, but as you all know, _**plagiarism is bad**_. It's always disheartening whenever I find that someone has copied my site without giving me credit. I spent a non-trivial amount of effort building and designing this iteration of my website, and I am proud of it! All I ask of you all is to not claim this effort as your own.
 
-Please also note that I did not build this site with the intention of it being a starter theme, so if you have questions about implementation, please refer to the [Gatsby docs](https://www.gatsbyjs.org/docs/).
+Please also note that I did not build this site with the intention of it being a starter theme, so if you have questions about implementation, please refer to the [SvelteKit docs](https://kit.svelte.dev/docs).
 
 ### TL;DR
 
@@ -43,46 +41,36 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [ni
 
 ### Steps
 
-1. Install the Gatsby CLI.
-
-   ```sh
-   npm install -g gatsby-cli
-   ```
-
-2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm).
+1. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm).
 
    ```sh
    nvm install
    ```
 
-3. Install dependencies.
+2. Install dependencies.
 
    ```sh
    yarn
    ```
 
-4. Run the live-reload server on <http://localhost:8000>.
+3. Start the development server:
 
-	```bash
-	yarn start
-	```
+```bash
+yarn dev
 
-    If needed, you can then access the [GraphiQL](https://www.gatsbyjs.com/docs/how-to/querying-data/running-queries-with-graphiql/) interface on <http://localhost:8000/___graphql>.
-
+# or start the server and open the app in a new browser tab
+yarn dev -- --open
+```
 
 ## 🚀 Building and Running for Production
 
-1. Generate a full static production build.
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
-   ```sh
-   npm run build
-   ```
+```bash
+yarn build
+```
 
-1. Preview the site as it will appear once deployed.
-
-   ```sh
-   npm run serve
-   ```
+> You can preview the built app with `yarn preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
 
 ## 📚 The Tech. Stack
 
@@ -90,12 +78,15 @@ This project uses the following technologies:
 
 **The Front-End**:
 
-- [**Gatsby**](<https://www.gatsbyjs.com/>) - Used as base React framework along with:
-  - [**Styled-Components**](https://www.styled-components.com/) - for styling.
-  - [**Font Awesome**](https://fontawesome.com/how-to-use/on-the-web/using-with/react) - for icons.
-  - [**Carbon**](https://react.carbondesignsystem.com/?path=/story/getting-started-welcome--welcome) & [**Material UI**](https://material-ui.com/) - for loading animations.
-  - [**Bulma**](https://bulma.io/) - for layout styling.
-  - [**Moment.js**](https://momentjs.com/) - for handling dates.
+1. [**SvelteKit**](https://kit.svelte.dev/) - The fastest way to build svelte apps.
+   - [**svelte-query**](https://sveltequery.vercel.app/) - Performant and powerful data synchronization for Svelte.
+   - [**svelte-lazy**](https://github.com/leafOfTree/svelte-lazy) - A svelte component to lazyload any content including images.
+   - [**svelte-awesome**](https://github.com/RobBrazier/svelte-awesome#more-advanced-cases) - Awesome SVG icon component for Svelte JS, built with Font Awesome icons.
+   - [**svelte-loading-spinners**](https://github.com/Schum123/svelte-loading-spinners) - A collection of loading spinner components for SvelteJS.
+   - [**svelte-scrollto**](https://github.com/langbamit/svelte-scrollto) - Animating vertical and horizontal scrolling.
+   - [**svelte-themer**](https://github.com/josefaidt/svelte-themer) - A theming engine for your Svelte apps using CSS Variables, persisted.
+   - [**svelte-google-analytics**](https://github.com/beyonk-adventures/svelte-google-analytics) - Google Analytics component for Svelte.
+   - [**Moment.js**](https://momentjs.com/) - for handling dates.
 
 ## ⛓️ CI/CD Pipeline
 
