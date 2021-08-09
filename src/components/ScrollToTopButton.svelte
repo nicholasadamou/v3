@@ -44,11 +44,6 @@
 
 		opacity: 0.5;
 
-		@media screen and (max-width: 1024px) {
-			width: 20px;
-			height: 20px;
-		}
-
 		@media screen and (max-width: 430px) {
 			width: 10px;
 			height: 10px;
