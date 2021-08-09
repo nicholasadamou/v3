@@ -95,6 +95,10 @@ This project uses the following CI/CD Pipeline:
 1. [**CircleCI**](https://circleci.com/) - CircleCI is used to test whether or not this project builds successfully.
 2. [**Netlify**](https://netlify.com/) - For continuous deployment to [_nicholasadamou.com_](https://nicholasadamou.com).
 
+## Design 🎨
+
+The design was developed using [**Figma**](https://www.figma.com/). It can be found at this [*share link*](https://www.figma.com/file/WaCj0rJmmvUkky3StLTrG8/nicholasadamou.com-v3?node-id=0%3A1).
+
 ## License
 
 © Nicholas Adamou.
