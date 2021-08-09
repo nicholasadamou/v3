@@ -146,7 +146,7 @@
 			}
 
 			span, p, a {
-				font-size: var(--fz-xs);
+				font-size: var(--fz-sm);
 				color: var(--theme-colors-text-contrast);
 				font-weight: 100;
 			}
