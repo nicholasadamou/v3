@@ -4,6 +4,7 @@
 
 	--ibm: #1f70c1;
 	--linkedin: #0077b5;
+	--svelte: #fe3e00;
 	--netlify: #419490;
 
 	--font-family-primary: 'Inter';
@@ -62,6 +63,10 @@ body {
 
 .netlify {
 	color: var(--netlify) !important;
+}
+
+.svelte {
+	color: var(--svelte) !important;
 }
 
 button {

@@ -7,11 +7,11 @@
 
 <div>
 	{#if icon}
-	<Icon
-		data="{icon}"
-		style={`fill: var(--theme-colors-text-contrast);`}
-		scale="1.25"
-	/>
+		<Icon
+			data="{icon}"
+			style={`fill: var(--theme-colors-text-contrast);`}
+			scale="1.25"
+		/>
 	{/if}
 
 	{#if text}

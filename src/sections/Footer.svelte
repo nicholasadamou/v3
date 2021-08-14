@@ -14,6 +14,8 @@
 
 	import fetchRepository from '$hooks/useGitHub';
 
+	const { title } = config;
+
 	const { github, codepen, linkedin} = config.socialMedia;
 
 	const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
@@ -76,7 +78,17 @@
 				Projects
 			</a>
 		</nav>
-		<p>&copy; {moment(Date.now()).year()} Nicholas. All Rights Reserved.</p>
+		<p>
+			Built using{' '}
+			<a
+				href="https://kit.svelte.dev/"
+				target="_blank"
+				aria-hidden="true"
+				rel="noopener noreferrer"
+				class="link svelte"
+			>
+				SvelteKit</a>.
+		</p>
 		<p>
 			Proudly hosted on{' '}
 			<a
@@ -114,12 +126,13 @@
 					{moment(new Date($repository.data.updated_at)).fromNow()}</a>.
 			</p>
 		{/if}
+		<p>&copy; {moment(Date.now()).year()} {title}. All Rights Reserved.</p>
 	</div>
 </footer>
 
 <style lang="scss">
 	footer {
-		margin: 2rem 0;
+		margin: 1rem 0;
 		margin-bottom: 0;
 
 		background-color: var(--theme-colors-background-contrast);

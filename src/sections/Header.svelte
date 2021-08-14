@@ -14,7 +14,13 @@
 </script>
 
 <div>
-	<h1>Nicholas Adamou</h1>
+	<a
+		href="/"
+		aria-hidden="true"
+		rel="noopener noreferrer"
+	>
+		<h1>Nicholas Adamou</h1>
+	</a>
 
 	<button
 		on:click={onToggle}
@@ -68,15 +74,21 @@
 
 		width: 100%;
 
-		h1 {
-			margin: 0;
+		a {
+			text-decoration: none;
 
-			font-size: var(--fz-lg);
-			font-weight: 900;
-			text-transform: uppercase;
+			color: var(--theme-colors-primary);
 
-			@media screen and (max-width: 430px) {
-				margin-left: 1rem;
+			h1 {
+				margin: 0;
+
+				font-size: var(--fz-lg);
+				font-weight: 900;
+				text-transform: uppercase;
+
+				@media screen and (max-width: 430px) {
+					margin-left: 1rem;
+				}
 			}
 		}
 	}

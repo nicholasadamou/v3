@@ -18,7 +18,7 @@
 	setContext('isSidebarOpen', isSidebarOpen);
 </script>
 
-<Alert />
+<!-- <Alert /> -->
 
 <main>
 	<Header />
@@ -38,6 +38,7 @@
 		position: relative;
 
 		margin: 5rem auto;
+		margin-bottom: 2rem;
 
 		width: 960px;
 
