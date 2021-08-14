@@ -39,15 +39,11 @@
 
 		zoom: 125%;
 
-		@media screen and (max-width: 1366px) {
-			zoom: 120%;
-		}
-
-		@media screen and (max-width: 1366px) {
+		@media screen and (max-width: 1920px) {
 			zoom: 110%;
 		}
 
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 1440px) {
 			zoom: 100%;
 		}
 	}
