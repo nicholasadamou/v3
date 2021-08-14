@@ -4,6 +4,10 @@
 	import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 	import Button from '$components/Button.svelte';
+
+	import config from '$config';
+
+	const { email } = config;
 </script>
 
 <section>
@@ -24,7 +28,7 @@
 
 	<aside>
 		<Button
-			url={"mailto:nicholasadamouemail@gmail.com?subject=Hello"}
+			url={`mailto:${email}?subject=Hello`}
 			icon={faPaperPlane}
 			text="Get In Touch"
 		/>

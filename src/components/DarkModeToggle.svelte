@@ -4,7 +4,7 @@
 	import Icon from 'svelte-awesome';
 	import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
-	let { toggle, current, theme } = getContext('theme')
+	let { toggle, current, theme } = getContext('theme');
 
 	export let contrast = false;
 </script>
