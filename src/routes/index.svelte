@@ -44,7 +44,7 @@
 		}
 
 		@media screen and (max-width: 1366px) {
-			zoom: 112%;
+			zoom: 110%;
 		}
 
 		@media screen and (max-width: 1024px) {
