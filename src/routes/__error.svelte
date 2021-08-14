@@ -25,6 +25,9 @@
 </section>
 
 <style lang="scss">
+	:global(#svelte) {
+		zoom: 100% !important;
+	}
 	section {
 		height: 100vh;
 
