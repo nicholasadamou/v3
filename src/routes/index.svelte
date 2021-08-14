@@ -34,6 +34,23 @@
 <ScrollToTopButton />
 
 <style lang="scss">
+	:global(#svelte) {
+		overflow-x: hidden;
+
+		zoom: 125%;
+
+		@media screen and (max-width: 1366px) {
+			zoom: 120%;
+		}
+
+		@media screen and (max-width: 1366px) {
+			zoom: 112%;
+		}
+
+		@media screen and (max-width: 1024px) {
+			zoom: 100%;
+		}
+	}
 	main {
 		position: relative;
 

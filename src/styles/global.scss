@@ -19,24 +19,6 @@
 	--fz-heading: 32px;
 }
 
-#svelte {
-	overflow-x: hidden;
-
-	zoom: 125%;
-
-	@media screen and (max-width: 1366px) {
-		zoom: 120%;
-	}
-
-	@media screen and (max-width: 1366px) {
-		zoom: 115%;
-	}
-
-	@media screen and (max-width: 1024px) {
-		zoom: 100%;
-	}
-}
-
 /* Text selection styles */
 *::selection {
 	background: var(--theme-colors-background-contrast);
