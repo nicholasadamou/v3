@@ -45,6 +45,10 @@
 			repositoryName="jwt-spring-security-demo"
 			language="java"
 		/>
+		<Repository
+			repositoryName="carbon-sidebar-tabs"
+			language="react"
+		/>		
 	</div>
 
 	<span>More can be found on my
