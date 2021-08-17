@@ -15,7 +15,17 @@
 		<img src="/hero.png" alt="hero-image" />
 	</Lazy>
 
-	<p>I’m Nick — a full-stack software engineer focused on building accessible, human-centered financial products at
+	<p>I’m Nick — a full-stack software engineer and graduate student at{' '}
+		<a
+			href="https://www.cc.gatech.edu/"
+			target="_blank"
+			aria-hidden="true"
+			rel="noopener noreferrer"
+			class="link gatech"
+		>
+			Georgia Tech
+		</a>
+		focused on building accessible, human-centered financial products at
 		<a
 			href="https://ibm.com/"
 			target="_blank"

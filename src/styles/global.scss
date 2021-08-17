@@ -2,6 +2,7 @@
 	--light-grey: #cccccc;
 	--blue: #5496ff;
 
+	--gatech: #eeb211;
 	--ibm: #1f70c1;
 	--linkedin: #0077b5;
 	--svelte: #fe3e00;
@@ -47,6 +48,10 @@ body {
 	&:hover {
 		color: var(--light-grey) !important;
 	}
+}
+
+.gatech {
+	color: var(--gatech) !important;
 }
 
 .ibm {
