@@ -32,7 +32,7 @@ const config = {
 		{
 			image: 'ibm.png',
 			company: 'IBM',
-			title: 'Senior Software Engineer',
+			title: 'Software Engineer',
 			duration: 'May 2021 - Present',
 			location: 'Southbury, CT',
 			description:
@@ -41,7 +41,7 @@ const config = {
 		{
 			image: 'ibm.png',
 			company: 'IBM',
-			title: 'Software Engineer',
+			title: 'Associate Software Engineer',
 			duration: 'June 2019 - May 2021',
 			location: 'Southbury, CT',
 			description:

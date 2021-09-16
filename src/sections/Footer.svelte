@@ -18,7 +18,7 @@
 
 	const { github, codepen, linkedin} = config.socialMedia;
 
-	const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
+	// const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
 </script>
 
 <footer>
@@ -111,7 +111,7 @@
 			>
 				GitHub</a>.
 		</p>
-		{#if $repository.isLoading}
+		<!-- {#if $repository.isLoading}
 			<BarLoader color="var(--theme-colors-text-contrast)" />
 		{:else}
 			<p>
@@ -125,7 +125,7 @@
 				>
 					{moment(new Date($repository.data.updated_at)).fromNow()}</a>.
 			</p>
-		{/if}
+		{/if} -->
 		<p>&copy; {moment(Date.now()).year()} {title}. All Rights Reserved.</p>
 	</div>
 </footer>
