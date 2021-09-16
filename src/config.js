@@ -50,11 +50,11 @@ const config = {
 		{
 			image: 'blackbird.png',
 			company: 'Blackbird',
-			title: 'Software Engineer',
+			title: 'Software Engineering Intern',
 			duration: 'June 2018 - August 2018',
 			location: 'San Francisco, CA',
 			description:
-				'As a software engineer at Blackbird, I worked closely with the CTO and the engineering team to construct custom components for the Blackbird web and mobile apps leveraging React, React Native, React Native Web, GraphQL, Apollo, and ES6 JavaScript. In addition, I provided QA (Quality Assurance) and unit testing on multiple builds of the Blackbird web and mobile apps.'
+				'As a software engineering intern at Blackbird, I worked closely with the CTO and the engineering team to construct custom components for the Blackbird web and mobile apps leveraging React, React Native, React Native Web, GraphQL, Apollo, and ES6 JavaScript. In addition, I provided QA (Quality Assurance) and unit testing on multiple builds of the Blackbird web and mobile apps.'
 		}
 	]
 };
