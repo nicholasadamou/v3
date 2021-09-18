@@ -11,7 +11,7 @@
 </script>
 
 <section>
-	<Lazy height={800}>
+	<Lazy height={650}>
 		<img src="/hero.png" alt="hero-image" />
 	</Lazy>
 
@@ -58,7 +58,7 @@
 		}
 
 		img {
-			width: 800px;
+			width: 650px;
 
 			@media screen and (max-width: 430px) {
 				width: 95%;
