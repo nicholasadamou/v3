@@ -36,7 +36,7 @@ const config = {
 			duration: 'May 2021 - Present',
 			location: 'Southbury, CT',
 			description:
-				"Leads the software development team for IBM’s cloud-native ledger software. Works across cross-functional teams to enhance the journaling software. Leverages modern technologies to bring a new modern face to IBM's ledger application. Integrated Apache POI to dynamically handle Excel document generation and parsing. Incorporated IBM Watson to construct a full stack chatbot application to handle user queries. Utilized Box and Java Springboot to stream video/image content to chatbot. Incorporated JWT token authentication for meaningful user context. Led performance improvements initiative which led to an overall performance gain of ~60%. Acts as a software librarian for IBM's departmental software handing production deployments."
+				"Leads the software development team for IBM’s cloud-native ledger software. Works across cross-functional teams to enhance the journaling software. Leverages modern technologies to bring a new modern face to IBM's ledger application. Integrated Apache POI to dynamically handle Excel document generation and parsing. Incorporated IBM Watson to construct a full stack chatbot application to handle user queries. Utilized Box and Java Springboot to stream video/image content to chatbot. Incorporated JWT token authentication for meaningful user context. Implemented system for dynamically handling toast-style notifications. Led performance improvements initiative which led to an overall performance gain of ~60%. Acts as a software librarian for IBM's departmental software handing production deployments."
 		},
 		{
 			image: 'ibm.png',
@@ -45,7 +45,7 @@ const config = {
 			duration: 'June 2019 - May 2021',
 			location: 'Southbury, CT',
 			description:
-				"Works across cross-functional teams to enhance IBM's ledger and departmental software. Developed various key front-end and back-end services. Integrated IBM Carbon Design system (React) as base design system for IBM's ledger software. Constructed documentation surrounding each of the ledger's micro-service's API utilizing Swagger. Utilized IBM SSO and JWT tokens to securely authenticate users. Integrated dynamic session timeout handling for user sessions. Utilized cron jobs, Hibernate, and Java Springboot to automate the clean-up of user PI data within IBM's departmental software."
+				"Works across cross-functional teams to enhance IBM's ledger and departmental software. Developed various key front-end and back-end services. Integrated IBM Carbon Design system (React) as base design system for IBM's ledger software. Constructed documentation surrounding each of the ledger's micro-service's API utilizing Swagger. Utilized IBM SSO, JWT tokens, and React Redux to securely authenticate users. Integrated dynamic session timeout handling for user sessions. Utilized cron jobs, Hibernate, and Java Springboot to automate the clean-up of user PI data within IBM's departmental software."
 		},
 		{
 			image: 'blackbird.png',
