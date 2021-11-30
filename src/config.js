@@ -32,7 +32,7 @@ const config = {
 		{
 			image: 'ibm.png',
 			company: 'IBM',
-			title: 'Lead Software Engineer',
+			title: 'Staff Software Engineer',
 			duration: 'May 2021 - Present',
 			location: 'Southbury, CT',
 			description:
