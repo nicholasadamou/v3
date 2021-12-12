@@ -26,6 +26,10 @@
 			language="react"
 		/>
 		<Repository
+			repositoryName="isitup"
+			language="gulp"
+		/>
+		<Repository
 			repositoryName="vineyard-vines-sales"
 			demoURL="https://vineyard-vines-sales.netlify.app/"
 			language="react"
