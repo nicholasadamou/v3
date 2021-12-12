@@ -17,6 +17,7 @@
 	export let user = github.username;
 	export let repositoryName;
 	export let language;
+	export let demoURL = undefined;
 
 	const repository = useQuery(`${user}/${repositoryName}`, () => fetchRepository(user, repositoryName));
 
@@ -49,6 +50,19 @@
 					{$repository.data.name}
 				</span>
 			</a>
+
+			{#if demoURL !== undefined}
+				<a
+					href={demoURL}
+					target="_blank"
+					aria-hidden="true"
+					rel="noopener noreferrer"
+				>
+					<span aria-label="title">
+						demo
+					</span>
+				</a>
+			{/if}
 
 			{#if $repository.data.stargazers_count > 0}
 				<a

@@ -18,7 +18,16 @@
 
 	<div>
 		<Repository
+			repositoryName="serverless-react-browsers"
+			language="react"
+		/>
+		<Repository
 			repositoryName="down-to-network"
+			language="react"
+		/>
+		<Repository
+			repositoryName="vineyard-vines-sales"
+			demoURL="https://vineyard-vines-sales.netlify.app/"
 			language="react"
 		/>
 		<Repository
@@ -48,7 +57,7 @@
 		<Repository
 			repositoryName="carbon-sidebar-tabs"
 			language="react"
-		/>		
+		/>
 	</div>
 
 	<span>More can be found on my

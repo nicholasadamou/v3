@@ -13,9 +13,9 @@
 		pathname = window.location.pathname;
 	});
 
-	export let title;
-	export let description;
-	export let image;
+	export let title = undefined;
+	export let description = undefined;
+	export let image = undefined;
 
 	const {
 		siteUrl,
