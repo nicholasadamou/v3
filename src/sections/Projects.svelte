@@ -31,6 +31,11 @@
 			language="react"
 		/>
 		<Repository
+			repositoryName="muuvies"
+			demoURL="https://muuvies.netlify.app/"
+			language="react"
+		/>
+		<Repository
 			repositoryName="firebase-react-starter-kit"
 			language="react"
 		/>
