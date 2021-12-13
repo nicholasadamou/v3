@@ -30,6 +30,10 @@
 			language="gulp"
 		/>
 		<Repository
+			repositoryName="cf-detect"
+			language="gulp"
+		/>
+		<Repository
 			repositoryName="vineyard-vines-sales"
 			demoURL="https://vineyard-vines-sales.netlify.app/"
 			language="react"
