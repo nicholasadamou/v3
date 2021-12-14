@@ -44,6 +44,11 @@
 			language="react"
 		/>
 		<Repository
+			repositoryName="wifi-card"
+			demoURL="https://wifi-card.netlify.app/"
+			language="react"
+		/>
+		<Repository
 			repositoryName="firebase-react-starter-kit"
 			language="react"
 		/>
