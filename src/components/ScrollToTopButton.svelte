@@ -26,8 +26,8 @@
 		bottom: 20px;
 		right: 20px;
 
-		width: 10px;
-		height: 10px;
+		width: 14px;
+		height: 14px;
 
 		padding: 20px;
 

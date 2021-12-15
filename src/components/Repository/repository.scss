@@ -1,8 +1,7 @@
 article {
-	margin: 10px;
-	margin-left: 0;
+  margin: 10px 10px 10px 0;
 
-	font-size: var(--fz-md);
+  font-size: var(--fz-md);
 
 	a {
 		text-decoration: none;
@@ -12,7 +11,7 @@ article {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 5px;
+		gap: 8px;
 
 		margin-bottom: 10px;
 

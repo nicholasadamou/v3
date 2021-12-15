@@ -13,7 +13,7 @@
 	<Header
 		title="Some Things I've Built"
 	>
-	Various projects that I've open sourced while working at these companies.
+		Various projects that I've open sourced in my spare time.
 	</Header>
 
 	<div>
@@ -39,13 +39,13 @@
 			language="react"
 		/>
 		<Repository
-			repositoryName="muuvies"
-			demoURL="https://muuvies.netlify.app/"
+			repositoryName="wifi-card"
+			demoURL="https://wifi-card.netlify.app/"
 			language="react"
 		/>
 		<Repository
-			repositoryName="wifi-card"
-			demoURL="https://wifi-card.netlify.app/"
+			repositoryName="muuvies"
+			demoURL="https://muuvies.netlify.app/"
 			language="react"
 		/>
 		<Repository
@@ -98,10 +98,9 @@
 		width: 80%;
 		max-width: 90%;
 
-		margin: 20px 0;
-		margin-bottom: 10px;
+	  margin: 20px 0 10px;
 
-		@media screen and (max-width: 430px) {
+	  @media screen and (max-width: 430px) {
 			grid-template-columns: repeat(1, 1fr);
 
 			width: 100%;
