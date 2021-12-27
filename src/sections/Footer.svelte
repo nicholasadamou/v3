@@ -126,7 +126,7 @@
 			>
 				GitHub</a>.
 		</p>
-		<p>&copy; {moment(Date.now()).year()} {title}. All Rights Reserved.</p>
+		<p>&copy; 1997 - {moment(Date.now()).year()} {title}. All Rights Reserved.</p>
 	</div>
 </footer>
 
