@@ -18,7 +18,7 @@
 
 	const { github, codepen, linkedin} = config.socialMedia;
 
-	// const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
+	const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
 </script>
 
 <footer>
@@ -100,18 +100,7 @@
 			>
 				Netlify</a>.
 		</p>
-		<p>
-			Source code aviailable on{' '}
-			<a
-				href={`${github.url}/${config.name}`}
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-				class="link github"
-			>
-				GitHub</a>.
-		</p>
-		<!-- {#if $repository.isLoading}
+		{#if $repository.isLoading}
 			<BarLoader color="var(--theme-colors-text-contrast)" />
 		{:else}
 			<p>
@@ -125,7 +114,18 @@
 				>
 					{moment(new Date($repository.data.updated_at)).fromNow()}</a>.
 			</p>
-		{/if} -->
+		{/if}
+		<p>
+			Source code aviailable on{' '}
+			<a
+				href={`${github.url}/${config.name}`}
+				target="_blank"
+				aria-hidden="true"
+				rel="noopener noreferrer"
+				class="link github"
+			>
+				GitHub</a>.
+		</p>
 		<p>&copy; {moment(Date.now()).year()} {title}. All Rights Reserved.</p>
 	</div>
 </footer>

@@ -4,6 +4,8 @@
 
 	import config from '$config';
 
+	const { projects } = config;
+
 	const { github } = config.socialMedia;
 </script>
 
@@ -17,65 +19,13 @@
 	</Header>
 
 	<div>
-		<Repository
-			repositoryName="serverless-react-browsers"
-			language="react"
-		/>
-		<Repository
-			repositoryName="down-to-network"
-			language="react"
-		/>
-		<Repository
-			repositoryName="isitup"
-			language="gulp"
-		/>
-		<Repository
-			repositoryName="cf-detect"
-			language="gulp"
-		/>
-		<Repository
-			repositoryName="vineyard-vines-sales"
-			demoURL="https://vineyard-vines-sales.netlify.app/"
-			language="react"
-		/>
-		<Repository
-			repositoryName="wifi-card"
-			demoURL="https://wifi-card.netlify.app/"
-			language="react"
-		/>
-		<Repository
-			repositoryName="muuvies"
-			demoURL="https://muuvies.netlify.app/"
-			language="react"
-		/>
-		<Repository
-			repositoryName="firebase-react-starter-kit"
-			language="react"
-		/>
-		<Repository
-			repositoryName="react-iframe"
-			language="react"
-		/>
-		<Repository
-			repositoryName="storage"
-			language="react"
-		/>
-		<Repository
-			repositoryName="krios-github-bot"
-			language="node"
-		/>
-		<Repository
-			repositoryName="toasty"
-			language="react"
-		/>
-		<Repository
-			repositoryName="jwt-spring-security-demo"
-			language="java"
-		/>
-		<Repository
-			repositoryName="carbon-sidebar-tabs"
-			language="react"
-		/>
+		{#each projects as project}
+			<Repository
+				repositoryName={project.name}
+				language={project.language}
+				demoURL={project.url || undefined}
+			/>
+		{/each}
 	</div>
 
 	<span>More can be found on my

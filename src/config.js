@@ -56,6 +56,68 @@ const config = {
 			description:
 				'Worked closely with the CTO and the engineering team to construct custom components for the Blackbird web and mobile apps leveraging React, React Native, React Native Web, GraphQL, and Apollo. Provided Quality Assurance and unit testing on multiple builds of the Blackbird web and mobile apps.'
 		}
+	],
+
+	projects: [
+		{
+			name: 'serverless-react-browsers',
+			language: 'react'
+		},
+		{
+			name: 'down-to-network',
+			language: 'react'
+		},
+		{
+			name: 'isitup',
+			language: 'gulp'
+		},
+		{
+			name: 'cf-detect',
+			language: 'gulp'
+		},
+		{
+			name: 'vineyard-vines-sales',
+			language: 'react',
+			url: 'https://vineyard-vines-sales.netlify.app/'
+		},
+		{
+			name: 'wifi-card',
+			language: 'react',
+			url: 'https://wifi-card.netlify.app/'
+		},
+		{
+			name: 'muuvies',
+			language: 'react',
+			url: 'https://muuvies.netlify.app/'
+		},
+		{
+			name: 'firebase-react-starter-kit',
+			language: 'react'
+		},
+		{
+			name: 'react-iframe',
+			language: 'react'
+		},
+		{
+			name: 'storage',
+			language: 'react'
+		},
+		{
+			name: 'krios-github-bot',
+			language: 'node'
+		},
+		{
+			name: 'toasty',
+			language: 'react'
+		},
+		{
+			name: 'jwt-spring-security-demo',
+			language: 'java'
+		},
+		{
+			name: 'carbon-sidebar-tabs',
+			language: 'react'
+		}
 	]
 };
 
