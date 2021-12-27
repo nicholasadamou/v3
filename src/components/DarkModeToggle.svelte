@@ -21,6 +21,7 @@
 			`}
 			scale="1.25"
 		/>
+		<span>Dark Mode</span>
 	{:else if $theme === "light"}
 		<Icon
 			data={faSun}
@@ -29,5 +30,14 @@
 			`}
 			scale="1.25"
 		/>
+		<span>Light Mode</span>
 	{/if}
 </button>
+
+<style lang="scss">
+	span {
+		@media screen and (max-width: 430px) {
+			display: none;
+		}
+	}
+</style>

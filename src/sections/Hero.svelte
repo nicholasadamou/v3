@@ -51,7 +51,7 @@
 <style lang="scss">
 	section {
 		margin-top: 2.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 
 		@media screen and (max-width: 430px) {
 			margin-left: 1rem;
@@ -66,7 +66,7 @@
 		}
 
 		p {
-			margin: 5px 0 2.5rem 0;
+			margin: 5px 0 1.5rem 0;
 
 			font-size: var(--fz-lg);
 
