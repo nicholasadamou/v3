@@ -12,7 +12,7 @@
 <Head />
 
 <QueryClientProvider client={queryClient}>
-	<ThemeWrapper themes="{themes}" mode="light">
+	<ThemeWrapper themes="{themes}" theme="light">
 		<!-- This is where the page will be rendered -->
 		<slot />
 	</ThemeWrapper>
