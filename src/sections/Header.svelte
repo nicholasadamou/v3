@@ -31,6 +31,24 @@
 </div>
 
 <style lang="scss">
+	button {
+		display: none;
+
+		@media screen and (max-width: 430px) {
+			display: block;
+
+			position: absolute;
+			top: 0;
+			right: 2rem;
+		}
+
+		:global(svg) {
+			fill: var(--theme-colors-primary);
+
+			cursor: pointer;
+		}
+	}
+
 	div {
 		display: flex;
 		justify-content: flex-start;

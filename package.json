@@ -34,17 +34,17 @@
 	},
 	"devDependencies": {
 		"@beyonk/svelte-google-analytics": "^2.2.0",
-		"@sveltejs/adapter-netlify": "^1.0.0-next.26",
+		"@sveltejs/adapter-netlify": "1.0.0-next.36",
 		"@sveltejs/kit": "next",
-		"eslint": "^7.22.0",
+		"eslint": "8.5.0",
 		"eslint-config-prettier": "^8.1.0",
-		"eslint-plugin-svelte3": "^3.2.0",
-		"node-sass": "6.0.1",
+		"eslint-plugin-svelte3": "3.2.1",
+		"node-sass": "7.0.1",
 		"normalize.css": "^8.0.1",
-		"prettier": "2.3.2",
-		"prettier-plugin-svelte": "^2.2.0",
-		"svelte": "^3.34.0",
-		"svelte-preprocess": "^4.7.4"
+		"prettier": "2.5.1",
+		"prettier-plugin-svelte": "2.5.1",
+		"svelte": "3.44.3",
+		"svelte-preprocess": "4.10.1"
 	},
 	"type": "module",
 	"dependencies": {
@@ -52,14 +52,14 @@
 		"@fortawesome/free-brands-svg-icons": "^5.15.3",
 		"@fortawesome/free-regular-svg-icons": "^5.15.3",
 		"@fortawesome/free-solid-svg-icons": "^5.15.3",
-		"@sveltestack/svelte-query": "^1.4.1",
-		"husky": "^7.0.1",
-		"lint-staged": "^11.1.1",
+		"@sveltestack/svelte-query": "1.5.0",
+		"husky": "7.0.4",
+		"lint-staged": "12.1.4",
 		"moment": "^2.29.1",
-		"svelte-awesome": "^2.3.2",
-		"svelte-lazy": "^1.0.10",
+		"svelte-awesome": "2.4.2",
+		"svelte-lazy": "1.0.12",
 		"svelte-loading-spinners": "^0.1.7",
 		"svelte-scrollto": "^0.2.0",
-		"svelte-themer": "^0.4.11"
+		"svelte-themer": "0.4.13"
 	}
 }
