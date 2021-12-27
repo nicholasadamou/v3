@@ -19,9 +19,6 @@ const config = {
 		// adding path aliases
 		// https://kit.svelte.dev/faq#aliases
 		vite: {
-			optimizeDeps: {
-				include: ['broadcast-channel']
-			},
 			resolve: {
 				alias: {
 					$components: resolve('./src/components'),
