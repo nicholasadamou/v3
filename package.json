@@ -10,9 +10,6 @@
 	"keywords": [
 		"svelte"
 	],
-	"engines": {
-		"node": ">=0.12"
-	},
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
