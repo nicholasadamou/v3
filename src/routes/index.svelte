@@ -50,10 +50,9 @@
 	main {
 		position: relative;
 
-		margin: 5rem auto;
-		margin-bottom: 2rem;
+	  margin: 5rem auto 2rem;
 
-		width: 960px;
+	  width: 960px;
 
 		text-align: left;
 
@@ -64,8 +63,7 @@
 		}
 
 		@media screen and (max-width: 430px) {
-			margin: 0;
-			margin-top: 2rem;
+		  margin: 2rem 0 0;
 		}
 	}
 </style>

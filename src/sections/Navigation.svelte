@@ -1,12 +1,8 @@
 <script>
 	import Icon from 'svelte-awesome';
-	import { faBook } from '@fortawesome/free-solid-svg-icons';
 	import { faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 	import { scrollto } from "svelte-scrollto";
-
-	import DarkModeToggle from '$components/DarkModeToggle.svelte';
-	import Button from '$components/Button.svelte';
 
 	import config from '$config';
 
@@ -35,11 +31,6 @@
 		</a>
 	</nav>
 	<span>
-		<!-- <Button
-			url={config.resume}
-			icon={faBook}
-			text="Resume"
-		/> -->
 		<a
 			href={github.url}
 			target="_blank"
@@ -73,11 +64,6 @@
 				scale="1.25"
 			/>
 		</a>
-		<p> | </p>
-		<DarkModeToggle
-			class="dark-mode-toggle"
-			contrast
-		/>
 	</span>
 </div>
 
@@ -125,26 +111,26 @@
 				cursor: pointer;
 			}
 
-			p {
-				font-size: var(--fz-sm);
-				font-weight: 100;
-				color: var(--theme-colors-text);
-			}
-
-			:global(.dark-mode-toggle) {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				gap: 10px;
-
-				padding: 8px;
-				background-color: var(--theme-colors-background-contrast);
-				color: var(--theme-colors-text-contrast);
-				border-radius: 5px;
-
-				font-size: var(--fz-sm);
-				font-weight: 400;
-			}
+			//p {
+			//	font-size: var(--fz-sm);
+			//	font-weight: 100;
+			//	color: var(--theme-colors-text);
+			//}
+			//
+			//:global(.dark-mode-toggle) {
+			//	display: flex;
+			//	align-items: center;
+			//	justify-content: center;
+			//	gap: 10px;
+			//
+			//	padding: 8px;
+			//	background-color: var(--theme-colors-background-contrast);
+			//	color: var(--theme-colors-text-contrast);
+			//	border-radius: 5px;
+			//
+			//	font-size: var(--fz-sm);
+			//	font-weight: 400;
+			//}
 		}
 	}
 </style>

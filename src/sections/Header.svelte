@@ -4,8 +4,6 @@
 	import Icon from 'svelte-awesome';
 	import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-	import DarkModeToggle from '$components/DarkModeToggle.svelte';
-
 	let isSidebarOpen = getContext('isSidebarOpen');
 
 	const onToggle = () => {
@@ -30,43 +28,9 @@
 			scale="1.25"
 		/>
 	</button>
-
-	<DarkModeToggle
-		class="dark-mode-toggle"
-	/>
 </div>
 
 <style lang="scss">
-	:global(.dark-mode-toggle) {
-		display: none;
-
-		@media screen and (max-width: 430px) {
-			display: block;
-
-			position: absolute;
-			top: 0;
-			right: 4.5rem;
-		}
-	}
-
-	button {
-		display: none;
-
-		@media screen and (max-width: 430px) {
-			display: block;
-
-			position: absolute;
-			top: 0;
-			right: 2rem;
-		}
-
-		:global(svg) {
-			fill: var(--theme-colors-primary);
-
-			cursor: pointer;
-		}
-	}
-
 	div {
 		display: flex;
 		justify-content: flex-start;
