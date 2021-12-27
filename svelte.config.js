@@ -19,6 +19,16 @@ const config = {
 		// adding path aliases
 		// https://kit.svelte.dev/faq#aliases
 		vite: {
+			optimizeDeps: {
+				include: ['broadcast-channel']
+			},
+			server: {
+				fs: {
+					// Allow serving files from one level up to the project root
+					// Allows access to package.json
+					allow: ['..']
+				}
+			},
 			resolve: {
 				alias: {
 					$components: resolve('./src/components'),
