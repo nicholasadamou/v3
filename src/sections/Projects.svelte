@@ -4,16 +4,16 @@
 
 	import config from '$config';
 
-	const { projects } = config;
+	const {projects} = config;
 
-	const { github } = config.socialMedia;
+	const {github} = config.socialMedia;
 </script>
 
 <section
-	id="projects"
+		id="projects"
 >
 	<Header
-		title="Some Things I've Built"
+			title="Some Things I've Built"
 	>
 		Various projects that I've open sourced in my spare time.
 	</Header>
@@ -21,50 +21,56 @@
 	<div>
 		{#each projects as project}
 			<Repository
-				repositoryName={project.name}
-				language={project.language}
-				demoURL={project.url || undefined}
+					repositoryName={project.name}
+					language={project.language}
+					demoURL={project.url || undefined}
 			/>
 		{/each}
 	</div>
 
 	<span>More can be found on my
 		<a
-			href={github.url}
-			target="_blank"
-			aria-hidden="true"
-			rel="noopener noreferrer"
-			class="github"
+				aria-hidden="true"
+				class="github"
+				href={github.url}
+				rel="noopener noreferrer"
+				target="_blank"
 		>
 			GitHub</a>.
 	</span>
 </section>
 
 <style lang="scss">
-	div {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-
-		width: 80%;
-		max-width: 90%;
-
-	  margin: 20px 0 10px;
-
-	  @media screen and (max-width: 430px) {
-			grid-template-columns: repeat(1, 1fr);
-
-			width: 100%;
-			max-width: 95%;
-
-			margin-left: 1rem;
-		}
+  @media screen and (max-width: 430px) {
+	:global(#projects > header) {
+	  margin-top: -40px;
 	}
+  }
 
-	span {
-		font-size: var(--fz-md);
+  div {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 
-		@media screen and (max-width: 430px) {
-			margin-left: 1rem;
-		}
+	width: 80%;
+	max-width: 90%;
+
+	margin: 20px 0 10px;
+
+	@media screen and (max-width: 430px) {
+	  grid-template-columns: repeat(1, 1fr);
+
+	  width: 100%;
+	  max-width: 95%;
+
+	  margin-left: 1rem;
 	}
+  }
+
+  span {
+	font-size: var(--fz-md);
+
+	@media screen and (max-width: 430px) {
+	  margin-left: 1rem;
+	}
+  }
 </style>

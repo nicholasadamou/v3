@@ -55,12 +55,20 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [ni
 
 3. Start the development server:
 
-```bash
-yarn dev
+	```bash
+	yarn dev
 
-# or start the server and open the app in a new browser tab
-yarn dev -- --open
-```
+	# or start the server and open the app in a new browser tab
+	yarn dev -- --open
+	```
+
+4. Using *Netlify* (λ) functions:
+
+	```bash
+	yarn netlify
+	```
+
+	Learn more about the *Netlify* CLI on their [documentation page](https://docs.netlify.com/cli/get-started/).
 
 ## 🚀 Building and Running for Production
 

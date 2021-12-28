@@ -44,6 +44,15 @@
 				Work
 			</a>
 			<a
+				href="#websites"
+				use:scrollto={'#websites'}
+				aria-hidden="true"
+				rel="noopener noreferrer"
+				class="link"
+			>
+				Websites
+			</a>
+			<a
 				href="#projects"
 				use:scrollto={'#projects'}
 				aria-hidden="true"

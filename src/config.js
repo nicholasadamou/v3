@@ -81,11 +81,6 @@ const config = {
 			url: 'https://vineyard-vines-sales.netlify.app/'
 		},
 		{
-			name: 'wifi-card',
-			language: 'react',
-			url: 'https://wifi-card.netlify.app/'
-		},
-		{
 			name: 'muuvies',
 			language: 'react',
 			url: 'https://muuvies.netlify.app/'
