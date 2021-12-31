@@ -1,5 +1,6 @@
 [build]
   command = "npx yarn build"
+  publish = "build/"
   functions = "functions/"
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
