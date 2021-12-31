@@ -3,32 +3,39 @@ const puppeteer = require('puppeteer-core');
 const validator = require("validator");
 const sharp = require('sharp');
 
-const devices = puppeteer.devices;
+const isDevelopment = process.env.URL.includes("http://localhost");
 
 const cache = new Map();
 
-async function getOptions() {
-	return process.env.URL.includes("http://localhost")
-		? {
-				product: "chrome",
+function obtainDevices() {
+	return isDevelopment
+		?
+			puppeteer.devices
+		:
+			chromium.puppeteer.devices;
+}
+
+async function launchBrowser() {
+	return isDevelopment
+		?
+			await puppeteer.launch({
 				args: [],
 				executablePath:
 					"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
 				headless: true,
-		  }
-		: {
-				product: "chrome",
+			})
+		:
+			await chromium.puppeteer.launch({
 				args: chromium.args,
 				executablePath: await chromium.executablePath,
 				headless: chromium.headless,
-		  };
+			});
 }
 
 async function getScreenshot(url, device = "desktop", type = "webp") {
 	console.log({ url, device, type });
 
-	const options = await getOptions();
-	const browser = await puppeteer.launch(options);
+	const browser = await launchBrowser();
 	const page = await browser.newPage();
 
 	await chromium.font(
@@ -36,6 +43,8 @@ async function getScreenshot(url, device = "desktop", type = "webp") {
 	);
 
 	if (device === "mobile") {
+		const devices = obtainDevices();
+
 		await page.emulate(devices["iPhone X"]);
 	} else {
 		await page.setViewport({
@@ -89,7 +98,7 @@ exports.handler = async (event) => {
 			} else {
 				let prefix = `${process.env.URL}/.netlify/functions/`;
 
-				if (process.env.URL.includes("http://localhost")) {
+				if (isDevelopment) {
 					prefix = `${process.env.URL}`;
 				}
 

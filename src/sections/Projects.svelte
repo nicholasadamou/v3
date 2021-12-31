@@ -42,7 +42,11 @@
 
 <style lang="scss">
   :global(#projects > header) {
-	margin-top: 30px;
+	margin-top: 40px;
+
+	@media screen and (max-width: 430px) {
+	  margin-top: 30px;
+	}
   }
 
   div {
