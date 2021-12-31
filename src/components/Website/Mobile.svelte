@@ -12,7 +12,7 @@
 		right: 0;
 		top: 26px;
 
-		width: 32%;
+		width: 33%;
 		min-height: 50px;
 
 		border: 2px solid var(--black);
@@ -20,6 +20,10 @@
 		border-radius: 10px;
 
 		box-shadow: 1px 1px 20px -5px rgba(var(--black), 0.5);
+
+	  	@media screen and (max-width: 430px) {
+		  width: 30%;
+		}
 
 		&::before { // home button
 			content: "";
@@ -39,7 +43,7 @@
 		content: "";
 
 		position: absolute;
-		top: 0;
+		top: -1px;
 		left: calc(50% - 20px);
 
 		width: 40px;
@@ -48,18 +52,12 @@
 		background: var(--black);
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
-
-		@media screen and (max-width: 430px) {
-		  left: calc(50% - 25px);
-
-		  width: 50px;
-		}
 	  }
 
 	  img {
 		max-width: 100%;
 
-		border-radius: 10px;
+		border-radius: 4px;
 	  }
 	}
 </style>

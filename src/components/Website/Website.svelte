@@ -8,18 +8,20 @@
 
 	export let title = '';
 	export let link = '#';
+	export let desktop = undefined;
+	export let mobile = undefined;
 	export let noMobile = false;
-
-	let desktop = '';
-	let mobile = '';
+	export let noFetchImage = false;
 
 	onMount(async () => {
-		const url = new URL(link);
+		if (!noFetchImage) {
+			const url = new URL(link);
 
-		desktop = getImageURL(url.host);
+			desktop = getImageURL(url.host);
 
-		if (!noMobile) {
-			mobile = getImageURL(url.host, "mobile");
+			if (!noMobile) {
+				mobile = getImageURL(url.host, "mobile");
+			}
 		}
 	})
 </script>
@@ -57,8 +59,8 @@
 	  width: 33%;
 	  max-width: 33%;
 
-	  margin-top: 20px;
-	  margin-bottom: 20px;
+	  margin-top: 0;
+	  margin-bottom: 50px;
 
 	  @media screen and (max-width: 430px) {
 		-webkit-box-flex: 1;
@@ -68,7 +70,7 @@
 		width: 100%;
 		max-width: 100%;
 
-		margin-bottom: 80px;
+		margin-bottom: 50px;
 	  }
 
 	  a {

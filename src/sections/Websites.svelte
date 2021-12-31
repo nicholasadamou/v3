@@ -11,23 +11,24 @@
 	</Header>
 	<div>
 		<Website
-				title="Personal Portfolio (latest)"
-				link="https://nicholasadamou.com/"
-		/>
-		<Website
-			title="Personal Portfolio (v1)"
-			link="https://nicholasadamou-v1.netlify.app/"
-		/>
-	</div>
-	<div>
-		<Website
-				title="Personal Portfolio (v2)"
-				link="https://nicholasadamou-v2.netlify.app/"
+			title="Vineyard Vines Sales"
+			link="https://vineyard-vines-sales.netlify.app/"
+			desktop="websites/vineyard-vines-sales-desktop.png"
+
+			noFetchImage
+			noMobile
 		/>
 		<Website
 			title="WiFi Card"
 			link="https://wifi-card.netlify.app"
+
 			noMobile
+		/>
+	</div>
+	<div style="margin-top: 0">
+		<Website
+			title="Personal Portfolio"
+			link="https://nicholasadamou.com/"
 		/>
 	</div>
 </section>
@@ -44,7 +45,7 @@
 	  justify-content: start;
 
 	  max-width: 900px;
-	  margin-bottom: 60px;
+	  margin-top: 30px;
 	  margin-left: -20px;
 
 	  @media screen and (max-width: 430px) {
@@ -53,6 +54,7 @@
 
 		margin-left: 0;
 		margin-bottom: 0;
+		margin-top: 30px;
 	  }
 	}
 </style>

@@ -41,10 +41,8 @@
 </section>
 
 <style lang="scss">
-  @media screen and (max-width: 430px) {
-	:global(#projects > header) {
-	  margin-top: -40px;
-	}
+  :global(#projects > header) {
+	margin-top: 30px;
   }
 
   div {

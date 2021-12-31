@@ -76,11 +76,6 @@ const config = {
 			language: 'gulp'
 		},
 		{
-			name: 'vineyard-vines-sales',
-			language: 'react',
-			url: 'https://vineyard-vines-sales.netlify.app/'
-		},
-		{
 			name: 'muuvies',
 			language: 'react',
 			url: 'https://muuvies.netlify.app/'
