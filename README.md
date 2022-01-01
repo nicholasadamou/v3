@@ -62,13 +62,13 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [ni
 	yarn dev -- --open
 	```
 
-4. Using *Netlify* (λ) functions:
+	Alternatively, you can execute the project along with the Netlify (λ) [functions](functions):
 
 	```bash
 	yarn netlify
 	```
 
-	Learn more about the *Netlify* CLI on their [documentation page](https://docs.netlify.com/cli/get-started/).
+	Learn more about the *Netlify* CLI on their [documentation page](hhttps://www.netlify.com/docs/functions/).
 
 ## 🚀 Building and Running for Production
 
