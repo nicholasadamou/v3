@@ -21,7 +21,9 @@
 		<Website
 			title="WiFi Card"
 			link="https://wifi-card.netlify.app"
+			desktop="websites/wifi-card-desktop.png"
 
+			noFetchImage
 			noMobile
 		/>
 	</div>
@@ -29,6 +31,10 @@
 		<Website
 			title="Personal Portfolio"
 			link="https://nicholasadamou.com/"
+			desktop="websites/nicholas-adamou-desktop.png"
+			mobile="websites/nicholas-adamou-mobile.png"
+
+			noFetchImage
 		/>
 	</div>
 </section>
