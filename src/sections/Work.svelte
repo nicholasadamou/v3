@@ -16,17 +16,7 @@
 		title="Work Experience"
 	>
 		<span>
-			Please read my
-			<a
-				href={config.resume}
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-				class="link"
-			>
-				resume
-			</a>
-			and connect with me on
+			Please connect with me on
 			<a
 				href={linkedin.url}
 				target="_blank"
