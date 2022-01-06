@@ -70,7 +70,7 @@
 			</a>
 			<a
 				href="#websites"
-				use:scrollto={'#projects'}
+				use:scrollto={'#websites'}
 				aria-hidden="true"
 				rel="noopener noreferrer"
 				class="link"
