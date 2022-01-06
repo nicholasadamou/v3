@@ -141,10 +141,9 @@
 
 <style lang="scss">
 	footer {
-		margin: 1rem 0;
-		margin-bottom: 0;
+	  margin: 1rem 0 0;
 
-		background-color: var(--theme-colors-background-contrast);
+	  background-color: var(--theme-colors-background-contrast);
 
 		*::selection {
 			background: var(--theme-colors-background);
