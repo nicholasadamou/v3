@@ -62,14 +62,6 @@
 			</a>
 		</section>
 
-		<Button
-			url={config.resume}
-			icon={faBook}
-			text="Resume"
-			contrast
-			fitWidth
-		/>
-
 		<span>
 			<a
 				href={github.url}
