@@ -16,7 +16,7 @@
 
 	const { title } = config;
 
-	const { github, codepen, linkedin} = config.socialMedia;
+	const { github, codepen, linkedin } = config.socialMedia;
 
 	const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
 </script>
