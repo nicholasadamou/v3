@@ -31,7 +31,7 @@ const config = {
 		{
 			image: 'ibm.png',
 			company: 'IBM',
-			title: 'Staff Software Engineer',
+			title: 'Staff Software Engineer, GLUI NG Squad',
 			duration: 'May 2021 - Present',
 			location: 'Southbury, CT',
 			description:
@@ -40,7 +40,7 @@ const config = {
 		{
 			image: 'ibm.png',
 			company: 'IBM',
-			title: 'Associate Software Engineer',
+			title: 'Associate Software Engineer, GLUI NG and GUDA Squads',
 			duration: 'June 2019 - May 2021',
 			location: 'Southbury, CT',
 			description:
