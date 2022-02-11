@@ -4,7 +4,7 @@
 
 	import Icon from 'svelte-awesome';
 	import { faTimes, faBook } from '@fortawesome/free-solid-svg-icons';
-	import { faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+	import { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 	import { scrollto } from "svelte-scrollto";
 
@@ -12,7 +12,8 @@
 
 	import config from '$config';
 
-	const { github, codepen, linkedin } = config.socialMedia;
+	const { stackexchange, github, codepen, linkedin } = config.socialMedia;
+	const { stackoverflow } = stackexchange;
 
 	let isSidebarOpen = getContext('isSidebarOpen');
 
@@ -63,6 +64,28 @@
 		</section>
 
 		<span>
+			<a
+				href={stackoverflow.url}
+				target="_blank"
+				aria-hidden="true"
+				rel="noopener noreferrer"
+			>
+				<Icon
+					data={faStackOverflow}
+					scale="1.25"
+				/>
+			</a>
+			<a
+				href={stackexchange.url}
+				target="_blank"
+				aria-hidden="true"
+				rel="noopener noreferrer"
+			>
+				<Icon
+					data={faStackExchange}
+					scale="1.25"
+				/>
+			</a>
 			<a
 				href={github.url}
 				target="_blank"

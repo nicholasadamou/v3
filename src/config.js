@@ -24,6 +24,14 @@ const config = {
 		linkedin: {
 			name: 'LinkedIn',
 			url: 'https://www.linkedin.com/in/nicholas-adamou'
+		},
+		stackexchange: {
+			name: 'Stack Exchange',
+			url: 'https://stackexchange.com/users/6884358/nicholas-adamou',
+			stackoverflow: {
+				name: 'Stack Overflow',
+				url: 'https://stackoverflow.com/users/5290011/nicholas-adamou'
+			}
 		}
 	},
 
