@@ -124,6 +124,10 @@ const config = {
 		{
 			name: 'carbon-sidebar-tabs',
 			language: 'react'
+		},
+		{
+			name: 'chunked-file-upload-poc',
+			language: 'react'
 		}
 	]
 };
