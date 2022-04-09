@@ -54,7 +54,7 @@
 		"broadcast-channel": "^4.9.0",
 		"husky": "^7.0.1",
 		"lint-staged": "12.1.4",
-		"moment": "^2.29.1",
+		"moment": "^2.29.2",
 		"netlify": "^10.1.0",
 		"netlify-cli": "8.6.0",
 		"netlify-lambda": "^2.0.15",
