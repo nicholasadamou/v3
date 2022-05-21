@@ -14,6 +14,8 @@
 
 	import fetchRepository from '$hooks/useGitHub';
 
+	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
+
 	const { title } = config;
 
 	const { stackexchange, github, codepen, linkedin} = config.socialMedia;
@@ -111,6 +113,9 @@
 				Projects
 			</a>
 		</nav>
+
+		<BuyMeACoffee />
+
 		<p>
 			Built using{' '}
 			<a

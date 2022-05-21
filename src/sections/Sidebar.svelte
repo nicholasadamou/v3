@@ -12,6 +12,8 @@
 
 	import config from '$config';
 
+	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
+
 	const { stackexchange, github, codepen, linkedin } = config.socialMedia;
 	const { stackoverflow } = stackexchange;
 
@@ -62,6 +64,8 @@
 				Projects
 			</a>
 		</section>
+
+		<BuyMeACoffee />
 
 		<span>
 			<a

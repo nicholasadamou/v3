@@ -21,7 +21,7 @@
 		"format": "prettier --write --plugin-search-dir=. .",
 		"netlify": "netlify dev",
 		"update": "npx yarn-check -u",
-		"clean": "sudo rm -rf .svelte-kit build/ node_modules/ yarn.lock package-lock.json"
+		"clean": "sudo rm -rf .svelte-kit build/ node_modules/"
 	},
 	"lint-staged": {
 		"*.{js,css,json,md}": [

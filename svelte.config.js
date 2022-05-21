@@ -13,9 +13,6 @@ const config = {
 		// specifying a different adapter
 		adapter: netlify(),
 
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
-
 		// adding path aliases
 		// https://kit.svelte.dev/faq#aliases
 		vite: {
