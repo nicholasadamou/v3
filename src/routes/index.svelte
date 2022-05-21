@@ -35,9 +35,13 @@
 <Sidebar />
 <ScrollToTopButton />
 
-<style lang="scss">
-	:global(#svelte) {
-		overflow-x: hidden;
+<style global lang="scss">
+  	html {
+	  overflow-x: hidden;
+	}
+
+	body {
+	  	overflow-x: hidden;
 
 		zoom: 125%;
 
@@ -49,23 +53,24 @@
 			zoom: 100%;
 		}
 	}
+
 	main {
-		position: relative;
+	  position: relative;
 
 	  margin: 5rem auto 2rem;
 
 	  width: 960px;
 
-		text-align: left;
+	  text-align: left;
 
-		@media screen and (max-width: 768px) {
-			margin-left: 2rem;
+	  @media screen and (max-width: 768px) {
+		margin-left: 2rem;
 
-			width: 100%;
-		}
+		width: 100%;
+	  }
 
-		@media screen and (max-width: 430px) {
-		  margin: 2rem 0 0;
-		}
+	  @media screen and (max-width: 430px) {
+		margin: 2rem 0 0;
+	  }
 	}
 </style>
