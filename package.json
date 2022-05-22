@@ -46,7 +46,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@beyonk/async-script-loader": "^2.2.1",
 		"@fortawesome/fontawesome-svg-core": "^1.2.35",
 		"@fortawesome/free-brands-svg-icons": "^5.15.3",
 		"@fortawesome/free-regular-svg-icons": "^5.15.3",
