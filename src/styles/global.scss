@@ -30,6 +30,10 @@
 	color: var(--theme-colors-text-contrast);
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
 	margin: 0;
 
@@ -43,6 +47,18 @@ body {
 	//border-top: 20px solid var(--theme-colors-background-contrast);
 
 	transition: background-color 0.3s;
+
+	overflow-x: hidden;
+
+	zoom: 125%;
+
+	@media screen and (max-width: 1920px) {
+	  zoom: 110%;
+	}
+
+	@media screen and (max-width: 1440px) {
+	  zoom: 100%;
+	}
 }
 
 .link {

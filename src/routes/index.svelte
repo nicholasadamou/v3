@@ -35,25 +35,7 @@
 <Sidebar />
 <ScrollToTopButton />
 
-<style global lang="scss">
-  	html {
-	  overflow-x: hidden;
-	}
-
-	body {
-	  	overflow-x: hidden;
-
-		zoom: 125%;
-
-		@media screen and (max-width: 1920px) {
-			zoom: 110%;
-		}
-
-		@media screen and (max-width: 1440px) {
-			zoom: 100%;
-		}
-	}
-
+<style lang="scss">
 	main {
 	  position: relative;
 
