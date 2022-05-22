@@ -3,12 +3,10 @@
 	import { fly } from 'svelte/transition';
 
 	import Icon from 'svelte-awesome';
-	import { faTimes, faBook } from '@fortawesome/free-solid-svg-icons';
+	import { faTimes } from '@fortawesome/free-solid-svg-icons';
 	import { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 	import { scrollto } from "svelte-scrollto";
-
-	import Button from '$components/Button.svelte';
 
 	import config from '$config';
 
