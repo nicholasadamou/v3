@@ -114,7 +114,9 @@
 			</a>
 		</nav>
 
-		<BuyMeACoffee />
+		<span id="buy-me-a-coffee">
+			<BuyMeACoffee />
+		</span>
 
 		<p>
 			Built using{' '}
@@ -177,6 +179,10 @@
 		*::selection {
 			background: var(--theme-colors-background);
 			color: var(--theme-colors-text);
+		}
+
+		#buy-me-a-coffee {
+			margin-bottom: -5px;
 		}
 
 		div {
