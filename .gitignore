@@ -4,3 +4,5 @@ node_modules
 /package
 /build
 .env
+.netlify
+package-lock.json
