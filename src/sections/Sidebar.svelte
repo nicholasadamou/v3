@@ -4,13 +4,16 @@
 
 	import Icon from 'svelte-awesome';
 	import { faTimes } from '@fortawesome/free-solid-svg-icons';
-	import { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+	import pkg from '@fortawesome/free-brands-svg-icons';
 
 	import { scrollto } from "svelte-scrollto";
 
-	import config from '$config';
-
 	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
+
+	const { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } = pkg;
+
+	import config from '$config';
 
 	const { stackexchange, github, codepen, linkedin } = config.socialMedia;
 	const { stackoverflow } = stackexchange;

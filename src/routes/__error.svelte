@@ -1,6 +1,9 @@
 <script>
 	import Icon from 'svelte-awesome';
-	import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
+
+	import pkg from '@fortawesome/free-solid-svg-icons';
+
+	const { faExclamationTriangle } = pkg;
 </script>
 
 <section>
