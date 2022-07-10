@@ -1,10 +1,10 @@
 <script>
-	import { useQuery } from '@sveltestack/svelte-query';
+	// import { useQuery } from '@sveltestack/svelte-query';
 
 	import Icon from 'svelte-awesome';
 	import { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-	import { BarLoader } from 'svelte-loading-spinners';
+	// import { BarLoader } from 'svelte-loading-spinners';
 
 	import { scrollto } from "svelte-scrollto";
 
@@ -12,7 +12,7 @@
 
 	import config from '$config';
 
-	import fetchRepository from '$hooks/useGitHub';
+	// import fetchRepository from '$hooks/useGitHub';
 
 	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
 
@@ -21,7 +21,7 @@
 	const { stackexchange, github, codepen, linkedin} = config.socialMedia;
 	const { stackoverflow } = stackexchange;
 
-	const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
+	// const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
 	// console.log($repository.data);
 </script>
 
@@ -140,21 +140,21 @@
 			>
 				Netlify</a>.
 		</p>
-		{#if $repository.isLoading}
-			<BarLoader color="var(--theme-colors-text-contrast)" />
-		{:else}
-			<p>
-				Last updated{' '}
-				<a
-					href={$repository.data.commit.html_url}
-					target="_blank"
-					aria-hidden="true"
-					rel="noopener noreferrer"
-					class="link"
-				>
-					{moment(new Date($repository.data.updated_at)).fromNow()}</a>.
-			</p>
-		{/if}
+		<!--{#if $repository.isLoading}-->
+		<!--	<BarLoader color="var(&#45;&#45;theme-colors-text-contrast)" />-->
+		<!--{:else}-->
+		<!--	<p>-->
+		<!--		Last updated{' '}-->
+		<!--		<a-->
+		<!--			href={$repository.data.commit.html_url}-->
+		<!--			target="_blank"-->
+		<!--			aria-hidden="true"-->
+		<!--			rel="noopener noreferrer"-->
+		<!--			class="link"-->
+		<!--		>-->
+		<!--			{moment(new Date($repository.data.updated_at)).fromNow()}</a>.-->
+		<!--	</p>-->
+		<!--{/if}-->
 		<p>
 			Source code available on{' '}
 			<a

@@ -37,7 +37,7 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [ni
 ### Requirements
 
 - [Node.js](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/en/) (recommended)
+- [pnpm](https://pnpm.io/) (recommended)
 
 ### Steps
 
@@ -50,32 +50,32 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [ni
 2. Install dependencies.
 
    ```sh
-   yarn
+   pnpm install
    ```
 
 3. Start the development server:
 
-	```bash
-	yarn dev
+   ```bash
+   pnpm dev
 
-	# or start the server and open the app in a new browser tab
-	yarn dev -- --open
-	```
+   # or start the server and open the app in a new browser tab
+   pnpm dev -- --open
+   ```
 
-	Alternatively, you can execute the project along with the Netlify (λ) [functions](functions):
+   Alternatively, you can execute the project along with the Netlify (λ) [functions](functions):
 
-	```bash
-	yarn netlify
-	```
+   ```bash
+   pnpm netlify
+   ```
 
-	Learn more about the *Netlify* CLI on their [documentation page](hhttps://www.netlify.com/docs/functions/).
+   Learn more about the _Netlify_ CLI on their [documentation page](hhttps://www.netlify.com/docs/functions/).
 
 ## 🚀 Building and Running for Production
 
 Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
 
 ```bash
-yarn build
+pnpm run build
 ```
 
 > You can preview the built app with `yarn preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
@@ -105,7 +105,7 @@ This project uses the following CI/CD Pipeline:
 
 ## Design 🎨
 
-The design was developed using [**Figma**](https://www.figma.com/). It can be found at this [*shared link*](https://www.figma.com/file/WaCj0rJmmvUkky3StLTrG8/nicholasadamou.com-v3?node-id=0%3A1).
+The design was developed using [**Figma**](https://www.figma.com/). It can be found at this [_shared link_](https://www.figma.com/file/WaCj0rJmmvUkky3StLTrG8/nicholasadamou.com-v3?node-id=0%3A1).
 
 ## License
 

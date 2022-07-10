@@ -5,7 +5,7 @@
 <header
 	id="{$$props.id}"
 >
-	<h1>{title}</h1>
+	<h2>{title}</h2>
 
 	<span>
 		<slot></slot>
@@ -24,7 +24,7 @@
 			margin-left: 1rem;
 		}
 
-		h1 {
+		h2 {
 			margin: 0;
 
 			font-size: var(--fz-lg);
