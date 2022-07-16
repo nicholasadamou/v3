@@ -1,9 +1,16 @@
-import pkg from '@fortawesome/free-brands-svg-icons';
+import {
+	faJsSquare,
+	faReact,
+	faAngular,
+	faNode,
+	faGulp,
+	faPython,
+	faHtml5,
+	faCss3Alt,
+	faJava
+} from '@fortawesome/free-brands-svg-icons';
 
 import { faFileCode } from '@fortawesome/free-solid-svg-icons';
-
-const { faJsSquare, faReact, faAngular, faNode, faGulp, faPython, faHtml5, faCss3Alt, faJava } =
-	pkg;
 
 const languages = {
 	javascript: {

@@ -20,7 +20,6 @@
 		"lint-staged": "lint-staged",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"netlify": "netlify dev",
 		"update": "npx yarn-check -u",
 		"clean": "sudo rm -rf .svelte-kit build/ node_modules/"
 	},
@@ -33,9 +32,10 @@
 		]
 	},
 	"devDependencies": {
-		"@beyonk/svelte-google-analytics": "^2.6.4",
+		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-netlify": "1.0.0-next.67",
-		"@sveltejs/kit": "1.0.0-next.367",
+		"@beyonk/svelte-google-analytics": "^2.6.4",
+		"@sveltejs/kit": "next",
 		"eslint": "8.19.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "4.0.0",
@@ -44,7 +44,7 @@
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.49.0",
 		"svelte-preprocess": "^4.10.7",
-		"vite": "^2.9.14"
+		"vite": "^3.0.0"
 	},
 	"type": "module",
 	"dependencies": {

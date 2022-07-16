@@ -1,9 +1,7 @@
 <script>
 	import Icon from 'svelte-awesome';
 
-	import pkg from '@fortawesome/free-solid-svg-icons';
-
-	const { faExclamationTriangle } = pkg;
+	import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <section>
@@ -15,14 +13,15 @@
 		<p>
 			Go back to{' '}
 			<a
-                href="/"
-                aria-hidden="true"
-                aria-label="go back to nicholasadamou.com"
-                title="go back to nicholasadamou.com"
-                rel="noopener noreferrer"
+				href="/"
+				aria-hidden="true"
+				aria-label="go back to nicholasadamou.com"
+				title="go back to nicholasadamou.com"
+				rel="noopener noreferrer"
 				class="link"
 			>
-                <em>nicholasadamou.com</em></a>?
+				<em>nicholasadamou.com</em>
+			</a>?
 		</p>
 	</div>
 </section>

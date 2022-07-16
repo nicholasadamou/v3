@@ -21,6 +21,14 @@ const config = {
 			$hooks: resolve('./src/hooks'),
 			$config: resolve('./src/config.js')
 		}
+	},
+	// See: https://github.com/sveltejs/kit/issues/928#issuecomment-1043497985
+	ssr: {
+		noExternal: [
+			'@fortawesome/free-brands-svg-icons',
+			'@fortawesome/free-regular-svg-icons',
+			'@fortawesome/free-solid-svg-icons'
+		]
 	}
 };
 
