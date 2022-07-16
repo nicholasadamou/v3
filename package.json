@@ -32,10 +32,10 @@
 		]
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-netlify": "1.0.0-next.67",
 		"@beyonk/svelte-google-analytics": "^2.6.4",
-		"@sveltejs/kit": "next",
+		"@sveltejs/adapter-auto": "1.0.0-next.61",
+		"@sveltejs/adapter-netlify": "1.0.0-next.69",
+		"@sveltejs/kit": "1.0.0-next.377",
 		"eslint": "8.19.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "4.0.0",
@@ -58,7 +58,7 @@
 		"lint-staged": "13.0.3",
 		"moment": "^2.29.4",
 		"netlify": "11.0.2",
-		"netlify-cli": "10.7.1",
+		"netlify-cli": "10.10.0",
 		"netlify-lambda": "^2.0.15",
 		"normalize.css": "^8.0.1",
 		"svelte-awesome": "3.0.0",
