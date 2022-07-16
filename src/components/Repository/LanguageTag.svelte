@@ -21,10 +21,10 @@
 
 		margin-left: -5px;
 
-		color: var(--theme-colors-text);
+		color: var(--text);
 
 		:global(svg) {
-			color: var(--theme-colors-text);
+			color: var(--text);
 		}
 
 		aside {

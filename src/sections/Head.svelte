@@ -1,11 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 
-	// import { GoogleAnalytics } from '@beyonk/svelte-google-analytics';
-
 	import config from '$config';
-
-	// import { variables } from '$lib/variables';
 
 	let pathname;
 
@@ -68,6 +64,4 @@
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;700;900&display=swap"
 		rel="stylesheet"
 	/>
-
-<!--	<GoogleAnalytics properties={[variables.GOOGLE_TRACKING_ID]} />-->
 </svelte:head>

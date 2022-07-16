@@ -92,9 +92,6 @@ This project uses the following technologies:
    - [**svelte-awesome**](https://github.com/RobBrazier/svelte-awesome#more-advanced-cases) - Awesome SVG icon component for Svelte JS, built with Font Awesome icons.
    - [**svelte-loading-spinners**](https://github.com/Schum123/svelte-loading-spinners) - A collection of loading spinner components for SvelteJS.
    - [**svelte-scrollto**](https://github.com/langbamit/svelte-scrollto) - Animating vertical and horizontal scrolling.
-   - [**svelte-themer**](https://github.com/josefaidt/svelte-themer) - A theming engine for your Svelte apps using CSS Variables, persisted.
-   - [**svelte-google-analytics**](https://github.com/beyonk-adventures/svelte-google-analytics) - Google Analytics component for Svelte.
-   - [**Moment.js**](https://momentjs.com/) - for handling dates.
 
 ## ⛓️ CI/CD Pipeline
 

@@ -43,7 +43,7 @@
 		}
 
 		:global(svg) {
-			fill: var(--theme-colors-primary);
+			fill: var(--primary);
 
 			cursor: pointer;
 		}
@@ -59,7 +59,7 @@
 		a {
 			text-decoration: none;
 
-			color: var(--theme-colors-primary);
+			color: var(--primary);
 
 			h1 {
 				margin: 0;

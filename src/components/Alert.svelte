@@ -9,7 +9,7 @@
 	{#if icon}
 		<Icon
 			data="{icon}"
-			style={`fill: var(--theme-colors-text-contrast);`}
+			style={`fill: var(--text-contrast);`}
 			scale="1.25"
 		/>
 	{/if}
@@ -37,7 +37,7 @@
 
 		font-size: var(--fz-xs);
 
-		background-color: var(--theme-colors-background-contrast);
-		color: var(--theme-colors-text-contrast);
+		background-color: var(--background-contrast);
+		color: var(--text-contrast);
 	}
 </style>

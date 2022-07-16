@@ -17,7 +17,7 @@
 				scale="1.25"
 			/>
 			<Circle
-				color="var(--theme-colors-text)"
+				color="var(--text)"
 				size="10"
 			/>
 		</span>
@@ -39,7 +39,7 @@
 					scale="1.25"
 				/>
 				<Circle
-					color="var(--theme-colors-text-contrast)"
+					color="var(--text-contrast)"
 					size="10"
 				/>
 			</span>
@@ -62,7 +62,7 @@
 					scale="1.25"
 				/>
 				<Circle
-					color="var(--theme-colors-text-contrast)"
+					color="var(--text-contrast)"
 					size="10"
 				/>
 			</span>
@@ -73,13 +73,13 @@
 			aria-label="language"
 		>
 			<Circle
-				color="var(--theme-colors-text)"
+				color="var(--text)"
 				size="10"
 			/>
 		</span>
 	</div>
 
-	<BarLoader color="var(--theme-colors-text)" />
+	<BarLoader color="var(--text)" />
 </article>
 
 <style lang="scss">

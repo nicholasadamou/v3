@@ -14,13 +14,11 @@
 		"dev": "vite dev",
 		"prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
 		"build": "vite build",
-		"package": "svelte-kit package",
 		"preview": "vite preview",
 		"prepare": "husky install",
 		"lint-staged": "lint-staged",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"update": "npx yarn-check -u",
 		"clean": "sudo rm -rf .svelte-kit build/ node_modules/"
 	},
 	"lint-staged": {
@@ -32,9 +30,7 @@
 		]
 	},
 	"devDependencies": {
-		"@beyonk/svelte-google-analytics": "^2.6.4",
 		"@sveltejs/adapter-auto": "1.0.0-next.61",
-		"@sveltejs/adapter-netlify": "1.0.0-next.69",
 		"@sveltejs/kit": "1.0.0-next.377",
 		"eslint": "8.19.0",
 		"eslint-config-prettier": "^8.5.0",
@@ -56,7 +52,6 @@
 		"broadcast-channel": "^4.13.0",
 		"husky": "8.0.1",
 		"lint-staged": "13.0.3",
-		"moment": "^2.29.4",
 		"netlify": "11.0.2",
 		"netlify-cli": "10.10.0",
 		"netlify-lambda": "^2.0.15",
@@ -64,7 +59,6 @@
 		"svelte-awesome": "3.0.0",
 		"svelte-lazy": "^1.1.0",
 		"svelte-loading-spinners": "^0.1.7",
-		"svelte-scrollto": "^0.2.0",
-		"svelte-themer": "0.5.5"
+		"svelte-scrollto": "^0.2.0"
 	}
 }

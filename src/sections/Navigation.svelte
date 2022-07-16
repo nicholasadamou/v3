@@ -133,7 +133,7 @@
 			a {
 				font-size: var(--fz-sm);
 				font-weight: 100;
-				color: var(--theme-colors-text);
+				color: var(--text);
 			}
 		}
 
@@ -143,31 +143,10 @@
 			gap: 20px;
 
 			:global(svg) {
-				fill: var(--theme-colors-primary);
+				fill: var(--primary);
 
 				cursor: pointer;
 			}
-
-			//p {
-			//	font-size: var(--fz-sm);
-			//	font-weight: 100;
-			//	color: var(--theme-colors-text);
-			//}
-			//
-			//:global(.dark-mode-toggle) {
-			//	display: flex;
-			//	align-items: center;
-			//	justify-content: center;
-			//	gap: 10px;
-			//
-			//	padding: 8px;
-			//	background-color: var(--theme-colors-background-contrast);
-			//	color: var(--theme-colors-text-contrast);
-			//	border-radius: 5px;
-			//
-			//	font-size: var(--fz-sm);
-			//	font-weight: 400;
-			//}
 		}
 	}
 </style>

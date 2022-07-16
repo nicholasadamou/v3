@@ -1,18 +1,10 @@
 <script>
-	// import { useQuery } from '@sveltestack/svelte-query';
-
 	import Icon from 'svelte-awesome';
 	import { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-	// import { BarLoader } from 'svelte-loading-spinners';
-
 	import { scrollto } from "svelte-scrollto";
 
-	import moment from 'moment';
-
 	import config from '$config';
-
-	// import fetchRepository from '$hooks/useGitHub';
 
 	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
 
@@ -20,9 +12,6 @@
 
 	const { stackexchange, github, codepen, linkedin} = config.socialMedia;
 	const { stackoverflow } = stackexchange;
-
-	// const repository = useQuery(`${github.username}/${config.name}`, () => fetchRepository(github.username, config.name));
-	// console.log($repository.data);
 </script>
 
 <footer>
@@ -140,21 +129,6 @@
 			>
 				Netlify</a>.
 		</p>
-		<!--{#if $repository.isLoading}-->
-		<!--	<BarLoader color="var(&#45;&#45;theme-colors-text-contrast)" />-->
-		<!--{:else}-->
-		<!--	<p>-->
-		<!--		Last updated{' '}-->
-		<!--		<a-->
-		<!--			href={$repository.data.commit.html_url}-->
-		<!--			target="_blank"-->
-		<!--			aria-hidden="true"-->
-		<!--			rel="noopener noreferrer"-->
-		<!--			class="link"-->
-		<!--		>-->
-		<!--			{moment(new Date($repository.data.updated_at)).fromNow()}</a>.-->
-		<!--	</p>-->
-		<!--{/if}-->
 		<p>
 			Source code available on{' '}
 			<a
@@ -166,7 +140,7 @@
 			>
 				GitHub</a>.
 		</p>
-		<p>&copy; 1997 - {moment(Date.now()).year()} {title}. All Rights Reserved.</p>
+		<p>&copy; 1997 - {new Date().getFullYear()} {title}. All Rights Reserved.</p>
 	</div>
 </footer>
 
@@ -174,11 +148,11 @@
 	footer {
 	  margin: 1rem 0 0;
 
-	  background-color: var(--theme-colors-background-contrast);
+	  background-color: var(--background-contrast);
 
 		*::selection {
-			background: var(--theme-colors-background);
-			color: var(--theme-colors-text);
+			background: var(--background);
+			color: var(--text);
 		}
 
 		#buy-me-a-coffee {
@@ -203,7 +177,7 @@
 
 			span, p, a {
 				font-size: var(--fz-sm);
-				color: var(--theme-colors-text-contrast);
+				color: var(--text-contrast);
 				font-weight: 100;
 			}
 
@@ -222,7 +196,7 @@
 				gap: 20px;
 
 				:global(svg) {
-					fill: var(--theme-colors-text-contrast);
+					fill: var(--text-contrast);
 
 					cursor: pointer;
 

@@ -1,9 +1,6 @@
 <script>
 	import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query';
 
-	import { ThemeWrapper } from 'svelte-themer';
-	import themes from '$lib/themes';
-
 	import Head from '$sections/Head.svelte';
 
 	const queryClient = new QueryClient();
@@ -12,10 +9,8 @@
 <Head />
 
 <QueryClientProvider client={queryClient}>
-	<ThemeWrapper themes="{themes}" theme="light">
-		<!-- This is where the page will be rendered -->
-		<slot />
-	</ThemeWrapper>
+	<!-- This is where the page will be rendered -->
+	<slot />
 </QueryClientProvider>
 
 <style global lang="scss">

@@ -21,7 +21,7 @@ article {
 			gap: 10px;
 
 			:global(svg) {
-				color: var(--theme-colors-text);
+				color: var(--text);
 			}
 		}
 
@@ -39,7 +39,7 @@ article {
 
 				border-radius: 5px;
 
-				background-color: var(--theme-colors-background-contrast);
+				background-color: var(--background-contrast);
 
 				&[role='img'] {
 					display: flex;
@@ -51,7 +51,7 @@ article {
 				}
 
 				&[aria-label='title'] {
-					color: var(--theme-colors-text-contrast);
+					color: var(--text-contrast);
 
 					text-decoration: underline;
 
@@ -63,12 +63,12 @@ article {
 				&[aria-label='star'],
 				&[aria-label='branch'] {
 					font-weight: normal;
-					color: var(--theme-colors-text-contrast);
+					color: var(--text-contrast);
 
 					:global(svg) {
 						margin-bottom: 3px;
 
-						color: var(--theme-colors-text-contrast);
+						color: var(--text-contrast);
 					}
 				}
 
@@ -82,6 +82,6 @@ article {
 	}
 
 	p {
-		color: var(--theme-colors-text);
+		color: var(--text);
 	}
 }

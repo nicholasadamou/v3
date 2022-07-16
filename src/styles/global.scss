@@ -22,12 +22,21 @@
 	--fz-xl: 20px;
 	--fz-xxl: 22px;
 	--fz-heading: 32px;
+
+	--text: #212121;
+    --text-contrast: #ffffff;
+
+    --background: #ffffff;
+    --background-contrast: #212121;
+
+    --primary: #212121;
+    --secondary: #656d78;
 }
 
 /* Text selection styles */
 *::selection {
-	background: var(--theme-colors-background-contrast);
-	color: var(--theme-colors-text-contrast);
+	background: var(--background-contrast);
+	color: var(--text-contrast);
 }
 
 html {
@@ -41,7 +50,7 @@ body {
 	font-size: clamp(100%, calc(1rem + 2vw), var(--fz-lg));
 	line-height: 1.3;
 
-	background-color: var(--theme-colors-background);
+	background-color: var(--background);
 	color: var(--theme-colors-text);
 
 	//border-top: 20px solid var(--theme-colors-background-contrast);

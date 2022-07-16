@@ -26,10 +26,10 @@
 		bottom: 20px;
 		right: 20px;
 
-		width: 14px;
-		height: 14px;
+		width: 10px;
+		height: 10px;
 
-		padding: 20px;
+		padding: 16px;
 
 		z-index: 1000;
 
@@ -43,11 +43,6 @@
 		transition: opacity 0.4s;
 
 		opacity: 0.5;
-
-		@media screen and (max-width: 430px) {
-			width: 10px;
-			height: 10px;
-		}
 
 		:global(svg) {
 			fill: #212121;

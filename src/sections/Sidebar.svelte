@@ -137,7 +137,7 @@
 
 		padding: 70px 30px 30px;
 
-		background-color: var(--theme-colors-background-contrast);
+		background-color: var(--background-contrast);
 
 		z-index: 9999;
 
@@ -152,7 +152,7 @@
 				text-decoration: underline;
 
 				font-size: var(--fz-md);
-				color: var(--theme-colors-text-contrast);
+				color: var(--text-contrast);
 			}
 		}
 
@@ -166,7 +166,7 @@
 			cursor: pointer;
 
 			:global(svg) {
-				fill: var(--theme-colors-text-contrast);
+				fill: var(--text-contrast);
 
 				cursor: pointer;
 			}
@@ -181,10 +181,10 @@
 			margin-top: 2rem;
 			padding-top: 2rem;
 
-			border-top: 1px solid var(--theme-colors-secondary);
+			border-top: 1px solid var(--secondary);
 
 			:global(svg) {
-				fill: var(--theme-colors-text-contrast);
+				fill: var(--text-contrast);
 
 				cursor: pointer;
 			}

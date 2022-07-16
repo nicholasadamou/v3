@@ -15,14 +15,14 @@
 	rel="noopener noreferrer"
 	style={`
 		${fitWidth ? `width: initial;` : ''}
-		color: ${contrast ? "var(--theme-colors-text)" : "var(--theme-colors-text-contrast)"};
-		background-color: ${contrast ? "var(--theme-colors-background)" : "var(--theme-colors-background-contrast)"};
+		color: ${contrast ? "var(--text)" : "var(--text-contrast)"};
+		background-color: ${contrast ? "var(--background)" : "var(--background-contrast)"};
 	`}
 >
 	<span>
 		<Icon
 			data="{icon}"
-			style={`fill: ${contrast ? "var(--theme-colors-text)" : "var(--theme-colors-text-contrast)"};`}
+			style={`fill: ${contrast ? "var(--text)" : "var(--text-contrast)"};`}
 			scale="1.25"
 		/>
 		{text}
