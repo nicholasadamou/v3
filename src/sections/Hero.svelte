@@ -1,6 +1,4 @@
 <script>
-	import Lazy from 'svelte-lazy';
-
 	import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 	import Button from '$components/Button.svelte';
@@ -11,9 +9,7 @@
 </script>
 
 <section>
-	<Lazy height={650}>
-		<img src="/hero.png" alt="hero-image" />
-	</Lazy>
+	<img src="/hero.png" alt="hero" />
 
 	<p>I’m Nick — a full-stack software engineer and graduate student at{' '}
 		<a

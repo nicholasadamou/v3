@@ -4,7 +4,7 @@
 	import Browser from "$components/Website/Browser.svelte";
 	import Mobile from "$components/Website/Mobile.svelte";
 
-	import {getImageURL} from "$lib/utilities.js";
+	import {getImageURL} from "$lib/utilities";
 
 	export let title = '';
 	export let link = '#';
@@ -63,66 +63,66 @@
 	  margin-bottom: 50px;
 
 	  @media screen and (max-width: 430px) {
-		-webkit-box-flex: 1;
+			-webkit-box-flex: 1;
 
-		flex: 1 1 100%;
+			flex: 1 1 100%;
 
-		width: 100%;
-		max-width: 100%;
+			width: 100%;
+			max-width: 100%;
 
-		margin-bottom: 50px;
+			margin-bottom: 50px;
 	  }
 
 	  a {
-		display: block;
+			display: block;
 
-		position: relative;
+			position: relative;
 
-		margin: 0 20px;
+			margin: 0 20px;
 
-		text-decoration: none;
-		color: black;
+			text-decoration: none;
+			color: black;
 
-		&:hover {
-		  cursor: pointer;
-		}
+			&:hover {
+				cursor: pointer;
+			}
 	  }
 
 	  img {
-		width: 100%;
-		max-width: 100%;
+			width: 100%;
+			max-width: 100%;
 
-		display: block;
+			display: block;
 
-		image-rendering: optimizeSpeed;
-		/* Legal fallback */
-		image-rendering: -moz-crisp-edges;
-		/* Firefox        */
-		image-rendering: -o-crisp-edges;
-		/* Opera          */
-		image-rendering: -webkit-optimize-contrast;
-		/* Safari         */
-		image-rendering: optimize-contrast;
-		/* CSS3 Proposed  */
-		image-rendering: crisp-edges;
-		/* CSS4 Proposed  */
-		image-rendering: pixelated;
-		/* CSS4 Proposed  */
-		-ms-interpolation-mode: nearest-neighbor;
-		/* IE8+           */
+			image-rendering: optimizeSpeed;
+			/* Legal fallback */
+			image-rendering: -moz-crisp-edges;
+			/* Firefox        */
+			image-rendering: -o-crisp-edges;
+			/* Opera          */
+			image-rendering: -webkit-optimize-contrast;
+			/* Safari         */
+			image-rendering: optimize-contrast;
+			/* CSS3 Proposed  */
+			image-rendering: crisp-edges;
+			/* CSS4 Proposed  */
+			image-rendering: pixelated;
+			/* CSS4 Proposed  */
+			-ms-interpolation-mode: nearest-neighbor;
+			/* IE8+           */
 	  }
 
 	  h3 {
-		position: absolute;
-		top: 0;
-		left: 60px;
+			position: absolute;
+			top: 0;
+			left: 60px;
 
-		padding: 0;
-		margin: 0;
+			padding: 0;
+			margin: 0;
 
-		color: var(--white);
-		line-height: 20px;
-		font-size: 0.7em;
+			color: var(--white);
+			line-height: 20px;
+			font-size: 0.7em;
 	  }
 	}
 </style>

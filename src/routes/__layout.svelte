@@ -14,6 +14,5 @@
 </QueryClientProvider>
 
 <style global lang="scss">
-	@import '../../node_modules/normalize.css/normalize.css';
 	@import '../styles/global.scss';
 </style>

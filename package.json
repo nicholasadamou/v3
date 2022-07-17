@@ -39,6 +39,7 @@
 		"prettier": "^2.7.1",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.49.0",
+		"svelte-image": "^0.2.9",
 		"svelte-preprocess": "^4.10.7",
 		"vite": "^3.0.0"
 	},
@@ -55,7 +56,6 @@
 		"netlify": "11.0.2",
 		"netlify-cli": "10.10.0",
 		"netlify-lambda": "^2.0.15",
-		"normalize.css": "^8.0.1",
 		"svelte-awesome": "3.0.0",
 		"svelte-lazy": "^1.1.0",
 		"svelte-loading-spinners": "^0.1.7",
