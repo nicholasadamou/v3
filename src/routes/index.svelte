@@ -9,7 +9,6 @@
 	import Navigation from '$sections/Navigation.svelte';
 	import Sidebar from '$sections/Sidebar.svelte';
 	import Hero from '$sections/Hero.svelte';
-	import Work from '$sections/Work.svelte';
 	import Websites from "$sections/Websites.svelte";
 	import Projects from '$sections/Projects.svelte';
 	import Footer from '$sections/Footer.svelte';
@@ -25,7 +24,6 @@
 	<Header />
 	<Navigation />
 	<Hero />
-<!--	<Work />-->
 	<Websites />
 	<Projects />
 </main>
