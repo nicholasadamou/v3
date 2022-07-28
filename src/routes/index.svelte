@@ -44,13 +44,13 @@
 	  text-align: left;
 
 	  @media screen and (max-width: 768px) {
-		margin-left: 2rem;
+			margin-left: 2rem;
 
-		width: 100%;
+			width: 100%;
 	  }
 
 	  @media screen and (max-width: 430px) {
-		margin: 2rem 0 0;
+			margin: 2rem 0 0;
 	  }
 	}
 </style>
