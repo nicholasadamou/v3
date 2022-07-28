@@ -38,14 +38,6 @@
 
 		<section>
 			<a
-				href="#work"
-				use:scrollto={'#work'}
-				aria-hidden="true"
-				rel="noopener noreferrer"
-			>
-				Work
-			</a>
-			<a
 				href="#websites"
 				use:scrollto={'#websites'}
 				aria-hidden="true"

@@ -75,15 +75,6 @@
 		</span>
 		<nav>
 			<a
-				href="#work"
-				use:scrollto={'#work'}
-				aria-hidden="true"
-				rel="noopener noreferrer"
-				class="link"
-			>
-				Work
-			</a>
-			<a
 				href="#websites"
 				use:scrollto={'#websites'}
 				aria-hidden="true"

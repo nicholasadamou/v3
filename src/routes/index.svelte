@@ -25,7 +25,7 @@
 	<Header />
 	<Navigation />
 	<Hero />
-	<Work />
+<!--	<Work />-->
 	<Websites />
 	<Projects />
 </main>
