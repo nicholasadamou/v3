@@ -37,6 +37,14 @@ const config = {
 
 	projects: [
 		{
+			name: 'minipwner',
+			language: 'shell'
+		},
+		{
+			name: 'plex-s3fs',
+			language: 'shell'
+		},
+		{
 			name: 'serverless-react-browsers',
 			language: 'react'
 		},

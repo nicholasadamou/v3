@@ -29,20 +29,20 @@
 	</div>
 	<div style="margin-top: 0">
 		<Website
-			title="Personal Portfolio"
-			link="https://nicholasadamou.com/"
-			desktop="websites/nicholas-adamou-desktop.png"
-			mobile="websites/nicholas-adamou-mobile.png"
-
-			noFetchImage
-		/>
-		<Website
 			title="React Code Editor"
 			link="https://reactify-editor.netlify.app/"
 			desktop="websites/react-code-editor-desktop.png"
 
 			noFetchImage
 			noMobile
+		/>
+		<Website
+			title="Personal Portfolio"
+			link="https://nicholasadamou.com/"
+			desktop="websites/nicholas-adamou-desktop.png"
+			mobile="websites/nicholas-adamou-mobile.png"
+
+			noFetchImage
 		/>
 	</div>
 </section>
