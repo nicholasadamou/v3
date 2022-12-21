@@ -7,7 +7,9 @@ import {
 	faPython,
 	faHtml5,
 	faCss3Alt,
-	faJava
+	faJava,
+	faGolang,
+	faDocker
 } from '@fortawesome/free-brands-svg-icons';
 
 import { faFileCode } from '@fortawesome/free-solid-svg-icons';
@@ -64,6 +66,14 @@ const languages = {
 	java: {
 		icon: faJava,
 		text: 'Java'
+	},
+	golang: {
+		icon: faGolang,
+		text: 'Go'
+	},
+	docker: {
+		icon: faDocker,
+		text: 'Docker'
 	}
 };
 

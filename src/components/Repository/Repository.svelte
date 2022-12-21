@@ -79,7 +79,7 @@
 					>
 						<Icon
 							data="{faStar}"
-							scale="1.2"
+							scale="1"
 						/>
 						{' '}
 						{round($repository.data.stargazers_count)}
@@ -102,7 +102,7 @@
 					>
 						<Icon
 							data="{faCodeBranch}"
-							scale="1.2"
+							scale="1"
 						/>
 						{' '}
 						{round($repository.data.forks_count)}

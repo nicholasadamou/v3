@@ -36,6 +36,14 @@
 
 			noFetchImage
 		/>
+		<Website
+			title="React Code Editor"
+			link="https://reactify-editor.netlify.app/"
+			desktop="websites/react-code-editor-desktop.png"
+
+			noFetchImage
+			noMobile
+		/>
 	</div>
 </section>
 

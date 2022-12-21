@@ -98,6 +98,51 @@ const config = {
 		{
 			name: 'chunked-file-upload-poc',
 			language: 'react'
+		},
+		{
+			name: 'watson-chatbot',
+			language: 'angular'
+		},
+		{
+			name: 'java-ftp-service',
+			language: 'java'
+		},
+		{
+			name: 'go-ftp-service',
+			language: 'golang'
+		},
+		{
+			name: 'clion-gateway',
+			language: 'docker'
+		},
+		{
+			name: 'alpine-xfce4',
+			language: 'docker'
+		},
+		{
+			name: 'ubuntu-xfce4',
+			language: 'docker'
+		},
+		{
+			name: 'multipartfile-uploader-demo',
+			language: 'java'
+		},
+		{
+			name: 'argparse',
+			language: 'java'
+		},
+		{
+			name: 'StoreContext',
+			language: 'react'
+		},
+		{
+			name: 'humblescraper',
+			language: 'python'
+		},
+		{
+			name: 'react-code-editor',
+			language: 'react',
+			url: 'https://reactify-editor.netlify.app/'
 		}
 	]
 };
