@@ -33,7 +33,6 @@
 		padding: 10px 0;
 
 		height: 5px;
-		width: 100vw;
 
 		font-size: var(--fz-xs);
 
