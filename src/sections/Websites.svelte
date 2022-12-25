@@ -40,9 +40,9 @@
 			title="Personal Portfolio"
 			link="https://nicholasadamou.com/"
 			desktop="websites/nicholas-adamou-desktop.png"
-			mobile="websites/nicholas-adamou-mobile.png"
 
 			noFetchImage
+			noMobile
 		/>
 	</div>
 </section>
