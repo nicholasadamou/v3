@@ -14,7 +14,7 @@
 	const { email } = config;
 
 	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
-	import GitHubSponsor from "$components/GitHubSponsor.svelte";
+	import GitHubSponsors from "$components/GitHubSponsors.svelte";
 
 	const { stackexchange, github, codepen, linkedin } = config.socialMedia;
 	const { stackoverflow } = stackexchange;
@@ -168,7 +168,7 @@
 			</p>
 
 			<BuyMeACoffee />
-			<GitHubSponsor />
+			<GitHubSponsors />
 		</section>
 
 		<a
