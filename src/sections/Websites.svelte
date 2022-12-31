@@ -55,12 +55,12 @@
 	  margin-left: -20px;
 
 	  @media screen and (max-width: 430px) {
-		align-items: center;
-		justify-content: center;
+			align-items: center;
+			justify-content: center;
 
-		margin-left: 0;
-		margin-bottom: 0;
-		margin-top: 30px;
+			margin-left: 0;
+			margin-bottom: 0;
+			margin-top: 30px;
 	  }
 	}
 </style>

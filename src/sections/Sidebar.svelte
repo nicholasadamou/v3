@@ -29,16 +29,23 @@
 		transition:fly="{{ x: -200 }}"
 	>
 		<div>
-			<button
-				on:click={onToggle}
-			>
-				<Icon
-					data={faTimes}
-					scale="1.25"
-				/>
-			</button>
+<!--			<button-->
+<!--				on:click={onToggle}-->
+<!--			>-->
+<!--				<Icon-->
+<!--					data={faTimes}-->
+<!--					scale="1.25"-->
+<!--				/>-->
+<!--			</button>-->
 
-			<p>Nicholas Adamou</p>
+			<a
+				href="#top"
+				use:scrollto={'#top'}
+				aria-hidden="true"
+				rel="noopener noreferrer"
+			>
+				<h3>Nicholas Adamou</h3>
+			</a>
 		</div>
 
 		<section>
@@ -163,7 +170,7 @@
 			</a>
 		</section>
 
-		<section>
+		<section id="donate">
 			<p class="section-title">
 				Donate
 			</p>
@@ -194,7 +201,7 @@
 		top: 0;
 		left: 0;
 
-		width: 250px;
+		width: 12rem;
 		height: 100%;
 
 		padding: 10px 20px 30px;
@@ -202,6 +209,8 @@
 		background-color: var(--background-contrast);
 
 		z-index: 9999;
+
+		color: white;
 
 		p {
 			font-size: .875rem;
@@ -217,6 +226,7 @@
 
 			position: absolute;
 			bottom: 50px;
+			right: 14px;
 
 			width: 80%;
 
@@ -231,6 +241,12 @@
 			font-size: .875rem;
 			line-height: 1.25rem;
 			color: white;
+
+			transition: all .2s ease-in-out;
+
+			&:hover {
+				background-color: lighten(#262626, 10%);
+			}
 		}
 
 		div {
@@ -241,29 +257,31 @@
 			padding: 10px 0;
 			margin-bottom: 25px;
 
-			button {
-				cursor: pointer;
+			a {
+				text-decoration: none;
 
-				:global(svg) {
-					width: 10px;
+				color: white;
 
-					fill: var(--text-contrast);
-
-					cursor: pointer;
+				h3 {
+					margin-top: 1rem;
 				}
-			}
-
-			p {
-				padding-bottom: 2px;
 			}
 		}
 
 		section {
 			display: flex;
 			flex-direction: column;
-			gap: 16px;
+			gap: 10px;
 
 			margin-bottom: 2rem;
+
+			&#donate {
+				gap: 5px;
+
+				.section-title {
+					margin-bottom: 0.75rem;
+				}
+			}
 
 			.section-title {
 				font-size: 13px;
@@ -282,15 +300,24 @@
 
 				position: relative;
 
+				border-radius: 5px;
+
+				padding: 10px;
+				margin: 0 0 0 -10px;
+
 				text-decoration: underline;
 
 				font-size: .875rem;
 				line-height: 1.25rem;
 				color: var(--text-contrast);
 
+				&:hover {
+					background-color: lighten(#262626, 10%);
+				}
+
 				.icon {
 					position: absolute;
-					right: 0;
+					right: 16px;
 				}
 			}
 		}

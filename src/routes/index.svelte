@@ -4,15 +4,14 @@
 
 	import ScrollToTopButton from '$components/ScrollToTopButton.svelte';
 
-	import Header from '$sections/Header.svelte';
-	import Navigation from '$sections/Navigation.svelte';
 	import Sidebar from '$sections/Sidebar.svelte';
 	import Hero from '$sections/Hero.svelte';
 	import Websites from '$sections/Websites.svelte';
 	import Projects from '$sections/Projects.svelte';
 	import Footer from '$sections/Footer.svelte';
+	import Header from "$sections/Header.svelte";
 
-	let isSidebarOpen = writable(false);
+	let isSidebarOpen = writable(true);
 
 	setContext('isSidebarOpen', isSidebarOpen);
 </script>
@@ -21,9 +20,9 @@
 	main {
 		position: relative;
 
-		margin: 5rem auto 2rem;
+		margin: 5rem auto 2rem 25rem;
 
-		width: 960px;
+		width: 65rem;
 
 		text-align: left;
 
@@ -49,13 +48,12 @@
 
 <main>
 	<Header />
-	<Navigation />
-	<Hero />
+<!--	<Hero />-->
 	<Websites />
 	<Projects />
 </main>
 
-<Footer />
+<!--<Footer />-->
 
 <Sidebar />
 <ScrollToTopButton />

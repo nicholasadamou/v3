@@ -1,108 +1,13 @@
 <script>
-	import Icon from 'svelte-awesome';
-	import { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-
-	import { scrollto } from "svelte-scrollto";
-
 	import config from '$config';
-
-	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
-	import GitHubSponsors from "$components/GitHubSponsors.svelte";
 
 	const { title } = config;
 
-	const { stackexchange, github, codepen, linkedin} = config.socialMedia;
-	const { stackoverflow } = stackexchange;
+	const {github} = config.socialMedia;
 </script>
 
 <footer>
 	<div>
-		<span>
-			<a
-				href={stackoverflow.url}
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-			>
-				<Icon
-					data={faStackOverflow}
-					scale="1.2"
-				/>
-			</a>
-			<a
-				href={stackexchange.url}
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-			>
-				<Icon
-					data={faStackExchange}
-					scale="1.2"
-				/>
-			</a>
-			<a
-				href={github.url}
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-			>
-				<Icon
-					data={faGithub}
-					scale="1.2"
-				/>
-			</a>
-			<a
-				href={codepen.url}
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-			>
-				<Icon
-					data={faCodepen}
-					scale="1.2"
-				/>
-			</a>
-			<a
-				href={linkedin.url}
-				target="_blank"
-				aria-hidden="true"
-				rel="noopener noreferrer"
-			>
-				<Icon
-					data={faLinkedin}
-					scale="1.2"
-				/>
-			</a>
-		</span>
-		<nav>
-			<a
-				href="#websites"
-				use:scrollto={'#websites'}
-				aria-hidden="true"
-				rel="noopener noreferrer"
-				class="link"
-			>
-				Websites
-			</a>
-			<a
-				href="#projects"
-				use:scrollto={'#projects'}
-				aria-hidden="true"
-				rel="noopener noreferrer"
-				class="link"
-			>
-				Projects
-			</a>
-		</nav>
-
-		<span class="button">
-			<BuyMeACoffee />
-		</span>
-
-		<span class="button">
-			<GitHubSponsors />
-		</span>
-
 		<p>
 			Built using{' '}
 			<a
@@ -161,9 +66,9 @@
 			gap: 10px;
 
 			width: 960px;
-			margin: 0 auto;
+			margin: 0 auto 0 25rem;
 
-			padding: 8rem 0;
+			padding: 10rem 0;
 
 			@media screen and (max-width: 430px) {
 				margin-left: 1rem;
