@@ -212,6 +212,8 @@
 
 		color: white;
 
+		overflow-y: scroll;
+
 		div {
 			display: flex;
 			align-items: center;
@@ -233,13 +235,8 @@
 			justify-content: center;
 			gap: 10px;
 
-			position: absolute;
-			bottom: 50px;
-			right: 20px;
-
-			width: 80%;
-
 			padding: 10px;
+			margin-bottom: 1.5rem;
 
 			border-radius: 5px;
 
@@ -287,7 +284,9 @@
 			&#donate {
 				gap: 5px;
 
-			.section-title {
+				margin-bottom: 2.5rem;
+
+				.section-title {
 					margin-bottom: 0.75rem;
 				}
 			}
