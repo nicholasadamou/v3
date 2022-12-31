@@ -6,10 +6,15 @@
 	import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 	import { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+	import { faArrowUpRightFromSquare, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 	import { scrollto } from "svelte-scrollto";
 
 	import config from '$config';
+	const { email } = config;
+
+	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
+	import GitHubSponsor from "$components/GitHubSponsor.svelte";
 
 	const { stackexchange, github, codepen, linkedin } = config.socialMedia;
 	const { stackoverflow } = stackexchange;
@@ -25,16 +30,23 @@
 	<nav
 		transition:fly="{{ x: -200 }}"
 	>
-		<button
-			on:click={onToggle}
-		>
-			<Icon
-				data={faTimes}
-				scale="1.25"
-			/>
-		</button>
+		<div>
+			<button
+				on:click={onToggle}
+			>
+				<Icon
+					data={faTimes}
+					scale="1.25"
+				/>
+			</button>
+
+			<p>Nicholas Adamou</p>
+		</div>
 
 		<section>
+			<p class="section-title">
+				Sections
+			</p>
 			<a
 				href="#websites"
 				use:scrollto={'#websites'}
@@ -54,63 +66,124 @@
 			</a>
 		</section>
 
-		<span>
+		<section>
+			<p class="section-title">
+				Online
+			</p>
 			<a
 				href={stackoverflow.url}
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
+				class="social"
 			>
 				<Icon
 					data={faStackOverflow}
 					scale="1.25"
 				/>
+				<span>StackOverflow</span>
+				<span class="icon">
+					<Icon
+						data={faArrowUpRightFromSquare}
+					/>
+				</span>
 			</a>
 			<a
 				href={stackexchange.url}
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
+				class="social"
 			>
 				<Icon
 					data={faStackExchange}
 					scale="1.25"
 				/>
+				<span>StackExchange</span>
+				<span class="icon">
+					<Icon
+						data={faArrowUpRightFromSquare}
+					/>
+				</span>
 			</a>
 			<a
 				href={github.url}
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
+				class="social"
 			>
 				<Icon
 					data={faGithub}
 					scale="1.25"
 				/>
+				<span>GitHub</span>
+				<span class="icon">
+					<Icon
+						data={faArrowUpRightFromSquare}
+					/>
+				</span>
 			</a>
 			<a
 				href={codepen.url}
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
+				class="social"
 			>
 				<Icon
 					data={faCodepen}
 					scale="1.25"
 				/>
+				<span>CodePen</span>
+				<span class="icon">
+					<Icon
+						data={faArrowUpRightFromSquare}
+					/>
+				</span>
 			</a>
 			<a
 				href={linkedin.url}
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
+				class="social"
 			>
 				<Icon
 					data={faLinkedin}
 					scale="1.25"
 				/>
+				<span>LinkedIn</span>
+				<span class="icon">
+					<Icon
+						data={faArrowUpRightFromSquare}
+					/>
+				</span>
 			</a>
-		</span>
+		</section>
+
+		<section>
+			<p class="section-title">
+				Donate
+			</p>
+
+			<BuyMeACoffee />
+			<GitHubSponsor />
+		</section>
+
+		<a
+			href={`mailto:${email}?subject=Hello`}
+			target="_blank"
+			aria-hidden="true"
+			rel="noopener noreferrer"
+		>
+			<Icon
+				data="{faPaperPlane}"
+			/>
+			<span>
+				Contact Me
+			</span>
+		</a>
 	</nav>
 {/if}
 
@@ -123,11 +196,61 @@
 		width: 250px;
 		height: 100%;
 
-		padding: 70px 30px 30px;
+		padding: 10px 20px 30px;
 
 		background-color: var(--background-contrast);
 
 		z-index: 9999;
+
+		p {
+			font-size: .875rem;
+			line-height: 1.25rem;
+			color: white;
+		}
+
+		a[href^="mailto:"] {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+
+			position: absolute;
+			bottom: 50px;
+
+			width: 80%;
+
+			padding: 10px;
+
+			border-radius: 5px;
+
+			background-color: #262626;
+
+			text-decoration: none;
+
+			font-size: .875rem;
+			line-height: 1.25rem;
+			color: white;
+		}
+
+		div {
+			display: flex;
+			gap: 10px;
+
+			padding: 10px 0;
+			margin-bottom: 25px;
+
+			button {
+				cursor: pointer;
+
+				:global(svg) {
+					width: 10px;
+
+					fill: var(--text-contrast);
+
+					cursor: pointer;
+				}
+			}
+		}
 
 		section {
 			display: flex;
@@ -136,45 +259,33 @@
 
 			margin-bottom: 2rem;
 
+			.section-title {
+				font-size: 13px;
+			}
+
+			.social {
+				text-decoration: none;
+			}
+
 			a {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				width: 100%;
+
+				position: relative;
+
 				text-decoration: underline;
 
-				font-size: var(--fz-md);
+				font-size: .875rem;
+				line-height: 1.25rem;
 				color: var(--text-contrast);
-			}
-		}
 
-		button {
-			position: absolute;
-			top: 0;
-			right: 0;
-
-			padding: 30px;
-
-			cursor: pointer;
-
-			:global(svg) {
-				fill: var(--text-contrast);
-
-				cursor: pointer;
-			}
-		}
-
-		span {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			gap: 16px;
-
-			margin-top: 2rem;
-			padding-top: 2rem;
-
-			border-top: 1px solid var(--secondary);
-
-			:global(svg) {
-				fill: var(--text-contrast);
-
-				cursor: pointer;
+				.icon {
+					position: absolute;
+					right: 0;
+				}
 			}
 		}
 	}

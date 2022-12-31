@@ -28,6 +28,8 @@ I value keeping my site open source, but as you all know, _**plagiarism is bad**
 
 Please also note that I did not build this site with the intention of it being a starter theme, so if you have questions about implementation, please refer to the [SvelteKit docs](https://kit.svelte.dev/docs).
 
+Please review the [license](LICENSE), do not copy it directly, remove all of my personal information (images, projects, etc.) and change the styling and colors to match your personal brand. You are free to use this code as inspiration or learning reference but this is not a template.
+
 ### TL;DR
 
 Yes, you can fork this repo. Please give me proper credit by linking back to [nicholasadamou.com](https://nicholasadamou.com). Thanks!
