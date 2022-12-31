@@ -36,14 +36,6 @@
 			noFetchImage
 			noMobile
 		/>
-		<Website
-			title="Personal Portfolio"
-			link="https://nicholasadamou.com/"
-			desktop="websites/nicholas-adamou-desktop.png"
-
-			noFetchImage
-			noMobile
-		/>
 	</div>
 </section>
 

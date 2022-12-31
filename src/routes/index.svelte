@@ -2,9 +2,6 @@
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 
-	import rocket from 'svelte-awesome/icons/rocket';
-
-	import Alert from '$components/Alert.svelte';
 	import ScrollToTopButton from '$components/ScrollToTopButton.svelte';
 
 	import Header from '$sections/Header.svelte';
@@ -49,19 +46,6 @@
 		}
 	}
 </style>
-
-<Alert
-	text="Sponsor me on GitHub!"
-	icon={rocket}
->
-	<iframe
-		id="sponsor-button"
-		src="https://github.com/sponsors/nicholasadamou/button"
-		title="Sponsor nicholasadamou"
-		height="35"
-		width="116"
-		style="border: 0;" />
-</Alert>
 
 <main>
 	<Header />
