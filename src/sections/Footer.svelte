@@ -95,11 +95,13 @@
 			</a>
 		</nav>
 
-		<span id="buy-me-a-coffee">
+		<span class="button">
 			<BuyMeACoffee />
 		</span>
 
-		<GitHubSponsors />
+		<span class="button">
+			<GitHubSponsors />
+		</span>
 
 		<p>
 			Built using{' '}
@@ -149,7 +151,7 @@
 			color: var(--text);
 		}
 
-		#buy-me-a-coffee {
+		.button {
 			margin-bottom: -5px;
 		}
 
