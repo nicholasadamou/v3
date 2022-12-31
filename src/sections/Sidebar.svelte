@@ -9,8 +9,6 @@
 
 	import { scrollto } from "svelte-scrollto";
 
-	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
-
 	import config from '$config';
 
 	const { stackexchange, github, codepen, linkedin } = config.socialMedia;
@@ -55,8 +53,6 @@
 				Projects
 			</a>
 		</section>
-
-		<BuyMeACoffee />
 
 		<span>
 			<a
