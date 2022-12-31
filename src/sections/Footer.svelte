@@ -165,6 +165,10 @@
 
 			padding: 8rem 0;
 
+			@media screen and (max-width: 820px) {
+				margin-left: 2rem;
+			}
+
 			@media screen and (max-width: 430px) {
 				margin-left: 1rem;
 

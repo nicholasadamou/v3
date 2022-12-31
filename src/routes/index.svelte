@@ -27,7 +27,7 @@
 
 		text-align: left;
 
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 820px) {
 			margin-left: 2rem;
 
 			width: 100%;
