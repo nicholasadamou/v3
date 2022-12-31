@@ -3,10 +3,8 @@
 	import { fly } from 'svelte/transition';
 
 	import Icon from 'svelte-awesome';
-	import { faTimes } from '@fortawesome/free-solid-svg-icons';
-
+	import { faTimes, faHashtag, faArrowUpRightFromSquare, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 	import { faStackOverflow, faStackExchange, faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-	import { faArrowUpRightFromSquare, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 	import { scrollto } from "svelte-scrollto";
 
@@ -24,6 +22,8 @@
 	const onToggle = () => {
 		$isSidebarOpen = !$isSidebarOpen;
 	}
+
+
 </script>
 
 {#if $isSidebarOpen}
@@ -54,15 +54,22 @@
 				rel="noopener noreferrer"
 				class="link"
 			>
-				Websites
+				<Icon
+					data={faHashtag}
+				/>
+				<span>Websites</span>
 			</a>
 			<a
 				href="#projects"
 				use:scrollto={'#projects'}
 				aria-hidden="true"
 				rel="noopener noreferrer"
+				class="link"
 			>
-				Projects
+				<Icon
+					data={faHashtag}
+				/>
+				<span>Projects</span>
 			</a>
 		</section>
 
@@ -97,7 +104,6 @@
 			>
 				<Icon
 					data={faStackExchange}
-					scale="1.25"
 				/>
 				<span>StackExchange</span>
 				<span class="icon">
@@ -115,7 +121,6 @@
 			>
 				<Icon
 					data={faGithub}
-					scale="1.25"
 				/>
 				<span>GitHub</span>
 				<span class="icon">
@@ -133,7 +138,6 @@
 			>
 				<Icon
 					data={faCodepen}
-					scale="1.25"
 				/>
 				<span>CodePen</span>
 				<span class="icon">
@@ -151,7 +155,6 @@
 			>
 				<Icon
 					data={faLinkedin}
-					scale="1.25"
 				/>
 				<span>LinkedIn</span>
 				<span class="icon">
@@ -234,6 +237,7 @@
 
 		div {
 			display: flex;
+			align-items: center;
 			gap: 10px;
 
 			padding: 10px 0;
@@ -250,6 +254,10 @@
 					cursor: pointer;
 				}
 			}
+
+			p {
+				padding-bottom: 2px;
+			}
 		}
 
 		section {
@@ -263,7 +271,7 @@
 				font-size: 13px;
 			}
 
-			.social {
+			.social, .link {
 				text-decoration: none;
 			}
 
