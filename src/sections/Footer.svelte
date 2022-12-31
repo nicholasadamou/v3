@@ -7,6 +7,7 @@
 	import config from '$config';
 
 	import BuyMeACoffee from "$components/BuyMeACoffee.svelte";
+	import GitHubSponsors from "$components/GitHubSponsors.svelte";
 
 	const { title } = config;
 
@@ -97,6 +98,8 @@
 		<span id="buy-me-a-coffee">
 			<BuyMeACoffee />
 		</span>
+
+		<GitHubSponsors />
 
 		<p>
 			Built using{' '}
