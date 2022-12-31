@@ -22,8 +22,6 @@
 	const onToggle = () => {
 		$isSidebarOpen = !$isSidebarOpen;
 	}
-
-
 </script>
 
 {#if $isSidebarOpen}

@@ -61,6 +61,10 @@ const config = {
 			language: 'gulp'
 		},
 		{
+			name: 'humblescraper',
+			language: 'python'
+		},
+		{
 			name: 'react-iframe',
 			language: 'react'
 		},
@@ -69,16 +73,12 @@ const config = {
 			language: 'react'
 		},
 		{
-			name: 'krios-github-bot',
-			language: 'node'
-		},
-		{
 			name: 'multipartfile-uploader-demo',
 			language: 'java'
 		},
 		{
-			name: 'humblescraper',
-			language: 'python'
+			name: 'krios-github-bot',
+			language: 'node'
 		}
 	]
 };
