@@ -29,7 +29,7 @@
 			rel="noopener noreferrer"
 			class="link ibm"
 		>
-		IBM</a> and working hard to make the world better with software.
+		IBM</a>.
 	</p>
 
 	<aside>
