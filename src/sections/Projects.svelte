@@ -42,37 +42,33 @@
 
 <style lang="scss">
   :global(#projects > header) {
-	margin-top: 40px;
-
-	@media screen and (max-width: 430px) {
-	  margin-top: 30px;
-	}
+		margin-top: -20px;
   }
 
   div {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 
-	width: 80%;
-	max-width: 90%;
+		width: 80%;
+		max-width: 90%;
 
-	margin: 20px 0 10px;
+		margin: 20px 0 10px;
 
-	@media screen and (max-width: 430px) {
-	  grid-template-columns: repeat(1, 1fr);
+		@media screen and (max-width: 430px) {
+			grid-template-columns: repeat(1, 1fr);
 
-	  width: 100%;
-	  max-width: 95%;
+			width: 100%;
+			max-width: 95%;
 
-	  margin-left: 1rem;
-	}
+			margin-left: 1rem;
+		}
   }
 
   span {
-	font-size: var(--fz-md);
+		font-size: var(--fz-md);
 
-	@media screen and (max-width: 430px) {
-	  margin-left: 1rem;
-	}
+		@media screen and (max-width: 430px) {
+			margin-left: 1rem;
+		}
   }
 </style>
