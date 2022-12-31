@@ -61,25 +61,6 @@ const config = {
 			language: 'gulp'
 		},
 		{
-			name: 'vineyard-vines-sales',
-			language: 'react',
-			url: 'https://vineyard-vines-sales.netlify.app/'
-		},
-		{
-			name: 'wifi-card',
-			language: 'react',
-			url: 'https://wifi-card.netlify.app/'
-		},
-		{
-			name: 'muuvies',
-			language: 'react',
-			url: 'https://muuvies.netlify.app/'
-		},
-		{
-			name: 'firebase-react-starter-kit',
-			language: 'react'
-		},
-		{
 			name: 'react-iframe',
 			language: 'react'
 		},
@@ -92,65 +73,12 @@ const config = {
 			language: 'node'
 		},
 		{
-			name: 'toasty',
-			language: 'react'
-		},
-		{
-			name: 'jwt-spring-security-demo',
-			language: 'java'
-		},
-		{
-			name: 'carbon-sidebar-tabs',
-			language: 'react'
-		},
-		{
-			name: 'chunked-file-upload-poc',
-			language: 'react'
-		},
-		{
-			name: 'watson-chatbot',
-			language: 'angular'
-		},
-		{
-			name: 'java-ftp-service',
-			language: 'java'
-		},
-		{
-			name: 'go-ftp-service',
-			language: 'golang'
-		},
-		{
-			name: 'clion-gateway',
-			language: 'docker'
-		},
-		{
-			name: 'alpine-xfce4',
-			language: 'docker'
-		},
-		{
-			name: 'ubuntu-xfce4',
-			language: 'docker'
-		},
-		{
 			name: 'multipartfile-uploader-demo',
 			language: 'java'
 		},
 		{
-			name: 'argparse',
-			language: 'java'
-		},
-		{
-			name: 'StoreContext',
-			language: 'react'
-		},
-		{
 			name: 'humblescraper',
 			language: 'python'
-		},
-		{
-			name: 'react-code-editor',
-			language: 'react',
-			url: 'https://reactify-editor.netlify.app/'
 		}
 	]
 };
