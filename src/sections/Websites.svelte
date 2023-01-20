@@ -13,7 +13,7 @@
 		<Website
 			title="Vineyard Vines Sales"
 			link="https://vineyard-vines-sales.netlify.app/"
-			desktop="websites/vineyard-vines-sales-desktop.png"
+			desktop="websites/vineyard-vines-sales-desktop.gif"
 
 			noFetchImage
 			noMobile
@@ -21,17 +21,17 @@
 		<Website
 			title="WiFi Card"
 			link="https://wifi-card.netlify.app"
-			desktop="websites/wifi-card-desktop.png"
+			desktop="websites/wifi-card-desktop.gif"
+			mobile="websites/wifi-card-mobile.png"
 
 			noFetchImage
-			noMobile
 		/>
 	</div>
-	<div style="margin-top: 0">
+	<div style="margin-top: 16px">
 		<Website
 			title="React Code Editor"
 			link="https://reactify-editor.netlify.app/"
-			desktop="websites/react-code-editor-desktop.png"
+			desktop="websites/react-code-editor-desktop.gif"
 
 			noFetchImage
 			noMobile
