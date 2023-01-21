@@ -44,7 +44,7 @@
 				aria-hidden="true"
 				rel="noopener noreferrer"
 			>
-				<h3>Nicholas Adamou</h3>
+				<h3 style="font-size: var(--fz-lg)">Nicholas Adamou</h3>
 			</a>
 		</div>
 
@@ -267,10 +267,6 @@
 				text-decoration: none;
 
 				color: white;
-
-				h3 {
-					margin-top: 1rem;
-				}
 			}
 		}
 

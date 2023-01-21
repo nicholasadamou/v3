@@ -15,8 +15,8 @@
 	const { stackoverflow } = stackexchange;
 </script>
 
-<footer>
-	<div>
+<footer class="mt-[1rem] mb-0 ml-0 mr-0 bg-[var(--background-contrast)]">
+	<div class="flex flex-col gap-[10px] w-[960px] mx-auto pt-[8rem] pb-[10rem] pl-0 pr-0">
 		<span>
 			<a
 				href={stackoverflow.url}
@@ -80,7 +80,7 @@
 				use:scrollto={'#websites'}
 				aria-hidden="true"
 				rel="noopener noreferrer"
-				class="link"
+				class="font-light link"
 			>
 				Websites
 			</a>
@@ -89,17 +89,17 @@
 				use:scrollto={'#projects'}
 				aria-hidden="true"
 				rel="noopener noreferrer"
-				class="link"
+				class="font-light link"
 			>
 				Projects
 			</a>
 		</nav>
 
-		<span class="button">
+		<span class="-mb-5px">
 			<BuyMeACoffee />
 		</span>
 
-		<span class="button">
+		<span class="-mb-5px">
 			<GitHubSponsors />
 		</span>
 
@@ -110,7 +110,7 @@
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
-				class="link svelte"
+				class="font-light link svelte"
 			>
 				SvelteKit</a>.
 		</p>
@@ -121,7 +121,7 @@
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
-				class="link netlify"
+				class="font-light link netlify"
 			>
 				Netlify</a>.
 		</p>
@@ -132,7 +132,7 @@
 				target="_blank"
 				aria-hidden="true"
 				rel="noopener noreferrer"
-				class="link github"
+				class="font-light link github"
 			>
 				GitHub</a>.
 		</p>
@@ -142,29 +142,12 @@
 
 <style lang="scss">
 	footer {
-	  margin: 1rem 0 0;
-
-	  background-color: var(--background-contrast);
-
-		*::selection {
+	  *::selection {
 			background: var(--background);
 			color: var(--text);
 		}
 
-		.button {
-			margin-bottom: -5px;
-		}
-
 		div {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-
-			width: 960px;
-			margin: 0 auto;
-
-			padding: 8rem 0;
-
 			@media screen and (max-width: 820px) {
 				margin-left: 2rem;
 			}
@@ -181,14 +164,13 @@
 				font-weight: 100;
 			}
 
-			a {
-				font-weight: 300;
-			}
-
 			span, nav {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
+			}
+
+			nav {
 				gap: 10px;
 			}
 
