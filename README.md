@@ -9,14 +9,6 @@
   <a href="https://github.com/nicholasadamou/v1" target="_blank">v1</a> and
   <a href="https://github.com/nicholasadamou/v2" target="_blank">v2</a>.
 </p>
-<p align="center">
-  <a href="https://circleci.com/gh/nicholasadamou/nicholasadamou.com" target="_blank">
-    <img src="https://circleci.com/gh/nicholasadamou/nicholasadamou.com.svg?style=svg" alt="CircleCI Status" />
-  </a>
-  <a href="https://app.netlify.com/sites/nicholasadamou/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/fedaa871-c59d-4923-9c65-f29330bf60da/deploy-status" alt="Netlify Status" />
-  </a>
-</p>
 
 ![demo](static/demo.png)
 
